@@ -60,7 +60,7 @@ namespace Fermyon.Nomad.Model
         /// <param name="user">user.</param>
         /// <param name="vault">vault.</param>
         /// <param name="volumeMounts">volumeMounts.</param>
-        public Task(List<Affinity> affinities = default(List<Affinity>), List<TaskArtifact> artifacts = default(List<TaskArtifact>), TaskCSIPluginConfig cSIPluginConfig = default(TaskCSIPluginConfig), Dictionary<string, Object> config = default(Dictionary<string, Object>), List<Constraint> constraints = default(List<Constraint>), DispatchPayloadConfig dispatchPayload = default(DispatchPayloadConfig), string driver = default(string), Dictionary<string, string> env = default(Dictionary<string, string>), string killSignal = default(string), long killTimeout = default(long), string kind = default(string), bool leader = default(bool), TaskLifecycle lifecycle = default(TaskLifecycle), LogConfig logConfig = default(LogConfig), Dictionary<string, string> meta = default(Dictionary<string, string>), string name = default(string), Resources resources = default(Resources), RestartPolicy restartPolicy = default(RestartPolicy), List<ScalingPolicy> scalingPolicies = default(List<ScalingPolicy>), List<Service> services = default(List<Service>), long shutdownDelay = default(long), List<Template> templates = default(List<Template>), string user = default(string), Vault vault = default(Vault), List<VolumeMount> volumeMounts = default(List<VolumeMount>))
+        public Task(List<Affinity> affinities = default(List<Affinity>), List<TaskArtifact> artifacts = default(List<TaskArtifact>), TaskCSIPluginConfig cSIPluginConfig = default(TaskCSIPluginConfig), Dictionary<string, Object> config = default(Dictionary<string, Object>), List<Constraint> constraints = default(List<Constraint>), DispatchPayloadConfig dispatchPayload = default(DispatchPayloadConfig), string driver = default(string), Dictionary<string, string> env = default(Dictionary<string, string>), string killSignal = default(string), long killTimeout = default(long), string kind = default(string), bool leader = default(bool), TaskLifecycle lifecycle = default(TaskLifecycle), LogConfig logConfig = default(LogConfig), Dictionary<string, string> meta = default(Dictionary<string, string>), string name = default(string), Resources resources = default(Resources), RestartPolicy restartPolicy = default(RestartPolicy), List<ScalingPolicy> scalingPolicies = default(List<ScalingPolicy>), List<Service> services = default(List<Service>), long? shutdownDelay = default(long), List<Template> templates = default(List<Template>), string user = default(string), Vault vault = default(Vault), List<VolumeMount> volumeMounts = default(List<VolumeMount>))
         {
             this.Affinities = affinities;
             this.Artifacts = artifacts;
@@ -213,7 +213,7 @@ namespace Fermyon.Nomad.Model
         /// Gets or Sets ShutdownDelay
         /// </summary>
         [DataMember(Name = "ShutdownDelay", EmitDefaultValue = false)]
-        public long ShutdownDelay { get; set; }
+        public long? ShutdownDelay { get; set; }
 
         /// <summary>
         /// Gets or Sets Templates
