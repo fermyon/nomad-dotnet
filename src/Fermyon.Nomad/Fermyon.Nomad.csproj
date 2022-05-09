@@ -12,6 +12,7 @@
     <Copyright>No Copyright</Copyright>
     <RootNamespace>Fermyon.Nomad</RootNamespace>
     <Version>0.1.1</Version>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\Fermyon.Nomad.xml</DocumentationFile>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
     <RepositoryUrl>https://github.com/fermyon/nomad-dotnet.git</RepositoryUrl>
