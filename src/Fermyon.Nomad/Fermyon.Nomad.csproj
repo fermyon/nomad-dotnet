@@ -12,8 +12,9 @@
     <Description>A library generated from a OpenAPI doc</Description>
     <Copyright>No Copyright</Copyright>
     <RootNamespace>Fermyon.Nomad</RootNamespace>
-    <Version>1.2.1</Version>
+    <Version>0.1.1</Version>
     <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\Fermyon.Nomad.xml</DocumentationFile>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
     <RepositoryUrl>https://github.com/GIT_USER_ID/GIT_REPO_ID.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageReleaseNotes>Minor update</PackageReleaseNotes>
