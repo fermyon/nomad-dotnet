@@ -55,7 +55,7 @@ namespace Fermyon.Nomad.Model
         /// <param name="tasks">tasks.</param>
         /// <param name="update">update.</param>
         /// <param name="volumes">volumes.</param>
-        public TaskGroup(List<Affinity> affinities = default(List<Affinity>), List<Constraint> constraints = default(List<Constraint>), Consul consul = default(Consul), int count = default(int), EphemeralDisk ephemeralDisk = default(EphemeralDisk), long maxClientDisconnect = default(long), Dictionary<string, string> meta = default(Dictionary<string, string>), MigrateStrategy migrate = default(MigrateStrategy), string name = default(string), List<NetworkResource> networks = default(List<NetworkResource>), ReschedulePolicy reschedulePolicy = default(ReschedulePolicy), RestartPolicy restartPolicy = default(RestartPolicy), ScalingPolicy scaling = default(ScalingPolicy), List<Service> services = default(List<Service>), long shutdownDelay = default(long), List<Spread> spreads = default(List<Spread>), long stopAfterClientDisconnect = default(long), List<Task> tasks = default(List<Task>), UpdateStrategy update = default(UpdateStrategy), Dictionary<string, VolumeRequest> volumes = default(Dictionary<string, VolumeRequest>))
+        public TaskGroup(List<Affinity> affinities = default(List<Affinity>), List<Constraint> constraints = default(List<Constraint>), Consul consul = default(Consul), int count = default(int), EphemeralDisk ephemeralDisk = default(EphemeralDisk), long maxClientDisconnect = default(long), Dictionary<string, string> meta = default(Dictionary<string, string>), MigrateStrategy migrate = default(MigrateStrategy), string name = default(string), List<NetworkResource> networks = default(List<NetworkResource>), ReschedulePolicy reschedulePolicy = default(ReschedulePolicy), RestartPolicy restartPolicy = default(RestartPolicy), ScalingPolicy scaling = default(ScalingPolicy), List<Service> services = default(List<Service>), long? shutdownDelay = default(long?), List<Spread> spreads = default(List<Spread>), long? stopAfterClientDisconnect = default(long?), List<Task> tasks = default(List<Task>), UpdateStrategy update = default(UpdateStrategy), Dictionary<string, VolumeRequest> volumes = default(Dictionary<string, VolumeRequest>))
         {
             this.Affinities = affinities;
             this.Constraints = constraints;
@@ -167,7 +167,7 @@ namespace Fermyon.Nomad.Model
         /// Gets or Sets ShutdownDelay
         /// </summary>
         [DataMember(Name = "ShutdownDelay", EmitDefaultValue = false)]
-        public long ShutdownDelay { get; set; }
+        public long? ShutdownDelay { get; set; }
 
         /// <summary>
         /// Gets or Sets Spreads
@@ -179,7 +179,7 @@ namespace Fermyon.Nomad.Model
         /// Gets or Sets StopAfterClientDisconnect
         /// </summary>
         [DataMember(Name = "StopAfterClientDisconnect", EmitDefaultValue = false)]
-        public long StopAfterClientDisconnect { get; set; }
+        public long? StopAfterClientDisconnect { get; set; }
 
         /// <summary>
         /// Gets or Sets Tasks
