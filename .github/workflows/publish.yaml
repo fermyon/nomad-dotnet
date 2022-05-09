@@ -21,11 +21,9 @@ jobs:
     - name: Build
       run: dotnet build  --configuration Release --no-restore
     - name: Publish to Github Packages
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
           for nupkg in $(find . -name *.nupkg)
           do
             echo Pushing $nupkg
-            dotnet nuget push $nupkg --source https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json --skip-duplicate
+            dotnet nuget push $nupkg --source https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json --api-key ${{ secrets.GITHUB_TOKEN }} --skip-duplicate
           done
