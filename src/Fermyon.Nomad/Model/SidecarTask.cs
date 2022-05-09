@@ -46,7 +46,7 @@ namespace Fermyon.Nomad.Model
         /// <param name="resources">resources.</param>
         /// <param name="shutdownDelay">shutdownDelay.</param>
         /// <param name="user">user.</param>
-        public SidecarTask(Dictionary<string, Object> config = default(Dictionary<string, Object>), string driver = default(string), Dictionary<string, string> env = default(Dictionary<string, string>), string killSignal = default(string), long killTimeout = default(long), LogConfig logConfig = default(LogConfig), Dictionary<string, string> meta = default(Dictionary<string, string>), string name = default(string), Resources resources = default(Resources), long? shutdownDelay = default(long), string user = default(string))
+        public SidecarTask(Dictionary<string, Object> config = default(Dictionary<string, Object>), string driver = default(string), Dictionary<string, string> env = default(Dictionary<string, string>), string killSignal = default(string), long killTimeout = default(long), LogConfig logConfig = default(LogConfig), Dictionary<string, string> meta = default(Dictionary<string, string>), string name = default(string), Resources resources = default(Resources), long? shutdownDelay = default(long?), string user = default(string))
         {
             this.Config = config;
             this.Driver = driver;
