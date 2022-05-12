@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="createnamespace"></a>
 # **CreateNamespace**
-> void CreateNamespace (string? region = null, string? _namespace = null, string? xNomadToken = null, string? idempotencyToken = null)
+> void CreateNamespace (string region = null, string _namespace = null, string xNomadToken = null, string idempotencyToken = null)
 
 
 
@@ -39,10 +39,10 @@ namespace Example
             // config.AddApiKeyPrefix("X-Nomad-Token", "Bearer");
 
             var apiInstance = new NamespacesApi(config);
-            var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
-            var xNomadToken = "xNomadToken_example";  // string? | A Nomad ACL token. (optional) 
-            var idempotencyToken = "idempotencyToken_example";  // string? | Can be used to ensure operations are only run once. (optional) 
+            var region = region_example;  // string | Filters results based on the specified region. (optional) 
+            var _namespace = _namespace_example;  // string | Filters results based on the specified namespace. (optional) 
+            var xNomadToken = xNomadToken_example;  // string | A Nomad ACL token. (optional) 
+            var idempotencyToken = idempotencyToken_example;  // string | Can be used to ensure operations are only run once. (optional) 
 
             try
             {
@@ -63,10 +63,10 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **region** | **string?**| Filters results based on the specified region. | [optional] 
- **_namespace** | **string?**| Filters results based on the specified namespace. | [optional] 
- **xNomadToken** | **string?**| A Nomad ACL token. | [optional] 
- **idempotencyToken** | **string?**| Can be used to ensure operations are only run once. | [optional] 
+ **region** | **string**| Filters results based on the specified region. | [optional] 
+ **_namespace** | **string**| Filters results based on the specified namespace. | [optional] 
+ **xNomadToken** | **string**| A Nomad ACL token. | [optional] 
+ **idempotencyToken** | **string**| Can be used to ensure operations are only run once. | [optional] 
 
 ### Return type
 
@@ -95,7 +95,7 @@ void (empty response body)
 
 <a name="deletenamespace"></a>
 # **DeleteNamespace**
-> void DeleteNamespace (string namespaceName, string? region = null, string? _namespace = null, string? xNomadToken = null, string? idempotencyToken = null)
+> void DeleteNamespace (string namespaceName, string region = null, string _namespace = null, string xNomadToken = null, string idempotencyToken = null)
 
 
 
@@ -121,11 +121,11 @@ namespace Example
             // config.AddApiKeyPrefix("X-Nomad-Token", "Bearer");
 
             var apiInstance = new NamespacesApi(config);
-            var namespaceName = "namespaceName_example";  // string | The namespace identifier.
-            var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
-            var xNomadToken = "xNomadToken_example";  // string? | A Nomad ACL token. (optional) 
-            var idempotencyToken = "idempotencyToken_example";  // string? | Can be used to ensure operations are only run once. (optional) 
+            var namespaceName = namespaceName_example;  // string | The namespace identifier.
+            var region = region_example;  // string | Filters results based on the specified region. (optional) 
+            var _namespace = _namespace_example;  // string | Filters results based on the specified namespace. (optional) 
+            var xNomadToken = xNomadToken_example;  // string | A Nomad ACL token. (optional) 
+            var idempotencyToken = idempotencyToken_example;  // string | Can be used to ensure operations are only run once. (optional) 
 
             try
             {
@@ -147,10 +147,10 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **namespaceName** | **string**| The namespace identifier. | 
- **region** | **string?**| Filters results based on the specified region. | [optional] 
- **_namespace** | **string?**| Filters results based on the specified namespace. | [optional] 
- **xNomadToken** | **string?**| A Nomad ACL token. | [optional] 
- **idempotencyToken** | **string?**| Can be used to ensure operations are only run once. | [optional] 
+ **region** | **string**| Filters results based on the specified region. | [optional] 
+ **_namespace** | **string**| Filters results based on the specified namespace. | [optional] 
+ **xNomadToken** | **string**| A Nomad ACL token. | [optional] 
+ **idempotencyToken** | **string**| Can be used to ensure operations are only run once. | [optional] 
 
 ### Return type
 
@@ -179,7 +179,7 @@ void (empty response body)
 
 <a name="getnamespace"></a>
 # **GetNamespace**
-> Namespace GetNamespace (string namespaceName, string? region = null, string? _namespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null)
+> Namespace GetNamespace (string namespaceName, string region = null, string _namespace = null, int? index = null, string wait = null, string stale = null, string prefix = null, string xNomadToken = null, int? perPage = null, string nextToken = null)
 
 
 
@@ -205,16 +205,16 @@ namespace Example
             // config.AddApiKeyPrefix("X-Nomad-Token", "Bearer");
 
             var apiInstance = new NamespacesApi(config);
-            var namespaceName = "namespaceName_example";  // string | The namespace identifier.
-            var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var namespaceName = namespaceName_example;  // string | The namespace identifier.
+            var region = region_example;  // string | Filters results based on the specified region. (optional) 
+            var _namespace = _namespace_example;  // string | Filters results based on the specified namespace. (optional) 
             var index = 56;  // int? | If set, wait until query exceeds given index. Must be provided with WaitParam. (optional) 
-            var wait = "wait_example";  // string? | Provided with IndexParam to wait for change. (optional) 
-            var stale = "stale_example";  // string? | If present, results will include stale reads. (optional) 
-            var prefix = "prefix_example";  // string? | Constrains results to jobs that start with the defined prefix (optional) 
-            var xNomadToken = "xNomadToken_example";  // string? | A Nomad ACL token. (optional) 
+            var wait = wait_example;  // string | Provided with IndexParam to wait for change. (optional) 
+            var stale = stale_example;  // string | If present, results will include stale reads. (optional) 
+            var prefix = prefix_example;  // string | Constrains results to jobs that start with the defined prefix (optional) 
+            var xNomadToken = xNomadToken_example;  // string | A Nomad ACL token. (optional) 
             var perPage = 56;  // int? | Maximum number of results to return. (optional) 
-            var nextToken = "nextToken_example";  // string? | Indicates where to start paging for queries that support pagination. (optional) 
+            var nextToken = nextToken_example;  // string | Indicates where to start paging for queries that support pagination. (optional) 
 
             try
             {
@@ -237,15 +237,15 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **namespaceName** | **string**| The namespace identifier. | 
- **region** | **string?**| Filters results based on the specified region. | [optional] 
- **_namespace** | **string?**| Filters results based on the specified namespace. | [optional] 
+ **region** | **string**| Filters results based on the specified region. | [optional] 
+ **_namespace** | **string**| Filters results based on the specified namespace. | [optional] 
  **index** | **int?**| If set, wait until query exceeds given index. Must be provided with WaitParam. | [optional] 
- **wait** | **string?**| Provided with IndexParam to wait for change. | [optional] 
- **stale** | **string?**| If present, results will include stale reads. | [optional] 
- **prefix** | **string?**| Constrains results to jobs that start with the defined prefix | [optional] 
- **xNomadToken** | **string?**| A Nomad ACL token. | [optional] 
+ **wait** | **string**| Provided with IndexParam to wait for change. | [optional] 
+ **stale** | **string**| If present, results will include stale reads. | [optional] 
+ **prefix** | **string**| Constrains results to jobs that start with the defined prefix | [optional] 
+ **xNomadToken** | **string**| A Nomad ACL token. | [optional] 
  **perPage** | **int?**| Maximum number of results to return. | [optional] 
- **nextToken** | **string?**| Indicates where to start paging for queries that support pagination. | [optional] 
+ **nextToken** | **string**| Indicates where to start paging for queries that support pagination. | [optional] 
 
 ### Return type
 
@@ -274,7 +274,7 @@ Name | Type | Description  | Notes
 
 <a name="getnamespaces"></a>
 # **GetNamespaces**
-> List&lt;Namespace&gt; GetNamespaces (string? region = null, string? _namespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null)
+> List&lt;Namespace&gt; GetNamespaces (string region = null, string _namespace = null, int? index = null, string wait = null, string stale = null, string prefix = null, string xNomadToken = null, int? perPage = null, string nextToken = null)
 
 
 
@@ -300,15 +300,15 @@ namespace Example
             // config.AddApiKeyPrefix("X-Nomad-Token", "Bearer");
 
             var apiInstance = new NamespacesApi(config);
-            var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var region = region_example;  // string | Filters results based on the specified region. (optional) 
+            var _namespace = _namespace_example;  // string | Filters results based on the specified namespace. (optional) 
             var index = 56;  // int? | If set, wait until query exceeds given index. Must be provided with WaitParam. (optional) 
-            var wait = "wait_example";  // string? | Provided with IndexParam to wait for change. (optional) 
-            var stale = "stale_example";  // string? | If present, results will include stale reads. (optional) 
-            var prefix = "prefix_example";  // string? | Constrains results to jobs that start with the defined prefix (optional) 
-            var xNomadToken = "xNomadToken_example";  // string? | A Nomad ACL token. (optional) 
+            var wait = wait_example;  // string | Provided with IndexParam to wait for change. (optional) 
+            var stale = stale_example;  // string | If present, results will include stale reads. (optional) 
+            var prefix = prefix_example;  // string | Constrains results to jobs that start with the defined prefix (optional) 
+            var xNomadToken = xNomadToken_example;  // string | A Nomad ACL token. (optional) 
             var perPage = 56;  // int? | Maximum number of results to return. (optional) 
-            var nextToken = "nextToken_example";  // string? | Indicates where to start paging for queries that support pagination. (optional) 
+            var nextToken = nextToken_example;  // string | Indicates where to start paging for queries that support pagination. (optional) 
 
             try
             {
@@ -330,15 +330,15 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **region** | **string?**| Filters results based on the specified region. | [optional] 
- **_namespace** | **string?**| Filters results based on the specified namespace. | [optional] 
+ **region** | **string**| Filters results based on the specified region. | [optional] 
+ **_namespace** | **string**| Filters results based on the specified namespace. | [optional] 
  **index** | **int?**| If set, wait until query exceeds given index. Must be provided with WaitParam. | [optional] 
- **wait** | **string?**| Provided with IndexParam to wait for change. | [optional] 
- **stale** | **string?**| If present, results will include stale reads. | [optional] 
- **prefix** | **string?**| Constrains results to jobs that start with the defined prefix | [optional] 
- **xNomadToken** | **string?**| A Nomad ACL token. | [optional] 
+ **wait** | **string**| Provided with IndexParam to wait for change. | [optional] 
+ **stale** | **string**| If present, results will include stale reads. | [optional] 
+ **prefix** | **string**| Constrains results to jobs that start with the defined prefix | [optional] 
+ **xNomadToken** | **string**| A Nomad ACL token. | [optional] 
  **perPage** | **int?**| Maximum number of results to return. | [optional] 
- **nextToken** | **string?**| Indicates where to start paging for queries that support pagination. | [optional] 
+ **nextToken** | **string**| Indicates where to start paging for queries that support pagination. | [optional] 
 
 ### Return type
 
@@ -367,7 +367,7 @@ Name | Type | Description  | Notes
 
 <a name="postnamespace"></a>
 # **PostNamespace**
-> void PostNamespace (string namespaceName, Namespace _namespace2, string? region = null, string? _namespace = null, string? xNomadToken = null, string? idempotencyToken = null)
+> void PostNamespace (string namespaceName, Namespace _namespace2, string region = null, string _namespace = null, string xNomadToken = null, string idempotencyToken = null)
 
 
 
@@ -393,12 +393,12 @@ namespace Example
             // config.AddApiKeyPrefix("X-Nomad-Token", "Bearer");
 
             var apiInstance = new NamespacesApi(config);
-            var namespaceName = "namespaceName_example";  // string | The namespace identifier.
+            var namespaceName = namespaceName_example;  // string | The namespace identifier.
             var _namespace2 = new Namespace(); // Namespace | 
-            var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
-            var xNomadToken = "xNomadToken_example";  // string? | A Nomad ACL token. (optional) 
-            var idempotencyToken = "idempotencyToken_example";  // string? | Can be used to ensure operations are only run once. (optional) 
+            var region = region_example;  // string | Filters results based on the specified region. (optional) 
+            var _namespace = _namespace_example;  // string | Filters results based on the specified namespace. (optional) 
+            var xNomadToken = xNomadToken_example;  // string | A Nomad ACL token. (optional) 
+            var idempotencyToken = idempotencyToken_example;  // string | Can be used to ensure operations are only run once. (optional) 
 
             try
             {
@@ -421,10 +421,10 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **namespaceName** | **string**| The namespace identifier. | 
  **_namespace2** | [**Namespace**](Namespace.md)|  | 
- **region** | **string?**| Filters results based on the specified region. | [optional] 
- **_namespace** | **string?**| Filters results based on the specified namespace. | [optional] 
- **xNomadToken** | **string?**| A Nomad ACL token. | [optional] 
- **idempotencyToken** | **string?**| Can be used to ensure operations are only run once. | [optional] 
+ **region** | **string**| Filters results based on the specified region. | [optional] 
+ **_namespace** | **string**| Filters results based on the specified namespace. | [optional] 
+ **xNomadToken** | **string**| A Nomad ACL token. | [optional] 
+ **idempotencyToken** | **string**| Can be used to ensure operations are only run once. | [optional] 
 
 ### Return type
 

@@ -19,7 +19,7 @@ Method | HTTP request | Description
 
 <a name="createvolume"></a>
 # **CreateVolume**
-> void CreateVolume (string volumeId, string action, CSIVolumeCreateRequest cSIVolumeCreateRequest, string? region = null, string? _namespace = null, string? xNomadToken = null, string? idempotencyToken = null)
+> void CreateVolume (string volumeId, string action, CSIVolumeCreateRequest cSIVolumeCreateRequest, string region = null, string _namespace = null, string xNomadToken = null, string idempotencyToken = null)
 
 
 
@@ -45,13 +45,13 @@ namespace Example
             // config.AddApiKeyPrefix("X-Nomad-Token", "Bearer");
 
             var apiInstance = new VolumesApi(config);
-            var volumeId = "volumeId_example";  // string | Volume unique identifier.
-            var action = "action_example";  // string | The action to perform on the Volume (create, detach, delete).
+            var volumeId = volumeId_example;  // string | Volume unique identifier.
+            var action = action_example;  // string | The action to perform on the Volume (create, detach, delete).
             var cSIVolumeCreateRequest = new CSIVolumeCreateRequest(); // CSIVolumeCreateRequest | 
-            var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
-            var xNomadToken = "xNomadToken_example";  // string? | A Nomad ACL token. (optional) 
-            var idempotencyToken = "idempotencyToken_example";  // string? | Can be used to ensure operations are only run once. (optional) 
+            var region = region_example;  // string | Filters results based on the specified region. (optional) 
+            var _namespace = _namespace_example;  // string | Filters results based on the specified namespace. (optional) 
+            var xNomadToken = xNomadToken_example;  // string | A Nomad ACL token. (optional) 
+            var idempotencyToken = idempotencyToken_example;  // string | Can be used to ensure operations are only run once. (optional) 
 
             try
             {
@@ -75,10 +75,10 @@ Name | Type | Description  | Notes
  **volumeId** | **string**| Volume unique identifier. | 
  **action** | **string**| The action to perform on the Volume (create, detach, delete). | 
  **cSIVolumeCreateRequest** | [**CSIVolumeCreateRequest**](CSIVolumeCreateRequest.md)|  | 
- **region** | **string?**| Filters results based on the specified region. | [optional] 
- **_namespace** | **string?**| Filters results based on the specified namespace. | [optional] 
- **xNomadToken** | **string?**| A Nomad ACL token. | [optional] 
- **idempotencyToken** | **string?**| Can be used to ensure operations are only run once. | [optional] 
+ **region** | **string**| Filters results based on the specified region. | [optional] 
+ **_namespace** | **string**| Filters results based on the specified namespace. | [optional] 
+ **xNomadToken** | **string**| A Nomad ACL token. | [optional] 
+ **idempotencyToken** | **string**| Can be used to ensure operations are only run once. | [optional] 
 
 ### Return type
 
@@ -107,7 +107,7 @@ void (empty response body)
 
 <a name="deletesnapshot"></a>
 # **DeleteSnapshot**
-> void DeleteSnapshot (string? region = null, string? _namespace = null, string? xNomadToken = null, string? idempotencyToken = null, string? pluginId = null, string? snapshotId = null)
+> void DeleteSnapshot (string region = null, string _namespace = null, string xNomadToken = null, string idempotencyToken = null, string pluginId = null, string snapshotId = null)
 
 
 
@@ -133,12 +133,12 @@ namespace Example
             // config.AddApiKeyPrefix("X-Nomad-Token", "Bearer");
 
             var apiInstance = new VolumesApi(config);
-            var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
-            var xNomadToken = "xNomadToken_example";  // string? | A Nomad ACL token. (optional) 
-            var idempotencyToken = "idempotencyToken_example";  // string? | Can be used to ensure operations are only run once. (optional) 
-            var pluginId = "pluginId_example";  // string? | Filters volume lists by plugin ID. (optional) 
-            var snapshotId = "snapshotId_example";  // string? | The ID of the snapshot to target. (optional) 
+            var region = region_example;  // string | Filters results based on the specified region. (optional) 
+            var _namespace = _namespace_example;  // string | Filters results based on the specified namespace. (optional) 
+            var xNomadToken = xNomadToken_example;  // string | A Nomad ACL token. (optional) 
+            var idempotencyToken = idempotencyToken_example;  // string | Can be used to ensure operations are only run once. (optional) 
+            var pluginId = pluginId_example;  // string | Filters volume lists by plugin ID. (optional) 
+            var snapshotId = snapshotId_example;  // string | The ID of the snapshot to target. (optional) 
 
             try
             {
@@ -159,12 +159,12 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **region** | **string?**| Filters results based on the specified region. | [optional] 
- **_namespace** | **string?**| Filters results based on the specified namespace. | [optional] 
- **xNomadToken** | **string?**| A Nomad ACL token. | [optional] 
- **idempotencyToken** | **string?**| Can be used to ensure operations are only run once. | [optional] 
- **pluginId** | **string?**| Filters volume lists by plugin ID. | [optional] 
- **snapshotId** | **string?**| The ID of the snapshot to target. | [optional] 
+ **region** | **string**| Filters results based on the specified region. | [optional] 
+ **_namespace** | **string**| Filters results based on the specified namespace. | [optional] 
+ **xNomadToken** | **string**| A Nomad ACL token. | [optional] 
+ **idempotencyToken** | **string**| Can be used to ensure operations are only run once. | [optional] 
+ **pluginId** | **string**| Filters volume lists by plugin ID. | [optional] 
+ **snapshotId** | **string**| The ID of the snapshot to target. | [optional] 
 
 ### Return type
 
@@ -193,7 +193,7 @@ void (empty response body)
 
 <a name="deletevolumeregistration"></a>
 # **DeleteVolumeRegistration**
-> void DeleteVolumeRegistration (string volumeId, string? region = null, string? _namespace = null, string? xNomadToken = null, string? idempotencyToken = null, string? force = null)
+> void DeleteVolumeRegistration (string volumeId, string region = null, string _namespace = null, string xNomadToken = null, string idempotencyToken = null, string force = null)
 
 
 
@@ -219,12 +219,12 @@ namespace Example
             // config.AddApiKeyPrefix("X-Nomad-Token", "Bearer");
 
             var apiInstance = new VolumesApi(config);
-            var volumeId = "volumeId_example";  // string | Volume unique identifier.
-            var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
-            var xNomadToken = "xNomadToken_example";  // string? | A Nomad ACL token. (optional) 
-            var idempotencyToken = "idempotencyToken_example";  // string? | Can be used to ensure operations are only run once. (optional) 
-            var force = "force_example";  // string? | Used to force the de-registration of a volume. (optional) 
+            var volumeId = volumeId_example;  // string | Volume unique identifier.
+            var region = region_example;  // string | Filters results based on the specified region. (optional) 
+            var _namespace = _namespace_example;  // string | Filters results based on the specified namespace. (optional) 
+            var xNomadToken = xNomadToken_example;  // string | A Nomad ACL token. (optional) 
+            var idempotencyToken = idempotencyToken_example;  // string | Can be used to ensure operations are only run once. (optional) 
+            var force = force_example;  // string | Used to force the de-registration of a volume. (optional) 
 
             try
             {
@@ -246,11 +246,11 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **volumeId** | **string**| Volume unique identifier. | 
- **region** | **string?**| Filters results based on the specified region. | [optional] 
- **_namespace** | **string?**| Filters results based on the specified namespace. | [optional] 
- **xNomadToken** | **string?**| A Nomad ACL token. | [optional] 
- **idempotencyToken** | **string?**| Can be used to ensure operations are only run once. | [optional] 
- **force** | **string?**| Used to force the de-registration of a volume. | [optional] 
+ **region** | **string**| Filters results based on the specified region. | [optional] 
+ **_namespace** | **string**| Filters results based on the specified namespace. | [optional] 
+ **xNomadToken** | **string**| A Nomad ACL token. | [optional] 
+ **idempotencyToken** | **string**| Can be used to ensure operations are only run once. | [optional] 
+ **force** | **string**| Used to force the de-registration of a volume. | [optional] 
 
 ### Return type
 
@@ -279,7 +279,7 @@ void (empty response body)
 
 <a name="detachordeletevolume"></a>
 # **DetachOrDeleteVolume**
-> void DetachOrDeleteVolume (string volumeId, string action, string? region = null, string? _namespace = null, string? xNomadToken = null, string? idempotencyToken = null, string? node = null)
+> void DetachOrDeleteVolume (string volumeId, string action, string region = null, string _namespace = null, string xNomadToken = null, string idempotencyToken = null, string node = null)
 
 
 
@@ -305,13 +305,13 @@ namespace Example
             // config.AddApiKeyPrefix("X-Nomad-Token", "Bearer");
 
             var apiInstance = new VolumesApi(config);
-            var volumeId = "volumeId_example";  // string | Volume unique identifier.
-            var action = "action_example";  // string | The action to perform on the Volume (create, detach, delete).
-            var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
-            var xNomadToken = "xNomadToken_example";  // string? | A Nomad ACL token. (optional) 
-            var idempotencyToken = "idempotencyToken_example";  // string? | Can be used to ensure operations are only run once. (optional) 
-            var node = "node_example";  // string? | Specifies node to target volume operation for. (optional) 
+            var volumeId = volumeId_example;  // string | Volume unique identifier.
+            var action = action_example;  // string | The action to perform on the Volume (create, detach, delete).
+            var region = region_example;  // string | Filters results based on the specified region. (optional) 
+            var _namespace = _namespace_example;  // string | Filters results based on the specified namespace. (optional) 
+            var xNomadToken = xNomadToken_example;  // string | A Nomad ACL token. (optional) 
+            var idempotencyToken = idempotencyToken_example;  // string | Can be used to ensure operations are only run once. (optional) 
+            var node = node_example;  // string | Specifies node to target volume operation for. (optional) 
 
             try
             {
@@ -334,11 +334,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **volumeId** | **string**| Volume unique identifier. | 
  **action** | **string**| The action to perform on the Volume (create, detach, delete). | 
- **region** | **string?**| Filters results based on the specified region. | [optional] 
- **_namespace** | **string?**| Filters results based on the specified namespace. | [optional] 
- **xNomadToken** | **string?**| A Nomad ACL token. | [optional] 
- **idempotencyToken** | **string?**| Can be used to ensure operations are only run once. | [optional] 
- **node** | **string?**| Specifies node to target volume operation for. | [optional] 
+ **region** | **string**| Filters results based on the specified region. | [optional] 
+ **_namespace** | **string**| Filters results based on the specified namespace. | [optional] 
+ **xNomadToken** | **string**| A Nomad ACL token. | [optional] 
+ **idempotencyToken** | **string**| Can be used to ensure operations are only run once. | [optional] 
+ **node** | **string**| Specifies node to target volume operation for. | [optional] 
 
 ### Return type
 
@@ -367,7 +367,7 @@ void (empty response body)
 
 <a name="getexternalvolumes"></a>
 # **GetExternalVolumes**
-> CSIVolumeListExternalResponse GetExternalVolumes (string? region = null, string? _namespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null, string? pluginId = null)
+> CSIVolumeListExternalResponse GetExternalVolumes (string region = null, string _namespace = null, int? index = null, string wait = null, string stale = null, string prefix = null, string xNomadToken = null, int? perPage = null, string nextToken = null, string pluginId = null)
 
 
 
@@ -393,16 +393,16 @@ namespace Example
             // config.AddApiKeyPrefix("X-Nomad-Token", "Bearer");
 
             var apiInstance = new VolumesApi(config);
-            var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var region = region_example;  // string | Filters results based on the specified region. (optional) 
+            var _namespace = _namespace_example;  // string | Filters results based on the specified namespace. (optional) 
             var index = 56;  // int? | If set, wait until query exceeds given index. Must be provided with WaitParam. (optional) 
-            var wait = "wait_example";  // string? | Provided with IndexParam to wait for change. (optional) 
-            var stale = "stale_example";  // string? | If present, results will include stale reads. (optional) 
-            var prefix = "prefix_example";  // string? | Constrains results to jobs that start with the defined prefix (optional) 
-            var xNomadToken = "xNomadToken_example";  // string? | A Nomad ACL token. (optional) 
+            var wait = wait_example;  // string | Provided with IndexParam to wait for change. (optional) 
+            var stale = stale_example;  // string | If present, results will include stale reads. (optional) 
+            var prefix = prefix_example;  // string | Constrains results to jobs that start with the defined prefix (optional) 
+            var xNomadToken = xNomadToken_example;  // string | A Nomad ACL token. (optional) 
             var perPage = 56;  // int? | Maximum number of results to return. (optional) 
-            var nextToken = "nextToken_example";  // string? | Indicates where to start paging for queries that support pagination. (optional) 
-            var pluginId = "pluginId_example";  // string? | Filters volume lists by plugin ID. (optional) 
+            var nextToken = nextToken_example;  // string | Indicates where to start paging for queries that support pagination. (optional) 
+            var pluginId = pluginId_example;  // string | Filters volume lists by plugin ID. (optional) 
 
             try
             {
@@ -424,16 +424,16 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **region** | **string?**| Filters results based on the specified region. | [optional] 
- **_namespace** | **string?**| Filters results based on the specified namespace. | [optional] 
+ **region** | **string**| Filters results based on the specified region. | [optional] 
+ **_namespace** | **string**| Filters results based on the specified namespace. | [optional] 
  **index** | **int?**| If set, wait until query exceeds given index. Must be provided with WaitParam. | [optional] 
- **wait** | **string?**| Provided with IndexParam to wait for change. | [optional] 
- **stale** | **string?**| If present, results will include stale reads. | [optional] 
- **prefix** | **string?**| Constrains results to jobs that start with the defined prefix | [optional] 
- **xNomadToken** | **string?**| A Nomad ACL token. | [optional] 
+ **wait** | **string**| Provided with IndexParam to wait for change. | [optional] 
+ **stale** | **string**| If present, results will include stale reads. | [optional] 
+ **prefix** | **string**| Constrains results to jobs that start with the defined prefix | [optional] 
+ **xNomadToken** | **string**| A Nomad ACL token. | [optional] 
  **perPage** | **int?**| Maximum number of results to return. | [optional] 
- **nextToken** | **string?**| Indicates where to start paging for queries that support pagination. | [optional] 
- **pluginId** | **string?**| Filters volume lists by plugin ID. | [optional] 
+ **nextToken** | **string**| Indicates where to start paging for queries that support pagination. | [optional] 
+ **pluginId** | **string**| Filters volume lists by plugin ID. | [optional] 
 
 ### Return type
 
@@ -462,7 +462,7 @@ Name | Type | Description  | Notes
 
 <a name="getsnapshots"></a>
 # **GetSnapshots**
-> CSISnapshotListResponse GetSnapshots (string? region = null, string? _namespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null, string? pluginId = null)
+> CSISnapshotListResponse GetSnapshots (string region = null, string _namespace = null, int? index = null, string wait = null, string stale = null, string prefix = null, string xNomadToken = null, int? perPage = null, string nextToken = null, string pluginId = null)
 
 
 
@@ -488,16 +488,16 @@ namespace Example
             // config.AddApiKeyPrefix("X-Nomad-Token", "Bearer");
 
             var apiInstance = new VolumesApi(config);
-            var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var region = region_example;  // string | Filters results based on the specified region. (optional) 
+            var _namespace = _namespace_example;  // string | Filters results based on the specified namespace. (optional) 
             var index = 56;  // int? | If set, wait until query exceeds given index. Must be provided with WaitParam. (optional) 
-            var wait = "wait_example";  // string? | Provided with IndexParam to wait for change. (optional) 
-            var stale = "stale_example";  // string? | If present, results will include stale reads. (optional) 
-            var prefix = "prefix_example";  // string? | Constrains results to jobs that start with the defined prefix (optional) 
-            var xNomadToken = "xNomadToken_example";  // string? | A Nomad ACL token. (optional) 
+            var wait = wait_example;  // string | Provided with IndexParam to wait for change. (optional) 
+            var stale = stale_example;  // string | If present, results will include stale reads. (optional) 
+            var prefix = prefix_example;  // string | Constrains results to jobs that start with the defined prefix (optional) 
+            var xNomadToken = xNomadToken_example;  // string | A Nomad ACL token. (optional) 
             var perPage = 56;  // int? | Maximum number of results to return. (optional) 
-            var nextToken = "nextToken_example";  // string? | Indicates where to start paging for queries that support pagination. (optional) 
-            var pluginId = "pluginId_example";  // string? | Filters volume lists by plugin ID. (optional) 
+            var nextToken = nextToken_example;  // string | Indicates where to start paging for queries that support pagination. (optional) 
+            var pluginId = pluginId_example;  // string | Filters volume lists by plugin ID. (optional) 
 
             try
             {
@@ -519,16 +519,16 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **region** | **string?**| Filters results based on the specified region. | [optional] 
- **_namespace** | **string?**| Filters results based on the specified namespace. | [optional] 
+ **region** | **string**| Filters results based on the specified region. | [optional] 
+ **_namespace** | **string**| Filters results based on the specified namespace. | [optional] 
  **index** | **int?**| If set, wait until query exceeds given index. Must be provided with WaitParam. | [optional] 
- **wait** | **string?**| Provided with IndexParam to wait for change. | [optional] 
- **stale** | **string?**| If present, results will include stale reads. | [optional] 
- **prefix** | **string?**| Constrains results to jobs that start with the defined prefix | [optional] 
- **xNomadToken** | **string?**| A Nomad ACL token. | [optional] 
+ **wait** | **string**| Provided with IndexParam to wait for change. | [optional] 
+ **stale** | **string**| If present, results will include stale reads. | [optional] 
+ **prefix** | **string**| Constrains results to jobs that start with the defined prefix | [optional] 
+ **xNomadToken** | **string**| A Nomad ACL token. | [optional] 
  **perPage** | **int?**| Maximum number of results to return. | [optional] 
- **nextToken** | **string?**| Indicates where to start paging for queries that support pagination. | [optional] 
- **pluginId** | **string?**| Filters volume lists by plugin ID. | [optional] 
+ **nextToken** | **string**| Indicates where to start paging for queries that support pagination. | [optional] 
+ **pluginId** | **string**| Filters volume lists by plugin ID. | [optional] 
 
 ### Return type
 
@@ -557,7 +557,7 @@ Name | Type | Description  | Notes
 
 <a name="getvolume"></a>
 # **GetVolume**
-> CSIVolume GetVolume (string volumeId, string? region = null, string? _namespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null)
+> CSIVolume GetVolume (string volumeId, string region = null, string _namespace = null, int? index = null, string wait = null, string stale = null, string prefix = null, string xNomadToken = null, int? perPage = null, string nextToken = null)
 
 
 
@@ -583,16 +583,16 @@ namespace Example
             // config.AddApiKeyPrefix("X-Nomad-Token", "Bearer");
 
             var apiInstance = new VolumesApi(config);
-            var volumeId = "volumeId_example";  // string | Volume unique identifier.
-            var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var volumeId = volumeId_example;  // string | Volume unique identifier.
+            var region = region_example;  // string | Filters results based on the specified region. (optional) 
+            var _namespace = _namespace_example;  // string | Filters results based on the specified namespace. (optional) 
             var index = 56;  // int? | If set, wait until query exceeds given index. Must be provided with WaitParam. (optional) 
-            var wait = "wait_example";  // string? | Provided with IndexParam to wait for change. (optional) 
-            var stale = "stale_example";  // string? | If present, results will include stale reads. (optional) 
-            var prefix = "prefix_example";  // string? | Constrains results to jobs that start with the defined prefix (optional) 
-            var xNomadToken = "xNomadToken_example";  // string? | A Nomad ACL token. (optional) 
+            var wait = wait_example;  // string | Provided with IndexParam to wait for change. (optional) 
+            var stale = stale_example;  // string | If present, results will include stale reads. (optional) 
+            var prefix = prefix_example;  // string | Constrains results to jobs that start with the defined prefix (optional) 
+            var xNomadToken = xNomadToken_example;  // string | A Nomad ACL token. (optional) 
             var perPage = 56;  // int? | Maximum number of results to return. (optional) 
-            var nextToken = "nextToken_example";  // string? | Indicates where to start paging for queries that support pagination. (optional) 
+            var nextToken = nextToken_example;  // string | Indicates where to start paging for queries that support pagination. (optional) 
 
             try
             {
@@ -615,15 +615,15 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **volumeId** | **string**| Volume unique identifier. | 
- **region** | **string?**| Filters results based on the specified region. | [optional] 
- **_namespace** | **string?**| Filters results based on the specified namespace. | [optional] 
+ **region** | **string**| Filters results based on the specified region. | [optional] 
+ **_namespace** | **string**| Filters results based on the specified namespace. | [optional] 
  **index** | **int?**| If set, wait until query exceeds given index. Must be provided with WaitParam. | [optional] 
- **wait** | **string?**| Provided with IndexParam to wait for change. | [optional] 
- **stale** | **string?**| If present, results will include stale reads. | [optional] 
- **prefix** | **string?**| Constrains results to jobs that start with the defined prefix | [optional] 
- **xNomadToken** | **string?**| A Nomad ACL token. | [optional] 
+ **wait** | **string**| Provided with IndexParam to wait for change. | [optional] 
+ **stale** | **string**| If present, results will include stale reads. | [optional] 
+ **prefix** | **string**| Constrains results to jobs that start with the defined prefix | [optional] 
+ **xNomadToken** | **string**| A Nomad ACL token. | [optional] 
  **perPage** | **int?**| Maximum number of results to return. | [optional] 
- **nextToken** | **string?**| Indicates where to start paging for queries that support pagination. | [optional] 
+ **nextToken** | **string**| Indicates where to start paging for queries that support pagination. | [optional] 
 
 ### Return type
 
@@ -652,7 +652,7 @@ Name | Type | Description  | Notes
 
 <a name="getvolumes"></a>
 # **GetVolumes**
-> List&lt;CSIVolumeListStub&gt; GetVolumes (string? region = null, string? _namespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null, string? nodeId = null, string? pluginId = null, string? type = null)
+> List&lt;CSIVolumeListStub&gt; GetVolumes (string region = null, string _namespace = null, int? index = null, string wait = null, string stale = null, string prefix = null, string xNomadToken = null, int? perPage = null, string nextToken = null, string nodeId = null, string pluginId = null, string type = null)
 
 
 
@@ -678,18 +678,18 @@ namespace Example
             // config.AddApiKeyPrefix("X-Nomad-Token", "Bearer");
 
             var apiInstance = new VolumesApi(config);
-            var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var region = region_example;  // string | Filters results based on the specified region. (optional) 
+            var _namespace = _namespace_example;  // string | Filters results based on the specified namespace. (optional) 
             var index = 56;  // int? | If set, wait until query exceeds given index. Must be provided with WaitParam. (optional) 
-            var wait = "wait_example";  // string? | Provided with IndexParam to wait for change. (optional) 
-            var stale = "stale_example";  // string? | If present, results will include stale reads. (optional) 
-            var prefix = "prefix_example";  // string? | Constrains results to jobs that start with the defined prefix (optional) 
-            var xNomadToken = "xNomadToken_example";  // string? | A Nomad ACL token. (optional) 
+            var wait = wait_example;  // string | Provided with IndexParam to wait for change. (optional) 
+            var stale = stale_example;  // string | If present, results will include stale reads. (optional) 
+            var prefix = prefix_example;  // string | Constrains results to jobs that start with the defined prefix (optional) 
+            var xNomadToken = xNomadToken_example;  // string | A Nomad ACL token. (optional) 
             var perPage = 56;  // int? | Maximum number of results to return. (optional) 
-            var nextToken = "nextToken_example";  // string? | Indicates where to start paging for queries that support pagination. (optional) 
-            var nodeId = "nodeId_example";  // string? | Filters volume lists by node ID. (optional) 
-            var pluginId = "pluginId_example";  // string? | Filters volume lists by plugin ID. (optional) 
-            var type = "type_example";  // string? | Filters volume lists to a specific type. (optional) 
+            var nextToken = nextToken_example;  // string | Indicates where to start paging for queries that support pagination. (optional) 
+            var nodeId = nodeId_example;  // string | Filters volume lists by node ID. (optional) 
+            var pluginId = pluginId_example;  // string | Filters volume lists by plugin ID. (optional) 
+            var type = type_example;  // string | Filters volume lists to a specific type. (optional) 
 
             try
             {
@@ -711,18 +711,18 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **region** | **string?**| Filters results based on the specified region. | [optional] 
- **_namespace** | **string?**| Filters results based on the specified namespace. | [optional] 
+ **region** | **string**| Filters results based on the specified region. | [optional] 
+ **_namespace** | **string**| Filters results based on the specified namespace. | [optional] 
  **index** | **int?**| If set, wait until query exceeds given index. Must be provided with WaitParam. | [optional] 
- **wait** | **string?**| Provided with IndexParam to wait for change. | [optional] 
- **stale** | **string?**| If present, results will include stale reads. | [optional] 
- **prefix** | **string?**| Constrains results to jobs that start with the defined prefix | [optional] 
- **xNomadToken** | **string?**| A Nomad ACL token. | [optional] 
+ **wait** | **string**| Provided with IndexParam to wait for change. | [optional] 
+ **stale** | **string**| If present, results will include stale reads. | [optional] 
+ **prefix** | **string**| Constrains results to jobs that start with the defined prefix | [optional] 
+ **xNomadToken** | **string**| A Nomad ACL token. | [optional] 
  **perPage** | **int?**| Maximum number of results to return. | [optional] 
- **nextToken** | **string?**| Indicates where to start paging for queries that support pagination. | [optional] 
- **nodeId** | **string?**| Filters volume lists by node ID. | [optional] 
- **pluginId** | **string?**| Filters volume lists by plugin ID. | [optional] 
- **type** | **string?**| Filters volume lists to a specific type. | [optional] 
+ **nextToken** | **string**| Indicates where to start paging for queries that support pagination. | [optional] 
+ **nodeId** | **string**| Filters volume lists by node ID. | [optional] 
+ **pluginId** | **string**| Filters volume lists by plugin ID. | [optional] 
+ **type** | **string**| Filters volume lists to a specific type. | [optional] 
 
 ### Return type
 
@@ -751,7 +751,7 @@ Name | Type | Description  | Notes
 
 <a name="postsnapshot"></a>
 # **PostSnapshot**
-> CSISnapshotCreateResponse PostSnapshot (CSISnapshotCreateRequest cSISnapshotCreateRequest, string? region = null, string? _namespace = null, string? xNomadToken = null, string? idempotencyToken = null)
+> CSISnapshotCreateResponse PostSnapshot (CSISnapshotCreateRequest cSISnapshotCreateRequest, string region = null, string _namespace = null, string xNomadToken = null, string idempotencyToken = null)
 
 
 
@@ -778,10 +778,10 @@ namespace Example
 
             var apiInstance = new VolumesApi(config);
             var cSISnapshotCreateRequest = new CSISnapshotCreateRequest(); // CSISnapshotCreateRequest | 
-            var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
-            var xNomadToken = "xNomadToken_example";  // string? | A Nomad ACL token. (optional) 
-            var idempotencyToken = "idempotencyToken_example";  // string? | Can be used to ensure operations are only run once. (optional) 
+            var region = region_example;  // string | Filters results based on the specified region. (optional) 
+            var _namespace = _namespace_example;  // string | Filters results based on the specified namespace. (optional) 
+            var xNomadToken = xNomadToken_example;  // string | A Nomad ACL token. (optional) 
+            var idempotencyToken = idempotencyToken_example;  // string | Can be used to ensure operations are only run once. (optional) 
 
             try
             {
@@ -804,10 +804,10 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cSISnapshotCreateRequest** | [**CSISnapshotCreateRequest**](CSISnapshotCreateRequest.md)|  | 
- **region** | **string?**| Filters results based on the specified region. | [optional] 
- **_namespace** | **string?**| Filters results based on the specified namespace. | [optional] 
- **xNomadToken** | **string?**| A Nomad ACL token. | [optional] 
- **idempotencyToken** | **string?**| Can be used to ensure operations are only run once. | [optional] 
+ **region** | **string**| Filters results based on the specified region. | [optional] 
+ **_namespace** | **string**| Filters results based on the specified namespace. | [optional] 
+ **xNomadToken** | **string**| A Nomad ACL token. | [optional] 
+ **idempotencyToken** | **string**| Can be used to ensure operations are only run once. | [optional] 
 
 ### Return type
 
@@ -836,7 +836,7 @@ Name | Type | Description  | Notes
 
 <a name="postvolume"></a>
 # **PostVolume**
-> void PostVolume (CSIVolumeRegisterRequest cSIVolumeRegisterRequest, string? region = null, string? _namespace = null, string? xNomadToken = null, string? idempotencyToken = null)
+> void PostVolume (CSIVolumeRegisterRequest cSIVolumeRegisterRequest, string region = null, string _namespace = null, string xNomadToken = null, string idempotencyToken = null)
 
 
 
@@ -863,10 +863,10 @@ namespace Example
 
             var apiInstance = new VolumesApi(config);
             var cSIVolumeRegisterRequest = new CSIVolumeRegisterRequest(); // CSIVolumeRegisterRequest | 
-            var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
-            var xNomadToken = "xNomadToken_example";  // string? | A Nomad ACL token. (optional) 
-            var idempotencyToken = "idempotencyToken_example";  // string? | Can be used to ensure operations are only run once. (optional) 
+            var region = region_example;  // string | Filters results based on the specified region. (optional) 
+            var _namespace = _namespace_example;  // string | Filters results based on the specified namespace. (optional) 
+            var xNomadToken = xNomadToken_example;  // string | A Nomad ACL token. (optional) 
+            var idempotencyToken = idempotencyToken_example;  // string | Can be used to ensure operations are only run once. (optional) 
 
             try
             {
@@ -888,10 +888,10 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cSIVolumeRegisterRequest** | [**CSIVolumeRegisterRequest**](CSIVolumeRegisterRequest.md)|  | 
- **region** | **string?**| Filters results based on the specified region. | [optional] 
- **_namespace** | **string?**| Filters results based on the specified namespace. | [optional] 
- **xNomadToken** | **string?**| A Nomad ACL token. | [optional] 
- **idempotencyToken** | **string?**| Can be used to ensure operations are only run once. | [optional] 
+ **region** | **string**| Filters results based on the specified region. | [optional] 
+ **_namespace** | **string**| Filters results based on the specified namespace. | [optional] 
+ **xNomadToken** | **string**| A Nomad ACL token. | [optional] 
+ **idempotencyToken** | **string**| Can be used to ensure operations are only run once. | [optional] 
 
 ### Return type
 
@@ -920,7 +920,7 @@ void (empty response body)
 
 <a name="postvolumeregistration"></a>
 # **PostVolumeRegistration**
-> void PostVolumeRegistration (string volumeId, CSIVolumeRegisterRequest cSIVolumeRegisterRequest, string? region = null, string? _namespace = null, string? xNomadToken = null, string? idempotencyToken = null)
+> void PostVolumeRegistration (string volumeId, CSIVolumeRegisterRequest cSIVolumeRegisterRequest, string region = null, string _namespace = null, string xNomadToken = null, string idempotencyToken = null)
 
 
 
@@ -946,12 +946,12 @@ namespace Example
             // config.AddApiKeyPrefix("X-Nomad-Token", "Bearer");
 
             var apiInstance = new VolumesApi(config);
-            var volumeId = "volumeId_example";  // string | Volume unique identifier.
+            var volumeId = volumeId_example;  // string | Volume unique identifier.
             var cSIVolumeRegisterRequest = new CSIVolumeRegisterRequest(); // CSIVolumeRegisterRequest | 
-            var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
-            var xNomadToken = "xNomadToken_example";  // string? | A Nomad ACL token. (optional) 
-            var idempotencyToken = "idempotencyToken_example";  // string? | Can be used to ensure operations are only run once. (optional) 
+            var region = region_example;  // string | Filters results based on the specified region. (optional) 
+            var _namespace = _namespace_example;  // string | Filters results based on the specified namespace. (optional) 
+            var xNomadToken = xNomadToken_example;  // string | A Nomad ACL token. (optional) 
+            var idempotencyToken = idempotencyToken_example;  // string | Can be used to ensure operations are only run once. (optional) 
 
             try
             {
@@ -974,10 +974,10 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **volumeId** | **string**| Volume unique identifier. | 
  **cSIVolumeRegisterRequest** | [**CSIVolumeRegisterRequest**](CSIVolumeRegisterRequest.md)|  | 
- **region** | **string?**| Filters results based on the specified region. | [optional] 
- **_namespace** | **string?**| Filters results based on the specified namespace. | [optional] 
- **xNomadToken** | **string?**| A Nomad ACL token. | [optional] 
- **idempotencyToken** | **string?**| Can be used to ensure operations are only run once. | [optional] 
+ **region** | **string**| Filters results based on the specified region. | [optional] 
+ **_namespace** | **string**| Filters results based on the specified namespace. | [optional] 
+ **xNomadToken** | **string**| A Nomad ACL token. | [optional] 
+ **idempotencyToken** | **string**| Can be used to ensure operations are only run once. | [optional] 
 
 ### Return type
 

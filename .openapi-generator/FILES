@@ -1,4 +1,5 @@
 .gitignore
+.openapi-generator-ignore
 Fermyon.Nomad.sln
 README.md
 appveyor.yml
@@ -9,6 +10,7 @@ docs/ACLToken.md
 docs/ACLTokenListStub.md
 docs/Affinity.md
 docs/AllocDeploymentStatus.md
+docs/AllocStopResponse.md
 docs/AllocatedCpuResources.md
 docs/AllocatedDeviceResource.md
 docs/AllocatedMemoryResources.md
@@ -17,6 +19,7 @@ docs/AllocatedSharedResources.md
 docs/AllocatedTaskResources.md
 docs/Allocation.md
 docs/AllocationListStub.md
+docs/AllocationLogs.md
 docs/AllocationMetric.md
 docs/AllocationsApi.md
 docs/Attribute.md
@@ -41,6 +44,7 @@ docs/CSIVolumeListExternalResponse.md
 docs/CSIVolumeListStub.md
 docs/CSIVolumeRegisterRequest.md
 docs/CheckRestart.md
+docs/ClientsApi.md
 docs/Constraint.md
 docs/Consul.md
 docs/ConsulConnect.md
@@ -183,6 +187,7 @@ docs/SearchResponse.md
 docs/ServerHealth.md
 docs/Service.md
 docs/ServiceCheck.md
+docs/ServiceRegistration.md
 docs/SidecarTask.md
 docs/Spread.md
 docs/SpreadTarget.md
@@ -210,6 +215,7 @@ docs/WaitConfig.md
 git_push.sh
 src/Fermyon.Nomad.Test/Api/ACLApiTests.cs
 src/Fermyon.Nomad.Test/Api/AllocationsApiTests.cs
+src/Fermyon.Nomad.Test/Api/ClientsApiTests.cs
 src/Fermyon.Nomad.Test/Api/DeploymentsApiTests.cs
 src/Fermyon.Nomad.Test/Api/EnterpriseApiTests.cs
 src/Fermyon.Nomad.Test/Api/EvaluationsApiTests.cs
@@ -225,13 +231,13 @@ src/Fermyon.Nomad.Test/Api/SearchApiTests.cs
 src/Fermyon.Nomad.Test/Api/StatusApiTests.cs
 src/Fermyon.Nomad.Test/Api/SystemApiTests.cs
 src/Fermyon.Nomad.Test/Api/VolumesApiTests.cs
-src/Fermyon.Nomad.Test/Fermyon.Nomad.Test.csproj
 src/Fermyon.Nomad.Test/Model/ACLPolicyListStubTests.cs
 src/Fermyon.Nomad.Test/Model/ACLPolicyTests.cs
 src/Fermyon.Nomad.Test/Model/ACLTokenListStubTests.cs
 src/Fermyon.Nomad.Test/Model/ACLTokenTests.cs
 src/Fermyon.Nomad.Test/Model/AffinityTests.cs
 src/Fermyon.Nomad.Test/Model/AllocDeploymentStatusTests.cs
+src/Fermyon.Nomad.Test/Model/AllocStopResponseTests.cs
 src/Fermyon.Nomad.Test/Model/AllocatedCpuResourcesTests.cs
 src/Fermyon.Nomad.Test/Model/AllocatedDeviceResourceTests.cs
 src/Fermyon.Nomad.Test/Model/AllocatedMemoryResourcesTests.cs
@@ -239,6 +245,7 @@ src/Fermyon.Nomad.Test/Model/AllocatedResourcesTests.cs
 src/Fermyon.Nomad.Test/Model/AllocatedSharedResourcesTests.cs
 src/Fermyon.Nomad.Test/Model/AllocatedTaskResourcesTests.cs
 src/Fermyon.Nomad.Test/Model/AllocationListStubTests.cs
+src/Fermyon.Nomad.Test/Model/AllocationLogsTests.cs
 src/Fermyon.Nomad.Test/Model/AllocationMetricTests.cs
 src/Fermyon.Nomad.Test/Model/AllocationTests.cs
 src/Fermyon.Nomad.Test/Model/AttributeTests.cs
@@ -392,6 +399,7 @@ src/Fermyon.Nomad.Test/Model/SearchRequestTests.cs
 src/Fermyon.Nomad.Test/Model/SearchResponseTests.cs
 src/Fermyon.Nomad.Test/Model/ServerHealthTests.cs
 src/Fermyon.Nomad.Test/Model/ServiceCheckTests.cs
+src/Fermyon.Nomad.Test/Model/ServiceRegistrationTests.cs
 src/Fermyon.Nomad.Test/Model/ServiceTests.cs
 src/Fermyon.Nomad.Test/Model/SidecarTaskTests.cs
 src/Fermyon.Nomad.Test/Model/SpreadTargetTests.cs
@@ -414,8 +422,10 @@ src/Fermyon.Nomad.Test/Model/VaultTests.cs
 src/Fermyon.Nomad.Test/Model/VolumeMountTests.cs
 src/Fermyon.Nomad.Test/Model/VolumeRequestTests.cs
 src/Fermyon.Nomad.Test/Model/WaitConfigTests.cs
+src/Fermyon.Nomad.Test/Fermyon.Nomad.Test.csproj
 src/Fermyon.Nomad/Api/ACLApi.cs
 src/Fermyon.Nomad/Api/AllocationsApi.cs
+src/Fermyon.Nomad/Api/ClientsApi.cs
 src/Fermyon.Nomad/Api/DeploymentsApi.cs
 src/Fermyon.Nomad/Api/EnterpriseApi.cs
 src/Fermyon.Nomad/Api/EvaluationsApi.cs
@@ -447,7 +457,6 @@ src/Fermyon.Nomad/Client/Multimap.cs
 src/Fermyon.Nomad/Client/OpenAPIDateConverter.cs
 src/Fermyon.Nomad/Client/RequestOptions.cs
 src/Fermyon.Nomad/Client/RetryConfiguration.cs
-src/Fermyon.Nomad/Fermyon.Nomad.csproj
 src/Fermyon.Nomad/Model/ACLPolicy.cs
 src/Fermyon.Nomad/Model/ACLPolicyListStub.cs
 src/Fermyon.Nomad/Model/ACLToken.cs
@@ -455,6 +464,7 @@ src/Fermyon.Nomad/Model/ACLTokenListStub.cs
 src/Fermyon.Nomad/Model/AbstractOpenAPISchema.cs
 src/Fermyon.Nomad/Model/Affinity.cs
 src/Fermyon.Nomad/Model/AllocDeploymentStatus.cs
+src/Fermyon.Nomad/Model/AllocStopResponse.cs
 src/Fermyon.Nomad/Model/AllocatedCpuResources.cs
 src/Fermyon.Nomad/Model/AllocatedDeviceResource.cs
 src/Fermyon.Nomad/Model/AllocatedMemoryResources.cs
@@ -463,6 +473,7 @@ src/Fermyon.Nomad/Model/AllocatedSharedResources.cs
 src/Fermyon.Nomad/Model/AllocatedTaskResources.cs
 src/Fermyon.Nomad/Model/Allocation.cs
 src/Fermyon.Nomad/Model/AllocationListStub.cs
+src/Fermyon.Nomad/Model/AllocationLogs.cs
 src/Fermyon.Nomad/Model/AllocationMetric.cs
 src/Fermyon.Nomad/Model/Attribute.cs
 src/Fermyon.Nomad/Model/AutopilotConfiguration.cs
@@ -616,6 +627,7 @@ src/Fermyon.Nomad/Model/SearchResponse.cs
 src/Fermyon.Nomad/Model/ServerHealth.cs
 src/Fermyon.Nomad/Model/Service.cs
 src/Fermyon.Nomad/Model/ServiceCheck.cs
+src/Fermyon.Nomad/Model/ServiceRegistration.cs
 src/Fermyon.Nomad/Model/SidecarTask.cs
 src/Fermyon.Nomad/Model/Spread.cs
 src/Fermyon.Nomad/Model/SpreadTarget.cs
@@ -637,3 +649,4 @@ src/Fermyon.Nomad/Model/Vault.cs
 src/Fermyon.Nomad/Model/VolumeMount.cs
 src/Fermyon.Nomad/Model/VolumeRequest.cs
 src/Fermyon.Nomad/Model/WaitConfig.cs
+src/Fermyon.Nomad/Fermyon.Nomad.csproj

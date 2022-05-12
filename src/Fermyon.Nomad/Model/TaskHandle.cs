@@ -40,7 +40,7 @@ namespace Fermyon.Nomad.Model
         public TaskHandle(byte[] driverState = default(byte[]), int version = default(int))
         {
             this.DriverState = driverState;
-            this._Version = version;
+            this.Version = version;
         }
 
         /// <summary>
@@ -50,10 +50,10 @@ namespace Fermyon.Nomad.Model
         public byte[] DriverState { get; set; }
 
         /// <summary>
-        /// Gets or Sets _Version
+        /// Gets or Sets Version
         /// </summary>
         [DataMember(Name = "Version", EmitDefaultValue = false)]
-        public int _Version { get; set; }
+        public int Version { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -61,10 +61,10 @@ namespace Fermyon.Nomad.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            StringBuilder sb = new StringBuilder();
+            var sb = new StringBuilder();
             sb.Append("class TaskHandle {\n");
             sb.Append("  DriverState: ").Append(DriverState).Append("\n");
-            sb.Append("  _Version: ").Append(_Version).Append("\n");
+            sb.Append("  Version: ").Append(Version).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -96,9 +96,8 @@ namespace Fermyon.Nomad.Model
         public bool Equals(TaskHandle input)
         {
             if (input == null)
-            {
                 return false;
-            }
+
             return 
                 (
                     this.DriverState == input.DriverState ||
@@ -106,8 +105,8 @@ namespace Fermyon.Nomad.Model
                     this.DriverState.Equals(input.DriverState))
                 ) && 
                 (
-                    this._Version == input._Version ||
-                    this._Version.Equals(input._Version)
+                    this.Version == input.Version ||
+                    this.Version.Equals(input.Version)
                 );
         }
 
@@ -121,10 +120,8 @@ namespace Fermyon.Nomad.Model
             {
                 int hashCode = 41;
                 if (this.DriverState != null)
-                {
-                    hashCode = (hashCode * 59) + this.DriverState.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this._Version.GetHashCode();
+                    hashCode = hashCode * 59 + this.DriverState.GetHashCode();
+                hashCode = hashCode * 59 + this.Version.GetHashCode();
                 return hashCode;
             }
         }
@@ -134,7 +131,7 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

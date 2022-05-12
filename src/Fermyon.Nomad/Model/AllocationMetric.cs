@@ -157,7 +157,7 @@ namespace Fermyon.Nomad.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            StringBuilder sb = new StringBuilder();
+            var sb = new StringBuilder();
             sb.Append("class AllocationMetric {\n");
             sb.Append("  AllocationTime: ").Append(AllocationTime).Append("\n");
             sb.Append("  ClassExhausted: ").Append(ClassExhausted).Append("\n");
@@ -204,9 +204,8 @@ namespace Fermyon.Nomad.Model
         public bool Equals(AllocationMetric input)
         {
             if (input == null)
-            {
                 return false;
-            }
+
             return 
                 (
                     this.AllocationTime == input.AllocationTime ||
@@ -293,47 +292,29 @@ namespace Fermyon.Nomad.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                hashCode = (hashCode * 59) + this.AllocationTime.GetHashCode();
+                hashCode = hashCode * 59 + this.AllocationTime.GetHashCode();
                 if (this.ClassExhausted != null)
-                {
-                    hashCode = (hashCode * 59) + this.ClassExhausted.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.ClassExhausted.GetHashCode();
                 if (this.ClassFiltered != null)
-                {
-                    hashCode = (hashCode * 59) + this.ClassFiltered.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.CoalescedFailures.GetHashCode();
+                    hashCode = hashCode * 59 + this.ClassFiltered.GetHashCode();
+                hashCode = hashCode * 59 + this.CoalescedFailures.GetHashCode();
                 if (this.ConstraintFiltered != null)
-                {
-                    hashCode = (hashCode * 59) + this.ConstraintFiltered.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.ConstraintFiltered.GetHashCode();
                 if (this.DimensionExhausted != null)
-                {
-                    hashCode = (hashCode * 59) + this.DimensionExhausted.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.DimensionExhausted.GetHashCode();
                 if (this.NodesAvailable != null)
-                {
-                    hashCode = (hashCode * 59) + this.NodesAvailable.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.NodesEvaluated.GetHashCode();
-                hashCode = (hashCode * 59) + this.NodesExhausted.GetHashCode();
-                hashCode = (hashCode * 59) + this.NodesFiltered.GetHashCode();
+                    hashCode = hashCode * 59 + this.NodesAvailable.GetHashCode();
+                hashCode = hashCode * 59 + this.NodesEvaluated.GetHashCode();
+                hashCode = hashCode * 59 + this.NodesExhausted.GetHashCode();
+                hashCode = hashCode * 59 + this.NodesFiltered.GetHashCode();
                 if (this.QuotaExhausted != null)
-                {
-                    hashCode = (hashCode * 59) + this.QuotaExhausted.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.QuotaExhausted.GetHashCode();
                 if (this.ResourcesExhausted != null)
-                {
-                    hashCode = (hashCode * 59) + this.ResourcesExhausted.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.ResourcesExhausted.GetHashCode();
                 if (this.ScoreMetaData != null)
-                {
-                    hashCode = (hashCode * 59) + this.ScoreMetaData.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.ScoreMetaData.GetHashCode();
                 if (this.Scores != null)
-                {
-                    hashCode = (hashCode * 59) + this.Scores.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.Scores.GetHashCode();
                 return hashCode;
             }
         }
@@ -343,7 +324,7 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

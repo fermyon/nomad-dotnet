@@ -21,6 +21,20 @@ components:
       name: all
       schema:
         type: integer
+    AllocIDParam:
+      description: Allocation ID.
+      in: path
+      name: allocID
+      required: true
+      schema:
+        type: string
+    AllocNoShutdownDelayParam:
+      description: Flag indicating whether to delay shutdown when requesting an allocation
+        stop.
+      in: query
+      name: no_shutdown_delay
+      schema:
+        type: boolean
     AllocationResourcesParam:
       description: Flag indicating whether to include resources in response.
       in: query
@@ -47,6 +61,12 @@ components:
       required: true
       schema:
         type: string
+    FollowParam:
+      description: Specifies whether to tail the logs.
+      in: query
+      name: follow
+      schema:
+        type: boolean
     IdempotencyTokenParam:
       description: Can be used to ensure operations are only run once.
       in: query
@@ -95,6 +115,13 @@ components:
       name: purge
       schema:
         type: boolean
+    LogTypeParam:
+      description: Specifies the stream to stream.
+      in: query
+      name: type
+      required: true
+      schema:
+        type: string
     MetricsFormatParam:
       description: The format the user requested for the metrics summary (e.g. prometheus)
       in: query
@@ -140,12 +167,30 @@ components:
       name: X-Nomad-Token
       schema:
         type: string
+    OffsetParam:
+      description: Specifies the offset to start streaming from.
+      in: query
+      name: offset
+      schema:
+        type: integer
+    OriginParam:
+      description: Specifies either "start" or "end" and applies the offset relative to either the start or end of the logs respectively. Defaults to "start"
+      in: query
+      name: origin
+      schema:
+        type: string
     PerPageParam:
       description: Maximum number of results to return.
       in: query
       name: per_page
       schema:
         type: integer
+    PlainParam:
+      description: Return just the plain text without framing. This can be useful when viewing logs in a browser
+      in: query
+      name: plain
+      schema:
+        type: boolean
     PluginIDParam:
       description: The CSI plugin identifier.
       in: path
@@ -189,6 +234,13 @@ components:
       description: If present, results will include stale reads.
       in: query
       name: stale
+      schema:
+        type: string
+    TaskParam:
+      description: Specifies the allocation ID to query. This is specified as part of the URL. Note, this must be the full allocation ID, not the short 8-character one. This is specified as part of the path.
+      in: query
+      name: task
+      required: true
       schema:
         type: string
     VolumeActionParam:
@@ -588,6 +640,71 @@ components:
           schema:
             items:
               $ref: '#/components/schemas/ACLTokenListStub'
+            type: array
+      description: ""
+      headers:
+        X-Nomad-Index:
+          description: A unique identifier representing the current state of the requested
+            resource. On a new Nomad cluster the value of this index starts at 1.
+          schema:
+            type: integer
+        X-Nomad-KnownLeader:
+          description: Boolean indicating if there is a known cluster leader.
+          schema:
+            type: boolean
+        X-Nomad-LastContact:
+          description: The time in milliseconds that a server was last contacted by
+            the leader node.
+          schema:
+            type: integer
+    GetAllocationLogsResponse:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/AllocationLogs'
+      description: ""
+      headers:
+        X-Nomad-Index:
+          description: A unique identifier representing the current state of the requested
+            resource. On a new Nomad cluster the value of this index starts at 1.
+          schema:
+            type: integer
+        X-Nomad-KnownLeader:
+          description: Boolean indicating if there is a known cluster leader.
+          schema:
+            type: boolean
+        X-Nomad-LastContact:
+          description: The time in milliseconds that a server was last contacted by
+            the leader node.
+          schema:
+            type: integer
+    GetAllocationResponse:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Allocation'
+      description: ""
+      headers:
+        X-Nomad-Index:
+          description: A unique identifier representing the current state of the requested
+            resource. On a new Nomad cluster the value of this index starts at 1.
+          schema:
+            type: integer
+        X-Nomad-KnownLeader:
+          description: Boolean indicating if there is a known cluster leader.
+          schema:
+            type: boolean
+        X-Nomad-LastContact:
+          description: The time in milliseconds that a server was last contacted by
+            the leader node.
+          schema:
+            type: integer
+    GetAllocationServicesResponse:
+      content:
+        application/json:
+          schema:
+            items:
+              $ref: '#/components/schemas/ServiceRegistration'
             type: array
       description: ""
       headers:
@@ -1479,6 +1596,18 @@ components:
             resource. On a new Nomad cluster the value of this index starts at 1.
           schema:
             type: integer
+    PostAllocationStopResponse:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/AllocStopResponse'
+      description: ""
+      headers:
+        X-Nomad-Index:
+          description: A unique identifier representing the current state of the requested
+            resource. On a new Nomad cluster the value of this index starts at 1.
+          schema:
+            type: integer
     PostDeploymentAllocationHealthResponse:
       content:
         application/json:
@@ -1844,6 +1973,15 @@ components:
           format: date-time
           type: string
       type: object
+    AllocStopResponse:
+      properties:
+        EvalID:
+          type: string
+        Index:
+          maximum: 1.8446744073709552e+19
+          minimum: 0
+          type: integer
+      type: object
     AllocatedCpuResources:
       properties:
         CpuShares:
@@ -2059,6 +2197,15 @@ components:
           additionalProperties:
             $ref: '#/components/schemas/TaskState'
           type: object
+      type: object
+    AllocationLogs:
+      properties:
+        Data:
+          type: string
+        File:
+          type: string
+        Offset:
+          type: integer
       type: object
     AllocationMetric:
       properties:
@@ -4169,6 +4316,10 @@ components:
       properties:
         Address:
           type: string
+        Attributes:
+          additionalProperties:
+            type: string
+          type: object
         CreateIndex:
           maximum: 1.8446744073709552e+19
           minimum: 0
@@ -4890,6 +5041,8 @@ components:
       type: object
     Service:
       properties:
+        Address:
+          type: string
         AddressMode:
           type: string
         CanaryMeta:
@@ -4910,8 +5063,6 @@ components:
           $ref: '#/components/schemas/ConsulConnect'
         EnableTagOverride:
           type: boolean
-        Id:
-          type: string
         Meta:
           additionalProperties:
             type: string
@@ -4934,6 +5085,8 @@ components:
     ServiceCheck:
       properties:
         AddressMode:
+          type: string
+        Advertise:
           type: string
         Args:
           items:
@@ -4959,8 +5112,6 @@ components:
               type: string
             type: array
           type: object
-        Id:
-          type: string
         InitialStatus:
           type: string
         Interval:
@@ -4989,6 +5140,39 @@ components:
           type: integer
         Type:
           type: string
+      type: object
+    ServiceRegistration:
+      properties:
+        Address:
+          type: string
+        AllocID:
+          type: string
+        CreateIndex:
+          maximum: 1.8446744073709552e+19
+          minimum: 0
+          type: integer
+        Datacenter:
+          type: string
+        ID:
+          type: string
+        JobID:
+          type: string
+        ModifyIndex:
+          maximum: 1.8446744073709552e+19
+          minimum: 0
+          type: integer
+        Namespace:
+          type: string
+        NodeID:
+          type: string
+        Port:
+          type: integer
+        ServiceName:
+          type: string
+        Tags:
+          items:
+            type: string
+          type: array
       type: object
     SidecarTask:
       properties:
@@ -5267,6 +5451,7 @@ components:
         ShutdownDelay:
           format: int64
           type: integer
+          nullable: true
         Spreads:
           items:
             $ref: '#/components/schemas/Spread'
@@ -5274,6 +5459,7 @@ components:
         StopAfterClientDisconnect:
           format: int64
           type: integer
+          nullable: true
         Tasks:
           items:
             $ref: '#/components/schemas/Task'
@@ -5447,8 +5633,6 @@ components:
         ChangeMode:
           type: string
         ChangeSignal:
-          type: string
-        EntityAlias:
           type: string
         Env:
           type: boolean
@@ -5867,6 +6051,94 @@ paths:
       - X-Nomad-Token: []
       tags:
       - ACL
+  /allocation/{allocID}:
+    get:
+      operationId: GetAllocation
+      parameters:
+      - $ref: '#/components/parameters/RegionParam'
+      - $ref: '#/components/parameters/NamespaceParam'
+      - $ref: '#/components/parameters/IndexHeader'
+      - $ref: '#/components/parameters/WaitParam'
+      - $ref: '#/components/parameters/StaleParam'
+      - $ref: '#/components/parameters/PrefixParam'
+      - $ref: '#/components/parameters/NomadTokenHeader'
+      - $ref: '#/components/parameters/PerPageParam'
+      - $ref: '#/components/parameters/NextTokenParam'
+      - $ref: '#/components/parameters/AllocIDParam'
+      responses:
+        "200":
+          $ref: '#/components/responses/GetAllocationResponse'
+        "400":
+          $ref: '#/components/responses/BadRequestResponse'
+        "403":
+          $ref: '#/components/responses/ForbiddenResponse'
+        "405":
+          $ref: '#/components/responses/MethodNotAllowedResponse'
+        "500":
+          $ref: '#/components/responses/InternalServerErrorResponse'
+      security:
+      - X-Nomad-Token: []
+      tags:
+      - Allocations
+  /allocation/{allocID}/services:
+    get:
+      operationId: GetAllocationServices
+      parameters:
+      - $ref: '#/components/parameters/RegionParam'
+      - $ref: '#/components/parameters/NamespaceParam'
+      - $ref: '#/components/parameters/IndexHeader'
+      - $ref: '#/components/parameters/WaitParam'
+      - $ref: '#/components/parameters/StaleParam'
+      - $ref: '#/components/parameters/PrefixParam'
+      - $ref: '#/components/parameters/NomadTokenHeader'
+      - $ref: '#/components/parameters/PerPageParam'
+      - $ref: '#/components/parameters/NextTokenParam'
+      - $ref: '#/components/parameters/AllocIDParam'
+      responses:
+        "200":
+          $ref: '#/components/responses/GetAllocationServicesResponse'
+        "400":
+          $ref: '#/components/responses/BadRequestResponse'
+        "403":
+          $ref: '#/components/responses/ForbiddenResponse'
+        "405":
+          $ref: '#/components/responses/MethodNotAllowedResponse'
+        "500":
+          $ref: '#/components/responses/InternalServerErrorResponse'
+      security:
+      - X-Nomad-Token: []
+      tags:
+      - Allocations
+  /allocation/{allocID}/stop:
+    post:
+      operationId: PostAllocationStop
+      parameters:
+      - $ref: '#/components/parameters/RegionParam'
+      - $ref: '#/components/parameters/NamespaceParam'
+      - $ref: '#/components/parameters/IndexHeader'
+      - $ref: '#/components/parameters/WaitParam'
+      - $ref: '#/components/parameters/StaleParam'
+      - $ref: '#/components/parameters/PrefixParam'
+      - $ref: '#/components/parameters/NomadTokenHeader'
+      - $ref: '#/components/parameters/PerPageParam'
+      - $ref: '#/components/parameters/NextTokenParam'
+      - $ref: '#/components/parameters/AllocIDParam'
+      - $ref: '#/components/parameters/AllocNoShutdownDelayParam'
+      responses:
+        "200":
+          $ref: '#/components/responses/PostAllocationStopResponse'
+        "400":
+          $ref: '#/components/responses/BadRequestResponse'
+        "403":
+          $ref: '#/components/responses/ForbiddenResponse'
+        "405":
+          $ref: '#/components/responses/MethodNotAllowedResponse'
+        "500":
+          $ref: '#/components/responses/InternalServerErrorResponse'
+      security:
+      - X-Nomad-Token: []
+      tags:
+      - Allocations
   /allocations:
     get:
       operationId: GetAllocations
@@ -5897,6 +6169,32 @@ paths:
       - X-Nomad-Token: []
       tags:
       - Allocations
+  /client/fs/logs/{allocID}:
+    get:
+      operationId: GetAllocationLogs
+      parameters:
+      - $ref: '#/components/parameters/TaskParam'
+      - $ref: '#/components/parameters/FollowParam'
+      - $ref: '#/components/parameters/LogTypeParam'
+      - $ref: '#/components/parameters/OffsetParam'
+      - $ref: '#/components/parameters/OriginParam'
+      - $ref: '#/components/parameters/PlainParam'
+      - $ref: '#/components/parameters/AllocIDParam'
+      responses:
+        "200":
+          $ref: '#/components/responses/GetAllocationLogsResponse'
+        "400":
+          $ref: '#/components/responses/BadRequestResponse'
+        "403":
+          $ref: '#/components/responses/ForbiddenResponse'
+        "405":
+          $ref: '#/components/responses/MethodNotAllowedResponse'
+        "500":
+          $ref: '#/components/responses/InternalServerErrorResponse'
+      security:
+      - X-Nomad-Token: []
+      tags:
+      - Clients
   /deployment/{deploymentID}:
     get:
       operationId: GetDeployment

@@ -61,7 +61,7 @@ namespace Fermyon.Nomad.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            StringBuilder sb = new StringBuilder();
+            var sb = new StringBuilder();
             sb.Append("class ConsulIngressConfigEntry {\n");
             sb.Append("  Listeners: ").Append(Listeners).Append("\n");
             sb.Append("  TLS: ").Append(TLS).Append("\n");
@@ -96,9 +96,8 @@ namespace Fermyon.Nomad.Model
         public bool Equals(ConsulIngressConfigEntry input)
         {
             if (input == null)
-            {
                 return false;
-            }
+
             return 
                 (
                     this.Listeners == input.Listeners ||
@@ -123,13 +122,9 @@ namespace Fermyon.Nomad.Model
             {
                 int hashCode = 41;
                 if (this.Listeners != null)
-                {
-                    hashCode = (hashCode * 59) + this.Listeners.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.Listeners.GetHashCode();
                 if (this.TLS != null)
-                {
-                    hashCode = (hashCode * 59) + this.TLS.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.TLS.GetHashCode();
                 return hashCode;
             }
         }
@@ -139,7 +134,7 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

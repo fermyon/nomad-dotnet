@@ -61,7 +61,7 @@ namespace Fermyon.Nomad.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            StringBuilder sb = new StringBuilder();
+            var sb = new StringBuilder();
             sb.Append("class CSIVolumeListExternalResponse {\n");
             sb.Append("  NextToken: ").Append(NextToken).Append("\n");
             sb.Append("  Volumes: ").Append(Volumes).Append("\n");
@@ -96,9 +96,8 @@ namespace Fermyon.Nomad.Model
         public bool Equals(CSIVolumeListExternalResponse input)
         {
             if (input == null)
-            {
                 return false;
-            }
+
             return 
                 (
                     this.NextToken == input.NextToken ||
@@ -123,13 +122,9 @@ namespace Fermyon.Nomad.Model
             {
                 int hashCode = 41;
                 if (this.NextToken != null)
-                {
-                    hashCode = (hashCode * 59) + this.NextToken.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.NextToken.GetHashCode();
                 if (this.Volumes != null)
-                {
-                    hashCode = (hashCode * 59) + this.Volumes.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.Volumes.GetHashCode();
                 return hashCode;
             }
         }
@@ -139,7 +134,7 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

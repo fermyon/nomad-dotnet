@@ -165,7 +165,7 @@ namespace Fermyon.Nomad.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            StringBuilder sb = new StringBuilder();
+            var sb = new StringBuilder();
             sb.Append("class FuzzySearchRequest {\n");
             sb.Append("  AllowStale: ").Append(AllowStale).Append("\n");
             sb.Append("  AuthToken: ").Append(AuthToken).Append("\n");
@@ -213,9 +213,8 @@ namespace Fermyon.Nomad.Model
         public bool Equals(FuzzySearchRequest input)
         {
             if (input == null)
-            {
                 return false;
-            }
+
             return 
                 (
                     this.AllowStale == input.AllowStale ||
@@ -300,51 +299,31 @@ namespace Fermyon.Nomad.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                hashCode = (hashCode * 59) + this.AllowStale.GetHashCode();
+                hashCode = hashCode * 59 + this.AllowStale.GetHashCode();
                 if (this.AuthToken != null)
-                {
-                    hashCode = (hashCode * 59) + this.AuthToken.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.AuthToken.GetHashCode();
                 if (this.Context != null)
-                {
-                    hashCode = (hashCode * 59) + this.Context.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.Context.GetHashCode();
                 if (this.Filter != null)
-                {
-                    hashCode = (hashCode * 59) + this.Filter.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.Filter.GetHashCode();
                 if (this.Headers != null)
-                {
-                    hashCode = (hashCode * 59) + this.Headers.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.Headers.GetHashCode();
                 if (this.Namespace != null)
-                {
-                    hashCode = (hashCode * 59) + this.Namespace.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.Namespace.GetHashCode();
                 if (this.NextToken != null)
-                {
-                    hashCode = (hashCode * 59) + this.NextToken.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.NextToken.GetHashCode();
                 if (this.Params != null)
-                {
-                    hashCode = (hashCode * 59) + this.Params.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.PerPage.GetHashCode();
+                    hashCode = hashCode * 59 + this.Params.GetHashCode();
+                hashCode = hashCode * 59 + this.PerPage.GetHashCode();
                 if (this.Prefix != null)
-                {
-                    hashCode = (hashCode * 59) + this.Prefix.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.Prefix.GetHashCode();
                 if (this.Region != null)
-                {
-                    hashCode = (hashCode * 59) + this.Region.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.Reverse.GetHashCode();
+                    hashCode = hashCode * 59 + this.Region.GetHashCode();
+                hashCode = hashCode * 59 + this.Reverse.GetHashCode();
                 if (this.Text != null)
-                {
-                    hashCode = (hashCode * 59) + this.Text.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.WaitIndex.GetHashCode();
-                hashCode = (hashCode * 59) + this.WaitTime.GetHashCode();
+                    hashCode = hashCode * 59 + this.Text.GetHashCode();
+                hashCode = hashCode * 59 + this.WaitIndex.GetHashCode();
+                hashCode = hashCode * 59 + this.WaitTime.GetHashCode();
                 return hashCode;
             }
         }
@@ -354,16 +333,16 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // WaitIndex (int) maximum
-            if (this.WaitIndex > (int)384)
+            if(this.WaitIndex > (int)384)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for WaitIndex, must be a value less than or equal to 384.", new [] { "WaitIndex" });
             }
 
             // WaitIndex (int) minimum
-            if (this.WaitIndex < (int)0)
+            if(this.WaitIndex < (int)0)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for WaitIndex, must be a value greater than or equal to 0.", new [] { "WaitIndex" });
             }

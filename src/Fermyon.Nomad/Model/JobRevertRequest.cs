@@ -109,7 +109,7 @@ namespace Fermyon.Nomad.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            StringBuilder sb = new StringBuilder();
+            var sb = new StringBuilder();
             sb.Append("class JobRevertRequest {\n");
             sb.Append("  ConsulToken: ").Append(ConsulToken).Append("\n");
             sb.Append("  EnforcePriorVersion: ").Append(EnforcePriorVersion).Append("\n");
@@ -150,9 +150,8 @@ namespace Fermyon.Nomad.Model
         public bool Equals(JobRevertRequest input)
         {
             if (input == null)
-            {
                 return false;
-            }
+
             return 
                 (
                     this.ConsulToken == input.ConsulToken ||
@@ -204,31 +203,19 @@ namespace Fermyon.Nomad.Model
             {
                 int hashCode = 41;
                 if (this.ConsulToken != null)
-                {
-                    hashCode = (hashCode * 59) + this.ConsulToken.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.EnforcePriorVersion.GetHashCode();
+                    hashCode = hashCode * 59 + this.ConsulToken.GetHashCode();
+                hashCode = hashCode * 59 + this.EnforcePriorVersion.GetHashCode();
                 if (this.JobID != null)
-                {
-                    hashCode = (hashCode * 59) + this.JobID.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.JobVersion.GetHashCode();
+                    hashCode = hashCode * 59 + this.JobID.GetHashCode();
+                hashCode = hashCode * 59 + this.JobVersion.GetHashCode();
                 if (this.Namespace != null)
-                {
-                    hashCode = (hashCode * 59) + this.Namespace.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.Namespace.GetHashCode();
                 if (this.Region != null)
-                {
-                    hashCode = (hashCode * 59) + this.Region.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.Region.GetHashCode();
                 if (this.SecretID != null)
-                {
-                    hashCode = (hashCode * 59) + this.SecretID.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.SecretID.GetHashCode();
                 if (this.VaultToken != null)
-                {
-                    hashCode = (hashCode * 59) + this.VaultToken.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.VaultToken.GetHashCode();
                 return hashCode;
             }
         }
@@ -238,28 +225,28 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // EnforcePriorVersion (int) maximum
-            if (this.EnforcePriorVersion > (int)384)
+            if(this.EnforcePriorVersion > (int)384)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for EnforcePriorVersion, must be a value less than or equal to 384.", new [] { "EnforcePriorVersion" });
             }
 
             // EnforcePriorVersion (int) minimum
-            if (this.EnforcePriorVersion < (int)0)
+            if(this.EnforcePriorVersion < (int)0)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for EnforcePriorVersion, must be a value greater than or equal to 0.", new [] { "EnforcePriorVersion" });
             }
 
             // JobVersion (int) maximum
-            if (this.JobVersion > (int)384)
+            if(this.JobVersion > (int)384)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for JobVersion, must be a value less than or equal to 384.", new [] { "JobVersion" });
             }
 
             // JobVersion (int) minimum
-            if (this.JobVersion < (int)0)
+            if(this.JobVersion < (int)0)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for JobVersion, must be a value greater than or equal to 0.", new [] { "JobVersion" });
             }

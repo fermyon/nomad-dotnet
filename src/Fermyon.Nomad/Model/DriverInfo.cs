@@ -85,7 +85,7 @@ namespace Fermyon.Nomad.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            StringBuilder sb = new StringBuilder();
+            var sb = new StringBuilder();
             sb.Append("class DriverInfo {\n");
             sb.Append("  Attributes: ").Append(Attributes).Append("\n");
             sb.Append("  Detected: ").Append(Detected).Append("\n");
@@ -123,9 +123,8 @@ namespace Fermyon.Nomad.Model
         public bool Equals(DriverInfo input)
         {
             if (input == null)
-            {
                 return false;
-            }
+
             return 
                 (
                     this.Attributes == input.Attributes ||
@@ -163,19 +162,13 @@ namespace Fermyon.Nomad.Model
             {
                 int hashCode = 41;
                 if (this.Attributes != null)
-                {
-                    hashCode = (hashCode * 59) + this.Attributes.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.Detected.GetHashCode();
+                    hashCode = hashCode * 59 + this.Attributes.GetHashCode();
+                hashCode = hashCode * 59 + this.Detected.GetHashCode();
                 if (this.HealthDescription != null)
-                {
-                    hashCode = (hashCode * 59) + this.HealthDescription.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.Healthy.GetHashCode();
+                    hashCode = hashCode * 59 + this.HealthDescription.GetHashCode();
+                hashCode = hashCode * 59 + this.Healthy.GetHashCode();
                 if (this.UpdateTime != null)
-                {
-                    hashCode = (hashCode * 59) + this.UpdateTime.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.UpdateTime.GetHashCode();
                 return hashCode;
             }
         }
@@ -185,7 +178,7 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

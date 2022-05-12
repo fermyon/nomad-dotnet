@@ -37,15 +37,13 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="changeMode">changeMode.</param>
         /// <param name="changeSignal">changeSignal.</param>
-        /// <param name="entityAlias">entityAlias.</param>
         /// <param name="env">env.</param>
         /// <param name="_namespace">_namespace.</param>
         /// <param name="policies">policies.</param>
-        public Vault(string changeMode = default(string), string changeSignal = default(string), string entityAlias = default(string), bool env = default(bool), string _namespace = default(string), List<string> policies = default(List<string>))
+        public Vault(string changeMode = default(string), string changeSignal = default(string), bool env = default(bool), string _namespace = default(string), List<string> policies = default(List<string>))
         {
             this.ChangeMode = changeMode;
             this.ChangeSignal = changeSignal;
-            this.EntityAlias = entityAlias;
             this.Env = env;
             this.Namespace = _namespace;
             this.Policies = policies;
@@ -62,12 +60,6 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         [DataMember(Name = "ChangeSignal", EmitDefaultValue = false)]
         public string ChangeSignal { get; set; }
-
-        /// <summary>
-        /// Gets or Sets EntityAlias
-        /// </summary>
-        [DataMember(Name = "EntityAlias", EmitDefaultValue = false)]
-        public string EntityAlias { get; set; }
 
         /// <summary>
         /// Gets or Sets Env
@@ -93,11 +85,10 @@ namespace Fermyon.Nomad.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            StringBuilder sb = new StringBuilder();
+            var sb = new StringBuilder();
             sb.Append("class Vault {\n");
             sb.Append("  ChangeMode: ").Append(ChangeMode).Append("\n");
             sb.Append("  ChangeSignal: ").Append(ChangeSignal).Append("\n");
-            sb.Append("  EntityAlias: ").Append(EntityAlias).Append("\n");
             sb.Append("  Env: ").Append(Env).Append("\n");
             sb.Append("  Namespace: ").Append(Namespace).Append("\n");
             sb.Append("  Policies: ").Append(Policies).Append("\n");
@@ -132,9 +123,8 @@ namespace Fermyon.Nomad.Model
         public bool Equals(Vault input)
         {
             if (input == null)
-            {
                 return false;
-            }
+
             return 
                 (
                     this.ChangeMode == input.ChangeMode ||
@@ -145,11 +135,6 @@ namespace Fermyon.Nomad.Model
                     this.ChangeSignal == input.ChangeSignal ||
                     (this.ChangeSignal != null &&
                     this.ChangeSignal.Equals(input.ChangeSignal))
-                ) && 
-                (
-                    this.EntityAlias == input.EntityAlias ||
-                    (this.EntityAlias != null &&
-                    this.EntityAlias.Equals(input.EntityAlias))
                 ) && 
                 (
                     this.Env == input.Env ||
@@ -178,26 +163,14 @@ namespace Fermyon.Nomad.Model
             {
                 int hashCode = 41;
                 if (this.ChangeMode != null)
-                {
-                    hashCode = (hashCode * 59) + this.ChangeMode.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.ChangeMode.GetHashCode();
                 if (this.ChangeSignal != null)
-                {
-                    hashCode = (hashCode * 59) + this.ChangeSignal.GetHashCode();
-                }
-                if (this.EntityAlias != null)
-                {
-                    hashCode = (hashCode * 59) + this.EntityAlias.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.Env.GetHashCode();
+                    hashCode = hashCode * 59 + this.ChangeSignal.GetHashCode();
+                hashCode = hashCode * 59 + this.Env.GetHashCode();
                 if (this.Namespace != null)
-                {
-                    hashCode = (hashCode * 59) + this.Namespace.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.Namespace.GetHashCode();
                 if (this.Policies != null)
-                {
-                    hashCode = (hashCode * 59) + this.Policies.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.Policies.GetHashCode();
                 return hashCode;
             }
         }
@@ -207,7 +180,7 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

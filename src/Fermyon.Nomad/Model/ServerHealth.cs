@@ -59,7 +59,7 @@ namespace Fermyon.Nomad.Model
             this.Name = name;
             this.SerfStatus = serfStatus;
             this.StableSince = stableSince;
-            this._Version = version;
+            this.Version = version;
             this.Voter = voter;
         }
 
@@ -124,10 +124,10 @@ namespace Fermyon.Nomad.Model
         public DateTime StableSince { get; set; }
 
         /// <summary>
-        /// Gets or Sets _Version
+        /// Gets or Sets Version
         /// </summary>
         [DataMember(Name = "Version", EmitDefaultValue = false)]
-        public string _Version { get; set; }
+        public string Version { get; set; }
 
         /// <summary>
         /// Gets or Sets Voter
@@ -141,7 +141,7 @@ namespace Fermyon.Nomad.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            StringBuilder sb = new StringBuilder();
+            var sb = new StringBuilder();
             sb.Append("class ServerHealth {\n");
             sb.Append("  Address: ").Append(Address).Append("\n");
             sb.Append("  Healthy: ").Append(Healthy).Append("\n");
@@ -153,7 +153,7 @@ namespace Fermyon.Nomad.Model
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  SerfStatus: ").Append(SerfStatus).Append("\n");
             sb.Append("  StableSince: ").Append(StableSince).Append("\n");
-            sb.Append("  _Version: ").Append(_Version).Append("\n");
+            sb.Append("  Version: ").Append(Version).Append("\n");
             sb.Append("  Voter: ").Append(Voter).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -186,9 +186,8 @@ namespace Fermyon.Nomad.Model
         public bool Equals(ServerHealth input)
         {
             if (input == null)
-            {
                 return false;
-            }
+
             return 
                 (
                     this.Address == input.Address ||
@@ -236,9 +235,9 @@ namespace Fermyon.Nomad.Model
                     this.StableSince.Equals(input.StableSince))
                 ) && 
                 (
-                    this._Version == input._Version ||
-                    (this._Version != null &&
-                    this._Version.Equals(input._Version))
+                    this.Version == input.Version ||
+                    (this.Version != null &&
+                    this.Version.Equals(input.Version))
                 ) && 
                 (
                     this.Voter == input.Voter ||
@@ -256,35 +255,23 @@ namespace Fermyon.Nomad.Model
             {
                 int hashCode = 41;
                 if (this.Address != null)
-                {
-                    hashCode = (hashCode * 59) + this.Address.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.Healthy.GetHashCode();
+                    hashCode = hashCode * 59 + this.Address.GetHashCode();
+                hashCode = hashCode * 59 + this.Healthy.GetHashCode();
                 if (this.ID != null)
-                {
-                    hashCode = (hashCode * 59) + this.ID.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.LastContact.GetHashCode();
-                hashCode = (hashCode * 59) + this.LastIndex.GetHashCode();
-                hashCode = (hashCode * 59) + this.LastTerm.GetHashCode();
-                hashCode = (hashCode * 59) + this.Leader.GetHashCode();
+                    hashCode = hashCode * 59 + this.ID.GetHashCode();
+                hashCode = hashCode * 59 + this.LastContact.GetHashCode();
+                hashCode = hashCode * 59 + this.LastIndex.GetHashCode();
+                hashCode = hashCode * 59 + this.LastTerm.GetHashCode();
+                hashCode = hashCode * 59 + this.Leader.GetHashCode();
                 if (this.Name != null)
-                {
-                    hashCode = (hashCode * 59) + this.Name.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.Name.GetHashCode();
                 if (this.SerfStatus != null)
-                {
-                    hashCode = (hashCode * 59) + this.SerfStatus.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.SerfStatus.GetHashCode();
                 if (this.StableSince != null)
-                {
-                    hashCode = (hashCode * 59) + this.StableSince.GetHashCode();
-                }
-                if (this._Version != null)
-                {
-                    hashCode = (hashCode * 59) + this._Version.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.Voter.GetHashCode();
+                    hashCode = hashCode * 59 + this.StableSince.GetHashCode();
+                if (this.Version != null)
+                    hashCode = hashCode * 59 + this.Version.GetHashCode();
+                hashCode = hashCode * 59 + this.Voter.GetHashCode();
                 return hashCode;
             }
         }
@@ -294,28 +281,28 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // LastIndex (int) maximum
-            if (this.LastIndex > (int)384)
+            if(this.LastIndex > (int)384)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for LastIndex, must be a value less than or equal to 384.", new [] { "LastIndex" });
             }
 
             // LastIndex (int) minimum
-            if (this.LastIndex < (int)0)
+            if(this.LastIndex < (int)0)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for LastIndex, must be a value greater than or equal to 0.", new [] { "LastIndex" });
             }
 
             // LastTerm (int) maximum
-            if (this.LastTerm > (int)384)
+            if(this.LastTerm > (int)384)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for LastTerm, must be a value less than or equal to 384.", new [] { "LastTerm" });
             }
 
             // LastTerm (int) minimum
-            if (this.LastTerm < (int)0)
+            if(this.LastTerm < (int)0)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for LastTerm, must be a value greater than or equal to 0.", new [] { "LastTerm" });
             }

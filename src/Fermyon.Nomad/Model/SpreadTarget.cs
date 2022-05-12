@@ -61,7 +61,7 @@ namespace Fermyon.Nomad.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            StringBuilder sb = new StringBuilder();
+            var sb = new StringBuilder();
             sb.Append("class SpreadTarget {\n");
             sb.Append("  Percent: ").Append(Percent).Append("\n");
             sb.Append("  Value: ").Append(Value).Append("\n");
@@ -96,9 +96,8 @@ namespace Fermyon.Nomad.Model
         public bool Equals(SpreadTarget input)
         {
             if (input == null)
-            {
                 return false;
-            }
+
             return 
                 (
                     this.Percent == input.Percent ||
@@ -120,11 +119,9 @@ namespace Fermyon.Nomad.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                hashCode = (hashCode * 59) + this.Percent.GetHashCode();
+                hashCode = hashCode * 59 + this.Percent.GetHashCode();
                 if (this.Value != null)
-                {
-                    hashCode = (hashCode * 59) + this.Value.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.Value.GetHashCode();
                 return hashCode;
             }
         }
@@ -134,16 +131,16 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // Percent (int) maximum
-            if (this.Percent > (int)255)
+            if(this.Percent > (int)255)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Percent, must be a value less than or equal to 255.", new [] { "Percent" });
             }
 
             // Percent (int) minimum
-            if (this.Percent < (int)0)
+            if(this.Percent < (int)0)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Percent, must be a value greater than or equal to 0.", new [] { "Percent" });
             }

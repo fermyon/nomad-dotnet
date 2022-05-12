@@ -32,9 +32,8 @@ namespace Fermyon.Nomad.Api
         /// </summary>
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="format">The format the user requested for the metrics summary (e.g. prometheus) (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>MetricsSummary</returns>
-        MetricsSummary GetMetricsSummary(string? format = default(string?), int operationIndex = 0);
+        MetricsSummary GetMetricsSummary(string format = default(string));
 
         /// <summary>
         /// 
@@ -44,9 +43,8 @@ namespace Fermyon.Nomad.Api
         /// </remarks>
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="format">The format the user requested for the metrics summary (e.g. prometheus) (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of MetricsSummary</returns>
-        ApiResponse<MetricsSummary> GetMetricsSummaryWithHttpInfo(string? format = default(string?), int operationIndex = 0);
+        ApiResponse<MetricsSummary> GetMetricsSummaryWithHttpInfo(string format = default(string));
         #endregion Synchronous Operations
     }
 
@@ -64,10 +62,9 @@ namespace Fermyon.Nomad.Api
         /// </remarks>
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="format">The format the user requested for the metrics summary (e.g. prometheus) (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of MetricsSummary</returns>
-        System.Threading.Tasks.Task<MetricsSummary> GetMetricsSummaryAsync(string? format = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<MetricsSummary> GetMetricsSummaryAsync(string format = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -77,10 +74,9 @@ namespace Fermyon.Nomad.Api
         /// </remarks>
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="format">The format the user requested for the metrics summary (e.g. prometheus) (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (MetricsSummary)</returns>
-        System.Threading.Tasks.Task<ApiResponse<MetricsSummary>> GetMetricsSummaryWithHttpInfoAsync(string? format = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<MetricsSummary>> GetMetricsSummaryWithHttpInfoAsync(string format = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -206,9 +202,8 @@ namespace Fermyon.Nomad.Api
         /// </summary>
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="format">The format the user requested for the metrics summary (e.g. prometheus) (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>MetricsSummary</returns>
-        public MetricsSummary GetMetricsSummary(string? format = default(string?), int operationIndex = 0)
+        public MetricsSummary GetMetricsSummary(string format = default(string))
         {
             Fermyon.Nomad.Client.ApiResponse<MetricsSummary> localVarResponse = GetMetricsSummaryWithHttpInfo(format);
             return localVarResponse.Data;
@@ -219,9 +214,8 @@ namespace Fermyon.Nomad.Api
         /// </summary>
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="format">The format the user requested for the metrics summary (e.g. prometheus) (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of MetricsSummary</returns>
-        public Fermyon.Nomad.Client.ApiResponse<MetricsSummary> GetMetricsSummaryWithHttpInfo(string? format = default(string?), int operationIndex = 0)
+        public Fermyon.Nomad.Client.ApiResponse<MetricsSummary> GetMetricsSummaryWithHttpInfo(string format = default(string))
         {
             Fermyon.Nomad.Client.RequestOptions localVarRequestOptions = new Fermyon.Nomad.Client.RequestOptions();
 
@@ -234,24 +228,15 @@ namespace Fermyon.Nomad.Api
             };
 
             var localVarContentType = Fermyon.Nomad.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Fermyon.Nomad.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             if (format != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "format", format));
             }
-
-            localVarRequestOptions.Operation = "MetricsApi.GetMetricsSummary";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (X-Nomad-Token) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("X-Nomad-Token")))
@@ -261,13 +246,11 @@ namespace Fermyon.Nomad.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<MetricsSummary>("/metrics", localVarRequestOptions, this.Configuration);
+
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("GetMetricsSummary", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -278,12 +261,11 @@ namespace Fermyon.Nomad.Api
         /// </summary>
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="format">The format the user requested for the metrics summary (e.g. prometheus) (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of MetricsSummary</returns>
-        public async System.Threading.Tasks.Task<MetricsSummary> GetMetricsSummaryAsync(string? format = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<MetricsSummary> GetMetricsSummaryAsync(string format = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Fermyon.Nomad.Client.ApiResponse<MetricsSummary> localVarResponse = await GetMetricsSummaryWithHttpInfoAsync(format, operationIndex, cancellationToken).ConfigureAwait(false);
+            Fermyon.Nomad.Client.ApiResponse<MetricsSummary> localVarResponse = await GetMetricsSummaryWithHttpInfoAsync(format, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -292,10 +274,9 @@ namespace Fermyon.Nomad.Api
         /// </summary>
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="format">The format the user requested for the metrics summary (e.g. prometheus) (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (MetricsSummary)</returns>
-        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<MetricsSummary>> GetMetricsSummaryWithHttpInfoAsync(string? format = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<MetricsSummary>> GetMetricsSummaryWithHttpInfoAsync(string format = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             Fermyon.Nomad.Client.RequestOptions localVarRequestOptions = new Fermyon.Nomad.Client.RequestOptions();
@@ -308,25 +289,17 @@ namespace Fermyon.Nomad.Api
                 "application/json"
             };
 
+
             var localVarContentType = Fermyon.Nomad.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Fermyon.Nomad.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             if (format != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "format", format));
             }
-
-            localVarRequestOptions.Operation = "MetricsApi.GetMetricsSummary";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (X-Nomad-Token) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("X-Nomad-Token")))
@@ -335,15 +308,13 @@ namespace Fermyon.Nomad.Api
             }
 
             // make the HTTP request
+
             var localVarResponse = await this.AsynchronousClient.GetAsync<MetricsSummary>("/metrics", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("GetMetricsSummary", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;

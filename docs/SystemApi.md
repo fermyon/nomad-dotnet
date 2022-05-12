@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 <a name="putsystemgc"></a>
 # **PutSystemGC**
-> void PutSystemGC (string? region = null, string? _namespace = null, string? xNomadToken = null, string? idempotencyToken = null)
+> void PutSystemGC (string region = null, string _namespace = null, string xNomadToken = null, string idempotencyToken = null)
 
 
 
@@ -36,10 +36,10 @@ namespace Example
             // config.AddApiKeyPrefix("X-Nomad-Token", "Bearer");
 
             var apiInstance = new SystemApi(config);
-            var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
-            var xNomadToken = "xNomadToken_example";  // string? | A Nomad ACL token. (optional) 
-            var idempotencyToken = "idempotencyToken_example";  // string? | Can be used to ensure operations are only run once. (optional) 
+            var region = region_example;  // string | Filters results based on the specified region. (optional) 
+            var _namespace = _namespace_example;  // string | Filters results based on the specified namespace. (optional) 
+            var xNomadToken = xNomadToken_example;  // string | A Nomad ACL token. (optional) 
+            var idempotencyToken = idempotencyToken_example;  // string | Can be used to ensure operations are only run once. (optional) 
 
             try
             {
@@ -60,10 +60,10 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **region** | **string?**| Filters results based on the specified region. | [optional] 
- **_namespace** | **string?**| Filters results based on the specified namespace. | [optional] 
- **xNomadToken** | **string?**| A Nomad ACL token. | [optional] 
- **idempotencyToken** | **string?**| Can be used to ensure operations are only run once. | [optional] 
+ **region** | **string**| Filters results based on the specified region. | [optional] 
+ **_namespace** | **string**| Filters results based on the specified namespace. | [optional] 
+ **xNomadToken** | **string**| A Nomad ACL token. | [optional] 
+ **idempotencyToken** | **string**| Can be used to ensure operations are only run once. | [optional] 
 
 ### Return type
 
@@ -92,7 +92,7 @@ void (empty response body)
 
 <a name="putsystemreconcilesummaries"></a>
 # **PutSystemReconcileSummaries**
-> void PutSystemReconcileSummaries (string? region = null, string? _namespace = null, string? xNomadToken = null, string? idempotencyToken = null)
+> void PutSystemReconcileSummaries (string region = null, string _namespace = null, string xNomadToken = null, string idempotencyToken = null)
 
 
 
@@ -118,10 +118,10 @@ namespace Example
             // config.AddApiKeyPrefix("X-Nomad-Token", "Bearer");
 
             var apiInstance = new SystemApi(config);
-            var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
-            var xNomadToken = "xNomadToken_example";  // string? | A Nomad ACL token. (optional) 
-            var idempotencyToken = "idempotencyToken_example";  // string? | Can be used to ensure operations are only run once. (optional) 
+            var region = region_example;  // string | Filters results based on the specified region. (optional) 
+            var _namespace = _namespace_example;  // string | Filters results based on the specified namespace. (optional) 
+            var xNomadToken = xNomadToken_example;  // string | A Nomad ACL token. (optional) 
+            var idempotencyToken = idempotencyToken_example;  // string | Can be used to ensure operations are only run once. (optional) 
 
             try
             {
@@ -142,10 +142,10 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **region** | **string?**| Filters results based on the specified region. | [optional] 
- **_namespace** | **string?**| Filters results based on the specified namespace. | [optional] 
- **xNomadToken** | **string?**| A Nomad ACL token. | [optional] 
- **idempotencyToken** | **string?**| Can be used to ensure operations are only run once. | [optional] 
+ **region** | **string**| Filters results based on the specified region. | [optional] 
+ **_namespace** | **string**| Filters results based on the specified namespace. | [optional] 
+ **xNomadToken** | **string**| A Nomad ACL token. | [optional] 
+ **idempotencyToken** | **string**| Can be used to ensure operations are only run once. | [optional] 
 
 ### Return type
 

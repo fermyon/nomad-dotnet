@@ -36,6 +36,7 @@ namespace Fermyon.Nomad.Model
         /// Initializes a new instance of the <see cref="ServiceCheck" /> class.
         /// </summary>
         /// <param name="addressMode">addressMode.</param>
+        /// <param name="advertise">advertise.</param>
         /// <param name="args">args.</param>
         /// <param name="body">body.</param>
         /// <param name="checkRestart">checkRestart.</param>
@@ -45,7 +46,6 @@ namespace Fermyon.Nomad.Model
         /// <param name="gRPCService">gRPCService.</param>
         /// <param name="gRPCUseTLS">gRPCUseTLS.</param>
         /// <param name="header">header.</param>
-        /// <param name="id">id.</param>
         /// <param name="initialStatus">initialStatus.</param>
         /// <param name="interval">interval.</param>
         /// <param name="method">method.</param>
@@ -59,9 +59,10 @@ namespace Fermyon.Nomad.Model
         /// <param name="taskName">taskName.</param>
         /// <param name="timeout">timeout.</param>
         /// <param name="type">type.</param>
-        public ServiceCheck(string addressMode = default(string), List<string> args = default(List<string>), string body = default(string), CheckRestart checkRestart = default(CheckRestart), string command = default(string), bool expose = default(bool), int failuresBeforeCritical = default(int), string gRPCService = default(string), bool gRPCUseTLS = default(bool), Dictionary<string, List<string>> header = default(Dictionary<string, List<string>>), string id = default(string), string initialStatus = default(string), long interval = default(long), string method = default(string), string name = default(string), string onUpdate = default(string), string path = default(string), string portLabel = default(string), string protocol = default(string), int successBeforePassing = default(int), bool tLSSkipVerify = default(bool), string taskName = default(string), long timeout = default(long), string type = default(string))
+        public ServiceCheck(string addressMode = default(string), string advertise = default(string), List<string> args = default(List<string>), string body = default(string), CheckRestart checkRestart = default(CheckRestart), string command = default(string), bool expose = default(bool), int failuresBeforeCritical = default(int), string gRPCService = default(string), bool gRPCUseTLS = default(bool), Dictionary<string, List<string>> header = default(Dictionary<string, List<string>>), string initialStatus = default(string), long interval = default(long), string method = default(string), string name = default(string), string onUpdate = default(string), string path = default(string), string portLabel = default(string), string protocol = default(string), int successBeforePassing = default(int), bool tLSSkipVerify = default(bool), string taskName = default(string), long timeout = default(long), string type = default(string))
         {
             this.AddressMode = addressMode;
+            this.Advertise = advertise;
             this.Args = args;
             this.Body = body;
             this.CheckRestart = checkRestart;
@@ -71,7 +72,6 @@ namespace Fermyon.Nomad.Model
             this.GRPCService = gRPCService;
             this.GRPCUseTLS = gRPCUseTLS;
             this.Header = header;
-            this.Id = id;
             this.InitialStatus = initialStatus;
             this.Interval = interval;
             this.Method = method;
@@ -92,6 +92,12 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         [DataMember(Name = "AddressMode", EmitDefaultValue = false)]
         public string AddressMode { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Advertise
+        /// </summary>
+        [DataMember(Name = "Advertise", EmitDefaultValue = false)]
+        public string Advertise { get; set; }
 
         /// <summary>
         /// Gets or Sets Args
@@ -146,12 +152,6 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         [DataMember(Name = "Header", EmitDefaultValue = false)]
         public Dictionary<string, List<string>> Header { get; set; }
-
-        /// <summary>
-        /// Gets or Sets Id
-        /// </summary>
-        [DataMember(Name = "Id", EmitDefaultValue = false)]
-        public string Id { get; set; }
 
         /// <summary>
         /// Gets or Sets InitialStatus
@@ -237,9 +237,10 @@ namespace Fermyon.Nomad.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            StringBuilder sb = new StringBuilder();
+            var sb = new StringBuilder();
             sb.Append("class ServiceCheck {\n");
             sb.Append("  AddressMode: ").Append(AddressMode).Append("\n");
+            sb.Append("  Advertise: ").Append(Advertise).Append("\n");
             sb.Append("  Args: ").Append(Args).Append("\n");
             sb.Append("  Body: ").Append(Body).Append("\n");
             sb.Append("  CheckRestart: ").Append(CheckRestart).Append("\n");
@@ -249,7 +250,6 @@ namespace Fermyon.Nomad.Model
             sb.Append("  GRPCService: ").Append(GRPCService).Append("\n");
             sb.Append("  GRPCUseTLS: ").Append(GRPCUseTLS).Append("\n");
             sb.Append("  Header: ").Append(Header).Append("\n");
-            sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  InitialStatus: ").Append(InitialStatus).Append("\n");
             sb.Append("  Interval: ").Append(Interval).Append("\n");
             sb.Append("  Method: ").Append(Method).Append("\n");
@@ -294,14 +294,18 @@ namespace Fermyon.Nomad.Model
         public bool Equals(ServiceCheck input)
         {
             if (input == null)
-            {
                 return false;
-            }
+
             return 
                 (
                     this.AddressMode == input.AddressMode ||
                     (this.AddressMode != null &&
                     this.AddressMode.Equals(input.AddressMode))
+                ) && 
+                (
+                    this.Advertise == input.Advertise ||
+                    (this.Advertise != null &&
+                    this.Advertise.Equals(input.Advertise))
                 ) && 
                 (
                     this.Args == input.Args ||
@@ -346,11 +350,6 @@ namespace Fermyon.Nomad.Model
                     this.Header != null &&
                     input.Header != null &&
                     this.Header.SequenceEqual(input.Header)
-                ) && 
-                (
-                    this.Id == input.Id ||
-                    (this.Id != null &&
-                    this.Id.Equals(input.Id))
                 ) && 
                 (
                     this.InitialStatus == input.InitialStatus ||
@@ -425,80 +424,46 @@ namespace Fermyon.Nomad.Model
             {
                 int hashCode = 41;
                 if (this.AddressMode != null)
-                {
-                    hashCode = (hashCode * 59) + this.AddressMode.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.AddressMode.GetHashCode();
+                if (this.Advertise != null)
+                    hashCode = hashCode * 59 + this.Advertise.GetHashCode();
                 if (this.Args != null)
-                {
-                    hashCode = (hashCode * 59) + this.Args.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.Args.GetHashCode();
                 if (this.Body != null)
-                {
-                    hashCode = (hashCode * 59) + this.Body.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.Body.GetHashCode();
                 if (this.CheckRestart != null)
-                {
-                    hashCode = (hashCode * 59) + this.CheckRestart.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.CheckRestart.GetHashCode();
                 if (this.Command != null)
-                {
-                    hashCode = (hashCode * 59) + this.Command.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.Expose.GetHashCode();
-                hashCode = (hashCode * 59) + this.FailuresBeforeCritical.GetHashCode();
+                    hashCode = hashCode * 59 + this.Command.GetHashCode();
+                hashCode = hashCode * 59 + this.Expose.GetHashCode();
+                hashCode = hashCode * 59 + this.FailuresBeforeCritical.GetHashCode();
                 if (this.GRPCService != null)
-                {
-                    hashCode = (hashCode * 59) + this.GRPCService.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.GRPCUseTLS.GetHashCode();
+                    hashCode = hashCode * 59 + this.GRPCService.GetHashCode();
+                hashCode = hashCode * 59 + this.GRPCUseTLS.GetHashCode();
                 if (this.Header != null)
-                {
-                    hashCode = (hashCode * 59) + this.Header.GetHashCode();
-                }
-                if (this.Id != null)
-                {
-                    hashCode = (hashCode * 59) + this.Id.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.Header.GetHashCode();
                 if (this.InitialStatus != null)
-                {
-                    hashCode = (hashCode * 59) + this.InitialStatus.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.Interval.GetHashCode();
+                    hashCode = hashCode * 59 + this.InitialStatus.GetHashCode();
+                hashCode = hashCode * 59 + this.Interval.GetHashCode();
                 if (this.Method != null)
-                {
-                    hashCode = (hashCode * 59) + this.Method.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.Method.GetHashCode();
                 if (this.Name != null)
-                {
-                    hashCode = (hashCode * 59) + this.Name.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.Name.GetHashCode();
                 if (this.OnUpdate != null)
-                {
-                    hashCode = (hashCode * 59) + this.OnUpdate.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.OnUpdate.GetHashCode();
                 if (this.Path != null)
-                {
-                    hashCode = (hashCode * 59) + this.Path.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.Path.GetHashCode();
                 if (this.PortLabel != null)
-                {
-                    hashCode = (hashCode * 59) + this.PortLabel.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.PortLabel.GetHashCode();
                 if (this.Protocol != null)
-                {
-                    hashCode = (hashCode * 59) + this.Protocol.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.SuccessBeforePassing.GetHashCode();
-                hashCode = (hashCode * 59) + this.TLSSkipVerify.GetHashCode();
+                    hashCode = hashCode * 59 + this.Protocol.GetHashCode();
+                hashCode = hashCode * 59 + this.SuccessBeforePassing.GetHashCode();
+                hashCode = hashCode * 59 + this.TLSSkipVerify.GetHashCode();
                 if (this.TaskName != null)
-                {
-                    hashCode = (hashCode * 59) + this.TaskName.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.Timeout.GetHashCode();
+                    hashCode = hashCode * 59 + this.TaskName.GetHashCode();
+                hashCode = hashCode * 59 + this.Timeout.GetHashCode();
                 if (this.Type != null)
-                {
-                    hashCode = (hashCode * 59) + this.Type.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.Type.GetHashCode();
                 return hashCode;
             }
         }
@@ -508,7 +473,7 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

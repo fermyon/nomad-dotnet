@@ -62,7 +62,7 @@ namespace Fermyon.Nomad.Test.Api
         public void GetMetricsSummaryTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string? format = null;
+            //string format = null;
             //var response = instance.GetMetricsSummary(format);
             //Assert.IsType<MetricsSummary>(response);
         }

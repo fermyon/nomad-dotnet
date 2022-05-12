@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 <a name="getdeployment"></a>
 # **GetDeployment**
-> Deployment GetDeployment (string deploymentID, string? region = null, string? _namespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null)
+> Deployment GetDeployment (string deploymentID, string region = null, string _namespace = null, int? index = null, string wait = null, string stale = null, string prefix = null, string xNomadToken = null, int? perPage = null, string nextToken = null)
 
 
 
@@ -42,16 +42,16 @@ namespace Example
             // config.AddApiKeyPrefix("X-Nomad-Token", "Bearer");
 
             var apiInstance = new DeploymentsApi(config);
-            var deploymentID = "deploymentID_example";  // string | Deployment ID.
-            var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var deploymentID = deploymentID_example;  // string | Deployment ID.
+            var region = region_example;  // string | Filters results based on the specified region. (optional) 
+            var _namespace = _namespace_example;  // string | Filters results based on the specified namespace. (optional) 
             var index = 56;  // int? | If set, wait until query exceeds given index. Must be provided with WaitParam. (optional) 
-            var wait = "wait_example";  // string? | Provided with IndexParam to wait for change. (optional) 
-            var stale = "stale_example";  // string? | If present, results will include stale reads. (optional) 
-            var prefix = "prefix_example";  // string? | Constrains results to jobs that start with the defined prefix (optional) 
-            var xNomadToken = "xNomadToken_example";  // string? | A Nomad ACL token. (optional) 
+            var wait = wait_example;  // string | Provided with IndexParam to wait for change. (optional) 
+            var stale = stale_example;  // string | If present, results will include stale reads. (optional) 
+            var prefix = prefix_example;  // string | Constrains results to jobs that start with the defined prefix (optional) 
+            var xNomadToken = xNomadToken_example;  // string | A Nomad ACL token. (optional) 
             var perPage = 56;  // int? | Maximum number of results to return. (optional) 
-            var nextToken = "nextToken_example";  // string? | Indicates where to start paging for queries that support pagination. (optional) 
+            var nextToken = nextToken_example;  // string | Indicates where to start paging for queries that support pagination. (optional) 
 
             try
             {
@@ -74,15 +74,15 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **deploymentID** | **string**| Deployment ID. | 
- **region** | **string?**| Filters results based on the specified region. | [optional] 
- **_namespace** | **string?**| Filters results based on the specified namespace. | [optional] 
+ **region** | **string**| Filters results based on the specified region. | [optional] 
+ **_namespace** | **string**| Filters results based on the specified namespace. | [optional] 
  **index** | **int?**| If set, wait until query exceeds given index. Must be provided with WaitParam. | [optional] 
- **wait** | **string?**| Provided with IndexParam to wait for change. | [optional] 
- **stale** | **string?**| If present, results will include stale reads. | [optional] 
- **prefix** | **string?**| Constrains results to jobs that start with the defined prefix | [optional] 
- **xNomadToken** | **string?**| A Nomad ACL token. | [optional] 
+ **wait** | **string**| Provided with IndexParam to wait for change. | [optional] 
+ **stale** | **string**| If present, results will include stale reads. | [optional] 
+ **prefix** | **string**| Constrains results to jobs that start with the defined prefix | [optional] 
+ **xNomadToken** | **string**| A Nomad ACL token. | [optional] 
  **perPage** | **int?**| Maximum number of results to return. | [optional] 
- **nextToken** | **string?**| Indicates where to start paging for queries that support pagination. | [optional] 
+ **nextToken** | **string**| Indicates where to start paging for queries that support pagination. | [optional] 
 
 ### Return type
 
@@ -111,7 +111,7 @@ Name | Type | Description  | Notes
 
 <a name="getdeploymentallocations"></a>
 # **GetDeploymentAllocations**
-> List&lt;AllocationListStub&gt; GetDeploymentAllocations (string deploymentID, string? region = null, string? _namespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null)
+> List&lt;AllocationListStub&gt; GetDeploymentAllocations (string deploymentID, string region = null, string _namespace = null, int? index = null, string wait = null, string stale = null, string prefix = null, string xNomadToken = null, int? perPage = null, string nextToken = null)
 
 
 
@@ -137,16 +137,16 @@ namespace Example
             // config.AddApiKeyPrefix("X-Nomad-Token", "Bearer");
 
             var apiInstance = new DeploymentsApi(config);
-            var deploymentID = "deploymentID_example";  // string | Deployment ID.
-            var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var deploymentID = deploymentID_example;  // string | Deployment ID.
+            var region = region_example;  // string | Filters results based on the specified region. (optional) 
+            var _namespace = _namespace_example;  // string | Filters results based on the specified namespace. (optional) 
             var index = 56;  // int? | If set, wait until query exceeds given index. Must be provided with WaitParam. (optional) 
-            var wait = "wait_example";  // string? | Provided with IndexParam to wait for change. (optional) 
-            var stale = "stale_example";  // string? | If present, results will include stale reads. (optional) 
-            var prefix = "prefix_example";  // string? | Constrains results to jobs that start with the defined prefix (optional) 
-            var xNomadToken = "xNomadToken_example";  // string? | A Nomad ACL token. (optional) 
+            var wait = wait_example;  // string | Provided with IndexParam to wait for change. (optional) 
+            var stale = stale_example;  // string | If present, results will include stale reads. (optional) 
+            var prefix = prefix_example;  // string | Constrains results to jobs that start with the defined prefix (optional) 
+            var xNomadToken = xNomadToken_example;  // string | A Nomad ACL token. (optional) 
             var perPage = 56;  // int? | Maximum number of results to return. (optional) 
-            var nextToken = "nextToken_example";  // string? | Indicates where to start paging for queries that support pagination. (optional) 
+            var nextToken = nextToken_example;  // string | Indicates where to start paging for queries that support pagination. (optional) 
 
             try
             {
@@ -169,15 +169,15 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **deploymentID** | **string**| Deployment ID. | 
- **region** | **string?**| Filters results based on the specified region. | [optional] 
- **_namespace** | **string?**| Filters results based on the specified namespace. | [optional] 
+ **region** | **string**| Filters results based on the specified region. | [optional] 
+ **_namespace** | **string**| Filters results based on the specified namespace. | [optional] 
  **index** | **int?**| If set, wait until query exceeds given index. Must be provided with WaitParam. | [optional] 
- **wait** | **string?**| Provided with IndexParam to wait for change. | [optional] 
- **stale** | **string?**| If present, results will include stale reads. | [optional] 
- **prefix** | **string?**| Constrains results to jobs that start with the defined prefix | [optional] 
- **xNomadToken** | **string?**| A Nomad ACL token. | [optional] 
+ **wait** | **string**| Provided with IndexParam to wait for change. | [optional] 
+ **stale** | **string**| If present, results will include stale reads. | [optional] 
+ **prefix** | **string**| Constrains results to jobs that start with the defined prefix | [optional] 
+ **xNomadToken** | **string**| A Nomad ACL token. | [optional] 
  **perPage** | **int?**| Maximum number of results to return. | [optional] 
- **nextToken** | **string?**| Indicates where to start paging for queries that support pagination. | [optional] 
+ **nextToken** | **string**| Indicates where to start paging for queries that support pagination. | [optional] 
 
 ### Return type
 
@@ -206,7 +206,7 @@ Name | Type | Description  | Notes
 
 <a name="getdeployments"></a>
 # **GetDeployments**
-> List&lt;Deployment&gt; GetDeployments (string? region = null, string? _namespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null)
+> List&lt;Deployment&gt; GetDeployments (string region = null, string _namespace = null, int? index = null, string wait = null, string stale = null, string prefix = null, string xNomadToken = null, int? perPage = null, string nextToken = null)
 
 
 
@@ -232,15 +232,15 @@ namespace Example
             // config.AddApiKeyPrefix("X-Nomad-Token", "Bearer");
 
             var apiInstance = new DeploymentsApi(config);
-            var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var region = region_example;  // string | Filters results based on the specified region. (optional) 
+            var _namespace = _namespace_example;  // string | Filters results based on the specified namespace. (optional) 
             var index = 56;  // int? | If set, wait until query exceeds given index. Must be provided with WaitParam. (optional) 
-            var wait = "wait_example";  // string? | Provided with IndexParam to wait for change. (optional) 
-            var stale = "stale_example";  // string? | If present, results will include stale reads. (optional) 
-            var prefix = "prefix_example";  // string? | Constrains results to jobs that start with the defined prefix (optional) 
-            var xNomadToken = "xNomadToken_example";  // string? | A Nomad ACL token. (optional) 
+            var wait = wait_example;  // string | Provided with IndexParam to wait for change. (optional) 
+            var stale = stale_example;  // string | If present, results will include stale reads. (optional) 
+            var prefix = prefix_example;  // string | Constrains results to jobs that start with the defined prefix (optional) 
+            var xNomadToken = xNomadToken_example;  // string | A Nomad ACL token. (optional) 
             var perPage = 56;  // int? | Maximum number of results to return. (optional) 
-            var nextToken = "nextToken_example";  // string? | Indicates where to start paging for queries that support pagination. (optional) 
+            var nextToken = nextToken_example;  // string | Indicates where to start paging for queries that support pagination. (optional) 
 
             try
             {
@@ -262,15 +262,15 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **region** | **string?**| Filters results based on the specified region. | [optional] 
- **_namespace** | **string?**| Filters results based on the specified namespace. | [optional] 
+ **region** | **string**| Filters results based on the specified region. | [optional] 
+ **_namespace** | **string**| Filters results based on the specified namespace. | [optional] 
  **index** | **int?**| If set, wait until query exceeds given index. Must be provided with WaitParam. | [optional] 
- **wait** | **string?**| Provided with IndexParam to wait for change. | [optional] 
- **stale** | **string?**| If present, results will include stale reads. | [optional] 
- **prefix** | **string?**| Constrains results to jobs that start with the defined prefix | [optional] 
- **xNomadToken** | **string?**| A Nomad ACL token. | [optional] 
+ **wait** | **string**| Provided with IndexParam to wait for change. | [optional] 
+ **stale** | **string**| If present, results will include stale reads. | [optional] 
+ **prefix** | **string**| Constrains results to jobs that start with the defined prefix | [optional] 
+ **xNomadToken** | **string**| A Nomad ACL token. | [optional] 
  **perPage** | **int?**| Maximum number of results to return. | [optional] 
- **nextToken** | **string?**| Indicates where to start paging for queries that support pagination. | [optional] 
+ **nextToken** | **string**| Indicates where to start paging for queries that support pagination. | [optional] 
 
 ### Return type
 
@@ -299,7 +299,7 @@ Name | Type | Description  | Notes
 
 <a name="postdeploymentallocationhealth"></a>
 # **PostDeploymentAllocationHealth**
-> DeploymentUpdateResponse PostDeploymentAllocationHealth (string deploymentID, DeploymentAllocHealthRequest deploymentAllocHealthRequest, string? region = null, string? _namespace = null, string? xNomadToken = null, string? idempotencyToken = null)
+> DeploymentUpdateResponse PostDeploymentAllocationHealth (string deploymentID, DeploymentAllocHealthRequest deploymentAllocHealthRequest, string region = null, string _namespace = null, string xNomadToken = null, string idempotencyToken = null)
 
 
 
@@ -325,12 +325,12 @@ namespace Example
             // config.AddApiKeyPrefix("X-Nomad-Token", "Bearer");
 
             var apiInstance = new DeploymentsApi(config);
-            var deploymentID = "deploymentID_example";  // string | Deployment ID.
+            var deploymentID = deploymentID_example;  // string | Deployment ID.
             var deploymentAllocHealthRequest = new DeploymentAllocHealthRequest(); // DeploymentAllocHealthRequest | 
-            var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
-            var xNomadToken = "xNomadToken_example";  // string? | A Nomad ACL token. (optional) 
-            var idempotencyToken = "idempotencyToken_example";  // string? | Can be used to ensure operations are only run once. (optional) 
+            var region = region_example;  // string | Filters results based on the specified region. (optional) 
+            var _namespace = _namespace_example;  // string | Filters results based on the specified namespace. (optional) 
+            var xNomadToken = xNomadToken_example;  // string | A Nomad ACL token. (optional) 
+            var idempotencyToken = idempotencyToken_example;  // string | Can be used to ensure operations are only run once. (optional) 
 
             try
             {
@@ -354,10 +354,10 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **deploymentID** | **string**| Deployment ID. | 
  **deploymentAllocHealthRequest** | [**DeploymentAllocHealthRequest**](DeploymentAllocHealthRequest.md)|  | 
- **region** | **string?**| Filters results based on the specified region. | [optional] 
- **_namespace** | **string?**| Filters results based on the specified namespace. | [optional] 
- **xNomadToken** | **string?**| A Nomad ACL token. | [optional] 
- **idempotencyToken** | **string?**| Can be used to ensure operations are only run once. | [optional] 
+ **region** | **string**| Filters results based on the specified region. | [optional] 
+ **_namespace** | **string**| Filters results based on the specified namespace. | [optional] 
+ **xNomadToken** | **string**| A Nomad ACL token. | [optional] 
+ **idempotencyToken** | **string**| Can be used to ensure operations are only run once. | [optional] 
 
 ### Return type
 
@@ -386,7 +386,7 @@ Name | Type | Description  | Notes
 
 <a name="postdeploymentfail"></a>
 # **PostDeploymentFail**
-> DeploymentUpdateResponse PostDeploymentFail (string deploymentID, string? region = null, string? _namespace = null, string? xNomadToken = null, string? idempotencyToken = null)
+> DeploymentUpdateResponse PostDeploymentFail (string deploymentID, string region = null, string _namespace = null, string xNomadToken = null, string idempotencyToken = null)
 
 
 
@@ -412,11 +412,11 @@ namespace Example
             // config.AddApiKeyPrefix("X-Nomad-Token", "Bearer");
 
             var apiInstance = new DeploymentsApi(config);
-            var deploymentID = "deploymentID_example";  // string | Deployment ID.
-            var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
-            var xNomadToken = "xNomadToken_example";  // string? | A Nomad ACL token. (optional) 
-            var idempotencyToken = "idempotencyToken_example";  // string? | Can be used to ensure operations are only run once. (optional) 
+            var deploymentID = deploymentID_example;  // string | Deployment ID.
+            var region = region_example;  // string | Filters results based on the specified region. (optional) 
+            var _namespace = _namespace_example;  // string | Filters results based on the specified namespace. (optional) 
+            var xNomadToken = xNomadToken_example;  // string | A Nomad ACL token. (optional) 
+            var idempotencyToken = idempotencyToken_example;  // string | Can be used to ensure operations are only run once. (optional) 
 
             try
             {
@@ -439,10 +439,10 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **deploymentID** | **string**| Deployment ID. | 
- **region** | **string?**| Filters results based on the specified region. | [optional] 
- **_namespace** | **string?**| Filters results based on the specified namespace. | [optional] 
- **xNomadToken** | **string?**| A Nomad ACL token. | [optional] 
- **idempotencyToken** | **string?**| Can be used to ensure operations are only run once. | [optional] 
+ **region** | **string**| Filters results based on the specified region. | [optional] 
+ **_namespace** | **string**| Filters results based on the specified namespace. | [optional] 
+ **xNomadToken** | **string**| A Nomad ACL token. | [optional] 
+ **idempotencyToken** | **string**| Can be used to ensure operations are only run once. | [optional] 
 
 ### Return type
 
@@ -471,7 +471,7 @@ Name | Type | Description  | Notes
 
 <a name="postdeploymentpause"></a>
 # **PostDeploymentPause**
-> DeploymentUpdateResponse PostDeploymentPause (string deploymentID, DeploymentPauseRequest deploymentPauseRequest, string? region = null, string? _namespace = null, string? xNomadToken = null, string? idempotencyToken = null)
+> DeploymentUpdateResponse PostDeploymentPause (string deploymentID, DeploymentPauseRequest deploymentPauseRequest, string region = null, string _namespace = null, string xNomadToken = null, string idempotencyToken = null)
 
 
 
@@ -497,12 +497,12 @@ namespace Example
             // config.AddApiKeyPrefix("X-Nomad-Token", "Bearer");
 
             var apiInstance = new DeploymentsApi(config);
-            var deploymentID = "deploymentID_example";  // string | Deployment ID.
+            var deploymentID = deploymentID_example;  // string | Deployment ID.
             var deploymentPauseRequest = new DeploymentPauseRequest(); // DeploymentPauseRequest | 
-            var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
-            var xNomadToken = "xNomadToken_example";  // string? | A Nomad ACL token. (optional) 
-            var idempotencyToken = "idempotencyToken_example";  // string? | Can be used to ensure operations are only run once. (optional) 
+            var region = region_example;  // string | Filters results based on the specified region. (optional) 
+            var _namespace = _namespace_example;  // string | Filters results based on the specified namespace. (optional) 
+            var xNomadToken = xNomadToken_example;  // string | A Nomad ACL token. (optional) 
+            var idempotencyToken = idempotencyToken_example;  // string | Can be used to ensure operations are only run once. (optional) 
 
             try
             {
@@ -526,10 +526,10 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **deploymentID** | **string**| Deployment ID. | 
  **deploymentPauseRequest** | [**DeploymentPauseRequest**](DeploymentPauseRequest.md)|  | 
- **region** | **string?**| Filters results based on the specified region. | [optional] 
- **_namespace** | **string?**| Filters results based on the specified namespace. | [optional] 
- **xNomadToken** | **string?**| A Nomad ACL token. | [optional] 
- **idempotencyToken** | **string?**| Can be used to ensure operations are only run once. | [optional] 
+ **region** | **string**| Filters results based on the specified region. | [optional] 
+ **_namespace** | **string**| Filters results based on the specified namespace. | [optional] 
+ **xNomadToken** | **string**| A Nomad ACL token. | [optional] 
+ **idempotencyToken** | **string**| Can be used to ensure operations are only run once. | [optional] 
 
 ### Return type
 
@@ -558,7 +558,7 @@ Name | Type | Description  | Notes
 
 <a name="postdeploymentpromote"></a>
 # **PostDeploymentPromote**
-> DeploymentUpdateResponse PostDeploymentPromote (string deploymentID, DeploymentPromoteRequest deploymentPromoteRequest, string? region = null, string? _namespace = null, string? xNomadToken = null, string? idempotencyToken = null)
+> DeploymentUpdateResponse PostDeploymentPromote (string deploymentID, DeploymentPromoteRequest deploymentPromoteRequest, string region = null, string _namespace = null, string xNomadToken = null, string idempotencyToken = null)
 
 
 
@@ -584,12 +584,12 @@ namespace Example
             // config.AddApiKeyPrefix("X-Nomad-Token", "Bearer");
 
             var apiInstance = new DeploymentsApi(config);
-            var deploymentID = "deploymentID_example";  // string | Deployment ID.
+            var deploymentID = deploymentID_example;  // string | Deployment ID.
             var deploymentPromoteRequest = new DeploymentPromoteRequest(); // DeploymentPromoteRequest | 
-            var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
-            var xNomadToken = "xNomadToken_example";  // string? | A Nomad ACL token. (optional) 
-            var idempotencyToken = "idempotencyToken_example";  // string? | Can be used to ensure operations are only run once. (optional) 
+            var region = region_example;  // string | Filters results based on the specified region. (optional) 
+            var _namespace = _namespace_example;  // string | Filters results based on the specified namespace. (optional) 
+            var xNomadToken = xNomadToken_example;  // string | A Nomad ACL token. (optional) 
+            var idempotencyToken = idempotencyToken_example;  // string | Can be used to ensure operations are only run once. (optional) 
 
             try
             {
@@ -613,10 +613,10 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **deploymentID** | **string**| Deployment ID. | 
  **deploymentPromoteRequest** | [**DeploymentPromoteRequest**](DeploymentPromoteRequest.md)|  | 
- **region** | **string?**| Filters results based on the specified region. | [optional] 
- **_namespace** | **string?**| Filters results based on the specified namespace. | [optional] 
- **xNomadToken** | **string?**| A Nomad ACL token. | [optional] 
- **idempotencyToken** | **string?**| Can be used to ensure operations are only run once. | [optional] 
+ **region** | **string**| Filters results based on the specified region. | [optional] 
+ **_namespace** | **string**| Filters results based on the specified namespace. | [optional] 
+ **xNomadToken** | **string**| A Nomad ACL token. | [optional] 
+ **idempotencyToken** | **string**| Can be used to ensure operations are only run once. | [optional] 
 
 ### Return type
 
@@ -645,7 +645,7 @@ Name | Type | Description  | Notes
 
 <a name="postdeploymentunblock"></a>
 # **PostDeploymentUnblock**
-> DeploymentUpdateResponse PostDeploymentUnblock (string deploymentID, DeploymentUnblockRequest deploymentUnblockRequest, string? region = null, string? _namespace = null, string? xNomadToken = null, string? idempotencyToken = null)
+> DeploymentUpdateResponse PostDeploymentUnblock (string deploymentID, DeploymentUnblockRequest deploymentUnblockRequest, string region = null, string _namespace = null, string xNomadToken = null, string idempotencyToken = null)
 
 
 
@@ -671,12 +671,12 @@ namespace Example
             // config.AddApiKeyPrefix("X-Nomad-Token", "Bearer");
 
             var apiInstance = new DeploymentsApi(config);
-            var deploymentID = "deploymentID_example";  // string | Deployment ID.
+            var deploymentID = deploymentID_example;  // string | Deployment ID.
             var deploymentUnblockRequest = new DeploymentUnblockRequest(); // DeploymentUnblockRequest | 
-            var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
-            var xNomadToken = "xNomadToken_example";  // string? | A Nomad ACL token. (optional) 
-            var idempotencyToken = "idempotencyToken_example";  // string? | Can be used to ensure operations are only run once. (optional) 
+            var region = region_example;  // string | Filters results based on the specified region. (optional) 
+            var _namespace = _namespace_example;  // string | Filters results based on the specified namespace. (optional) 
+            var xNomadToken = xNomadToken_example;  // string | A Nomad ACL token. (optional) 
+            var idempotencyToken = idempotencyToken_example;  // string | Can be used to ensure operations are only run once. (optional) 
 
             try
             {
@@ -700,10 +700,10 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **deploymentID** | **string**| Deployment ID. | 
  **deploymentUnblockRequest** | [**DeploymentUnblockRequest**](DeploymentUnblockRequest.md)|  | 
- **region** | **string?**| Filters results based on the specified region. | [optional] 
- **_namespace** | **string?**| Filters results based on the specified namespace. | [optional] 
- **xNomadToken** | **string?**| A Nomad ACL token. | [optional] 
- **idempotencyToken** | **string?**| Can be used to ensure operations are only run once. | [optional] 
+ **region** | **string**| Filters results based on the specified region. | [optional] 
+ **_namespace** | **string**| Filters results based on the specified namespace. | [optional] 
+ **xNomadToken** | **string**| A Nomad ACL token. | [optional] 
+ **idempotencyToken** | **string**| Can be used to ensure operations are only run once. | [optional] 
 
 ### Return type
 

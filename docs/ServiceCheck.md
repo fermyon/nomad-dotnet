@@ -5,6 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **AddressMode** | **string** |  | [optional] 
+**Advertise** | **string** |  | [optional] 
 **Args** | **List&lt;string&gt;** |  | [optional] 
 **Body** | **string** |  | [optional] 
 **CheckRestart** | [**CheckRestart**](CheckRestart.md) |  | [optional] 
@@ -14,7 +15,6 @@ Name | Type | Description | Notes
 **GRPCService** | **string** |  | [optional] 
 **GRPCUseTLS** | **bool** |  | [optional] 
 **Header** | **Dictionary&lt;string, List&lt;string&gt;&gt;** |  | [optional] 
-**Id** | **string** |  | [optional] 
 **InitialStatus** | **string** |  | [optional] 
 **Interval** | **long** |  | [optional] 
 **Method** | **string** |  | [optional] 

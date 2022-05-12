@@ -245,7 +245,7 @@ namespace Fermyon.Nomad.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            StringBuilder sb = new StringBuilder();
+            var sb = new StringBuilder();
             sb.Append("class AllocationListStub {\n");
             sb.Append("  AllocatedResources: ").Append(AllocatedResources).Append("\n");
             sb.Append("  ClientDescription: ").Append(ClientDescription).Append("\n");
@@ -303,9 +303,8 @@ namespace Fermyon.Nomad.Model
         public bool Equals(AllocationListStub input)
         {
             if (input == null)
-            {
                 return false;
-            }
+
             return 
                 (
                     this.AllocatedResources == input.AllocatedResources ||
@@ -441,90 +440,50 @@ namespace Fermyon.Nomad.Model
             {
                 int hashCode = 41;
                 if (this.AllocatedResources != null)
-                {
-                    hashCode = (hashCode * 59) + this.AllocatedResources.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.AllocatedResources.GetHashCode();
                 if (this.ClientDescription != null)
-                {
-                    hashCode = (hashCode * 59) + this.ClientDescription.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.ClientDescription.GetHashCode();
                 if (this.ClientStatus != null)
-                {
-                    hashCode = (hashCode * 59) + this.ClientStatus.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.CreateIndex.GetHashCode();
-                hashCode = (hashCode * 59) + this.CreateTime.GetHashCode();
+                    hashCode = hashCode * 59 + this.ClientStatus.GetHashCode();
+                hashCode = hashCode * 59 + this.CreateIndex.GetHashCode();
+                hashCode = hashCode * 59 + this.CreateTime.GetHashCode();
                 if (this.DeploymentStatus != null)
-                {
-                    hashCode = (hashCode * 59) + this.DeploymentStatus.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.DeploymentStatus.GetHashCode();
                 if (this.DesiredDescription != null)
-                {
-                    hashCode = (hashCode * 59) + this.DesiredDescription.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.DesiredDescription.GetHashCode();
                 if (this.DesiredStatus != null)
-                {
-                    hashCode = (hashCode * 59) + this.DesiredStatus.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.DesiredStatus.GetHashCode();
                 if (this.EvalID != null)
-                {
-                    hashCode = (hashCode * 59) + this.EvalID.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.EvalID.GetHashCode();
                 if (this.FollowupEvalID != null)
-                {
-                    hashCode = (hashCode * 59) + this.FollowupEvalID.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.FollowupEvalID.GetHashCode();
                 if (this.ID != null)
-                {
-                    hashCode = (hashCode * 59) + this.ID.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.ID.GetHashCode();
                 if (this.JobID != null)
-                {
-                    hashCode = (hashCode * 59) + this.JobID.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.JobID.GetHashCode();
                 if (this.JobType != null)
-                {
-                    hashCode = (hashCode * 59) + this.JobType.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.JobVersion.GetHashCode();
-                hashCode = (hashCode * 59) + this.ModifyIndex.GetHashCode();
-                hashCode = (hashCode * 59) + this.ModifyTime.GetHashCode();
+                    hashCode = hashCode * 59 + this.JobType.GetHashCode();
+                hashCode = hashCode * 59 + this.JobVersion.GetHashCode();
+                hashCode = hashCode * 59 + this.ModifyIndex.GetHashCode();
+                hashCode = hashCode * 59 + this.ModifyTime.GetHashCode();
                 if (this.Name != null)
-                {
-                    hashCode = (hashCode * 59) + this.Name.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.Name.GetHashCode();
                 if (this.Namespace != null)
-                {
-                    hashCode = (hashCode * 59) + this.Namespace.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.Namespace.GetHashCode();
                 if (this.NodeID != null)
-                {
-                    hashCode = (hashCode * 59) + this.NodeID.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.NodeID.GetHashCode();
                 if (this.NodeName != null)
-                {
-                    hashCode = (hashCode * 59) + this.NodeName.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.NodeName.GetHashCode();
                 if (this.PreemptedAllocations != null)
-                {
-                    hashCode = (hashCode * 59) + this.PreemptedAllocations.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.PreemptedAllocations.GetHashCode();
                 if (this.PreemptedByAllocation != null)
-                {
-                    hashCode = (hashCode * 59) + this.PreemptedByAllocation.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.PreemptedByAllocation.GetHashCode();
                 if (this.RescheduleTracker != null)
-                {
-                    hashCode = (hashCode * 59) + this.RescheduleTracker.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.RescheduleTracker.GetHashCode();
                 if (this.TaskGroup != null)
-                {
-                    hashCode = (hashCode * 59) + this.TaskGroup.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.TaskGroup.GetHashCode();
                 if (this.TaskStates != null)
-                {
-                    hashCode = (hashCode * 59) + this.TaskStates.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.TaskStates.GetHashCode();
                 return hashCode;
             }
         }
@@ -534,40 +493,40 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // CreateIndex (int) maximum
-            if (this.CreateIndex > (int)384)
+            if(this.CreateIndex > (int)384)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for CreateIndex, must be a value less than or equal to 384.", new [] { "CreateIndex" });
             }
 
             // CreateIndex (int) minimum
-            if (this.CreateIndex < (int)0)
+            if(this.CreateIndex < (int)0)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for CreateIndex, must be a value greater than or equal to 0.", new [] { "CreateIndex" });
             }
 
             // JobVersion (int) maximum
-            if (this.JobVersion > (int)384)
+            if(this.JobVersion > (int)384)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for JobVersion, must be a value less than or equal to 384.", new [] { "JobVersion" });
             }
 
             // JobVersion (int) minimum
-            if (this.JobVersion < (int)0)
+            if(this.JobVersion < (int)0)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for JobVersion, must be a value greater than or equal to 0.", new [] { "JobVersion" });
             }
 
             // ModifyIndex (int) maximum
-            if (this.ModifyIndex > (int)384)
+            if(this.ModifyIndex > (int)384)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ModifyIndex, must be a value less than or equal to 384.", new [] { "ModifyIndex" });
             }
 
             // ModifyIndex (int) minimum
-            if (this.ModifyIndex < (int)0)
+            if(this.ModifyIndex < (int)0)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ModifyIndex, must be a value greater than or equal to 0.", new [] { "ModifyIndex" });
             }

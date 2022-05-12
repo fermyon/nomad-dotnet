@@ -53,7 +53,7 @@ namespace Fermyon.Nomad.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            StringBuilder sb = new StringBuilder();
+            var sb = new StringBuilder();
             sb.Append("class NodeReservedCpuResources {\n");
             sb.Append("  CpuShares: ").Append(CpuShares).Append("\n");
             sb.Append("}\n");
@@ -87,9 +87,8 @@ namespace Fermyon.Nomad.Model
         public bool Equals(NodeReservedCpuResources input)
         {
             if (input == null)
-            {
                 return false;
-            }
+
             return 
                 (
                     this.CpuShares == input.CpuShares ||
@@ -106,7 +105,7 @@ namespace Fermyon.Nomad.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                hashCode = (hashCode * 59) + this.CpuShares.GetHashCode();
+                hashCode = hashCode * 59 + this.CpuShares.GetHashCode();
                 return hashCode;
             }
         }
@@ -116,16 +115,16 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // CpuShares (int) maximum
-            if (this.CpuShares > (int)384)
+            if(this.CpuShares > (int)384)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for CpuShares, must be a value less than or equal to 384.", new [] { "CpuShares" });
             }
 
             // CpuShares (int) minimum
-            if (this.CpuShares < (int)0)
+            if(this.CpuShares < (int)0)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for CpuShares, must be a value greater than or equal to 0.", new [] { "CpuShares" });
             }

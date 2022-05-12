@@ -149,7 +149,7 @@ namespace Fermyon.Nomad.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            StringBuilder sb = new StringBuilder();
+            var sb = new StringBuilder();
             sb.Append("class Deployment {\n");
             sb.Append("  CreateIndex: ").Append(CreateIndex).Append("\n");
             sb.Append("  ID: ").Append(ID).Append("\n");
@@ -195,9 +195,8 @@ namespace Fermyon.Nomad.Model
         public bool Equals(Deployment input)
         {
             if (input == null)
-            {
                 return false;
-            }
+
             return 
                 (
                     this.CreateIndex == input.CreateIndex ||
@@ -269,37 +268,25 @@ namespace Fermyon.Nomad.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                hashCode = (hashCode * 59) + this.CreateIndex.GetHashCode();
+                hashCode = hashCode * 59 + this.CreateIndex.GetHashCode();
                 if (this.ID != null)
-                {
-                    hashCode = (hashCode * 59) + this.ID.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.IsMultiregion.GetHashCode();
-                hashCode = (hashCode * 59) + this.JobCreateIndex.GetHashCode();
+                    hashCode = hashCode * 59 + this.ID.GetHashCode();
+                hashCode = hashCode * 59 + this.IsMultiregion.GetHashCode();
+                hashCode = hashCode * 59 + this.JobCreateIndex.GetHashCode();
                 if (this.JobID != null)
-                {
-                    hashCode = (hashCode * 59) + this.JobID.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.JobModifyIndex.GetHashCode();
-                hashCode = (hashCode * 59) + this.JobSpecModifyIndex.GetHashCode();
-                hashCode = (hashCode * 59) + this.JobVersion.GetHashCode();
-                hashCode = (hashCode * 59) + this.ModifyIndex.GetHashCode();
+                    hashCode = hashCode * 59 + this.JobID.GetHashCode();
+                hashCode = hashCode * 59 + this.JobModifyIndex.GetHashCode();
+                hashCode = hashCode * 59 + this.JobSpecModifyIndex.GetHashCode();
+                hashCode = hashCode * 59 + this.JobVersion.GetHashCode();
+                hashCode = hashCode * 59 + this.ModifyIndex.GetHashCode();
                 if (this.Namespace != null)
-                {
-                    hashCode = (hashCode * 59) + this.Namespace.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.Namespace.GetHashCode();
                 if (this.Status != null)
-                {
-                    hashCode = (hashCode * 59) + this.Status.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.Status.GetHashCode();
                 if (this.StatusDescription != null)
-                {
-                    hashCode = (hashCode * 59) + this.StatusDescription.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.StatusDescription.GetHashCode();
                 if (this.TaskGroups != null)
-                {
-                    hashCode = (hashCode * 59) + this.TaskGroups.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.TaskGroups.GetHashCode();
                 return hashCode;
             }
         }
@@ -309,76 +296,76 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // CreateIndex (int) maximum
-            if (this.CreateIndex > (int)384)
+            if(this.CreateIndex > (int)384)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for CreateIndex, must be a value less than or equal to 384.", new [] { "CreateIndex" });
             }
 
             // CreateIndex (int) minimum
-            if (this.CreateIndex < (int)0)
+            if(this.CreateIndex < (int)0)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for CreateIndex, must be a value greater than or equal to 0.", new [] { "CreateIndex" });
             }
 
             // JobCreateIndex (int) maximum
-            if (this.JobCreateIndex > (int)384)
+            if(this.JobCreateIndex > (int)384)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for JobCreateIndex, must be a value less than or equal to 384.", new [] { "JobCreateIndex" });
             }
 
             // JobCreateIndex (int) minimum
-            if (this.JobCreateIndex < (int)0)
+            if(this.JobCreateIndex < (int)0)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for JobCreateIndex, must be a value greater than or equal to 0.", new [] { "JobCreateIndex" });
             }
 
             // JobModifyIndex (int) maximum
-            if (this.JobModifyIndex > (int)384)
+            if(this.JobModifyIndex > (int)384)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for JobModifyIndex, must be a value less than or equal to 384.", new [] { "JobModifyIndex" });
             }
 
             // JobModifyIndex (int) minimum
-            if (this.JobModifyIndex < (int)0)
+            if(this.JobModifyIndex < (int)0)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for JobModifyIndex, must be a value greater than or equal to 0.", new [] { "JobModifyIndex" });
             }
 
             // JobSpecModifyIndex (int) maximum
-            if (this.JobSpecModifyIndex > (int)384)
+            if(this.JobSpecModifyIndex > (int)384)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for JobSpecModifyIndex, must be a value less than or equal to 384.", new [] { "JobSpecModifyIndex" });
             }
 
             // JobSpecModifyIndex (int) minimum
-            if (this.JobSpecModifyIndex < (int)0)
+            if(this.JobSpecModifyIndex < (int)0)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for JobSpecModifyIndex, must be a value greater than or equal to 0.", new [] { "JobSpecModifyIndex" });
             }
 
             // JobVersion (int) maximum
-            if (this.JobVersion > (int)384)
+            if(this.JobVersion > (int)384)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for JobVersion, must be a value less than or equal to 384.", new [] { "JobVersion" });
             }
 
             // JobVersion (int) minimum
-            if (this.JobVersion < (int)0)
+            if(this.JobVersion < (int)0)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for JobVersion, must be a value greater than or equal to 0.", new [] { "JobVersion" });
             }
 
             // ModifyIndex (int) maximum
-            if (this.ModifyIndex > (int)384)
+            if(this.ModifyIndex > (int)384)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ModifyIndex, must be a value less than or equal to 384.", new [] { "ModifyIndex" });
             }
 
             // ModifyIndex (int) minimum
-            if (this.ModifyIndex < (int)0)
+            if(this.ModifyIndex < (int)0)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ModifyIndex, must be a value greater than or equal to 0.", new [] { "ModifyIndex" });
             }

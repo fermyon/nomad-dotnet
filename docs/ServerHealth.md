@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 **Name** | **string** |  | [optional] 
 **SerfStatus** | **string** |  | [optional] 
 **StableSince** | **DateTime** |  | [optional] 
-**_Version** | **string** |  | [optional] 
+**Version** | **string** |  | [optional] 
 **Voter** | **bool** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

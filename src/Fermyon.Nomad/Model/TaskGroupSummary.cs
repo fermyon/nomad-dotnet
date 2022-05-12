@@ -101,7 +101,7 @@ namespace Fermyon.Nomad.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            StringBuilder sb = new StringBuilder();
+            var sb = new StringBuilder();
             sb.Append("class TaskGroupSummary {\n");
             sb.Append("  Complete: ").Append(Complete).Append("\n");
             sb.Append("  Failed: ").Append(Failed).Append("\n");
@@ -141,9 +141,8 @@ namespace Fermyon.Nomad.Model
         public bool Equals(TaskGroupSummary input)
         {
             if (input == null)
-            {
                 return false;
-            }
+
             return 
                 (
                     this.Complete == input.Complete ||
@@ -184,13 +183,13 @@ namespace Fermyon.Nomad.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                hashCode = (hashCode * 59) + this.Complete.GetHashCode();
-                hashCode = (hashCode * 59) + this.Failed.GetHashCode();
-                hashCode = (hashCode * 59) + this.Lost.GetHashCode();
-                hashCode = (hashCode * 59) + this.Queued.GetHashCode();
-                hashCode = (hashCode * 59) + this.Running.GetHashCode();
-                hashCode = (hashCode * 59) + this.Starting.GetHashCode();
-                hashCode = (hashCode * 59) + this.Unknown.GetHashCode();
+                hashCode = hashCode * 59 + this.Complete.GetHashCode();
+                hashCode = hashCode * 59 + this.Failed.GetHashCode();
+                hashCode = hashCode * 59 + this.Lost.GetHashCode();
+                hashCode = hashCode * 59 + this.Queued.GetHashCode();
+                hashCode = hashCode * 59 + this.Running.GetHashCode();
+                hashCode = hashCode * 59 + this.Starting.GetHashCode();
+                hashCode = hashCode * 59 + this.Unknown.GetHashCode();
                 return hashCode;
             }
         }
@@ -200,7 +199,7 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

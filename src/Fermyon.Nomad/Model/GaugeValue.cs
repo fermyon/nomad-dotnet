@@ -69,7 +69,7 @@ namespace Fermyon.Nomad.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            StringBuilder sb = new StringBuilder();
+            var sb = new StringBuilder();
             sb.Append("class GaugeValue {\n");
             sb.Append("  Labels: ").Append(Labels).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
@@ -105,9 +105,8 @@ namespace Fermyon.Nomad.Model
         public bool Equals(GaugeValue input)
         {
             if (input == null)
-            {
                 return false;
-            }
+
             return 
                 (
                     this.Labels == input.Labels ||
@@ -136,14 +135,10 @@ namespace Fermyon.Nomad.Model
             {
                 int hashCode = 41;
                 if (this.Labels != null)
-                {
-                    hashCode = (hashCode * 59) + this.Labels.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.Labels.GetHashCode();
                 if (this.Name != null)
-                {
-                    hashCode = (hashCode * 59) + this.Name.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.Value.GetHashCode();
+                    hashCode = hashCode * 59 + this.Name.GetHashCode();
+                hashCode = hashCode * 59 + this.Value.GetHashCode();
                 return hashCode;
             }
         }
@@ -153,7 +148,7 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

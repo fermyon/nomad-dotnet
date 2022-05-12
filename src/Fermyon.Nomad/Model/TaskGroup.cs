@@ -166,7 +166,7 @@ namespace Fermyon.Nomad.Model
         /// <summary>
         /// Gets or Sets ShutdownDelay
         /// </summary>
-        [DataMember(Name = "ShutdownDelay", EmitDefaultValue = false)]
+        [DataMember(Name = "ShutdownDelay", EmitDefaultValue = true)]
         public long? ShutdownDelay { get; set; }
 
         /// <summary>
@@ -178,7 +178,7 @@ namespace Fermyon.Nomad.Model
         /// <summary>
         /// Gets or Sets StopAfterClientDisconnect
         /// </summary>
-        [DataMember(Name = "StopAfterClientDisconnect", EmitDefaultValue = false)]
+        [DataMember(Name = "StopAfterClientDisconnect", EmitDefaultValue = true)]
         public long? StopAfterClientDisconnect { get; set; }
 
         /// <summary>
@@ -205,7 +205,7 @@ namespace Fermyon.Nomad.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            StringBuilder sb = new StringBuilder();
+            var sb = new StringBuilder();
             sb.Append("class TaskGroup {\n");
             sb.Append("  Affinities: ").Append(Affinities).Append("\n");
             sb.Append("  Constraints: ").Append(Constraints).Append("\n");
@@ -258,9 +258,8 @@ namespace Fermyon.Nomad.Model
         public bool Equals(TaskGroup input)
         {
             if (input == null)
-            {
                 return false;
-            }
+
             return 
                 (
                     this.Affinities == input.Affinities ||
@@ -337,7 +336,8 @@ namespace Fermyon.Nomad.Model
                 ) && 
                 (
                     this.ShutdownDelay == input.ShutdownDelay ||
-                    this.ShutdownDelay.Equals(input.ShutdownDelay)
+                    (this.ShutdownDelay != null &&
+                    this.ShutdownDelay.Equals(input.ShutdownDelay))
                 ) && 
                 (
                     this.Spreads == input.Spreads ||
@@ -347,7 +347,8 @@ namespace Fermyon.Nomad.Model
                 ) && 
                 (
                     this.StopAfterClientDisconnect == input.StopAfterClientDisconnect ||
-                    this.StopAfterClientDisconnect.Equals(input.StopAfterClientDisconnect)
+                    (this.StopAfterClientDisconnect != null &&
+                    this.StopAfterClientDisconnect.Equals(input.StopAfterClientDisconnect))
                 ) && 
                 (
                     this.Tasks == input.Tasks ||
@@ -378,73 +379,43 @@ namespace Fermyon.Nomad.Model
             {
                 int hashCode = 41;
                 if (this.Affinities != null)
-                {
-                    hashCode = (hashCode * 59) + this.Affinities.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.Affinities.GetHashCode();
                 if (this.Constraints != null)
-                {
-                    hashCode = (hashCode * 59) + this.Constraints.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.Constraints.GetHashCode();
                 if (this.Consul != null)
-                {
-                    hashCode = (hashCode * 59) + this.Consul.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.Count.GetHashCode();
+                    hashCode = hashCode * 59 + this.Consul.GetHashCode();
+                hashCode = hashCode * 59 + this.Count.GetHashCode();
                 if (this.EphemeralDisk != null)
-                {
-                    hashCode = (hashCode * 59) + this.EphemeralDisk.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.MaxClientDisconnect.GetHashCode();
+                    hashCode = hashCode * 59 + this.EphemeralDisk.GetHashCode();
+                hashCode = hashCode * 59 + this.MaxClientDisconnect.GetHashCode();
                 if (this.Meta != null)
-                {
-                    hashCode = (hashCode * 59) + this.Meta.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.Meta.GetHashCode();
                 if (this.Migrate != null)
-                {
-                    hashCode = (hashCode * 59) + this.Migrate.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.Migrate.GetHashCode();
                 if (this.Name != null)
-                {
-                    hashCode = (hashCode * 59) + this.Name.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.Name.GetHashCode();
                 if (this.Networks != null)
-                {
-                    hashCode = (hashCode * 59) + this.Networks.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.Networks.GetHashCode();
                 if (this.ReschedulePolicy != null)
-                {
-                    hashCode = (hashCode * 59) + this.ReschedulePolicy.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.ReschedulePolicy.GetHashCode();
                 if (this.RestartPolicy != null)
-                {
-                    hashCode = (hashCode * 59) + this.RestartPolicy.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.RestartPolicy.GetHashCode();
                 if (this.Scaling != null)
-                {
-                    hashCode = (hashCode * 59) + this.Scaling.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.Scaling.GetHashCode();
                 if (this.Services != null)
-                {
-                    hashCode = (hashCode * 59) + this.Services.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.ShutdownDelay.GetHashCode();
+                    hashCode = hashCode * 59 + this.Services.GetHashCode();
+                if (this.ShutdownDelay != null)
+                    hashCode = hashCode * 59 + this.ShutdownDelay.GetHashCode();
                 if (this.Spreads != null)
-                {
-                    hashCode = (hashCode * 59) + this.Spreads.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.StopAfterClientDisconnect.GetHashCode();
+                    hashCode = hashCode * 59 + this.Spreads.GetHashCode();
+                if (this.StopAfterClientDisconnect != null)
+                    hashCode = hashCode * 59 + this.StopAfterClientDisconnect.GetHashCode();
                 if (this.Tasks != null)
-                {
-                    hashCode = (hashCode * 59) + this.Tasks.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.Tasks.GetHashCode();
                 if (this.Update != null)
-                {
-                    hashCode = (hashCode * 59) + this.Update.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.Update.GetHashCode();
                 if (this.Volumes != null)
-                {
-                    hashCode = (hashCode * 59) + this.Volumes.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.Volumes.GetHashCode();
                 return hashCode;
             }
         }
@@ -454,7 +425,7 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

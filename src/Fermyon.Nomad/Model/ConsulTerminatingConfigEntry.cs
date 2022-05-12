@@ -53,7 +53,7 @@ namespace Fermyon.Nomad.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            StringBuilder sb = new StringBuilder();
+            var sb = new StringBuilder();
             sb.Append("class ConsulTerminatingConfigEntry {\n");
             sb.Append("  Services: ").Append(Services).Append("\n");
             sb.Append("}\n");
@@ -87,9 +87,8 @@ namespace Fermyon.Nomad.Model
         public bool Equals(ConsulTerminatingConfigEntry input)
         {
             if (input == null)
-            {
                 return false;
-            }
+
             return 
                 (
                     this.Services == input.Services ||
@@ -109,9 +108,7 @@ namespace Fermyon.Nomad.Model
             {
                 int hashCode = 41;
                 if (this.Services != null)
-                {
-                    hashCode = (hashCode * 59) + this.Services.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.Services.GetHashCode();
                 return hashCode;
             }
         }
@@ -121,7 +118,7 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

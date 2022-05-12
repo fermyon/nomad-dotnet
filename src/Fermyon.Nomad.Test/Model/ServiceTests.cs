@@ -58,6 +58,14 @@ namespace Fermyon.Nomad.Test.Model
 
 
         /// <summary>
+        /// Test the property 'Address'
+        /// </summary>
+        [Fact]
+        public void AddressTest()
+        {
+            // TODO unit test for the property 'Address'
+        }
+        /// <summary>
         /// Test the property 'AddressMode'
         /// </summary>
         [Fact]
@@ -112,14 +120,6 @@ namespace Fermyon.Nomad.Test.Model
         public void EnableTagOverrideTest()
         {
             // TODO unit test for the property 'EnableTagOverride'
-        }
-        /// <summary>
-        /// Test the property 'Id'
-        /// </summary>
-        [Fact]
-        public void IdTest()
-        {
-            // TODO unit test for the property 'Id'
         }
         /// <summary>
         /// Test the property 'Meta'

@@ -85,7 +85,7 @@ namespace Fermyon.Nomad.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            StringBuilder sb = new StringBuilder();
+            var sb = new StringBuilder();
             sb.Append("class OneTimeToken {\n");
             sb.Append("  AccessorID: ").Append(AccessorID).Append("\n");
             sb.Append("  CreateIndex: ").Append(CreateIndex).Append("\n");
@@ -123,9 +123,8 @@ namespace Fermyon.Nomad.Model
         public bool Equals(OneTimeToken input)
         {
             if (input == null)
-            {
                 return false;
-            }
+
             return 
                 (
                     this.AccessorID == input.AccessorID ||
@@ -162,19 +161,13 @@ namespace Fermyon.Nomad.Model
             {
                 int hashCode = 41;
                 if (this.AccessorID != null)
-                {
-                    hashCode = (hashCode * 59) + this.AccessorID.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.CreateIndex.GetHashCode();
+                    hashCode = hashCode * 59 + this.AccessorID.GetHashCode();
+                hashCode = hashCode * 59 + this.CreateIndex.GetHashCode();
                 if (this.ExpiresAt != null)
-                {
-                    hashCode = (hashCode * 59) + this.ExpiresAt.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.ModifyIndex.GetHashCode();
+                    hashCode = hashCode * 59 + this.ExpiresAt.GetHashCode();
+                hashCode = hashCode * 59 + this.ModifyIndex.GetHashCode();
                 if (this.OneTimeSecretID != null)
-                {
-                    hashCode = (hashCode * 59) + this.OneTimeSecretID.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.OneTimeSecretID.GetHashCode();
                 return hashCode;
             }
         }
@@ -184,28 +177,28 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // CreateIndex (int) maximum
-            if (this.CreateIndex > (int)384)
+            if(this.CreateIndex > (int)384)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for CreateIndex, must be a value less than or equal to 384.", new [] { "CreateIndex" });
             }
 
             // CreateIndex (int) minimum
-            if (this.CreateIndex < (int)0)
+            if(this.CreateIndex < (int)0)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for CreateIndex, must be a value greater than or equal to 0.", new [] { "CreateIndex" });
             }
 
             // ModifyIndex (int) maximum
-            if (this.ModifyIndex > (int)384)
+            if(this.ModifyIndex > (int)384)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ModifyIndex, must be a value less than or equal to 384.", new [] { "ModifyIndex" });
             }
 
             // ModifyIndex (int) minimum
-            if (this.ModifyIndex < (int)0)
+            if(this.ModifyIndex < (int)0)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ModifyIndex, must be a value greater than or equal to 0.", new [] { "ModifyIndex" });
             }
