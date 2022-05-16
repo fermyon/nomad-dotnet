@@ -109,7 +109,7 @@ namespace Fermyon.Nomad.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            StringBuilder sb = new StringBuilder();
+            var sb = new StringBuilder();
             sb.Append("class ScalingEvent {\n");
             sb.Append("  Count: ").Append(Count).Append("\n");
             sb.Append("  CreateIndex: ").Append(CreateIndex).Append("\n");
@@ -150,9 +150,8 @@ namespace Fermyon.Nomad.Model
         public bool Equals(ScalingEvent input)
         {
             if (input == null)
-            {
                 return false;
-            }
+
             return 
                 (
                     this.Count == input.Count ||
@@ -201,23 +200,17 @@ namespace Fermyon.Nomad.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                hashCode = (hashCode * 59) + this.Count.GetHashCode();
-                hashCode = (hashCode * 59) + this.CreateIndex.GetHashCode();
-                hashCode = (hashCode * 59) + this.Error.GetHashCode();
+                hashCode = hashCode * 59 + this.Count.GetHashCode();
+                hashCode = hashCode * 59 + this.CreateIndex.GetHashCode();
+                hashCode = hashCode * 59 + this.Error.GetHashCode();
                 if (this.EvalID != null)
-                {
-                    hashCode = (hashCode * 59) + this.EvalID.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.EvalID.GetHashCode();
                 if (this.Message != null)
-                {
-                    hashCode = (hashCode * 59) + this.Message.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.Message.GetHashCode();
                 if (this.Meta != null)
-                {
-                    hashCode = (hashCode * 59) + this.Meta.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.PreviousCount.GetHashCode();
-                hashCode = (hashCode * 59) + this.Time.GetHashCode();
+                    hashCode = hashCode * 59 + this.Meta.GetHashCode();
+                hashCode = hashCode * 59 + this.PreviousCount.GetHashCode();
+                hashCode = hashCode * 59 + this.Time.GetHashCode();
                 return hashCode;
             }
         }
@@ -227,28 +220,28 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // CreateIndex (int) maximum
-            if (this.CreateIndex > (int)384)
+            if(this.CreateIndex > (int)384)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for CreateIndex, must be a value less than or equal to 384.", new [] { "CreateIndex" });
             }
 
             // CreateIndex (int) minimum
-            if (this.CreateIndex < (int)0)
+            if(this.CreateIndex < (int)0)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for CreateIndex, must be a value greater than or equal to 0.", new [] { "CreateIndex" });
             }
 
             // Time (int) maximum
-            if (this.Time > (int)384)
+            if(this.Time > (int)384)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Time, must be a value less than or equal to 384.", new [] { "Time" });
             }
 
             // Time (int) minimum
-            if (this.Time < (int)0)
+            if(this.Time < (int)0)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Time, must be a value greater than or equal to 0.", new [] { "Time" });
             }

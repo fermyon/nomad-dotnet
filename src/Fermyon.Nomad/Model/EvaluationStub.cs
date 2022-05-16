@@ -189,7 +189,7 @@ namespace Fermyon.Nomad.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            StringBuilder sb = new StringBuilder();
+            var sb = new StringBuilder();
             sb.Append("class EvaluationStub {\n");
             sb.Append("  BlockedEval: ").Append(BlockedEval).Append("\n");
             sb.Append("  CreateIndex: ").Append(CreateIndex).Append("\n");
@@ -240,9 +240,8 @@ namespace Fermyon.Nomad.Model
         public bool Equals(EvaluationStub input)
         {
             if (input == null)
-            {
                 return false;
-            }
+
             return 
                 (
                     this.BlockedEval == input.BlockedEval ||
@@ -341,62 +340,36 @@ namespace Fermyon.Nomad.Model
             {
                 int hashCode = 41;
                 if (this.BlockedEval != null)
-                {
-                    hashCode = (hashCode * 59) + this.BlockedEval.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.CreateIndex.GetHashCode();
-                hashCode = (hashCode * 59) + this.CreateTime.GetHashCode();
+                    hashCode = hashCode * 59 + this.BlockedEval.GetHashCode();
+                hashCode = hashCode * 59 + this.CreateIndex.GetHashCode();
+                hashCode = hashCode * 59 + this.CreateTime.GetHashCode();
                 if (this.DeploymentID != null)
-                {
-                    hashCode = (hashCode * 59) + this.DeploymentID.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.DeploymentID.GetHashCode();
                 if (this.ID != null)
-                {
-                    hashCode = (hashCode * 59) + this.ID.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.ID.GetHashCode();
                 if (this.JobID != null)
-                {
-                    hashCode = (hashCode * 59) + this.JobID.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.ModifyIndex.GetHashCode();
-                hashCode = (hashCode * 59) + this.ModifyTime.GetHashCode();
+                    hashCode = hashCode * 59 + this.JobID.GetHashCode();
+                hashCode = hashCode * 59 + this.ModifyIndex.GetHashCode();
+                hashCode = hashCode * 59 + this.ModifyTime.GetHashCode();
                 if (this.Namespace != null)
-                {
-                    hashCode = (hashCode * 59) + this.Namespace.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.Namespace.GetHashCode();
                 if (this.NextEval != null)
-                {
-                    hashCode = (hashCode * 59) + this.NextEval.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.NextEval.GetHashCode();
                 if (this.NodeID != null)
-                {
-                    hashCode = (hashCode * 59) + this.NodeID.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.NodeID.GetHashCode();
                 if (this.PreviousEval != null)
-                {
-                    hashCode = (hashCode * 59) + this.PreviousEval.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.Priority.GetHashCode();
+                    hashCode = hashCode * 59 + this.PreviousEval.GetHashCode();
+                hashCode = hashCode * 59 + this.Priority.GetHashCode();
                 if (this.Status != null)
-                {
-                    hashCode = (hashCode * 59) + this.Status.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.Status.GetHashCode();
                 if (this.StatusDescription != null)
-                {
-                    hashCode = (hashCode * 59) + this.StatusDescription.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.StatusDescription.GetHashCode();
                 if (this.TriggeredBy != null)
-                {
-                    hashCode = (hashCode * 59) + this.TriggeredBy.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.TriggeredBy.GetHashCode();
                 if (this.Type != null)
-                {
-                    hashCode = (hashCode * 59) + this.Type.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.Type.GetHashCode();
                 if (this.WaitUntil != null)
-                {
-                    hashCode = (hashCode * 59) + this.WaitUntil.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.WaitUntil.GetHashCode();
                 return hashCode;
             }
         }
@@ -406,28 +379,28 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // CreateIndex (int) maximum
-            if (this.CreateIndex > (int)384)
+            if(this.CreateIndex > (int)384)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for CreateIndex, must be a value less than or equal to 384.", new [] { "CreateIndex" });
             }
 
             // CreateIndex (int) minimum
-            if (this.CreateIndex < (int)0)
+            if(this.CreateIndex < (int)0)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for CreateIndex, must be a value greater than or equal to 0.", new [] { "CreateIndex" });
             }
 
             // ModifyIndex (int) maximum
-            if (this.ModifyIndex > (int)384)
+            if(this.ModifyIndex > (int)384)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ModifyIndex, must be a value less than or equal to 384.", new [] { "ModifyIndex" });
             }
 
             // ModifyIndex (int) minimum
-            if (this.ModifyIndex < (int)0)
+            if(this.ModifyIndex < (int)0)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ModifyIndex, must be a value greater than or equal to 0.", new [] { "ModifyIndex" });
             }

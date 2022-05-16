@@ -110,7 +110,7 @@ namespace Fermyon.Nomad.Model
             this.Update = update;
             this.VaultNamespace = vaultNamespace;
             this.VaultToken = vaultToken;
-            this._Version = version;
+            this.Version = version;
         }
 
         /// <summary>
@@ -330,10 +330,10 @@ namespace Fermyon.Nomad.Model
         public string VaultToken { get; set; }
 
         /// <summary>
-        /// Gets or Sets _Version
+        /// Gets or Sets Version
         /// </summary>
         [DataMember(Name = "Version", EmitDefaultValue = false)]
-        public int _Version { get; set; }
+        public int Version { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -341,7 +341,7 @@ namespace Fermyon.Nomad.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            StringBuilder sb = new StringBuilder();
+            var sb = new StringBuilder();
             sb.Append("class Job {\n");
             sb.Append("  Affinities: ").Append(Affinities).Append("\n");
             sb.Append("  AllAtOnce: ").Append(AllAtOnce).Append("\n");
@@ -379,7 +379,7 @@ namespace Fermyon.Nomad.Model
             sb.Append("  Update: ").Append(Update).Append("\n");
             sb.Append("  VaultNamespace: ").Append(VaultNamespace).Append("\n");
             sb.Append("  VaultToken: ").Append(VaultToken).Append("\n");
-            sb.Append("  _Version: ").Append(_Version).Append("\n");
+            sb.Append("  Version: ").Append(Version).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -411,9 +411,8 @@ namespace Fermyon.Nomad.Model
         public bool Equals(Job input)
         {
             if (input == null)
-            {
                 return false;
-            }
+
             return 
                 (
                     this.Affinities == input.Affinities ||
@@ -593,8 +592,8 @@ namespace Fermyon.Nomad.Model
                     this.VaultToken.Equals(input.VaultToken))
                 ) && 
                 (
-                    this._Version == input._Version ||
-                    this._Version.Equals(input._Version)
+                    this.Version == input.Version ||
+                    this.Version.Equals(input.Version)
                 );
         }
 
@@ -608,123 +607,69 @@ namespace Fermyon.Nomad.Model
             {
                 int hashCode = 41;
                 if (this.Affinities != null)
-                {
-                    hashCode = (hashCode * 59) + this.Affinities.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.AllAtOnce.GetHashCode();
+                    hashCode = hashCode * 59 + this.Affinities.GetHashCode();
+                hashCode = hashCode * 59 + this.AllAtOnce.GetHashCode();
                 if (this.Constraints != null)
-                {
-                    hashCode = (hashCode * 59) + this.Constraints.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.Constraints.GetHashCode();
                 if (this.ConsulNamespace != null)
-                {
-                    hashCode = (hashCode * 59) + this.ConsulNamespace.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.ConsulNamespace.GetHashCode();
                 if (this.ConsulToken != null)
-                {
-                    hashCode = (hashCode * 59) + this.ConsulToken.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.CreateIndex.GetHashCode();
+                    hashCode = hashCode * 59 + this.ConsulToken.GetHashCode();
+                hashCode = hashCode * 59 + this.CreateIndex.GetHashCode();
                 if (this.Datacenters != null)
-                {
-                    hashCode = (hashCode * 59) + this.Datacenters.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.Datacenters.GetHashCode();
                 if (this.DispatchIdempotencyToken != null)
-                {
-                    hashCode = (hashCode * 59) + this.DispatchIdempotencyToken.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.Dispatched.GetHashCode();
+                    hashCode = hashCode * 59 + this.DispatchIdempotencyToken.GetHashCode();
+                hashCode = hashCode * 59 + this.Dispatched.GetHashCode();
                 if (this.ID != null)
-                {
-                    hashCode = (hashCode * 59) + this.ID.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.JobModifyIndex.GetHashCode();
+                    hashCode = hashCode * 59 + this.ID.GetHashCode();
+                hashCode = hashCode * 59 + this.JobModifyIndex.GetHashCode();
                 if (this.Meta != null)
-                {
-                    hashCode = (hashCode * 59) + this.Meta.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.Meta.GetHashCode();
                 if (this.Migrate != null)
-                {
-                    hashCode = (hashCode * 59) + this.Migrate.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.ModifyIndex.GetHashCode();
+                    hashCode = hashCode * 59 + this.Migrate.GetHashCode();
+                hashCode = hashCode * 59 + this.ModifyIndex.GetHashCode();
                 if (this.Multiregion != null)
-                {
-                    hashCode = (hashCode * 59) + this.Multiregion.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.Multiregion.GetHashCode();
                 if (this.Name != null)
-                {
-                    hashCode = (hashCode * 59) + this.Name.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.Name.GetHashCode();
                 if (this.Namespace != null)
-                {
-                    hashCode = (hashCode * 59) + this.Namespace.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.Namespace.GetHashCode();
                 if (this.NomadTokenID != null)
-                {
-                    hashCode = (hashCode * 59) + this.NomadTokenID.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.NomadTokenID.GetHashCode();
                 if (this.ParameterizedJob != null)
-                {
-                    hashCode = (hashCode * 59) + this.ParameterizedJob.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.ParameterizedJob.GetHashCode();
                 if (this.ParentID != null)
-                {
-                    hashCode = (hashCode * 59) + this.ParentID.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.ParentID.GetHashCode();
                 if (this.Payload != null)
-                {
-                    hashCode = (hashCode * 59) + this.Payload.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.Payload.GetHashCode();
                 if (this.Periodic != null)
-                {
-                    hashCode = (hashCode * 59) + this.Periodic.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.Priority.GetHashCode();
+                    hashCode = hashCode * 59 + this.Periodic.GetHashCode();
+                hashCode = hashCode * 59 + this.Priority.GetHashCode();
                 if (this.Region != null)
-                {
-                    hashCode = (hashCode * 59) + this.Region.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.Region.GetHashCode();
                 if (this.Reschedule != null)
-                {
-                    hashCode = (hashCode * 59) + this.Reschedule.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.Reschedule.GetHashCode();
                 if (this.Spreads != null)
-                {
-                    hashCode = (hashCode * 59) + this.Spreads.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.Stable.GetHashCode();
+                    hashCode = hashCode * 59 + this.Spreads.GetHashCode();
+                hashCode = hashCode * 59 + this.Stable.GetHashCode();
                 if (this.Status != null)
-                {
-                    hashCode = (hashCode * 59) + this.Status.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.Status.GetHashCode();
                 if (this.StatusDescription != null)
-                {
-                    hashCode = (hashCode * 59) + this.StatusDescription.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.Stop.GetHashCode();
-                hashCode = (hashCode * 59) + this.SubmitTime.GetHashCode();
+                    hashCode = hashCode * 59 + this.StatusDescription.GetHashCode();
+                hashCode = hashCode * 59 + this.Stop.GetHashCode();
+                hashCode = hashCode * 59 + this.SubmitTime.GetHashCode();
                 if (this.TaskGroups != null)
-                {
-                    hashCode = (hashCode * 59) + this.TaskGroups.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.TaskGroups.GetHashCode();
                 if (this.Type != null)
-                {
-                    hashCode = (hashCode * 59) + this.Type.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.Type.GetHashCode();
                 if (this.Update != null)
-                {
-                    hashCode = (hashCode * 59) + this.Update.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.Update.GetHashCode();
                 if (this.VaultNamespace != null)
-                {
-                    hashCode = (hashCode * 59) + this.VaultNamespace.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.VaultNamespace.GetHashCode();
                 if (this.VaultToken != null)
-                {
-                    hashCode = (hashCode * 59) + this.VaultToken.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this._Version.GetHashCode();
+                    hashCode = hashCode * 59 + this.VaultToken.GetHashCode();
+                hashCode = hashCode * 59 + this.Version.GetHashCode();
                 return hashCode;
             }
         }
@@ -734,54 +679,54 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // CreateIndex (int) maximum
-            if (this.CreateIndex > (int)384)
+            if(this.CreateIndex > (int)384)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for CreateIndex, must be a value less than or equal to 384.", new [] { "CreateIndex" });
             }
 
             // CreateIndex (int) minimum
-            if (this.CreateIndex < (int)0)
+            if(this.CreateIndex < (int)0)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for CreateIndex, must be a value greater than or equal to 0.", new [] { "CreateIndex" });
             }
 
             // JobModifyIndex (int) maximum
-            if (this.JobModifyIndex > (int)384)
+            if(this.JobModifyIndex > (int)384)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for JobModifyIndex, must be a value less than or equal to 384.", new [] { "JobModifyIndex" });
             }
 
             // JobModifyIndex (int) minimum
-            if (this.JobModifyIndex < (int)0)
+            if(this.JobModifyIndex < (int)0)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for JobModifyIndex, must be a value greater than or equal to 0.", new [] { "JobModifyIndex" });
             }
 
             // ModifyIndex (int) maximum
-            if (this.ModifyIndex > (int)384)
+            if(this.ModifyIndex > (int)384)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ModifyIndex, must be a value less than or equal to 384.", new [] { "ModifyIndex" });
             }
 
             // ModifyIndex (int) minimum
-            if (this.ModifyIndex < (int)0)
+            if(this.ModifyIndex < (int)0)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ModifyIndex, must be a value greater than or equal to 0.", new [] { "ModifyIndex" });
             }
 
-            // _Version (int) maximum
-            if (this._Version > (int)384)
+            // Version (int) maximum
+            if(this.Version > (int)384)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for _Version, must be a value less than or equal to 384.", new [] { "_Version" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Version, must be a value less than or equal to 384.", new [] { "Version" });
             }
 
-            // _Version (int) minimum
-            if (this._Version < (int)0)
+            // Version (int) minimum
+            if(this.Version < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for _Version, must be a value greater than or equal to 0.", new [] { "_Version" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Version, must be a value greater than or equal to 0.", new [] { "Version" });
             }
 
             yield break;

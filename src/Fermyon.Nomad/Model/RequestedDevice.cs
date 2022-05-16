@@ -77,7 +77,7 @@ namespace Fermyon.Nomad.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            StringBuilder sb = new StringBuilder();
+            var sb = new StringBuilder();
             sb.Append("class RequestedDevice {\n");
             sb.Append("  Affinities: ").Append(Affinities).Append("\n");
             sb.Append("  Constraints: ").Append(Constraints).Append("\n");
@@ -114,9 +114,8 @@ namespace Fermyon.Nomad.Model
         public bool Equals(RequestedDevice input)
         {
             if (input == null)
-            {
                 return false;
-            }
+
             return 
                 (
                     this.Affinities == input.Affinities ||
@@ -151,18 +150,12 @@ namespace Fermyon.Nomad.Model
             {
                 int hashCode = 41;
                 if (this.Affinities != null)
-                {
-                    hashCode = (hashCode * 59) + this.Affinities.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.Affinities.GetHashCode();
                 if (this.Constraints != null)
-                {
-                    hashCode = (hashCode * 59) + this.Constraints.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.Count.GetHashCode();
+                    hashCode = hashCode * 59 + this.Constraints.GetHashCode();
+                hashCode = hashCode * 59 + this.Count.GetHashCode();
                 if (this.Name != null)
-                {
-                    hashCode = (hashCode * 59) + this.Name.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.Name.GetHashCode();
                 return hashCode;
             }
         }
@@ -172,16 +165,16 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // Count (int) maximum
-            if (this.Count > (int)384)
+            if(this.Count > (int)384)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Count, must be a value less than or equal to 384.", new [] { "Count" });
             }
 
             // Count (int) minimum
-            if (this.Count < (int)0)
+            if(this.Count < (int)0)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Count, must be a value greater than or equal to 0.", new [] { "Count" });
             }

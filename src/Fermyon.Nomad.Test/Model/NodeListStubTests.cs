@@ -66,6 +66,14 @@ namespace Fermyon.Nomad.Test.Model
             // TODO unit test for the property 'Address'
         }
         /// <summary>
+        /// Test the property 'Attributes'
+        /// </summary>
+        [Fact]
+        public void AttributesTest()
+        {
+            // TODO unit test for the property 'Attributes'
+        }
+        /// <summary>
         /// Test the property 'CreateIndex'
         /// </summary>
         [Fact]
@@ -178,12 +186,12 @@ namespace Fermyon.Nomad.Test.Model
             // TODO unit test for the property 'StatusDescription'
         }
         /// <summary>
-        /// Test the property '_Version'
+        /// Test the property 'Version'
         /// </summary>
         [Fact]
-        public void _VersionTest()
+        public void VersionTest()
         {
-            // TODO unit test for the property '_Version'
+            // TODO unit test for the property 'Version'
         }
 
     }

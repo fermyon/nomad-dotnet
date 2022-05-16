@@ -125,7 +125,7 @@ namespace Fermyon.Nomad.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            StringBuilder sb = new StringBuilder();
+            var sb = new StringBuilder();
             sb.Append("class ScalingPolicy {\n");
             sb.Append("  CreateIndex: ").Append(CreateIndex).Append("\n");
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
@@ -168,9 +168,8 @@ namespace Fermyon.Nomad.Model
         public bool Equals(ScalingPolicy input)
         {
             if (input == null)
-            {
                 return false;
-            }
+
             return 
                 (
                     this.CreateIndex == input.CreateIndex ||
@@ -230,31 +229,21 @@ namespace Fermyon.Nomad.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                hashCode = (hashCode * 59) + this.CreateIndex.GetHashCode();
-                hashCode = (hashCode * 59) + this.Enabled.GetHashCode();
+                hashCode = hashCode * 59 + this.CreateIndex.GetHashCode();
+                hashCode = hashCode * 59 + this.Enabled.GetHashCode();
                 if (this.ID != null)
-                {
-                    hashCode = (hashCode * 59) + this.ID.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.Max.GetHashCode();
-                hashCode = (hashCode * 59) + this.Min.GetHashCode();
-                hashCode = (hashCode * 59) + this.ModifyIndex.GetHashCode();
+                    hashCode = hashCode * 59 + this.ID.GetHashCode();
+                hashCode = hashCode * 59 + this.Max.GetHashCode();
+                hashCode = hashCode * 59 + this.Min.GetHashCode();
+                hashCode = hashCode * 59 + this.ModifyIndex.GetHashCode();
                 if (this.Namespace != null)
-                {
-                    hashCode = (hashCode * 59) + this.Namespace.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.Namespace.GetHashCode();
                 if (this.Policy != null)
-                {
-                    hashCode = (hashCode * 59) + this.Policy.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.Policy.GetHashCode();
                 if (this.Target != null)
-                {
-                    hashCode = (hashCode * 59) + this.Target.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.Target.GetHashCode();
                 if (this.Type != null)
-                {
-                    hashCode = (hashCode * 59) + this.Type.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.Type.GetHashCode();
                 return hashCode;
             }
         }
@@ -264,28 +253,28 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // CreateIndex (int) maximum
-            if (this.CreateIndex > (int)384)
+            if(this.CreateIndex > (int)384)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for CreateIndex, must be a value less than or equal to 384.", new [] { "CreateIndex" });
             }
 
             // CreateIndex (int) minimum
-            if (this.CreateIndex < (int)0)
+            if(this.CreateIndex < (int)0)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for CreateIndex, must be a value greater than or equal to 0.", new [] { "CreateIndex" });
             }
 
             // ModifyIndex (int) maximum
-            if (this.ModifyIndex > (int)384)
+            if(this.ModifyIndex > (int)384)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ModifyIndex, must be a value less than or equal to 384.", new [] { "ModifyIndex" });
             }
 
             // ModifyIndex (int) minimum
-            if (this.ModifyIndex < (int)0)
+            if(this.ModifyIndex < (int)0)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ModifyIndex, must be a value greater than or equal to 0.", new [] { "ModifyIndex" });
             }

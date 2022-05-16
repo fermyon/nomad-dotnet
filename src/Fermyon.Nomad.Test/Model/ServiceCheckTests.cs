@@ -66,6 +66,14 @@ namespace Fermyon.Nomad.Test.Model
             // TODO unit test for the property 'AddressMode'
         }
         /// <summary>
+        /// Test the property 'Advertise'
+        /// </summary>
+        [Fact]
+        public void AdvertiseTest()
+        {
+            // TODO unit test for the property 'Advertise'
+        }
+        /// <summary>
         /// Test the property 'Args'
         /// </summary>
         [Fact]
@@ -136,14 +144,6 @@ namespace Fermyon.Nomad.Test.Model
         public void HeaderTest()
         {
             // TODO unit test for the property 'Header'
-        }
-        /// <summary>
-        /// Test the property 'Id'
-        /// </summary>
-        [Fact]
-        public void IdTest()
-        {
-            // TODO unit test for the property 'Id'
         }
         /// <summary>
         /// Test the property 'InitialStatus'

@@ -61,7 +61,7 @@ namespace Fermyon.Nomad.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            StringBuilder sb = new StringBuilder();
+            var sb = new StringBuilder();
             sb.Append("class CSIVolumeCapability {\n");
             sb.Append("  AccessMode: ").Append(AccessMode).Append("\n");
             sb.Append("  AttachmentMode: ").Append(AttachmentMode).Append("\n");
@@ -96,9 +96,8 @@ namespace Fermyon.Nomad.Model
         public bool Equals(CSIVolumeCapability input)
         {
             if (input == null)
-            {
                 return false;
-            }
+
             return 
                 (
                     this.AccessMode == input.AccessMode ||
@@ -122,13 +121,9 @@ namespace Fermyon.Nomad.Model
             {
                 int hashCode = 41;
                 if (this.AccessMode != null)
-                {
-                    hashCode = (hashCode * 59) + this.AccessMode.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.AccessMode.GetHashCode();
                 if (this.AttachmentMode != null)
-                {
-                    hashCode = (hashCode * 59) + this.AttachmentMode.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.AttachmentMode.GetHashCode();
                 return hashCode;
             }
         }
@@ -138,7 +133,7 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

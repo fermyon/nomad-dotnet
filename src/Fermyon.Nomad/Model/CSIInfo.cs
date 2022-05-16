@@ -117,7 +117,7 @@ namespace Fermyon.Nomad.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            StringBuilder sb = new StringBuilder();
+            var sb = new StringBuilder();
             sb.Append("class CSIInfo {\n");
             sb.Append("  AllocID: ").Append(AllocID).Append("\n");
             sb.Append("  ControllerInfo: ").Append(ControllerInfo).Append("\n");
@@ -159,9 +159,8 @@ namespace Fermyon.Nomad.Model
         public bool Equals(CSIInfo input)
         {
             if (input == null)
-            {
                 return false;
-            }
+
             return 
                 (
                     this.AllocID == input.AllocID ||
@@ -217,32 +216,20 @@ namespace Fermyon.Nomad.Model
             {
                 int hashCode = 41;
                 if (this.AllocID != null)
-                {
-                    hashCode = (hashCode * 59) + this.AllocID.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.AllocID.GetHashCode();
                 if (this.ControllerInfo != null)
-                {
-                    hashCode = (hashCode * 59) + this.ControllerInfo.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.ControllerInfo.GetHashCode();
                 if (this.HealthDescription != null)
-                {
-                    hashCode = (hashCode * 59) + this.HealthDescription.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.Healthy.GetHashCode();
+                    hashCode = hashCode * 59 + this.HealthDescription.GetHashCode();
+                hashCode = hashCode * 59 + this.Healthy.GetHashCode();
                 if (this.NodeInfo != null)
-                {
-                    hashCode = (hashCode * 59) + this.NodeInfo.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.NodeInfo.GetHashCode();
                 if (this.PluginID != null)
-                {
-                    hashCode = (hashCode * 59) + this.PluginID.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.RequiresControllerPlugin.GetHashCode();
-                hashCode = (hashCode * 59) + this.RequiresTopologies.GetHashCode();
+                    hashCode = hashCode * 59 + this.PluginID.GetHashCode();
+                hashCode = hashCode * 59 + this.RequiresControllerPlugin.GetHashCode();
+                hashCode = hashCode * 59 + this.RequiresTopologies.GetHashCode();
                 if (this.UpdateTime != null)
-                {
-                    hashCode = (hashCode * 59) + this.UpdateTime.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.UpdateTime.GetHashCode();
                 return hashCode;
             }
         }
@@ -252,7 +239,7 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

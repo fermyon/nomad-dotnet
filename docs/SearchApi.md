@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 <a name="getfuzzysearch"></a>
 # **GetFuzzySearch**
-> FuzzySearchResponse GetFuzzySearch (FuzzySearchRequest fuzzySearchRequest, string? region = null, string? _namespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null)
+> FuzzySearchResponse GetFuzzySearch (FuzzySearchRequest fuzzySearchRequest, string region = null, string _namespace = null, int? index = null, string wait = null, string stale = null, string prefix = null, string xNomadToken = null, int? perPage = null, string nextToken = null)
 
 
 
@@ -37,15 +37,15 @@ namespace Example
 
             var apiInstance = new SearchApi(config);
             var fuzzySearchRequest = new FuzzySearchRequest(); // FuzzySearchRequest | 
-            var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var region = region_example;  // string | Filters results based on the specified region. (optional) 
+            var _namespace = _namespace_example;  // string | Filters results based on the specified namespace. (optional) 
             var index = 56;  // int? | If set, wait until query exceeds given index. Must be provided with WaitParam. (optional) 
-            var wait = "wait_example";  // string? | Provided with IndexParam to wait for change. (optional) 
-            var stale = "stale_example";  // string? | If present, results will include stale reads. (optional) 
-            var prefix = "prefix_example";  // string? | Constrains results to jobs that start with the defined prefix (optional) 
-            var xNomadToken = "xNomadToken_example";  // string? | A Nomad ACL token. (optional) 
+            var wait = wait_example;  // string | Provided with IndexParam to wait for change. (optional) 
+            var stale = stale_example;  // string | If present, results will include stale reads. (optional) 
+            var prefix = prefix_example;  // string | Constrains results to jobs that start with the defined prefix (optional) 
+            var xNomadToken = xNomadToken_example;  // string | A Nomad ACL token. (optional) 
             var perPage = 56;  // int? | Maximum number of results to return. (optional) 
-            var nextToken = "nextToken_example";  // string? | Indicates where to start paging for queries that support pagination. (optional) 
+            var nextToken = nextToken_example;  // string | Indicates where to start paging for queries that support pagination. (optional) 
 
             try
             {
@@ -68,15 +68,15 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **fuzzySearchRequest** | [**FuzzySearchRequest**](FuzzySearchRequest.md)|  | 
- **region** | **string?**| Filters results based on the specified region. | [optional] 
- **_namespace** | **string?**| Filters results based on the specified namespace. | [optional] 
+ **region** | **string**| Filters results based on the specified region. | [optional] 
+ **_namespace** | **string**| Filters results based on the specified namespace. | [optional] 
  **index** | **int?**| If set, wait until query exceeds given index. Must be provided with WaitParam. | [optional] 
- **wait** | **string?**| Provided with IndexParam to wait for change. | [optional] 
- **stale** | **string?**| If present, results will include stale reads. | [optional] 
- **prefix** | **string?**| Constrains results to jobs that start with the defined prefix | [optional] 
- **xNomadToken** | **string?**| A Nomad ACL token. | [optional] 
+ **wait** | **string**| Provided with IndexParam to wait for change. | [optional] 
+ **stale** | **string**| If present, results will include stale reads. | [optional] 
+ **prefix** | **string**| Constrains results to jobs that start with the defined prefix | [optional] 
+ **xNomadToken** | **string**| A Nomad ACL token. | [optional] 
  **perPage** | **int?**| Maximum number of results to return. | [optional] 
- **nextToken** | **string?**| Indicates where to start paging for queries that support pagination. | [optional] 
+ **nextToken** | **string**| Indicates where to start paging for queries that support pagination. | [optional] 
 
 ### Return type
 
@@ -105,7 +105,7 @@ Name | Type | Description  | Notes
 
 <a name="getsearch"></a>
 # **GetSearch**
-> SearchResponse GetSearch (SearchRequest searchRequest, string? region = null, string? _namespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null)
+> SearchResponse GetSearch (SearchRequest searchRequest, string region = null, string _namespace = null, int? index = null, string wait = null, string stale = null, string prefix = null, string xNomadToken = null, int? perPage = null, string nextToken = null)
 
 
 
@@ -132,15 +132,15 @@ namespace Example
 
             var apiInstance = new SearchApi(config);
             var searchRequest = new SearchRequest(); // SearchRequest | 
-            var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var region = region_example;  // string | Filters results based on the specified region. (optional) 
+            var _namespace = _namespace_example;  // string | Filters results based on the specified namespace. (optional) 
             var index = 56;  // int? | If set, wait until query exceeds given index. Must be provided with WaitParam. (optional) 
-            var wait = "wait_example";  // string? | Provided with IndexParam to wait for change. (optional) 
-            var stale = "stale_example";  // string? | If present, results will include stale reads. (optional) 
-            var prefix = "prefix_example";  // string? | Constrains results to jobs that start with the defined prefix (optional) 
-            var xNomadToken = "xNomadToken_example";  // string? | A Nomad ACL token. (optional) 
+            var wait = wait_example;  // string | Provided with IndexParam to wait for change. (optional) 
+            var stale = stale_example;  // string | If present, results will include stale reads. (optional) 
+            var prefix = prefix_example;  // string | Constrains results to jobs that start with the defined prefix (optional) 
+            var xNomadToken = xNomadToken_example;  // string | A Nomad ACL token. (optional) 
             var perPage = 56;  // int? | Maximum number of results to return. (optional) 
-            var nextToken = "nextToken_example";  // string? | Indicates where to start paging for queries that support pagination. (optional) 
+            var nextToken = nextToken_example;  // string | Indicates where to start paging for queries that support pagination. (optional) 
 
             try
             {
@@ -163,15 +163,15 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **searchRequest** | [**SearchRequest**](SearchRequest.md)|  | 
- **region** | **string?**| Filters results based on the specified region. | [optional] 
- **_namespace** | **string?**| Filters results based on the specified namespace. | [optional] 
+ **region** | **string**| Filters results based on the specified region. | [optional] 
+ **_namespace** | **string**| Filters results based on the specified namespace. | [optional] 
  **index** | **int?**| If set, wait until query exceeds given index. Must be provided with WaitParam. | [optional] 
- **wait** | **string?**| Provided with IndexParam to wait for change. | [optional] 
- **stale** | **string?**| If present, results will include stale reads. | [optional] 
- **prefix** | **string?**| Constrains results to jobs that start with the defined prefix | [optional] 
- **xNomadToken** | **string?**| A Nomad ACL token. | [optional] 
+ **wait** | **string**| Provided with IndexParam to wait for change. | [optional] 
+ **stale** | **string**| If present, results will include stale reads. | [optional] 
+ **prefix** | **string**| Constrains results to jobs that start with the defined prefix | [optional] 
+ **xNomadToken** | **string**| A Nomad ACL token. | [optional] 
  **perPage** | **int?**| Maximum number of results to return. | [optional] 
- **nextToken** | **string?**| Indicates where to start paging for queries that support pagination. | [optional] 
+ **nextToken** | **string**| Indicates where to start paging for queries that support pagination. | [optional] 
 
 ### Return type
 

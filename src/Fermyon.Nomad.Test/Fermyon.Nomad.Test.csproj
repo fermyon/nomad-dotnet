@@ -5,7 +5,6 @@
     <RootNamespace>Fermyon.Nomad.Test</RootNamespace>
     <TargetFramework>net6.0</TargetFramework>
     <IsPackable>false</IsPackable>
-    <Nullable>annotations</Nullable>
   </PropertyGroup>
 
   <ItemGroup>

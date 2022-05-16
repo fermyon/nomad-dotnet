@@ -69,7 +69,7 @@ namespace Fermyon.Nomad.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            StringBuilder sb = new StringBuilder();
+            var sb = new StringBuilder();
             sb.Append("class ParameterizedJobConfig {\n");
             sb.Append("  MetaOptional: ").Append(MetaOptional).Append("\n");
             sb.Append("  MetaRequired: ").Append(MetaRequired).Append("\n");
@@ -105,9 +105,8 @@ namespace Fermyon.Nomad.Model
         public bool Equals(ParameterizedJobConfig input)
         {
             if (input == null)
-            {
                 return false;
-            }
+
             return 
                 (
                     this.MetaOptional == input.MetaOptional ||
@@ -138,17 +137,11 @@ namespace Fermyon.Nomad.Model
             {
                 int hashCode = 41;
                 if (this.MetaOptional != null)
-                {
-                    hashCode = (hashCode * 59) + this.MetaOptional.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.MetaOptional.GetHashCode();
                 if (this.MetaRequired != null)
-                {
-                    hashCode = (hashCode * 59) + this.MetaRequired.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.MetaRequired.GetHashCode();
                 if (this.Payload != null)
-                {
-                    hashCode = (hashCode * 59) + this.Payload.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.Payload.GetHashCode();
                 return hashCode;
             }
         }
@@ -158,7 +151,7 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

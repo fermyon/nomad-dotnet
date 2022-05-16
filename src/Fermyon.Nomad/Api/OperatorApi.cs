@@ -35,9 +35,8 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns></returns>
-        void DeleteOperatorRaftPeer(string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0);
+        void DeleteOperatorRaftPeer(string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string));
 
         /// <summary>
         /// 
@@ -50,9 +49,8 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteOperatorRaftPeerWithHttpInfo(string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0);
+        ApiResponse<Object> DeleteOperatorRaftPeerWithHttpInfo(string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string));
         /// <summary>
         /// 
         /// </summary>
@@ -66,9 +64,8 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AutopilotConfiguration</returns>
-        AutopilotConfiguration GetOperatorAutopilotConfiguration(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0);
+        AutopilotConfiguration GetOperatorAutopilotConfiguration(string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string));
 
         /// <summary>
         /// 
@@ -86,9 +83,8 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AutopilotConfiguration</returns>
-        ApiResponse<AutopilotConfiguration> GetOperatorAutopilotConfigurationWithHttpInfo(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0);
+        ApiResponse<AutopilotConfiguration> GetOperatorAutopilotConfigurationWithHttpInfo(string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string));
         /// <summary>
         /// 
         /// </summary>
@@ -102,9 +98,8 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>OperatorHealthReply</returns>
-        OperatorHealthReply GetOperatorAutopilotHealth(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0);
+        OperatorHealthReply GetOperatorAutopilotHealth(string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string));
 
         /// <summary>
         /// 
@@ -122,9 +117,8 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of OperatorHealthReply</returns>
-        ApiResponse<OperatorHealthReply> GetOperatorAutopilotHealthWithHttpInfo(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0);
+        ApiResponse<OperatorHealthReply> GetOperatorAutopilotHealthWithHttpInfo(string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string));
         /// <summary>
         /// 
         /// </summary>
@@ -138,9 +132,8 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>RaftConfiguration</returns>
-        RaftConfiguration GetOperatorRaftConfiguration(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0);
+        RaftConfiguration GetOperatorRaftConfiguration(string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string));
 
         /// <summary>
         /// 
@@ -158,9 +151,8 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of RaftConfiguration</returns>
-        ApiResponse<RaftConfiguration> GetOperatorRaftConfigurationWithHttpInfo(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0);
+        ApiResponse<RaftConfiguration> GetOperatorRaftConfigurationWithHttpInfo(string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string));
         /// <summary>
         /// 
         /// </summary>
@@ -174,9 +166,8 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>SchedulerConfigurationResponse</returns>
-        SchedulerConfigurationResponse GetOperatorSchedulerConfiguration(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0);
+        SchedulerConfigurationResponse GetOperatorSchedulerConfiguration(string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string));
 
         /// <summary>
         /// 
@@ -194,9 +185,8 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of SchedulerConfigurationResponse</returns>
-        ApiResponse<SchedulerConfigurationResponse> GetOperatorSchedulerConfigurationWithHttpInfo(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0);
+        ApiResponse<SchedulerConfigurationResponse> GetOperatorSchedulerConfigurationWithHttpInfo(string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string));
         /// <summary>
         /// 
         /// </summary>
@@ -206,9 +196,8 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>SchedulerSetConfigurationResponse</returns>
-        SchedulerSetConfigurationResponse PostOperatorSchedulerConfiguration(SchedulerConfiguration schedulerConfiguration, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0);
+        SchedulerSetConfigurationResponse PostOperatorSchedulerConfiguration(SchedulerConfiguration schedulerConfiguration, string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string));
 
         /// <summary>
         /// 
@@ -222,9 +211,8 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of SchedulerSetConfigurationResponse</returns>
-        ApiResponse<SchedulerSetConfigurationResponse> PostOperatorSchedulerConfigurationWithHttpInfo(SchedulerConfiguration schedulerConfiguration, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0);
+        ApiResponse<SchedulerSetConfigurationResponse> PostOperatorSchedulerConfigurationWithHttpInfo(SchedulerConfiguration schedulerConfiguration, string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string));
         /// <summary>
         /// 
         /// </summary>
@@ -234,9 +222,8 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>bool</returns>
-        bool PutOperatorAutopilotConfiguration(AutopilotConfiguration autopilotConfiguration, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0);
+        bool PutOperatorAutopilotConfiguration(AutopilotConfiguration autopilotConfiguration, string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string));
 
         /// <summary>
         /// 
@@ -250,9 +237,8 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of bool</returns>
-        ApiResponse<bool> PutOperatorAutopilotConfigurationWithHttpInfo(AutopilotConfiguration autopilotConfiguration, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0);
+        ApiResponse<bool> PutOperatorAutopilotConfigurationWithHttpInfo(AutopilotConfiguration autopilotConfiguration, string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string));
         #endregion Synchronous Operations
     }
 
@@ -273,10 +259,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeleteOperatorRaftPeerAsync(string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task DeleteOperatorRaftPeerAsync(string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -289,10 +274,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOperatorRaftPeerWithHttpInfoAsync(string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOperatorRaftPeerWithHttpInfoAsync(string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -309,10 +293,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AutopilotConfiguration</returns>
-        System.Threading.Tasks.Task<AutopilotConfiguration> GetOperatorAutopilotConfigurationAsync(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AutopilotConfiguration> GetOperatorAutopilotConfigurationAsync(string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -330,10 +313,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AutopilotConfiguration)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AutopilotConfiguration>> GetOperatorAutopilotConfigurationWithHttpInfoAsync(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<AutopilotConfiguration>> GetOperatorAutopilotConfigurationWithHttpInfoAsync(string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -350,10 +332,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OperatorHealthReply</returns>
-        System.Threading.Tasks.Task<OperatorHealthReply> GetOperatorAutopilotHealthAsync(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<OperatorHealthReply> GetOperatorAutopilotHealthAsync(string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -371,10 +352,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OperatorHealthReply)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OperatorHealthReply>> GetOperatorAutopilotHealthWithHttpInfoAsync(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<OperatorHealthReply>> GetOperatorAutopilotHealthWithHttpInfoAsync(string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -391,10 +371,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RaftConfiguration</returns>
-        System.Threading.Tasks.Task<RaftConfiguration> GetOperatorRaftConfigurationAsync(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<RaftConfiguration> GetOperatorRaftConfigurationAsync(string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -412,10 +391,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RaftConfiguration)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RaftConfiguration>> GetOperatorRaftConfigurationWithHttpInfoAsync(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<RaftConfiguration>> GetOperatorRaftConfigurationWithHttpInfoAsync(string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -432,10 +410,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of SchedulerConfigurationResponse</returns>
-        System.Threading.Tasks.Task<SchedulerConfigurationResponse> GetOperatorSchedulerConfigurationAsync(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<SchedulerConfigurationResponse> GetOperatorSchedulerConfigurationAsync(string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -453,10 +430,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (SchedulerConfigurationResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SchedulerConfigurationResponse>> GetOperatorSchedulerConfigurationWithHttpInfoAsync(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<SchedulerConfigurationResponse>> GetOperatorSchedulerConfigurationWithHttpInfoAsync(string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -469,10 +445,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of SchedulerSetConfigurationResponse</returns>
-        System.Threading.Tasks.Task<SchedulerSetConfigurationResponse> PostOperatorSchedulerConfigurationAsync(SchedulerConfiguration schedulerConfiguration, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<SchedulerSetConfigurationResponse> PostOperatorSchedulerConfigurationAsync(SchedulerConfiguration schedulerConfiguration, string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -486,10 +461,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (SchedulerSetConfigurationResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SchedulerSetConfigurationResponse>> PostOperatorSchedulerConfigurationWithHttpInfoAsync(SchedulerConfiguration schedulerConfiguration, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<SchedulerSetConfigurationResponse>> PostOperatorSchedulerConfigurationWithHttpInfoAsync(SchedulerConfiguration schedulerConfiguration, string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -502,10 +476,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of bool</returns>
-        System.Threading.Tasks.Task<bool> PutOperatorAutopilotConfigurationAsync(AutopilotConfiguration autopilotConfiguration, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<bool> PutOperatorAutopilotConfigurationAsync(AutopilotConfiguration autopilotConfiguration, string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -519,10 +492,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (bool)</returns>
-        System.Threading.Tasks.Task<ApiResponse<bool>> PutOperatorAutopilotConfigurationWithHttpInfoAsync(AutopilotConfiguration autopilotConfiguration, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<bool>> PutOperatorAutopilotConfigurationWithHttpInfoAsync(AutopilotConfiguration autopilotConfiguration, string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -651,9 +623,8 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns></returns>
-        public void DeleteOperatorRaftPeer(string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0)
+        public void DeleteOperatorRaftPeer(string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string))
         {
             DeleteOperatorRaftPeerWithHttpInfo(region, _namespace, xNomadToken, idempotencyToken);
         }
@@ -666,9 +637,8 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Fermyon.Nomad.Client.ApiResponse<Object> DeleteOperatorRaftPeerWithHttpInfo(string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0)
+        public Fermyon.Nomad.Client.ApiResponse<Object> DeleteOperatorRaftPeerWithHttpInfo(string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string))
         {
             Fermyon.Nomad.Client.RequestOptions localVarRequestOptions = new Fermyon.Nomad.Client.RequestOptions();
 
@@ -680,16 +650,10 @@ namespace Fermyon.Nomad.Api
             };
 
             var localVarContentType = Fermyon.Nomad.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Fermyon.Nomad.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             if (region != null)
             {
@@ -708,9 +672,6 @@ namespace Fermyon.Nomad.Api
                 localVarRequestOptions.HeaderParameters.Add("X-Nomad-Token", Fermyon.Nomad.Client.ClientUtils.ParameterToString(xNomadToken)); // header parameter
             }
 
-            localVarRequestOptions.Operation = "OperatorApi.DeleteOperatorRaftPeer";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
             // authentication (X-Nomad-Token) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("X-Nomad-Token")))
             {
@@ -719,13 +680,11 @@ namespace Fermyon.Nomad.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Delete<Object>("/operator/raft/peer", localVarRequestOptions, this.Configuration);
+
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("DeleteOperatorRaftPeer", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -739,12 +698,11 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteOperatorRaftPeerAsync(string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task DeleteOperatorRaftPeerAsync(string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            await DeleteOperatorRaftPeerWithHttpInfoAsync(region, _namespace, xNomadToken, idempotencyToken, operationIndex, cancellationToken).ConfigureAwait(false);
+            await DeleteOperatorRaftPeerWithHttpInfoAsync(region, _namespace, xNomadToken, idempotencyToken, cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -755,10 +713,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<Object>> DeleteOperatorRaftPeerWithHttpInfoAsync(string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<Object>> DeleteOperatorRaftPeerWithHttpInfoAsync(string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             Fermyon.Nomad.Client.RequestOptions localVarRequestOptions = new Fermyon.Nomad.Client.RequestOptions();
@@ -770,17 +727,12 @@ namespace Fermyon.Nomad.Api
             string[] _accepts = new string[] {
             };
 
+
             var localVarContentType = Fermyon.Nomad.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Fermyon.Nomad.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             if (region != null)
             {
@@ -799,9 +751,6 @@ namespace Fermyon.Nomad.Api
                 localVarRequestOptions.HeaderParameters.Add("X-Nomad-Token", Fermyon.Nomad.Client.ClientUtils.ParameterToString(xNomadToken)); // header parameter
             }
 
-            localVarRequestOptions.Operation = "OperatorApi.DeleteOperatorRaftPeer";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
             // authentication (X-Nomad-Token) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("X-Nomad-Token")))
             {
@@ -809,15 +758,13 @@ namespace Fermyon.Nomad.Api
             }
 
             // make the HTTP request
+
             var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/operator/raft/peer", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("DeleteOperatorRaftPeer", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -836,9 +783,8 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AutopilotConfiguration</returns>
-        public AutopilotConfiguration GetOperatorAutopilotConfiguration(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0)
+        public AutopilotConfiguration GetOperatorAutopilotConfiguration(string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string))
         {
             Fermyon.Nomad.Client.ApiResponse<AutopilotConfiguration> localVarResponse = GetOperatorAutopilotConfigurationWithHttpInfo(region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
             return localVarResponse.Data;
@@ -857,9 +803,8 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AutopilotConfiguration</returns>
-        public Fermyon.Nomad.Client.ApiResponse<AutopilotConfiguration> GetOperatorAutopilotConfigurationWithHttpInfo(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0)
+        public Fermyon.Nomad.Client.ApiResponse<AutopilotConfiguration> GetOperatorAutopilotConfigurationWithHttpInfo(string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string))
         {
             Fermyon.Nomad.Client.RequestOptions localVarRequestOptions = new Fermyon.Nomad.Client.RequestOptions();
 
@@ -872,16 +817,10 @@ namespace Fermyon.Nomad.Api
             };
 
             var localVarContentType = Fermyon.Nomad.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Fermyon.Nomad.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             if (region != null)
             {
@@ -920,9 +859,6 @@ namespace Fermyon.Nomad.Api
                 localVarRequestOptions.HeaderParameters.Add("X-Nomad-Token", Fermyon.Nomad.Client.ClientUtils.ParameterToString(xNomadToken)); // header parameter
             }
 
-            localVarRequestOptions.Operation = "OperatorApi.GetOperatorAutopilotConfiguration";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
             // authentication (X-Nomad-Token) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("X-Nomad-Token")))
             {
@@ -931,13 +867,11 @@ namespace Fermyon.Nomad.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<AutopilotConfiguration>("/operator/autopilot/configuration", localVarRequestOptions, this.Configuration);
+
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("GetOperatorAutopilotConfiguration", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -956,12 +890,11 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AutopilotConfiguration</returns>
-        public async System.Threading.Tasks.Task<AutopilotConfiguration> GetOperatorAutopilotConfigurationAsync(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AutopilotConfiguration> GetOperatorAutopilotConfigurationAsync(string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Fermyon.Nomad.Client.ApiResponse<AutopilotConfiguration> localVarResponse = await GetOperatorAutopilotConfigurationWithHttpInfoAsync(region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, operationIndex, cancellationToken).ConfigureAwait(false);
+            Fermyon.Nomad.Client.ApiResponse<AutopilotConfiguration> localVarResponse = await GetOperatorAutopilotConfigurationWithHttpInfoAsync(region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -978,10 +911,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AutopilotConfiguration)</returns>
-        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<AutopilotConfiguration>> GetOperatorAutopilotConfigurationWithHttpInfoAsync(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<AutopilotConfiguration>> GetOperatorAutopilotConfigurationWithHttpInfoAsync(string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             Fermyon.Nomad.Client.RequestOptions localVarRequestOptions = new Fermyon.Nomad.Client.RequestOptions();
@@ -994,17 +926,12 @@ namespace Fermyon.Nomad.Api
                 "application/json"
             };
 
+
             var localVarContentType = Fermyon.Nomad.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Fermyon.Nomad.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             if (region != null)
             {
@@ -1043,9 +970,6 @@ namespace Fermyon.Nomad.Api
                 localVarRequestOptions.HeaderParameters.Add("X-Nomad-Token", Fermyon.Nomad.Client.ClientUtils.ParameterToString(xNomadToken)); // header parameter
             }
 
-            localVarRequestOptions.Operation = "OperatorApi.GetOperatorAutopilotConfiguration";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
             // authentication (X-Nomad-Token) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("X-Nomad-Token")))
             {
@@ -1053,15 +977,13 @@ namespace Fermyon.Nomad.Api
             }
 
             // make the HTTP request
+
             var localVarResponse = await this.AsynchronousClient.GetAsync<AutopilotConfiguration>("/operator/autopilot/configuration", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("GetOperatorAutopilotConfiguration", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -1080,9 +1002,8 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>OperatorHealthReply</returns>
-        public OperatorHealthReply GetOperatorAutopilotHealth(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0)
+        public OperatorHealthReply GetOperatorAutopilotHealth(string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string))
         {
             Fermyon.Nomad.Client.ApiResponse<OperatorHealthReply> localVarResponse = GetOperatorAutopilotHealthWithHttpInfo(region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
             return localVarResponse.Data;
@@ -1101,9 +1022,8 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of OperatorHealthReply</returns>
-        public Fermyon.Nomad.Client.ApiResponse<OperatorHealthReply> GetOperatorAutopilotHealthWithHttpInfo(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0)
+        public Fermyon.Nomad.Client.ApiResponse<OperatorHealthReply> GetOperatorAutopilotHealthWithHttpInfo(string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string))
         {
             Fermyon.Nomad.Client.RequestOptions localVarRequestOptions = new Fermyon.Nomad.Client.RequestOptions();
 
@@ -1116,16 +1036,10 @@ namespace Fermyon.Nomad.Api
             };
 
             var localVarContentType = Fermyon.Nomad.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Fermyon.Nomad.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             if (region != null)
             {
@@ -1164,9 +1078,6 @@ namespace Fermyon.Nomad.Api
                 localVarRequestOptions.HeaderParameters.Add("X-Nomad-Token", Fermyon.Nomad.Client.ClientUtils.ParameterToString(xNomadToken)); // header parameter
             }
 
-            localVarRequestOptions.Operation = "OperatorApi.GetOperatorAutopilotHealth";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
             // authentication (X-Nomad-Token) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("X-Nomad-Token")))
             {
@@ -1175,13 +1086,11 @@ namespace Fermyon.Nomad.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<OperatorHealthReply>("/operator/autopilot/health", localVarRequestOptions, this.Configuration);
+
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("GetOperatorAutopilotHealth", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -1200,12 +1109,11 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OperatorHealthReply</returns>
-        public async System.Threading.Tasks.Task<OperatorHealthReply> GetOperatorAutopilotHealthAsync(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<OperatorHealthReply> GetOperatorAutopilotHealthAsync(string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Fermyon.Nomad.Client.ApiResponse<OperatorHealthReply> localVarResponse = await GetOperatorAutopilotHealthWithHttpInfoAsync(region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, operationIndex, cancellationToken).ConfigureAwait(false);
+            Fermyon.Nomad.Client.ApiResponse<OperatorHealthReply> localVarResponse = await GetOperatorAutopilotHealthWithHttpInfoAsync(region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1222,10 +1130,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OperatorHealthReply)</returns>
-        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<OperatorHealthReply>> GetOperatorAutopilotHealthWithHttpInfoAsync(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<OperatorHealthReply>> GetOperatorAutopilotHealthWithHttpInfoAsync(string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             Fermyon.Nomad.Client.RequestOptions localVarRequestOptions = new Fermyon.Nomad.Client.RequestOptions();
@@ -1238,17 +1145,12 @@ namespace Fermyon.Nomad.Api
                 "application/json"
             };
 
+
             var localVarContentType = Fermyon.Nomad.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Fermyon.Nomad.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             if (region != null)
             {
@@ -1287,9 +1189,6 @@ namespace Fermyon.Nomad.Api
                 localVarRequestOptions.HeaderParameters.Add("X-Nomad-Token", Fermyon.Nomad.Client.ClientUtils.ParameterToString(xNomadToken)); // header parameter
             }
 
-            localVarRequestOptions.Operation = "OperatorApi.GetOperatorAutopilotHealth";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
             // authentication (X-Nomad-Token) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("X-Nomad-Token")))
             {
@@ -1297,15 +1196,13 @@ namespace Fermyon.Nomad.Api
             }
 
             // make the HTTP request
+
             var localVarResponse = await this.AsynchronousClient.GetAsync<OperatorHealthReply>("/operator/autopilot/health", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("GetOperatorAutopilotHealth", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -1324,9 +1221,8 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>RaftConfiguration</returns>
-        public RaftConfiguration GetOperatorRaftConfiguration(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0)
+        public RaftConfiguration GetOperatorRaftConfiguration(string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string))
         {
             Fermyon.Nomad.Client.ApiResponse<RaftConfiguration> localVarResponse = GetOperatorRaftConfigurationWithHttpInfo(region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
             return localVarResponse.Data;
@@ -1345,9 +1241,8 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of RaftConfiguration</returns>
-        public Fermyon.Nomad.Client.ApiResponse<RaftConfiguration> GetOperatorRaftConfigurationWithHttpInfo(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0)
+        public Fermyon.Nomad.Client.ApiResponse<RaftConfiguration> GetOperatorRaftConfigurationWithHttpInfo(string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string))
         {
             Fermyon.Nomad.Client.RequestOptions localVarRequestOptions = new Fermyon.Nomad.Client.RequestOptions();
 
@@ -1360,16 +1255,10 @@ namespace Fermyon.Nomad.Api
             };
 
             var localVarContentType = Fermyon.Nomad.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Fermyon.Nomad.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             if (region != null)
             {
@@ -1408,9 +1297,6 @@ namespace Fermyon.Nomad.Api
                 localVarRequestOptions.HeaderParameters.Add("X-Nomad-Token", Fermyon.Nomad.Client.ClientUtils.ParameterToString(xNomadToken)); // header parameter
             }
 
-            localVarRequestOptions.Operation = "OperatorApi.GetOperatorRaftConfiguration";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
             // authentication (X-Nomad-Token) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("X-Nomad-Token")))
             {
@@ -1419,13 +1305,11 @@ namespace Fermyon.Nomad.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<RaftConfiguration>("/operator/raft/configuration", localVarRequestOptions, this.Configuration);
+
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("GetOperatorRaftConfiguration", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -1444,12 +1328,11 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RaftConfiguration</returns>
-        public async System.Threading.Tasks.Task<RaftConfiguration> GetOperatorRaftConfigurationAsync(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<RaftConfiguration> GetOperatorRaftConfigurationAsync(string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Fermyon.Nomad.Client.ApiResponse<RaftConfiguration> localVarResponse = await GetOperatorRaftConfigurationWithHttpInfoAsync(region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, operationIndex, cancellationToken).ConfigureAwait(false);
+            Fermyon.Nomad.Client.ApiResponse<RaftConfiguration> localVarResponse = await GetOperatorRaftConfigurationWithHttpInfoAsync(region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1466,10 +1349,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RaftConfiguration)</returns>
-        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<RaftConfiguration>> GetOperatorRaftConfigurationWithHttpInfoAsync(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<RaftConfiguration>> GetOperatorRaftConfigurationWithHttpInfoAsync(string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             Fermyon.Nomad.Client.RequestOptions localVarRequestOptions = new Fermyon.Nomad.Client.RequestOptions();
@@ -1482,17 +1364,12 @@ namespace Fermyon.Nomad.Api
                 "application/json"
             };
 
+
             var localVarContentType = Fermyon.Nomad.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Fermyon.Nomad.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             if (region != null)
             {
@@ -1531,9 +1408,6 @@ namespace Fermyon.Nomad.Api
                 localVarRequestOptions.HeaderParameters.Add("X-Nomad-Token", Fermyon.Nomad.Client.ClientUtils.ParameterToString(xNomadToken)); // header parameter
             }
 
-            localVarRequestOptions.Operation = "OperatorApi.GetOperatorRaftConfiguration";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
             // authentication (X-Nomad-Token) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("X-Nomad-Token")))
             {
@@ -1541,15 +1415,13 @@ namespace Fermyon.Nomad.Api
             }
 
             // make the HTTP request
+
             var localVarResponse = await this.AsynchronousClient.GetAsync<RaftConfiguration>("/operator/raft/configuration", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("GetOperatorRaftConfiguration", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -1568,9 +1440,8 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>SchedulerConfigurationResponse</returns>
-        public SchedulerConfigurationResponse GetOperatorSchedulerConfiguration(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0)
+        public SchedulerConfigurationResponse GetOperatorSchedulerConfiguration(string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string))
         {
             Fermyon.Nomad.Client.ApiResponse<SchedulerConfigurationResponse> localVarResponse = GetOperatorSchedulerConfigurationWithHttpInfo(region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
             return localVarResponse.Data;
@@ -1589,9 +1460,8 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of SchedulerConfigurationResponse</returns>
-        public Fermyon.Nomad.Client.ApiResponse<SchedulerConfigurationResponse> GetOperatorSchedulerConfigurationWithHttpInfo(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0)
+        public Fermyon.Nomad.Client.ApiResponse<SchedulerConfigurationResponse> GetOperatorSchedulerConfigurationWithHttpInfo(string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string))
         {
             Fermyon.Nomad.Client.RequestOptions localVarRequestOptions = new Fermyon.Nomad.Client.RequestOptions();
 
@@ -1604,16 +1474,10 @@ namespace Fermyon.Nomad.Api
             };
 
             var localVarContentType = Fermyon.Nomad.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Fermyon.Nomad.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             if (region != null)
             {
@@ -1652,9 +1516,6 @@ namespace Fermyon.Nomad.Api
                 localVarRequestOptions.HeaderParameters.Add("X-Nomad-Token", Fermyon.Nomad.Client.ClientUtils.ParameterToString(xNomadToken)); // header parameter
             }
 
-            localVarRequestOptions.Operation = "OperatorApi.GetOperatorSchedulerConfiguration";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
             // authentication (X-Nomad-Token) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("X-Nomad-Token")))
             {
@@ -1663,13 +1524,11 @@ namespace Fermyon.Nomad.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<SchedulerConfigurationResponse>("/operator/scheduler/configuration", localVarRequestOptions, this.Configuration);
+
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("GetOperatorSchedulerConfiguration", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -1688,12 +1547,11 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of SchedulerConfigurationResponse</returns>
-        public async System.Threading.Tasks.Task<SchedulerConfigurationResponse> GetOperatorSchedulerConfigurationAsync(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<SchedulerConfigurationResponse> GetOperatorSchedulerConfigurationAsync(string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Fermyon.Nomad.Client.ApiResponse<SchedulerConfigurationResponse> localVarResponse = await GetOperatorSchedulerConfigurationWithHttpInfoAsync(region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, operationIndex, cancellationToken).ConfigureAwait(false);
+            Fermyon.Nomad.Client.ApiResponse<SchedulerConfigurationResponse> localVarResponse = await GetOperatorSchedulerConfigurationWithHttpInfoAsync(region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1710,10 +1568,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (SchedulerConfigurationResponse)</returns>
-        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<SchedulerConfigurationResponse>> GetOperatorSchedulerConfigurationWithHttpInfoAsync(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<SchedulerConfigurationResponse>> GetOperatorSchedulerConfigurationWithHttpInfoAsync(string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             Fermyon.Nomad.Client.RequestOptions localVarRequestOptions = new Fermyon.Nomad.Client.RequestOptions();
@@ -1726,17 +1583,12 @@ namespace Fermyon.Nomad.Api
                 "application/json"
             };
 
+
             var localVarContentType = Fermyon.Nomad.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Fermyon.Nomad.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             if (region != null)
             {
@@ -1775,9 +1627,6 @@ namespace Fermyon.Nomad.Api
                 localVarRequestOptions.HeaderParameters.Add("X-Nomad-Token", Fermyon.Nomad.Client.ClientUtils.ParameterToString(xNomadToken)); // header parameter
             }
 
-            localVarRequestOptions.Operation = "OperatorApi.GetOperatorSchedulerConfiguration";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
             // authentication (X-Nomad-Token) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("X-Nomad-Token")))
             {
@@ -1785,15 +1634,13 @@ namespace Fermyon.Nomad.Api
             }
 
             // make the HTTP request
+
             var localVarResponse = await this.AsynchronousClient.GetAsync<SchedulerConfigurationResponse>("/operator/scheduler/configuration", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("GetOperatorSchedulerConfiguration", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -1808,9 +1655,8 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>SchedulerSetConfigurationResponse</returns>
-        public SchedulerSetConfigurationResponse PostOperatorSchedulerConfiguration(SchedulerConfiguration schedulerConfiguration, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0)
+        public SchedulerSetConfigurationResponse PostOperatorSchedulerConfiguration(SchedulerConfiguration schedulerConfiguration, string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string))
         {
             Fermyon.Nomad.Client.ApiResponse<SchedulerSetConfigurationResponse> localVarResponse = PostOperatorSchedulerConfigurationWithHttpInfo(schedulerConfiguration, region, _namespace, xNomadToken, idempotencyToken);
             return localVarResponse.Data;
@@ -1825,15 +1671,12 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of SchedulerSetConfigurationResponse</returns>
-        public Fermyon.Nomad.Client.ApiResponse<SchedulerSetConfigurationResponse> PostOperatorSchedulerConfigurationWithHttpInfo(SchedulerConfiguration schedulerConfiguration, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0)
+        public Fermyon.Nomad.Client.ApiResponse<SchedulerSetConfigurationResponse> PostOperatorSchedulerConfigurationWithHttpInfo(SchedulerConfiguration schedulerConfiguration, string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string))
         {
             // verify the required parameter 'schedulerConfiguration' is set
             if (schedulerConfiguration == null)
-            {
                 throw new Fermyon.Nomad.Client.ApiException(400, "Missing required parameter 'schedulerConfiguration' when calling OperatorApi->PostOperatorSchedulerConfiguration");
-            }
 
             Fermyon.Nomad.Client.RequestOptions localVarRequestOptions = new Fermyon.Nomad.Client.RequestOptions();
 
@@ -1847,16 +1690,10 @@ namespace Fermyon.Nomad.Api
             };
 
             var localVarContentType = Fermyon.Nomad.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Fermyon.Nomad.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             if (region != null)
             {
@@ -1876,9 +1713,6 @@ namespace Fermyon.Nomad.Api
             }
             localVarRequestOptions.Data = schedulerConfiguration;
 
-            localVarRequestOptions.Operation = "OperatorApi.PostOperatorSchedulerConfiguration";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
             // authentication (X-Nomad-Token) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("X-Nomad-Token")))
             {
@@ -1887,13 +1721,11 @@ namespace Fermyon.Nomad.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<SchedulerSetConfigurationResponse>("/operator/scheduler/configuration", localVarRequestOptions, this.Configuration);
+
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PostOperatorSchedulerConfiguration", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -1908,12 +1740,11 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of SchedulerSetConfigurationResponse</returns>
-        public async System.Threading.Tasks.Task<SchedulerSetConfigurationResponse> PostOperatorSchedulerConfigurationAsync(SchedulerConfiguration schedulerConfiguration, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<SchedulerSetConfigurationResponse> PostOperatorSchedulerConfigurationAsync(SchedulerConfiguration schedulerConfiguration, string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Fermyon.Nomad.Client.ApiResponse<SchedulerSetConfigurationResponse> localVarResponse = await PostOperatorSchedulerConfigurationWithHttpInfoAsync(schedulerConfiguration, region, _namespace, xNomadToken, idempotencyToken, operationIndex, cancellationToken).ConfigureAwait(false);
+            Fermyon.Nomad.Client.ApiResponse<SchedulerSetConfigurationResponse> localVarResponse = await PostOperatorSchedulerConfigurationWithHttpInfoAsync(schedulerConfiguration, region, _namespace, xNomadToken, idempotencyToken, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1926,16 +1757,13 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (SchedulerSetConfigurationResponse)</returns>
-        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<SchedulerSetConfigurationResponse>> PostOperatorSchedulerConfigurationWithHttpInfoAsync(SchedulerConfiguration schedulerConfiguration, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<SchedulerSetConfigurationResponse>> PostOperatorSchedulerConfigurationWithHttpInfoAsync(SchedulerConfiguration schedulerConfiguration, string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'schedulerConfiguration' is set
             if (schedulerConfiguration == null)
-            {
                 throw new Fermyon.Nomad.Client.ApiException(400, "Missing required parameter 'schedulerConfiguration' when calling OperatorApi->PostOperatorSchedulerConfiguration");
-            }
 
 
             Fermyon.Nomad.Client.RequestOptions localVarRequestOptions = new Fermyon.Nomad.Client.RequestOptions();
@@ -1949,17 +1777,12 @@ namespace Fermyon.Nomad.Api
                 "application/json"
             };
 
+
             var localVarContentType = Fermyon.Nomad.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Fermyon.Nomad.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             if (region != null)
             {
@@ -1979,9 +1802,6 @@ namespace Fermyon.Nomad.Api
             }
             localVarRequestOptions.Data = schedulerConfiguration;
 
-            localVarRequestOptions.Operation = "OperatorApi.PostOperatorSchedulerConfiguration";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
             // authentication (X-Nomad-Token) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("X-Nomad-Token")))
             {
@@ -1989,15 +1809,13 @@ namespace Fermyon.Nomad.Api
             }
 
             // make the HTTP request
+
             var localVarResponse = await this.AsynchronousClient.PostAsync<SchedulerSetConfigurationResponse>("/operator/scheduler/configuration", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PostOperatorSchedulerConfiguration", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -2012,9 +1830,8 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>bool</returns>
-        public bool PutOperatorAutopilotConfiguration(AutopilotConfiguration autopilotConfiguration, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0)
+        public bool PutOperatorAutopilotConfiguration(AutopilotConfiguration autopilotConfiguration, string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string))
         {
             Fermyon.Nomad.Client.ApiResponse<bool> localVarResponse = PutOperatorAutopilotConfigurationWithHttpInfo(autopilotConfiguration, region, _namespace, xNomadToken, idempotencyToken);
             return localVarResponse.Data;
@@ -2029,15 +1846,12 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of bool</returns>
-        public Fermyon.Nomad.Client.ApiResponse<bool> PutOperatorAutopilotConfigurationWithHttpInfo(AutopilotConfiguration autopilotConfiguration, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0)
+        public Fermyon.Nomad.Client.ApiResponse<bool> PutOperatorAutopilotConfigurationWithHttpInfo(AutopilotConfiguration autopilotConfiguration, string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string))
         {
             // verify the required parameter 'autopilotConfiguration' is set
             if (autopilotConfiguration == null)
-            {
                 throw new Fermyon.Nomad.Client.ApiException(400, "Missing required parameter 'autopilotConfiguration' when calling OperatorApi->PutOperatorAutopilotConfiguration");
-            }
 
             Fermyon.Nomad.Client.RequestOptions localVarRequestOptions = new Fermyon.Nomad.Client.RequestOptions();
 
@@ -2051,16 +1865,10 @@ namespace Fermyon.Nomad.Api
             };
 
             var localVarContentType = Fermyon.Nomad.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Fermyon.Nomad.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             if (region != null)
             {
@@ -2080,9 +1888,6 @@ namespace Fermyon.Nomad.Api
             }
             localVarRequestOptions.Data = autopilotConfiguration;
 
-            localVarRequestOptions.Operation = "OperatorApi.PutOperatorAutopilotConfiguration";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
             // authentication (X-Nomad-Token) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("X-Nomad-Token")))
             {
@@ -2091,13 +1896,11 @@ namespace Fermyon.Nomad.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Put<bool>("/operator/autopilot/configuration", localVarRequestOptions, this.Configuration);
+
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PutOperatorAutopilotConfiguration", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -2112,12 +1915,11 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of bool</returns>
-        public async System.Threading.Tasks.Task<bool> PutOperatorAutopilotConfigurationAsync(AutopilotConfiguration autopilotConfiguration, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<bool> PutOperatorAutopilotConfigurationAsync(AutopilotConfiguration autopilotConfiguration, string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Fermyon.Nomad.Client.ApiResponse<bool> localVarResponse = await PutOperatorAutopilotConfigurationWithHttpInfoAsync(autopilotConfiguration, region, _namespace, xNomadToken, idempotencyToken, operationIndex, cancellationToken).ConfigureAwait(false);
+            Fermyon.Nomad.Client.ApiResponse<bool> localVarResponse = await PutOperatorAutopilotConfigurationWithHttpInfoAsync(autopilotConfiguration, region, _namespace, xNomadToken, idempotencyToken, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2130,16 +1932,13 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (bool)</returns>
-        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<bool>> PutOperatorAutopilotConfigurationWithHttpInfoAsync(AutopilotConfiguration autopilotConfiguration, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<bool>> PutOperatorAutopilotConfigurationWithHttpInfoAsync(AutopilotConfiguration autopilotConfiguration, string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'autopilotConfiguration' is set
             if (autopilotConfiguration == null)
-            {
                 throw new Fermyon.Nomad.Client.ApiException(400, "Missing required parameter 'autopilotConfiguration' when calling OperatorApi->PutOperatorAutopilotConfiguration");
-            }
 
 
             Fermyon.Nomad.Client.RequestOptions localVarRequestOptions = new Fermyon.Nomad.Client.RequestOptions();
@@ -2153,17 +1952,12 @@ namespace Fermyon.Nomad.Api
                 "application/json"
             };
 
+
             var localVarContentType = Fermyon.Nomad.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Fermyon.Nomad.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             if (region != null)
             {
@@ -2183,9 +1977,6 @@ namespace Fermyon.Nomad.Api
             }
             localVarRequestOptions.Data = autopilotConfiguration;
 
-            localVarRequestOptions.Operation = "OperatorApi.PutOperatorAutopilotConfiguration";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
             // authentication (X-Nomad-Token) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("X-Nomad-Token")))
             {
@@ -2193,15 +1984,13 @@ namespace Fermyon.Nomad.Api
             }
 
             // make the HTTP request
+
             var localVarResponse = await this.AsynchronousClient.PutAsync<bool>("/operator/autopilot/configuration", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PutOperatorAutopilotConfiguration", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;

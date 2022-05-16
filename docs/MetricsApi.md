@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="getmetricssummary"></a>
 # **GetMetricsSummary**
-> MetricsSummary GetMetricsSummary (string? format = null)
+> MetricsSummary GetMetricsSummary (string format = null)
 
 
 
@@ -35,7 +35,7 @@ namespace Example
             // config.AddApiKeyPrefix("X-Nomad-Token", "Bearer");
 
             var apiInstance = new MetricsApi(config);
-            var format = "format_example";  // string? | The format the user requested for the metrics summary (e.g. prometheus) (optional) 
+            var format = format_example;  // string | The format the user requested for the metrics summary (e.g. prometheus) (optional) 
 
             try
             {
@@ -57,7 +57,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **format** | **string?**| The format the user requested for the metrics summary (e.g. prometheus) | [optional] 
+ **format** | **string**| The format the user requested for the metrics summary (e.g. prometheus) | [optional] 
 
 ### Return type
 

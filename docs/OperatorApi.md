@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 <a name="deleteoperatorraftpeer"></a>
 # **DeleteOperatorRaftPeer**
-> void DeleteOperatorRaftPeer (string? region = null, string? _namespace = null, string? xNomadToken = null, string? idempotencyToken = null)
+> void DeleteOperatorRaftPeer (string region = null, string _namespace = null, string xNomadToken = null, string idempotencyToken = null)
 
 
 
@@ -41,10 +41,10 @@ namespace Example
             // config.AddApiKeyPrefix("X-Nomad-Token", "Bearer");
 
             var apiInstance = new OperatorApi(config);
-            var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
-            var xNomadToken = "xNomadToken_example";  // string? | A Nomad ACL token. (optional) 
-            var idempotencyToken = "idempotencyToken_example";  // string? | Can be used to ensure operations are only run once. (optional) 
+            var region = region_example;  // string | Filters results based on the specified region. (optional) 
+            var _namespace = _namespace_example;  // string | Filters results based on the specified namespace. (optional) 
+            var xNomadToken = xNomadToken_example;  // string | A Nomad ACL token. (optional) 
+            var idempotencyToken = idempotencyToken_example;  // string | Can be used to ensure operations are only run once. (optional) 
 
             try
             {
@@ -65,10 +65,10 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **region** | **string?**| Filters results based on the specified region. | [optional] 
- **_namespace** | **string?**| Filters results based on the specified namespace. | [optional] 
- **xNomadToken** | **string?**| A Nomad ACL token. | [optional] 
- **idempotencyToken** | **string?**| Can be used to ensure operations are only run once. | [optional] 
+ **region** | **string**| Filters results based on the specified region. | [optional] 
+ **_namespace** | **string**| Filters results based on the specified namespace. | [optional] 
+ **xNomadToken** | **string**| A Nomad ACL token. | [optional] 
+ **idempotencyToken** | **string**| Can be used to ensure operations are only run once. | [optional] 
 
 ### Return type
 
@@ -97,7 +97,7 @@ void (empty response body)
 
 <a name="getoperatorautopilotconfiguration"></a>
 # **GetOperatorAutopilotConfiguration**
-> AutopilotConfiguration GetOperatorAutopilotConfiguration (string? region = null, string? _namespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null)
+> AutopilotConfiguration GetOperatorAutopilotConfiguration (string region = null, string _namespace = null, int? index = null, string wait = null, string stale = null, string prefix = null, string xNomadToken = null, int? perPage = null, string nextToken = null)
 
 
 
@@ -123,15 +123,15 @@ namespace Example
             // config.AddApiKeyPrefix("X-Nomad-Token", "Bearer");
 
             var apiInstance = new OperatorApi(config);
-            var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var region = region_example;  // string | Filters results based on the specified region. (optional) 
+            var _namespace = _namespace_example;  // string | Filters results based on the specified namespace. (optional) 
             var index = 56;  // int? | If set, wait until query exceeds given index. Must be provided with WaitParam. (optional) 
-            var wait = "wait_example";  // string? | Provided with IndexParam to wait for change. (optional) 
-            var stale = "stale_example";  // string? | If present, results will include stale reads. (optional) 
-            var prefix = "prefix_example";  // string? | Constrains results to jobs that start with the defined prefix (optional) 
-            var xNomadToken = "xNomadToken_example";  // string? | A Nomad ACL token. (optional) 
+            var wait = wait_example;  // string | Provided with IndexParam to wait for change. (optional) 
+            var stale = stale_example;  // string | If present, results will include stale reads. (optional) 
+            var prefix = prefix_example;  // string | Constrains results to jobs that start with the defined prefix (optional) 
+            var xNomadToken = xNomadToken_example;  // string | A Nomad ACL token. (optional) 
             var perPage = 56;  // int? | Maximum number of results to return. (optional) 
-            var nextToken = "nextToken_example";  // string? | Indicates where to start paging for queries that support pagination. (optional) 
+            var nextToken = nextToken_example;  // string | Indicates where to start paging for queries that support pagination. (optional) 
 
             try
             {
@@ -153,15 +153,15 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **region** | **string?**| Filters results based on the specified region. | [optional] 
- **_namespace** | **string?**| Filters results based on the specified namespace. | [optional] 
+ **region** | **string**| Filters results based on the specified region. | [optional] 
+ **_namespace** | **string**| Filters results based on the specified namespace. | [optional] 
  **index** | **int?**| If set, wait until query exceeds given index. Must be provided with WaitParam. | [optional] 
- **wait** | **string?**| Provided with IndexParam to wait for change. | [optional] 
- **stale** | **string?**| If present, results will include stale reads. | [optional] 
- **prefix** | **string?**| Constrains results to jobs that start with the defined prefix | [optional] 
- **xNomadToken** | **string?**| A Nomad ACL token. | [optional] 
+ **wait** | **string**| Provided with IndexParam to wait for change. | [optional] 
+ **stale** | **string**| If present, results will include stale reads. | [optional] 
+ **prefix** | **string**| Constrains results to jobs that start with the defined prefix | [optional] 
+ **xNomadToken** | **string**| A Nomad ACL token. | [optional] 
  **perPage** | **int?**| Maximum number of results to return. | [optional] 
- **nextToken** | **string?**| Indicates where to start paging for queries that support pagination. | [optional] 
+ **nextToken** | **string**| Indicates where to start paging for queries that support pagination. | [optional] 
 
 ### Return type
 
@@ -190,7 +190,7 @@ Name | Type | Description  | Notes
 
 <a name="getoperatorautopilothealth"></a>
 # **GetOperatorAutopilotHealth**
-> OperatorHealthReply GetOperatorAutopilotHealth (string? region = null, string? _namespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null)
+> OperatorHealthReply GetOperatorAutopilotHealth (string region = null, string _namespace = null, int? index = null, string wait = null, string stale = null, string prefix = null, string xNomadToken = null, int? perPage = null, string nextToken = null)
 
 
 
@@ -216,15 +216,15 @@ namespace Example
             // config.AddApiKeyPrefix("X-Nomad-Token", "Bearer");
 
             var apiInstance = new OperatorApi(config);
-            var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var region = region_example;  // string | Filters results based on the specified region. (optional) 
+            var _namespace = _namespace_example;  // string | Filters results based on the specified namespace. (optional) 
             var index = 56;  // int? | If set, wait until query exceeds given index. Must be provided with WaitParam. (optional) 
-            var wait = "wait_example";  // string? | Provided with IndexParam to wait for change. (optional) 
-            var stale = "stale_example";  // string? | If present, results will include stale reads. (optional) 
-            var prefix = "prefix_example";  // string? | Constrains results to jobs that start with the defined prefix (optional) 
-            var xNomadToken = "xNomadToken_example";  // string? | A Nomad ACL token. (optional) 
+            var wait = wait_example;  // string | Provided with IndexParam to wait for change. (optional) 
+            var stale = stale_example;  // string | If present, results will include stale reads. (optional) 
+            var prefix = prefix_example;  // string | Constrains results to jobs that start with the defined prefix (optional) 
+            var xNomadToken = xNomadToken_example;  // string | A Nomad ACL token. (optional) 
             var perPage = 56;  // int? | Maximum number of results to return. (optional) 
-            var nextToken = "nextToken_example";  // string? | Indicates where to start paging for queries that support pagination. (optional) 
+            var nextToken = nextToken_example;  // string | Indicates where to start paging for queries that support pagination. (optional) 
 
             try
             {
@@ -246,15 +246,15 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **region** | **string?**| Filters results based on the specified region. | [optional] 
- **_namespace** | **string?**| Filters results based on the specified namespace. | [optional] 
+ **region** | **string**| Filters results based on the specified region. | [optional] 
+ **_namespace** | **string**| Filters results based on the specified namespace. | [optional] 
  **index** | **int?**| If set, wait until query exceeds given index. Must be provided with WaitParam. | [optional] 
- **wait** | **string?**| Provided with IndexParam to wait for change. | [optional] 
- **stale** | **string?**| If present, results will include stale reads. | [optional] 
- **prefix** | **string?**| Constrains results to jobs that start with the defined prefix | [optional] 
- **xNomadToken** | **string?**| A Nomad ACL token. | [optional] 
+ **wait** | **string**| Provided with IndexParam to wait for change. | [optional] 
+ **stale** | **string**| If present, results will include stale reads. | [optional] 
+ **prefix** | **string**| Constrains results to jobs that start with the defined prefix | [optional] 
+ **xNomadToken** | **string**| A Nomad ACL token. | [optional] 
  **perPage** | **int?**| Maximum number of results to return. | [optional] 
- **nextToken** | **string?**| Indicates where to start paging for queries that support pagination. | [optional] 
+ **nextToken** | **string**| Indicates where to start paging for queries that support pagination. | [optional] 
 
 ### Return type
 
@@ -283,7 +283,7 @@ Name | Type | Description  | Notes
 
 <a name="getoperatorraftconfiguration"></a>
 # **GetOperatorRaftConfiguration**
-> RaftConfiguration GetOperatorRaftConfiguration (string? region = null, string? _namespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null)
+> RaftConfiguration GetOperatorRaftConfiguration (string region = null, string _namespace = null, int? index = null, string wait = null, string stale = null, string prefix = null, string xNomadToken = null, int? perPage = null, string nextToken = null)
 
 
 
@@ -309,15 +309,15 @@ namespace Example
             // config.AddApiKeyPrefix("X-Nomad-Token", "Bearer");
 
             var apiInstance = new OperatorApi(config);
-            var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var region = region_example;  // string | Filters results based on the specified region. (optional) 
+            var _namespace = _namespace_example;  // string | Filters results based on the specified namespace. (optional) 
             var index = 56;  // int? | If set, wait until query exceeds given index. Must be provided with WaitParam. (optional) 
-            var wait = "wait_example";  // string? | Provided with IndexParam to wait for change. (optional) 
-            var stale = "stale_example";  // string? | If present, results will include stale reads. (optional) 
-            var prefix = "prefix_example";  // string? | Constrains results to jobs that start with the defined prefix (optional) 
-            var xNomadToken = "xNomadToken_example";  // string? | A Nomad ACL token. (optional) 
+            var wait = wait_example;  // string | Provided with IndexParam to wait for change. (optional) 
+            var stale = stale_example;  // string | If present, results will include stale reads. (optional) 
+            var prefix = prefix_example;  // string | Constrains results to jobs that start with the defined prefix (optional) 
+            var xNomadToken = xNomadToken_example;  // string | A Nomad ACL token. (optional) 
             var perPage = 56;  // int? | Maximum number of results to return. (optional) 
-            var nextToken = "nextToken_example";  // string? | Indicates where to start paging for queries that support pagination. (optional) 
+            var nextToken = nextToken_example;  // string | Indicates where to start paging for queries that support pagination. (optional) 
 
             try
             {
@@ -339,15 +339,15 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **region** | **string?**| Filters results based on the specified region. | [optional] 
- **_namespace** | **string?**| Filters results based on the specified namespace. | [optional] 
+ **region** | **string**| Filters results based on the specified region. | [optional] 
+ **_namespace** | **string**| Filters results based on the specified namespace. | [optional] 
  **index** | **int?**| If set, wait until query exceeds given index. Must be provided with WaitParam. | [optional] 
- **wait** | **string?**| Provided with IndexParam to wait for change. | [optional] 
- **stale** | **string?**| If present, results will include stale reads. | [optional] 
- **prefix** | **string?**| Constrains results to jobs that start with the defined prefix | [optional] 
- **xNomadToken** | **string?**| A Nomad ACL token. | [optional] 
+ **wait** | **string**| Provided with IndexParam to wait for change. | [optional] 
+ **stale** | **string**| If present, results will include stale reads. | [optional] 
+ **prefix** | **string**| Constrains results to jobs that start with the defined prefix | [optional] 
+ **xNomadToken** | **string**| A Nomad ACL token. | [optional] 
  **perPage** | **int?**| Maximum number of results to return. | [optional] 
- **nextToken** | **string?**| Indicates where to start paging for queries that support pagination. | [optional] 
+ **nextToken** | **string**| Indicates where to start paging for queries that support pagination. | [optional] 
 
 ### Return type
 
@@ -376,7 +376,7 @@ Name | Type | Description  | Notes
 
 <a name="getoperatorschedulerconfiguration"></a>
 # **GetOperatorSchedulerConfiguration**
-> SchedulerConfigurationResponse GetOperatorSchedulerConfiguration (string? region = null, string? _namespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null)
+> SchedulerConfigurationResponse GetOperatorSchedulerConfiguration (string region = null, string _namespace = null, int? index = null, string wait = null, string stale = null, string prefix = null, string xNomadToken = null, int? perPage = null, string nextToken = null)
 
 
 
@@ -402,15 +402,15 @@ namespace Example
             // config.AddApiKeyPrefix("X-Nomad-Token", "Bearer");
 
             var apiInstance = new OperatorApi(config);
-            var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var region = region_example;  // string | Filters results based on the specified region. (optional) 
+            var _namespace = _namespace_example;  // string | Filters results based on the specified namespace. (optional) 
             var index = 56;  // int? | If set, wait until query exceeds given index. Must be provided with WaitParam. (optional) 
-            var wait = "wait_example";  // string? | Provided with IndexParam to wait for change. (optional) 
-            var stale = "stale_example";  // string? | If present, results will include stale reads. (optional) 
-            var prefix = "prefix_example";  // string? | Constrains results to jobs that start with the defined prefix (optional) 
-            var xNomadToken = "xNomadToken_example";  // string? | A Nomad ACL token. (optional) 
+            var wait = wait_example;  // string | Provided with IndexParam to wait for change. (optional) 
+            var stale = stale_example;  // string | If present, results will include stale reads. (optional) 
+            var prefix = prefix_example;  // string | Constrains results to jobs that start with the defined prefix (optional) 
+            var xNomadToken = xNomadToken_example;  // string | A Nomad ACL token. (optional) 
             var perPage = 56;  // int? | Maximum number of results to return. (optional) 
-            var nextToken = "nextToken_example";  // string? | Indicates where to start paging for queries that support pagination. (optional) 
+            var nextToken = nextToken_example;  // string | Indicates where to start paging for queries that support pagination. (optional) 
 
             try
             {
@@ -432,15 +432,15 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **region** | **string?**| Filters results based on the specified region. | [optional] 
- **_namespace** | **string?**| Filters results based on the specified namespace. | [optional] 
+ **region** | **string**| Filters results based on the specified region. | [optional] 
+ **_namespace** | **string**| Filters results based on the specified namespace. | [optional] 
  **index** | **int?**| If set, wait until query exceeds given index. Must be provided with WaitParam. | [optional] 
- **wait** | **string?**| Provided with IndexParam to wait for change. | [optional] 
- **stale** | **string?**| If present, results will include stale reads. | [optional] 
- **prefix** | **string?**| Constrains results to jobs that start with the defined prefix | [optional] 
- **xNomadToken** | **string?**| A Nomad ACL token. | [optional] 
+ **wait** | **string**| Provided with IndexParam to wait for change. | [optional] 
+ **stale** | **string**| If present, results will include stale reads. | [optional] 
+ **prefix** | **string**| Constrains results to jobs that start with the defined prefix | [optional] 
+ **xNomadToken** | **string**| A Nomad ACL token. | [optional] 
  **perPage** | **int?**| Maximum number of results to return. | [optional] 
- **nextToken** | **string?**| Indicates where to start paging for queries that support pagination. | [optional] 
+ **nextToken** | **string**| Indicates where to start paging for queries that support pagination. | [optional] 
 
 ### Return type
 
@@ -469,7 +469,7 @@ Name | Type | Description  | Notes
 
 <a name="postoperatorschedulerconfiguration"></a>
 # **PostOperatorSchedulerConfiguration**
-> SchedulerSetConfigurationResponse PostOperatorSchedulerConfiguration (SchedulerConfiguration schedulerConfiguration, string? region = null, string? _namespace = null, string? xNomadToken = null, string? idempotencyToken = null)
+> SchedulerSetConfigurationResponse PostOperatorSchedulerConfiguration (SchedulerConfiguration schedulerConfiguration, string region = null, string _namespace = null, string xNomadToken = null, string idempotencyToken = null)
 
 
 
@@ -496,10 +496,10 @@ namespace Example
 
             var apiInstance = new OperatorApi(config);
             var schedulerConfiguration = new SchedulerConfiguration(); // SchedulerConfiguration | 
-            var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
-            var xNomadToken = "xNomadToken_example";  // string? | A Nomad ACL token. (optional) 
-            var idempotencyToken = "idempotencyToken_example";  // string? | Can be used to ensure operations are only run once. (optional) 
+            var region = region_example;  // string | Filters results based on the specified region. (optional) 
+            var _namespace = _namespace_example;  // string | Filters results based on the specified namespace. (optional) 
+            var xNomadToken = xNomadToken_example;  // string | A Nomad ACL token. (optional) 
+            var idempotencyToken = idempotencyToken_example;  // string | Can be used to ensure operations are only run once. (optional) 
 
             try
             {
@@ -522,10 +522,10 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **schedulerConfiguration** | [**SchedulerConfiguration**](SchedulerConfiguration.md)|  | 
- **region** | **string?**| Filters results based on the specified region. | [optional] 
- **_namespace** | **string?**| Filters results based on the specified namespace. | [optional] 
- **xNomadToken** | **string?**| A Nomad ACL token. | [optional] 
- **idempotencyToken** | **string?**| Can be used to ensure operations are only run once. | [optional] 
+ **region** | **string**| Filters results based on the specified region. | [optional] 
+ **_namespace** | **string**| Filters results based on the specified namespace. | [optional] 
+ **xNomadToken** | **string**| A Nomad ACL token. | [optional] 
+ **idempotencyToken** | **string**| Can be used to ensure operations are only run once. | [optional] 
 
 ### Return type
 
@@ -554,7 +554,7 @@ Name | Type | Description  | Notes
 
 <a name="putoperatorautopilotconfiguration"></a>
 # **PutOperatorAutopilotConfiguration**
-> bool PutOperatorAutopilotConfiguration (AutopilotConfiguration autopilotConfiguration, string? region = null, string? _namespace = null, string? xNomadToken = null, string? idempotencyToken = null)
+> bool PutOperatorAutopilotConfiguration (AutopilotConfiguration autopilotConfiguration, string region = null, string _namespace = null, string xNomadToken = null, string idempotencyToken = null)
 
 
 
@@ -581,10 +581,10 @@ namespace Example
 
             var apiInstance = new OperatorApi(config);
             var autopilotConfiguration = new AutopilotConfiguration(); // AutopilotConfiguration | 
-            var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
-            var xNomadToken = "xNomadToken_example";  // string? | A Nomad ACL token. (optional) 
-            var idempotencyToken = "idempotencyToken_example";  // string? | Can be used to ensure operations are only run once. (optional) 
+            var region = region_example;  // string | Filters results based on the specified region. (optional) 
+            var _namespace = _namespace_example;  // string | Filters results based on the specified namespace. (optional) 
+            var xNomadToken = xNomadToken_example;  // string | A Nomad ACL token. (optional) 
+            var idempotencyToken = idempotencyToken_example;  // string | Can be used to ensure operations are only run once. (optional) 
 
             try
             {
@@ -607,10 +607,10 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **autopilotConfiguration** | [**AutopilotConfiguration**](AutopilotConfiguration.md)|  | 
- **region** | **string?**| Filters results based on the specified region. | [optional] 
- **_namespace** | **string?**| Filters results based on the specified namespace. | [optional] 
- **xNomadToken** | **string?**| A Nomad ACL token. | [optional] 
- **idempotencyToken** | **string?**| Can be used to ensure operations are only run once. | [optional] 
+ **region** | **string**| Filters results based on the specified region. | [optional] 
+ **_namespace** | **string**| Filters results based on the specified namespace. | [optional] 
+ **xNomadToken** | **string**| A Nomad ACL token. | [optional] 
+ **idempotencyToken** | **string**| Can be used to ensure operations are only run once. | [optional] 
 
 ### Return type
 

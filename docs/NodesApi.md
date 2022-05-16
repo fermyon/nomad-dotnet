@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 <a name="getnode"></a>
 # **GetNode**
-> Node GetNode (string nodeId, string? region = null, string? _namespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null)
+> Node GetNode (string nodeId, string region = null, string _namespace = null, int? index = null, string wait = null, string stale = null, string prefix = null, string xNomadToken = null, int? perPage = null, string nextToken = null)
 
 
 
@@ -40,16 +40,16 @@ namespace Example
             // config.AddApiKeyPrefix("X-Nomad-Token", "Bearer");
 
             var apiInstance = new NodesApi(config);
-            var nodeId = "nodeId_example";  // string | The ID of the node.
-            var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var nodeId = nodeId_example;  // string | The ID of the node.
+            var region = region_example;  // string | Filters results based on the specified region. (optional) 
+            var _namespace = _namespace_example;  // string | Filters results based on the specified namespace. (optional) 
             var index = 56;  // int? | If set, wait until query exceeds given index. Must be provided with WaitParam. (optional) 
-            var wait = "wait_example";  // string? | Provided with IndexParam to wait for change. (optional) 
-            var stale = "stale_example";  // string? | If present, results will include stale reads. (optional) 
-            var prefix = "prefix_example";  // string? | Constrains results to jobs that start with the defined prefix (optional) 
-            var xNomadToken = "xNomadToken_example";  // string? | A Nomad ACL token. (optional) 
+            var wait = wait_example;  // string | Provided with IndexParam to wait for change. (optional) 
+            var stale = stale_example;  // string | If present, results will include stale reads. (optional) 
+            var prefix = prefix_example;  // string | Constrains results to jobs that start with the defined prefix (optional) 
+            var xNomadToken = xNomadToken_example;  // string | A Nomad ACL token. (optional) 
             var perPage = 56;  // int? | Maximum number of results to return. (optional) 
-            var nextToken = "nextToken_example";  // string? | Indicates where to start paging for queries that support pagination. (optional) 
+            var nextToken = nextToken_example;  // string | Indicates where to start paging for queries that support pagination. (optional) 
 
             try
             {
@@ -72,15 +72,15 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **nodeId** | **string**| The ID of the node. | 
- **region** | **string?**| Filters results based on the specified region. | [optional] 
- **_namespace** | **string?**| Filters results based on the specified namespace. | [optional] 
+ **region** | **string**| Filters results based on the specified region. | [optional] 
+ **_namespace** | **string**| Filters results based on the specified namespace. | [optional] 
  **index** | **int?**| If set, wait until query exceeds given index. Must be provided with WaitParam. | [optional] 
- **wait** | **string?**| Provided with IndexParam to wait for change. | [optional] 
- **stale** | **string?**| If present, results will include stale reads. | [optional] 
- **prefix** | **string?**| Constrains results to jobs that start with the defined prefix | [optional] 
- **xNomadToken** | **string?**| A Nomad ACL token. | [optional] 
+ **wait** | **string**| Provided with IndexParam to wait for change. | [optional] 
+ **stale** | **string**| If present, results will include stale reads. | [optional] 
+ **prefix** | **string**| Constrains results to jobs that start with the defined prefix | [optional] 
+ **xNomadToken** | **string**| A Nomad ACL token. | [optional] 
  **perPage** | **int?**| Maximum number of results to return. | [optional] 
- **nextToken** | **string?**| Indicates where to start paging for queries that support pagination. | [optional] 
+ **nextToken** | **string**| Indicates where to start paging for queries that support pagination. | [optional] 
 
 ### Return type
 
@@ -109,7 +109,7 @@ Name | Type | Description  | Notes
 
 <a name="getnodeallocations"></a>
 # **GetNodeAllocations**
-> List&lt;AllocationListStub&gt; GetNodeAllocations (string nodeId, string? region = null, string? _namespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null)
+> List&lt;AllocationListStub&gt; GetNodeAllocations (string nodeId, string region = null, string _namespace = null, int? index = null, string wait = null, string stale = null, string prefix = null, string xNomadToken = null, int? perPage = null, string nextToken = null)
 
 
 
@@ -135,16 +135,16 @@ namespace Example
             // config.AddApiKeyPrefix("X-Nomad-Token", "Bearer");
 
             var apiInstance = new NodesApi(config);
-            var nodeId = "nodeId_example";  // string | The ID of the node.
-            var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var nodeId = nodeId_example;  // string | The ID of the node.
+            var region = region_example;  // string | Filters results based on the specified region. (optional) 
+            var _namespace = _namespace_example;  // string | Filters results based on the specified namespace. (optional) 
             var index = 56;  // int? | If set, wait until query exceeds given index. Must be provided with WaitParam. (optional) 
-            var wait = "wait_example";  // string? | Provided with IndexParam to wait for change. (optional) 
-            var stale = "stale_example";  // string? | If present, results will include stale reads. (optional) 
-            var prefix = "prefix_example";  // string? | Constrains results to jobs that start with the defined prefix (optional) 
-            var xNomadToken = "xNomadToken_example";  // string? | A Nomad ACL token. (optional) 
+            var wait = wait_example;  // string | Provided with IndexParam to wait for change. (optional) 
+            var stale = stale_example;  // string | If present, results will include stale reads. (optional) 
+            var prefix = prefix_example;  // string | Constrains results to jobs that start with the defined prefix (optional) 
+            var xNomadToken = xNomadToken_example;  // string | A Nomad ACL token. (optional) 
             var perPage = 56;  // int? | Maximum number of results to return. (optional) 
-            var nextToken = "nextToken_example";  // string? | Indicates where to start paging for queries that support pagination. (optional) 
+            var nextToken = nextToken_example;  // string | Indicates where to start paging for queries that support pagination. (optional) 
 
             try
             {
@@ -167,15 +167,15 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **nodeId** | **string**| The ID of the node. | 
- **region** | **string?**| Filters results based on the specified region. | [optional] 
- **_namespace** | **string?**| Filters results based on the specified namespace. | [optional] 
+ **region** | **string**| Filters results based on the specified region. | [optional] 
+ **_namespace** | **string**| Filters results based on the specified namespace. | [optional] 
  **index** | **int?**| If set, wait until query exceeds given index. Must be provided with WaitParam. | [optional] 
- **wait** | **string?**| Provided with IndexParam to wait for change. | [optional] 
- **stale** | **string?**| If present, results will include stale reads. | [optional] 
- **prefix** | **string?**| Constrains results to jobs that start with the defined prefix | [optional] 
- **xNomadToken** | **string?**| A Nomad ACL token. | [optional] 
+ **wait** | **string**| Provided with IndexParam to wait for change. | [optional] 
+ **stale** | **string**| If present, results will include stale reads. | [optional] 
+ **prefix** | **string**| Constrains results to jobs that start with the defined prefix | [optional] 
+ **xNomadToken** | **string**| A Nomad ACL token. | [optional] 
  **perPage** | **int?**| Maximum number of results to return. | [optional] 
- **nextToken** | **string?**| Indicates where to start paging for queries that support pagination. | [optional] 
+ **nextToken** | **string**| Indicates where to start paging for queries that support pagination. | [optional] 
 
 ### Return type
 
@@ -204,7 +204,7 @@ Name | Type | Description  | Notes
 
 <a name="getnodes"></a>
 # **GetNodes**
-> List&lt;NodeListStub&gt; GetNodes (string? region = null, string? _namespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null, bool? resources = null)
+> List&lt;NodeListStub&gt; GetNodes (string region = null, string _namespace = null, int? index = null, string wait = null, string stale = null, string prefix = null, string xNomadToken = null, int? perPage = null, string nextToken = null, bool? resources = null)
 
 
 
@@ -230,15 +230,15 @@ namespace Example
             // config.AddApiKeyPrefix("X-Nomad-Token", "Bearer");
 
             var apiInstance = new NodesApi(config);
-            var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var region = region_example;  // string | Filters results based on the specified region. (optional) 
+            var _namespace = _namespace_example;  // string | Filters results based on the specified namespace. (optional) 
             var index = 56;  // int? | If set, wait until query exceeds given index. Must be provided with WaitParam. (optional) 
-            var wait = "wait_example";  // string? | Provided with IndexParam to wait for change. (optional) 
-            var stale = "stale_example";  // string? | If present, results will include stale reads. (optional) 
-            var prefix = "prefix_example";  // string? | Constrains results to jobs that start with the defined prefix (optional) 
-            var xNomadToken = "xNomadToken_example";  // string? | A Nomad ACL token. (optional) 
+            var wait = wait_example;  // string | Provided with IndexParam to wait for change. (optional) 
+            var stale = stale_example;  // string | If present, results will include stale reads. (optional) 
+            var prefix = prefix_example;  // string | Constrains results to jobs that start with the defined prefix (optional) 
+            var xNomadToken = xNomadToken_example;  // string | A Nomad ACL token. (optional) 
             var perPage = 56;  // int? | Maximum number of results to return. (optional) 
-            var nextToken = "nextToken_example";  // string? | Indicates where to start paging for queries that support pagination. (optional) 
+            var nextToken = nextToken_example;  // string | Indicates where to start paging for queries that support pagination. (optional) 
             var resources = true;  // bool? | Whether or not to include the NodeResources and ReservedResources fields in the response. (optional) 
 
             try
@@ -261,15 +261,15 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **region** | **string?**| Filters results based on the specified region. | [optional] 
- **_namespace** | **string?**| Filters results based on the specified namespace. | [optional] 
+ **region** | **string**| Filters results based on the specified region. | [optional] 
+ **_namespace** | **string**| Filters results based on the specified namespace. | [optional] 
  **index** | **int?**| If set, wait until query exceeds given index. Must be provided with WaitParam. | [optional] 
- **wait** | **string?**| Provided with IndexParam to wait for change. | [optional] 
- **stale** | **string?**| If present, results will include stale reads. | [optional] 
- **prefix** | **string?**| Constrains results to jobs that start with the defined prefix | [optional] 
- **xNomadToken** | **string?**| A Nomad ACL token. | [optional] 
+ **wait** | **string**| Provided with IndexParam to wait for change. | [optional] 
+ **stale** | **string**| If present, results will include stale reads. | [optional] 
+ **prefix** | **string**| Constrains results to jobs that start with the defined prefix | [optional] 
+ **xNomadToken** | **string**| A Nomad ACL token. | [optional] 
  **perPage** | **int?**| Maximum number of results to return. | [optional] 
- **nextToken** | **string?**| Indicates where to start paging for queries that support pagination. | [optional] 
+ **nextToken** | **string**| Indicates where to start paging for queries that support pagination. | [optional] 
  **resources** | **bool?**| Whether or not to include the NodeResources and ReservedResources fields in the response. | [optional] 
 
 ### Return type
@@ -299,7 +299,7 @@ Name | Type | Description  | Notes
 
 <a name="updatenodedrain"></a>
 # **UpdateNodeDrain**
-> NodeDrainUpdateResponse UpdateNodeDrain (string nodeId, NodeUpdateDrainRequest nodeUpdateDrainRequest, string? region = null, string? _namespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null)
+> NodeDrainUpdateResponse UpdateNodeDrain (string nodeId, NodeUpdateDrainRequest nodeUpdateDrainRequest, string region = null, string _namespace = null, int? index = null, string wait = null, string stale = null, string prefix = null, string xNomadToken = null, int? perPage = null, string nextToken = null)
 
 
 
@@ -325,17 +325,17 @@ namespace Example
             // config.AddApiKeyPrefix("X-Nomad-Token", "Bearer");
 
             var apiInstance = new NodesApi(config);
-            var nodeId = "nodeId_example";  // string | The ID of the node.
+            var nodeId = nodeId_example;  // string | The ID of the node.
             var nodeUpdateDrainRequest = new NodeUpdateDrainRequest(); // NodeUpdateDrainRequest | 
-            var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var region = region_example;  // string | Filters results based on the specified region. (optional) 
+            var _namespace = _namespace_example;  // string | Filters results based on the specified namespace. (optional) 
             var index = 56;  // int? | If set, wait until query exceeds given index. Must be provided with WaitParam. (optional) 
-            var wait = "wait_example";  // string? | Provided with IndexParam to wait for change. (optional) 
-            var stale = "stale_example";  // string? | If present, results will include stale reads. (optional) 
-            var prefix = "prefix_example";  // string? | Constrains results to jobs that start with the defined prefix (optional) 
-            var xNomadToken = "xNomadToken_example";  // string? | A Nomad ACL token. (optional) 
+            var wait = wait_example;  // string | Provided with IndexParam to wait for change. (optional) 
+            var stale = stale_example;  // string | If present, results will include stale reads. (optional) 
+            var prefix = prefix_example;  // string | Constrains results to jobs that start with the defined prefix (optional) 
+            var xNomadToken = xNomadToken_example;  // string | A Nomad ACL token. (optional) 
             var perPage = 56;  // int? | Maximum number of results to return. (optional) 
-            var nextToken = "nextToken_example";  // string? | Indicates where to start paging for queries that support pagination. (optional) 
+            var nextToken = nextToken_example;  // string | Indicates where to start paging for queries that support pagination. (optional) 
 
             try
             {
@@ -359,15 +359,15 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **nodeId** | **string**| The ID of the node. | 
  **nodeUpdateDrainRequest** | [**NodeUpdateDrainRequest**](NodeUpdateDrainRequest.md)|  | 
- **region** | **string?**| Filters results based on the specified region. | [optional] 
- **_namespace** | **string?**| Filters results based on the specified namespace. | [optional] 
+ **region** | **string**| Filters results based on the specified region. | [optional] 
+ **_namespace** | **string**| Filters results based on the specified namespace. | [optional] 
  **index** | **int?**| If set, wait until query exceeds given index. Must be provided with WaitParam. | [optional] 
- **wait** | **string?**| Provided with IndexParam to wait for change. | [optional] 
- **stale** | **string?**| If present, results will include stale reads. | [optional] 
- **prefix** | **string?**| Constrains results to jobs that start with the defined prefix | [optional] 
- **xNomadToken** | **string?**| A Nomad ACL token. | [optional] 
+ **wait** | **string**| Provided with IndexParam to wait for change. | [optional] 
+ **stale** | **string**| If present, results will include stale reads. | [optional] 
+ **prefix** | **string**| Constrains results to jobs that start with the defined prefix | [optional] 
+ **xNomadToken** | **string**| A Nomad ACL token. | [optional] 
  **perPage** | **int?**| Maximum number of results to return. | [optional] 
- **nextToken** | **string?**| Indicates where to start paging for queries that support pagination. | [optional] 
+ **nextToken** | **string**| Indicates where to start paging for queries that support pagination. | [optional] 
 
 ### Return type
 
@@ -396,7 +396,7 @@ Name | Type | Description  | Notes
 
 <a name="updatenodeeligibility"></a>
 # **UpdateNodeEligibility**
-> NodeEligibilityUpdateResponse UpdateNodeEligibility (string nodeId, NodeUpdateEligibilityRequest nodeUpdateEligibilityRequest, string? region = null, string? _namespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null)
+> NodeEligibilityUpdateResponse UpdateNodeEligibility (string nodeId, NodeUpdateEligibilityRequest nodeUpdateEligibilityRequest, string region = null, string _namespace = null, int? index = null, string wait = null, string stale = null, string prefix = null, string xNomadToken = null, int? perPage = null, string nextToken = null)
 
 
 
@@ -422,17 +422,17 @@ namespace Example
             // config.AddApiKeyPrefix("X-Nomad-Token", "Bearer");
 
             var apiInstance = new NodesApi(config);
-            var nodeId = "nodeId_example";  // string | The ID of the node.
+            var nodeId = nodeId_example;  // string | The ID of the node.
             var nodeUpdateEligibilityRequest = new NodeUpdateEligibilityRequest(); // NodeUpdateEligibilityRequest | 
-            var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var region = region_example;  // string | Filters results based on the specified region. (optional) 
+            var _namespace = _namespace_example;  // string | Filters results based on the specified namespace. (optional) 
             var index = 56;  // int? | If set, wait until query exceeds given index. Must be provided with WaitParam. (optional) 
-            var wait = "wait_example";  // string? | Provided with IndexParam to wait for change. (optional) 
-            var stale = "stale_example";  // string? | If present, results will include stale reads. (optional) 
-            var prefix = "prefix_example";  // string? | Constrains results to jobs that start with the defined prefix (optional) 
-            var xNomadToken = "xNomadToken_example";  // string? | A Nomad ACL token. (optional) 
+            var wait = wait_example;  // string | Provided with IndexParam to wait for change. (optional) 
+            var stale = stale_example;  // string | If present, results will include stale reads. (optional) 
+            var prefix = prefix_example;  // string | Constrains results to jobs that start with the defined prefix (optional) 
+            var xNomadToken = xNomadToken_example;  // string | A Nomad ACL token. (optional) 
             var perPage = 56;  // int? | Maximum number of results to return. (optional) 
-            var nextToken = "nextToken_example";  // string? | Indicates where to start paging for queries that support pagination. (optional) 
+            var nextToken = nextToken_example;  // string | Indicates where to start paging for queries that support pagination. (optional) 
 
             try
             {
@@ -456,15 +456,15 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **nodeId** | **string**| The ID of the node. | 
  **nodeUpdateEligibilityRequest** | [**NodeUpdateEligibilityRequest**](NodeUpdateEligibilityRequest.md)|  | 
- **region** | **string?**| Filters results based on the specified region. | [optional] 
- **_namespace** | **string?**| Filters results based on the specified namespace. | [optional] 
+ **region** | **string**| Filters results based on the specified region. | [optional] 
+ **_namespace** | **string**| Filters results based on the specified namespace. | [optional] 
  **index** | **int?**| If set, wait until query exceeds given index. Must be provided with WaitParam. | [optional] 
- **wait** | **string?**| Provided with IndexParam to wait for change. | [optional] 
- **stale** | **string?**| If present, results will include stale reads. | [optional] 
- **prefix** | **string?**| Constrains results to jobs that start with the defined prefix | [optional] 
- **xNomadToken** | **string?**| A Nomad ACL token. | [optional] 
+ **wait** | **string**| Provided with IndexParam to wait for change. | [optional] 
+ **stale** | **string**| If present, results will include stale reads. | [optional] 
+ **prefix** | **string**| Constrains results to jobs that start with the defined prefix | [optional] 
+ **xNomadToken** | **string**| A Nomad ACL token. | [optional] 
  **perPage** | **int?**| Maximum number of results to return. | [optional] 
- **nextToken** | **string?**| Indicates where to start paging for queries that support pagination. | [optional] 
+ **nextToken** | **string**| Indicates where to start paging for queries that support pagination. | [optional] 
 
 ### Return type
 
@@ -493,7 +493,7 @@ Name | Type | Description  | Notes
 
 <a name="updatenodepurge"></a>
 # **UpdateNodePurge**
-> NodePurgeResponse UpdateNodePurge (string nodeId, string? region = null, string? _namespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null)
+> NodePurgeResponse UpdateNodePurge (string nodeId, string region = null, string _namespace = null, int? index = null, string wait = null, string stale = null, string prefix = null, string xNomadToken = null, int? perPage = null, string nextToken = null)
 
 
 
@@ -519,16 +519,16 @@ namespace Example
             // config.AddApiKeyPrefix("X-Nomad-Token", "Bearer");
 
             var apiInstance = new NodesApi(config);
-            var nodeId = "nodeId_example";  // string | The ID of the node.
-            var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var nodeId = nodeId_example;  // string | The ID of the node.
+            var region = region_example;  // string | Filters results based on the specified region. (optional) 
+            var _namespace = _namespace_example;  // string | Filters results based on the specified namespace. (optional) 
             var index = 56;  // int? | If set, wait until query exceeds given index. Must be provided with WaitParam. (optional) 
-            var wait = "wait_example";  // string? | Provided with IndexParam to wait for change. (optional) 
-            var stale = "stale_example";  // string? | If present, results will include stale reads. (optional) 
-            var prefix = "prefix_example";  // string? | Constrains results to jobs that start with the defined prefix (optional) 
-            var xNomadToken = "xNomadToken_example";  // string? | A Nomad ACL token. (optional) 
+            var wait = wait_example;  // string | Provided with IndexParam to wait for change. (optional) 
+            var stale = stale_example;  // string | If present, results will include stale reads. (optional) 
+            var prefix = prefix_example;  // string | Constrains results to jobs that start with the defined prefix (optional) 
+            var xNomadToken = xNomadToken_example;  // string | A Nomad ACL token. (optional) 
             var perPage = 56;  // int? | Maximum number of results to return. (optional) 
-            var nextToken = "nextToken_example";  // string? | Indicates where to start paging for queries that support pagination. (optional) 
+            var nextToken = nextToken_example;  // string | Indicates where to start paging for queries that support pagination. (optional) 
 
             try
             {
@@ -551,15 +551,15 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **nodeId** | **string**| The ID of the node. | 
- **region** | **string?**| Filters results based on the specified region. | [optional] 
- **_namespace** | **string?**| Filters results based on the specified namespace. | [optional] 
+ **region** | **string**| Filters results based on the specified region. | [optional] 
+ **_namespace** | **string**| Filters results based on the specified namespace. | [optional] 
  **index** | **int?**| If set, wait until query exceeds given index. Must be provided with WaitParam. | [optional] 
- **wait** | **string?**| Provided with IndexParam to wait for change. | [optional] 
- **stale** | **string?**| If present, results will include stale reads. | [optional] 
- **prefix** | **string?**| Constrains results to jobs that start with the defined prefix | [optional] 
- **xNomadToken** | **string?**| A Nomad ACL token. | [optional] 
+ **wait** | **string**| Provided with IndexParam to wait for change. | [optional] 
+ **stale** | **string**| If present, results will include stale reads. | [optional] 
+ **prefix** | **string**| Constrains results to jobs that start with the defined prefix | [optional] 
+ **xNomadToken** | **string**| A Nomad ACL token. | [optional] 
  **perPage** | **int?**| Maximum number of results to return. | [optional] 
- **nextToken** | **string?**| Indicates where to start paging for queries that support pagination. | [optional] 
+ **nextToken** | **string**| Indicates where to start paging for queries that support pagination. | [optional] 
 
 ### Return type
 

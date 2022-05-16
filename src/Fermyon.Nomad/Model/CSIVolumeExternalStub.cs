@@ -109,7 +109,7 @@ namespace Fermyon.Nomad.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            StringBuilder sb = new StringBuilder();
+            var sb = new StringBuilder();
             sb.Append("class CSIVolumeExternalStub {\n");
             sb.Append("  CapacityBytes: ").Append(CapacityBytes).Append("\n");
             sb.Append("  CloneID: ").Append(CloneID).Append("\n");
@@ -150,9 +150,8 @@ namespace Fermyon.Nomad.Model
         public bool Equals(CSIVolumeExternalStub input)
         {
             if (input == null)
-            {
                 return false;
-            }
+
             return 
                 (
                     this.CapacityBytes == input.CapacityBytes ||
@@ -205,32 +204,20 @@ namespace Fermyon.Nomad.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                hashCode = (hashCode * 59) + this.CapacityBytes.GetHashCode();
+                hashCode = hashCode * 59 + this.CapacityBytes.GetHashCode();
                 if (this.CloneID != null)
-                {
-                    hashCode = (hashCode * 59) + this.CloneID.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.CloneID.GetHashCode();
                 if (this.ExternalID != null)
-                {
-                    hashCode = (hashCode * 59) + this.ExternalID.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.IsAbnormal.GetHashCode();
+                    hashCode = hashCode * 59 + this.ExternalID.GetHashCode();
+                hashCode = hashCode * 59 + this.IsAbnormal.GetHashCode();
                 if (this.PublishedExternalNodeIDs != null)
-                {
-                    hashCode = (hashCode * 59) + this.PublishedExternalNodeIDs.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.PublishedExternalNodeIDs.GetHashCode();
                 if (this.SnapshotID != null)
-                {
-                    hashCode = (hashCode * 59) + this.SnapshotID.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.SnapshotID.GetHashCode();
                 if (this.Status != null)
-                {
-                    hashCode = (hashCode * 59) + this.Status.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.Status.GetHashCode();
                 if (this.VolumeContext != null)
-                {
-                    hashCode = (hashCode * 59) + this.VolumeContext.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.VolumeContext.GetHashCode();
                 return hashCode;
             }
         }
@@ -240,7 +227,7 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

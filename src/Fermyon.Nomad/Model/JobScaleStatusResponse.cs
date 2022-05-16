@@ -93,7 +93,7 @@ namespace Fermyon.Nomad.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            StringBuilder sb = new StringBuilder();
+            var sb = new StringBuilder();
             sb.Append("class JobScaleStatusResponse {\n");
             sb.Append("  JobCreateIndex: ").Append(JobCreateIndex).Append("\n");
             sb.Append("  JobID: ").Append(JobID).Append("\n");
@@ -132,9 +132,8 @@ namespace Fermyon.Nomad.Model
         public bool Equals(JobScaleStatusResponse input)
         {
             if (input == null)
-            {
                 return false;
-            }
+
             return 
                 (
                     this.JobCreateIndex == input.JobCreateIndex ||
@@ -175,21 +174,15 @@ namespace Fermyon.Nomad.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                hashCode = (hashCode * 59) + this.JobCreateIndex.GetHashCode();
+                hashCode = hashCode * 59 + this.JobCreateIndex.GetHashCode();
                 if (this.JobID != null)
-                {
-                    hashCode = (hashCode * 59) + this.JobID.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.JobModifyIndex.GetHashCode();
-                hashCode = (hashCode * 59) + this.JobStopped.GetHashCode();
+                    hashCode = hashCode * 59 + this.JobID.GetHashCode();
+                hashCode = hashCode * 59 + this.JobModifyIndex.GetHashCode();
+                hashCode = hashCode * 59 + this.JobStopped.GetHashCode();
                 if (this.Namespace != null)
-                {
-                    hashCode = (hashCode * 59) + this.Namespace.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.Namespace.GetHashCode();
                 if (this.TaskGroups != null)
-                {
-                    hashCode = (hashCode * 59) + this.TaskGroups.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.TaskGroups.GetHashCode();
                 return hashCode;
             }
         }
@@ -199,28 +192,28 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // JobCreateIndex (int) maximum
-            if (this.JobCreateIndex > (int)384)
+            if(this.JobCreateIndex > (int)384)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for JobCreateIndex, must be a value less than or equal to 384.", new [] { "JobCreateIndex" });
             }
 
             // JobCreateIndex (int) minimum
-            if (this.JobCreateIndex < (int)0)
+            if(this.JobCreateIndex < (int)0)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for JobCreateIndex, must be a value greater than or equal to 0.", new [] { "JobCreateIndex" });
             }
 
             // JobModifyIndex (int) maximum
-            if (this.JobModifyIndex > (int)384)
+            if(this.JobModifyIndex > (int)384)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for JobModifyIndex, must be a value less than or equal to 384.", new [] { "JobModifyIndex" });
             }
 
             // JobModifyIndex (int) minimum
-            if (this.JobModifyIndex < (int)0)
+            if(this.JobModifyIndex < (int)0)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for JobModifyIndex, must be a value greater than or equal to 0.", new [] { "JobModifyIndex" });
             }

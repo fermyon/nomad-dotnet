@@ -61,7 +61,7 @@ namespace Fermyon.Nomad.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            StringBuilder sb = new StringBuilder();
+            var sb = new StringBuilder();
             sb.Append("class PointValue {\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Points: ").Append(Points).Append("\n");
@@ -96,9 +96,8 @@ namespace Fermyon.Nomad.Model
         public bool Equals(PointValue input)
         {
             if (input == null)
-            {
                 return false;
-            }
+
             return 
                 (
                     this.Name == input.Name ||
@@ -123,13 +122,9 @@ namespace Fermyon.Nomad.Model
             {
                 int hashCode = 41;
                 if (this.Name != null)
-                {
-                    hashCode = (hashCode * 59) + this.Name.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.Name.GetHashCode();
                 if (this.Points != null)
-                {
-                    hashCode = (hashCode * 59) + this.Points.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.Points.GetHashCode();
                 return hashCode;
             }
         }
@@ -139,7 +134,7 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

@@ -85,7 +85,7 @@ namespace Fermyon.Nomad.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            StringBuilder sb = new StringBuilder();
+            var sb = new StringBuilder();
             sb.Append("class NodeEvent {\n");
             sb.Append("  CreateIndex: ").Append(CreateIndex).Append("\n");
             sb.Append("  Details: ").Append(Details).Append("\n");
@@ -123,9 +123,8 @@ namespace Fermyon.Nomad.Model
         public bool Equals(NodeEvent input)
         {
             if (input == null)
-            {
                 return false;
-            }
+
             return 
                 (
                     this.CreateIndex == input.CreateIndex ||
@@ -163,23 +162,15 @@ namespace Fermyon.Nomad.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                hashCode = (hashCode * 59) + this.CreateIndex.GetHashCode();
+                hashCode = hashCode * 59 + this.CreateIndex.GetHashCode();
                 if (this.Details != null)
-                {
-                    hashCode = (hashCode * 59) + this.Details.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.Details.GetHashCode();
                 if (this.Message != null)
-                {
-                    hashCode = (hashCode * 59) + this.Message.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.Message.GetHashCode();
                 if (this.Subsystem != null)
-                {
-                    hashCode = (hashCode * 59) + this.Subsystem.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.Subsystem.GetHashCode();
                 if (this.Timestamp != null)
-                {
-                    hashCode = (hashCode * 59) + this.Timestamp.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.Timestamp.GetHashCode();
                 return hashCode;
             }
         }
@@ -189,16 +180,16 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // CreateIndex (int) maximum
-            if (this.CreateIndex > (int)384)
+            if(this.CreateIndex > (int)384)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for CreateIndex, must be a value less than or equal to 384.", new [] { "CreateIndex" });
             }
 
             // CreateIndex (int) minimum
-            if (this.CreateIndex < (int)0)
+            if(this.CreateIndex < (int)0)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for CreateIndex, must be a value greater than or equal to 0.", new [] { "CreateIndex" });
             }

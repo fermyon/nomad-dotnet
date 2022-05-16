@@ -101,7 +101,7 @@ namespace Fermyon.Nomad.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            StringBuilder sb = new StringBuilder();
+            var sb = new StringBuilder();
             sb.Append("class JobPlanResponse {\n");
             sb.Append("  Annotations: ").Append(Annotations).Append("\n");
             sb.Append("  CreatedEvals: ").Append(CreatedEvals).Append("\n");
@@ -141,9 +141,8 @@ namespace Fermyon.Nomad.Model
         public bool Equals(JobPlanResponse input)
         {
             if (input == null)
-            {
                 return false;
-            }
+
             return 
                 (
                     this.Annotations == input.Annotations ||
@@ -193,30 +192,18 @@ namespace Fermyon.Nomad.Model
             {
                 int hashCode = 41;
                 if (this.Annotations != null)
-                {
-                    hashCode = (hashCode * 59) + this.Annotations.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.Annotations.GetHashCode();
                 if (this.CreatedEvals != null)
-                {
-                    hashCode = (hashCode * 59) + this.CreatedEvals.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.CreatedEvals.GetHashCode();
                 if (this.Diff != null)
-                {
-                    hashCode = (hashCode * 59) + this.Diff.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.Diff.GetHashCode();
                 if (this.FailedTGAllocs != null)
-                {
-                    hashCode = (hashCode * 59) + this.FailedTGAllocs.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.JobModifyIndex.GetHashCode();
+                    hashCode = hashCode * 59 + this.FailedTGAllocs.GetHashCode();
+                hashCode = hashCode * 59 + this.JobModifyIndex.GetHashCode();
                 if (this.NextPeriodicLaunch != null)
-                {
-                    hashCode = (hashCode * 59) + this.NextPeriodicLaunch.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.NextPeriodicLaunch.GetHashCode();
                 if (this.Warnings != null)
-                {
-                    hashCode = (hashCode * 59) + this.Warnings.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.Warnings.GetHashCode();
                 return hashCode;
             }
         }
@@ -226,16 +213,16 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // JobModifyIndex (int) maximum
-            if (this.JobModifyIndex > (int)384)
+            if(this.JobModifyIndex > (int)384)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for JobModifyIndex, must be a value less than or equal to 384.", new [] { "JobModifyIndex" });
             }
 
             // JobModifyIndex (int) minimum
-            if (this.JobModifyIndex < (int)0)
+            if(this.JobModifyIndex < (int)0)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for JobModifyIndex, must be a value greater than or equal to 0.", new [] { "JobModifyIndex" });
             }

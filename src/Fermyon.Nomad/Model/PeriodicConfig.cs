@@ -85,7 +85,7 @@ namespace Fermyon.Nomad.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            StringBuilder sb = new StringBuilder();
+            var sb = new StringBuilder();
             sb.Append("class PeriodicConfig {\n");
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
             sb.Append("  ProhibitOverlap: ").Append(ProhibitOverlap).Append("\n");
@@ -123,9 +123,8 @@ namespace Fermyon.Nomad.Model
         public bool Equals(PeriodicConfig input)
         {
             if (input == null)
-            {
                 return false;
-            }
+
             return 
                 (
                     this.Enabled == input.Enabled ||
@@ -161,20 +160,14 @@ namespace Fermyon.Nomad.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                hashCode = (hashCode * 59) + this.Enabled.GetHashCode();
-                hashCode = (hashCode * 59) + this.ProhibitOverlap.GetHashCode();
+                hashCode = hashCode * 59 + this.Enabled.GetHashCode();
+                hashCode = hashCode * 59 + this.ProhibitOverlap.GetHashCode();
                 if (this.Spec != null)
-                {
-                    hashCode = (hashCode * 59) + this.Spec.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.Spec.GetHashCode();
                 if (this.SpecType != null)
-                {
-                    hashCode = (hashCode * 59) + this.SpecType.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.SpecType.GetHashCode();
                 if (this.TimeZone != null)
-                {
-                    hashCode = (hashCode * 59) + this.TimeZone.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.TimeZone.GetHashCode();
                 return hashCode;
             }
         }
@@ -184,7 +177,7 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

@@ -141,7 +141,7 @@ namespace Fermyon.Nomad.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            StringBuilder sb = new StringBuilder();
+            var sb = new StringBuilder();
             sb.Append("class Template {\n");
             sb.Append("  ChangeMode: ").Append(ChangeMode).Append("\n");
             sb.Append("  ChangeSignal: ").Append(ChangeSignal).Append("\n");
@@ -186,9 +186,8 @@ namespace Fermyon.Nomad.Model
         public bool Equals(Template input)
         {
             if (input == null)
-            {
                 return false;
-            }
+
             return 
                 (
                     this.ChangeMode == input.ChangeMode ||
@@ -259,44 +258,26 @@ namespace Fermyon.Nomad.Model
             {
                 int hashCode = 41;
                 if (this.ChangeMode != null)
-                {
-                    hashCode = (hashCode * 59) + this.ChangeMode.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.ChangeMode.GetHashCode();
                 if (this.ChangeSignal != null)
-                {
-                    hashCode = (hashCode * 59) + this.ChangeSignal.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.ChangeSignal.GetHashCode();
                 if (this.DestPath != null)
-                {
-                    hashCode = (hashCode * 59) + this.DestPath.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.DestPath.GetHashCode();
                 if (this.EmbeddedTmpl != null)
-                {
-                    hashCode = (hashCode * 59) + this.EmbeddedTmpl.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.Envvars.GetHashCode();
+                    hashCode = hashCode * 59 + this.EmbeddedTmpl.GetHashCode();
+                hashCode = hashCode * 59 + this.Envvars.GetHashCode();
                 if (this.LeftDelim != null)
-                {
-                    hashCode = (hashCode * 59) + this.LeftDelim.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.LeftDelim.GetHashCode();
                 if (this.Perms != null)
-                {
-                    hashCode = (hashCode * 59) + this.Perms.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.Perms.GetHashCode();
                 if (this.RightDelim != null)
-                {
-                    hashCode = (hashCode * 59) + this.RightDelim.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.RightDelim.GetHashCode();
                 if (this.SourcePath != null)
-                {
-                    hashCode = (hashCode * 59) + this.SourcePath.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.Splay.GetHashCode();
-                hashCode = (hashCode * 59) + this.VaultGrace.GetHashCode();
+                    hashCode = hashCode * 59 + this.SourcePath.GetHashCode();
+                hashCode = hashCode * 59 + this.Splay.GetHashCode();
+                hashCode = hashCode * 59 + this.VaultGrace.GetHashCode();
                 if (this.Wait != null)
-                {
-                    hashCode = (hashCode * 59) + this.Wait.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.Wait.GetHashCode();
                 return hashCode;
             }
         }
@@ -306,7 +287,7 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

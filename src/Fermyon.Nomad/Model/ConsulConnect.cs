@@ -77,7 +77,7 @@ namespace Fermyon.Nomad.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            StringBuilder sb = new StringBuilder();
+            var sb = new StringBuilder();
             sb.Append("class ConsulConnect {\n");
             sb.Append("  Gateway: ").Append(Gateway).Append("\n");
             sb.Append("  Native: ").Append(Native).Append("\n");
@@ -114,9 +114,8 @@ namespace Fermyon.Nomad.Model
         public bool Equals(ConsulConnect input)
         {
             if (input == null)
-            {
                 return false;
-            }
+
             return 
                 (
                     this.Gateway == input.Gateway ||
@@ -149,18 +148,12 @@ namespace Fermyon.Nomad.Model
             {
                 int hashCode = 41;
                 if (this.Gateway != null)
-                {
-                    hashCode = (hashCode * 59) + this.Gateway.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.Native.GetHashCode();
+                    hashCode = hashCode * 59 + this.Gateway.GetHashCode();
+                hashCode = hashCode * 59 + this.Native.GetHashCode();
                 if (this.SidecarService != null)
-                {
-                    hashCode = (hashCode * 59) + this.SidecarService.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.SidecarService.GetHashCode();
                 if (this.SidecarTask != null)
-                {
-                    hashCode = (hashCode * 59) + this.SidecarTask.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.SidecarTask.GetHashCode();
                 return hashCode;
             }
         }
@@ -170,7 +163,7 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

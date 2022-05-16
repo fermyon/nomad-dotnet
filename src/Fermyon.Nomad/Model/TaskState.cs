@@ -43,7 +43,7 @@ namespace Fermyon.Nomad.Model
         /// <param name="startedAt">startedAt.</param>
         /// <param name="state">state.</param>
         /// <param name="taskHandle">taskHandle.</param>
-        public TaskState(List<TaskEvent> events = default(List<TaskEvent>), bool failed = default(bool), DateTime finishedAt = default(DateTime), DateTime lastRestart = default(DateTime), int restarts = default(int), DateTime startedAt = default(DateTime), string state = default(string), TaskHandle taskHandle = default(TaskHandle))
+        public TaskState(List<TaskEvent> events = default(List<TaskEvent>), bool failed = default(bool), DateTime? finishedAt = default(DateTime?), DateTime? lastRestart = default(DateTime?), int restarts = default(int), DateTime? startedAt = default(DateTime?), string state = default(string), TaskHandle taskHandle = default(TaskHandle))
         {
             this.Events = events;
             this.Failed = failed;
@@ -71,13 +71,13 @@ namespace Fermyon.Nomad.Model
         /// Gets or Sets FinishedAt
         /// </summary>
         [DataMember(Name = "FinishedAt", EmitDefaultValue = false)]
-        public DateTime FinishedAt { get; set; }
+        public DateTime? FinishedAt { get; set; }
 
         /// <summary>
         /// Gets or Sets LastRestart
         /// </summary>
         [DataMember(Name = "LastRestart", EmitDefaultValue = false)]
-        public DateTime LastRestart { get; set; }
+        public DateTime? LastRestart { get; set; }
 
         /// <summary>
         /// Gets or Sets Restarts
@@ -89,7 +89,7 @@ namespace Fermyon.Nomad.Model
         /// Gets or Sets StartedAt
         /// </summary>
         [DataMember(Name = "StartedAt", EmitDefaultValue = false)]
-        public DateTime StartedAt { get; set; }
+        public DateTime? StartedAt { get; set; }
 
         /// <summary>
         /// Gets or Sets State
@@ -109,7 +109,7 @@ namespace Fermyon.Nomad.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            StringBuilder sb = new StringBuilder();
+            var sb = new StringBuilder();
             sb.Append("class TaskState {\n");
             sb.Append("  Events: ").Append(Events).Append("\n");
             sb.Append("  Failed: ").Append(Failed).Append("\n");
@@ -150,9 +150,8 @@ namespace Fermyon.Nomad.Model
         public bool Equals(TaskState input)
         {
             if (input == null)
-            {
                 return false;
-            }
+
             return 
                 (
                     this.Events == input.Events ||
@@ -205,31 +204,19 @@ namespace Fermyon.Nomad.Model
             {
                 int hashCode = 41;
                 if (this.Events != null)
-                {
-                    hashCode = (hashCode * 59) + this.Events.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.Failed.GetHashCode();
+                    hashCode = hashCode * 59 + this.Events.GetHashCode();
+                hashCode = hashCode * 59 + this.Failed.GetHashCode();
                 if (this.FinishedAt != null)
-                {
-                    hashCode = (hashCode * 59) + this.FinishedAt.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.FinishedAt.GetHashCode();
                 if (this.LastRestart != null)
-                {
-                    hashCode = (hashCode * 59) + this.LastRestart.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.Restarts.GetHashCode();
+                    hashCode = hashCode * 59 + this.LastRestart.GetHashCode();
+                hashCode = hashCode * 59 + this.Restarts.GetHashCode();
                 if (this.StartedAt != null)
-                {
-                    hashCode = (hashCode * 59) + this.StartedAt.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.StartedAt.GetHashCode();
                 if (this.State != null)
-                {
-                    hashCode = (hashCode * 59) + this.State.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.State.GetHashCode();
                 if (this.TaskHandle != null)
-                {
-                    hashCode = (hashCode * 59) + this.TaskHandle.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.TaskHandle.GetHashCode();
                 return hashCode;
             }
         }
@@ -239,16 +226,16 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // Restarts (int) maximum
-            if (this.Restarts > (int)384)
+            if(this.Restarts > (int)384)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Restarts, must be a value less than or equal to 384.", new [] { "Restarts" });
             }
 
             // Restarts (int) minimum
-            if (this.Restarts < (int)0)
+            if(this.Restarts < (int)0)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Restarts, must be a value greater than or equal to 0.", new [] { "Restarts" });
             }

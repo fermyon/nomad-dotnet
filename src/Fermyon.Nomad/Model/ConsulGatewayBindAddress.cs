@@ -69,7 +69,7 @@ namespace Fermyon.Nomad.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            StringBuilder sb = new StringBuilder();
+            var sb = new StringBuilder();
             sb.Append("class ConsulGatewayBindAddress {\n");
             sb.Append("  Address: ").Append(Address).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
@@ -105,9 +105,8 @@ namespace Fermyon.Nomad.Model
         public bool Equals(ConsulGatewayBindAddress input)
         {
             if (input == null)
-            {
                 return false;
-            }
+
             return 
                 (
                     this.Address == input.Address ||
@@ -135,14 +134,10 @@ namespace Fermyon.Nomad.Model
             {
                 int hashCode = 41;
                 if (this.Address != null)
-                {
-                    hashCode = (hashCode * 59) + this.Address.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.Address.GetHashCode();
                 if (this.Name != null)
-                {
-                    hashCode = (hashCode * 59) + this.Name.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.Port.GetHashCode();
+                    hashCode = hashCode * 59 + this.Name.GetHashCode();
+                hashCode = hashCode * 59 + this.Port.GetHashCode();
                 return hashCode;
             }
         }
@@ -152,7 +147,7 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

@@ -138,12 +138,12 @@ namespace Fermyon.Nomad.Test.Model
             // TODO unit test for the property 'StableSince'
         }
         /// <summary>
-        /// Test the property '_Version'
+        /// Test the property 'Version'
         /// </summary>
         [Fact]
-        public void _VersionTest()
+        public void VersionTest()
         {
-            // TODO unit test for the property '_Version'
+            // TODO unit test for the property 'Version'
         }
         /// <summary>
         /// Test the property 'Voter'

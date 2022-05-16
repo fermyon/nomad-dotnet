@@ -35,6 +35,7 @@ namespace Fermyon.Nomad.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Service" /> class.
         /// </summary>
+        /// <param name="address">address.</param>
         /// <param name="addressMode">addressMode.</param>
         /// <param name="canaryMeta">canaryMeta.</param>
         /// <param name="canaryTags">canaryTags.</param>
@@ -42,7 +43,6 @@ namespace Fermyon.Nomad.Model
         /// <param name="checks">checks.</param>
         /// <param name="connect">connect.</param>
         /// <param name="enableTagOverride">enableTagOverride.</param>
-        /// <param name="id">id.</param>
         /// <param name="meta">meta.</param>
         /// <param name="name">name.</param>
         /// <param name="onUpdate">onUpdate.</param>
@@ -50,8 +50,9 @@ namespace Fermyon.Nomad.Model
         /// <param name="provider">provider.</param>
         /// <param name="tags">tags.</param>
         /// <param name="taskName">taskName.</param>
-        public Service(string addressMode = default(string), Dictionary<string, string> canaryMeta = default(Dictionary<string, string>), List<string> canaryTags = default(List<string>), CheckRestart checkRestart = default(CheckRestart), List<ServiceCheck> checks = default(List<ServiceCheck>), ConsulConnect connect = default(ConsulConnect), bool enableTagOverride = default(bool), string id = default(string), Dictionary<string, string> meta = default(Dictionary<string, string>), string name = default(string), string onUpdate = default(string), string portLabel = default(string), string provider = default(string), List<string> tags = default(List<string>), string taskName = default(string))
+        public Service(string address = default(string), string addressMode = default(string), Dictionary<string, string> canaryMeta = default(Dictionary<string, string>), List<string> canaryTags = default(List<string>), CheckRestart checkRestart = default(CheckRestart), List<ServiceCheck> checks = default(List<ServiceCheck>), ConsulConnect connect = default(ConsulConnect), bool enableTagOverride = default(bool), Dictionary<string, string> meta = default(Dictionary<string, string>), string name = default(string), string onUpdate = default(string), string portLabel = default(string), string provider = default(string), List<string> tags = default(List<string>), string taskName = default(string))
         {
+            this.Address = address;
             this.AddressMode = addressMode;
             this.CanaryMeta = canaryMeta;
             this.CanaryTags = canaryTags;
@@ -59,7 +60,6 @@ namespace Fermyon.Nomad.Model
             this.Checks = checks;
             this.Connect = connect;
             this.EnableTagOverride = enableTagOverride;
-            this.Id = id;
             this.Meta = meta;
             this.Name = name;
             this.OnUpdate = onUpdate;
@@ -68,6 +68,12 @@ namespace Fermyon.Nomad.Model
             this.Tags = tags;
             this.TaskName = taskName;
         }
+
+        /// <summary>
+        /// Gets or Sets Address
+        /// </summary>
+        [DataMember(Name = "Address", EmitDefaultValue = false)]
+        public string Address { get; set; }
 
         /// <summary>
         /// Gets or Sets AddressMode
@@ -110,12 +116,6 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         [DataMember(Name = "EnableTagOverride", EmitDefaultValue = true)]
         public bool EnableTagOverride { get; set; }
-
-        /// <summary>
-        /// Gets or Sets Id
-        /// </summary>
-        [DataMember(Name = "Id", EmitDefaultValue = false)]
-        public string Id { get; set; }
 
         /// <summary>
         /// Gets or Sets Meta
@@ -165,8 +165,9 @@ namespace Fermyon.Nomad.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            StringBuilder sb = new StringBuilder();
+            var sb = new StringBuilder();
             sb.Append("class Service {\n");
+            sb.Append("  Address: ").Append(Address).Append("\n");
             sb.Append("  AddressMode: ").Append(AddressMode).Append("\n");
             sb.Append("  CanaryMeta: ").Append(CanaryMeta).Append("\n");
             sb.Append("  CanaryTags: ").Append(CanaryTags).Append("\n");
@@ -174,7 +175,6 @@ namespace Fermyon.Nomad.Model
             sb.Append("  Checks: ").Append(Checks).Append("\n");
             sb.Append("  Connect: ").Append(Connect).Append("\n");
             sb.Append("  EnableTagOverride: ").Append(EnableTagOverride).Append("\n");
-            sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Meta: ").Append(Meta).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  OnUpdate: ").Append(OnUpdate).Append("\n");
@@ -213,10 +213,14 @@ namespace Fermyon.Nomad.Model
         public bool Equals(Service input)
         {
             if (input == null)
-            {
                 return false;
-            }
+
             return 
+                (
+                    this.Address == input.Address ||
+                    (this.Address != null &&
+                    this.Address.Equals(input.Address))
+                ) && 
                 (
                     this.AddressMode == input.AddressMode ||
                     (this.AddressMode != null &&
@@ -253,11 +257,6 @@ namespace Fermyon.Nomad.Model
                 (
                     this.EnableTagOverride == input.EnableTagOverride ||
                     this.EnableTagOverride.Equals(input.EnableTagOverride)
-                ) && 
-                (
-                    this.Id == input.Id ||
-                    (this.Id != null &&
-                    this.Id.Equals(input.Id))
                 ) && 
                 (
                     this.Meta == input.Meta ||
@@ -307,63 +306,35 @@ namespace Fermyon.Nomad.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+                if (this.Address != null)
+                    hashCode = hashCode * 59 + this.Address.GetHashCode();
                 if (this.AddressMode != null)
-                {
-                    hashCode = (hashCode * 59) + this.AddressMode.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.AddressMode.GetHashCode();
                 if (this.CanaryMeta != null)
-                {
-                    hashCode = (hashCode * 59) + this.CanaryMeta.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.CanaryMeta.GetHashCode();
                 if (this.CanaryTags != null)
-                {
-                    hashCode = (hashCode * 59) + this.CanaryTags.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.CanaryTags.GetHashCode();
                 if (this.CheckRestart != null)
-                {
-                    hashCode = (hashCode * 59) + this.CheckRestart.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.CheckRestart.GetHashCode();
                 if (this.Checks != null)
-                {
-                    hashCode = (hashCode * 59) + this.Checks.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.Checks.GetHashCode();
                 if (this.Connect != null)
-                {
-                    hashCode = (hashCode * 59) + this.Connect.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.EnableTagOverride.GetHashCode();
-                if (this.Id != null)
-                {
-                    hashCode = (hashCode * 59) + this.Id.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.Connect.GetHashCode();
+                hashCode = hashCode * 59 + this.EnableTagOverride.GetHashCode();
                 if (this.Meta != null)
-                {
-                    hashCode = (hashCode * 59) + this.Meta.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.Meta.GetHashCode();
                 if (this.Name != null)
-                {
-                    hashCode = (hashCode * 59) + this.Name.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.Name.GetHashCode();
                 if (this.OnUpdate != null)
-                {
-                    hashCode = (hashCode * 59) + this.OnUpdate.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.OnUpdate.GetHashCode();
                 if (this.PortLabel != null)
-                {
-                    hashCode = (hashCode * 59) + this.PortLabel.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.PortLabel.GetHashCode();
                 if (this.Provider != null)
-                {
-                    hashCode = (hashCode * 59) + this.Provider.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.Provider.GetHashCode();
                 if (this.Tags != null)
-                {
-                    hashCode = (hashCode * 59) + this.Tags.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.Tags.GetHashCode();
                 if (this.TaskName != null)
-                {
-                    hashCode = (hashCode * 59) + this.TaskName.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.TaskName.GetHashCode();
                 return hashCode;
             }
         }
@@ -373,7 +344,7 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

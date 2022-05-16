@@ -117,7 +117,7 @@ namespace Fermyon.Nomad.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            StringBuilder sb = new StringBuilder();
+            var sb = new StringBuilder();
             sb.Append("class UpdateStrategy {\n");
             sb.Append("  AutoPromote: ").Append(AutoPromote).Append("\n");
             sb.Append("  AutoRevert: ").Append(AutoRevert).Append("\n");
@@ -159,9 +159,8 @@ namespace Fermyon.Nomad.Model
         public bool Equals(UpdateStrategy input)
         {
             if (input == null)
-            {
                 return false;
-            }
+
             return 
                 (
                     this.AutoPromote == input.AutoPromote ||
@@ -211,18 +210,16 @@ namespace Fermyon.Nomad.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                hashCode = (hashCode * 59) + this.AutoPromote.GetHashCode();
-                hashCode = (hashCode * 59) + this.AutoRevert.GetHashCode();
-                hashCode = (hashCode * 59) + this.Canary.GetHashCode();
+                hashCode = hashCode * 59 + this.AutoPromote.GetHashCode();
+                hashCode = hashCode * 59 + this.AutoRevert.GetHashCode();
+                hashCode = hashCode * 59 + this.Canary.GetHashCode();
                 if (this.HealthCheck != null)
-                {
-                    hashCode = (hashCode * 59) + this.HealthCheck.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.HealthyDeadline.GetHashCode();
-                hashCode = (hashCode * 59) + this.MaxParallel.GetHashCode();
-                hashCode = (hashCode * 59) + this.MinHealthyTime.GetHashCode();
-                hashCode = (hashCode * 59) + this.ProgressDeadline.GetHashCode();
-                hashCode = (hashCode * 59) + this.Stagger.GetHashCode();
+                    hashCode = hashCode * 59 + this.HealthCheck.GetHashCode();
+                hashCode = hashCode * 59 + this.HealthyDeadline.GetHashCode();
+                hashCode = hashCode * 59 + this.MaxParallel.GetHashCode();
+                hashCode = hashCode * 59 + this.MinHealthyTime.GetHashCode();
+                hashCode = hashCode * 59 + this.ProgressDeadline.GetHashCode();
+                hashCode = hashCode * 59 + this.Stagger.GetHashCode();
                 return hashCode;
             }
         }
@@ -232,7 +229,7 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

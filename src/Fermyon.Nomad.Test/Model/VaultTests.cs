@@ -74,14 +74,6 @@ namespace Fermyon.Nomad.Test.Model
             // TODO unit test for the property 'ChangeSignal'
         }
         /// <summary>
-        /// Test the property 'EntityAlias'
-        /// </summary>
-        [Fact]
-        public void EntityAliasTest()
-        {
-            // TODO unit test for the property 'EntityAlias'
-        }
-        /// <summary>
         /// Test the property 'Env'
         /// </summary>
         [Fact]

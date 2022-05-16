@@ -77,7 +77,7 @@ namespace Fermyon.Nomad.Client
 
         /// <summary>
         /// Gets or sets the API key based on the authentication name.
-        /// This is the key and value comprising the "secret" for accessing an API.
+        /// This is the key and value comprising the "secret" for acessing an API.
         /// </summary>
         /// <value>The API key.</value>
         private IDictionary<string, string> _apiKey;
@@ -96,13 +96,6 @@ namespace Fermyon.Nomad.Client
         /// </summary>
         /// <value>The servers</value>
         private IList<IReadOnlyDictionary<string, object>> _servers;
-
-        /// <summary>
-        /// Gets or sets the operation servers defined in the OpenAPI spec.
-        /// </summary>
-        /// <value>The operation servers</value>
-        private IReadOnlyDictionary<string, List<IReadOnlyDictionary<string, object>>> _operationServers;
-
         #endregion Private Members
 
         #region Constructors
@@ -189,9 +182,6 @@ namespace Fermyon.Nomad.Client
                         }
                     }
                 }
-            };
-            OperationServers = new Dictionary<string, List<IReadOnlyDictionary<string, object>>>()
-            {
             };
 
             // Setting Timeout has side effects (forces ApiClient creation).
@@ -453,23 +443,6 @@ namespace Fermyon.Nomad.Client
         }
 
         /// <summary>
-        /// Gets or sets the operation servers.
-        /// </summary>
-        /// <value>The operation servers.</value>
-        public virtual IReadOnlyDictionary<string, List<IReadOnlyDictionary<string, object>>> OperationServers
-        {
-            get { return _operationServers; }
-            set
-            {
-                if (value == null)
-                {
-                    throw new InvalidOperationException("Operation servers may not be null.");
-                }
-                _operationServers = value;
-            }
-        }
-
-        /// <summary>
         /// Returns URL based on server settings without providing values
         /// for the variables
         /// </summary>
@@ -477,7 +450,7 @@ namespace Fermyon.Nomad.Client
         /// <return>The server URL.</return>
         public string GetServerUrl(int index)
         {
-            return GetServerUrl(Servers, index, null);
+            return GetServerUrl(index, null);
         }
 
         /// <summary>
@@ -488,49 +461,9 @@ namespace Fermyon.Nomad.Client
         /// <return>The server URL.</return>
         public string GetServerUrl(int index, Dictionary<string, string> inputVariables)
         {
-            return GetServerUrl(Servers, index, inputVariables);
-        }
-
-        /// <summary>
-        /// Returns URL based on operation server settings.
-        /// </summary>
-        /// <param name="operation">Operation associated with the request path.</param>
-        /// <param name="index">Array index of the server settings.</param>
-        /// <return>The operation server URL.</return>
-        public string GetOperationServerUrl(string operation, int index)
-        {
-            return GetOperationServerUrl(operation, index, null);
-        }
-
-        /// <summary>
-        /// Returns URL based on operation server settings.
-        /// </summary>
-        /// <param name="operation">Operation associated with the request path.</param>
-        /// <param name="index">Array index of the server settings.</param>
-        /// <param name="inputVariables">Dictionary of the variables and the corresponding values.</param>
-        /// <return>The operation server URL.</return>
-        public string GetOperationServerUrl(string operation, int index, Dictionary<string, string> inputVariables)
-        {
-            if (OperationServers.TryGetValue(operation, out var operationServer))
+            if (index < 0 || index >= Servers.Count)
             {
-                return GetServerUrl(operationServer, index, inputVariables);
-            }
-
-            return null;
-        }
-
-        /// <summary>
-        /// Returns URL based on server settings.
-        /// </summary>
-        /// <param name="servers">Dictionary of server settings.</param>
-        /// <param name="index">Array index of the server settings.</param>
-        /// <param name="inputVariables">Dictionary of the variables and the corresponding values.</param>
-        /// <return>The server URL.</return>
-        private string GetServerUrl(IList<IReadOnlyDictionary<string, object>> servers, int index, Dictionary<string, string> inputVariables)
-        {
-            if (index < 0 || index >= servers.Count)
-            {
-                throw new InvalidOperationException($"Invalid index {index} when selecting the server. Must be less than {servers.Count}.");
+                throw new InvalidOperationException($"Invalid index {index} when selecting the server. Must be less than {Servers.Count}.");
             }
 
             if (inputVariables == null)
@@ -538,33 +471,30 @@ namespace Fermyon.Nomad.Client
                 inputVariables = new Dictionary<string, string>();
             }
 
-            IReadOnlyDictionary<string, object> server = servers[index];
+            IReadOnlyDictionary<string, object> server = Servers[index];
             string url = (string)server["url"];
 
-            if (server.ContainsKey("variables"))
+            // go through variable and assign a value
+            foreach (KeyValuePair<string, object> variable in (IReadOnlyDictionary<string, object>)server["variables"])
             {
-                // go through each variable and assign a value
-                foreach (KeyValuePair<string, object> variable in (IReadOnlyDictionary<string, object>)server["variables"])
+
+                IReadOnlyDictionary<string, object> serverVariables = (IReadOnlyDictionary<string, object>)(variable.Value);
+
+                if (inputVariables.ContainsKey(variable.Key))
                 {
-
-                    IReadOnlyDictionary<string, object> serverVariables = (IReadOnlyDictionary<string, object>)(variable.Value);
-
-                    if (inputVariables.ContainsKey(variable.Key))
+                    if (((List<string>)serverVariables["enum_values"]).Contains(inputVariables[variable.Key]))
                     {
-                        if (((List<string>)serverVariables["enum_values"]).Contains(inputVariables[variable.Key]))
-                        {
-                            url = url.Replace("{" + variable.Key + "}", inputVariables[variable.Key]);
-                        }
-                        else
-                        {
-                            throw new InvalidOperationException($"The variable `{variable.Key}` in the server URL has invalid value #{inputVariables[variable.Key]}. Must be {(List<string>)serverVariables["enum_values"]}");
-                        }
+                        url = url.Replace("{" + variable.Key + "}", inputVariables[variable.Key]);
                     }
                     else
                     {
-                        // use default value
-                        url = url.Replace("{" + variable.Key + "}", (string)serverVariables["default_value"]);
+                        throw new InvalidOperationException($"The variable `{variable.Key}` in the server URL has invalid value #{inputVariables[variable.Key]}. Must be {(List<string>)serverVariables["enum_values"]}");
                     }
+                }
+                else
+                {
+                    // use defualt value
+                    url = url.Replace("{" + variable.Key + "}", (string)serverVariables["default_value"]);
                 }
             }
 
@@ -644,8 +574,7 @@ namespace Fermyon.Nomad.Client
                 Password = second.Password ?? first.Password,
                 AccessToken = second.AccessToken ?? first.AccessToken,
                 TempFolderPath = second.TempFolderPath ?? first.TempFolderPath,
-                DateTimeFormat = second.DateTimeFormat ?? first.DateTimeFormat,
-                ClientCertificates = second.ClientCertificates ?? first.ClientCertificates,
+                DateTimeFormat = second.DateTimeFormat ?? first.DateTimeFormat
             };
             return config;
         }

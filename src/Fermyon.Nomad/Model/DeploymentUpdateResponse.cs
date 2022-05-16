@@ -93,7 +93,7 @@ namespace Fermyon.Nomad.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            StringBuilder sb = new StringBuilder();
+            var sb = new StringBuilder();
             sb.Append("class DeploymentUpdateResponse {\n");
             sb.Append("  DeploymentModifyIndex: ").Append(DeploymentModifyIndex).Append("\n");
             sb.Append("  EvalCreateIndex: ").Append(EvalCreateIndex).Append("\n");
@@ -132,9 +132,8 @@ namespace Fermyon.Nomad.Model
         public bool Equals(DeploymentUpdateResponse input)
         {
             if (input == null)
-            {
                 return false;
-            }
+
             return 
                 (
                     this.DeploymentModifyIndex == input.DeploymentModifyIndex ||
@@ -172,15 +171,13 @@ namespace Fermyon.Nomad.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                hashCode = (hashCode * 59) + this.DeploymentModifyIndex.GetHashCode();
-                hashCode = (hashCode * 59) + this.EvalCreateIndex.GetHashCode();
+                hashCode = hashCode * 59 + this.DeploymentModifyIndex.GetHashCode();
+                hashCode = hashCode * 59 + this.EvalCreateIndex.GetHashCode();
                 if (this.EvalID != null)
-                {
-                    hashCode = (hashCode * 59) + this.EvalID.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.LastIndex.GetHashCode();
-                hashCode = (hashCode * 59) + this.RequestTime.GetHashCode();
-                hashCode = (hashCode * 59) + this.RevertedJobVersion.GetHashCode();
+                    hashCode = hashCode * 59 + this.EvalID.GetHashCode();
+                hashCode = hashCode * 59 + this.LastIndex.GetHashCode();
+                hashCode = hashCode * 59 + this.RequestTime.GetHashCode();
+                hashCode = hashCode * 59 + this.RevertedJobVersion.GetHashCode();
                 return hashCode;
             }
         }
@@ -190,52 +187,52 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // DeploymentModifyIndex (int) maximum
-            if (this.DeploymentModifyIndex > (int)384)
+            if(this.DeploymentModifyIndex > (int)384)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DeploymentModifyIndex, must be a value less than or equal to 384.", new [] { "DeploymentModifyIndex" });
             }
 
             // DeploymentModifyIndex (int) minimum
-            if (this.DeploymentModifyIndex < (int)0)
+            if(this.DeploymentModifyIndex < (int)0)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DeploymentModifyIndex, must be a value greater than or equal to 0.", new [] { "DeploymentModifyIndex" });
             }
 
             // EvalCreateIndex (int) maximum
-            if (this.EvalCreateIndex > (int)384)
+            if(this.EvalCreateIndex > (int)384)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for EvalCreateIndex, must be a value less than or equal to 384.", new [] { "EvalCreateIndex" });
             }
 
             // EvalCreateIndex (int) minimum
-            if (this.EvalCreateIndex < (int)0)
+            if(this.EvalCreateIndex < (int)0)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for EvalCreateIndex, must be a value greater than or equal to 0.", new [] { "EvalCreateIndex" });
             }
 
             // LastIndex (int) maximum
-            if (this.LastIndex > (int)384)
+            if(this.LastIndex > (int)384)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for LastIndex, must be a value less than or equal to 384.", new [] { "LastIndex" });
             }
 
             // LastIndex (int) minimum
-            if (this.LastIndex < (int)0)
+            if(this.LastIndex < (int)0)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for LastIndex, must be a value greater than or equal to 0.", new [] { "LastIndex" });
             }
 
             // RevertedJobVersion (int) maximum
-            if (this.RevertedJobVersion > (int)384)
+            if(this.RevertedJobVersion > (int)384)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for RevertedJobVersion, must be a value less than or equal to 384.", new [] { "RevertedJobVersion" });
             }
 
             // RevertedJobVersion (int) minimum
-            if (this.RevertedJobVersion < (int)0)
+            if(this.RevertedJobVersion < (int)0)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for RevertedJobVersion, must be a value greater than or equal to 0.", new [] { "RevertedJobVersion" });
             }

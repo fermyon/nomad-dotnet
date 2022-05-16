@@ -245,7 +245,7 @@ namespace Fermyon.Nomad.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            StringBuilder sb = new StringBuilder();
+            var sb = new StringBuilder();
             sb.Append("class TaskEvent {\n");
             sb.Append("  Details: ").Append(Details).Append("\n");
             sb.Append("  DiskLimit: ").Append(DiskLimit).Append("\n");
@@ -303,9 +303,8 @@ namespace Fermyon.Nomad.Model
         public bool Equals(TaskEvent input)
         {
             if (input == null)
-            {
                 return false;
-            }
+
             return 
                 (
                     this.Details == input.Details ||
@@ -437,81 +436,47 @@ namespace Fermyon.Nomad.Model
             {
                 int hashCode = 41;
                 if (this.Details != null)
-                {
-                    hashCode = (hashCode * 59) + this.Details.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.DiskLimit.GetHashCode();
-                hashCode = (hashCode * 59) + this.DiskSize.GetHashCode();
+                    hashCode = hashCode * 59 + this.Details.GetHashCode();
+                hashCode = hashCode * 59 + this.DiskLimit.GetHashCode();
+                hashCode = hashCode * 59 + this.DiskSize.GetHashCode();
                 if (this.DisplayMessage != null)
-                {
-                    hashCode = (hashCode * 59) + this.DisplayMessage.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.DisplayMessage.GetHashCode();
                 if (this.DownloadError != null)
-                {
-                    hashCode = (hashCode * 59) + this.DownloadError.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.DownloadError.GetHashCode();
                 if (this.DriverError != null)
-                {
-                    hashCode = (hashCode * 59) + this.DriverError.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.DriverError.GetHashCode();
                 if (this.DriverMessage != null)
-                {
-                    hashCode = (hashCode * 59) + this.DriverMessage.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.ExitCode.GetHashCode();
+                    hashCode = hashCode * 59 + this.DriverMessage.GetHashCode();
+                hashCode = hashCode * 59 + this.ExitCode.GetHashCode();
                 if (this.FailedSibling != null)
-                {
-                    hashCode = (hashCode * 59) + this.FailedSibling.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.FailsTask.GetHashCode();
+                    hashCode = hashCode * 59 + this.FailedSibling.GetHashCode();
+                hashCode = hashCode * 59 + this.FailsTask.GetHashCode();
                 if (this.GenericSource != null)
-                {
-                    hashCode = (hashCode * 59) + this.GenericSource.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.GenericSource.GetHashCode();
                 if (this.KillError != null)
-                {
-                    hashCode = (hashCode * 59) + this.KillError.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.KillError.GetHashCode();
                 if (this.KillReason != null)
-                {
-                    hashCode = (hashCode * 59) + this.KillReason.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.KillTimeout.GetHashCode();
+                    hashCode = hashCode * 59 + this.KillReason.GetHashCode();
+                hashCode = hashCode * 59 + this.KillTimeout.GetHashCode();
                 if (this.Message != null)
-                {
-                    hashCode = (hashCode * 59) + this.Message.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.Message.GetHashCode();
                 if (this.RestartReason != null)
-                {
-                    hashCode = (hashCode * 59) + this.RestartReason.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.RestartReason.GetHashCode();
                 if (this.SetupError != null)
-                {
-                    hashCode = (hashCode * 59) + this.SetupError.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.Signal.GetHashCode();
-                hashCode = (hashCode * 59) + this.StartDelay.GetHashCode();
+                    hashCode = hashCode * 59 + this.SetupError.GetHashCode();
+                hashCode = hashCode * 59 + this.Signal.GetHashCode();
+                hashCode = hashCode * 59 + this.StartDelay.GetHashCode();
                 if (this.TaskSignal != null)
-                {
-                    hashCode = (hashCode * 59) + this.TaskSignal.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.TaskSignal.GetHashCode();
                 if (this.TaskSignalReason != null)
-                {
-                    hashCode = (hashCode * 59) + this.TaskSignalReason.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.Time.GetHashCode();
+                    hashCode = hashCode * 59 + this.TaskSignalReason.GetHashCode();
+                hashCode = hashCode * 59 + this.Time.GetHashCode();
                 if (this.Type != null)
-                {
-                    hashCode = (hashCode * 59) + this.Type.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.Type.GetHashCode();
                 if (this.ValidationError != null)
-                {
-                    hashCode = (hashCode * 59) + this.ValidationError.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.ValidationError.GetHashCode();
                 if (this.VaultError != null)
-                {
-                    hashCode = (hashCode * 59) + this.VaultError.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.VaultError.GetHashCode();
                 return hashCode;
             }
         }
@@ -521,7 +486,7 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

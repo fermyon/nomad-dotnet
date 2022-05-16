@@ -101,7 +101,7 @@ namespace Fermyon.Nomad.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            StringBuilder sb = new StringBuilder();
+            var sb = new StringBuilder();
             sb.Append("class JobVersionsResponse {\n");
             sb.Append("  Diffs: ").Append(Diffs).Append("\n");
             sb.Append("  KnownLeader: ").Append(KnownLeader).Append("\n");
@@ -141,9 +141,8 @@ namespace Fermyon.Nomad.Model
         public bool Equals(JobVersionsResponse input)
         {
             if (input == null)
-            {
                 return false;
-            }
+
             return 
                 (
                     this.Diffs == input.Diffs ||
@@ -190,21 +189,15 @@ namespace Fermyon.Nomad.Model
             {
                 int hashCode = 41;
                 if (this.Diffs != null)
-                {
-                    hashCode = (hashCode * 59) + this.Diffs.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.KnownLeader.GetHashCode();
-                hashCode = (hashCode * 59) + this.LastContact.GetHashCode();
-                hashCode = (hashCode * 59) + this.LastIndex.GetHashCode();
+                    hashCode = hashCode * 59 + this.Diffs.GetHashCode();
+                hashCode = hashCode * 59 + this.KnownLeader.GetHashCode();
+                hashCode = hashCode * 59 + this.LastContact.GetHashCode();
+                hashCode = hashCode * 59 + this.LastIndex.GetHashCode();
                 if (this.NextToken != null)
-                {
-                    hashCode = (hashCode * 59) + this.NextToken.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.RequestTime.GetHashCode();
+                    hashCode = hashCode * 59 + this.NextToken.GetHashCode();
+                hashCode = hashCode * 59 + this.RequestTime.GetHashCode();
                 if (this.Versions != null)
-                {
-                    hashCode = (hashCode * 59) + this.Versions.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.Versions.GetHashCode();
                 return hashCode;
             }
         }
@@ -214,16 +207,16 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // LastIndex (int) maximum
-            if (this.LastIndex > (int)384)
+            if(this.LastIndex > (int)384)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for LastIndex, must be a value less than or equal to 384.", new [] { "LastIndex" });
             }
 
             // LastIndex (int) minimum
-            if (this.LastIndex < (int)0)
+            if(this.LastIndex < (int)0)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for LastIndex, must be a value greater than or equal to 0.", new [] { "LastIndex" });
             }

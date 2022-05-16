@@ -93,7 +93,7 @@ namespace Fermyon.Nomad.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            StringBuilder sb = new StringBuilder();
+            var sb = new StringBuilder();
             sb.Append("class ConsulGatewayProxy {\n");
             sb.Append("  Config: ").Append(Config).Append("\n");
             sb.Append("  ConnectTimeout: ").Append(ConnectTimeout).Append("\n");
@@ -132,9 +132,8 @@ namespace Fermyon.Nomad.Model
         public bool Equals(ConsulGatewayProxy input)
         {
             if (input == null)
-            {
                 return false;
-            }
+
             return 
                 (
                     this.Config == input.Config ||
@@ -177,20 +176,14 @@ namespace Fermyon.Nomad.Model
             {
                 int hashCode = 41;
                 if (this.Config != null)
-                {
-                    hashCode = (hashCode * 59) + this.Config.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.ConnectTimeout.GetHashCode();
+                    hashCode = hashCode * 59 + this.Config.GetHashCode();
+                hashCode = hashCode * 59 + this.ConnectTimeout.GetHashCode();
                 if (this.EnvoyDNSDiscoveryType != null)
-                {
-                    hashCode = (hashCode * 59) + this.EnvoyDNSDiscoveryType.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.EnvoyDNSDiscoveryType.GetHashCode();
                 if (this.EnvoyGatewayBindAddresses != null)
-                {
-                    hashCode = (hashCode * 59) + this.EnvoyGatewayBindAddresses.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.EnvoyGatewayBindTaggedAddresses.GetHashCode();
-                hashCode = (hashCode * 59) + this.EnvoyGatewayNoDefaultBind.GetHashCode();
+                    hashCode = hashCode * 59 + this.EnvoyGatewayBindAddresses.GetHashCode();
+                hashCode = hashCode * 59 + this.EnvoyGatewayBindTaggedAddresses.GetHashCode();
+                hashCode = hashCode * 59 + this.EnvoyGatewayNoDefaultBind.GetHashCode();
                 return hashCode;
             }
         }
@@ -200,7 +193,7 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

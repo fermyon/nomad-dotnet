@@ -109,7 +109,7 @@ namespace Fermyon.Nomad.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            StringBuilder sb = new StringBuilder();
+            var sb = new StringBuilder();
             sb.Append("class VolumeRequest {\n");
             sb.Append("  AccessMode: ").Append(AccessMode).Append("\n");
             sb.Append("  AttachmentMode: ").Append(AttachmentMode).Append("\n");
@@ -150,9 +150,8 @@ namespace Fermyon.Nomad.Model
         public bool Equals(VolumeRequest input)
         {
             if (input == null)
-            {
                 return false;
-            }
+
             return 
                 (
                     this.AccessMode == input.AccessMode ||
@@ -204,31 +203,19 @@ namespace Fermyon.Nomad.Model
             {
                 int hashCode = 41;
                 if (this.AccessMode != null)
-                {
-                    hashCode = (hashCode * 59) + this.AccessMode.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.AccessMode.GetHashCode();
                 if (this.AttachmentMode != null)
-                {
-                    hashCode = (hashCode * 59) + this.AttachmentMode.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.AttachmentMode.GetHashCode();
                 if (this.MountOptions != null)
-                {
-                    hashCode = (hashCode * 59) + this.MountOptions.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.MountOptions.GetHashCode();
                 if (this.Name != null)
-                {
-                    hashCode = (hashCode * 59) + this.Name.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.PerAlloc.GetHashCode();
-                hashCode = (hashCode * 59) + this.ReadOnly.GetHashCode();
+                    hashCode = hashCode * 59 + this.Name.GetHashCode();
+                hashCode = hashCode * 59 + this.PerAlloc.GetHashCode();
+                hashCode = hashCode * 59 + this.ReadOnly.GetHashCode();
                 if (this.Source != null)
-                {
-                    hashCode = (hashCode * 59) + this.Source.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.Source.GetHashCode();
                 if (this.Type != null)
-                {
-                    hashCode = (hashCode * 59) + this.Type.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.Type.GetHashCode();
                 return hashCode;
             }
         }
@@ -238,7 +225,7 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

@@ -53,7 +53,7 @@ namespace Fermyon.Nomad.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            StringBuilder sb = new StringBuilder();
+            var sb = new StringBuilder();
             sb.Append("class JobStabilityResponse {\n");
             sb.Append("  Index: ").Append(Index).Append("\n");
             sb.Append("}\n");
@@ -87,9 +87,8 @@ namespace Fermyon.Nomad.Model
         public bool Equals(JobStabilityResponse input)
         {
             if (input == null)
-            {
                 return false;
-            }
+
             return 
                 (
                     this.Index == input.Index ||
@@ -106,7 +105,7 @@ namespace Fermyon.Nomad.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                hashCode = (hashCode * 59) + this.Index.GetHashCode();
+                hashCode = hashCode * 59 + this.Index.GetHashCode();
                 return hashCode;
             }
         }
@@ -116,16 +115,16 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // Index (int) maximum
-            if (this.Index > (int)384)
+            if(this.Index > (int)384)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Index, must be a value less than or equal to 384.", new [] { "Index" });
             }
 
             // Index (int) minimum
-            if (this.Index < (int)0)
+            if(this.Index < (int)0)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Index, must be a value greater than or equal to 0.", new [] { "Index" });
             }

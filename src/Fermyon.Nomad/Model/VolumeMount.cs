@@ -77,7 +77,7 @@ namespace Fermyon.Nomad.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            StringBuilder sb = new StringBuilder();
+            var sb = new StringBuilder();
             sb.Append("class VolumeMount {\n");
             sb.Append("  Destination: ").Append(Destination).Append("\n");
             sb.Append("  PropagationMode: ").Append(PropagationMode).Append("\n");
@@ -114,9 +114,8 @@ namespace Fermyon.Nomad.Model
         public bool Equals(VolumeMount input)
         {
             if (input == null)
-            {
                 return false;
-            }
+
             return 
                 (
                     this.Destination == input.Destination ||
@@ -149,18 +148,12 @@ namespace Fermyon.Nomad.Model
             {
                 int hashCode = 41;
                 if (this.Destination != null)
-                {
-                    hashCode = (hashCode * 59) + this.Destination.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.Destination.GetHashCode();
                 if (this.PropagationMode != null)
-                {
-                    hashCode = (hashCode * 59) + this.PropagationMode.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.ReadOnly.GetHashCode();
+                    hashCode = hashCode * 59 + this.PropagationMode.GetHashCode();
+                hashCode = hashCode * 59 + this.ReadOnly.GetHashCode();
                 if (this.Volume != null)
-                {
-                    hashCode = (hashCode * 59) + this.Volume.GetHashCode();
-                }
+                    hashCode = hashCode * 59 + this.Volume.GetHashCode();
                 return hashCode;
             }
         }
@@ -170,7 +163,7 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }
