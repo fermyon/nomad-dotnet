@@ -5568,6 +5568,7 @@ components:
         StartedAt:
           format: date-time
           type: string
+          nullable: true
         State:
           type: string
         TaskHandle:
