@@ -43,7 +43,7 @@ namespace Fermyon.Nomad.Model
         /// <param name="startedAt">startedAt.</param>
         /// <param name="state">state.</param>
         /// <param name="taskHandle">taskHandle.</param>
-        public TaskState(List<TaskEvent> events = default(List<TaskEvent>), bool failed = default(bool), DateTime finishedAt = default(DateTime), DateTime lastRestart = default(DateTime), int restarts = default(int), DateTime startedAt = default(DateTime), string state = default(string), TaskHandle taskHandle = default(TaskHandle))
+        public TaskState(List<TaskEvent> events = default(List<TaskEvent>), bool failed = default(bool), DateTime? finishedAt = default(DateTime?), DateTime? lastRestart = default(DateTime?), int restarts = default(int), DateTime startedAt = default(DateTime), string state = default(string), TaskHandle taskHandle = default(TaskHandle))
         {
             this.Events = events;
             this.Failed = failed;
@@ -71,13 +71,13 @@ namespace Fermyon.Nomad.Model
         /// Gets or Sets FinishedAt
         /// </summary>
         [DataMember(Name = "FinishedAt", EmitDefaultValue = false)]
-        public DateTime FinishedAt { get; set; }
+        public DateTime? FinishedAt { get; set; }
 
         /// <summary>
         /// Gets or Sets LastRestart
         /// </summary>
         [DataMember(Name = "LastRestart", EmitDefaultValue = false)]
-        public DateTime LastRestart { get; set; }
+        public DateTime? LastRestart { get; set; }
 
         /// <summary>
         /// Gets or Sets Restarts

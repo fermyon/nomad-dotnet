@@ -5556,9 +5556,11 @@ components:
         FinishedAt:
           format: date-time
           type: string
+          nullable: true
         LastRestart:
           format: date-time
           type: string
+          nullable: true
         Restarts:
           maximum: 1.8446744073709552e+19
           minimum: 0
