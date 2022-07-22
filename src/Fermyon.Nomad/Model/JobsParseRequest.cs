@@ -69,7 +69,7 @@ namespace Fermyon.Nomad.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class JobsParseRequest {\n");
             sb.Append("  Canonicalize: ").Append(Canonicalize).Append("\n");
             sb.Append("  JobHCL: ").Append(JobHCL).Append("\n");
@@ -105,8 +105,9 @@ namespace Fermyon.Nomad.Model
         public bool Equals(JobsParseRequest input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.Canonicalize == input.Canonicalize ||
@@ -132,10 +133,12 @@ namespace Fermyon.Nomad.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                hashCode = hashCode * 59 + this.Canonicalize.GetHashCode();
+                hashCode = (hashCode * 59) + this.Canonicalize.GetHashCode();
                 if (this.JobHCL != null)
-                    hashCode = hashCode * 59 + this.JobHCL.GetHashCode();
-                hashCode = hashCode * 59 + this.Hclv1.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.JobHCL.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.Hclv1.GetHashCode();
                 return hashCode;
             }
         }
@@ -145,7 +148,7 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             yield break;
         }

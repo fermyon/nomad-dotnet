@@ -1,8 +1,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.1.32407.343
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fermyon.Nomad", "src\Fermyon.Nomad\Fermyon.Nomad.csproj", "{8891B148-0F89-45E3-B0AA-9C457F3F64A3}"
+# Visual Studio 2012
+VisualStudioVersion = 12.0.0.0
+MinimumVisualStudioVersion = 10.0.0.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fermyon.Nomad", "src\Fermyon.Nomad\Fermyon.Nomad.csproj", "{9BCCD940-51E2-4BA6-B4AA-76BFE5514599}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fermyon.Nomad.Test", "src\Fermyon.Nomad.Test\Fermyon.Nomad.Test.csproj", "{19F1DEBC-DE5E-4517-8062-F000CD499087}"
 EndProject
@@ -12,10 +12,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{8891B148-0F89-45E3-B0AA-9C457F3F64A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8891B148-0F89-45E3-B0AA-9C457F3F64A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8891B148-0F89-45E3-B0AA-9C457F3F64A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8891B148-0F89-45E3-B0AA-9C457F3F64A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9BCCD940-51E2-4BA6-B4AA-76BFE5514599}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BCCD940-51E2-4BA6-B4AA-76BFE5514599}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BCCD940-51E2-4BA6-B4AA-76BFE5514599}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BCCD940-51E2-4BA6-B4AA-76BFE5514599}.Release|Any CPU.Build.0 = Release|Any CPU
 		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -23,8 +23,5 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {7370E3DC-C440-4A9E-B5E2-DF2C6EC43D6F}
 	EndGlobalSection
 EndGlobal

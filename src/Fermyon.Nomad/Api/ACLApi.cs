@@ -36,8 +36,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns></returns>
-        void DeleteACLPolicy(string policyName, string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string));
+        void DeleteACLPolicy(string policyName, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -51,8 +52,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteACLPolicyWithHttpInfo(string policyName, string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string));
+        ApiResponse<Object> DeleteACLPolicyWithHttpInfo(string policyName, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -62,8 +64,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns></returns>
-        void DeleteACLToken(string tokenAccessor, string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string));
+        void DeleteACLToken(string tokenAccessor, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -77,8 +80,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteACLTokenWithHttpInfo(string tokenAccessor, string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string));
+        ApiResponse<Object> DeleteACLTokenWithHttpInfo(string tokenAccessor, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -92,8 +96,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>List&lt;ACLPolicyListStub&gt;</returns>
-        List<ACLPolicyListStub> GetACLPolicies(string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string));
+        List<ACLPolicyListStub> GetACLPolicies(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -111,8 +116,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of List&lt;ACLPolicyListStub&gt;</returns>
-        ApiResponse<List<ACLPolicyListStub>> GetACLPoliciesWithHttpInfo(string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string));
+        ApiResponse<List<ACLPolicyListStub>> GetACLPoliciesWithHttpInfo(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -127,8 +133,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ACLPolicy</returns>
-        ACLPolicy GetACLPolicy(string policyName, string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string));
+        ACLPolicy GetACLPolicy(string policyName, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -147,8 +154,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ACLPolicy</returns>
-        ApiResponse<ACLPolicy> GetACLPolicyWithHttpInfo(string policyName, string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string));
+        ApiResponse<ACLPolicy> GetACLPolicyWithHttpInfo(string policyName, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -163,8 +171,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ACLToken</returns>
-        ACLToken GetACLToken(string tokenAccessor, string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string));
+        ACLToken GetACLToken(string tokenAccessor, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -183,8 +192,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ACLToken</returns>
-        ApiResponse<ACLToken> GetACLTokenWithHttpInfo(string tokenAccessor, string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string));
+        ApiResponse<ACLToken> GetACLTokenWithHttpInfo(string tokenAccessor, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -198,8 +208,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ACLToken</returns>
-        ACLToken GetACLTokenSelf(string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string));
+        ACLToken GetACLTokenSelf(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -217,8 +228,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ACLToken</returns>
-        ApiResponse<ACLToken> GetACLTokenSelfWithHttpInfo(string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string));
+        ApiResponse<ACLToken> GetACLTokenSelfWithHttpInfo(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -232,8 +244,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>List&lt;ACLTokenListStub&gt;</returns>
-        List<ACLTokenListStub> GetACLTokens(string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string));
+        List<ACLTokenListStub> GetACLTokens(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -251,8 +264,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of List&lt;ACLTokenListStub&gt;</returns>
-        ApiResponse<List<ACLTokenListStub>> GetACLTokensWithHttpInfo(string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string));
+        ApiResponse<List<ACLTokenListStub>> GetACLTokensWithHttpInfo(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -261,8 +275,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ACLToken</returns>
-        ACLToken PostACLBootstrap(string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string));
+        ACLToken PostACLBootstrap(string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -275,8 +290,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ACLToken</returns>
-        ApiResponse<ACLToken> PostACLBootstrapWithHttpInfo(string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string));
+        ApiResponse<ACLToken> PostACLBootstrapWithHttpInfo(string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -287,8 +303,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns></returns>
-        void PostACLPolicy(string policyName, ACLPolicy aCLPolicy, string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string));
+        void PostACLPolicy(string policyName, ACLPolicy aCLPolicy, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -303,8 +320,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostACLPolicyWithHttpInfo(string policyName, ACLPolicy aCLPolicy, string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string));
+        ApiResponse<Object> PostACLPolicyWithHttpInfo(string policyName, ACLPolicy aCLPolicy, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -315,8 +333,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ACLToken</returns>
-        ACLToken PostACLToken(string tokenAccessor, ACLToken aCLToken, string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string));
+        ACLToken PostACLToken(string tokenAccessor, ACLToken aCLToken, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -331,8 +350,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ACLToken</returns>
-        ApiResponse<ACLToken> PostACLTokenWithHttpInfo(string tokenAccessor, ACLToken aCLToken, string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string));
+        ApiResponse<ACLToken> PostACLTokenWithHttpInfo(string tokenAccessor, ACLToken aCLToken, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -341,8 +361,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>OneTimeToken</returns>
-        OneTimeToken PostACLTokenOnetime(string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string));
+        OneTimeToken PostACLTokenOnetime(string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -355,8 +376,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of OneTimeToken</returns>
-        ApiResponse<OneTimeToken> PostACLTokenOnetimeWithHttpInfo(string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string));
+        ApiResponse<OneTimeToken> PostACLTokenOnetimeWithHttpInfo(string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -366,8 +388,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ACLToken</returns>
-        ACLToken PostACLTokenOnetimeExchange(OneTimeTokenExchangeRequest oneTimeTokenExchangeRequest, string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string));
+        ACLToken PostACLTokenOnetimeExchange(OneTimeTokenExchangeRequest oneTimeTokenExchangeRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -381,8 +404,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ACLToken</returns>
-        ApiResponse<ACLToken> PostACLTokenOnetimeExchangeWithHttpInfo(OneTimeTokenExchangeRequest oneTimeTokenExchangeRequest, string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string));
+        ApiResponse<ACLToken> PostACLTokenOnetimeExchangeWithHttpInfo(OneTimeTokenExchangeRequest oneTimeTokenExchangeRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -404,9 +428,10 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeleteACLPolicyAsync(string policyName, string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task DeleteACLPolicyAsync(string policyName, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -420,9 +445,10 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteACLPolicyWithHttpInfoAsync(string policyName, string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteACLPolicyWithHttpInfoAsync(string policyName, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -435,9 +461,10 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeleteACLTokenAsync(string tokenAccessor, string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task DeleteACLTokenAsync(string tokenAccessor, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -451,9 +478,10 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteACLTokenWithHttpInfoAsync(string tokenAccessor, string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteACLTokenWithHttpInfoAsync(string tokenAccessor, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -470,9 +498,10 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;ACLPolicyListStub&gt;</returns>
-        System.Threading.Tasks.Task<List<ACLPolicyListStub>> GetACLPoliciesAsync(string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<List<ACLPolicyListStub>> GetACLPoliciesAsync(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -490,9 +519,10 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;ACLPolicyListStub&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<ACLPolicyListStub>>> GetACLPoliciesWithHttpInfoAsync(string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<List<ACLPolicyListStub>>> GetACLPoliciesWithHttpInfoAsync(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -510,9 +540,10 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ACLPolicy</returns>
-        System.Threading.Tasks.Task<ACLPolicy> GetACLPolicyAsync(string policyName, string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ACLPolicy> GetACLPolicyAsync(string policyName, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -531,9 +562,10 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ACLPolicy)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ACLPolicy>> GetACLPolicyWithHttpInfoAsync(string policyName, string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ACLPolicy>> GetACLPolicyWithHttpInfoAsync(string policyName, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -551,9 +583,10 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ACLToken</returns>
-        System.Threading.Tasks.Task<ACLToken> GetACLTokenAsync(string tokenAccessor, string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ACLToken> GetACLTokenAsync(string tokenAccessor, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -572,9 +605,10 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ACLToken)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ACLToken>> GetACLTokenWithHttpInfoAsync(string tokenAccessor, string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ACLToken>> GetACLTokenWithHttpInfoAsync(string tokenAccessor, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -591,9 +625,10 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ACLToken</returns>
-        System.Threading.Tasks.Task<ACLToken> GetACLTokenSelfAsync(string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ACLToken> GetACLTokenSelfAsync(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -611,9 +646,10 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ACLToken)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ACLToken>> GetACLTokenSelfWithHttpInfoAsync(string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ACLToken>> GetACLTokenSelfWithHttpInfoAsync(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -630,9 +666,10 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;ACLTokenListStub&gt;</returns>
-        System.Threading.Tasks.Task<List<ACLTokenListStub>> GetACLTokensAsync(string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<List<ACLTokenListStub>> GetACLTokensAsync(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -650,9 +687,10 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;ACLTokenListStub&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<ACLTokenListStub>>> GetACLTokensWithHttpInfoAsync(string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<List<ACLTokenListStub>>> GetACLTokensWithHttpInfoAsync(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -664,9 +702,10 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ACLToken</returns>
-        System.Threading.Tasks.Task<ACLToken> PostACLBootstrapAsync(string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ACLToken> PostACLBootstrapAsync(string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -679,9 +718,10 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ACLToken)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ACLToken>> PostACLBootstrapWithHttpInfoAsync(string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ACLToken>> PostACLBootstrapWithHttpInfoAsync(string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -695,9 +735,10 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task PostACLPolicyAsync(string policyName, ACLPolicy aCLPolicy, string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task PostACLPolicyAsync(string policyName, ACLPolicy aCLPolicy, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -712,9 +753,10 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> PostACLPolicyWithHttpInfoAsync(string policyName, ACLPolicy aCLPolicy, string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostACLPolicyWithHttpInfoAsync(string policyName, ACLPolicy aCLPolicy, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -728,9 +770,10 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ACLToken</returns>
-        System.Threading.Tasks.Task<ACLToken> PostACLTokenAsync(string tokenAccessor, ACLToken aCLToken, string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ACLToken> PostACLTokenAsync(string tokenAccessor, ACLToken aCLToken, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -745,9 +788,10 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ACLToken)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ACLToken>> PostACLTokenWithHttpInfoAsync(string tokenAccessor, ACLToken aCLToken, string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ACLToken>> PostACLTokenWithHttpInfoAsync(string tokenAccessor, ACLToken aCLToken, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -759,9 +803,10 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OneTimeToken</returns>
-        System.Threading.Tasks.Task<OneTimeToken> PostACLTokenOnetimeAsync(string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<OneTimeToken> PostACLTokenOnetimeAsync(string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -774,9 +819,10 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OneTimeToken)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OneTimeToken>> PostACLTokenOnetimeWithHttpInfoAsync(string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<OneTimeToken>> PostACLTokenOnetimeWithHttpInfoAsync(string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -789,9 +835,10 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ACLToken</returns>
-        System.Threading.Tasks.Task<ACLToken> PostACLTokenOnetimeExchangeAsync(OneTimeTokenExchangeRequest oneTimeTokenExchangeRequest, string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ACLToken> PostACLTokenOnetimeExchangeAsync(OneTimeTokenExchangeRequest oneTimeTokenExchangeRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -805,9 +852,10 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ACLToken)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ACLToken>> PostACLTokenOnetimeExchangeWithHttpInfoAsync(OneTimeTokenExchangeRequest oneTimeTokenExchangeRequest, string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ACLToken>> PostACLTokenOnetimeExchangeWithHttpInfoAsync(OneTimeTokenExchangeRequest oneTimeTokenExchangeRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -937,8 +985,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns></returns>
-        public void DeleteACLPolicy(string policyName, string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string))
+        public void DeleteACLPolicy(string policyName, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0)
         {
             DeleteACLPolicyWithHttpInfo(policyName, region, _namespace, xNomadToken, idempotencyToken);
         }
@@ -952,12 +1001,15 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Fermyon.Nomad.Client.ApiResponse<Object> DeleteACLPolicyWithHttpInfo(string policyName, string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string))
+        public Fermyon.Nomad.Client.ApiResponse<Object> DeleteACLPolicyWithHttpInfo(string policyName, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'policyName' is set
             if (policyName == null)
+            {
                 throw new Fermyon.Nomad.Client.ApiException(400, "Missing required parameter 'policyName' when calling ACLApi->DeleteACLPolicy");
+            }
 
             Fermyon.Nomad.Client.RequestOptions localVarRequestOptions = new Fermyon.Nomad.Client.RequestOptions();
 
@@ -969,10 +1021,16 @@ namespace Fermyon.Nomad.Api
             };
 
             var localVarContentType = Fermyon.Nomad.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = Fermyon.Nomad.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("policyName", Fermyon.Nomad.Client.ClientUtils.ParameterToString(policyName)); // path parameter
             if (region != null)
@@ -992,6 +1050,9 @@ namespace Fermyon.Nomad.Api
                 localVarRequestOptions.HeaderParameters.Add("X-Nomad-Token", Fermyon.Nomad.Client.ClientUtils.ParameterToString(xNomadToken)); // header parameter
             }
 
+            localVarRequestOptions.Operation = "ACLApi.DeleteACLPolicy";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
             // authentication (X-Nomad-Token) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("X-Nomad-Token")))
             {
@@ -1000,11 +1061,13 @@ namespace Fermyon.Nomad.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Delete<Object>("/acl/policy/{policyName}", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("DeleteACLPolicy", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -1019,11 +1082,12 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteACLPolicyAsync(string policyName, string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task DeleteACLPolicyAsync(string policyName, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            await DeleteACLPolicyWithHttpInfoAsync(policyName, region, _namespace, xNomadToken, idempotencyToken, cancellationToken).ConfigureAwait(false);
+            await DeleteACLPolicyWithHttpInfoAsync(policyName, region, _namespace, xNomadToken, idempotencyToken, operationIndex, cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -1035,13 +1099,16 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<Object>> DeleteACLPolicyWithHttpInfoAsync(string policyName, string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<Object>> DeleteACLPolicyWithHttpInfoAsync(string policyName, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'policyName' is set
             if (policyName == null)
+            {
                 throw new Fermyon.Nomad.Client.ApiException(400, "Missing required parameter 'policyName' when calling ACLApi->DeleteACLPolicy");
+            }
 
 
             Fermyon.Nomad.Client.RequestOptions localVarRequestOptions = new Fermyon.Nomad.Client.RequestOptions();
@@ -1053,12 +1120,17 @@ namespace Fermyon.Nomad.Api
             string[] _accepts = new string[] {
             };
 
-
             var localVarContentType = Fermyon.Nomad.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = Fermyon.Nomad.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("policyName", Fermyon.Nomad.Client.ClientUtils.ParameterToString(policyName)); // path parameter
             if (region != null)
@@ -1078,6 +1150,9 @@ namespace Fermyon.Nomad.Api
                 localVarRequestOptions.HeaderParameters.Add("X-Nomad-Token", Fermyon.Nomad.Client.ClientUtils.ParameterToString(xNomadToken)); // header parameter
             }
 
+            localVarRequestOptions.Operation = "ACLApi.DeleteACLPolicy";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
             // authentication (X-Nomad-Token) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("X-Nomad-Token")))
             {
@@ -1085,13 +1160,15 @@ namespace Fermyon.Nomad.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/acl/policy/{policyName}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("DeleteACLPolicy", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -1106,8 +1183,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns></returns>
-        public void DeleteACLToken(string tokenAccessor, string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string))
+        public void DeleteACLToken(string tokenAccessor, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0)
         {
             DeleteACLTokenWithHttpInfo(tokenAccessor, region, _namespace, xNomadToken, idempotencyToken);
         }
@@ -1121,12 +1199,15 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Fermyon.Nomad.Client.ApiResponse<Object> DeleteACLTokenWithHttpInfo(string tokenAccessor, string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string))
+        public Fermyon.Nomad.Client.ApiResponse<Object> DeleteACLTokenWithHttpInfo(string tokenAccessor, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'tokenAccessor' is set
             if (tokenAccessor == null)
+            {
                 throw new Fermyon.Nomad.Client.ApiException(400, "Missing required parameter 'tokenAccessor' when calling ACLApi->DeleteACLToken");
+            }
 
             Fermyon.Nomad.Client.RequestOptions localVarRequestOptions = new Fermyon.Nomad.Client.RequestOptions();
 
@@ -1138,10 +1219,16 @@ namespace Fermyon.Nomad.Api
             };
 
             var localVarContentType = Fermyon.Nomad.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = Fermyon.Nomad.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("tokenAccessor", Fermyon.Nomad.Client.ClientUtils.ParameterToString(tokenAccessor)); // path parameter
             if (region != null)
@@ -1161,6 +1248,9 @@ namespace Fermyon.Nomad.Api
                 localVarRequestOptions.HeaderParameters.Add("X-Nomad-Token", Fermyon.Nomad.Client.ClientUtils.ParameterToString(xNomadToken)); // header parameter
             }
 
+            localVarRequestOptions.Operation = "ACLApi.DeleteACLToken";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
             // authentication (X-Nomad-Token) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("X-Nomad-Token")))
             {
@@ -1169,11 +1259,13 @@ namespace Fermyon.Nomad.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Delete<Object>("/acl/token/{tokenAccessor}", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("DeleteACLToken", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -1188,11 +1280,12 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteACLTokenAsync(string tokenAccessor, string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task DeleteACLTokenAsync(string tokenAccessor, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            await DeleteACLTokenWithHttpInfoAsync(tokenAccessor, region, _namespace, xNomadToken, idempotencyToken, cancellationToken).ConfigureAwait(false);
+            await DeleteACLTokenWithHttpInfoAsync(tokenAccessor, region, _namespace, xNomadToken, idempotencyToken, operationIndex, cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -1204,13 +1297,16 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<Object>> DeleteACLTokenWithHttpInfoAsync(string tokenAccessor, string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<Object>> DeleteACLTokenWithHttpInfoAsync(string tokenAccessor, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'tokenAccessor' is set
             if (tokenAccessor == null)
+            {
                 throw new Fermyon.Nomad.Client.ApiException(400, "Missing required parameter 'tokenAccessor' when calling ACLApi->DeleteACLToken");
+            }
 
 
             Fermyon.Nomad.Client.RequestOptions localVarRequestOptions = new Fermyon.Nomad.Client.RequestOptions();
@@ -1222,12 +1318,17 @@ namespace Fermyon.Nomad.Api
             string[] _accepts = new string[] {
             };
 
-
             var localVarContentType = Fermyon.Nomad.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = Fermyon.Nomad.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("tokenAccessor", Fermyon.Nomad.Client.ClientUtils.ParameterToString(tokenAccessor)); // path parameter
             if (region != null)
@@ -1247,6 +1348,9 @@ namespace Fermyon.Nomad.Api
                 localVarRequestOptions.HeaderParameters.Add("X-Nomad-Token", Fermyon.Nomad.Client.ClientUtils.ParameterToString(xNomadToken)); // header parameter
             }
 
+            localVarRequestOptions.Operation = "ACLApi.DeleteACLToken";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
             // authentication (X-Nomad-Token) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("X-Nomad-Token")))
             {
@@ -1254,13 +1358,15 @@ namespace Fermyon.Nomad.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/acl/token/{tokenAccessor}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("DeleteACLToken", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -1279,8 +1385,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>List&lt;ACLPolicyListStub&gt;</returns>
-        public List<ACLPolicyListStub> GetACLPolicies(string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string))
+        public List<ACLPolicyListStub> GetACLPolicies(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0)
         {
             Fermyon.Nomad.Client.ApiResponse<List<ACLPolicyListStub>> localVarResponse = GetACLPoliciesWithHttpInfo(region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
             return localVarResponse.Data;
@@ -1299,8 +1406,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of List&lt;ACLPolicyListStub&gt;</returns>
-        public Fermyon.Nomad.Client.ApiResponse<List<ACLPolicyListStub>> GetACLPoliciesWithHttpInfo(string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string))
+        public Fermyon.Nomad.Client.ApiResponse<List<ACLPolicyListStub>> GetACLPoliciesWithHttpInfo(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0)
         {
             Fermyon.Nomad.Client.RequestOptions localVarRequestOptions = new Fermyon.Nomad.Client.RequestOptions();
 
@@ -1313,10 +1421,16 @@ namespace Fermyon.Nomad.Api
             };
 
             var localVarContentType = Fermyon.Nomad.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = Fermyon.Nomad.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             if (region != null)
             {
@@ -1355,6 +1469,9 @@ namespace Fermyon.Nomad.Api
                 localVarRequestOptions.HeaderParameters.Add("X-Nomad-Token", Fermyon.Nomad.Client.ClientUtils.ParameterToString(xNomadToken)); // header parameter
             }
 
+            localVarRequestOptions.Operation = "ACLApi.GetACLPolicies";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
             // authentication (X-Nomad-Token) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("X-Nomad-Token")))
             {
@@ -1363,11 +1480,13 @@ namespace Fermyon.Nomad.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<List<ACLPolicyListStub>>("/acl/policies", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("GetACLPolicies", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -1386,11 +1505,12 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;ACLPolicyListStub&gt;</returns>
-        public async System.Threading.Tasks.Task<List<ACLPolicyListStub>> GetACLPoliciesAsync(string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<List<ACLPolicyListStub>> GetACLPoliciesAsync(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Fermyon.Nomad.Client.ApiResponse<List<ACLPolicyListStub>> localVarResponse = await GetACLPoliciesWithHttpInfoAsync(region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, cancellationToken).ConfigureAwait(false);
+            Fermyon.Nomad.Client.ApiResponse<List<ACLPolicyListStub>> localVarResponse = await GetACLPoliciesWithHttpInfoAsync(region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1407,9 +1527,10 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;ACLPolicyListStub&gt;)</returns>
-        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<List<ACLPolicyListStub>>> GetACLPoliciesWithHttpInfoAsync(string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<List<ACLPolicyListStub>>> GetACLPoliciesWithHttpInfoAsync(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             Fermyon.Nomad.Client.RequestOptions localVarRequestOptions = new Fermyon.Nomad.Client.RequestOptions();
@@ -1422,12 +1543,17 @@ namespace Fermyon.Nomad.Api
                 "application/json"
             };
 
-
             var localVarContentType = Fermyon.Nomad.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = Fermyon.Nomad.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             if (region != null)
             {
@@ -1466,6 +1592,9 @@ namespace Fermyon.Nomad.Api
                 localVarRequestOptions.HeaderParameters.Add("X-Nomad-Token", Fermyon.Nomad.Client.ClientUtils.ParameterToString(xNomadToken)); // header parameter
             }
 
+            localVarRequestOptions.Operation = "ACLApi.GetACLPolicies";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
             // authentication (X-Nomad-Token) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("X-Nomad-Token")))
             {
@@ -1473,13 +1602,15 @@ namespace Fermyon.Nomad.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.GetAsync<List<ACLPolicyListStub>>("/acl/policies", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("GetACLPolicies", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -1499,8 +1630,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ACLPolicy</returns>
-        public ACLPolicy GetACLPolicy(string policyName, string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string))
+        public ACLPolicy GetACLPolicy(string policyName, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0)
         {
             Fermyon.Nomad.Client.ApiResponse<ACLPolicy> localVarResponse = GetACLPolicyWithHttpInfo(policyName, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
             return localVarResponse.Data;
@@ -1520,12 +1652,15 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ACLPolicy</returns>
-        public Fermyon.Nomad.Client.ApiResponse<ACLPolicy> GetACLPolicyWithHttpInfo(string policyName, string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string))
+        public Fermyon.Nomad.Client.ApiResponse<ACLPolicy> GetACLPolicyWithHttpInfo(string policyName, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'policyName' is set
             if (policyName == null)
+            {
                 throw new Fermyon.Nomad.Client.ApiException(400, "Missing required parameter 'policyName' when calling ACLApi->GetACLPolicy");
+            }
 
             Fermyon.Nomad.Client.RequestOptions localVarRequestOptions = new Fermyon.Nomad.Client.RequestOptions();
 
@@ -1538,10 +1673,16 @@ namespace Fermyon.Nomad.Api
             };
 
             var localVarContentType = Fermyon.Nomad.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = Fermyon.Nomad.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("policyName", Fermyon.Nomad.Client.ClientUtils.ParameterToString(policyName)); // path parameter
             if (region != null)
@@ -1581,6 +1722,9 @@ namespace Fermyon.Nomad.Api
                 localVarRequestOptions.HeaderParameters.Add("X-Nomad-Token", Fermyon.Nomad.Client.ClientUtils.ParameterToString(xNomadToken)); // header parameter
             }
 
+            localVarRequestOptions.Operation = "ACLApi.GetACLPolicy";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
             // authentication (X-Nomad-Token) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("X-Nomad-Token")))
             {
@@ -1589,11 +1733,13 @@ namespace Fermyon.Nomad.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<ACLPolicy>("/acl/policy/{policyName}", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("GetACLPolicy", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -1613,11 +1759,12 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ACLPolicy</returns>
-        public async System.Threading.Tasks.Task<ACLPolicy> GetACLPolicyAsync(string policyName, string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ACLPolicy> GetACLPolicyAsync(string policyName, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Fermyon.Nomad.Client.ApiResponse<ACLPolicy> localVarResponse = await GetACLPolicyWithHttpInfoAsync(policyName, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, cancellationToken).ConfigureAwait(false);
+            Fermyon.Nomad.Client.ApiResponse<ACLPolicy> localVarResponse = await GetACLPolicyWithHttpInfoAsync(policyName, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1635,13 +1782,16 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ACLPolicy)</returns>
-        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<ACLPolicy>> GetACLPolicyWithHttpInfoAsync(string policyName, string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<ACLPolicy>> GetACLPolicyWithHttpInfoAsync(string policyName, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'policyName' is set
             if (policyName == null)
+            {
                 throw new Fermyon.Nomad.Client.ApiException(400, "Missing required parameter 'policyName' when calling ACLApi->GetACLPolicy");
+            }
 
 
             Fermyon.Nomad.Client.RequestOptions localVarRequestOptions = new Fermyon.Nomad.Client.RequestOptions();
@@ -1654,12 +1804,17 @@ namespace Fermyon.Nomad.Api
                 "application/json"
             };
 
-
             var localVarContentType = Fermyon.Nomad.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = Fermyon.Nomad.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("policyName", Fermyon.Nomad.Client.ClientUtils.ParameterToString(policyName)); // path parameter
             if (region != null)
@@ -1699,6 +1854,9 @@ namespace Fermyon.Nomad.Api
                 localVarRequestOptions.HeaderParameters.Add("X-Nomad-Token", Fermyon.Nomad.Client.ClientUtils.ParameterToString(xNomadToken)); // header parameter
             }
 
+            localVarRequestOptions.Operation = "ACLApi.GetACLPolicy";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
             // authentication (X-Nomad-Token) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("X-Nomad-Token")))
             {
@@ -1706,13 +1864,15 @@ namespace Fermyon.Nomad.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.GetAsync<ACLPolicy>("/acl/policy/{policyName}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("GetACLPolicy", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -1732,8 +1892,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ACLToken</returns>
-        public ACLToken GetACLToken(string tokenAccessor, string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string))
+        public ACLToken GetACLToken(string tokenAccessor, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0)
         {
             Fermyon.Nomad.Client.ApiResponse<ACLToken> localVarResponse = GetACLTokenWithHttpInfo(tokenAccessor, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
             return localVarResponse.Data;
@@ -1753,12 +1914,15 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ACLToken</returns>
-        public Fermyon.Nomad.Client.ApiResponse<ACLToken> GetACLTokenWithHttpInfo(string tokenAccessor, string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string))
+        public Fermyon.Nomad.Client.ApiResponse<ACLToken> GetACLTokenWithHttpInfo(string tokenAccessor, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'tokenAccessor' is set
             if (tokenAccessor == null)
+            {
                 throw new Fermyon.Nomad.Client.ApiException(400, "Missing required parameter 'tokenAccessor' when calling ACLApi->GetACLToken");
+            }
 
             Fermyon.Nomad.Client.RequestOptions localVarRequestOptions = new Fermyon.Nomad.Client.RequestOptions();
 
@@ -1771,10 +1935,16 @@ namespace Fermyon.Nomad.Api
             };
 
             var localVarContentType = Fermyon.Nomad.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = Fermyon.Nomad.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("tokenAccessor", Fermyon.Nomad.Client.ClientUtils.ParameterToString(tokenAccessor)); // path parameter
             if (region != null)
@@ -1814,6 +1984,9 @@ namespace Fermyon.Nomad.Api
                 localVarRequestOptions.HeaderParameters.Add("X-Nomad-Token", Fermyon.Nomad.Client.ClientUtils.ParameterToString(xNomadToken)); // header parameter
             }
 
+            localVarRequestOptions.Operation = "ACLApi.GetACLToken";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
             // authentication (X-Nomad-Token) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("X-Nomad-Token")))
             {
@@ -1822,11 +1995,13 @@ namespace Fermyon.Nomad.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<ACLToken>("/acl/token/{tokenAccessor}", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("GetACLToken", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -1846,11 +2021,12 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ACLToken</returns>
-        public async System.Threading.Tasks.Task<ACLToken> GetACLTokenAsync(string tokenAccessor, string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ACLToken> GetACLTokenAsync(string tokenAccessor, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Fermyon.Nomad.Client.ApiResponse<ACLToken> localVarResponse = await GetACLTokenWithHttpInfoAsync(tokenAccessor, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, cancellationToken).ConfigureAwait(false);
+            Fermyon.Nomad.Client.ApiResponse<ACLToken> localVarResponse = await GetACLTokenWithHttpInfoAsync(tokenAccessor, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1868,13 +2044,16 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ACLToken)</returns>
-        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<ACLToken>> GetACLTokenWithHttpInfoAsync(string tokenAccessor, string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<ACLToken>> GetACLTokenWithHttpInfoAsync(string tokenAccessor, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'tokenAccessor' is set
             if (tokenAccessor == null)
+            {
                 throw new Fermyon.Nomad.Client.ApiException(400, "Missing required parameter 'tokenAccessor' when calling ACLApi->GetACLToken");
+            }
 
 
             Fermyon.Nomad.Client.RequestOptions localVarRequestOptions = new Fermyon.Nomad.Client.RequestOptions();
@@ -1887,12 +2066,17 @@ namespace Fermyon.Nomad.Api
                 "application/json"
             };
 
-
             var localVarContentType = Fermyon.Nomad.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = Fermyon.Nomad.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("tokenAccessor", Fermyon.Nomad.Client.ClientUtils.ParameterToString(tokenAccessor)); // path parameter
             if (region != null)
@@ -1932,6 +2116,9 @@ namespace Fermyon.Nomad.Api
                 localVarRequestOptions.HeaderParameters.Add("X-Nomad-Token", Fermyon.Nomad.Client.ClientUtils.ParameterToString(xNomadToken)); // header parameter
             }
 
+            localVarRequestOptions.Operation = "ACLApi.GetACLToken";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
             // authentication (X-Nomad-Token) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("X-Nomad-Token")))
             {
@@ -1939,13 +2126,15 @@ namespace Fermyon.Nomad.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.GetAsync<ACLToken>("/acl/token/{tokenAccessor}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("GetACLToken", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -1964,8 +2153,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ACLToken</returns>
-        public ACLToken GetACLTokenSelf(string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string))
+        public ACLToken GetACLTokenSelf(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0)
         {
             Fermyon.Nomad.Client.ApiResponse<ACLToken> localVarResponse = GetACLTokenSelfWithHttpInfo(region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
             return localVarResponse.Data;
@@ -1984,8 +2174,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ACLToken</returns>
-        public Fermyon.Nomad.Client.ApiResponse<ACLToken> GetACLTokenSelfWithHttpInfo(string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string))
+        public Fermyon.Nomad.Client.ApiResponse<ACLToken> GetACLTokenSelfWithHttpInfo(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0)
         {
             Fermyon.Nomad.Client.RequestOptions localVarRequestOptions = new Fermyon.Nomad.Client.RequestOptions();
 
@@ -1998,10 +2189,16 @@ namespace Fermyon.Nomad.Api
             };
 
             var localVarContentType = Fermyon.Nomad.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = Fermyon.Nomad.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             if (region != null)
             {
@@ -2040,6 +2237,9 @@ namespace Fermyon.Nomad.Api
                 localVarRequestOptions.HeaderParameters.Add("X-Nomad-Token", Fermyon.Nomad.Client.ClientUtils.ParameterToString(xNomadToken)); // header parameter
             }
 
+            localVarRequestOptions.Operation = "ACLApi.GetACLTokenSelf";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
             // authentication (X-Nomad-Token) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("X-Nomad-Token")))
             {
@@ -2048,11 +2248,13 @@ namespace Fermyon.Nomad.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<ACLToken>("/acl/token", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("GetACLTokenSelf", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -2071,11 +2273,12 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ACLToken</returns>
-        public async System.Threading.Tasks.Task<ACLToken> GetACLTokenSelfAsync(string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ACLToken> GetACLTokenSelfAsync(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Fermyon.Nomad.Client.ApiResponse<ACLToken> localVarResponse = await GetACLTokenSelfWithHttpInfoAsync(region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, cancellationToken).ConfigureAwait(false);
+            Fermyon.Nomad.Client.ApiResponse<ACLToken> localVarResponse = await GetACLTokenSelfWithHttpInfoAsync(region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2092,9 +2295,10 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ACLToken)</returns>
-        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<ACLToken>> GetACLTokenSelfWithHttpInfoAsync(string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<ACLToken>> GetACLTokenSelfWithHttpInfoAsync(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             Fermyon.Nomad.Client.RequestOptions localVarRequestOptions = new Fermyon.Nomad.Client.RequestOptions();
@@ -2107,12 +2311,17 @@ namespace Fermyon.Nomad.Api
                 "application/json"
             };
 
-
             var localVarContentType = Fermyon.Nomad.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = Fermyon.Nomad.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             if (region != null)
             {
@@ -2151,6 +2360,9 @@ namespace Fermyon.Nomad.Api
                 localVarRequestOptions.HeaderParameters.Add("X-Nomad-Token", Fermyon.Nomad.Client.ClientUtils.ParameterToString(xNomadToken)); // header parameter
             }
 
+            localVarRequestOptions.Operation = "ACLApi.GetACLTokenSelf";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
             // authentication (X-Nomad-Token) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("X-Nomad-Token")))
             {
@@ -2158,13 +2370,15 @@ namespace Fermyon.Nomad.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.GetAsync<ACLToken>("/acl/token", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("GetACLTokenSelf", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -2183,8 +2397,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>List&lt;ACLTokenListStub&gt;</returns>
-        public List<ACLTokenListStub> GetACLTokens(string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string))
+        public List<ACLTokenListStub> GetACLTokens(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0)
         {
             Fermyon.Nomad.Client.ApiResponse<List<ACLTokenListStub>> localVarResponse = GetACLTokensWithHttpInfo(region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
             return localVarResponse.Data;
@@ -2203,8 +2418,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of List&lt;ACLTokenListStub&gt;</returns>
-        public Fermyon.Nomad.Client.ApiResponse<List<ACLTokenListStub>> GetACLTokensWithHttpInfo(string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string))
+        public Fermyon.Nomad.Client.ApiResponse<List<ACLTokenListStub>> GetACLTokensWithHttpInfo(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0)
         {
             Fermyon.Nomad.Client.RequestOptions localVarRequestOptions = new Fermyon.Nomad.Client.RequestOptions();
 
@@ -2217,10 +2433,16 @@ namespace Fermyon.Nomad.Api
             };
 
             var localVarContentType = Fermyon.Nomad.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = Fermyon.Nomad.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             if (region != null)
             {
@@ -2259,6 +2481,9 @@ namespace Fermyon.Nomad.Api
                 localVarRequestOptions.HeaderParameters.Add("X-Nomad-Token", Fermyon.Nomad.Client.ClientUtils.ParameterToString(xNomadToken)); // header parameter
             }
 
+            localVarRequestOptions.Operation = "ACLApi.GetACLTokens";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
             // authentication (X-Nomad-Token) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("X-Nomad-Token")))
             {
@@ -2267,11 +2492,13 @@ namespace Fermyon.Nomad.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<List<ACLTokenListStub>>("/acl/tokens", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("GetACLTokens", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -2290,11 +2517,12 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;ACLTokenListStub&gt;</returns>
-        public async System.Threading.Tasks.Task<List<ACLTokenListStub>> GetACLTokensAsync(string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<List<ACLTokenListStub>> GetACLTokensAsync(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Fermyon.Nomad.Client.ApiResponse<List<ACLTokenListStub>> localVarResponse = await GetACLTokensWithHttpInfoAsync(region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, cancellationToken).ConfigureAwait(false);
+            Fermyon.Nomad.Client.ApiResponse<List<ACLTokenListStub>> localVarResponse = await GetACLTokensWithHttpInfoAsync(region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2311,9 +2539,10 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;ACLTokenListStub&gt;)</returns>
-        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<List<ACLTokenListStub>>> GetACLTokensWithHttpInfoAsync(string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<List<ACLTokenListStub>>> GetACLTokensWithHttpInfoAsync(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             Fermyon.Nomad.Client.RequestOptions localVarRequestOptions = new Fermyon.Nomad.Client.RequestOptions();
@@ -2326,12 +2555,17 @@ namespace Fermyon.Nomad.Api
                 "application/json"
             };
 
-
             var localVarContentType = Fermyon.Nomad.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = Fermyon.Nomad.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             if (region != null)
             {
@@ -2370,6 +2604,9 @@ namespace Fermyon.Nomad.Api
                 localVarRequestOptions.HeaderParameters.Add("X-Nomad-Token", Fermyon.Nomad.Client.ClientUtils.ParameterToString(xNomadToken)); // header parameter
             }
 
+            localVarRequestOptions.Operation = "ACLApi.GetACLTokens";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
             // authentication (X-Nomad-Token) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("X-Nomad-Token")))
             {
@@ -2377,13 +2614,15 @@ namespace Fermyon.Nomad.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.GetAsync<List<ACLTokenListStub>>("/acl/tokens", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("GetACLTokens", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -2397,8 +2636,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ACLToken</returns>
-        public ACLToken PostACLBootstrap(string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string))
+        public ACLToken PostACLBootstrap(string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0)
         {
             Fermyon.Nomad.Client.ApiResponse<ACLToken> localVarResponse = PostACLBootstrapWithHttpInfo(region, _namespace, xNomadToken, idempotencyToken);
             return localVarResponse.Data;
@@ -2412,8 +2652,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ACLToken</returns>
-        public Fermyon.Nomad.Client.ApiResponse<ACLToken> PostACLBootstrapWithHttpInfo(string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string))
+        public Fermyon.Nomad.Client.ApiResponse<ACLToken> PostACLBootstrapWithHttpInfo(string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0)
         {
             Fermyon.Nomad.Client.RequestOptions localVarRequestOptions = new Fermyon.Nomad.Client.RequestOptions();
 
@@ -2426,10 +2667,16 @@ namespace Fermyon.Nomad.Api
             };
 
             var localVarContentType = Fermyon.Nomad.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = Fermyon.Nomad.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             if (region != null)
             {
@@ -2448,6 +2695,9 @@ namespace Fermyon.Nomad.Api
                 localVarRequestOptions.HeaderParameters.Add("X-Nomad-Token", Fermyon.Nomad.Client.ClientUtils.ParameterToString(xNomadToken)); // header parameter
             }
 
+            localVarRequestOptions.Operation = "ACLApi.PostACLBootstrap";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
             // authentication (X-Nomad-Token) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("X-Nomad-Token")))
             {
@@ -2456,11 +2706,13 @@ namespace Fermyon.Nomad.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<ACLToken>("/acl/bootstrap", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PostACLBootstrap", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -2474,11 +2726,12 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ACLToken</returns>
-        public async System.Threading.Tasks.Task<ACLToken> PostACLBootstrapAsync(string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ACLToken> PostACLBootstrapAsync(string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Fermyon.Nomad.Client.ApiResponse<ACLToken> localVarResponse = await PostACLBootstrapWithHttpInfoAsync(region, _namespace, xNomadToken, idempotencyToken, cancellationToken).ConfigureAwait(false);
+            Fermyon.Nomad.Client.ApiResponse<ACLToken> localVarResponse = await PostACLBootstrapWithHttpInfoAsync(region, _namespace, xNomadToken, idempotencyToken, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2490,9 +2743,10 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ACLToken)</returns>
-        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<ACLToken>> PostACLBootstrapWithHttpInfoAsync(string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<ACLToken>> PostACLBootstrapWithHttpInfoAsync(string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             Fermyon.Nomad.Client.RequestOptions localVarRequestOptions = new Fermyon.Nomad.Client.RequestOptions();
@@ -2505,12 +2759,17 @@ namespace Fermyon.Nomad.Api
                 "application/json"
             };
 
-
             var localVarContentType = Fermyon.Nomad.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = Fermyon.Nomad.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             if (region != null)
             {
@@ -2529,6 +2788,9 @@ namespace Fermyon.Nomad.Api
                 localVarRequestOptions.HeaderParameters.Add("X-Nomad-Token", Fermyon.Nomad.Client.ClientUtils.ParameterToString(xNomadToken)); // header parameter
             }
 
+            localVarRequestOptions.Operation = "ACLApi.PostACLBootstrap";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
             // authentication (X-Nomad-Token) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("X-Nomad-Token")))
             {
@@ -2536,13 +2798,15 @@ namespace Fermyon.Nomad.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.PostAsync<ACLToken>("/acl/bootstrap", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PostACLBootstrap", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -2558,8 +2822,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns></returns>
-        public void PostACLPolicy(string policyName, ACLPolicy aCLPolicy, string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string))
+        public void PostACLPolicy(string policyName, ACLPolicy aCLPolicy, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0)
         {
             PostACLPolicyWithHttpInfo(policyName, aCLPolicy, region, _namespace, xNomadToken, idempotencyToken);
         }
@@ -2574,16 +2839,21 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Fermyon.Nomad.Client.ApiResponse<Object> PostACLPolicyWithHttpInfo(string policyName, ACLPolicy aCLPolicy, string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string))
+        public Fermyon.Nomad.Client.ApiResponse<Object> PostACLPolicyWithHttpInfo(string policyName, ACLPolicy aCLPolicy, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'policyName' is set
             if (policyName == null)
+            {
                 throw new Fermyon.Nomad.Client.ApiException(400, "Missing required parameter 'policyName' when calling ACLApi->PostACLPolicy");
+            }
 
             // verify the required parameter 'aCLPolicy' is set
             if (aCLPolicy == null)
+            {
                 throw new Fermyon.Nomad.Client.ApiException(400, "Missing required parameter 'aCLPolicy' when calling ACLApi->PostACLPolicy");
+            }
 
             Fermyon.Nomad.Client.RequestOptions localVarRequestOptions = new Fermyon.Nomad.Client.RequestOptions();
 
@@ -2596,10 +2866,16 @@ namespace Fermyon.Nomad.Api
             };
 
             var localVarContentType = Fermyon.Nomad.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = Fermyon.Nomad.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("policyName", Fermyon.Nomad.Client.ClientUtils.ParameterToString(policyName)); // path parameter
             if (region != null)
@@ -2620,6 +2896,9 @@ namespace Fermyon.Nomad.Api
             }
             localVarRequestOptions.Data = aCLPolicy;
 
+            localVarRequestOptions.Operation = "ACLApi.PostACLPolicy";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
             // authentication (X-Nomad-Token) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("X-Nomad-Token")))
             {
@@ -2628,11 +2907,13 @@ namespace Fermyon.Nomad.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<Object>("/acl/policy/{policyName}", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PostACLPolicy", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -2648,11 +2929,12 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task PostACLPolicyAsync(string policyName, ACLPolicy aCLPolicy, string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task PostACLPolicyAsync(string policyName, ACLPolicy aCLPolicy, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            await PostACLPolicyWithHttpInfoAsync(policyName, aCLPolicy, region, _namespace, xNomadToken, idempotencyToken, cancellationToken).ConfigureAwait(false);
+            await PostACLPolicyWithHttpInfoAsync(policyName, aCLPolicy, region, _namespace, xNomadToken, idempotencyToken, operationIndex, cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -2665,17 +2947,22 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<Object>> PostACLPolicyWithHttpInfoAsync(string policyName, ACLPolicy aCLPolicy, string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<Object>> PostACLPolicyWithHttpInfoAsync(string policyName, ACLPolicy aCLPolicy, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'policyName' is set
             if (policyName == null)
+            {
                 throw new Fermyon.Nomad.Client.ApiException(400, "Missing required parameter 'policyName' when calling ACLApi->PostACLPolicy");
+            }
 
             // verify the required parameter 'aCLPolicy' is set
             if (aCLPolicy == null)
+            {
                 throw new Fermyon.Nomad.Client.ApiException(400, "Missing required parameter 'aCLPolicy' when calling ACLApi->PostACLPolicy");
+            }
 
 
             Fermyon.Nomad.Client.RequestOptions localVarRequestOptions = new Fermyon.Nomad.Client.RequestOptions();
@@ -2688,12 +2975,17 @@ namespace Fermyon.Nomad.Api
             string[] _accepts = new string[] {
             };
 
-
             var localVarContentType = Fermyon.Nomad.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = Fermyon.Nomad.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("policyName", Fermyon.Nomad.Client.ClientUtils.ParameterToString(policyName)); // path parameter
             if (region != null)
@@ -2714,6 +3006,9 @@ namespace Fermyon.Nomad.Api
             }
             localVarRequestOptions.Data = aCLPolicy;
 
+            localVarRequestOptions.Operation = "ACLApi.PostACLPolicy";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
             // authentication (X-Nomad-Token) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("X-Nomad-Token")))
             {
@@ -2721,13 +3016,15 @@ namespace Fermyon.Nomad.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/acl/policy/{policyName}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PostACLPolicy", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -2743,8 +3040,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ACLToken</returns>
-        public ACLToken PostACLToken(string tokenAccessor, ACLToken aCLToken, string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string))
+        public ACLToken PostACLToken(string tokenAccessor, ACLToken aCLToken, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0)
         {
             Fermyon.Nomad.Client.ApiResponse<ACLToken> localVarResponse = PostACLTokenWithHttpInfo(tokenAccessor, aCLToken, region, _namespace, xNomadToken, idempotencyToken);
             return localVarResponse.Data;
@@ -2760,16 +3058,21 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ACLToken</returns>
-        public Fermyon.Nomad.Client.ApiResponse<ACLToken> PostACLTokenWithHttpInfo(string tokenAccessor, ACLToken aCLToken, string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string))
+        public Fermyon.Nomad.Client.ApiResponse<ACLToken> PostACLTokenWithHttpInfo(string tokenAccessor, ACLToken aCLToken, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'tokenAccessor' is set
             if (tokenAccessor == null)
+            {
                 throw new Fermyon.Nomad.Client.ApiException(400, "Missing required parameter 'tokenAccessor' when calling ACLApi->PostACLToken");
+            }
 
             // verify the required parameter 'aCLToken' is set
             if (aCLToken == null)
+            {
                 throw new Fermyon.Nomad.Client.ApiException(400, "Missing required parameter 'aCLToken' when calling ACLApi->PostACLToken");
+            }
 
             Fermyon.Nomad.Client.RequestOptions localVarRequestOptions = new Fermyon.Nomad.Client.RequestOptions();
 
@@ -2783,10 +3086,16 @@ namespace Fermyon.Nomad.Api
             };
 
             var localVarContentType = Fermyon.Nomad.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = Fermyon.Nomad.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("tokenAccessor", Fermyon.Nomad.Client.ClientUtils.ParameterToString(tokenAccessor)); // path parameter
             if (region != null)
@@ -2807,6 +3116,9 @@ namespace Fermyon.Nomad.Api
             }
             localVarRequestOptions.Data = aCLToken;
 
+            localVarRequestOptions.Operation = "ACLApi.PostACLToken";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
             // authentication (X-Nomad-Token) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("X-Nomad-Token")))
             {
@@ -2815,11 +3127,13 @@ namespace Fermyon.Nomad.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<ACLToken>("/acl/token/{tokenAccessor}", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PostACLToken", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -2835,11 +3149,12 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ACLToken</returns>
-        public async System.Threading.Tasks.Task<ACLToken> PostACLTokenAsync(string tokenAccessor, ACLToken aCLToken, string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ACLToken> PostACLTokenAsync(string tokenAccessor, ACLToken aCLToken, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Fermyon.Nomad.Client.ApiResponse<ACLToken> localVarResponse = await PostACLTokenWithHttpInfoAsync(tokenAccessor, aCLToken, region, _namespace, xNomadToken, idempotencyToken, cancellationToken).ConfigureAwait(false);
+            Fermyon.Nomad.Client.ApiResponse<ACLToken> localVarResponse = await PostACLTokenWithHttpInfoAsync(tokenAccessor, aCLToken, region, _namespace, xNomadToken, idempotencyToken, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2853,17 +3168,22 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ACLToken)</returns>
-        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<ACLToken>> PostACLTokenWithHttpInfoAsync(string tokenAccessor, ACLToken aCLToken, string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<ACLToken>> PostACLTokenWithHttpInfoAsync(string tokenAccessor, ACLToken aCLToken, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'tokenAccessor' is set
             if (tokenAccessor == null)
+            {
                 throw new Fermyon.Nomad.Client.ApiException(400, "Missing required parameter 'tokenAccessor' when calling ACLApi->PostACLToken");
+            }
 
             // verify the required parameter 'aCLToken' is set
             if (aCLToken == null)
+            {
                 throw new Fermyon.Nomad.Client.ApiException(400, "Missing required parameter 'aCLToken' when calling ACLApi->PostACLToken");
+            }
 
 
             Fermyon.Nomad.Client.RequestOptions localVarRequestOptions = new Fermyon.Nomad.Client.RequestOptions();
@@ -2877,12 +3197,17 @@ namespace Fermyon.Nomad.Api
                 "application/json"
             };
 
-
             var localVarContentType = Fermyon.Nomad.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = Fermyon.Nomad.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("tokenAccessor", Fermyon.Nomad.Client.ClientUtils.ParameterToString(tokenAccessor)); // path parameter
             if (region != null)
@@ -2903,6 +3228,9 @@ namespace Fermyon.Nomad.Api
             }
             localVarRequestOptions.Data = aCLToken;
 
+            localVarRequestOptions.Operation = "ACLApi.PostACLToken";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
             // authentication (X-Nomad-Token) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("X-Nomad-Token")))
             {
@@ -2910,13 +3238,15 @@ namespace Fermyon.Nomad.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.PostAsync<ACLToken>("/acl/token/{tokenAccessor}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PostACLToken", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -2930,8 +3260,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>OneTimeToken</returns>
-        public OneTimeToken PostACLTokenOnetime(string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string))
+        public OneTimeToken PostACLTokenOnetime(string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0)
         {
             Fermyon.Nomad.Client.ApiResponse<OneTimeToken> localVarResponse = PostACLTokenOnetimeWithHttpInfo(region, _namespace, xNomadToken, idempotencyToken);
             return localVarResponse.Data;
@@ -2945,8 +3276,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of OneTimeToken</returns>
-        public Fermyon.Nomad.Client.ApiResponse<OneTimeToken> PostACLTokenOnetimeWithHttpInfo(string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string))
+        public Fermyon.Nomad.Client.ApiResponse<OneTimeToken> PostACLTokenOnetimeWithHttpInfo(string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0)
         {
             Fermyon.Nomad.Client.RequestOptions localVarRequestOptions = new Fermyon.Nomad.Client.RequestOptions();
 
@@ -2959,10 +3291,16 @@ namespace Fermyon.Nomad.Api
             };
 
             var localVarContentType = Fermyon.Nomad.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = Fermyon.Nomad.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             if (region != null)
             {
@@ -2981,6 +3319,9 @@ namespace Fermyon.Nomad.Api
                 localVarRequestOptions.HeaderParameters.Add("X-Nomad-Token", Fermyon.Nomad.Client.ClientUtils.ParameterToString(xNomadToken)); // header parameter
             }
 
+            localVarRequestOptions.Operation = "ACLApi.PostACLTokenOnetime";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
             // authentication (X-Nomad-Token) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("X-Nomad-Token")))
             {
@@ -2989,11 +3330,13 @@ namespace Fermyon.Nomad.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<OneTimeToken>("/acl/token/onetime", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PostACLTokenOnetime", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -3007,11 +3350,12 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OneTimeToken</returns>
-        public async System.Threading.Tasks.Task<OneTimeToken> PostACLTokenOnetimeAsync(string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<OneTimeToken> PostACLTokenOnetimeAsync(string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Fermyon.Nomad.Client.ApiResponse<OneTimeToken> localVarResponse = await PostACLTokenOnetimeWithHttpInfoAsync(region, _namespace, xNomadToken, idempotencyToken, cancellationToken).ConfigureAwait(false);
+            Fermyon.Nomad.Client.ApiResponse<OneTimeToken> localVarResponse = await PostACLTokenOnetimeWithHttpInfoAsync(region, _namespace, xNomadToken, idempotencyToken, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -3023,9 +3367,10 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OneTimeToken)</returns>
-        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<OneTimeToken>> PostACLTokenOnetimeWithHttpInfoAsync(string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<OneTimeToken>> PostACLTokenOnetimeWithHttpInfoAsync(string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             Fermyon.Nomad.Client.RequestOptions localVarRequestOptions = new Fermyon.Nomad.Client.RequestOptions();
@@ -3038,12 +3383,17 @@ namespace Fermyon.Nomad.Api
                 "application/json"
             };
 
-
             var localVarContentType = Fermyon.Nomad.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = Fermyon.Nomad.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             if (region != null)
             {
@@ -3062,6 +3412,9 @@ namespace Fermyon.Nomad.Api
                 localVarRequestOptions.HeaderParameters.Add("X-Nomad-Token", Fermyon.Nomad.Client.ClientUtils.ParameterToString(xNomadToken)); // header parameter
             }
 
+            localVarRequestOptions.Operation = "ACLApi.PostACLTokenOnetime";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
             // authentication (X-Nomad-Token) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("X-Nomad-Token")))
             {
@@ -3069,13 +3422,15 @@ namespace Fermyon.Nomad.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.PostAsync<OneTimeToken>("/acl/token/onetime", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PostACLTokenOnetime", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -3090,8 +3445,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ACLToken</returns>
-        public ACLToken PostACLTokenOnetimeExchange(OneTimeTokenExchangeRequest oneTimeTokenExchangeRequest, string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string))
+        public ACLToken PostACLTokenOnetimeExchange(OneTimeTokenExchangeRequest oneTimeTokenExchangeRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0)
         {
             Fermyon.Nomad.Client.ApiResponse<ACLToken> localVarResponse = PostACLTokenOnetimeExchangeWithHttpInfo(oneTimeTokenExchangeRequest, region, _namespace, xNomadToken, idempotencyToken);
             return localVarResponse.Data;
@@ -3106,12 +3462,15 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ACLToken</returns>
-        public Fermyon.Nomad.Client.ApiResponse<ACLToken> PostACLTokenOnetimeExchangeWithHttpInfo(OneTimeTokenExchangeRequest oneTimeTokenExchangeRequest, string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string))
+        public Fermyon.Nomad.Client.ApiResponse<ACLToken> PostACLTokenOnetimeExchangeWithHttpInfo(OneTimeTokenExchangeRequest oneTimeTokenExchangeRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'oneTimeTokenExchangeRequest' is set
             if (oneTimeTokenExchangeRequest == null)
+            {
                 throw new Fermyon.Nomad.Client.ApiException(400, "Missing required parameter 'oneTimeTokenExchangeRequest' when calling ACLApi->PostACLTokenOnetimeExchange");
+            }
 
             Fermyon.Nomad.Client.RequestOptions localVarRequestOptions = new Fermyon.Nomad.Client.RequestOptions();
 
@@ -3125,10 +3484,16 @@ namespace Fermyon.Nomad.Api
             };
 
             var localVarContentType = Fermyon.Nomad.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = Fermyon.Nomad.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             if (region != null)
             {
@@ -3148,6 +3513,9 @@ namespace Fermyon.Nomad.Api
             }
             localVarRequestOptions.Data = oneTimeTokenExchangeRequest;
 
+            localVarRequestOptions.Operation = "ACLApi.PostACLTokenOnetimeExchange";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
             // authentication (X-Nomad-Token) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("X-Nomad-Token")))
             {
@@ -3156,11 +3524,13 @@ namespace Fermyon.Nomad.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<ACLToken>("/acl/token/onetime/exchange", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PostACLTokenOnetimeExchange", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -3175,11 +3545,12 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ACLToken</returns>
-        public async System.Threading.Tasks.Task<ACLToken> PostACLTokenOnetimeExchangeAsync(OneTimeTokenExchangeRequest oneTimeTokenExchangeRequest, string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ACLToken> PostACLTokenOnetimeExchangeAsync(OneTimeTokenExchangeRequest oneTimeTokenExchangeRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Fermyon.Nomad.Client.ApiResponse<ACLToken> localVarResponse = await PostACLTokenOnetimeExchangeWithHttpInfoAsync(oneTimeTokenExchangeRequest, region, _namespace, xNomadToken, idempotencyToken, cancellationToken).ConfigureAwait(false);
+            Fermyon.Nomad.Client.ApiResponse<ACLToken> localVarResponse = await PostACLTokenOnetimeExchangeWithHttpInfoAsync(oneTimeTokenExchangeRequest, region, _namespace, xNomadToken, idempotencyToken, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -3192,13 +3563,16 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ACLToken)</returns>
-        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<ACLToken>> PostACLTokenOnetimeExchangeWithHttpInfoAsync(OneTimeTokenExchangeRequest oneTimeTokenExchangeRequest, string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<ACLToken>> PostACLTokenOnetimeExchangeWithHttpInfoAsync(OneTimeTokenExchangeRequest oneTimeTokenExchangeRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'oneTimeTokenExchangeRequest' is set
             if (oneTimeTokenExchangeRequest == null)
+            {
                 throw new Fermyon.Nomad.Client.ApiException(400, "Missing required parameter 'oneTimeTokenExchangeRequest' when calling ACLApi->PostACLTokenOnetimeExchange");
+            }
 
 
             Fermyon.Nomad.Client.RequestOptions localVarRequestOptions = new Fermyon.Nomad.Client.RequestOptions();
@@ -3212,12 +3586,17 @@ namespace Fermyon.Nomad.Api
                 "application/json"
             };
 
-
             var localVarContentType = Fermyon.Nomad.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = Fermyon.Nomad.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             if (region != null)
             {
@@ -3237,6 +3616,9 @@ namespace Fermyon.Nomad.Api
             }
             localVarRequestOptions.Data = oneTimeTokenExchangeRequest;
 
+            localVarRequestOptions.Operation = "ACLApi.PostACLTokenOnetimeExchange";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
             // authentication (X-Nomad-Token) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("X-Nomad-Token")))
             {
@@ -3244,13 +3626,15 @@ namespace Fermyon.Nomad.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.PostAsync<ACLToken>("/acl/token/onetime/exchange", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PostACLTokenOnetimeExchange", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;

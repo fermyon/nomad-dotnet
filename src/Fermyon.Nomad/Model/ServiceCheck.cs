@@ -237,7 +237,7 @@ namespace Fermyon.Nomad.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class ServiceCheck {\n");
             sb.Append("  AddressMode: ").Append(AddressMode).Append("\n");
             sb.Append("  Advertise: ").Append(Advertise).Append("\n");
@@ -294,8 +294,9 @@ namespace Fermyon.Nomad.Model
         public bool Equals(ServiceCheck input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.AddressMode == input.AddressMode ||
@@ -424,46 +425,80 @@ namespace Fermyon.Nomad.Model
             {
                 int hashCode = 41;
                 if (this.AddressMode != null)
-                    hashCode = hashCode * 59 + this.AddressMode.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.AddressMode.GetHashCode();
+                }
                 if (this.Advertise != null)
-                    hashCode = hashCode * 59 + this.Advertise.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Advertise.GetHashCode();
+                }
                 if (this.Args != null)
-                    hashCode = hashCode * 59 + this.Args.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Args.GetHashCode();
+                }
                 if (this.Body != null)
-                    hashCode = hashCode * 59 + this.Body.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Body.GetHashCode();
+                }
                 if (this.CheckRestart != null)
-                    hashCode = hashCode * 59 + this.CheckRestart.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.CheckRestart.GetHashCode();
+                }
                 if (this.Command != null)
-                    hashCode = hashCode * 59 + this.Command.GetHashCode();
-                hashCode = hashCode * 59 + this.Expose.GetHashCode();
-                hashCode = hashCode * 59 + this.FailuresBeforeCritical.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Command.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.Expose.GetHashCode();
+                hashCode = (hashCode * 59) + this.FailuresBeforeCritical.GetHashCode();
                 if (this.GRPCService != null)
-                    hashCode = hashCode * 59 + this.GRPCService.GetHashCode();
-                hashCode = hashCode * 59 + this.GRPCUseTLS.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.GRPCService.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.GRPCUseTLS.GetHashCode();
                 if (this.Header != null)
-                    hashCode = hashCode * 59 + this.Header.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Header.GetHashCode();
+                }
                 if (this.InitialStatus != null)
-                    hashCode = hashCode * 59 + this.InitialStatus.GetHashCode();
-                hashCode = hashCode * 59 + this.Interval.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.InitialStatus.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.Interval.GetHashCode();
                 if (this.Method != null)
-                    hashCode = hashCode * 59 + this.Method.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Method.GetHashCode();
+                }
                 if (this.Name != null)
-                    hashCode = hashCode * 59 + this.Name.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Name.GetHashCode();
+                }
                 if (this.OnUpdate != null)
-                    hashCode = hashCode * 59 + this.OnUpdate.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.OnUpdate.GetHashCode();
+                }
                 if (this.Path != null)
-                    hashCode = hashCode * 59 + this.Path.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Path.GetHashCode();
+                }
                 if (this.PortLabel != null)
-                    hashCode = hashCode * 59 + this.PortLabel.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.PortLabel.GetHashCode();
+                }
                 if (this.Protocol != null)
-                    hashCode = hashCode * 59 + this.Protocol.GetHashCode();
-                hashCode = hashCode * 59 + this.SuccessBeforePassing.GetHashCode();
-                hashCode = hashCode * 59 + this.TLSSkipVerify.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Protocol.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.SuccessBeforePassing.GetHashCode();
+                hashCode = (hashCode * 59) + this.TLSSkipVerify.GetHashCode();
                 if (this.TaskName != null)
-                    hashCode = hashCode * 59 + this.TaskName.GetHashCode();
-                hashCode = hashCode * 59 + this.Timeout.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.TaskName.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.Timeout.GetHashCode();
                 if (this.Type != null)
-                    hashCode = hashCode * 59 + this.Type.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Type.GetHashCode();
+                }
                 return hashCode;
             }
         }
@@ -473,7 +508,7 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             yield break;
         }

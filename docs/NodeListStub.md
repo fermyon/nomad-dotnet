@@ -20,7 +20,7 @@ Name | Type | Description | Notes
 **SchedulingEligibility** | **string** |  | [optional] 
 **Status** | **string** |  | [optional] 
 **StatusDescription** | **string** |  | [optional] 
-**Version** | **string** |  | [optional] 
+**_Version** | **string** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

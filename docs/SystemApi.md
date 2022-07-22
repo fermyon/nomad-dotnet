@@ -2,15 +2,14 @@
 
 All URIs are relative to *https://127.0.0.1:4646/v1*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**PutSystemGC**](SystemApi.md#putsystemgc) | **PUT** /system/gc | 
-[**PutSystemReconcileSummaries**](SystemApi.md#putsystemreconcilesummaries) | **PUT** /system/reconcile/summaries | 
-
+| Method | HTTP request | Description |
+|--------|--------------|-------------|
+| [**PutSystemGC**](SystemApi.md#putsystemgc) | **PUT** /system/gc |  |
+| [**PutSystemReconcileSummaries**](SystemApi.md#putsystemreconcilesummaries) | **PUT** /system/reconcile/summaries |  |
 
 <a name="putsystemgc"></a>
 # **PutSystemGC**
-> void PutSystemGC (string region = null, string _namespace = null, string xNomadToken = null, string idempotencyToken = null)
+> void PutSystemGC (string? region = null, string? _namespace = null, string? xNomadToken = null, string? idempotencyToken = null)
 
 
 
@@ -36,10 +35,10 @@ namespace Example
             // config.AddApiKeyPrefix("X-Nomad-Token", "Bearer");
 
             var apiInstance = new SystemApi(config);
-            var region = region_example;  // string | Filters results based on the specified region. (optional) 
-            var _namespace = _namespace_example;  // string | Filters results based on the specified namespace. (optional) 
-            var xNomadToken = xNomadToken_example;  // string | A Nomad ACL token. (optional) 
-            var idempotencyToken = idempotencyToken_example;  // string | Can be used to ensure operations are only run once. (optional) 
+            var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
+            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var xNomadToken = "xNomadToken_example";  // string? | A Nomad ACL token. (optional) 
+            var idempotencyToken = "idempotencyToken_example";  // string? | Can be used to ensure operations are only run once. (optional) 
 
             try
             {
@@ -47,8 +46,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.PutSystemGC: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling SystemApi.PutSystemGC: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -56,14 +55,30 @@ namespace Example
 }
 ```
 
+#### Using the PutSystemGCWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    apiInstance.PutSystemGCWithHttpInfo(region, _namespace, xNomadToken, idempotencyToken);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling SystemApi.PutSystemGCWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **region** | **string**| Filters results based on the specified region. | [optional] 
- **_namespace** | **string**| Filters results based on the specified namespace. | [optional] 
- **xNomadToken** | **string**| A Nomad ACL token. | [optional] 
- **idempotencyToken** | **string**| Can be used to ensure operations are only run once. | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **region** | **string?** | Filters results based on the specified region. | [optional]  |
+| **_namespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
+| **xNomadToken** | **string?** | A Nomad ACL token. | [optional]  |
+| **idempotencyToken** | **string?** | Can be used to ensure operations are only run once. | [optional]  |
 
 ### Return type
 
@@ -92,7 +107,7 @@ void (empty response body)
 
 <a name="putsystemreconcilesummaries"></a>
 # **PutSystemReconcileSummaries**
-> void PutSystemReconcileSummaries (string region = null, string _namespace = null, string xNomadToken = null, string idempotencyToken = null)
+> void PutSystemReconcileSummaries (string? region = null, string? _namespace = null, string? xNomadToken = null, string? idempotencyToken = null)
 
 
 
@@ -118,10 +133,10 @@ namespace Example
             // config.AddApiKeyPrefix("X-Nomad-Token", "Bearer");
 
             var apiInstance = new SystemApi(config);
-            var region = region_example;  // string | Filters results based on the specified region. (optional) 
-            var _namespace = _namespace_example;  // string | Filters results based on the specified namespace. (optional) 
-            var xNomadToken = xNomadToken_example;  // string | A Nomad ACL token. (optional) 
-            var idempotencyToken = idempotencyToken_example;  // string | Can be used to ensure operations are only run once. (optional) 
+            var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
+            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var xNomadToken = "xNomadToken_example";  // string? | A Nomad ACL token. (optional) 
+            var idempotencyToken = "idempotencyToken_example";  // string? | Can be used to ensure operations are only run once. (optional) 
 
             try
             {
@@ -129,8 +144,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.PutSystemReconcileSummaries: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling SystemApi.PutSystemReconcileSummaries: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -138,14 +153,30 @@ namespace Example
 }
 ```
 
+#### Using the PutSystemReconcileSummariesWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    apiInstance.PutSystemReconcileSummariesWithHttpInfo(region, _namespace, xNomadToken, idempotencyToken);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling SystemApi.PutSystemReconcileSummariesWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **region** | **string**| Filters results based on the specified region. | [optional] 
- **_namespace** | **string**| Filters results based on the specified namespace. | [optional] 
- **xNomadToken** | **string**| A Nomad ACL token. | [optional] 
- **idempotencyToken** | **string**| Can be used to ensure operations are only run once. | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **region** | **string?** | Filters results based on the specified region. | [optional]  |
+| **_namespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
+| **xNomadToken** | **string?** | A Nomad ACL token. | [optional]  |
+| **idempotencyToken** | **string?** | Can be used to ensure operations are only run once. | [optional]  |
 
 ### Return type
 

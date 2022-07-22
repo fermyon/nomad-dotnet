@@ -77,7 +77,7 @@ namespace Fermyon.Nomad.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class MultiregionRegion {\n");
             sb.Append("  Count: ").Append(Count).Append("\n");
             sb.Append("  Datacenters: ").Append(Datacenters).Append("\n");
@@ -114,8 +114,9 @@ namespace Fermyon.Nomad.Model
         public bool Equals(MultiregionRegion input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.Count == input.Count ||
@@ -149,13 +150,19 @@ namespace Fermyon.Nomad.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                hashCode = hashCode * 59 + this.Count.GetHashCode();
+                hashCode = (hashCode * 59) + this.Count.GetHashCode();
                 if (this.Datacenters != null)
-                    hashCode = hashCode * 59 + this.Datacenters.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Datacenters.GetHashCode();
+                }
                 if (this.Meta != null)
-                    hashCode = hashCode * 59 + this.Meta.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Meta.GetHashCode();
+                }
                 if (this.Name != null)
-                    hashCode = hashCode * 59 + this.Name.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Name.GetHashCode();
+                }
                 return hashCode;
             }
         }
@@ -165,7 +172,7 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             yield break;
         }

@@ -85,7 +85,7 @@ namespace Fermyon.Nomad.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class MetricsSummary {\n");
             sb.Append("  Counters: ").Append(Counters).Append("\n");
             sb.Append("  Gauges: ").Append(Gauges).Append("\n");
@@ -123,8 +123,9 @@ namespace Fermyon.Nomad.Model
         public bool Equals(MetricsSummary input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.Counters == input.Counters ||
@@ -167,15 +168,25 @@ namespace Fermyon.Nomad.Model
             {
                 int hashCode = 41;
                 if (this.Counters != null)
-                    hashCode = hashCode * 59 + this.Counters.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Counters.GetHashCode();
+                }
                 if (this.Gauges != null)
-                    hashCode = hashCode * 59 + this.Gauges.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Gauges.GetHashCode();
+                }
                 if (this.Points != null)
-                    hashCode = hashCode * 59 + this.Points.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Points.GetHashCode();
+                }
                 if (this.Samples != null)
-                    hashCode = hashCode * 59 + this.Samples.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Samples.GetHashCode();
+                }
                 if (this.Timestamp != null)
-                    hashCode = hashCode * 59 + this.Timestamp.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Timestamp.GetHashCode();
+                }
                 return hashCode;
             }
         }
@@ -185,7 +196,7 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             yield break;
         }

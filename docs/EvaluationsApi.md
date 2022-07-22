@@ -2,16 +2,15 @@
 
 All URIs are relative to *https://127.0.0.1:4646/v1*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**GetEvaluation**](EvaluationsApi.md#getevaluation) | **GET** /evaluation/{evalID} | 
-[**GetEvaluationAllocations**](EvaluationsApi.md#getevaluationallocations) | **GET** /evaluation/{evalID}/allocations | 
-[**GetEvaluations**](EvaluationsApi.md#getevaluations) | **GET** /evaluations | 
-
+| Method | HTTP request | Description |
+|--------|--------------|-------------|
+| [**GetEvaluation**](EvaluationsApi.md#getevaluation) | **GET** /evaluation/{evalID} |  |
+| [**GetEvaluationAllocations**](EvaluationsApi.md#getevaluationallocations) | **GET** /evaluation/{evalID}/allocations |  |
+| [**GetEvaluations**](EvaluationsApi.md#getevaluations) | **GET** /evaluations |  |
 
 <a name="getevaluation"></a>
 # **GetEvaluation**
-> Evaluation GetEvaluation (string evalID, string region = null, string _namespace = null, int? index = null, string wait = null, string stale = null, string prefix = null, string xNomadToken = null, int? perPage = null, string nextToken = null)
+> Evaluation GetEvaluation (string evalID, string? region = null, string? _namespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null)
 
 
 
@@ -37,16 +36,16 @@ namespace Example
             // config.AddApiKeyPrefix("X-Nomad-Token", "Bearer");
 
             var apiInstance = new EvaluationsApi(config);
-            var evalID = evalID_example;  // string | Evaluation ID.
-            var region = region_example;  // string | Filters results based on the specified region. (optional) 
-            var _namespace = _namespace_example;  // string | Filters results based on the specified namespace. (optional) 
+            var evalID = "evalID_example";  // string | Evaluation ID.
+            var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
+            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
             var index = 56;  // int? | If set, wait until query exceeds given index. Must be provided with WaitParam. (optional) 
-            var wait = wait_example;  // string | Provided with IndexParam to wait for change. (optional) 
-            var stale = stale_example;  // string | If present, results will include stale reads. (optional) 
-            var prefix = prefix_example;  // string | Constrains results to jobs that start with the defined prefix (optional) 
-            var xNomadToken = xNomadToken_example;  // string | A Nomad ACL token. (optional) 
+            var wait = "wait_example";  // string? | Provided with IndexParam to wait for change. (optional) 
+            var stale = "stale_example";  // string? | If present, results will include stale reads. (optional) 
+            var prefix = "prefix_example";  // string? | Constrains results to jobs that start with the defined prefix (optional) 
+            var xNomadToken = "xNomadToken_example";  // string? | A Nomad ACL token. (optional) 
             var perPage = 56;  // int? | Maximum number of results to return. (optional) 
-            var nextToken = nextToken_example;  // string | Indicates where to start paging for queries that support pagination. (optional) 
+            var nextToken = "nextToken_example";  // string? | Indicates where to start paging for queries that support pagination. (optional) 
 
             try
             {
@@ -55,8 +54,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling EvaluationsApi.GetEvaluation: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling EvaluationsApi.GetEvaluation: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -64,20 +63,39 @@ namespace Example
 }
 ```
 
+#### Using the GetEvaluationWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    ApiResponse<Evaluation> response = apiInstance.GetEvaluationWithHttpInfo(evalID, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling EvaluationsApi.GetEvaluationWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **evalID** | **string**| Evaluation ID. | 
- **region** | **string**| Filters results based on the specified region. | [optional] 
- **_namespace** | **string**| Filters results based on the specified namespace. | [optional] 
- **index** | **int?**| If set, wait until query exceeds given index. Must be provided with WaitParam. | [optional] 
- **wait** | **string**| Provided with IndexParam to wait for change. | [optional] 
- **stale** | **string**| If present, results will include stale reads. | [optional] 
- **prefix** | **string**| Constrains results to jobs that start with the defined prefix | [optional] 
- **xNomadToken** | **string**| A Nomad ACL token. | [optional] 
- **perPage** | **int?**| Maximum number of results to return. | [optional] 
- **nextToken** | **string**| Indicates where to start paging for queries that support pagination. | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **evalID** | **string** | Evaluation ID. |  |
+| **region** | **string?** | Filters results based on the specified region. | [optional]  |
+| **_namespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
+| **index** | **int?** | If set, wait until query exceeds given index. Must be provided with WaitParam. | [optional]  |
+| **wait** | **string?** | Provided with IndexParam to wait for change. | [optional]  |
+| **stale** | **string?** | If present, results will include stale reads. | [optional]  |
+| **prefix** | **string?** | Constrains results to jobs that start with the defined prefix | [optional]  |
+| **xNomadToken** | **string?** | A Nomad ACL token. | [optional]  |
+| **perPage** | **int?** | Maximum number of results to return. | [optional]  |
+| **nextToken** | **string?** | Indicates where to start paging for queries that support pagination. | [optional]  |
 
 ### Return type
 
@@ -106,7 +124,7 @@ Name | Type | Description  | Notes
 
 <a name="getevaluationallocations"></a>
 # **GetEvaluationAllocations**
-> List&lt;AllocationListStub&gt; GetEvaluationAllocations (string evalID, string region = null, string _namespace = null, int? index = null, string wait = null, string stale = null, string prefix = null, string xNomadToken = null, int? perPage = null, string nextToken = null)
+> List&lt;AllocationListStub&gt; GetEvaluationAllocations (string evalID, string? region = null, string? _namespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null)
 
 
 
@@ -132,16 +150,16 @@ namespace Example
             // config.AddApiKeyPrefix("X-Nomad-Token", "Bearer");
 
             var apiInstance = new EvaluationsApi(config);
-            var evalID = evalID_example;  // string | Evaluation ID.
-            var region = region_example;  // string | Filters results based on the specified region. (optional) 
-            var _namespace = _namespace_example;  // string | Filters results based on the specified namespace. (optional) 
+            var evalID = "evalID_example";  // string | Evaluation ID.
+            var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
+            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
             var index = 56;  // int? | If set, wait until query exceeds given index. Must be provided with WaitParam. (optional) 
-            var wait = wait_example;  // string | Provided with IndexParam to wait for change. (optional) 
-            var stale = stale_example;  // string | If present, results will include stale reads. (optional) 
-            var prefix = prefix_example;  // string | Constrains results to jobs that start with the defined prefix (optional) 
-            var xNomadToken = xNomadToken_example;  // string | A Nomad ACL token. (optional) 
+            var wait = "wait_example";  // string? | Provided with IndexParam to wait for change. (optional) 
+            var stale = "stale_example";  // string? | If present, results will include stale reads. (optional) 
+            var prefix = "prefix_example";  // string? | Constrains results to jobs that start with the defined prefix (optional) 
+            var xNomadToken = "xNomadToken_example";  // string? | A Nomad ACL token. (optional) 
             var perPage = 56;  // int? | Maximum number of results to return. (optional) 
-            var nextToken = nextToken_example;  // string | Indicates where to start paging for queries that support pagination. (optional) 
+            var nextToken = "nextToken_example";  // string? | Indicates where to start paging for queries that support pagination. (optional) 
 
             try
             {
@@ -150,8 +168,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling EvaluationsApi.GetEvaluationAllocations: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling EvaluationsApi.GetEvaluationAllocations: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -159,20 +177,39 @@ namespace Example
 }
 ```
 
+#### Using the GetEvaluationAllocationsWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    ApiResponse<List<AllocationListStub>> response = apiInstance.GetEvaluationAllocationsWithHttpInfo(evalID, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling EvaluationsApi.GetEvaluationAllocationsWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **evalID** | **string**| Evaluation ID. | 
- **region** | **string**| Filters results based on the specified region. | [optional] 
- **_namespace** | **string**| Filters results based on the specified namespace. | [optional] 
- **index** | **int?**| If set, wait until query exceeds given index. Must be provided with WaitParam. | [optional] 
- **wait** | **string**| Provided with IndexParam to wait for change. | [optional] 
- **stale** | **string**| If present, results will include stale reads. | [optional] 
- **prefix** | **string**| Constrains results to jobs that start with the defined prefix | [optional] 
- **xNomadToken** | **string**| A Nomad ACL token. | [optional] 
- **perPage** | **int?**| Maximum number of results to return. | [optional] 
- **nextToken** | **string**| Indicates where to start paging for queries that support pagination. | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **evalID** | **string** | Evaluation ID. |  |
+| **region** | **string?** | Filters results based on the specified region. | [optional]  |
+| **_namespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
+| **index** | **int?** | If set, wait until query exceeds given index. Must be provided with WaitParam. | [optional]  |
+| **wait** | **string?** | Provided with IndexParam to wait for change. | [optional]  |
+| **stale** | **string?** | If present, results will include stale reads. | [optional]  |
+| **prefix** | **string?** | Constrains results to jobs that start with the defined prefix | [optional]  |
+| **xNomadToken** | **string?** | A Nomad ACL token. | [optional]  |
+| **perPage** | **int?** | Maximum number of results to return. | [optional]  |
+| **nextToken** | **string?** | Indicates where to start paging for queries that support pagination. | [optional]  |
 
 ### Return type
 
@@ -201,7 +238,7 @@ Name | Type | Description  | Notes
 
 <a name="getevaluations"></a>
 # **GetEvaluations**
-> List&lt;Evaluation&gt; GetEvaluations (string region = null, string _namespace = null, int? index = null, string wait = null, string stale = null, string prefix = null, string xNomadToken = null, int? perPage = null, string nextToken = null)
+> List&lt;Evaluation&gt; GetEvaluations (string? region = null, string? _namespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null)
 
 
 
@@ -227,15 +264,15 @@ namespace Example
             // config.AddApiKeyPrefix("X-Nomad-Token", "Bearer");
 
             var apiInstance = new EvaluationsApi(config);
-            var region = region_example;  // string | Filters results based on the specified region. (optional) 
-            var _namespace = _namespace_example;  // string | Filters results based on the specified namespace. (optional) 
+            var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
+            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
             var index = 56;  // int? | If set, wait until query exceeds given index. Must be provided with WaitParam. (optional) 
-            var wait = wait_example;  // string | Provided with IndexParam to wait for change. (optional) 
-            var stale = stale_example;  // string | If present, results will include stale reads. (optional) 
-            var prefix = prefix_example;  // string | Constrains results to jobs that start with the defined prefix (optional) 
-            var xNomadToken = xNomadToken_example;  // string | A Nomad ACL token. (optional) 
+            var wait = "wait_example";  // string? | Provided with IndexParam to wait for change. (optional) 
+            var stale = "stale_example";  // string? | If present, results will include stale reads. (optional) 
+            var prefix = "prefix_example";  // string? | Constrains results to jobs that start with the defined prefix (optional) 
+            var xNomadToken = "xNomadToken_example";  // string? | A Nomad ACL token. (optional) 
             var perPage = 56;  // int? | Maximum number of results to return. (optional) 
-            var nextToken = nextToken_example;  // string | Indicates where to start paging for queries that support pagination. (optional) 
+            var nextToken = "nextToken_example";  // string? | Indicates where to start paging for queries that support pagination. (optional) 
 
             try
             {
@@ -244,8 +281,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling EvaluationsApi.GetEvaluations: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling EvaluationsApi.GetEvaluations: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -253,19 +290,38 @@ namespace Example
 }
 ```
 
+#### Using the GetEvaluationsWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    ApiResponse<List<Evaluation>> response = apiInstance.GetEvaluationsWithHttpInfo(region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling EvaluationsApi.GetEvaluationsWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **region** | **string**| Filters results based on the specified region. | [optional] 
- **_namespace** | **string**| Filters results based on the specified namespace. | [optional] 
- **index** | **int?**| If set, wait until query exceeds given index. Must be provided with WaitParam. | [optional] 
- **wait** | **string**| Provided with IndexParam to wait for change. | [optional] 
- **stale** | **string**| If present, results will include stale reads. | [optional] 
- **prefix** | **string**| Constrains results to jobs that start with the defined prefix | [optional] 
- **xNomadToken** | **string**| A Nomad ACL token. | [optional] 
- **perPage** | **int?**| Maximum number of results to return. | [optional] 
- **nextToken** | **string**| Indicates where to start paging for queries that support pagination. | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **region** | **string?** | Filters results based on the specified region. | [optional]  |
+| **_namespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
+| **index** | **int?** | If set, wait until query exceeds given index. Must be provided with WaitParam. | [optional]  |
+| **wait** | **string?** | Provided with IndexParam to wait for change. | [optional]  |
+| **stale** | **string?** | If present, results will include stale reads. | [optional]  |
+| **prefix** | **string?** | Constrains results to jobs that start with the defined prefix | [optional]  |
+| **xNomadToken** | **string?** | A Nomad ACL token. | [optional]  |
+| **perPage** | **int?** | Maximum number of results to return. | [optional]  |
+| **nextToken** | **string?** | Indicates where to start paging for queries that support pagination. | [optional]  |
 
 ### Return type
 

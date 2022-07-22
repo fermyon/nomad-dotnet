@@ -77,7 +77,7 @@ namespace Fermyon.Nomad.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class CSISnapshotCreateRequest {\n");
             sb.Append("  Namespace: ").Append(Namespace).Append("\n");
             sb.Append("  Region: ").Append(Region).Append("\n");
@@ -114,8 +114,9 @@ namespace Fermyon.Nomad.Model
         public bool Equals(CSISnapshotCreateRequest input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.Namespace == input.Namespace ||
@@ -150,13 +151,21 @@ namespace Fermyon.Nomad.Model
             {
                 int hashCode = 41;
                 if (this.Namespace != null)
-                    hashCode = hashCode * 59 + this.Namespace.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Namespace.GetHashCode();
+                }
                 if (this.Region != null)
-                    hashCode = hashCode * 59 + this.Region.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Region.GetHashCode();
+                }
                 if (this.SecretID != null)
-                    hashCode = hashCode * 59 + this.SecretID.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.SecretID.GetHashCode();
+                }
                 if (this.Snapshots != null)
-                    hashCode = hashCode * 59 + this.Snapshots.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Snapshots.GetHashCode();
+                }
                 return hashCode;
             }
         }
@@ -166,7 +175,7 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             yield break;
         }

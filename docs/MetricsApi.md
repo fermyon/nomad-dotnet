@@ -2,14 +2,13 @@
 
 All URIs are relative to *https://127.0.0.1:4646/v1*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**GetMetricsSummary**](MetricsApi.md#getmetricssummary) | **GET** /metrics | 
-
+| Method | HTTP request | Description |
+|--------|--------------|-------------|
+| [**GetMetricsSummary**](MetricsApi.md#getmetricssummary) | **GET** /metrics |  |
 
 <a name="getmetricssummary"></a>
 # **GetMetricsSummary**
-> MetricsSummary GetMetricsSummary (string format = null)
+> MetricsSummary GetMetricsSummary (string? format = null)
 
 
 
@@ -35,7 +34,7 @@ namespace Example
             // config.AddApiKeyPrefix("X-Nomad-Token", "Bearer");
 
             var apiInstance = new MetricsApi(config);
-            var format = format_example;  // string | The format the user requested for the metrics summary (e.g. prometheus) (optional) 
+            var format = "format_example";  // string? | The format the user requested for the metrics summary (e.g. prometheus) (optional) 
 
             try
             {
@@ -44,8 +43,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MetricsApi.GetMetricsSummary: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MetricsApi.GetMetricsSummary: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -53,11 +52,30 @@ namespace Example
 }
 ```
 
+#### Using the GetMetricsSummaryWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    ApiResponse<MetricsSummary> response = apiInstance.GetMetricsSummaryWithHttpInfo(format);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MetricsApi.GetMetricsSummaryWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **format** | **string**| The format the user requested for the metrics summary (e.g. prometheus) | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **format** | **string?** | The format the user requested for the metrics summary (e.g. prometheus) | [optional]  |
 
 ### Return type
 

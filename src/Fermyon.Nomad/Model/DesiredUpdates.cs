@@ -109,7 +109,7 @@ namespace Fermyon.Nomad.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class DesiredUpdates {\n");
             sb.Append("  Canary: ").Append(Canary).Append("\n");
             sb.Append("  DestructiveUpdate: ").Append(DestructiveUpdate).Append("\n");
@@ -150,8 +150,9 @@ namespace Fermyon.Nomad.Model
         public bool Equals(DesiredUpdates input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.Canary == input.Canary ||
@@ -196,14 +197,14 @@ namespace Fermyon.Nomad.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                hashCode = hashCode * 59 + this.Canary.GetHashCode();
-                hashCode = hashCode * 59 + this.DestructiveUpdate.GetHashCode();
-                hashCode = hashCode * 59 + this.Ignore.GetHashCode();
-                hashCode = hashCode * 59 + this.InPlaceUpdate.GetHashCode();
-                hashCode = hashCode * 59 + this.Migrate.GetHashCode();
-                hashCode = hashCode * 59 + this.Place.GetHashCode();
-                hashCode = hashCode * 59 + this.Preemptions.GetHashCode();
-                hashCode = hashCode * 59 + this.Stop.GetHashCode();
+                hashCode = (hashCode * 59) + this.Canary.GetHashCode();
+                hashCode = (hashCode * 59) + this.DestructiveUpdate.GetHashCode();
+                hashCode = (hashCode * 59) + this.Ignore.GetHashCode();
+                hashCode = (hashCode * 59) + this.InPlaceUpdate.GetHashCode();
+                hashCode = (hashCode * 59) + this.Migrate.GetHashCode();
+                hashCode = (hashCode * 59) + this.Place.GetHashCode();
+                hashCode = (hashCode * 59) + this.Preemptions.GetHashCode();
+                hashCode = (hashCode * 59) + this.Stop.GetHashCode();
                 return hashCode;
             }
         }
@@ -213,100 +214,100 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             // Canary (int) maximum
-            if(this.Canary > (int)384)
+            if (this.Canary > (int)384)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Canary, must be a value less than or equal to 384.", new [] { "Canary" });
             }
 
             // Canary (int) minimum
-            if(this.Canary < (int)0)
+            if (this.Canary < (int)0)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Canary, must be a value greater than or equal to 0.", new [] { "Canary" });
             }
 
             // DestructiveUpdate (int) maximum
-            if(this.DestructiveUpdate > (int)384)
+            if (this.DestructiveUpdate > (int)384)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DestructiveUpdate, must be a value less than or equal to 384.", new [] { "DestructiveUpdate" });
             }
 
             // DestructiveUpdate (int) minimum
-            if(this.DestructiveUpdate < (int)0)
+            if (this.DestructiveUpdate < (int)0)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DestructiveUpdate, must be a value greater than or equal to 0.", new [] { "DestructiveUpdate" });
             }
 
             // Ignore (int) maximum
-            if(this.Ignore > (int)384)
+            if (this.Ignore > (int)384)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Ignore, must be a value less than or equal to 384.", new [] { "Ignore" });
             }
 
             // Ignore (int) minimum
-            if(this.Ignore < (int)0)
+            if (this.Ignore < (int)0)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Ignore, must be a value greater than or equal to 0.", new [] { "Ignore" });
             }
 
             // InPlaceUpdate (int) maximum
-            if(this.InPlaceUpdate > (int)384)
+            if (this.InPlaceUpdate > (int)384)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for InPlaceUpdate, must be a value less than or equal to 384.", new [] { "InPlaceUpdate" });
             }
 
             // InPlaceUpdate (int) minimum
-            if(this.InPlaceUpdate < (int)0)
+            if (this.InPlaceUpdate < (int)0)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for InPlaceUpdate, must be a value greater than or equal to 0.", new [] { "InPlaceUpdate" });
             }
 
             // Migrate (int) maximum
-            if(this.Migrate > (int)384)
+            if (this.Migrate > (int)384)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Migrate, must be a value less than or equal to 384.", new [] { "Migrate" });
             }
 
             // Migrate (int) minimum
-            if(this.Migrate < (int)0)
+            if (this.Migrate < (int)0)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Migrate, must be a value greater than or equal to 0.", new [] { "Migrate" });
             }
 
             // Place (int) maximum
-            if(this.Place > (int)384)
+            if (this.Place > (int)384)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Place, must be a value less than or equal to 384.", new [] { "Place" });
             }
 
             // Place (int) minimum
-            if(this.Place < (int)0)
+            if (this.Place < (int)0)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Place, must be a value greater than or equal to 0.", new [] { "Place" });
             }
 
             // Preemptions (int) maximum
-            if(this.Preemptions > (int)384)
+            if (this.Preemptions > (int)384)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Preemptions, must be a value less than or equal to 384.", new [] { "Preemptions" });
             }
 
             // Preemptions (int) minimum
-            if(this.Preemptions < (int)0)
+            if (this.Preemptions < (int)0)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Preemptions, must be a value greater than or equal to 0.", new [] { "Preemptions" });
             }
 
             // Stop (int) maximum
-            if(this.Stop > (int)384)
+            if (this.Stop > (int)384)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Stop, must be a value less than or equal to 384.", new [] { "Stop" });
             }
 
             // Stop (int) minimum
-            if(this.Stop < (int)0)
+            if (this.Stop < (int)0)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Stop, must be a value greater than or equal to 0.", new [] { "Stop" });
             }

@@ -41,8 +41,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>Node</returns>
-        Node GetNode(string nodeId, string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string));
+        Node GetNode(string nodeId, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -61,8 +62,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Node</returns>
-        ApiResponse<Node> GetNodeWithHttpInfo(string nodeId, string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string));
+        ApiResponse<Node> GetNodeWithHttpInfo(string nodeId, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -77,8 +79,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>List&lt;AllocationListStub&gt;</returns>
-        List<AllocationListStub> GetNodeAllocations(string nodeId, string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string));
+        List<AllocationListStub> GetNodeAllocations(string nodeId, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -97,8 +100,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of List&lt;AllocationListStub&gt;</returns>
-        ApiResponse<List<AllocationListStub>> GetNodeAllocationsWithHttpInfo(string nodeId, string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string));
+        ApiResponse<List<AllocationListStub>> GetNodeAllocationsWithHttpInfo(string nodeId, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -113,8 +117,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
         /// <param name="resources">Whether or not to include the NodeResources and ReservedResources fields in the response. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>List&lt;NodeListStub&gt;</returns>
-        List<NodeListStub> GetNodes(string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string), bool? resources = default(bool?));
+        List<NodeListStub> GetNodes(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), bool? resources = default(bool?), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -133,8 +138,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
         /// <param name="resources">Whether or not to include the NodeResources and ReservedResources fields in the response. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of List&lt;NodeListStub&gt;</returns>
-        ApiResponse<List<NodeListStub>> GetNodesWithHttpInfo(string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string), bool? resources = default(bool?));
+        ApiResponse<List<NodeListStub>> GetNodesWithHttpInfo(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), bool? resources = default(bool?), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -150,8 +156,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>NodeDrainUpdateResponse</returns>
-        NodeDrainUpdateResponse UpdateNodeDrain(string nodeId, NodeUpdateDrainRequest nodeUpdateDrainRequest, string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string));
+        NodeDrainUpdateResponse UpdateNodeDrain(string nodeId, NodeUpdateDrainRequest nodeUpdateDrainRequest, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -171,8 +178,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of NodeDrainUpdateResponse</returns>
-        ApiResponse<NodeDrainUpdateResponse> UpdateNodeDrainWithHttpInfo(string nodeId, NodeUpdateDrainRequest nodeUpdateDrainRequest, string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string));
+        ApiResponse<NodeDrainUpdateResponse> UpdateNodeDrainWithHttpInfo(string nodeId, NodeUpdateDrainRequest nodeUpdateDrainRequest, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -188,8 +196,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>NodeEligibilityUpdateResponse</returns>
-        NodeEligibilityUpdateResponse UpdateNodeEligibility(string nodeId, NodeUpdateEligibilityRequest nodeUpdateEligibilityRequest, string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string));
+        NodeEligibilityUpdateResponse UpdateNodeEligibility(string nodeId, NodeUpdateEligibilityRequest nodeUpdateEligibilityRequest, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -209,8 +218,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of NodeEligibilityUpdateResponse</returns>
-        ApiResponse<NodeEligibilityUpdateResponse> UpdateNodeEligibilityWithHttpInfo(string nodeId, NodeUpdateEligibilityRequest nodeUpdateEligibilityRequest, string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string));
+        ApiResponse<NodeEligibilityUpdateResponse> UpdateNodeEligibilityWithHttpInfo(string nodeId, NodeUpdateEligibilityRequest nodeUpdateEligibilityRequest, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -225,8 +235,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>NodePurgeResponse</returns>
-        NodePurgeResponse UpdateNodePurge(string nodeId, string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string));
+        NodePurgeResponse UpdateNodePurge(string nodeId, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -245,8 +256,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of NodePurgeResponse</returns>
-        ApiResponse<NodePurgeResponse> UpdateNodePurgeWithHttpInfo(string nodeId, string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string));
+        ApiResponse<NodePurgeResponse> UpdateNodePurgeWithHttpInfo(string nodeId, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -273,9 +285,10 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Node</returns>
-        System.Threading.Tasks.Task<Node> GetNodeAsync(string nodeId, string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<Node> GetNodeAsync(string nodeId, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -294,9 +307,10 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Node)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Node>> GetNodeWithHttpInfoAsync(string nodeId, string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Node>> GetNodeWithHttpInfoAsync(string nodeId, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -314,9 +328,10 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;AllocationListStub&gt;</returns>
-        System.Threading.Tasks.Task<List<AllocationListStub>> GetNodeAllocationsAsync(string nodeId, string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<List<AllocationListStub>> GetNodeAllocationsAsync(string nodeId, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -335,9 +350,10 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;AllocationListStub&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<AllocationListStub>>> GetNodeAllocationsWithHttpInfoAsync(string nodeId, string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<List<AllocationListStub>>> GetNodeAllocationsWithHttpInfoAsync(string nodeId, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -355,9 +371,10 @@ namespace Fermyon.Nomad.Api
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
         /// <param name="resources">Whether or not to include the NodeResources and ReservedResources fields in the response. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;NodeListStub&gt;</returns>
-        System.Threading.Tasks.Task<List<NodeListStub>> GetNodesAsync(string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string), bool? resources = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<List<NodeListStub>> GetNodesAsync(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), bool? resources = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -376,9 +393,10 @@ namespace Fermyon.Nomad.Api
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
         /// <param name="resources">Whether or not to include the NodeResources and ReservedResources fields in the response. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;NodeListStub&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<NodeListStub>>> GetNodesWithHttpInfoAsync(string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string), bool? resources = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<List<NodeListStub>>> GetNodesWithHttpInfoAsync(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), bool? resources = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -397,9 +415,10 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of NodeDrainUpdateResponse</returns>
-        System.Threading.Tasks.Task<NodeDrainUpdateResponse> UpdateNodeDrainAsync(string nodeId, NodeUpdateDrainRequest nodeUpdateDrainRequest, string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<NodeDrainUpdateResponse> UpdateNodeDrainAsync(string nodeId, NodeUpdateDrainRequest nodeUpdateDrainRequest, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -419,9 +438,10 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (NodeDrainUpdateResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<NodeDrainUpdateResponse>> UpdateNodeDrainWithHttpInfoAsync(string nodeId, NodeUpdateDrainRequest nodeUpdateDrainRequest, string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<NodeDrainUpdateResponse>> UpdateNodeDrainWithHttpInfoAsync(string nodeId, NodeUpdateDrainRequest nodeUpdateDrainRequest, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -440,9 +460,10 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of NodeEligibilityUpdateResponse</returns>
-        System.Threading.Tasks.Task<NodeEligibilityUpdateResponse> UpdateNodeEligibilityAsync(string nodeId, NodeUpdateEligibilityRequest nodeUpdateEligibilityRequest, string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<NodeEligibilityUpdateResponse> UpdateNodeEligibilityAsync(string nodeId, NodeUpdateEligibilityRequest nodeUpdateEligibilityRequest, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -462,9 +483,10 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (NodeEligibilityUpdateResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<NodeEligibilityUpdateResponse>> UpdateNodeEligibilityWithHttpInfoAsync(string nodeId, NodeUpdateEligibilityRequest nodeUpdateEligibilityRequest, string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<NodeEligibilityUpdateResponse>> UpdateNodeEligibilityWithHttpInfoAsync(string nodeId, NodeUpdateEligibilityRequest nodeUpdateEligibilityRequest, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -482,9 +504,10 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of NodePurgeResponse</returns>
-        System.Threading.Tasks.Task<NodePurgeResponse> UpdateNodePurgeAsync(string nodeId, string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<NodePurgeResponse> UpdateNodePurgeAsync(string nodeId, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -503,9 +526,10 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (NodePurgeResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<NodePurgeResponse>> UpdateNodePurgeWithHttpInfoAsync(string nodeId, string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<NodePurgeResponse>> UpdateNodePurgeWithHttpInfoAsync(string nodeId, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -640,8 +664,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>Node</returns>
-        public Node GetNode(string nodeId, string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string))
+        public Node GetNode(string nodeId, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0)
         {
             Fermyon.Nomad.Client.ApiResponse<Node> localVarResponse = GetNodeWithHttpInfo(nodeId, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
             return localVarResponse.Data;
@@ -661,12 +686,15 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Node</returns>
-        public Fermyon.Nomad.Client.ApiResponse<Node> GetNodeWithHttpInfo(string nodeId, string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string))
+        public Fermyon.Nomad.Client.ApiResponse<Node> GetNodeWithHttpInfo(string nodeId, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'nodeId' is set
             if (nodeId == null)
+            {
                 throw new Fermyon.Nomad.Client.ApiException(400, "Missing required parameter 'nodeId' when calling NodesApi->GetNode");
+            }
 
             Fermyon.Nomad.Client.RequestOptions localVarRequestOptions = new Fermyon.Nomad.Client.RequestOptions();
 
@@ -679,10 +707,16 @@ namespace Fermyon.Nomad.Api
             };
 
             var localVarContentType = Fermyon.Nomad.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = Fermyon.Nomad.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("nodeId", Fermyon.Nomad.Client.ClientUtils.ParameterToString(nodeId)); // path parameter
             if (region != null)
@@ -722,6 +756,9 @@ namespace Fermyon.Nomad.Api
                 localVarRequestOptions.HeaderParameters.Add("X-Nomad-Token", Fermyon.Nomad.Client.ClientUtils.ParameterToString(xNomadToken)); // header parameter
             }
 
+            localVarRequestOptions.Operation = "NodesApi.GetNode";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
             // authentication (X-Nomad-Token) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("X-Nomad-Token")))
             {
@@ -730,11 +767,13 @@ namespace Fermyon.Nomad.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<Node>("/node/{nodeId}", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("GetNode", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -754,11 +793,12 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Node</returns>
-        public async System.Threading.Tasks.Task<Node> GetNodeAsync(string nodeId, string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Node> GetNodeAsync(string nodeId, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Fermyon.Nomad.Client.ApiResponse<Node> localVarResponse = await GetNodeWithHttpInfoAsync(nodeId, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, cancellationToken).ConfigureAwait(false);
+            Fermyon.Nomad.Client.ApiResponse<Node> localVarResponse = await GetNodeWithHttpInfoAsync(nodeId, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -776,13 +816,16 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Node)</returns>
-        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<Node>> GetNodeWithHttpInfoAsync(string nodeId, string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<Node>> GetNodeWithHttpInfoAsync(string nodeId, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'nodeId' is set
             if (nodeId == null)
+            {
                 throw new Fermyon.Nomad.Client.ApiException(400, "Missing required parameter 'nodeId' when calling NodesApi->GetNode");
+            }
 
 
             Fermyon.Nomad.Client.RequestOptions localVarRequestOptions = new Fermyon.Nomad.Client.RequestOptions();
@@ -795,12 +838,17 @@ namespace Fermyon.Nomad.Api
                 "application/json"
             };
 
-
             var localVarContentType = Fermyon.Nomad.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = Fermyon.Nomad.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("nodeId", Fermyon.Nomad.Client.ClientUtils.ParameterToString(nodeId)); // path parameter
             if (region != null)
@@ -840,6 +888,9 @@ namespace Fermyon.Nomad.Api
                 localVarRequestOptions.HeaderParameters.Add("X-Nomad-Token", Fermyon.Nomad.Client.ClientUtils.ParameterToString(xNomadToken)); // header parameter
             }
 
+            localVarRequestOptions.Operation = "NodesApi.GetNode";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
             // authentication (X-Nomad-Token) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("X-Nomad-Token")))
             {
@@ -847,13 +898,15 @@ namespace Fermyon.Nomad.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.GetAsync<Node>("/node/{nodeId}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("GetNode", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -873,8 +926,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>List&lt;AllocationListStub&gt;</returns>
-        public List<AllocationListStub> GetNodeAllocations(string nodeId, string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string))
+        public List<AllocationListStub> GetNodeAllocations(string nodeId, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0)
         {
             Fermyon.Nomad.Client.ApiResponse<List<AllocationListStub>> localVarResponse = GetNodeAllocationsWithHttpInfo(nodeId, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
             return localVarResponse.Data;
@@ -894,12 +948,15 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of List&lt;AllocationListStub&gt;</returns>
-        public Fermyon.Nomad.Client.ApiResponse<List<AllocationListStub>> GetNodeAllocationsWithHttpInfo(string nodeId, string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string))
+        public Fermyon.Nomad.Client.ApiResponse<List<AllocationListStub>> GetNodeAllocationsWithHttpInfo(string nodeId, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'nodeId' is set
             if (nodeId == null)
+            {
                 throw new Fermyon.Nomad.Client.ApiException(400, "Missing required parameter 'nodeId' when calling NodesApi->GetNodeAllocations");
+            }
 
             Fermyon.Nomad.Client.RequestOptions localVarRequestOptions = new Fermyon.Nomad.Client.RequestOptions();
 
@@ -912,10 +969,16 @@ namespace Fermyon.Nomad.Api
             };
 
             var localVarContentType = Fermyon.Nomad.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = Fermyon.Nomad.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("nodeId", Fermyon.Nomad.Client.ClientUtils.ParameterToString(nodeId)); // path parameter
             if (region != null)
@@ -955,6 +1018,9 @@ namespace Fermyon.Nomad.Api
                 localVarRequestOptions.HeaderParameters.Add("X-Nomad-Token", Fermyon.Nomad.Client.ClientUtils.ParameterToString(xNomadToken)); // header parameter
             }
 
+            localVarRequestOptions.Operation = "NodesApi.GetNodeAllocations";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
             // authentication (X-Nomad-Token) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("X-Nomad-Token")))
             {
@@ -963,11 +1029,13 @@ namespace Fermyon.Nomad.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<List<AllocationListStub>>("/node/{nodeId}/allocations", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("GetNodeAllocations", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -987,11 +1055,12 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;AllocationListStub&gt;</returns>
-        public async System.Threading.Tasks.Task<List<AllocationListStub>> GetNodeAllocationsAsync(string nodeId, string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<List<AllocationListStub>> GetNodeAllocationsAsync(string nodeId, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Fermyon.Nomad.Client.ApiResponse<List<AllocationListStub>> localVarResponse = await GetNodeAllocationsWithHttpInfoAsync(nodeId, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, cancellationToken).ConfigureAwait(false);
+            Fermyon.Nomad.Client.ApiResponse<List<AllocationListStub>> localVarResponse = await GetNodeAllocationsWithHttpInfoAsync(nodeId, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1009,13 +1078,16 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;AllocationListStub&gt;)</returns>
-        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<List<AllocationListStub>>> GetNodeAllocationsWithHttpInfoAsync(string nodeId, string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<List<AllocationListStub>>> GetNodeAllocationsWithHttpInfoAsync(string nodeId, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'nodeId' is set
             if (nodeId == null)
+            {
                 throw new Fermyon.Nomad.Client.ApiException(400, "Missing required parameter 'nodeId' when calling NodesApi->GetNodeAllocations");
+            }
 
 
             Fermyon.Nomad.Client.RequestOptions localVarRequestOptions = new Fermyon.Nomad.Client.RequestOptions();
@@ -1028,12 +1100,17 @@ namespace Fermyon.Nomad.Api
                 "application/json"
             };
 
-
             var localVarContentType = Fermyon.Nomad.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = Fermyon.Nomad.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("nodeId", Fermyon.Nomad.Client.ClientUtils.ParameterToString(nodeId)); // path parameter
             if (region != null)
@@ -1073,6 +1150,9 @@ namespace Fermyon.Nomad.Api
                 localVarRequestOptions.HeaderParameters.Add("X-Nomad-Token", Fermyon.Nomad.Client.ClientUtils.ParameterToString(xNomadToken)); // header parameter
             }
 
+            localVarRequestOptions.Operation = "NodesApi.GetNodeAllocations";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
             // authentication (X-Nomad-Token) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("X-Nomad-Token")))
             {
@@ -1080,13 +1160,15 @@ namespace Fermyon.Nomad.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.GetAsync<List<AllocationListStub>>("/node/{nodeId}/allocations", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("GetNodeAllocations", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -1106,8 +1188,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
         /// <param name="resources">Whether or not to include the NodeResources and ReservedResources fields in the response. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>List&lt;NodeListStub&gt;</returns>
-        public List<NodeListStub> GetNodes(string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string), bool? resources = default(bool?))
+        public List<NodeListStub> GetNodes(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), bool? resources = default(bool?), int operationIndex = 0)
         {
             Fermyon.Nomad.Client.ApiResponse<List<NodeListStub>> localVarResponse = GetNodesWithHttpInfo(region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, resources);
             return localVarResponse.Data;
@@ -1127,8 +1210,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
         /// <param name="resources">Whether or not to include the NodeResources and ReservedResources fields in the response. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of List&lt;NodeListStub&gt;</returns>
-        public Fermyon.Nomad.Client.ApiResponse<List<NodeListStub>> GetNodesWithHttpInfo(string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string), bool? resources = default(bool?))
+        public Fermyon.Nomad.Client.ApiResponse<List<NodeListStub>> GetNodesWithHttpInfo(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), bool? resources = default(bool?), int operationIndex = 0)
         {
             Fermyon.Nomad.Client.RequestOptions localVarRequestOptions = new Fermyon.Nomad.Client.RequestOptions();
 
@@ -1141,10 +1225,16 @@ namespace Fermyon.Nomad.Api
             };
 
             var localVarContentType = Fermyon.Nomad.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = Fermyon.Nomad.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             if (region != null)
             {
@@ -1187,6 +1277,9 @@ namespace Fermyon.Nomad.Api
                 localVarRequestOptions.HeaderParameters.Add("X-Nomad-Token", Fermyon.Nomad.Client.ClientUtils.ParameterToString(xNomadToken)); // header parameter
             }
 
+            localVarRequestOptions.Operation = "NodesApi.GetNodes";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
             // authentication (X-Nomad-Token) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("X-Nomad-Token")))
             {
@@ -1195,11 +1288,13 @@ namespace Fermyon.Nomad.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<List<NodeListStub>>("/nodes", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("GetNodes", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -1219,11 +1314,12 @@ namespace Fermyon.Nomad.Api
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
         /// <param name="resources">Whether or not to include the NodeResources and ReservedResources fields in the response. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;NodeListStub&gt;</returns>
-        public async System.Threading.Tasks.Task<List<NodeListStub>> GetNodesAsync(string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string), bool? resources = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<List<NodeListStub>> GetNodesAsync(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), bool? resources = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Fermyon.Nomad.Client.ApiResponse<List<NodeListStub>> localVarResponse = await GetNodesWithHttpInfoAsync(region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, resources, cancellationToken).ConfigureAwait(false);
+            Fermyon.Nomad.Client.ApiResponse<List<NodeListStub>> localVarResponse = await GetNodesWithHttpInfoAsync(region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, resources, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1241,9 +1337,10 @@ namespace Fermyon.Nomad.Api
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
         /// <param name="resources">Whether or not to include the NodeResources and ReservedResources fields in the response. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;NodeListStub&gt;)</returns>
-        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<List<NodeListStub>>> GetNodesWithHttpInfoAsync(string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string), bool? resources = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<List<NodeListStub>>> GetNodesWithHttpInfoAsync(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), bool? resources = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             Fermyon.Nomad.Client.RequestOptions localVarRequestOptions = new Fermyon.Nomad.Client.RequestOptions();
@@ -1256,12 +1353,17 @@ namespace Fermyon.Nomad.Api
                 "application/json"
             };
 
-
             var localVarContentType = Fermyon.Nomad.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = Fermyon.Nomad.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             if (region != null)
             {
@@ -1304,6 +1406,9 @@ namespace Fermyon.Nomad.Api
                 localVarRequestOptions.HeaderParameters.Add("X-Nomad-Token", Fermyon.Nomad.Client.ClientUtils.ParameterToString(xNomadToken)); // header parameter
             }
 
+            localVarRequestOptions.Operation = "NodesApi.GetNodes";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
             // authentication (X-Nomad-Token) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("X-Nomad-Token")))
             {
@@ -1311,13 +1416,15 @@ namespace Fermyon.Nomad.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.GetAsync<List<NodeListStub>>("/nodes", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("GetNodes", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -1338,8 +1445,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>NodeDrainUpdateResponse</returns>
-        public NodeDrainUpdateResponse UpdateNodeDrain(string nodeId, NodeUpdateDrainRequest nodeUpdateDrainRequest, string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string))
+        public NodeDrainUpdateResponse UpdateNodeDrain(string nodeId, NodeUpdateDrainRequest nodeUpdateDrainRequest, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0)
         {
             Fermyon.Nomad.Client.ApiResponse<NodeDrainUpdateResponse> localVarResponse = UpdateNodeDrainWithHttpInfo(nodeId, nodeUpdateDrainRequest, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
             return localVarResponse.Data;
@@ -1360,16 +1468,21 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of NodeDrainUpdateResponse</returns>
-        public Fermyon.Nomad.Client.ApiResponse<NodeDrainUpdateResponse> UpdateNodeDrainWithHttpInfo(string nodeId, NodeUpdateDrainRequest nodeUpdateDrainRequest, string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string))
+        public Fermyon.Nomad.Client.ApiResponse<NodeDrainUpdateResponse> UpdateNodeDrainWithHttpInfo(string nodeId, NodeUpdateDrainRequest nodeUpdateDrainRequest, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'nodeId' is set
             if (nodeId == null)
+            {
                 throw new Fermyon.Nomad.Client.ApiException(400, "Missing required parameter 'nodeId' when calling NodesApi->UpdateNodeDrain");
+            }
 
             // verify the required parameter 'nodeUpdateDrainRequest' is set
             if (nodeUpdateDrainRequest == null)
+            {
                 throw new Fermyon.Nomad.Client.ApiException(400, "Missing required parameter 'nodeUpdateDrainRequest' when calling NodesApi->UpdateNodeDrain");
+            }
 
             Fermyon.Nomad.Client.RequestOptions localVarRequestOptions = new Fermyon.Nomad.Client.RequestOptions();
 
@@ -1383,10 +1496,16 @@ namespace Fermyon.Nomad.Api
             };
 
             var localVarContentType = Fermyon.Nomad.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = Fermyon.Nomad.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("nodeId", Fermyon.Nomad.Client.ClientUtils.ParameterToString(nodeId)); // path parameter
             if (region != null)
@@ -1427,6 +1546,9 @@ namespace Fermyon.Nomad.Api
             }
             localVarRequestOptions.Data = nodeUpdateDrainRequest;
 
+            localVarRequestOptions.Operation = "NodesApi.UpdateNodeDrain";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
             // authentication (X-Nomad-Token) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("X-Nomad-Token")))
             {
@@ -1435,11 +1557,13 @@ namespace Fermyon.Nomad.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<NodeDrainUpdateResponse>("/node/{nodeId}/drain", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("UpdateNodeDrain", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -1460,11 +1584,12 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of NodeDrainUpdateResponse</returns>
-        public async System.Threading.Tasks.Task<NodeDrainUpdateResponse> UpdateNodeDrainAsync(string nodeId, NodeUpdateDrainRequest nodeUpdateDrainRequest, string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<NodeDrainUpdateResponse> UpdateNodeDrainAsync(string nodeId, NodeUpdateDrainRequest nodeUpdateDrainRequest, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Fermyon.Nomad.Client.ApiResponse<NodeDrainUpdateResponse> localVarResponse = await UpdateNodeDrainWithHttpInfoAsync(nodeId, nodeUpdateDrainRequest, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, cancellationToken).ConfigureAwait(false);
+            Fermyon.Nomad.Client.ApiResponse<NodeDrainUpdateResponse> localVarResponse = await UpdateNodeDrainWithHttpInfoAsync(nodeId, nodeUpdateDrainRequest, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1483,17 +1608,22 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (NodeDrainUpdateResponse)</returns>
-        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<NodeDrainUpdateResponse>> UpdateNodeDrainWithHttpInfoAsync(string nodeId, NodeUpdateDrainRequest nodeUpdateDrainRequest, string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<NodeDrainUpdateResponse>> UpdateNodeDrainWithHttpInfoAsync(string nodeId, NodeUpdateDrainRequest nodeUpdateDrainRequest, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'nodeId' is set
             if (nodeId == null)
+            {
                 throw new Fermyon.Nomad.Client.ApiException(400, "Missing required parameter 'nodeId' when calling NodesApi->UpdateNodeDrain");
+            }
 
             // verify the required parameter 'nodeUpdateDrainRequest' is set
             if (nodeUpdateDrainRequest == null)
+            {
                 throw new Fermyon.Nomad.Client.ApiException(400, "Missing required parameter 'nodeUpdateDrainRequest' when calling NodesApi->UpdateNodeDrain");
+            }
 
 
             Fermyon.Nomad.Client.RequestOptions localVarRequestOptions = new Fermyon.Nomad.Client.RequestOptions();
@@ -1507,12 +1637,17 @@ namespace Fermyon.Nomad.Api
                 "application/json"
             };
 
-
             var localVarContentType = Fermyon.Nomad.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = Fermyon.Nomad.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("nodeId", Fermyon.Nomad.Client.ClientUtils.ParameterToString(nodeId)); // path parameter
             if (region != null)
@@ -1553,6 +1688,9 @@ namespace Fermyon.Nomad.Api
             }
             localVarRequestOptions.Data = nodeUpdateDrainRequest;
 
+            localVarRequestOptions.Operation = "NodesApi.UpdateNodeDrain";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
             // authentication (X-Nomad-Token) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("X-Nomad-Token")))
             {
@@ -1560,13 +1698,15 @@ namespace Fermyon.Nomad.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.PostAsync<NodeDrainUpdateResponse>("/node/{nodeId}/drain", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("UpdateNodeDrain", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -1587,8 +1727,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>NodeEligibilityUpdateResponse</returns>
-        public NodeEligibilityUpdateResponse UpdateNodeEligibility(string nodeId, NodeUpdateEligibilityRequest nodeUpdateEligibilityRequest, string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string))
+        public NodeEligibilityUpdateResponse UpdateNodeEligibility(string nodeId, NodeUpdateEligibilityRequest nodeUpdateEligibilityRequest, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0)
         {
             Fermyon.Nomad.Client.ApiResponse<NodeEligibilityUpdateResponse> localVarResponse = UpdateNodeEligibilityWithHttpInfo(nodeId, nodeUpdateEligibilityRequest, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
             return localVarResponse.Data;
@@ -1609,16 +1750,21 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of NodeEligibilityUpdateResponse</returns>
-        public Fermyon.Nomad.Client.ApiResponse<NodeEligibilityUpdateResponse> UpdateNodeEligibilityWithHttpInfo(string nodeId, NodeUpdateEligibilityRequest nodeUpdateEligibilityRequest, string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string))
+        public Fermyon.Nomad.Client.ApiResponse<NodeEligibilityUpdateResponse> UpdateNodeEligibilityWithHttpInfo(string nodeId, NodeUpdateEligibilityRequest nodeUpdateEligibilityRequest, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'nodeId' is set
             if (nodeId == null)
+            {
                 throw new Fermyon.Nomad.Client.ApiException(400, "Missing required parameter 'nodeId' when calling NodesApi->UpdateNodeEligibility");
+            }
 
             // verify the required parameter 'nodeUpdateEligibilityRequest' is set
             if (nodeUpdateEligibilityRequest == null)
+            {
                 throw new Fermyon.Nomad.Client.ApiException(400, "Missing required parameter 'nodeUpdateEligibilityRequest' when calling NodesApi->UpdateNodeEligibility");
+            }
 
             Fermyon.Nomad.Client.RequestOptions localVarRequestOptions = new Fermyon.Nomad.Client.RequestOptions();
 
@@ -1632,10 +1778,16 @@ namespace Fermyon.Nomad.Api
             };
 
             var localVarContentType = Fermyon.Nomad.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = Fermyon.Nomad.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("nodeId", Fermyon.Nomad.Client.ClientUtils.ParameterToString(nodeId)); // path parameter
             if (region != null)
@@ -1676,6 +1828,9 @@ namespace Fermyon.Nomad.Api
             }
             localVarRequestOptions.Data = nodeUpdateEligibilityRequest;
 
+            localVarRequestOptions.Operation = "NodesApi.UpdateNodeEligibility";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
             // authentication (X-Nomad-Token) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("X-Nomad-Token")))
             {
@@ -1684,11 +1839,13 @@ namespace Fermyon.Nomad.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<NodeEligibilityUpdateResponse>("/node/{nodeId}/eligibility", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("UpdateNodeEligibility", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -1709,11 +1866,12 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of NodeEligibilityUpdateResponse</returns>
-        public async System.Threading.Tasks.Task<NodeEligibilityUpdateResponse> UpdateNodeEligibilityAsync(string nodeId, NodeUpdateEligibilityRequest nodeUpdateEligibilityRequest, string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<NodeEligibilityUpdateResponse> UpdateNodeEligibilityAsync(string nodeId, NodeUpdateEligibilityRequest nodeUpdateEligibilityRequest, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Fermyon.Nomad.Client.ApiResponse<NodeEligibilityUpdateResponse> localVarResponse = await UpdateNodeEligibilityWithHttpInfoAsync(nodeId, nodeUpdateEligibilityRequest, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, cancellationToken).ConfigureAwait(false);
+            Fermyon.Nomad.Client.ApiResponse<NodeEligibilityUpdateResponse> localVarResponse = await UpdateNodeEligibilityWithHttpInfoAsync(nodeId, nodeUpdateEligibilityRequest, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1732,17 +1890,22 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (NodeEligibilityUpdateResponse)</returns>
-        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<NodeEligibilityUpdateResponse>> UpdateNodeEligibilityWithHttpInfoAsync(string nodeId, NodeUpdateEligibilityRequest nodeUpdateEligibilityRequest, string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<NodeEligibilityUpdateResponse>> UpdateNodeEligibilityWithHttpInfoAsync(string nodeId, NodeUpdateEligibilityRequest nodeUpdateEligibilityRequest, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'nodeId' is set
             if (nodeId == null)
+            {
                 throw new Fermyon.Nomad.Client.ApiException(400, "Missing required parameter 'nodeId' when calling NodesApi->UpdateNodeEligibility");
+            }
 
             // verify the required parameter 'nodeUpdateEligibilityRequest' is set
             if (nodeUpdateEligibilityRequest == null)
+            {
                 throw new Fermyon.Nomad.Client.ApiException(400, "Missing required parameter 'nodeUpdateEligibilityRequest' when calling NodesApi->UpdateNodeEligibility");
+            }
 
 
             Fermyon.Nomad.Client.RequestOptions localVarRequestOptions = new Fermyon.Nomad.Client.RequestOptions();
@@ -1756,12 +1919,17 @@ namespace Fermyon.Nomad.Api
                 "application/json"
             };
 
-
             var localVarContentType = Fermyon.Nomad.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = Fermyon.Nomad.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("nodeId", Fermyon.Nomad.Client.ClientUtils.ParameterToString(nodeId)); // path parameter
             if (region != null)
@@ -1802,6 +1970,9 @@ namespace Fermyon.Nomad.Api
             }
             localVarRequestOptions.Data = nodeUpdateEligibilityRequest;
 
+            localVarRequestOptions.Operation = "NodesApi.UpdateNodeEligibility";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
             // authentication (X-Nomad-Token) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("X-Nomad-Token")))
             {
@@ -1809,13 +1980,15 @@ namespace Fermyon.Nomad.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.PostAsync<NodeEligibilityUpdateResponse>("/node/{nodeId}/eligibility", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("UpdateNodeEligibility", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -1835,8 +2008,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>NodePurgeResponse</returns>
-        public NodePurgeResponse UpdateNodePurge(string nodeId, string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string))
+        public NodePurgeResponse UpdateNodePurge(string nodeId, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0)
         {
             Fermyon.Nomad.Client.ApiResponse<NodePurgeResponse> localVarResponse = UpdateNodePurgeWithHttpInfo(nodeId, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
             return localVarResponse.Data;
@@ -1856,12 +2030,15 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of NodePurgeResponse</returns>
-        public Fermyon.Nomad.Client.ApiResponse<NodePurgeResponse> UpdateNodePurgeWithHttpInfo(string nodeId, string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string))
+        public Fermyon.Nomad.Client.ApiResponse<NodePurgeResponse> UpdateNodePurgeWithHttpInfo(string nodeId, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'nodeId' is set
             if (nodeId == null)
+            {
                 throw new Fermyon.Nomad.Client.ApiException(400, "Missing required parameter 'nodeId' when calling NodesApi->UpdateNodePurge");
+            }
 
             Fermyon.Nomad.Client.RequestOptions localVarRequestOptions = new Fermyon.Nomad.Client.RequestOptions();
 
@@ -1874,10 +2051,16 @@ namespace Fermyon.Nomad.Api
             };
 
             var localVarContentType = Fermyon.Nomad.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = Fermyon.Nomad.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("nodeId", Fermyon.Nomad.Client.ClientUtils.ParameterToString(nodeId)); // path parameter
             if (region != null)
@@ -1917,6 +2100,9 @@ namespace Fermyon.Nomad.Api
                 localVarRequestOptions.HeaderParameters.Add("X-Nomad-Token", Fermyon.Nomad.Client.ClientUtils.ParameterToString(xNomadToken)); // header parameter
             }
 
+            localVarRequestOptions.Operation = "NodesApi.UpdateNodePurge";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
             // authentication (X-Nomad-Token) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("X-Nomad-Token")))
             {
@@ -1925,11 +2111,13 @@ namespace Fermyon.Nomad.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<NodePurgeResponse>("/node/{nodeId}/purge", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("UpdateNodePurge", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -1949,11 +2137,12 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of NodePurgeResponse</returns>
-        public async System.Threading.Tasks.Task<NodePurgeResponse> UpdateNodePurgeAsync(string nodeId, string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<NodePurgeResponse> UpdateNodePurgeAsync(string nodeId, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Fermyon.Nomad.Client.ApiResponse<NodePurgeResponse> localVarResponse = await UpdateNodePurgeWithHttpInfoAsync(nodeId, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, cancellationToken).ConfigureAwait(false);
+            Fermyon.Nomad.Client.ApiResponse<NodePurgeResponse> localVarResponse = await UpdateNodePurgeWithHttpInfoAsync(nodeId, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1971,13 +2160,16 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (NodePurgeResponse)</returns>
-        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<NodePurgeResponse>> UpdateNodePurgeWithHttpInfoAsync(string nodeId, string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<NodePurgeResponse>> UpdateNodePurgeWithHttpInfoAsync(string nodeId, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'nodeId' is set
             if (nodeId == null)
+            {
                 throw new Fermyon.Nomad.Client.ApiException(400, "Missing required parameter 'nodeId' when calling NodesApi->UpdateNodePurge");
+            }
 
 
             Fermyon.Nomad.Client.RequestOptions localVarRequestOptions = new Fermyon.Nomad.Client.RequestOptions();
@@ -1990,12 +2182,17 @@ namespace Fermyon.Nomad.Api
                 "application/json"
             };
 
-
             var localVarContentType = Fermyon.Nomad.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = Fermyon.Nomad.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("nodeId", Fermyon.Nomad.Client.ClientUtils.ParameterToString(nodeId)); // path parameter
             if (region != null)
@@ -2035,6 +2232,9 @@ namespace Fermyon.Nomad.Api
                 localVarRequestOptions.HeaderParameters.Add("X-Nomad-Token", Fermyon.Nomad.Client.ClientUtils.ParameterToString(xNomadToken)); // header parameter
             }
 
+            localVarRequestOptions.Operation = "NodesApi.UpdateNodePurge";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
             // authentication (X-Nomad-Token) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("X-Nomad-Token")))
             {
@@ -2042,13 +2242,15 @@ namespace Fermyon.Nomad.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.PostAsync<NodePurgeResponse>("/node/{nodeId}/purge", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("UpdateNodePurge", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;

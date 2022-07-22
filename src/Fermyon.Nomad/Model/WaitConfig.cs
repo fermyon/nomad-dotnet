@@ -61,7 +61,7 @@ namespace Fermyon.Nomad.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class WaitConfig {\n");
             sb.Append("  Max: ").Append(Max).Append("\n");
             sb.Append("  Min: ").Append(Min).Append("\n");
@@ -96,8 +96,9 @@ namespace Fermyon.Nomad.Model
         public bool Equals(WaitConfig input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.Max == input.Max ||
@@ -118,8 +119,8 @@ namespace Fermyon.Nomad.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                hashCode = hashCode * 59 + this.Max.GetHashCode();
-                hashCode = hashCode * 59 + this.Min.GetHashCode();
+                hashCode = (hashCode * 59) + this.Max.GetHashCode();
+                hashCode = (hashCode * 59) + this.Min.GetHashCode();
                 return hashCode;
             }
         }
@@ -129,7 +130,7 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             yield break;
         }

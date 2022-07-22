@@ -36,8 +36,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns></returns>
-        void CreateQuotaSpec(QuotaSpec quotaSpec, string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string));
+        void CreateQuotaSpec(QuotaSpec quotaSpec, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -51,8 +52,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> CreateQuotaSpecWithHttpInfo(QuotaSpec quotaSpec, string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string));
+        ApiResponse<Object> CreateQuotaSpecWithHttpInfo(QuotaSpec quotaSpec, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -62,8 +64,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns></returns>
-        void DeleteQuotaSpec(string specName, string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string));
+        void DeleteQuotaSpec(string specName, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -77,8 +80,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteQuotaSpecWithHttpInfo(string specName, string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string));
+        ApiResponse<Object> DeleteQuotaSpecWithHttpInfo(string specName, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -93,8 +97,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>QuotaSpec</returns>
-        QuotaSpec GetQuotaSpec(string specName, string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string));
+        QuotaSpec GetQuotaSpec(string specName, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -113,8 +118,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of QuotaSpec</returns>
-        ApiResponse<QuotaSpec> GetQuotaSpecWithHttpInfo(string specName, string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string));
+        ApiResponse<QuotaSpec> GetQuotaSpecWithHttpInfo(string specName, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -128,8 +134,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>List&lt;Object&gt;</returns>
-        List<Object> GetQuotas(string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string));
+        List<Object> GetQuotas(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -147,8 +154,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of List&lt;Object&gt;</returns>
-        ApiResponse<List<Object>> GetQuotasWithHttpInfo(string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string));
+        ApiResponse<List<Object>> GetQuotasWithHttpInfo(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -159,8 +167,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns></returns>
-        void PostQuotaSpec(string specName, QuotaSpec quotaSpec, string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string));
+        void PostQuotaSpec(string specName, QuotaSpec quotaSpec, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -175,8 +184,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostQuotaSpecWithHttpInfo(string specName, QuotaSpec quotaSpec, string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string));
+        ApiResponse<Object> PostQuotaSpecWithHttpInfo(string specName, QuotaSpec quotaSpec, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -198,9 +208,10 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task CreateQuotaSpecAsync(QuotaSpec quotaSpec, string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task CreateQuotaSpecAsync(QuotaSpec quotaSpec, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -214,9 +225,10 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> CreateQuotaSpecWithHttpInfoAsync(QuotaSpec quotaSpec, string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> CreateQuotaSpecWithHttpInfoAsync(QuotaSpec quotaSpec, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -229,9 +241,10 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeleteQuotaSpecAsync(string specName, string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task DeleteQuotaSpecAsync(string specName, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -245,9 +258,10 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteQuotaSpecWithHttpInfoAsync(string specName, string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteQuotaSpecWithHttpInfoAsync(string specName, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -265,9 +279,10 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of QuotaSpec</returns>
-        System.Threading.Tasks.Task<QuotaSpec> GetQuotaSpecAsync(string specName, string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<QuotaSpec> GetQuotaSpecAsync(string specName, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -286,9 +301,10 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (QuotaSpec)</returns>
-        System.Threading.Tasks.Task<ApiResponse<QuotaSpec>> GetQuotaSpecWithHttpInfoAsync(string specName, string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<QuotaSpec>> GetQuotaSpecWithHttpInfoAsync(string specName, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -305,9 +321,10 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;Object&gt;</returns>
-        System.Threading.Tasks.Task<List<Object>> GetQuotasAsync(string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<List<Object>> GetQuotasAsync(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -325,9 +342,10 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;Object&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<Object>>> GetQuotasWithHttpInfoAsync(string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<List<Object>>> GetQuotasWithHttpInfoAsync(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -341,9 +359,10 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task PostQuotaSpecAsync(string specName, QuotaSpec quotaSpec, string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task PostQuotaSpecAsync(string specName, QuotaSpec quotaSpec, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -358,9 +377,10 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> PostQuotaSpecWithHttpInfoAsync(string specName, QuotaSpec quotaSpec, string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostQuotaSpecWithHttpInfoAsync(string specName, QuotaSpec quotaSpec, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -490,8 +510,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns></returns>
-        public void CreateQuotaSpec(QuotaSpec quotaSpec, string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string))
+        public void CreateQuotaSpec(QuotaSpec quotaSpec, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0)
         {
             CreateQuotaSpecWithHttpInfo(quotaSpec, region, _namespace, xNomadToken, idempotencyToken);
         }
@@ -505,12 +526,15 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Fermyon.Nomad.Client.ApiResponse<Object> CreateQuotaSpecWithHttpInfo(QuotaSpec quotaSpec, string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string))
+        public Fermyon.Nomad.Client.ApiResponse<Object> CreateQuotaSpecWithHttpInfo(QuotaSpec quotaSpec, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'quotaSpec' is set
             if (quotaSpec == null)
+            {
                 throw new Fermyon.Nomad.Client.ApiException(400, "Missing required parameter 'quotaSpec' when calling EnterpriseApi->CreateQuotaSpec");
+            }
 
             Fermyon.Nomad.Client.RequestOptions localVarRequestOptions = new Fermyon.Nomad.Client.RequestOptions();
 
@@ -523,10 +547,16 @@ namespace Fermyon.Nomad.Api
             };
 
             var localVarContentType = Fermyon.Nomad.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = Fermyon.Nomad.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             if (region != null)
             {
@@ -546,6 +576,9 @@ namespace Fermyon.Nomad.Api
             }
             localVarRequestOptions.Data = quotaSpec;
 
+            localVarRequestOptions.Operation = "EnterpriseApi.CreateQuotaSpec";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
             // authentication (X-Nomad-Token) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("X-Nomad-Token")))
             {
@@ -554,11 +587,13 @@ namespace Fermyon.Nomad.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<Object>("/quota", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("CreateQuotaSpec", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -573,11 +608,12 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task CreateQuotaSpecAsync(QuotaSpec quotaSpec, string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task CreateQuotaSpecAsync(QuotaSpec quotaSpec, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            await CreateQuotaSpecWithHttpInfoAsync(quotaSpec, region, _namespace, xNomadToken, idempotencyToken, cancellationToken).ConfigureAwait(false);
+            await CreateQuotaSpecWithHttpInfoAsync(quotaSpec, region, _namespace, xNomadToken, idempotencyToken, operationIndex, cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -589,13 +625,16 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<Object>> CreateQuotaSpecWithHttpInfoAsync(QuotaSpec quotaSpec, string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<Object>> CreateQuotaSpecWithHttpInfoAsync(QuotaSpec quotaSpec, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'quotaSpec' is set
             if (quotaSpec == null)
+            {
                 throw new Fermyon.Nomad.Client.ApiException(400, "Missing required parameter 'quotaSpec' when calling EnterpriseApi->CreateQuotaSpec");
+            }
 
 
             Fermyon.Nomad.Client.RequestOptions localVarRequestOptions = new Fermyon.Nomad.Client.RequestOptions();
@@ -608,12 +647,17 @@ namespace Fermyon.Nomad.Api
             string[] _accepts = new string[] {
             };
 
-
             var localVarContentType = Fermyon.Nomad.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = Fermyon.Nomad.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             if (region != null)
             {
@@ -633,6 +677,9 @@ namespace Fermyon.Nomad.Api
             }
             localVarRequestOptions.Data = quotaSpec;
 
+            localVarRequestOptions.Operation = "EnterpriseApi.CreateQuotaSpec";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
             // authentication (X-Nomad-Token) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("X-Nomad-Token")))
             {
@@ -640,13 +687,15 @@ namespace Fermyon.Nomad.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/quota", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("CreateQuotaSpec", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -661,8 +710,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns></returns>
-        public void DeleteQuotaSpec(string specName, string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string))
+        public void DeleteQuotaSpec(string specName, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0)
         {
             DeleteQuotaSpecWithHttpInfo(specName, region, _namespace, xNomadToken, idempotencyToken);
         }
@@ -676,12 +726,15 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Fermyon.Nomad.Client.ApiResponse<Object> DeleteQuotaSpecWithHttpInfo(string specName, string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string))
+        public Fermyon.Nomad.Client.ApiResponse<Object> DeleteQuotaSpecWithHttpInfo(string specName, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'specName' is set
             if (specName == null)
+            {
                 throw new Fermyon.Nomad.Client.ApiException(400, "Missing required parameter 'specName' when calling EnterpriseApi->DeleteQuotaSpec");
+            }
 
             Fermyon.Nomad.Client.RequestOptions localVarRequestOptions = new Fermyon.Nomad.Client.RequestOptions();
 
@@ -693,10 +746,16 @@ namespace Fermyon.Nomad.Api
             };
 
             var localVarContentType = Fermyon.Nomad.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = Fermyon.Nomad.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("specName", Fermyon.Nomad.Client.ClientUtils.ParameterToString(specName)); // path parameter
             if (region != null)
@@ -716,6 +775,9 @@ namespace Fermyon.Nomad.Api
                 localVarRequestOptions.HeaderParameters.Add("X-Nomad-Token", Fermyon.Nomad.Client.ClientUtils.ParameterToString(xNomadToken)); // header parameter
             }
 
+            localVarRequestOptions.Operation = "EnterpriseApi.DeleteQuotaSpec";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
             // authentication (X-Nomad-Token) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("X-Nomad-Token")))
             {
@@ -724,11 +786,13 @@ namespace Fermyon.Nomad.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Delete<Object>("/quota/{specName}", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("DeleteQuotaSpec", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -743,11 +807,12 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteQuotaSpecAsync(string specName, string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task DeleteQuotaSpecAsync(string specName, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            await DeleteQuotaSpecWithHttpInfoAsync(specName, region, _namespace, xNomadToken, idempotencyToken, cancellationToken).ConfigureAwait(false);
+            await DeleteQuotaSpecWithHttpInfoAsync(specName, region, _namespace, xNomadToken, idempotencyToken, operationIndex, cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -759,13 +824,16 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<Object>> DeleteQuotaSpecWithHttpInfoAsync(string specName, string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<Object>> DeleteQuotaSpecWithHttpInfoAsync(string specName, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'specName' is set
             if (specName == null)
+            {
                 throw new Fermyon.Nomad.Client.ApiException(400, "Missing required parameter 'specName' when calling EnterpriseApi->DeleteQuotaSpec");
+            }
 
 
             Fermyon.Nomad.Client.RequestOptions localVarRequestOptions = new Fermyon.Nomad.Client.RequestOptions();
@@ -777,12 +845,17 @@ namespace Fermyon.Nomad.Api
             string[] _accepts = new string[] {
             };
 
-
             var localVarContentType = Fermyon.Nomad.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = Fermyon.Nomad.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("specName", Fermyon.Nomad.Client.ClientUtils.ParameterToString(specName)); // path parameter
             if (region != null)
@@ -802,6 +875,9 @@ namespace Fermyon.Nomad.Api
                 localVarRequestOptions.HeaderParameters.Add("X-Nomad-Token", Fermyon.Nomad.Client.ClientUtils.ParameterToString(xNomadToken)); // header parameter
             }
 
+            localVarRequestOptions.Operation = "EnterpriseApi.DeleteQuotaSpec";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
             // authentication (X-Nomad-Token) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("X-Nomad-Token")))
             {
@@ -809,13 +885,15 @@ namespace Fermyon.Nomad.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/quota/{specName}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("DeleteQuotaSpec", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -835,8 +913,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>QuotaSpec</returns>
-        public QuotaSpec GetQuotaSpec(string specName, string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string))
+        public QuotaSpec GetQuotaSpec(string specName, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0)
         {
             Fermyon.Nomad.Client.ApiResponse<QuotaSpec> localVarResponse = GetQuotaSpecWithHttpInfo(specName, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
             return localVarResponse.Data;
@@ -856,12 +935,15 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of QuotaSpec</returns>
-        public Fermyon.Nomad.Client.ApiResponse<QuotaSpec> GetQuotaSpecWithHttpInfo(string specName, string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string))
+        public Fermyon.Nomad.Client.ApiResponse<QuotaSpec> GetQuotaSpecWithHttpInfo(string specName, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'specName' is set
             if (specName == null)
+            {
                 throw new Fermyon.Nomad.Client.ApiException(400, "Missing required parameter 'specName' when calling EnterpriseApi->GetQuotaSpec");
+            }
 
             Fermyon.Nomad.Client.RequestOptions localVarRequestOptions = new Fermyon.Nomad.Client.RequestOptions();
 
@@ -874,10 +956,16 @@ namespace Fermyon.Nomad.Api
             };
 
             var localVarContentType = Fermyon.Nomad.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = Fermyon.Nomad.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("specName", Fermyon.Nomad.Client.ClientUtils.ParameterToString(specName)); // path parameter
             if (region != null)
@@ -917,6 +1005,9 @@ namespace Fermyon.Nomad.Api
                 localVarRequestOptions.HeaderParameters.Add("X-Nomad-Token", Fermyon.Nomad.Client.ClientUtils.ParameterToString(xNomadToken)); // header parameter
             }
 
+            localVarRequestOptions.Operation = "EnterpriseApi.GetQuotaSpec";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
             // authentication (X-Nomad-Token) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("X-Nomad-Token")))
             {
@@ -925,11 +1016,13 @@ namespace Fermyon.Nomad.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<QuotaSpec>("/quota/{specName}", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("GetQuotaSpec", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -949,11 +1042,12 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of QuotaSpec</returns>
-        public async System.Threading.Tasks.Task<QuotaSpec> GetQuotaSpecAsync(string specName, string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<QuotaSpec> GetQuotaSpecAsync(string specName, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Fermyon.Nomad.Client.ApiResponse<QuotaSpec> localVarResponse = await GetQuotaSpecWithHttpInfoAsync(specName, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, cancellationToken).ConfigureAwait(false);
+            Fermyon.Nomad.Client.ApiResponse<QuotaSpec> localVarResponse = await GetQuotaSpecWithHttpInfoAsync(specName, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -971,13 +1065,16 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (QuotaSpec)</returns>
-        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<QuotaSpec>> GetQuotaSpecWithHttpInfoAsync(string specName, string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<QuotaSpec>> GetQuotaSpecWithHttpInfoAsync(string specName, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'specName' is set
             if (specName == null)
+            {
                 throw new Fermyon.Nomad.Client.ApiException(400, "Missing required parameter 'specName' when calling EnterpriseApi->GetQuotaSpec");
+            }
 
 
             Fermyon.Nomad.Client.RequestOptions localVarRequestOptions = new Fermyon.Nomad.Client.RequestOptions();
@@ -990,12 +1087,17 @@ namespace Fermyon.Nomad.Api
                 "application/json"
             };
 
-
             var localVarContentType = Fermyon.Nomad.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = Fermyon.Nomad.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("specName", Fermyon.Nomad.Client.ClientUtils.ParameterToString(specName)); // path parameter
             if (region != null)
@@ -1035,6 +1137,9 @@ namespace Fermyon.Nomad.Api
                 localVarRequestOptions.HeaderParameters.Add("X-Nomad-Token", Fermyon.Nomad.Client.ClientUtils.ParameterToString(xNomadToken)); // header parameter
             }
 
+            localVarRequestOptions.Operation = "EnterpriseApi.GetQuotaSpec";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
             // authentication (X-Nomad-Token) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("X-Nomad-Token")))
             {
@@ -1042,13 +1147,15 @@ namespace Fermyon.Nomad.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.GetAsync<QuotaSpec>("/quota/{specName}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("GetQuotaSpec", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -1067,8 +1174,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>List&lt;Object&gt;</returns>
-        public List<Object> GetQuotas(string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string))
+        public List<Object> GetQuotas(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0)
         {
             Fermyon.Nomad.Client.ApiResponse<List<Object>> localVarResponse = GetQuotasWithHttpInfo(region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
             return localVarResponse.Data;
@@ -1087,8 +1195,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of List&lt;Object&gt;</returns>
-        public Fermyon.Nomad.Client.ApiResponse<List<Object>> GetQuotasWithHttpInfo(string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string))
+        public Fermyon.Nomad.Client.ApiResponse<List<Object>> GetQuotasWithHttpInfo(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0)
         {
             Fermyon.Nomad.Client.RequestOptions localVarRequestOptions = new Fermyon.Nomad.Client.RequestOptions();
 
@@ -1101,10 +1210,16 @@ namespace Fermyon.Nomad.Api
             };
 
             var localVarContentType = Fermyon.Nomad.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = Fermyon.Nomad.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             if (region != null)
             {
@@ -1143,6 +1258,9 @@ namespace Fermyon.Nomad.Api
                 localVarRequestOptions.HeaderParameters.Add("X-Nomad-Token", Fermyon.Nomad.Client.ClientUtils.ParameterToString(xNomadToken)); // header parameter
             }
 
+            localVarRequestOptions.Operation = "EnterpriseApi.GetQuotas";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
             // authentication (X-Nomad-Token) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("X-Nomad-Token")))
             {
@@ -1151,11 +1269,13 @@ namespace Fermyon.Nomad.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<List<Object>>("/quotas", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("GetQuotas", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -1174,11 +1294,12 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;Object&gt;</returns>
-        public async System.Threading.Tasks.Task<List<Object>> GetQuotasAsync(string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<List<Object>> GetQuotasAsync(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Fermyon.Nomad.Client.ApiResponse<List<Object>> localVarResponse = await GetQuotasWithHttpInfoAsync(region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, cancellationToken).ConfigureAwait(false);
+            Fermyon.Nomad.Client.ApiResponse<List<Object>> localVarResponse = await GetQuotasWithHttpInfoAsync(region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1195,9 +1316,10 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;Object&gt;)</returns>
-        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<List<Object>>> GetQuotasWithHttpInfoAsync(string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<List<Object>>> GetQuotasWithHttpInfoAsync(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             Fermyon.Nomad.Client.RequestOptions localVarRequestOptions = new Fermyon.Nomad.Client.RequestOptions();
@@ -1210,12 +1332,17 @@ namespace Fermyon.Nomad.Api
                 "application/json"
             };
 
-
             var localVarContentType = Fermyon.Nomad.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = Fermyon.Nomad.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             if (region != null)
             {
@@ -1254,6 +1381,9 @@ namespace Fermyon.Nomad.Api
                 localVarRequestOptions.HeaderParameters.Add("X-Nomad-Token", Fermyon.Nomad.Client.ClientUtils.ParameterToString(xNomadToken)); // header parameter
             }
 
+            localVarRequestOptions.Operation = "EnterpriseApi.GetQuotas";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
             // authentication (X-Nomad-Token) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("X-Nomad-Token")))
             {
@@ -1261,13 +1391,15 @@ namespace Fermyon.Nomad.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.GetAsync<List<Object>>("/quotas", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("GetQuotas", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -1283,8 +1415,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns></returns>
-        public void PostQuotaSpec(string specName, QuotaSpec quotaSpec, string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string))
+        public void PostQuotaSpec(string specName, QuotaSpec quotaSpec, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0)
         {
             PostQuotaSpecWithHttpInfo(specName, quotaSpec, region, _namespace, xNomadToken, idempotencyToken);
         }
@@ -1299,16 +1432,21 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Fermyon.Nomad.Client.ApiResponse<Object> PostQuotaSpecWithHttpInfo(string specName, QuotaSpec quotaSpec, string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string))
+        public Fermyon.Nomad.Client.ApiResponse<Object> PostQuotaSpecWithHttpInfo(string specName, QuotaSpec quotaSpec, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'specName' is set
             if (specName == null)
+            {
                 throw new Fermyon.Nomad.Client.ApiException(400, "Missing required parameter 'specName' when calling EnterpriseApi->PostQuotaSpec");
+            }
 
             // verify the required parameter 'quotaSpec' is set
             if (quotaSpec == null)
+            {
                 throw new Fermyon.Nomad.Client.ApiException(400, "Missing required parameter 'quotaSpec' when calling EnterpriseApi->PostQuotaSpec");
+            }
 
             Fermyon.Nomad.Client.RequestOptions localVarRequestOptions = new Fermyon.Nomad.Client.RequestOptions();
 
@@ -1321,10 +1459,16 @@ namespace Fermyon.Nomad.Api
             };
 
             var localVarContentType = Fermyon.Nomad.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = Fermyon.Nomad.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("specName", Fermyon.Nomad.Client.ClientUtils.ParameterToString(specName)); // path parameter
             if (region != null)
@@ -1345,6 +1489,9 @@ namespace Fermyon.Nomad.Api
             }
             localVarRequestOptions.Data = quotaSpec;
 
+            localVarRequestOptions.Operation = "EnterpriseApi.PostQuotaSpec";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
             // authentication (X-Nomad-Token) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("X-Nomad-Token")))
             {
@@ -1353,11 +1500,13 @@ namespace Fermyon.Nomad.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<Object>("/quota/{specName}", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PostQuotaSpec", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -1373,11 +1522,12 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task PostQuotaSpecAsync(string specName, QuotaSpec quotaSpec, string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task PostQuotaSpecAsync(string specName, QuotaSpec quotaSpec, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            await PostQuotaSpecWithHttpInfoAsync(specName, quotaSpec, region, _namespace, xNomadToken, idempotencyToken, cancellationToken).ConfigureAwait(false);
+            await PostQuotaSpecWithHttpInfoAsync(specName, quotaSpec, region, _namespace, xNomadToken, idempotencyToken, operationIndex, cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -1390,17 +1540,22 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<Object>> PostQuotaSpecWithHttpInfoAsync(string specName, QuotaSpec quotaSpec, string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<Object>> PostQuotaSpecWithHttpInfoAsync(string specName, QuotaSpec quotaSpec, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'specName' is set
             if (specName == null)
+            {
                 throw new Fermyon.Nomad.Client.ApiException(400, "Missing required parameter 'specName' when calling EnterpriseApi->PostQuotaSpec");
+            }
 
             // verify the required parameter 'quotaSpec' is set
             if (quotaSpec == null)
+            {
                 throw new Fermyon.Nomad.Client.ApiException(400, "Missing required parameter 'quotaSpec' when calling EnterpriseApi->PostQuotaSpec");
+            }
 
 
             Fermyon.Nomad.Client.RequestOptions localVarRequestOptions = new Fermyon.Nomad.Client.RequestOptions();
@@ -1413,12 +1568,17 @@ namespace Fermyon.Nomad.Api
             string[] _accepts = new string[] {
             };
 
-
             var localVarContentType = Fermyon.Nomad.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = Fermyon.Nomad.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("specName", Fermyon.Nomad.Client.ClientUtils.ParameterToString(specName)); // path parameter
             if (region != null)
@@ -1439,6 +1599,9 @@ namespace Fermyon.Nomad.Api
             }
             localVarRequestOptions.Data = quotaSpec;
 
+            localVarRequestOptions.Operation = "EnterpriseApi.PostQuotaSpec";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
             // authentication (X-Nomad-Token) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("X-Nomad-Token")))
             {
@@ -1446,13 +1609,15 @@ namespace Fermyon.Nomad.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/quota/{specName}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PostQuotaSpec", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;

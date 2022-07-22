@@ -117,7 +117,7 @@ namespace Fermyon.Nomad.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class SampledValue {\n");
             sb.Append("  Count: ").Append(Count).Append("\n");
             sb.Append("  Labels: ").Append(Labels).Append("\n");
@@ -159,8 +159,9 @@ namespace Fermyon.Nomad.Model
         public bool Equals(SampledValue input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.Count == input.Count ||
@@ -212,17 +213,21 @@ namespace Fermyon.Nomad.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                hashCode = hashCode * 59 + this.Count.GetHashCode();
+                hashCode = (hashCode * 59) + this.Count.GetHashCode();
                 if (this.Labels != null)
-                    hashCode = hashCode * 59 + this.Labels.GetHashCode();
-                hashCode = hashCode * 59 + this.Max.GetHashCode();
-                hashCode = hashCode * 59 + this.Mean.GetHashCode();
-                hashCode = hashCode * 59 + this.Min.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Labels.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.Max.GetHashCode();
+                hashCode = (hashCode * 59) + this.Mean.GetHashCode();
+                hashCode = (hashCode * 59) + this.Min.GetHashCode();
                 if (this.Name != null)
-                    hashCode = hashCode * 59 + this.Name.GetHashCode();
-                hashCode = hashCode * 59 + this.Rate.GetHashCode();
-                hashCode = hashCode * 59 + this.Stddev.GetHashCode();
-                hashCode = hashCode * 59 + this.Sum.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Name.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.Rate.GetHashCode();
+                hashCode = (hashCode * 59) + this.Stddev.GetHashCode();
+                hashCode = (hashCode * 59) + this.Sum.GetHashCode();
                 return hashCode;
             }
         }
@@ -232,7 +237,7 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             yield break;
         }

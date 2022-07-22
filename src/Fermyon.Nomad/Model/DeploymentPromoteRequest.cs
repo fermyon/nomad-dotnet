@@ -93,7 +93,7 @@ namespace Fermyon.Nomad.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class DeploymentPromoteRequest {\n");
             sb.Append("  All: ").Append(All).Append("\n");
             sb.Append("  DeploymentID: ").Append(DeploymentID).Append("\n");
@@ -132,8 +132,9 @@ namespace Fermyon.Nomad.Model
         public bool Equals(DeploymentPromoteRequest input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.All == input.All ||
@@ -176,17 +177,27 @@ namespace Fermyon.Nomad.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                hashCode = hashCode * 59 + this.All.GetHashCode();
+                hashCode = (hashCode * 59) + this.All.GetHashCode();
                 if (this.DeploymentID != null)
-                    hashCode = hashCode * 59 + this.DeploymentID.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.DeploymentID.GetHashCode();
+                }
                 if (this.Groups != null)
-                    hashCode = hashCode * 59 + this.Groups.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Groups.GetHashCode();
+                }
                 if (this.Namespace != null)
-                    hashCode = hashCode * 59 + this.Namespace.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Namespace.GetHashCode();
+                }
                 if (this.Region != null)
-                    hashCode = hashCode * 59 + this.Region.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Region.GetHashCode();
+                }
                 if (this.SecretID != null)
-                    hashCode = hashCode * 59 + this.SecretID.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.SecretID.GetHashCode();
+                }
                 return hashCode;
             }
         }
@@ -196,7 +207,7 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             yield break;
         }

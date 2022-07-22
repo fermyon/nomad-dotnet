@@ -109,7 +109,7 @@ namespace Fermyon.Nomad.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class Resources {\n");
             sb.Append("  CPU: ").Append(CPU).Append("\n");
             sb.Append("  Cores: ").Append(Cores).Append("\n");
@@ -150,8 +150,9 @@ namespace Fermyon.Nomad.Model
         public bool Equals(Resources input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.CPU == input.CPU ||
@@ -200,16 +201,20 @@ namespace Fermyon.Nomad.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                hashCode = hashCode * 59 + this.CPU.GetHashCode();
-                hashCode = hashCode * 59 + this.Cores.GetHashCode();
+                hashCode = (hashCode * 59) + this.CPU.GetHashCode();
+                hashCode = (hashCode * 59) + this.Cores.GetHashCode();
                 if (this.Devices != null)
-                    hashCode = hashCode * 59 + this.Devices.GetHashCode();
-                hashCode = hashCode * 59 + this.DiskMB.GetHashCode();
-                hashCode = hashCode * 59 + this.IOPS.GetHashCode();
-                hashCode = hashCode * 59 + this.MemoryMB.GetHashCode();
-                hashCode = hashCode * 59 + this.MemoryMaxMB.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Devices.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.DiskMB.GetHashCode();
+                hashCode = (hashCode * 59) + this.IOPS.GetHashCode();
+                hashCode = (hashCode * 59) + this.MemoryMB.GetHashCode();
+                hashCode = (hashCode * 59) + this.MemoryMaxMB.GetHashCode();
                 if (this.Networks != null)
-                    hashCode = hashCode * 59 + this.Networks.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Networks.GetHashCode();
+                }
                 return hashCode;
             }
         }
@@ -219,7 +224,7 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             yield break;
         }

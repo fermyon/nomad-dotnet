@@ -77,7 +77,7 @@ namespace Fermyon.Nomad.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class MigrateStrategy {\n");
             sb.Append("  HealthCheck: ").Append(HealthCheck).Append("\n");
             sb.Append("  HealthyDeadline: ").Append(HealthyDeadline).Append("\n");
@@ -114,8 +114,9 @@ namespace Fermyon.Nomad.Model
         public bool Equals(MigrateStrategy input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.HealthCheck == input.HealthCheck ||
@@ -146,10 +147,12 @@ namespace Fermyon.Nomad.Model
             {
                 int hashCode = 41;
                 if (this.HealthCheck != null)
-                    hashCode = hashCode * 59 + this.HealthCheck.GetHashCode();
-                hashCode = hashCode * 59 + this.HealthyDeadline.GetHashCode();
-                hashCode = hashCode * 59 + this.MaxParallel.GetHashCode();
-                hashCode = hashCode * 59 + this.MinHealthyTime.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.HealthCheck.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.HealthyDeadline.GetHashCode();
+                hashCode = (hashCode * 59) + this.MaxParallel.GetHashCode();
+                hashCode = (hashCode * 59) + this.MinHealthyTime.GetHashCode();
                 return hashCode;
             }
         }
@@ -159,7 +162,7 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             yield break;
         }

@@ -61,7 +61,7 @@ namespace Fermyon.Nomad.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class MultiregionStrategy {\n");
             sb.Append("  MaxParallel: ").Append(MaxParallel).Append("\n");
             sb.Append("  OnFailure: ").Append(OnFailure).Append("\n");
@@ -96,8 +96,9 @@ namespace Fermyon.Nomad.Model
         public bool Equals(MultiregionStrategy input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.MaxParallel == input.MaxParallel ||
@@ -119,9 +120,11 @@ namespace Fermyon.Nomad.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                hashCode = hashCode * 59 + this.MaxParallel.GetHashCode();
+                hashCode = (hashCode * 59) + this.MaxParallel.GetHashCode();
                 if (this.OnFailure != null)
-                    hashCode = hashCode * 59 + this.OnFailure.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.OnFailure.GetHashCode();
+                }
                 return hashCode;
             }
         }
@@ -131,7 +134,7 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             yield break;
         }

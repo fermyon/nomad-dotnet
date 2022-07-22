@@ -38,8 +38,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="offset">Specifies the offset to start streaming from. (optional)</param>
         /// <param name="origin">Specifies either \&quot;start\&quot; or \&quot;end\&quot; and applies the offset relative to either the start or end of the logs respectively. Defaults to \&quot;start\&quot; (optional)</param>
         /// <param name="plain">Return just the plain text without framing. This can be useful when viewing logs in a browser (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AllocationLogs</returns>
-        AllocationLogs GetAllocationLogs(string task, string type, string allocID, bool? follow = default(bool?), int? offset = default(int?), string origin = default(string), bool? plain = default(bool?));
+        AllocationLogs GetAllocationLogs(string task, string type, string allocID, bool? follow = default(bool?), int? offset = default(int?), string? origin = default(string?), bool? plain = default(bool?), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -55,8 +56,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="offset">Specifies the offset to start streaming from. (optional)</param>
         /// <param name="origin">Specifies either \&quot;start\&quot; or \&quot;end\&quot; and applies the offset relative to either the start or end of the logs respectively. Defaults to \&quot;start\&quot; (optional)</param>
         /// <param name="plain">Return just the plain text without framing. This can be useful when viewing logs in a browser (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AllocationLogs</returns>
-        ApiResponse<AllocationLogs> GetAllocationLogsWithHttpInfo(string task, string type, string allocID, bool? follow = default(bool?), int? offset = default(int?), string origin = default(string), bool? plain = default(bool?));
+        ApiResponse<AllocationLogs> GetAllocationLogsWithHttpInfo(string task, string type, string allocID, bool? follow = default(bool?), int? offset = default(int?), string? origin = default(string?), bool? plain = default(bool?), int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -80,9 +82,10 @@ namespace Fermyon.Nomad.Api
         /// <param name="offset">Specifies the offset to start streaming from. (optional)</param>
         /// <param name="origin">Specifies either \&quot;start\&quot; or \&quot;end\&quot; and applies the offset relative to either the start or end of the logs respectively. Defaults to \&quot;start\&quot; (optional)</param>
         /// <param name="plain">Return just the plain text without framing. This can be useful when viewing logs in a browser (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AllocationLogs</returns>
-        System.Threading.Tasks.Task<AllocationLogs> GetAllocationLogsAsync(string task, string type, string allocID, bool? follow = default(bool?), int? offset = default(int?), string origin = default(string), bool? plain = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AllocationLogs> GetAllocationLogsAsync(string task, string type, string allocID, bool? follow = default(bool?), int? offset = default(int?), string? origin = default(string?), bool? plain = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -98,9 +101,10 @@ namespace Fermyon.Nomad.Api
         /// <param name="offset">Specifies the offset to start streaming from. (optional)</param>
         /// <param name="origin">Specifies either \&quot;start\&quot; or \&quot;end\&quot; and applies the offset relative to either the start or end of the logs respectively. Defaults to \&quot;start\&quot; (optional)</param>
         /// <param name="plain">Return just the plain text without framing. This can be useful when viewing logs in a browser (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AllocationLogs)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AllocationLogs>> GetAllocationLogsWithHttpInfoAsync(string task, string type, string allocID, bool? follow = default(bool?), int? offset = default(int?), string origin = default(string), bool? plain = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<AllocationLogs>> GetAllocationLogsWithHttpInfoAsync(string task, string type, string allocID, bool? follow = default(bool?), int? offset = default(int?), string? origin = default(string?), bool? plain = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -232,8 +236,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="offset">Specifies the offset to start streaming from. (optional)</param>
         /// <param name="origin">Specifies either \&quot;start\&quot; or \&quot;end\&quot; and applies the offset relative to either the start or end of the logs respectively. Defaults to \&quot;start\&quot; (optional)</param>
         /// <param name="plain">Return just the plain text without framing. This can be useful when viewing logs in a browser (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AllocationLogs</returns>
-        public AllocationLogs GetAllocationLogs(string task, string type, string allocID, bool? follow = default(bool?), int? offset = default(int?), string origin = default(string), bool? plain = default(bool?))
+        public AllocationLogs GetAllocationLogs(string task, string type, string allocID, bool? follow = default(bool?), int? offset = default(int?), string? origin = default(string?), bool? plain = default(bool?), int operationIndex = 0)
         {
             Fermyon.Nomad.Client.ApiResponse<AllocationLogs> localVarResponse = GetAllocationLogsWithHttpInfo(task, type, allocID, follow, offset, origin, plain);
             return localVarResponse.Data;
@@ -250,20 +255,27 @@ namespace Fermyon.Nomad.Api
         /// <param name="offset">Specifies the offset to start streaming from. (optional)</param>
         /// <param name="origin">Specifies either \&quot;start\&quot; or \&quot;end\&quot; and applies the offset relative to either the start or end of the logs respectively. Defaults to \&quot;start\&quot; (optional)</param>
         /// <param name="plain">Return just the plain text without framing. This can be useful when viewing logs in a browser (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AllocationLogs</returns>
-        public Fermyon.Nomad.Client.ApiResponse<AllocationLogs> GetAllocationLogsWithHttpInfo(string task, string type, string allocID, bool? follow = default(bool?), int? offset = default(int?), string origin = default(string), bool? plain = default(bool?))
+        public Fermyon.Nomad.Client.ApiResponse<AllocationLogs> GetAllocationLogsWithHttpInfo(string task, string type, string allocID, bool? follow = default(bool?), int? offset = default(int?), string? origin = default(string?), bool? plain = default(bool?), int operationIndex = 0)
         {
             // verify the required parameter 'task' is set
             if (task == null)
+            {
                 throw new Fermyon.Nomad.Client.ApiException(400, "Missing required parameter 'task' when calling ClientsApi->GetAllocationLogs");
+            }
 
             // verify the required parameter 'type' is set
             if (type == null)
+            {
                 throw new Fermyon.Nomad.Client.ApiException(400, "Missing required parameter 'type' when calling ClientsApi->GetAllocationLogs");
+            }
 
             // verify the required parameter 'allocID' is set
             if (allocID == null)
+            {
                 throw new Fermyon.Nomad.Client.ApiException(400, "Missing required parameter 'allocID' when calling ClientsApi->GetAllocationLogs");
+            }
 
             Fermyon.Nomad.Client.RequestOptions localVarRequestOptions = new Fermyon.Nomad.Client.RequestOptions();
 
@@ -276,10 +288,16 @@ namespace Fermyon.Nomad.Api
             };
 
             var localVarContentType = Fermyon.Nomad.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = Fermyon.Nomad.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("allocID", Fermyon.Nomad.Client.ClientUtils.ParameterToString(allocID)); // path parameter
             localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "task", task));
@@ -301,6 +319,9 @@ namespace Fermyon.Nomad.Api
                 localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "plain", plain));
             }
 
+            localVarRequestOptions.Operation = "ClientsApi.GetAllocationLogs";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
             // authentication (X-Nomad-Token) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("X-Nomad-Token")))
             {
@@ -309,11 +330,13 @@ namespace Fermyon.Nomad.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<AllocationLogs>("/client/fs/logs/{allocID}", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("GetAllocationLogs", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -330,11 +353,12 @@ namespace Fermyon.Nomad.Api
         /// <param name="offset">Specifies the offset to start streaming from. (optional)</param>
         /// <param name="origin">Specifies either \&quot;start\&quot; or \&quot;end\&quot; and applies the offset relative to either the start or end of the logs respectively. Defaults to \&quot;start\&quot; (optional)</param>
         /// <param name="plain">Return just the plain text without framing. This can be useful when viewing logs in a browser (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AllocationLogs</returns>
-        public async System.Threading.Tasks.Task<AllocationLogs> GetAllocationLogsAsync(string task, string type, string allocID, bool? follow = default(bool?), int? offset = default(int?), string origin = default(string), bool? plain = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AllocationLogs> GetAllocationLogsAsync(string task, string type, string allocID, bool? follow = default(bool?), int? offset = default(int?), string? origin = default(string?), bool? plain = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Fermyon.Nomad.Client.ApiResponse<AllocationLogs> localVarResponse = await GetAllocationLogsWithHttpInfoAsync(task, type, allocID, follow, offset, origin, plain, cancellationToken).ConfigureAwait(false);
+            Fermyon.Nomad.Client.ApiResponse<AllocationLogs> localVarResponse = await GetAllocationLogsWithHttpInfoAsync(task, type, allocID, follow, offset, origin, plain, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -349,21 +373,28 @@ namespace Fermyon.Nomad.Api
         /// <param name="offset">Specifies the offset to start streaming from. (optional)</param>
         /// <param name="origin">Specifies either \&quot;start\&quot; or \&quot;end\&quot; and applies the offset relative to either the start or end of the logs respectively. Defaults to \&quot;start\&quot; (optional)</param>
         /// <param name="plain">Return just the plain text without framing. This can be useful when viewing logs in a browser (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AllocationLogs)</returns>
-        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<AllocationLogs>> GetAllocationLogsWithHttpInfoAsync(string task, string type, string allocID, bool? follow = default(bool?), int? offset = default(int?), string origin = default(string), bool? plain = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<AllocationLogs>> GetAllocationLogsWithHttpInfoAsync(string task, string type, string allocID, bool? follow = default(bool?), int? offset = default(int?), string? origin = default(string?), bool? plain = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'task' is set
             if (task == null)
+            {
                 throw new Fermyon.Nomad.Client.ApiException(400, "Missing required parameter 'task' when calling ClientsApi->GetAllocationLogs");
+            }
 
             // verify the required parameter 'type' is set
             if (type == null)
+            {
                 throw new Fermyon.Nomad.Client.ApiException(400, "Missing required parameter 'type' when calling ClientsApi->GetAllocationLogs");
+            }
 
             // verify the required parameter 'allocID' is set
             if (allocID == null)
+            {
                 throw new Fermyon.Nomad.Client.ApiException(400, "Missing required parameter 'allocID' when calling ClientsApi->GetAllocationLogs");
+            }
 
 
             Fermyon.Nomad.Client.RequestOptions localVarRequestOptions = new Fermyon.Nomad.Client.RequestOptions();
@@ -376,12 +407,17 @@ namespace Fermyon.Nomad.Api
                 "application/json"
             };
 
-
             var localVarContentType = Fermyon.Nomad.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = Fermyon.Nomad.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("allocID", Fermyon.Nomad.Client.ClientUtils.ParameterToString(allocID)); // path parameter
             localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "task", task));
@@ -403,6 +439,9 @@ namespace Fermyon.Nomad.Api
                 localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "plain", plain));
             }
 
+            localVarRequestOptions.Operation = "ClientsApi.GetAllocationLogs";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
             // authentication (X-Nomad-Token) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("X-Nomad-Token")))
             {
@@ -410,13 +449,15 @@ namespace Fermyon.Nomad.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.GetAsync<AllocationLogs>("/client/fs/logs/{allocID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("GetAllocationLogs", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;

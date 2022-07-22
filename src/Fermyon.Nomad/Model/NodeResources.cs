@@ -101,7 +101,7 @@ namespace Fermyon.Nomad.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class NodeResources {\n");
             sb.Append("  Cpu: ").Append(Cpu).Append("\n");
             sb.Append("  Devices: ").Append(Devices).Append("\n");
@@ -141,8 +141,9 @@ namespace Fermyon.Nomad.Model
         public bool Equals(NodeResources input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.Cpu == input.Cpu ||
@@ -191,17 +192,27 @@ namespace Fermyon.Nomad.Model
             {
                 int hashCode = 41;
                 if (this.Cpu != null)
-                    hashCode = hashCode * 59 + this.Cpu.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Cpu.GetHashCode();
+                }
                 if (this.Devices != null)
-                    hashCode = hashCode * 59 + this.Devices.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Devices.GetHashCode();
+                }
                 if (this.Disk != null)
-                    hashCode = hashCode * 59 + this.Disk.GetHashCode();
-                hashCode = hashCode * 59 + this.MaxDynamicPort.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Disk.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.MaxDynamicPort.GetHashCode();
                 if (this.Memory != null)
-                    hashCode = hashCode * 59 + this.Memory.GetHashCode();
-                hashCode = hashCode * 59 + this.MinDynamicPort.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Memory.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.MinDynamicPort.GetHashCode();
                 if (this.Networks != null)
-                    hashCode = hashCode * 59 + this.Networks.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Networks.GetHashCode();
+                }
                 return hashCode;
             }
         }
@@ -211,7 +222,7 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             yield break;
         }

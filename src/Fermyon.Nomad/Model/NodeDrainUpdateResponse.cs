@@ -85,7 +85,7 @@ namespace Fermyon.Nomad.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class NodeDrainUpdateResponse {\n");
             sb.Append("  EvalCreateIndex: ").Append(EvalCreateIndex).Append("\n");
             sb.Append("  EvalIDs: ").Append(EvalIDs).Append("\n");
@@ -123,8 +123,9 @@ namespace Fermyon.Nomad.Model
         public bool Equals(NodeDrainUpdateResponse input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.EvalCreateIndex == input.EvalCreateIndex ||
@@ -159,12 +160,14 @@ namespace Fermyon.Nomad.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                hashCode = hashCode * 59 + this.EvalCreateIndex.GetHashCode();
+                hashCode = (hashCode * 59) + this.EvalCreateIndex.GetHashCode();
                 if (this.EvalIDs != null)
-                    hashCode = hashCode * 59 + this.EvalIDs.GetHashCode();
-                hashCode = hashCode * 59 + this.LastIndex.GetHashCode();
-                hashCode = hashCode * 59 + this.NodeModifyIndex.GetHashCode();
-                hashCode = hashCode * 59 + this.RequestTime.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.EvalIDs.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.LastIndex.GetHashCode();
+                hashCode = (hashCode * 59) + this.NodeModifyIndex.GetHashCode();
+                hashCode = (hashCode * 59) + this.RequestTime.GetHashCode();
                 return hashCode;
             }
         }
@@ -174,40 +177,40 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             // EvalCreateIndex (int) maximum
-            if(this.EvalCreateIndex > (int)384)
+            if (this.EvalCreateIndex > (int)384)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for EvalCreateIndex, must be a value less than or equal to 384.", new [] { "EvalCreateIndex" });
             }
 
             // EvalCreateIndex (int) minimum
-            if(this.EvalCreateIndex < (int)0)
+            if (this.EvalCreateIndex < (int)0)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for EvalCreateIndex, must be a value greater than or equal to 0.", new [] { "EvalCreateIndex" });
             }
 
             // LastIndex (int) maximum
-            if(this.LastIndex > (int)384)
+            if (this.LastIndex > (int)384)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for LastIndex, must be a value less than or equal to 384.", new [] { "LastIndex" });
             }
 
             // LastIndex (int) minimum
-            if(this.LastIndex < (int)0)
+            if (this.LastIndex < (int)0)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for LastIndex, must be a value greater than or equal to 0.", new [] { "LastIndex" });
             }
 
             // NodeModifyIndex (int) maximum
-            if(this.NodeModifyIndex > (int)384)
+            if (this.NodeModifyIndex > (int)384)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for NodeModifyIndex, must be a value less than or equal to 384.", new [] { "NodeModifyIndex" });
             }
 
             // NodeModifyIndex (int) minimum
-            if(this.NodeModifyIndex < (int)0)
+            if (this.NodeModifyIndex < (int)0)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for NodeModifyIndex, must be a value greater than or equal to 0.", new [] { "NodeModifyIndex" });
             }

@@ -93,7 +93,7 @@ namespace Fermyon.Nomad.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class JobDispatchResponse {\n");
             sb.Append("  DispatchedJobID: ").Append(DispatchedJobID).Append("\n");
             sb.Append("  EvalCreateIndex: ").Append(EvalCreateIndex).Append("\n");
@@ -132,8 +132,9 @@ namespace Fermyon.Nomad.Model
         public bool Equals(JobDispatchResponse input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.DispatchedJobID == input.DispatchedJobID ||
@@ -173,13 +174,17 @@ namespace Fermyon.Nomad.Model
             {
                 int hashCode = 41;
                 if (this.DispatchedJobID != null)
-                    hashCode = hashCode * 59 + this.DispatchedJobID.GetHashCode();
-                hashCode = hashCode * 59 + this.EvalCreateIndex.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.DispatchedJobID.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.EvalCreateIndex.GetHashCode();
                 if (this.EvalID != null)
-                    hashCode = hashCode * 59 + this.EvalID.GetHashCode();
-                hashCode = hashCode * 59 + this.JobCreateIndex.GetHashCode();
-                hashCode = hashCode * 59 + this.LastIndex.GetHashCode();
-                hashCode = hashCode * 59 + this.RequestTime.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.EvalID.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.JobCreateIndex.GetHashCode();
+                hashCode = (hashCode * 59) + this.LastIndex.GetHashCode();
+                hashCode = (hashCode * 59) + this.RequestTime.GetHashCode();
                 return hashCode;
             }
         }
@@ -189,40 +194,40 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             // EvalCreateIndex (int) maximum
-            if(this.EvalCreateIndex > (int)384)
+            if (this.EvalCreateIndex > (int)384)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for EvalCreateIndex, must be a value less than or equal to 384.", new [] { "EvalCreateIndex" });
             }
 
             // EvalCreateIndex (int) minimum
-            if(this.EvalCreateIndex < (int)0)
+            if (this.EvalCreateIndex < (int)0)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for EvalCreateIndex, must be a value greater than or equal to 0.", new [] { "EvalCreateIndex" });
             }
 
             // JobCreateIndex (int) maximum
-            if(this.JobCreateIndex > (int)384)
+            if (this.JobCreateIndex > (int)384)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for JobCreateIndex, must be a value less than or equal to 384.", new [] { "JobCreateIndex" });
             }
 
             // JobCreateIndex (int) minimum
-            if(this.JobCreateIndex < (int)0)
+            if (this.JobCreateIndex < (int)0)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for JobCreateIndex, must be a value greater than or equal to 0.", new [] { "JobCreateIndex" });
             }
 
             // LastIndex (int) maximum
-            if(this.LastIndex > (int)384)
+            if (this.LastIndex > (int)384)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for LastIndex, must be a value less than or equal to 384.", new [] { "LastIndex" });
             }
 
             // LastIndex (int) minimum
-            if(this.LastIndex < (int)0)
+            if (this.LastIndex < (int)0)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for LastIndex, must be a value greater than or equal to 0.", new [] { "LastIndex" });
             }

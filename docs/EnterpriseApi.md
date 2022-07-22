@@ -2,18 +2,17 @@
 
 All URIs are relative to *https://127.0.0.1:4646/v1*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**CreateQuotaSpec**](EnterpriseApi.md#createquotaspec) | **POST** /quota | 
-[**DeleteQuotaSpec**](EnterpriseApi.md#deletequotaspec) | **DELETE** /quota/{specName} | 
-[**GetQuotaSpec**](EnterpriseApi.md#getquotaspec) | **GET** /quota/{specName} | 
-[**GetQuotas**](EnterpriseApi.md#getquotas) | **GET** /quotas | 
-[**PostQuotaSpec**](EnterpriseApi.md#postquotaspec) | **POST** /quota/{specName} | 
-
+| Method | HTTP request | Description |
+|--------|--------------|-------------|
+| [**CreateQuotaSpec**](EnterpriseApi.md#createquotaspec) | **POST** /quota |  |
+| [**DeleteQuotaSpec**](EnterpriseApi.md#deletequotaspec) | **DELETE** /quota/{specName} |  |
+| [**GetQuotaSpec**](EnterpriseApi.md#getquotaspec) | **GET** /quota/{specName} |  |
+| [**GetQuotas**](EnterpriseApi.md#getquotas) | **GET** /quotas |  |
+| [**PostQuotaSpec**](EnterpriseApi.md#postquotaspec) | **POST** /quota/{specName} |  |
 
 <a name="createquotaspec"></a>
 # **CreateQuotaSpec**
-> void CreateQuotaSpec (QuotaSpec quotaSpec, string region = null, string _namespace = null, string xNomadToken = null, string idempotencyToken = null)
+> void CreateQuotaSpec (QuotaSpec quotaSpec, string? region = null, string? _namespace = null, string? xNomadToken = null, string? idempotencyToken = null)
 
 
 
@@ -40,10 +39,10 @@ namespace Example
 
             var apiInstance = new EnterpriseApi(config);
             var quotaSpec = new QuotaSpec(); // QuotaSpec | 
-            var region = region_example;  // string | Filters results based on the specified region. (optional) 
-            var _namespace = _namespace_example;  // string | Filters results based on the specified namespace. (optional) 
-            var xNomadToken = xNomadToken_example;  // string | A Nomad ACL token. (optional) 
-            var idempotencyToken = idempotencyToken_example;  // string | Can be used to ensure operations are only run once. (optional) 
+            var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
+            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var xNomadToken = "xNomadToken_example";  // string? | A Nomad ACL token. (optional) 
+            var idempotencyToken = "idempotencyToken_example";  // string? | Can be used to ensure operations are only run once. (optional) 
 
             try
             {
@@ -51,8 +50,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling EnterpriseApi.CreateQuotaSpec: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling EnterpriseApi.CreateQuotaSpec: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -60,15 +59,31 @@ namespace Example
 }
 ```
 
+#### Using the CreateQuotaSpecWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    apiInstance.CreateQuotaSpecWithHttpInfo(quotaSpec, region, _namespace, xNomadToken, idempotencyToken);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling EnterpriseApi.CreateQuotaSpecWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **quotaSpec** | [**QuotaSpec**](QuotaSpec.md)|  | 
- **region** | **string**| Filters results based on the specified region. | [optional] 
- **_namespace** | **string**| Filters results based on the specified namespace. | [optional] 
- **xNomadToken** | **string**| A Nomad ACL token. | [optional] 
- **idempotencyToken** | **string**| Can be used to ensure operations are only run once. | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **quotaSpec** | [**QuotaSpec**](QuotaSpec.md) |  |  |
+| **region** | **string?** | Filters results based on the specified region. | [optional]  |
+| **_namespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
+| **xNomadToken** | **string?** | A Nomad ACL token. | [optional]  |
+| **idempotencyToken** | **string?** | Can be used to ensure operations are only run once. | [optional]  |
 
 ### Return type
 
@@ -97,7 +112,7 @@ void (empty response body)
 
 <a name="deletequotaspec"></a>
 # **DeleteQuotaSpec**
-> void DeleteQuotaSpec (string specName, string region = null, string _namespace = null, string xNomadToken = null, string idempotencyToken = null)
+> void DeleteQuotaSpec (string specName, string? region = null, string? _namespace = null, string? xNomadToken = null, string? idempotencyToken = null)
 
 
 
@@ -123,11 +138,11 @@ namespace Example
             // config.AddApiKeyPrefix("X-Nomad-Token", "Bearer");
 
             var apiInstance = new EnterpriseApi(config);
-            var specName = specName_example;  // string | The quota spec identifier.
-            var region = region_example;  // string | Filters results based on the specified region. (optional) 
-            var _namespace = _namespace_example;  // string | Filters results based on the specified namespace. (optional) 
-            var xNomadToken = xNomadToken_example;  // string | A Nomad ACL token. (optional) 
-            var idempotencyToken = idempotencyToken_example;  // string | Can be used to ensure operations are only run once. (optional) 
+            var specName = "specName_example";  // string | The quota spec identifier.
+            var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
+            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var xNomadToken = "xNomadToken_example";  // string? | A Nomad ACL token. (optional) 
+            var idempotencyToken = "idempotencyToken_example";  // string? | Can be used to ensure operations are only run once. (optional) 
 
             try
             {
@@ -135,8 +150,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling EnterpriseApi.DeleteQuotaSpec: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling EnterpriseApi.DeleteQuotaSpec: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -144,15 +159,31 @@ namespace Example
 }
 ```
 
+#### Using the DeleteQuotaSpecWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    apiInstance.DeleteQuotaSpecWithHttpInfo(specName, region, _namespace, xNomadToken, idempotencyToken);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling EnterpriseApi.DeleteQuotaSpecWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **specName** | **string**| The quota spec identifier. | 
- **region** | **string**| Filters results based on the specified region. | [optional] 
- **_namespace** | **string**| Filters results based on the specified namespace. | [optional] 
- **xNomadToken** | **string**| A Nomad ACL token. | [optional] 
- **idempotencyToken** | **string**| Can be used to ensure operations are only run once. | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **specName** | **string** | The quota spec identifier. |  |
+| **region** | **string?** | Filters results based on the specified region. | [optional]  |
+| **_namespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
+| **xNomadToken** | **string?** | A Nomad ACL token. | [optional]  |
+| **idempotencyToken** | **string?** | Can be used to ensure operations are only run once. | [optional]  |
 
 ### Return type
 
@@ -181,7 +212,7 @@ void (empty response body)
 
 <a name="getquotaspec"></a>
 # **GetQuotaSpec**
-> QuotaSpec GetQuotaSpec (string specName, string region = null, string _namespace = null, int? index = null, string wait = null, string stale = null, string prefix = null, string xNomadToken = null, int? perPage = null, string nextToken = null)
+> QuotaSpec GetQuotaSpec (string specName, string? region = null, string? _namespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null)
 
 
 
@@ -207,16 +238,16 @@ namespace Example
             // config.AddApiKeyPrefix("X-Nomad-Token", "Bearer");
 
             var apiInstance = new EnterpriseApi(config);
-            var specName = specName_example;  // string | The quota spec identifier.
-            var region = region_example;  // string | Filters results based on the specified region. (optional) 
-            var _namespace = _namespace_example;  // string | Filters results based on the specified namespace. (optional) 
+            var specName = "specName_example";  // string | The quota spec identifier.
+            var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
+            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
             var index = 56;  // int? | If set, wait until query exceeds given index. Must be provided with WaitParam. (optional) 
-            var wait = wait_example;  // string | Provided with IndexParam to wait for change. (optional) 
-            var stale = stale_example;  // string | If present, results will include stale reads. (optional) 
-            var prefix = prefix_example;  // string | Constrains results to jobs that start with the defined prefix (optional) 
-            var xNomadToken = xNomadToken_example;  // string | A Nomad ACL token. (optional) 
+            var wait = "wait_example";  // string? | Provided with IndexParam to wait for change. (optional) 
+            var stale = "stale_example";  // string? | If present, results will include stale reads. (optional) 
+            var prefix = "prefix_example";  // string? | Constrains results to jobs that start with the defined prefix (optional) 
+            var xNomadToken = "xNomadToken_example";  // string? | A Nomad ACL token. (optional) 
             var perPage = 56;  // int? | Maximum number of results to return. (optional) 
-            var nextToken = nextToken_example;  // string | Indicates where to start paging for queries that support pagination. (optional) 
+            var nextToken = "nextToken_example";  // string? | Indicates where to start paging for queries that support pagination. (optional) 
 
             try
             {
@@ -225,8 +256,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling EnterpriseApi.GetQuotaSpec: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling EnterpriseApi.GetQuotaSpec: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -234,20 +265,39 @@ namespace Example
 }
 ```
 
+#### Using the GetQuotaSpecWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    ApiResponse<QuotaSpec> response = apiInstance.GetQuotaSpecWithHttpInfo(specName, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling EnterpriseApi.GetQuotaSpecWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **specName** | **string**| The quota spec identifier. | 
- **region** | **string**| Filters results based on the specified region. | [optional] 
- **_namespace** | **string**| Filters results based on the specified namespace. | [optional] 
- **index** | **int?**| If set, wait until query exceeds given index. Must be provided with WaitParam. | [optional] 
- **wait** | **string**| Provided with IndexParam to wait for change. | [optional] 
- **stale** | **string**| If present, results will include stale reads. | [optional] 
- **prefix** | **string**| Constrains results to jobs that start with the defined prefix | [optional] 
- **xNomadToken** | **string**| A Nomad ACL token. | [optional] 
- **perPage** | **int?**| Maximum number of results to return. | [optional] 
- **nextToken** | **string**| Indicates where to start paging for queries that support pagination. | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **specName** | **string** | The quota spec identifier. |  |
+| **region** | **string?** | Filters results based on the specified region. | [optional]  |
+| **_namespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
+| **index** | **int?** | If set, wait until query exceeds given index. Must be provided with WaitParam. | [optional]  |
+| **wait** | **string?** | Provided with IndexParam to wait for change. | [optional]  |
+| **stale** | **string?** | If present, results will include stale reads. | [optional]  |
+| **prefix** | **string?** | Constrains results to jobs that start with the defined prefix | [optional]  |
+| **xNomadToken** | **string?** | A Nomad ACL token. | [optional]  |
+| **perPage** | **int?** | Maximum number of results to return. | [optional]  |
+| **nextToken** | **string?** | Indicates where to start paging for queries that support pagination. | [optional]  |
 
 ### Return type
 
@@ -276,7 +326,7 @@ Name | Type | Description  | Notes
 
 <a name="getquotas"></a>
 # **GetQuotas**
-> List&lt;Object&gt; GetQuotas (string region = null, string _namespace = null, int? index = null, string wait = null, string stale = null, string prefix = null, string xNomadToken = null, int? perPage = null, string nextToken = null)
+> List&lt;Object&gt; GetQuotas (string? region = null, string? _namespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null)
 
 
 
@@ -302,15 +352,15 @@ namespace Example
             // config.AddApiKeyPrefix("X-Nomad-Token", "Bearer");
 
             var apiInstance = new EnterpriseApi(config);
-            var region = region_example;  // string | Filters results based on the specified region. (optional) 
-            var _namespace = _namespace_example;  // string | Filters results based on the specified namespace. (optional) 
+            var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
+            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
             var index = 56;  // int? | If set, wait until query exceeds given index. Must be provided with WaitParam. (optional) 
-            var wait = wait_example;  // string | Provided with IndexParam to wait for change. (optional) 
-            var stale = stale_example;  // string | If present, results will include stale reads. (optional) 
-            var prefix = prefix_example;  // string | Constrains results to jobs that start with the defined prefix (optional) 
-            var xNomadToken = xNomadToken_example;  // string | A Nomad ACL token. (optional) 
+            var wait = "wait_example";  // string? | Provided with IndexParam to wait for change. (optional) 
+            var stale = "stale_example";  // string? | If present, results will include stale reads. (optional) 
+            var prefix = "prefix_example";  // string? | Constrains results to jobs that start with the defined prefix (optional) 
+            var xNomadToken = "xNomadToken_example";  // string? | A Nomad ACL token. (optional) 
             var perPage = 56;  // int? | Maximum number of results to return. (optional) 
-            var nextToken = nextToken_example;  // string | Indicates where to start paging for queries that support pagination. (optional) 
+            var nextToken = "nextToken_example";  // string? | Indicates where to start paging for queries that support pagination. (optional) 
 
             try
             {
@@ -319,8 +369,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling EnterpriseApi.GetQuotas: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling EnterpriseApi.GetQuotas: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -328,19 +378,38 @@ namespace Example
 }
 ```
 
+#### Using the GetQuotasWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    ApiResponse<List<Object>> response = apiInstance.GetQuotasWithHttpInfo(region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling EnterpriseApi.GetQuotasWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **region** | **string**| Filters results based on the specified region. | [optional] 
- **_namespace** | **string**| Filters results based on the specified namespace. | [optional] 
- **index** | **int?**| If set, wait until query exceeds given index. Must be provided with WaitParam. | [optional] 
- **wait** | **string**| Provided with IndexParam to wait for change. | [optional] 
- **stale** | **string**| If present, results will include stale reads. | [optional] 
- **prefix** | **string**| Constrains results to jobs that start with the defined prefix | [optional] 
- **xNomadToken** | **string**| A Nomad ACL token. | [optional] 
- **perPage** | **int?**| Maximum number of results to return. | [optional] 
- **nextToken** | **string**| Indicates where to start paging for queries that support pagination. | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **region** | **string?** | Filters results based on the specified region. | [optional]  |
+| **_namespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
+| **index** | **int?** | If set, wait until query exceeds given index. Must be provided with WaitParam. | [optional]  |
+| **wait** | **string?** | Provided with IndexParam to wait for change. | [optional]  |
+| **stale** | **string?** | If present, results will include stale reads. | [optional]  |
+| **prefix** | **string?** | Constrains results to jobs that start with the defined prefix | [optional]  |
+| **xNomadToken** | **string?** | A Nomad ACL token. | [optional]  |
+| **perPage** | **int?** | Maximum number of results to return. | [optional]  |
+| **nextToken** | **string?** | Indicates where to start paging for queries that support pagination. | [optional]  |
 
 ### Return type
 
@@ -369,7 +438,7 @@ Name | Type | Description  | Notes
 
 <a name="postquotaspec"></a>
 # **PostQuotaSpec**
-> void PostQuotaSpec (string specName, QuotaSpec quotaSpec, string region = null, string _namespace = null, string xNomadToken = null, string idempotencyToken = null)
+> void PostQuotaSpec (string specName, QuotaSpec quotaSpec, string? region = null, string? _namespace = null, string? xNomadToken = null, string? idempotencyToken = null)
 
 
 
@@ -395,12 +464,12 @@ namespace Example
             // config.AddApiKeyPrefix("X-Nomad-Token", "Bearer");
 
             var apiInstance = new EnterpriseApi(config);
-            var specName = specName_example;  // string | The quota spec identifier.
+            var specName = "specName_example";  // string | The quota spec identifier.
             var quotaSpec = new QuotaSpec(); // QuotaSpec | 
-            var region = region_example;  // string | Filters results based on the specified region. (optional) 
-            var _namespace = _namespace_example;  // string | Filters results based on the specified namespace. (optional) 
-            var xNomadToken = xNomadToken_example;  // string | A Nomad ACL token. (optional) 
-            var idempotencyToken = idempotencyToken_example;  // string | Can be used to ensure operations are only run once. (optional) 
+            var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
+            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var xNomadToken = "xNomadToken_example";  // string? | A Nomad ACL token. (optional) 
+            var idempotencyToken = "idempotencyToken_example";  // string? | Can be used to ensure operations are only run once. (optional) 
 
             try
             {
@@ -408,8 +477,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling EnterpriseApi.PostQuotaSpec: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling EnterpriseApi.PostQuotaSpec: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -417,16 +486,32 @@ namespace Example
 }
 ```
 
+#### Using the PostQuotaSpecWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    apiInstance.PostQuotaSpecWithHttpInfo(specName, quotaSpec, region, _namespace, xNomadToken, idempotencyToken);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling EnterpriseApi.PostQuotaSpecWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **specName** | **string**| The quota spec identifier. | 
- **quotaSpec** | [**QuotaSpec**](QuotaSpec.md)|  | 
- **region** | **string**| Filters results based on the specified region. | [optional] 
- **_namespace** | **string**| Filters results based on the specified namespace. | [optional] 
- **xNomadToken** | **string**| A Nomad ACL token. | [optional] 
- **idempotencyToken** | **string**| Can be used to ensure operations are only run once. | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **specName** | **string** | The quota spec identifier. |  |
+| **quotaSpec** | [**QuotaSpec**](QuotaSpec.md) |  |  |
+| **region** | **string?** | Filters results based on the specified region. | [optional]  |
+| **_namespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
+| **xNomadToken** | **string?** | A Nomad ACL token. | [optional]  |
+| **idempotencyToken** | **string?** | Can be used to ensure operations are only run once. | [optional]  |
 
 ### Return type
 

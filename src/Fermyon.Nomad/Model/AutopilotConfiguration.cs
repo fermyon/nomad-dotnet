@@ -125,7 +125,7 @@ namespace Fermyon.Nomad.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class AutopilotConfiguration {\n");
             sb.Append("  CleanupDeadServers: ").Append(CleanupDeadServers).Append("\n");
             sb.Append("  CreateIndex: ").Append(CreateIndex).Append("\n");
@@ -168,8 +168,9 @@ namespace Fermyon.Nomad.Model
         public bool Equals(AutopilotConfiguration input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.CleanupDeadServers == input.CleanupDeadServers ||
@@ -224,18 +225,22 @@ namespace Fermyon.Nomad.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                hashCode = hashCode * 59 + this.CleanupDeadServers.GetHashCode();
-                hashCode = hashCode * 59 + this.CreateIndex.GetHashCode();
-                hashCode = hashCode * 59 + this.DisableUpgradeMigration.GetHashCode();
-                hashCode = hashCode * 59 + this.EnableCustomUpgrades.GetHashCode();
-                hashCode = hashCode * 59 + this.EnableRedundancyZones.GetHashCode();
+                hashCode = (hashCode * 59) + this.CleanupDeadServers.GetHashCode();
+                hashCode = (hashCode * 59) + this.CreateIndex.GetHashCode();
+                hashCode = (hashCode * 59) + this.DisableUpgradeMigration.GetHashCode();
+                hashCode = (hashCode * 59) + this.EnableCustomUpgrades.GetHashCode();
+                hashCode = (hashCode * 59) + this.EnableRedundancyZones.GetHashCode();
                 if (this.LastContactThreshold != null)
-                    hashCode = hashCode * 59 + this.LastContactThreshold.GetHashCode();
-                hashCode = hashCode * 59 + this.MaxTrailingLogs.GetHashCode();
-                hashCode = hashCode * 59 + this.MinQuorum.GetHashCode();
-                hashCode = hashCode * 59 + this.ModifyIndex.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.LastContactThreshold.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.MaxTrailingLogs.GetHashCode();
+                hashCode = (hashCode * 59) + this.MinQuorum.GetHashCode();
+                hashCode = (hashCode * 59) + this.ModifyIndex.GetHashCode();
                 if (this.ServerStabilizationTime != null)
-                    hashCode = hashCode * 59 + this.ServerStabilizationTime.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.ServerStabilizationTime.GetHashCode();
+                }
                 return hashCode;
             }
         }
@@ -245,46 +250,46 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             // CreateIndex (int) maximum
-            if(this.CreateIndex > (int)384)
+            if (this.CreateIndex > (int)384)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for CreateIndex, must be a value less than or equal to 384.", new [] { "CreateIndex" });
             }
 
             // CreateIndex (int) minimum
-            if(this.CreateIndex < (int)0)
+            if (this.CreateIndex < (int)0)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for CreateIndex, must be a value greater than or equal to 0.", new [] { "CreateIndex" });
             }
 
             // MaxTrailingLogs (int) maximum
-            if(this.MaxTrailingLogs > (int)384)
+            if (this.MaxTrailingLogs > (int)384)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for MaxTrailingLogs, must be a value less than or equal to 384.", new [] { "MaxTrailingLogs" });
             }
 
             // MaxTrailingLogs (int) minimum
-            if(this.MaxTrailingLogs < (int)0)
+            if (this.MaxTrailingLogs < (int)0)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for MaxTrailingLogs, must be a value greater than or equal to 0.", new [] { "MaxTrailingLogs" });
             }
 
             // MinQuorum (int) minimum
-            if(this.MinQuorum < (int)0)
+            if (this.MinQuorum < (int)0)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for MinQuorum, must be a value greater than or equal to 0.", new [] { "MinQuorum" });
             }
 
             // ModifyIndex (int) maximum
-            if(this.ModifyIndex > (int)384)
+            if (this.ModifyIndex > (int)384)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ModifyIndex, must be a value less than or equal to 384.", new [] { "ModifyIndex" });
             }
 
             // ModifyIndex (int) minimum
-            if(this.ModifyIndex < (int)0)
+            if (this.ModifyIndex < (int)0)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ModifyIndex, must be a value greater than or equal to 0.", new [] { "ModifyIndex" });
             }

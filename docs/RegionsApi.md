@@ -2,10 +2,9 @@
 
 All URIs are relative to *https://127.0.0.1:4646/v1*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**GetRegions**](RegionsApi.md#getregions) | **GET** /regions | 
-
+| Method | HTTP request | Description |
+|--------|--------------|-------------|
+| [**GetRegions**](RegionsApi.md#getregions) | **GET** /regions |  |
 
 <a name="getregions"></a>
 # **GetRegions**
@@ -43,8 +42,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling RegionsApi.GetRegions: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling RegionsApi.GetRegions: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -52,9 +51,27 @@ namespace Example
 }
 ```
 
+#### Using the GetRegionsWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    ApiResponse<List<string>> response = apiInstance.GetRegionsWithHttpInfo();
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling RegionsApi.GetRegionsWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 This endpoint does not need any parameter.
-
 ### Return type
 
 **List<string>**

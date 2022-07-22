@@ -61,7 +61,7 @@ namespace Fermyon.Nomad.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class HostVolumeInfo {\n");
             sb.Append("  Path: ").Append(Path).Append("\n");
             sb.Append("  ReadOnly: ").Append(ReadOnly).Append("\n");
@@ -96,8 +96,9 @@ namespace Fermyon.Nomad.Model
         public bool Equals(HostVolumeInfo input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.Path == input.Path ||
@@ -120,8 +121,10 @@ namespace Fermyon.Nomad.Model
             {
                 int hashCode = 41;
                 if (this.Path != null)
-                    hashCode = hashCode * 59 + this.Path.GetHashCode();
-                hashCode = hashCode * 59 + this.ReadOnly.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Path.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.ReadOnly.GetHashCode();
                 return hashCode;
             }
         }
@@ -131,7 +134,7 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             yield break;
         }

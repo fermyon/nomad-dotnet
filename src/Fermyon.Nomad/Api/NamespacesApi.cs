@@ -35,8 +35,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns></returns>
-        void CreateNamespace(string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string));
+        void CreateNamespace(string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -49,8 +50,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> CreateNamespaceWithHttpInfo(string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string));
+        ApiResponse<Object> CreateNamespaceWithHttpInfo(string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -60,8 +62,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns></returns>
-        void DeleteNamespace(string namespaceName, string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string));
+        void DeleteNamespace(string namespaceName, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -75,8 +78,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteNamespaceWithHttpInfo(string namespaceName, string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string));
+        ApiResponse<Object> DeleteNamespaceWithHttpInfo(string namespaceName, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -91,8 +95,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>Namespace</returns>
-        Namespace GetNamespace(string namespaceName, string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string));
+        Namespace GetNamespace(string namespaceName, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -111,8 +116,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Namespace</returns>
-        ApiResponse<Namespace> GetNamespaceWithHttpInfo(string namespaceName, string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string));
+        ApiResponse<Namespace> GetNamespaceWithHttpInfo(string namespaceName, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -126,8 +132,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>List&lt;Namespace&gt;</returns>
-        List<Namespace> GetNamespaces(string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string));
+        List<Namespace> GetNamespaces(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -145,8 +152,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of List&lt;Namespace&gt;</returns>
-        ApiResponse<List<Namespace>> GetNamespacesWithHttpInfo(string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string));
+        ApiResponse<List<Namespace>> GetNamespacesWithHttpInfo(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -157,8 +165,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns></returns>
-        void PostNamespace(string namespaceName, Namespace _namespace2, string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string));
+        void PostNamespace(string namespaceName, Namespace _namespace2, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -173,8 +182,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostNamespaceWithHttpInfo(string namespaceName, Namespace _namespace2, string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string));
+        ApiResponse<Object> PostNamespaceWithHttpInfo(string namespaceName, Namespace _namespace2, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -195,9 +205,10 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task CreateNamespaceAsync(string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task CreateNamespaceAsync(string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -210,9 +221,10 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> CreateNamespaceWithHttpInfoAsync(string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> CreateNamespaceWithHttpInfoAsync(string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -225,9 +237,10 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeleteNamespaceAsync(string namespaceName, string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task DeleteNamespaceAsync(string namespaceName, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -241,9 +254,10 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteNamespaceWithHttpInfoAsync(string namespaceName, string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteNamespaceWithHttpInfoAsync(string namespaceName, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -261,9 +275,10 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Namespace</returns>
-        System.Threading.Tasks.Task<Namespace> GetNamespaceAsync(string namespaceName, string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<Namespace> GetNamespaceAsync(string namespaceName, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -282,9 +297,10 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Namespace)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Namespace>> GetNamespaceWithHttpInfoAsync(string namespaceName, string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Namespace>> GetNamespaceWithHttpInfoAsync(string namespaceName, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -301,9 +317,10 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;Namespace&gt;</returns>
-        System.Threading.Tasks.Task<List<Namespace>> GetNamespacesAsync(string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<List<Namespace>> GetNamespacesAsync(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -321,9 +338,10 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;Namespace&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<Namespace>>> GetNamespacesWithHttpInfoAsync(string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<List<Namespace>>> GetNamespacesWithHttpInfoAsync(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -337,9 +355,10 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task PostNamespaceAsync(string namespaceName, Namespace _namespace2, string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task PostNamespaceAsync(string namespaceName, Namespace _namespace2, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -354,9 +373,10 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> PostNamespaceWithHttpInfoAsync(string namespaceName, Namespace _namespace2, string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostNamespaceWithHttpInfoAsync(string namespaceName, Namespace _namespace2, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -485,8 +505,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns></returns>
-        public void CreateNamespace(string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string))
+        public void CreateNamespace(string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0)
         {
             CreateNamespaceWithHttpInfo(region, _namespace, xNomadToken, idempotencyToken);
         }
@@ -499,8 +520,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Fermyon.Nomad.Client.ApiResponse<Object> CreateNamespaceWithHttpInfo(string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string))
+        public Fermyon.Nomad.Client.ApiResponse<Object> CreateNamespaceWithHttpInfo(string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0)
         {
             Fermyon.Nomad.Client.RequestOptions localVarRequestOptions = new Fermyon.Nomad.Client.RequestOptions();
 
@@ -512,10 +534,16 @@ namespace Fermyon.Nomad.Api
             };
 
             var localVarContentType = Fermyon.Nomad.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = Fermyon.Nomad.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             if (region != null)
             {
@@ -534,6 +562,9 @@ namespace Fermyon.Nomad.Api
                 localVarRequestOptions.HeaderParameters.Add("X-Nomad-Token", Fermyon.Nomad.Client.ClientUtils.ParameterToString(xNomadToken)); // header parameter
             }
 
+            localVarRequestOptions.Operation = "NamespacesApi.CreateNamespace";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
             // authentication (X-Nomad-Token) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("X-Nomad-Token")))
             {
@@ -542,11 +573,13 @@ namespace Fermyon.Nomad.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<Object>("/namespace", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("CreateNamespace", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -560,11 +593,12 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task CreateNamespaceAsync(string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task CreateNamespaceAsync(string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            await CreateNamespaceWithHttpInfoAsync(region, _namespace, xNomadToken, idempotencyToken, cancellationToken).ConfigureAwait(false);
+            await CreateNamespaceWithHttpInfoAsync(region, _namespace, xNomadToken, idempotencyToken, operationIndex, cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -575,9 +609,10 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<Object>> CreateNamespaceWithHttpInfoAsync(string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<Object>> CreateNamespaceWithHttpInfoAsync(string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             Fermyon.Nomad.Client.RequestOptions localVarRequestOptions = new Fermyon.Nomad.Client.RequestOptions();
@@ -589,12 +624,17 @@ namespace Fermyon.Nomad.Api
             string[] _accepts = new string[] {
             };
 
-
             var localVarContentType = Fermyon.Nomad.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = Fermyon.Nomad.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             if (region != null)
             {
@@ -613,6 +653,9 @@ namespace Fermyon.Nomad.Api
                 localVarRequestOptions.HeaderParameters.Add("X-Nomad-Token", Fermyon.Nomad.Client.ClientUtils.ParameterToString(xNomadToken)); // header parameter
             }
 
+            localVarRequestOptions.Operation = "NamespacesApi.CreateNamespace";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
             // authentication (X-Nomad-Token) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("X-Nomad-Token")))
             {
@@ -620,13 +663,15 @@ namespace Fermyon.Nomad.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/namespace", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("CreateNamespace", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -641,8 +686,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns></returns>
-        public void DeleteNamespace(string namespaceName, string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string))
+        public void DeleteNamespace(string namespaceName, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0)
         {
             DeleteNamespaceWithHttpInfo(namespaceName, region, _namespace, xNomadToken, idempotencyToken);
         }
@@ -656,12 +702,15 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Fermyon.Nomad.Client.ApiResponse<Object> DeleteNamespaceWithHttpInfo(string namespaceName, string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string))
+        public Fermyon.Nomad.Client.ApiResponse<Object> DeleteNamespaceWithHttpInfo(string namespaceName, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'namespaceName' is set
             if (namespaceName == null)
+            {
                 throw new Fermyon.Nomad.Client.ApiException(400, "Missing required parameter 'namespaceName' when calling NamespacesApi->DeleteNamespace");
+            }
 
             Fermyon.Nomad.Client.RequestOptions localVarRequestOptions = new Fermyon.Nomad.Client.RequestOptions();
 
@@ -673,10 +722,16 @@ namespace Fermyon.Nomad.Api
             };
 
             var localVarContentType = Fermyon.Nomad.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = Fermyon.Nomad.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("namespaceName", Fermyon.Nomad.Client.ClientUtils.ParameterToString(namespaceName)); // path parameter
             if (region != null)
@@ -696,6 +751,9 @@ namespace Fermyon.Nomad.Api
                 localVarRequestOptions.HeaderParameters.Add("X-Nomad-Token", Fermyon.Nomad.Client.ClientUtils.ParameterToString(xNomadToken)); // header parameter
             }
 
+            localVarRequestOptions.Operation = "NamespacesApi.DeleteNamespace";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
             // authentication (X-Nomad-Token) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("X-Nomad-Token")))
             {
@@ -704,11 +762,13 @@ namespace Fermyon.Nomad.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Delete<Object>("/namespace/{namespaceName}", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("DeleteNamespace", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -723,11 +783,12 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteNamespaceAsync(string namespaceName, string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task DeleteNamespaceAsync(string namespaceName, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            await DeleteNamespaceWithHttpInfoAsync(namespaceName, region, _namespace, xNomadToken, idempotencyToken, cancellationToken).ConfigureAwait(false);
+            await DeleteNamespaceWithHttpInfoAsync(namespaceName, region, _namespace, xNomadToken, idempotencyToken, operationIndex, cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -739,13 +800,16 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<Object>> DeleteNamespaceWithHttpInfoAsync(string namespaceName, string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<Object>> DeleteNamespaceWithHttpInfoAsync(string namespaceName, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'namespaceName' is set
             if (namespaceName == null)
+            {
                 throw new Fermyon.Nomad.Client.ApiException(400, "Missing required parameter 'namespaceName' when calling NamespacesApi->DeleteNamespace");
+            }
 
 
             Fermyon.Nomad.Client.RequestOptions localVarRequestOptions = new Fermyon.Nomad.Client.RequestOptions();
@@ -757,12 +821,17 @@ namespace Fermyon.Nomad.Api
             string[] _accepts = new string[] {
             };
 
-
             var localVarContentType = Fermyon.Nomad.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = Fermyon.Nomad.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("namespaceName", Fermyon.Nomad.Client.ClientUtils.ParameterToString(namespaceName)); // path parameter
             if (region != null)
@@ -782,6 +851,9 @@ namespace Fermyon.Nomad.Api
                 localVarRequestOptions.HeaderParameters.Add("X-Nomad-Token", Fermyon.Nomad.Client.ClientUtils.ParameterToString(xNomadToken)); // header parameter
             }
 
+            localVarRequestOptions.Operation = "NamespacesApi.DeleteNamespace";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
             // authentication (X-Nomad-Token) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("X-Nomad-Token")))
             {
@@ -789,13 +861,15 @@ namespace Fermyon.Nomad.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/namespace/{namespaceName}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("DeleteNamespace", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -815,8 +889,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>Namespace</returns>
-        public Namespace GetNamespace(string namespaceName, string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string))
+        public Namespace GetNamespace(string namespaceName, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0)
         {
             Fermyon.Nomad.Client.ApiResponse<Namespace> localVarResponse = GetNamespaceWithHttpInfo(namespaceName, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
             return localVarResponse.Data;
@@ -836,12 +911,15 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Namespace</returns>
-        public Fermyon.Nomad.Client.ApiResponse<Namespace> GetNamespaceWithHttpInfo(string namespaceName, string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string))
+        public Fermyon.Nomad.Client.ApiResponse<Namespace> GetNamespaceWithHttpInfo(string namespaceName, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'namespaceName' is set
             if (namespaceName == null)
+            {
                 throw new Fermyon.Nomad.Client.ApiException(400, "Missing required parameter 'namespaceName' when calling NamespacesApi->GetNamespace");
+            }
 
             Fermyon.Nomad.Client.RequestOptions localVarRequestOptions = new Fermyon.Nomad.Client.RequestOptions();
 
@@ -854,10 +932,16 @@ namespace Fermyon.Nomad.Api
             };
 
             var localVarContentType = Fermyon.Nomad.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = Fermyon.Nomad.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("namespaceName", Fermyon.Nomad.Client.ClientUtils.ParameterToString(namespaceName)); // path parameter
             if (region != null)
@@ -897,6 +981,9 @@ namespace Fermyon.Nomad.Api
                 localVarRequestOptions.HeaderParameters.Add("X-Nomad-Token", Fermyon.Nomad.Client.ClientUtils.ParameterToString(xNomadToken)); // header parameter
             }
 
+            localVarRequestOptions.Operation = "NamespacesApi.GetNamespace";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
             // authentication (X-Nomad-Token) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("X-Nomad-Token")))
             {
@@ -905,11 +992,13 @@ namespace Fermyon.Nomad.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<Namespace>("/namespace/{namespaceName}", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("GetNamespace", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -929,11 +1018,12 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Namespace</returns>
-        public async System.Threading.Tasks.Task<Namespace> GetNamespaceAsync(string namespaceName, string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Namespace> GetNamespaceAsync(string namespaceName, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Fermyon.Nomad.Client.ApiResponse<Namespace> localVarResponse = await GetNamespaceWithHttpInfoAsync(namespaceName, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, cancellationToken).ConfigureAwait(false);
+            Fermyon.Nomad.Client.ApiResponse<Namespace> localVarResponse = await GetNamespaceWithHttpInfoAsync(namespaceName, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -951,13 +1041,16 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Namespace)</returns>
-        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<Namespace>> GetNamespaceWithHttpInfoAsync(string namespaceName, string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<Namespace>> GetNamespaceWithHttpInfoAsync(string namespaceName, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'namespaceName' is set
             if (namespaceName == null)
+            {
                 throw new Fermyon.Nomad.Client.ApiException(400, "Missing required parameter 'namespaceName' when calling NamespacesApi->GetNamespace");
+            }
 
 
             Fermyon.Nomad.Client.RequestOptions localVarRequestOptions = new Fermyon.Nomad.Client.RequestOptions();
@@ -970,12 +1063,17 @@ namespace Fermyon.Nomad.Api
                 "application/json"
             };
 
-
             var localVarContentType = Fermyon.Nomad.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = Fermyon.Nomad.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("namespaceName", Fermyon.Nomad.Client.ClientUtils.ParameterToString(namespaceName)); // path parameter
             if (region != null)
@@ -1015,6 +1113,9 @@ namespace Fermyon.Nomad.Api
                 localVarRequestOptions.HeaderParameters.Add("X-Nomad-Token", Fermyon.Nomad.Client.ClientUtils.ParameterToString(xNomadToken)); // header parameter
             }
 
+            localVarRequestOptions.Operation = "NamespacesApi.GetNamespace";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
             // authentication (X-Nomad-Token) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("X-Nomad-Token")))
             {
@@ -1022,13 +1123,15 @@ namespace Fermyon.Nomad.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.GetAsync<Namespace>("/namespace/{namespaceName}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("GetNamespace", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -1047,8 +1150,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>List&lt;Namespace&gt;</returns>
-        public List<Namespace> GetNamespaces(string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string))
+        public List<Namespace> GetNamespaces(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0)
         {
             Fermyon.Nomad.Client.ApiResponse<List<Namespace>> localVarResponse = GetNamespacesWithHttpInfo(region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
             return localVarResponse.Data;
@@ -1067,8 +1171,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of List&lt;Namespace&gt;</returns>
-        public Fermyon.Nomad.Client.ApiResponse<List<Namespace>> GetNamespacesWithHttpInfo(string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string))
+        public Fermyon.Nomad.Client.ApiResponse<List<Namespace>> GetNamespacesWithHttpInfo(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0)
         {
             Fermyon.Nomad.Client.RequestOptions localVarRequestOptions = new Fermyon.Nomad.Client.RequestOptions();
 
@@ -1081,10 +1186,16 @@ namespace Fermyon.Nomad.Api
             };
 
             var localVarContentType = Fermyon.Nomad.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = Fermyon.Nomad.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             if (region != null)
             {
@@ -1123,6 +1234,9 @@ namespace Fermyon.Nomad.Api
                 localVarRequestOptions.HeaderParameters.Add("X-Nomad-Token", Fermyon.Nomad.Client.ClientUtils.ParameterToString(xNomadToken)); // header parameter
             }
 
+            localVarRequestOptions.Operation = "NamespacesApi.GetNamespaces";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
             // authentication (X-Nomad-Token) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("X-Nomad-Token")))
             {
@@ -1131,11 +1245,13 @@ namespace Fermyon.Nomad.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<List<Namespace>>("/namespaces", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("GetNamespaces", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -1154,11 +1270,12 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;Namespace&gt;</returns>
-        public async System.Threading.Tasks.Task<List<Namespace>> GetNamespacesAsync(string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<List<Namespace>> GetNamespacesAsync(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Fermyon.Nomad.Client.ApiResponse<List<Namespace>> localVarResponse = await GetNamespacesWithHttpInfoAsync(region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, cancellationToken).ConfigureAwait(false);
+            Fermyon.Nomad.Client.ApiResponse<List<Namespace>> localVarResponse = await GetNamespacesWithHttpInfoAsync(region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1175,9 +1292,10 @@ namespace Fermyon.Nomad.Api
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="perPage">Maximum number of results to return. (optional)</param>
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;Namespace&gt;)</returns>
-        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<List<Namespace>>> GetNamespacesWithHttpInfoAsync(string region = default(string), string _namespace = default(string), int? index = default(int?), string wait = default(string), string stale = default(string), string prefix = default(string), string xNomadToken = default(string), int? perPage = default(int?), string nextToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<List<Namespace>>> GetNamespacesWithHttpInfoAsync(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             Fermyon.Nomad.Client.RequestOptions localVarRequestOptions = new Fermyon.Nomad.Client.RequestOptions();
@@ -1190,12 +1308,17 @@ namespace Fermyon.Nomad.Api
                 "application/json"
             };
 
-
             var localVarContentType = Fermyon.Nomad.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = Fermyon.Nomad.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             if (region != null)
             {
@@ -1234,6 +1357,9 @@ namespace Fermyon.Nomad.Api
                 localVarRequestOptions.HeaderParameters.Add("X-Nomad-Token", Fermyon.Nomad.Client.ClientUtils.ParameterToString(xNomadToken)); // header parameter
             }
 
+            localVarRequestOptions.Operation = "NamespacesApi.GetNamespaces";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
             // authentication (X-Nomad-Token) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("X-Nomad-Token")))
             {
@@ -1241,13 +1367,15 @@ namespace Fermyon.Nomad.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.GetAsync<List<Namespace>>("/namespaces", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("GetNamespaces", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -1263,8 +1391,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns></returns>
-        public void PostNamespace(string namespaceName, Namespace _namespace2, string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string))
+        public void PostNamespace(string namespaceName, Namespace _namespace2, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0)
         {
             PostNamespaceWithHttpInfo(namespaceName, _namespace2, region, _namespace, xNomadToken, idempotencyToken);
         }
@@ -1279,16 +1408,21 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Fermyon.Nomad.Client.ApiResponse<Object> PostNamespaceWithHttpInfo(string namespaceName, Namespace _namespace2, string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string))
+        public Fermyon.Nomad.Client.ApiResponse<Object> PostNamespaceWithHttpInfo(string namespaceName, Namespace _namespace2, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'namespaceName' is set
             if (namespaceName == null)
+            {
                 throw new Fermyon.Nomad.Client.ApiException(400, "Missing required parameter 'namespaceName' when calling NamespacesApi->PostNamespace");
+            }
 
             // verify the required parameter '_namespace2' is set
             if (_namespace2 == null)
+            {
                 throw new Fermyon.Nomad.Client.ApiException(400, "Missing required parameter '_namespace2' when calling NamespacesApi->PostNamespace");
+            }
 
             Fermyon.Nomad.Client.RequestOptions localVarRequestOptions = new Fermyon.Nomad.Client.RequestOptions();
 
@@ -1301,10 +1435,16 @@ namespace Fermyon.Nomad.Api
             };
 
             var localVarContentType = Fermyon.Nomad.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = Fermyon.Nomad.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("namespaceName", Fermyon.Nomad.Client.ClientUtils.ParameterToString(namespaceName)); // path parameter
             if (region != null)
@@ -1325,6 +1465,9 @@ namespace Fermyon.Nomad.Api
             }
             localVarRequestOptions.Data = _namespace2;
 
+            localVarRequestOptions.Operation = "NamespacesApi.PostNamespace";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
             // authentication (X-Nomad-Token) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("X-Nomad-Token")))
             {
@@ -1333,11 +1476,13 @@ namespace Fermyon.Nomad.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<Object>("/namespace/{namespaceName}", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PostNamespace", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -1353,11 +1498,12 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task PostNamespaceAsync(string namespaceName, Namespace _namespace2, string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task PostNamespaceAsync(string namespaceName, Namespace _namespace2, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            await PostNamespaceWithHttpInfoAsync(namespaceName, _namespace2, region, _namespace, xNomadToken, idempotencyToken, cancellationToken).ConfigureAwait(false);
+            await PostNamespaceWithHttpInfoAsync(namespaceName, _namespace2, region, _namespace, xNomadToken, idempotencyToken, operationIndex, cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -1370,17 +1516,22 @@ namespace Fermyon.Nomad.Api
         /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<Object>> PostNamespaceWithHttpInfoAsync(string namespaceName, Namespace _namespace2, string region = default(string), string _namespace = default(string), string xNomadToken = default(string), string idempotencyToken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<Object>> PostNamespaceWithHttpInfoAsync(string namespaceName, Namespace _namespace2, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'namespaceName' is set
             if (namespaceName == null)
+            {
                 throw new Fermyon.Nomad.Client.ApiException(400, "Missing required parameter 'namespaceName' when calling NamespacesApi->PostNamespace");
+            }
 
             // verify the required parameter '_namespace2' is set
             if (_namespace2 == null)
+            {
                 throw new Fermyon.Nomad.Client.ApiException(400, "Missing required parameter '_namespace2' when calling NamespacesApi->PostNamespace");
+            }
 
 
             Fermyon.Nomad.Client.RequestOptions localVarRequestOptions = new Fermyon.Nomad.Client.RequestOptions();
@@ -1393,12 +1544,17 @@ namespace Fermyon.Nomad.Api
             string[] _accepts = new string[] {
             };
 
-
             var localVarContentType = Fermyon.Nomad.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = Fermyon.Nomad.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("namespaceName", Fermyon.Nomad.Client.ClientUtils.ParameterToString(namespaceName)); // path parameter
             if (region != null)
@@ -1419,6 +1575,9 @@ namespace Fermyon.Nomad.Api
             }
             localVarRequestOptions.Data = _namespace2;
 
+            localVarRequestOptions.Operation = "NamespacesApi.PostNamespace";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
             // authentication (X-Nomad-Token) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("X-Nomad-Token")))
             {
@@ -1426,13 +1585,15 @@ namespace Fermyon.Nomad.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/namespace/{namespaceName}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PostNamespace", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;

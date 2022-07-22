@@ -6,10 +6,10 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Events** | [**List&lt;TaskEvent&gt;**](TaskEvent.md) |  | [optional] 
 **Failed** | **bool** |  | [optional] 
-**FinishedAt** | **DateTime** |  | [optional] 
-**LastRestart** | **DateTime** |  | [optional] 
+**FinishedAt** | **DateTime?** |  | [optional] 
+**LastRestart** | **DateTime?** |  | [optional] 
 **Restarts** | **int** |  | [optional] 
-**StartedAt** | **DateTime** |  | [optional] 
+**StartedAt** | **DateTime?** |  | [optional] 
 **State** | **string** |  | [optional] 
 **TaskHandle** | [**TaskHandle**](TaskHandle.md) |  | [optional] 
 

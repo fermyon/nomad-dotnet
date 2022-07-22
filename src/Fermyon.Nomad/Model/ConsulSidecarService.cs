@@ -77,7 +77,7 @@ namespace Fermyon.Nomad.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class ConsulSidecarService {\n");
             sb.Append("  DisableDefaultTCPCheck: ").Append(DisableDefaultTCPCheck).Append("\n");
             sb.Append("  Port: ").Append(Port).Append("\n");
@@ -114,8 +114,9 @@ namespace Fermyon.Nomad.Model
         public bool Equals(ConsulSidecarService input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.DisableDefaultTCPCheck == input.DisableDefaultTCPCheck ||
@@ -148,13 +149,19 @@ namespace Fermyon.Nomad.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                hashCode = hashCode * 59 + this.DisableDefaultTCPCheck.GetHashCode();
+                hashCode = (hashCode * 59) + this.DisableDefaultTCPCheck.GetHashCode();
                 if (this.Port != null)
-                    hashCode = hashCode * 59 + this.Port.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Port.GetHashCode();
+                }
                 if (this.Proxy != null)
-                    hashCode = hashCode * 59 + this.Proxy.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Proxy.GetHashCode();
+                }
                 if (this.Tags != null)
-                    hashCode = hashCode * 59 + this.Tags.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Tags.GetHashCode();
+                }
                 return hashCode;
             }
         }
@@ -164,7 +171,7 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             yield break;
         }
