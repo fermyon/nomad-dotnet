@@ -69,7 +69,7 @@ namespace Fermyon.Nomad.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class AllocatedSharedResources {\n");
             sb.Append("  DiskMB: ").Append(DiskMB).Append("\n");
             sb.Append("  Networks: ").Append(Networks).Append("\n");
@@ -105,8 +105,9 @@ namespace Fermyon.Nomad.Model
         public bool Equals(AllocatedSharedResources input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.DiskMB == input.DiskMB ||
@@ -135,11 +136,15 @@ namespace Fermyon.Nomad.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                hashCode = hashCode * 59 + this.DiskMB.GetHashCode();
+                hashCode = (hashCode * 59) + this.DiskMB.GetHashCode();
                 if (this.Networks != null)
-                    hashCode = hashCode * 59 + this.Networks.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Networks.GetHashCode();
+                }
                 if (this.Ports != null)
-                    hashCode = hashCode * 59 + this.Ports.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Ports.GetHashCode();
+                }
                 return hashCode;
             }
         }
@@ -149,7 +154,7 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             yield break;
         }

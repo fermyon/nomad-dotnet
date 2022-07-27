@@ -69,7 +69,7 @@ namespace Fermyon.Nomad.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class NodeCpuResources {\n");
             sb.Append("  CpuShares: ").Append(CpuShares).Append("\n");
             sb.Append("  ReservableCpuCores: ").Append(ReservableCpuCores).Append("\n");
@@ -105,8 +105,9 @@ namespace Fermyon.Nomad.Model
         public bool Equals(NodeCpuResources input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.CpuShares == input.CpuShares ||
@@ -133,10 +134,12 @@ namespace Fermyon.Nomad.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                hashCode = hashCode * 59 + this.CpuShares.GetHashCode();
+                hashCode = (hashCode * 59) + this.CpuShares.GetHashCode();
                 if (this.ReservableCpuCores != null)
-                    hashCode = hashCode * 59 + this.ReservableCpuCores.GetHashCode();
-                hashCode = hashCode * 59 + this.TotalCpuCores.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.ReservableCpuCores.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.TotalCpuCores.GetHashCode();
                 return hashCode;
             }
         }
@@ -146,16 +149,16 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             // TotalCpuCores (int) maximum
-            if(this.TotalCpuCores > (int)65535)
+            if (this.TotalCpuCores > (int)65535)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for TotalCpuCores, must be a value less than or equal to 65535.", new [] { "TotalCpuCores" });
             }
 
             // TotalCpuCores (int) minimum
-            if(this.TotalCpuCores < (int)0)
+            if (this.TotalCpuCores < (int)0)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for TotalCpuCores, must be a value greater than or equal to 0.", new [] { "TotalCpuCores" });
             }

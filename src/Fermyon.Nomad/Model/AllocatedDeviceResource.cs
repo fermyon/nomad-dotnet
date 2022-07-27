@@ -77,7 +77,7 @@ namespace Fermyon.Nomad.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class AllocatedDeviceResource {\n");
             sb.Append("  DeviceIDs: ").Append(DeviceIDs).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
@@ -114,8 +114,9 @@ namespace Fermyon.Nomad.Model
         public bool Equals(AllocatedDeviceResource input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.DeviceIDs == input.DeviceIDs ||
@@ -150,13 +151,21 @@ namespace Fermyon.Nomad.Model
             {
                 int hashCode = 41;
                 if (this.DeviceIDs != null)
-                    hashCode = hashCode * 59 + this.DeviceIDs.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.DeviceIDs.GetHashCode();
+                }
                 if (this.Name != null)
-                    hashCode = hashCode * 59 + this.Name.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Name.GetHashCode();
+                }
                 if (this.Type != null)
-                    hashCode = hashCode * 59 + this.Type.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Type.GetHashCode();
+                }
                 if (this.Vendor != null)
-                    hashCode = hashCode * 59 + this.Vendor.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Vendor.GetHashCode();
+                }
                 return hashCode;
             }
         }
@@ -166,7 +175,7 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             yield break;
         }

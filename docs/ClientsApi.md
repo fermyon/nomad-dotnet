@@ -2,14 +2,13 @@
 
 All URIs are relative to *https://127.0.0.1:4646/v1*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**GetAllocationLogs**](ClientsApi.md#getallocationlogs) | **GET** /client/fs/logs/{allocID} | 
-
+| Method | HTTP request | Description |
+|--------|--------------|-------------|
+| [**GetAllocationLogs**](ClientsApi.md#getallocationlogs) | **GET** /client/fs/logs/{allocID} |  |
 
 <a name="getallocationlogs"></a>
 # **GetAllocationLogs**
-> AllocationLogs GetAllocationLogs (string task, string type, string allocID, bool? follow = null, int? offset = null, string origin = null, bool? plain = null)
+> AllocationLogs GetAllocationLogs (string task, string type, string allocID, bool? follow = null, int? offset = null, string? origin = null, bool? plain = null)
 
 
 
@@ -35,12 +34,12 @@ namespace Example
             // config.AddApiKeyPrefix("X-Nomad-Token", "Bearer");
 
             var apiInstance = new ClientsApi(config);
-            var task = task_example;  // string | Specifies the allocation ID to query. This is specified as part of the URL. Note, this must be the full allocation ID, not the short 8-character one. This is specified as part of the path.
-            var type = type_example;  // string | Specifies the stream to stream.
-            var allocID = allocID_example;  // string | Allocation ID.
+            var task = "task_example";  // string | Specifies the allocation ID to query. This is specified as part of the URL. Note, this must be the full allocation ID, not the short 8-character one. This is specified as part of the path.
+            var type = "type_example";  // string | Specifies the stream to stream.
+            var allocID = "allocID_example";  // string | Allocation ID.
             var follow = true;  // bool? | Specifies whether to tail the logs. (optional) 
             var offset = 56;  // int? | Specifies the offset to start streaming from. (optional) 
-            var origin = origin_example;  // string | Specifies either \"start\" or \"end\" and applies the offset relative to either the start or end of the logs respectively. Defaults to \"start\" (optional) 
+            var origin = "origin_example";  // string? | Specifies either \"start\" or \"end\" and applies the offset relative to either the start or end of the logs respectively. Defaults to \"start\" (optional) 
             var plain = true;  // bool? | Return just the plain text without framing. This can be useful when viewing logs in a browser (optional) 
 
             try
@@ -50,8 +49,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling ClientsApi.GetAllocationLogs: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling ClientsApi.GetAllocationLogs: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -59,17 +58,36 @@ namespace Example
 }
 ```
 
+#### Using the GetAllocationLogsWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    ApiResponse<AllocationLogs> response = apiInstance.GetAllocationLogsWithHttpInfo(task, type, allocID, follow, offset, origin, plain);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling ClientsApi.GetAllocationLogsWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **task** | **string**| Specifies the allocation ID to query. This is specified as part of the URL. Note, this must be the full allocation ID, not the short 8-character one. This is specified as part of the path. | 
- **type** | **string**| Specifies the stream to stream. | 
- **allocID** | **string**| Allocation ID. | 
- **follow** | **bool?**| Specifies whether to tail the logs. | [optional] 
- **offset** | **int?**| Specifies the offset to start streaming from. | [optional] 
- **origin** | **string**| Specifies either \&quot;start\&quot; or \&quot;end\&quot; and applies the offset relative to either the start or end of the logs respectively. Defaults to \&quot;start\&quot; | [optional] 
- **plain** | **bool?**| Return just the plain text without framing. This can be useful when viewing logs in a browser | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **task** | **string** | Specifies the allocation ID to query. This is specified as part of the URL. Note, this must be the full allocation ID, not the short 8-character one. This is specified as part of the path. |  |
+| **type** | **string** | Specifies the stream to stream. |  |
+| **allocID** | **string** | Allocation ID. |  |
+| **follow** | **bool?** | Specifies whether to tail the logs. | [optional]  |
+| **offset** | **int?** | Specifies the offset to start streaming from. | [optional]  |
+| **origin** | **string?** | Specifies either \&quot;start\&quot; or \&quot;end\&quot; and applies the offset relative to either the start or end of the logs respectively. Defaults to \&quot;start\&quot; | [optional]  |
+| **plain** | **bool?** | Return just the plain text without framing. This can be useful when viewing logs in a browser | [optional]  |
 
 ### Return type
 

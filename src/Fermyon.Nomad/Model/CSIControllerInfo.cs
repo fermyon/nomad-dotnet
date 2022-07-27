@@ -141,7 +141,7 @@ namespace Fermyon.Nomad.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class CSIControllerInfo {\n");
             sb.Append("  SupportsAttachDetach: ").Append(SupportsAttachDetach).Append("\n");
             sb.Append("  SupportsClone: ").Append(SupportsClone).Append("\n");
@@ -186,8 +186,9 @@ namespace Fermyon.Nomad.Model
         public bool Equals(CSIControllerInfo input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.SupportsAttachDetach == input.SupportsAttachDetach ||
@@ -248,18 +249,18 @@ namespace Fermyon.Nomad.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                hashCode = hashCode * 59 + this.SupportsAttachDetach.GetHashCode();
-                hashCode = hashCode * 59 + this.SupportsClone.GetHashCode();
-                hashCode = hashCode * 59 + this.SupportsCondition.GetHashCode();
-                hashCode = hashCode * 59 + this.SupportsCreateDelete.GetHashCode();
-                hashCode = hashCode * 59 + this.SupportsCreateDeleteSnapshot.GetHashCode();
-                hashCode = hashCode * 59 + this.SupportsExpand.GetHashCode();
-                hashCode = hashCode * 59 + this.SupportsGet.GetHashCode();
-                hashCode = hashCode * 59 + this.SupportsGetCapacity.GetHashCode();
-                hashCode = hashCode * 59 + this.SupportsListSnapshots.GetHashCode();
-                hashCode = hashCode * 59 + this.SupportsListVolumes.GetHashCode();
-                hashCode = hashCode * 59 + this.SupportsListVolumesAttachedNodes.GetHashCode();
-                hashCode = hashCode * 59 + this.SupportsReadOnlyAttach.GetHashCode();
+                hashCode = (hashCode * 59) + this.SupportsAttachDetach.GetHashCode();
+                hashCode = (hashCode * 59) + this.SupportsClone.GetHashCode();
+                hashCode = (hashCode * 59) + this.SupportsCondition.GetHashCode();
+                hashCode = (hashCode * 59) + this.SupportsCreateDelete.GetHashCode();
+                hashCode = (hashCode * 59) + this.SupportsCreateDeleteSnapshot.GetHashCode();
+                hashCode = (hashCode * 59) + this.SupportsExpand.GetHashCode();
+                hashCode = (hashCode * 59) + this.SupportsGet.GetHashCode();
+                hashCode = (hashCode * 59) + this.SupportsGetCapacity.GetHashCode();
+                hashCode = (hashCode * 59) + this.SupportsListSnapshots.GetHashCode();
+                hashCode = (hashCode * 59) + this.SupportsListVolumes.GetHashCode();
+                hashCode = (hashCode * 59) + this.SupportsListVolumesAttachedNodes.GetHashCode();
+                hashCode = (hashCode * 59) + this.SupportsReadOnlyAttach.GetHashCode();
                 return hashCode;
             }
         }
@@ -269,7 +270,7 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             yield break;
         }

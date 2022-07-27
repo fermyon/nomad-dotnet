@@ -77,7 +77,7 @@ namespace Fermyon.Nomad.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class Affinity {\n");
             sb.Append("  LTarget: ").Append(LTarget).Append("\n");
             sb.Append("  Operand: ").Append(Operand).Append("\n");
@@ -114,8 +114,9 @@ namespace Fermyon.Nomad.Model
         public bool Equals(Affinity input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.LTarget == input.LTarget ||
@@ -148,12 +149,18 @@ namespace Fermyon.Nomad.Model
             {
                 int hashCode = 41;
                 if (this.LTarget != null)
-                    hashCode = hashCode * 59 + this.LTarget.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.LTarget.GetHashCode();
+                }
                 if (this.Operand != null)
-                    hashCode = hashCode * 59 + this.Operand.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Operand.GetHashCode();
+                }
                 if (this.RTarget != null)
-                    hashCode = hashCode * 59 + this.RTarget.GetHashCode();
-                hashCode = hashCode * 59 + this.Weight.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.RTarget.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.Weight.GetHashCode();
                 return hashCode;
             }
         }
@@ -163,16 +170,16 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             // Weight (int) maximum
-            if(this.Weight > (int)127)
+            if (this.Weight > (int)127)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Weight, must be a value less than or equal to 127.", new [] { "Weight" });
             }
 
             // Weight (int) minimum
-            if(this.Weight < (int)-128)
+            if (this.Weight < (int)-128)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Weight, must be a value greater than or equal to -128.", new [] { "Weight" });
             }

@@ -48,7 +48,7 @@ namespace Fermyon.Nomad.Client
         /// <summary>
         /// Gets the date time format.
         /// </summary>
-        /// <value>Date time foramt.</value>
+        /// <value>Date time format.</value>
         string DateTimeFormat { get; }
 
         /// <summary>
@@ -101,6 +101,12 @@ namespace Fermyon.Nomad.Client
         string Password { get; }
 
         /// <summary>
+        /// Get the servers associated with the operation.
+        /// </summary>
+        /// <value>Operation servers.</value>
+        IReadOnlyDictionary<string, List<IReadOnlyDictionary<string, object>>> OperationServers { get; }
+
+        /// <summary>
         /// Gets the API key with prefix.
         /// </summary>
         /// <param name="apiKeyIdentifier">API key identifier (authentication scheme).</param>
@@ -108,9 +114,23 @@ namespace Fermyon.Nomad.Client
         string GetApiKeyWithPrefix(string apiKeyIdentifier);
 
         /// <summary>
+        /// Gets the Operation server url at the provided index.
+        /// </summary>
+        /// <param name="operation">Operation server name.</param>
+        /// <param name="index">Index of the operation server settings.</param>
+        /// <returns></returns>
+        string GetOperationServerUrl(string operation, int index);
+
+        /// <summary>
         /// Gets certificate collection to be sent with requests.
         /// </summary>
         /// <value>X509 Certificate collection.</value>
-        X509CertificateCollection ClientCertificates { get; }
+        X509Certificate2Collection ClientCertificates { get; }
+
+        /// <summary>
+        /// Gets certificate authority collection to validate requests.
+        /// </summary>
+        /// <value>X509 Certificate collection.</value>
+        X509Certificate2Collection CertificateAuthorities { get; }
     }
 }

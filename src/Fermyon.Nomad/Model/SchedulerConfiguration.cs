@@ -93,7 +93,7 @@ namespace Fermyon.Nomad.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class SchedulerConfiguration {\n");
             sb.Append("  CreateIndex: ").Append(CreateIndex).Append("\n");
             sb.Append("  MemoryOversubscriptionEnabled: ").Append(MemoryOversubscriptionEnabled).Append("\n");
@@ -132,8 +132,9 @@ namespace Fermyon.Nomad.Model
         public bool Equals(SchedulerConfiguration input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.CreateIndex == input.CreateIndex ||
@@ -172,14 +173,18 @@ namespace Fermyon.Nomad.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                hashCode = hashCode * 59 + this.CreateIndex.GetHashCode();
-                hashCode = hashCode * 59 + this.MemoryOversubscriptionEnabled.GetHashCode();
-                hashCode = hashCode * 59 + this.ModifyIndex.GetHashCode();
+                hashCode = (hashCode * 59) + this.CreateIndex.GetHashCode();
+                hashCode = (hashCode * 59) + this.MemoryOversubscriptionEnabled.GetHashCode();
+                hashCode = (hashCode * 59) + this.ModifyIndex.GetHashCode();
                 if (this.PreemptionConfig != null)
-                    hashCode = hashCode * 59 + this.PreemptionConfig.GetHashCode();
-                hashCode = hashCode * 59 + this.RejectJobRegistration.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.PreemptionConfig.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.RejectJobRegistration.GetHashCode();
                 if (this.SchedulerAlgorithm != null)
-                    hashCode = hashCode * 59 + this.SchedulerAlgorithm.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.SchedulerAlgorithm.GetHashCode();
+                }
                 return hashCode;
             }
         }
@@ -189,28 +194,28 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             // CreateIndex (int) maximum
-            if(this.CreateIndex > (int)384)
+            if (this.CreateIndex > (int)384)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for CreateIndex, must be a value less than or equal to 384.", new [] { "CreateIndex" });
             }
 
             // CreateIndex (int) minimum
-            if(this.CreateIndex < (int)0)
+            if (this.CreateIndex < (int)0)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for CreateIndex, must be a value greater than or equal to 0.", new [] { "CreateIndex" });
             }
 
             // ModifyIndex (int) maximum
-            if(this.ModifyIndex > (int)384)
+            if (this.ModifyIndex > (int)384)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ModifyIndex, must be a value less than or equal to 384.", new [] { "ModifyIndex" });
             }
 
             // ModifyIndex (int) minimum
-            if(this.ModifyIndex < (int)0)
+            if (this.ModifyIndex < (int)0)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ModifyIndex, must be a value greater than or equal to 0.", new [] { "ModifyIndex" });
             }

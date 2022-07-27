@@ -40,7 +40,7 @@ Name | Type | Description | Notes
 **Update** | [**UpdateStrategy**](UpdateStrategy.md) |  | [optional] 
 **VaultNamespace** | **string** |  | [optional] 
 **VaultToken** | **string** |  | [optional] 
-**Version** | **int** |  | [optional] 
+**_Version** | **int** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

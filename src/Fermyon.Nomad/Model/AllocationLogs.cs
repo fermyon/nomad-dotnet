@@ -69,7 +69,7 @@ namespace Fermyon.Nomad.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class AllocationLogs {\n");
             sb.Append("  Data: ").Append(Data).Append("\n");
             sb.Append("  File: ").Append(File).Append("\n");
@@ -105,8 +105,9 @@ namespace Fermyon.Nomad.Model
         public bool Equals(AllocationLogs input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.Data == input.Data ||
@@ -134,10 +135,14 @@ namespace Fermyon.Nomad.Model
             {
                 int hashCode = 41;
                 if (this.Data != null)
-                    hashCode = hashCode * 59 + this.Data.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Data.GetHashCode();
+                }
                 if (this.File != null)
-                    hashCode = hashCode * 59 + this.File.GetHashCode();
-                hashCode = hashCode * 59 + this.Offset.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.File.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.Offset.GetHashCode();
                 return hashCode;
             }
         }
@@ -147,7 +152,7 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             yield break;
         }

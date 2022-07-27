@@ -69,7 +69,7 @@ namespace Fermyon.Nomad.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class PeriodicForceResponse {\n");
             sb.Append("  EvalCreateIndex: ").Append(EvalCreateIndex).Append("\n");
             sb.Append("  EvalID: ").Append(EvalID).Append("\n");
@@ -105,8 +105,9 @@ namespace Fermyon.Nomad.Model
         public bool Equals(PeriodicForceResponse input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.EvalCreateIndex == input.EvalCreateIndex ||
@@ -132,10 +133,12 @@ namespace Fermyon.Nomad.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                hashCode = hashCode * 59 + this.EvalCreateIndex.GetHashCode();
+                hashCode = (hashCode * 59) + this.EvalCreateIndex.GetHashCode();
                 if (this.EvalID != null)
-                    hashCode = hashCode * 59 + this.EvalID.GetHashCode();
-                hashCode = hashCode * 59 + this.Index.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.EvalID.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.Index.GetHashCode();
                 return hashCode;
             }
         }
@@ -145,28 +148,28 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             // EvalCreateIndex (int) maximum
-            if(this.EvalCreateIndex > (int)384)
+            if (this.EvalCreateIndex > (int)384)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for EvalCreateIndex, must be a value less than or equal to 384.", new [] { "EvalCreateIndex" });
             }
 
             // EvalCreateIndex (int) minimum
-            if(this.EvalCreateIndex < (int)0)
+            if (this.EvalCreateIndex < (int)0)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for EvalCreateIndex, must be a value greater than or equal to 0.", new [] { "EvalCreateIndex" });
             }
 
             // Index (int) maximum
-            if(this.Index > (int)384)
+            if (this.Index > (int)384)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Index, must be a value less than or equal to 384.", new [] { "Index" });
             }
 
             // Index (int) minimum
-            if(this.Index < (int)0)
+            if (this.Index < (int)0)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Index, must be a value greater than or equal to 0.", new [] { "Index" });
             }

@@ -2,17 +2,16 @@
 
 All URIs are relative to *https://127.0.0.1:4646/v1*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**GetAllocation**](AllocationsApi.md#getallocation) | **GET** /allocation/{allocID} | 
-[**GetAllocationServices**](AllocationsApi.md#getallocationservices) | **GET** /allocation/{allocID}/services | 
-[**GetAllocations**](AllocationsApi.md#getallocations) | **GET** /allocations | 
-[**PostAllocationStop**](AllocationsApi.md#postallocationstop) | **POST** /allocation/{allocID}/stop | 
-
+| Method | HTTP request | Description |
+|--------|--------------|-------------|
+| [**GetAllocation**](AllocationsApi.md#getallocation) | **GET** /allocation/{allocID} |  |
+| [**GetAllocationServices**](AllocationsApi.md#getallocationservices) | **GET** /allocation/{allocID}/services |  |
+| [**GetAllocations**](AllocationsApi.md#getallocations) | **GET** /allocations |  |
+| [**PostAllocationStop**](AllocationsApi.md#postallocationstop) | **POST** /allocation/{allocID}/stop |  |
 
 <a name="getallocation"></a>
 # **GetAllocation**
-> Allocation GetAllocation (string allocID, string region = null, string _namespace = null, int? index = null, string wait = null, string stale = null, string prefix = null, string xNomadToken = null, int? perPage = null, string nextToken = null)
+> Allocation GetAllocation (string allocID, string? region = null, string? _namespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null)
 
 
 
@@ -38,16 +37,16 @@ namespace Example
             // config.AddApiKeyPrefix("X-Nomad-Token", "Bearer");
 
             var apiInstance = new AllocationsApi(config);
-            var allocID = allocID_example;  // string | Allocation ID.
-            var region = region_example;  // string | Filters results based on the specified region. (optional) 
-            var _namespace = _namespace_example;  // string | Filters results based on the specified namespace. (optional) 
+            var allocID = "allocID_example";  // string | Allocation ID.
+            var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
+            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
             var index = 56;  // int? | If set, wait until query exceeds given index. Must be provided with WaitParam. (optional) 
-            var wait = wait_example;  // string | Provided with IndexParam to wait for change. (optional) 
-            var stale = stale_example;  // string | If present, results will include stale reads. (optional) 
-            var prefix = prefix_example;  // string | Constrains results to jobs that start with the defined prefix (optional) 
-            var xNomadToken = xNomadToken_example;  // string | A Nomad ACL token. (optional) 
+            var wait = "wait_example";  // string? | Provided with IndexParam to wait for change. (optional) 
+            var stale = "stale_example";  // string? | If present, results will include stale reads. (optional) 
+            var prefix = "prefix_example";  // string? | Constrains results to jobs that start with the defined prefix (optional) 
+            var xNomadToken = "xNomadToken_example";  // string? | A Nomad ACL token. (optional) 
             var perPage = 56;  // int? | Maximum number of results to return. (optional) 
-            var nextToken = nextToken_example;  // string | Indicates where to start paging for queries that support pagination. (optional) 
+            var nextToken = "nextToken_example";  // string? | Indicates where to start paging for queries that support pagination. (optional) 
 
             try
             {
@@ -56,8 +55,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AllocationsApi.GetAllocation: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling AllocationsApi.GetAllocation: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -65,20 +64,39 @@ namespace Example
 }
 ```
 
+#### Using the GetAllocationWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    ApiResponse<Allocation> response = apiInstance.GetAllocationWithHttpInfo(allocID, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling AllocationsApi.GetAllocationWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **allocID** | **string**| Allocation ID. | 
- **region** | **string**| Filters results based on the specified region. | [optional] 
- **_namespace** | **string**| Filters results based on the specified namespace. | [optional] 
- **index** | **int?**| If set, wait until query exceeds given index. Must be provided with WaitParam. | [optional] 
- **wait** | **string**| Provided with IndexParam to wait for change. | [optional] 
- **stale** | **string**| If present, results will include stale reads. | [optional] 
- **prefix** | **string**| Constrains results to jobs that start with the defined prefix | [optional] 
- **xNomadToken** | **string**| A Nomad ACL token. | [optional] 
- **perPage** | **int?**| Maximum number of results to return. | [optional] 
- **nextToken** | **string**| Indicates where to start paging for queries that support pagination. | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **allocID** | **string** | Allocation ID. |  |
+| **region** | **string?** | Filters results based on the specified region. | [optional]  |
+| **_namespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
+| **index** | **int?** | If set, wait until query exceeds given index. Must be provided with WaitParam. | [optional]  |
+| **wait** | **string?** | Provided with IndexParam to wait for change. | [optional]  |
+| **stale** | **string?** | If present, results will include stale reads. | [optional]  |
+| **prefix** | **string?** | Constrains results to jobs that start with the defined prefix | [optional]  |
+| **xNomadToken** | **string?** | A Nomad ACL token. | [optional]  |
+| **perPage** | **int?** | Maximum number of results to return. | [optional]  |
+| **nextToken** | **string?** | Indicates where to start paging for queries that support pagination. | [optional]  |
 
 ### Return type
 
@@ -107,7 +125,7 @@ Name | Type | Description  | Notes
 
 <a name="getallocationservices"></a>
 # **GetAllocationServices**
-> List&lt;ServiceRegistration&gt; GetAllocationServices (string allocID, string region = null, string _namespace = null, int? index = null, string wait = null, string stale = null, string prefix = null, string xNomadToken = null, int? perPage = null, string nextToken = null)
+> List&lt;ServiceRegistration&gt; GetAllocationServices (string allocID, string? region = null, string? _namespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null)
 
 
 
@@ -133,16 +151,16 @@ namespace Example
             // config.AddApiKeyPrefix("X-Nomad-Token", "Bearer");
 
             var apiInstance = new AllocationsApi(config);
-            var allocID = allocID_example;  // string | Allocation ID.
-            var region = region_example;  // string | Filters results based on the specified region. (optional) 
-            var _namespace = _namespace_example;  // string | Filters results based on the specified namespace. (optional) 
+            var allocID = "allocID_example";  // string | Allocation ID.
+            var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
+            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
             var index = 56;  // int? | If set, wait until query exceeds given index. Must be provided with WaitParam. (optional) 
-            var wait = wait_example;  // string | Provided with IndexParam to wait for change. (optional) 
-            var stale = stale_example;  // string | If present, results will include stale reads. (optional) 
-            var prefix = prefix_example;  // string | Constrains results to jobs that start with the defined prefix (optional) 
-            var xNomadToken = xNomadToken_example;  // string | A Nomad ACL token. (optional) 
+            var wait = "wait_example";  // string? | Provided with IndexParam to wait for change. (optional) 
+            var stale = "stale_example";  // string? | If present, results will include stale reads. (optional) 
+            var prefix = "prefix_example";  // string? | Constrains results to jobs that start with the defined prefix (optional) 
+            var xNomadToken = "xNomadToken_example";  // string? | A Nomad ACL token. (optional) 
             var perPage = 56;  // int? | Maximum number of results to return. (optional) 
-            var nextToken = nextToken_example;  // string | Indicates where to start paging for queries that support pagination. (optional) 
+            var nextToken = "nextToken_example";  // string? | Indicates where to start paging for queries that support pagination. (optional) 
 
             try
             {
@@ -151,8 +169,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AllocationsApi.GetAllocationServices: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling AllocationsApi.GetAllocationServices: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -160,20 +178,39 @@ namespace Example
 }
 ```
 
+#### Using the GetAllocationServicesWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    ApiResponse<List<ServiceRegistration>> response = apiInstance.GetAllocationServicesWithHttpInfo(allocID, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling AllocationsApi.GetAllocationServicesWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **allocID** | **string**| Allocation ID. | 
- **region** | **string**| Filters results based on the specified region. | [optional] 
- **_namespace** | **string**| Filters results based on the specified namespace. | [optional] 
- **index** | **int?**| If set, wait until query exceeds given index. Must be provided with WaitParam. | [optional] 
- **wait** | **string**| Provided with IndexParam to wait for change. | [optional] 
- **stale** | **string**| If present, results will include stale reads. | [optional] 
- **prefix** | **string**| Constrains results to jobs that start with the defined prefix | [optional] 
- **xNomadToken** | **string**| A Nomad ACL token. | [optional] 
- **perPage** | **int?**| Maximum number of results to return. | [optional] 
- **nextToken** | **string**| Indicates where to start paging for queries that support pagination. | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **allocID** | **string** | Allocation ID. |  |
+| **region** | **string?** | Filters results based on the specified region. | [optional]  |
+| **_namespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
+| **index** | **int?** | If set, wait until query exceeds given index. Must be provided with WaitParam. | [optional]  |
+| **wait** | **string?** | Provided with IndexParam to wait for change. | [optional]  |
+| **stale** | **string?** | If present, results will include stale reads. | [optional]  |
+| **prefix** | **string?** | Constrains results to jobs that start with the defined prefix | [optional]  |
+| **xNomadToken** | **string?** | A Nomad ACL token. | [optional]  |
+| **perPage** | **int?** | Maximum number of results to return. | [optional]  |
+| **nextToken** | **string?** | Indicates where to start paging for queries that support pagination. | [optional]  |
 
 ### Return type
 
@@ -202,7 +239,7 @@ Name | Type | Description  | Notes
 
 <a name="getallocations"></a>
 # **GetAllocations**
-> List&lt;AllocationListStub&gt; GetAllocations (string region = null, string _namespace = null, int? index = null, string wait = null, string stale = null, string prefix = null, string xNomadToken = null, int? perPage = null, string nextToken = null, bool? resources = null, bool? taskStates = null)
+> List&lt;AllocationListStub&gt; GetAllocations (string? region = null, string? _namespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null, bool? resources = null, bool? taskStates = null)
 
 
 
@@ -228,15 +265,15 @@ namespace Example
             // config.AddApiKeyPrefix("X-Nomad-Token", "Bearer");
 
             var apiInstance = new AllocationsApi(config);
-            var region = region_example;  // string | Filters results based on the specified region. (optional) 
-            var _namespace = _namespace_example;  // string | Filters results based on the specified namespace. (optional) 
+            var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
+            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
             var index = 56;  // int? | If set, wait until query exceeds given index. Must be provided with WaitParam. (optional) 
-            var wait = wait_example;  // string | Provided with IndexParam to wait for change. (optional) 
-            var stale = stale_example;  // string | If present, results will include stale reads. (optional) 
-            var prefix = prefix_example;  // string | Constrains results to jobs that start with the defined prefix (optional) 
-            var xNomadToken = xNomadToken_example;  // string | A Nomad ACL token. (optional) 
+            var wait = "wait_example";  // string? | Provided with IndexParam to wait for change. (optional) 
+            var stale = "stale_example";  // string? | If present, results will include stale reads. (optional) 
+            var prefix = "prefix_example";  // string? | Constrains results to jobs that start with the defined prefix (optional) 
+            var xNomadToken = "xNomadToken_example";  // string? | A Nomad ACL token. (optional) 
             var perPage = 56;  // int? | Maximum number of results to return. (optional) 
-            var nextToken = nextToken_example;  // string | Indicates where to start paging for queries that support pagination. (optional) 
+            var nextToken = "nextToken_example";  // string? | Indicates where to start paging for queries that support pagination. (optional) 
             var resources = true;  // bool? | Flag indicating whether to include resources in response. (optional) 
             var taskStates = true;  // bool? | Flag indicating whether to include task states in response. (optional) 
 
@@ -247,8 +284,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AllocationsApi.GetAllocations: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling AllocationsApi.GetAllocations: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -256,21 +293,40 @@ namespace Example
 }
 ```
 
+#### Using the GetAllocationsWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    ApiResponse<List<AllocationListStub>> response = apiInstance.GetAllocationsWithHttpInfo(region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, resources, taskStates);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling AllocationsApi.GetAllocationsWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **region** | **string**| Filters results based on the specified region. | [optional] 
- **_namespace** | **string**| Filters results based on the specified namespace. | [optional] 
- **index** | **int?**| If set, wait until query exceeds given index. Must be provided with WaitParam. | [optional] 
- **wait** | **string**| Provided with IndexParam to wait for change. | [optional] 
- **stale** | **string**| If present, results will include stale reads. | [optional] 
- **prefix** | **string**| Constrains results to jobs that start with the defined prefix | [optional] 
- **xNomadToken** | **string**| A Nomad ACL token. | [optional] 
- **perPage** | **int?**| Maximum number of results to return. | [optional] 
- **nextToken** | **string**| Indicates where to start paging for queries that support pagination. | [optional] 
- **resources** | **bool?**| Flag indicating whether to include resources in response. | [optional] 
- **taskStates** | **bool?**| Flag indicating whether to include task states in response. | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **region** | **string?** | Filters results based on the specified region. | [optional]  |
+| **_namespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
+| **index** | **int?** | If set, wait until query exceeds given index. Must be provided with WaitParam. | [optional]  |
+| **wait** | **string?** | Provided with IndexParam to wait for change. | [optional]  |
+| **stale** | **string?** | If present, results will include stale reads. | [optional]  |
+| **prefix** | **string?** | Constrains results to jobs that start with the defined prefix | [optional]  |
+| **xNomadToken** | **string?** | A Nomad ACL token. | [optional]  |
+| **perPage** | **int?** | Maximum number of results to return. | [optional]  |
+| **nextToken** | **string?** | Indicates where to start paging for queries that support pagination. | [optional]  |
+| **resources** | **bool?** | Flag indicating whether to include resources in response. | [optional]  |
+| **taskStates** | **bool?** | Flag indicating whether to include task states in response. | [optional]  |
 
 ### Return type
 
@@ -299,7 +355,7 @@ Name | Type | Description  | Notes
 
 <a name="postallocationstop"></a>
 # **PostAllocationStop**
-> AllocStopResponse PostAllocationStop (string allocID, string region = null, string _namespace = null, int? index = null, string wait = null, string stale = null, string prefix = null, string xNomadToken = null, int? perPage = null, string nextToken = null, bool? noShutdownDelay = null)
+> AllocStopResponse PostAllocationStop (string allocID, string? region = null, string? _namespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null, bool? noShutdownDelay = null)
 
 
 
@@ -325,16 +381,16 @@ namespace Example
             // config.AddApiKeyPrefix("X-Nomad-Token", "Bearer");
 
             var apiInstance = new AllocationsApi(config);
-            var allocID = allocID_example;  // string | Allocation ID.
-            var region = region_example;  // string | Filters results based on the specified region. (optional) 
-            var _namespace = _namespace_example;  // string | Filters results based on the specified namespace. (optional) 
+            var allocID = "allocID_example";  // string | Allocation ID.
+            var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
+            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
             var index = 56;  // int? | If set, wait until query exceeds given index. Must be provided with WaitParam. (optional) 
-            var wait = wait_example;  // string | Provided with IndexParam to wait for change. (optional) 
-            var stale = stale_example;  // string | If present, results will include stale reads. (optional) 
-            var prefix = prefix_example;  // string | Constrains results to jobs that start with the defined prefix (optional) 
-            var xNomadToken = xNomadToken_example;  // string | A Nomad ACL token. (optional) 
+            var wait = "wait_example";  // string? | Provided with IndexParam to wait for change. (optional) 
+            var stale = "stale_example";  // string? | If present, results will include stale reads. (optional) 
+            var prefix = "prefix_example";  // string? | Constrains results to jobs that start with the defined prefix (optional) 
+            var xNomadToken = "xNomadToken_example";  // string? | A Nomad ACL token. (optional) 
             var perPage = 56;  // int? | Maximum number of results to return. (optional) 
-            var nextToken = nextToken_example;  // string | Indicates where to start paging for queries that support pagination. (optional) 
+            var nextToken = "nextToken_example";  // string? | Indicates where to start paging for queries that support pagination. (optional) 
             var noShutdownDelay = true;  // bool? | Flag indicating whether to delay shutdown when requesting an allocation stop. (optional) 
 
             try
@@ -344,8 +400,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AllocationsApi.PostAllocationStop: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling AllocationsApi.PostAllocationStop: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -353,21 +409,40 @@ namespace Example
 }
 ```
 
+#### Using the PostAllocationStopWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    ApiResponse<AllocStopResponse> response = apiInstance.PostAllocationStopWithHttpInfo(allocID, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, noShutdownDelay);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling AllocationsApi.PostAllocationStopWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **allocID** | **string**| Allocation ID. | 
- **region** | **string**| Filters results based on the specified region. | [optional] 
- **_namespace** | **string**| Filters results based on the specified namespace. | [optional] 
- **index** | **int?**| If set, wait until query exceeds given index. Must be provided with WaitParam. | [optional] 
- **wait** | **string**| Provided with IndexParam to wait for change. | [optional] 
- **stale** | **string**| If present, results will include stale reads. | [optional] 
- **prefix** | **string**| Constrains results to jobs that start with the defined prefix | [optional] 
- **xNomadToken** | **string**| A Nomad ACL token. | [optional] 
- **perPage** | **int?**| Maximum number of results to return. | [optional] 
- **nextToken** | **string**| Indicates where to start paging for queries that support pagination. | [optional] 
- **noShutdownDelay** | **bool?**| Flag indicating whether to delay shutdown when requesting an allocation stop. | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **allocID** | **string** | Allocation ID. |  |
+| **region** | **string?** | Filters results based on the specified region. | [optional]  |
+| **_namespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
+| **index** | **int?** | If set, wait until query exceeds given index. Must be provided with WaitParam. | [optional]  |
+| **wait** | **string?** | Provided with IndexParam to wait for change. | [optional]  |
+| **stale** | **string?** | If present, results will include stale reads. | [optional]  |
+| **prefix** | **string?** | Constrains results to jobs that start with the defined prefix | [optional]  |
+| **xNomadToken** | **string?** | A Nomad ACL token. | [optional]  |
+| **perPage** | **int?** | Maximum number of results to return. | [optional]  |
+| **nextToken** | **string?** | Indicates where to start paging for queries that support pagination. | [optional]  |
+| **noShutdownDelay** | **bool?** | Flag indicating whether to delay shutdown when requesting an allocation stop. | [optional]  |
 
 ### Return type
 

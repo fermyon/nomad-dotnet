@@ -53,7 +53,7 @@ namespace Fermyon.Nomad.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class CSITopology {\n");
             sb.Append("  Segments: ").Append(Segments).Append("\n");
             sb.Append("}\n");
@@ -87,8 +87,9 @@ namespace Fermyon.Nomad.Model
         public bool Equals(CSITopology input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.Segments == input.Segments ||
@@ -108,7 +109,9 @@ namespace Fermyon.Nomad.Model
             {
                 int hashCode = 41;
                 if (this.Segments != null)
-                    hashCode = hashCode * 59 + this.Segments.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Segments.GetHashCode();
+                }
                 return hashCode;
             }
         }
@@ -118,7 +121,7 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             yield break;
         }

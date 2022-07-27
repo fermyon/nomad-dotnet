@@ -2,15 +2,14 @@
 
 All URIs are relative to *https://127.0.0.1:4646/v1*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**GetScalingPolicies**](ScalingApi.md#getscalingpolicies) | **GET** /scaling/policies | 
-[**GetScalingPolicy**](ScalingApi.md#getscalingpolicy) | **GET** /scaling/policy/{policyID} | 
-
+| Method | HTTP request | Description |
+|--------|--------------|-------------|
+| [**GetScalingPolicies**](ScalingApi.md#getscalingpolicies) | **GET** /scaling/policies |  |
+| [**GetScalingPolicy**](ScalingApi.md#getscalingpolicy) | **GET** /scaling/policy/{policyID} |  |
 
 <a name="getscalingpolicies"></a>
 # **GetScalingPolicies**
-> List&lt;ScalingPolicyListStub&gt; GetScalingPolicies (string region = null, string _namespace = null, int? index = null, string wait = null, string stale = null, string prefix = null, string xNomadToken = null, int? perPage = null, string nextToken = null)
+> List&lt;ScalingPolicyListStub&gt; GetScalingPolicies (string? region = null, string? _namespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null)
 
 
 
@@ -36,15 +35,15 @@ namespace Example
             // config.AddApiKeyPrefix("X-Nomad-Token", "Bearer");
 
             var apiInstance = new ScalingApi(config);
-            var region = region_example;  // string | Filters results based on the specified region. (optional) 
-            var _namespace = _namespace_example;  // string | Filters results based on the specified namespace. (optional) 
+            var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
+            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
             var index = 56;  // int? | If set, wait until query exceeds given index. Must be provided with WaitParam. (optional) 
-            var wait = wait_example;  // string | Provided with IndexParam to wait for change. (optional) 
-            var stale = stale_example;  // string | If present, results will include stale reads. (optional) 
-            var prefix = prefix_example;  // string | Constrains results to jobs that start with the defined prefix (optional) 
-            var xNomadToken = xNomadToken_example;  // string | A Nomad ACL token. (optional) 
+            var wait = "wait_example";  // string? | Provided with IndexParam to wait for change. (optional) 
+            var stale = "stale_example";  // string? | If present, results will include stale reads. (optional) 
+            var prefix = "prefix_example";  // string? | Constrains results to jobs that start with the defined prefix (optional) 
+            var xNomadToken = "xNomadToken_example";  // string? | A Nomad ACL token. (optional) 
             var perPage = 56;  // int? | Maximum number of results to return. (optional) 
-            var nextToken = nextToken_example;  // string | Indicates where to start paging for queries that support pagination. (optional) 
+            var nextToken = "nextToken_example";  // string? | Indicates where to start paging for queries that support pagination. (optional) 
 
             try
             {
@@ -53,8 +52,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling ScalingApi.GetScalingPolicies: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling ScalingApi.GetScalingPolicies: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -62,19 +61,38 @@ namespace Example
 }
 ```
 
+#### Using the GetScalingPoliciesWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    ApiResponse<List<ScalingPolicyListStub>> response = apiInstance.GetScalingPoliciesWithHttpInfo(region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling ScalingApi.GetScalingPoliciesWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **region** | **string**| Filters results based on the specified region. | [optional] 
- **_namespace** | **string**| Filters results based on the specified namespace. | [optional] 
- **index** | **int?**| If set, wait until query exceeds given index. Must be provided with WaitParam. | [optional] 
- **wait** | **string**| Provided with IndexParam to wait for change. | [optional] 
- **stale** | **string**| If present, results will include stale reads. | [optional] 
- **prefix** | **string**| Constrains results to jobs that start with the defined prefix | [optional] 
- **xNomadToken** | **string**| A Nomad ACL token. | [optional] 
- **perPage** | **int?**| Maximum number of results to return. | [optional] 
- **nextToken** | **string**| Indicates where to start paging for queries that support pagination. | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **region** | **string?** | Filters results based on the specified region. | [optional]  |
+| **_namespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
+| **index** | **int?** | If set, wait until query exceeds given index. Must be provided with WaitParam. | [optional]  |
+| **wait** | **string?** | Provided with IndexParam to wait for change. | [optional]  |
+| **stale** | **string?** | If present, results will include stale reads. | [optional]  |
+| **prefix** | **string?** | Constrains results to jobs that start with the defined prefix | [optional]  |
+| **xNomadToken** | **string?** | A Nomad ACL token. | [optional]  |
+| **perPage** | **int?** | Maximum number of results to return. | [optional]  |
+| **nextToken** | **string?** | Indicates where to start paging for queries that support pagination. | [optional]  |
 
 ### Return type
 
@@ -103,7 +121,7 @@ Name | Type | Description  | Notes
 
 <a name="getscalingpolicy"></a>
 # **GetScalingPolicy**
-> ScalingPolicy GetScalingPolicy (string policyID, string region = null, string _namespace = null, int? index = null, string wait = null, string stale = null, string prefix = null, string xNomadToken = null, int? perPage = null, string nextToken = null)
+> ScalingPolicy GetScalingPolicy (string policyID, string? region = null, string? _namespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null)
 
 
 
@@ -129,16 +147,16 @@ namespace Example
             // config.AddApiKeyPrefix("X-Nomad-Token", "Bearer");
 
             var apiInstance = new ScalingApi(config);
-            var policyID = policyID_example;  // string | The scaling policy identifier.
-            var region = region_example;  // string | Filters results based on the specified region. (optional) 
-            var _namespace = _namespace_example;  // string | Filters results based on the specified namespace. (optional) 
+            var policyID = "policyID_example";  // string | The scaling policy identifier.
+            var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
+            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
             var index = 56;  // int? | If set, wait until query exceeds given index. Must be provided with WaitParam. (optional) 
-            var wait = wait_example;  // string | Provided with IndexParam to wait for change. (optional) 
-            var stale = stale_example;  // string | If present, results will include stale reads. (optional) 
-            var prefix = prefix_example;  // string | Constrains results to jobs that start with the defined prefix (optional) 
-            var xNomadToken = xNomadToken_example;  // string | A Nomad ACL token. (optional) 
+            var wait = "wait_example";  // string? | Provided with IndexParam to wait for change. (optional) 
+            var stale = "stale_example";  // string? | If present, results will include stale reads. (optional) 
+            var prefix = "prefix_example";  // string? | Constrains results to jobs that start with the defined prefix (optional) 
+            var xNomadToken = "xNomadToken_example";  // string? | A Nomad ACL token. (optional) 
             var perPage = 56;  // int? | Maximum number of results to return. (optional) 
-            var nextToken = nextToken_example;  // string | Indicates where to start paging for queries that support pagination. (optional) 
+            var nextToken = "nextToken_example";  // string? | Indicates where to start paging for queries that support pagination. (optional) 
 
             try
             {
@@ -147,8 +165,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling ScalingApi.GetScalingPolicy: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling ScalingApi.GetScalingPolicy: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -156,20 +174,39 @@ namespace Example
 }
 ```
 
+#### Using the GetScalingPolicyWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    ApiResponse<ScalingPolicy> response = apiInstance.GetScalingPolicyWithHttpInfo(policyID, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling ScalingApi.GetScalingPolicyWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **policyID** | **string**| The scaling policy identifier. | 
- **region** | **string**| Filters results based on the specified region. | [optional] 
- **_namespace** | **string**| Filters results based on the specified namespace. | [optional] 
- **index** | **int?**| If set, wait until query exceeds given index. Must be provided with WaitParam. | [optional] 
- **wait** | **string**| Provided with IndexParam to wait for change. | [optional] 
- **stale** | **string**| If present, results will include stale reads. | [optional] 
- **prefix** | **string**| Constrains results to jobs that start with the defined prefix | [optional] 
- **xNomadToken** | **string**| A Nomad ACL token. | [optional] 
- **perPage** | **int?**| Maximum number of results to return. | [optional] 
- **nextToken** | **string**| Indicates where to start paging for queries that support pagination. | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **policyID** | **string** | The scaling policy identifier. |  |
+| **region** | **string?** | Filters results based on the specified region. | [optional]  |
+| **_namespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
+| **index** | **int?** | If set, wait until query exceeds given index. Must be provided with WaitParam. | [optional]  |
+| **wait** | **string?** | Provided with IndexParam to wait for change. | [optional]  |
+| **stale** | **string?** | If present, results will include stale reads. | [optional]  |
+| **prefix** | **string?** | Constrains results to jobs that start with the defined prefix | [optional]  |
+| **xNomadToken** | **string?** | A Nomad ACL token. | [optional]  |
+| **perPage** | **int?** | Maximum number of results to return. | [optional]  |
+| **nextToken** | **string?** | Indicates where to start paging for queries that support pagination. | [optional]  |
 
 ### Return type
 

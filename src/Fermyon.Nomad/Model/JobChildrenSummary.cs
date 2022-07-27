@@ -69,7 +69,7 @@ namespace Fermyon.Nomad.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class JobChildrenSummary {\n");
             sb.Append("  Dead: ").Append(Dead).Append("\n");
             sb.Append("  Pending: ").Append(Pending).Append("\n");
@@ -105,8 +105,9 @@ namespace Fermyon.Nomad.Model
         public bool Equals(JobChildrenSummary input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.Dead == input.Dead ||
@@ -131,9 +132,9 @@ namespace Fermyon.Nomad.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                hashCode = hashCode * 59 + this.Dead.GetHashCode();
-                hashCode = hashCode * 59 + this.Pending.GetHashCode();
-                hashCode = hashCode * 59 + this.Running.GetHashCode();
+                hashCode = (hashCode * 59) + this.Dead.GetHashCode();
+                hashCode = (hashCode * 59) + this.Pending.GetHashCode();
+                hashCode = (hashCode * 59) + this.Running.GetHashCode();
                 return hashCode;
             }
         }
@@ -143,7 +144,7 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             yield break;
         }

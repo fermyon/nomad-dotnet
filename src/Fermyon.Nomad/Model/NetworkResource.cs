@@ -117,7 +117,7 @@ namespace Fermyon.Nomad.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class NetworkResource {\n");
             sb.Append("  CIDR: ").Append(CIDR).Append("\n");
             sb.Append("  DNS: ").Append(DNS).Append("\n");
@@ -159,8 +159,9 @@ namespace Fermyon.Nomad.Model
         public bool Equals(NetworkResource input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.CIDR == input.CIDR ||
@@ -220,22 +221,38 @@ namespace Fermyon.Nomad.Model
             {
                 int hashCode = 41;
                 if (this.CIDR != null)
-                    hashCode = hashCode * 59 + this.CIDR.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.CIDR.GetHashCode();
+                }
                 if (this.DNS != null)
-                    hashCode = hashCode * 59 + this.DNS.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.DNS.GetHashCode();
+                }
                 if (this.Device != null)
-                    hashCode = hashCode * 59 + this.Device.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Device.GetHashCode();
+                }
                 if (this.DynamicPorts != null)
-                    hashCode = hashCode * 59 + this.DynamicPorts.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.DynamicPorts.GetHashCode();
+                }
                 if (this.Hostname != null)
-                    hashCode = hashCode * 59 + this.Hostname.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Hostname.GetHashCode();
+                }
                 if (this.IP != null)
-                    hashCode = hashCode * 59 + this.IP.GetHashCode();
-                hashCode = hashCode * 59 + this.MBits.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.IP.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.MBits.GetHashCode();
                 if (this.Mode != null)
-                    hashCode = hashCode * 59 + this.Mode.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Mode.GetHashCode();
+                }
                 if (this.ReservedPorts != null)
-                    hashCode = hashCode * 59 + this.ReservedPorts.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.ReservedPorts.GetHashCode();
+                }
                 return hashCode;
             }
         }
@@ -245,7 +262,7 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             yield break;
         }

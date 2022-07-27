@@ -69,7 +69,7 @@ namespace Fermyon.Nomad.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class OperatorHealthReply {\n");
             sb.Append("  FailureTolerance: ").Append(FailureTolerance).Append("\n");
             sb.Append("  Healthy: ").Append(Healthy).Append("\n");
@@ -105,8 +105,9 @@ namespace Fermyon.Nomad.Model
         public bool Equals(OperatorHealthReply input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.FailureTolerance == input.FailureTolerance ||
@@ -133,10 +134,12 @@ namespace Fermyon.Nomad.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                hashCode = hashCode * 59 + this.FailureTolerance.GetHashCode();
-                hashCode = hashCode * 59 + this.Healthy.GetHashCode();
+                hashCode = (hashCode * 59) + this.FailureTolerance.GetHashCode();
+                hashCode = (hashCode * 59) + this.Healthy.GetHashCode();
                 if (this.Servers != null)
-                    hashCode = hashCode * 59 + this.Servers.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Servers.GetHashCode();
+                }
                 return hashCode;
             }
         }
@@ -146,7 +149,7 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             yield break;
         }

@@ -69,7 +69,7 @@ namespace Fermyon.Nomad.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class RescheduleEvent {\n");
             sb.Append("  PrevAllocID: ").Append(PrevAllocID).Append("\n");
             sb.Append("  PrevNodeID: ").Append(PrevNodeID).Append("\n");
@@ -105,8 +105,9 @@ namespace Fermyon.Nomad.Model
         public bool Equals(RescheduleEvent input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.PrevAllocID == input.PrevAllocID ||
@@ -134,10 +135,14 @@ namespace Fermyon.Nomad.Model
             {
                 int hashCode = 41;
                 if (this.PrevAllocID != null)
-                    hashCode = hashCode * 59 + this.PrevAllocID.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.PrevAllocID.GetHashCode();
+                }
                 if (this.PrevNodeID != null)
-                    hashCode = hashCode * 59 + this.PrevNodeID.GetHashCode();
-                hashCode = hashCode * 59 + this.RescheduleTime.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.PrevNodeID.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.RescheduleTime.GetHashCode();
                 return hashCode;
             }
         }
@@ -147,7 +152,7 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             yield break;
         }

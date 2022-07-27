@@ -61,7 +61,7 @@ namespace Fermyon.Nomad.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class PlanAnnotations {\n");
             sb.Append("  DesiredTGUpdates: ").Append(DesiredTGUpdates).Append("\n");
             sb.Append("  PreemptedAllocs: ").Append(PreemptedAllocs).Append("\n");
@@ -96,8 +96,9 @@ namespace Fermyon.Nomad.Model
         public bool Equals(PlanAnnotations input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.DesiredTGUpdates == input.DesiredTGUpdates ||
@@ -123,9 +124,13 @@ namespace Fermyon.Nomad.Model
             {
                 int hashCode = 41;
                 if (this.DesiredTGUpdates != null)
-                    hashCode = hashCode * 59 + this.DesiredTGUpdates.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.DesiredTGUpdates.GetHashCode();
+                }
                 if (this.PreemptedAllocs != null)
-                    hashCode = hashCode * 59 + this.PreemptedAllocs.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.PreemptedAllocs.GetHashCode();
+                }
                 return hashCode;
             }
         }
@@ -135,7 +140,7 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             yield break;
         }

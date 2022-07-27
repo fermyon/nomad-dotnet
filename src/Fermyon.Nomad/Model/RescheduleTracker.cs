@@ -53,7 +53,7 @@ namespace Fermyon.Nomad.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class RescheduleTracker {\n");
             sb.Append("  Events: ").Append(Events).Append("\n");
             sb.Append("}\n");
@@ -87,8 +87,9 @@ namespace Fermyon.Nomad.Model
         public bool Equals(RescheduleTracker input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.Events == input.Events ||
@@ -108,7 +109,9 @@ namespace Fermyon.Nomad.Model
             {
                 int hashCode = 41;
                 if (this.Events != null)
-                    hashCode = hashCode * 59 + this.Events.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Events.GetHashCode();
+                }
                 return hashCode;
             }
         }
@@ -118,7 +121,7 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             yield break;
         }

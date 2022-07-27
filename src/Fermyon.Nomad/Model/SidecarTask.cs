@@ -133,7 +133,7 @@ namespace Fermyon.Nomad.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class SidecarTask {\n");
             sb.Append("  Config: ").Append(Config).Append("\n");
             sb.Append("  Driver: ").Append(Driver).Append("\n");
@@ -177,8 +177,9 @@ namespace Fermyon.Nomad.Model
         public bool Equals(SidecarTask input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.Config == input.Config ||
@@ -248,25 +249,43 @@ namespace Fermyon.Nomad.Model
             {
                 int hashCode = 41;
                 if (this.Config != null)
-                    hashCode = hashCode * 59 + this.Config.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Config.GetHashCode();
+                }
                 if (this.Driver != null)
-                    hashCode = hashCode * 59 + this.Driver.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Driver.GetHashCode();
+                }
                 if (this.Env != null)
-                    hashCode = hashCode * 59 + this.Env.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Env.GetHashCode();
+                }
                 if (this.KillSignal != null)
-                    hashCode = hashCode * 59 + this.KillSignal.GetHashCode();
-                hashCode = hashCode * 59 + this.KillTimeout.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.KillSignal.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.KillTimeout.GetHashCode();
                 if (this.LogConfig != null)
-                    hashCode = hashCode * 59 + this.LogConfig.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.LogConfig.GetHashCode();
+                }
                 if (this.Meta != null)
-                    hashCode = hashCode * 59 + this.Meta.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Meta.GetHashCode();
+                }
                 if (this.Name != null)
-                    hashCode = hashCode * 59 + this.Name.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Name.GetHashCode();
+                }
                 if (this.Resources != null)
-                    hashCode = hashCode * 59 + this.Resources.GetHashCode();
-                hashCode = hashCode * 59 + this.ShutdownDelay.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Resources.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.ShutdownDelay.GetHashCode();
                 if (this.User != null)
-                    hashCode = hashCode * 59 + this.User.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.User.GetHashCode();
+                }
                 return hashCode;
             }
         }
@@ -276,7 +295,7 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             yield break;
         }
