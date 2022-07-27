@@ -2,7 +2,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 VisualStudioVersion = 12.0.0.0
 MinimumVisualStudioVersion = 10.0.0.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fermyon.Nomad", "src\Fermyon.Nomad\Fermyon.Nomad.csproj", "{2C23111B-CC7B-463E-8AB0-761F1049BF23}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fermyon.Nomad", "src\Fermyon.Nomad\Fermyon.Nomad.csproj", "{33564AE6-E2E9-403D-A5BD-7F810C57DCDD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fermyon.Nomad.Test", "src\Fermyon.Nomad.Test\Fermyon.Nomad.Test.csproj", "{19F1DEBC-DE5E-4517-8062-F000CD499087}"
 EndProject
@@ -12,10 +12,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{2C23111B-CC7B-463E-8AB0-761F1049BF23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2C23111B-CC7B-463E-8AB0-761F1049BF23}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2C23111B-CC7B-463E-8AB0-761F1049BF23}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2C23111B-CC7B-463E-8AB0-761F1049BF23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33564AE6-E2E9-403D-A5BD-7F810C57DCDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33564AE6-E2E9-403D-A5BD-7F810C57DCDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33564AE6-E2E9-403D-A5BD-7F810C57DCDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33564AE6-E2E9-403D-A5BD-7F810C57DCDD}.Release|Any CPU.Build.0 = Release|Any CPU
 		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Release|Any CPU.ActiveCfg = Release|Any CPU
