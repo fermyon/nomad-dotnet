@@ -62,10 +62,10 @@ namespace Fermyon.Nomad.Test.Api
         public void DeleteOperatorRaftPeerTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string region = null;
-            //string _namespace = null;
-            //string xNomadToken = null;
-            //string idempotencyToken = null;
+            //string? region = null;
+            //string? _namespace = null;
+            //string? xNomadToken = null;
+            //string? idempotencyToken = null;
             //instance.DeleteOperatorRaftPeer(region, _namespace, xNomadToken, idempotencyToken);
         }
 
@@ -76,15 +76,15 @@ namespace Fermyon.Nomad.Test.Api
         public void GetOperatorAutopilotConfigurationTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string region = null;
-            //string _namespace = null;
+            //string? region = null;
+            //string? _namespace = null;
             //int? index = null;
-            //string wait = null;
-            //string stale = null;
-            //string prefix = null;
-            //string xNomadToken = null;
+            //string? wait = null;
+            //string? stale = null;
+            //string? prefix = null;
+            //string? xNomadToken = null;
             //int? perPage = null;
-            //string nextToken = null;
+            //string? nextToken = null;
             //var response = instance.GetOperatorAutopilotConfiguration(region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
             //Assert.IsType<AutopilotConfiguration>(response);
         }
@@ -96,15 +96,15 @@ namespace Fermyon.Nomad.Test.Api
         public void GetOperatorAutopilotHealthTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string region = null;
-            //string _namespace = null;
+            //string? region = null;
+            //string? _namespace = null;
             //int? index = null;
-            //string wait = null;
-            //string stale = null;
-            //string prefix = null;
-            //string xNomadToken = null;
+            //string? wait = null;
+            //string? stale = null;
+            //string? prefix = null;
+            //string? xNomadToken = null;
             //int? perPage = null;
-            //string nextToken = null;
+            //string? nextToken = null;
             //var response = instance.GetOperatorAutopilotHealth(region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
             //Assert.IsType<OperatorHealthReply>(response);
         }
@@ -116,15 +116,15 @@ namespace Fermyon.Nomad.Test.Api
         public void GetOperatorRaftConfigurationTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string region = null;
-            //string _namespace = null;
+            //string? region = null;
+            //string? _namespace = null;
             //int? index = null;
-            //string wait = null;
-            //string stale = null;
-            //string prefix = null;
-            //string xNomadToken = null;
+            //string? wait = null;
+            //string? stale = null;
+            //string? prefix = null;
+            //string? xNomadToken = null;
             //int? perPage = null;
-            //string nextToken = null;
+            //string? nextToken = null;
             //var response = instance.GetOperatorRaftConfiguration(region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
             //Assert.IsType<RaftConfiguration>(response);
         }
@@ -136,15 +136,15 @@ namespace Fermyon.Nomad.Test.Api
         public void GetOperatorSchedulerConfigurationTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string region = null;
-            //string _namespace = null;
+            //string? region = null;
+            //string? _namespace = null;
             //int? index = null;
-            //string wait = null;
-            //string stale = null;
-            //string prefix = null;
-            //string xNomadToken = null;
+            //string? wait = null;
+            //string? stale = null;
+            //string? prefix = null;
+            //string? xNomadToken = null;
             //int? perPage = null;
-            //string nextToken = null;
+            //string? nextToken = null;
             //var response = instance.GetOperatorSchedulerConfiguration(region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
             //Assert.IsType<SchedulerConfigurationResponse>(response);
         }
@@ -157,10 +157,10 @@ namespace Fermyon.Nomad.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //SchedulerConfiguration schedulerConfiguration = null;
-            //string region = null;
-            //string _namespace = null;
-            //string xNomadToken = null;
-            //string idempotencyToken = null;
+            //string? region = null;
+            //string? _namespace = null;
+            //string? xNomadToken = null;
+            //string? idempotencyToken = null;
             //var response = instance.PostOperatorSchedulerConfiguration(schedulerConfiguration, region, _namespace, xNomadToken, idempotencyToken);
             //Assert.IsType<SchedulerSetConfigurationResponse>(response);
         }
@@ -173,10 +173,10 @@ namespace Fermyon.Nomad.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //AutopilotConfiguration autopilotConfiguration = null;
-            //string region = null;
-            //string _namespace = null;
-            //string xNomadToken = null;
-            //string idempotencyToken = null;
+            //string? region = null;
+            //string? _namespace = null;
+            //string? xNomadToken = null;
+            //string? idempotencyToken = null;
             //var response = instance.PutOperatorAutopilotConfiguration(autopilotConfiguration, region, _namespace, xNomadToken, idempotencyToken);
             //Assert.IsType<bool>(response);
         }
