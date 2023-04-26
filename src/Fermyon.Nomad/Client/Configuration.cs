@@ -32,7 +32,7 @@ namespace Fermyon.Nomad.Client
         /// Version of the package.
         /// </summary>
         /// <value>Version of the package.</value>
-        public const string Version = "0.3.0";
+        public const string Version = "0.4.0";
 
         /// <summary>
         /// Identifier for ISO 8601 DateTime Format
@@ -114,7 +114,7 @@ namespace Fermyon.Nomad.Client
         public Configuration()
         {
             Proxy = null;
-            UserAgent = "OpenAPI-Generator/0.3.0/csharp";
+            UserAgent = "OpenAPI-Generator/0.4.0/csharp";
             BasePath = "https://127.0.0.1:4646/v1";
             DefaultHeaders = new ConcurrentDictionary<string, string>();
             ApiKey = new ConcurrentDictionary<string, string>();
@@ -242,7 +242,8 @@ namespace Fermyon.Nomad.Client
         /// <summary>
         /// Gets or sets the base path for API access.
         /// </summary>
-        public virtual string BasePath {
+        public virtual string BasePath
+        {
             get { return _basePath; }
             set { _basePath = value; }
         }
@@ -588,9 +589,9 @@ namespace Fermyon.Nomad.Client
         {
             string report = "C# SDK (Fermyon.Nomad) Debug Report:\n";
             report += "    OS: " + System.Environment.OSVersion + "\n";
-            report += "    .NET Framework Version: " + System.Environment.Version  + "\n";
+            report += "    .NET Framework Version: " + System.Environment.Version + "\n";
             report += "    Version of the API: 1.1.4\n";
-            report += "    SDK Package Version: 0.3.0\n";
+            report += "    SDK Package Version: 0.4.0\n";
 
             return report;
         }

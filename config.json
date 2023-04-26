@@ -5,7 +5,7 @@
 	"packageCompany": "Fermyon",
 	"gitRepoId": "nomad-dotnet",
 	"gitUserId": "fermyon",
-	"packageVersion": "0.3.0",
+	"packageVersion": "0.4.0",
 	"targetFramework": "net6.0",
 	"licenseId": "Apache-2.0"
 }
