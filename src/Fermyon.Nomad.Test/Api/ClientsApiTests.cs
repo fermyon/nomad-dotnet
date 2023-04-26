@@ -67,7 +67,7 @@ namespace Fermyon.Nomad.Test.Api
             //string allocID = null;
             //bool? follow = null;
             //int? offset = null;
-            //string origin = null;
+            //string? origin = null;
             //bool? plain = null;
             //var response = instance.GetAllocationLogs(task, type, allocID, follow, offset, origin, plain);
             //Assert.IsType<AllocationLogs>(response);

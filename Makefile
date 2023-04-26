@@ -1,4 +1,4 @@
-DOCKER_IMAGE="openapitools/openapi-generator-cli"
+DOCKER_IMAGE="openapitools/openapi-generator-cli:v6.1.0"
 PACKAGE_NAME="nomad-dotnet"
 
 src tests: openapi.yaml templates

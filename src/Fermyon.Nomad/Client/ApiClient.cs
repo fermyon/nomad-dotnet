@@ -652,6 +652,11 @@ namespace Fermyon.Nomad.Client
                 client.ClientCertificates = configuration.ClientCertificates;
             }
 
+            if (configuration.CertificateAuthorities != null)
+            {
+                client.RemoteCertificateValidationCallback = CreateCustomRootRemoteValidator(configuration.CertificateAuthorities);
+            }
+
             InterceptRequest(req);
 
             IRestResponse<T> response;

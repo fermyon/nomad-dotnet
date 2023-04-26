@@ -65,10 +65,10 @@ namespace Fermyon.Nomad.Test.Api
             //string volumeId = null;
             //string action = null;
             //CSIVolumeCreateRequest cSIVolumeCreateRequest = null;
-            //string region = null;
-            //string _namespace = null;
-            //string xNomadToken = null;
-            //string idempotencyToken = null;
+            //string? region = null;
+            //string? _namespace = null;
+            //string? xNomadToken = null;
+            //string? idempotencyToken = null;
             //instance.CreateVolume(volumeId, action, cSIVolumeCreateRequest, region, _namespace, xNomadToken, idempotencyToken);
         }
 
@@ -79,12 +79,12 @@ namespace Fermyon.Nomad.Test.Api
         public void DeleteSnapshotTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string region = null;
-            //string _namespace = null;
-            //string xNomadToken = null;
-            //string idempotencyToken = null;
-            //string pluginId = null;
-            //string snapshotId = null;
+            //string? region = null;
+            //string? _namespace = null;
+            //string? xNomadToken = null;
+            //string? idempotencyToken = null;
+            //string? pluginId = null;
+            //string? snapshotId = null;
             //instance.DeleteSnapshot(region, _namespace, xNomadToken, idempotencyToken, pluginId, snapshotId);
         }
 
@@ -96,11 +96,11 @@ namespace Fermyon.Nomad.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string volumeId = null;
-            //string region = null;
-            //string _namespace = null;
-            //string xNomadToken = null;
-            //string idempotencyToken = null;
-            //string force = null;
+            //string? region = null;
+            //string? _namespace = null;
+            //string? xNomadToken = null;
+            //string? idempotencyToken = null;
+            //string? force = null;
             //instance.DeleteVolumeRegistration(volumeId, region, _namespace, xNomadToken, idempotencyToken, force);
         }
 
@@ -113,11 +113,11 @@ namespace Fermyon.Nomad.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string volumeId = null;
             //string action = null;
-            //string region = null;
-            //string _namespace = null;
-            //string xNomadToken = null;
-            //string idempotencyToken = null;
-            //string node = null;
+            //string? region = null;
+            //string? _namespace = null;
+            //string? xNomadToken = null;
+            //string? idempotencyToken = null;
+            //string? node = null;
             //instance.DetachOrDeleteVolume(volumeId, action, region, _namespace, xNomadToken, idempotencyToken, node);
         }
 
@@ -128,16 +128,16 @@ namespace Fermyon.Nomad.Test.Api
         public void GetExternalVolumesTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string region = null;
-            //string _namespace = null;
+            //string? region = null;
+            //string? _namespace = null;
             //int? index = null;
-            //string wait = null;
-            //string stale = null;
-            //string prefix = null;
-            //string xNomadToken = null;
+            //string? wait = null;
+            //string? stale = null;
+            //string? prefix = null;
+            //string? xNomadToken = null;
             //int? perPage = null;
-            //string nextToken = null;
-            //string pluginId = null;
+            //string? nextToken = null;
+            //string? pluginId = null;
             //var response = instance.GetExternalVolumes(region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, pluginId);
             //Assert.IsType<CSIVolumeListExternalResponse>(response);
         }
@@ -149,16 +149,16 @@ namespace Fermyon.Nomad.Test.Api
         public void GetSnapshotsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string region = null;
-            //string _namespace = null;
+            //string? region = null;
+            //string? _namespace = null;
             //int? index = null;
-            //string wait = null;
-            //string stale = null;
-            //string prefix = null;
-            //string xNomadToken = null;
+            //string? wait = null;
+            //string? stale = null;
+            //string? prefix = null;
+            //string? xNomadToken = null;
             //int? perPage = null;
-            //string nextToken = null;
-            //string pluginId = null;
+            //string? nextToken = null;
+            //string? pluginId = null;
             //var response = instance.GetSnapshots(region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, pluginId);
             //Assert.IsType<CSISnapshotListResponse>(response);
         }
@@ -171,15 +171,15 @@ namespace Fermyon.Nomad.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string volumeId = null;
-            //string region = null;
-            //string _namespace = null;
+            //string? region = null;
+            //string? _namespace = null;
             //int? index = null;
-            //string wait = null;
-            //string stale = null;
-            //string prefix = null;
-            //string xNomadToken = null;
+            //string? wait = null;
+            //string? stale = null;
+            //string? prefix = null;
+            //string? xNomadToken = null;
             //int? perPage = null;
-            //string nextToken = null;
+            //string? nextToken = null;
             //var response = instance.GetVolume(volumeId, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
             //Assert.IsType<CSIVolume>(response);
         }
@@ -191,18 +191,18 @@ namespace Fermyon.Nomad.Test.Api
         public void GetVolumesTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string region = null;
-            //string _namespace = null;
+            //string? region = null;
+            //string? _namespace = null;
             //int? index = null;
-            //string wait = null;
-            //string stale = null;
-            //string prefix = null;
-            //string xNomadToken = null;
+            //string? wait = null;
+            //string? stale = null;
+            //string? prefix = null;
+            //string? xNomadToken = null;
             //int? perPage = null;
-            //string nextToken = null;
-            //string nodeId = null;
-            //string pluginId = null;
-            //string type = null;
+            //string? nextToken = null;
+            //string? nodeId = null;
+            //string? pluginId = null;
+            //string? type = null;
             //var response = instance.GetVolumes(region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, nodeId, pluginId, type);
             //Assert.IsType<List<CSIVolumeListStub>>(response);
         }
@@ -215,10 +215,10 @@ namespace Fermyon.Nomad.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //CSISnapshotCreateRequest cSISnapshotCreateRequest = null;
-            //string region = null;
-            //string _namespace = null;
-            //string xNomadToken = null;
-            //string idempotencyToken = null;
+            //string? region = null;
+            //string? _namespace = null;
+            //string? xNomadToken = null;
+            //string? idempotencyToken = null;
             //var response = instance.PostSnapshot(cSISnapshotCreateRequest, region, _namespace, xNomadToken, idempotencyToken);
             //Assert.IsType<CSISnapshotCreateResponse>(response);
         }
@@ -231,10 +231,10 @@ namespace Fermyon.Nomad.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //CSIVolumeRegisterRequest cSIVolumeRegisterRequest = null;
-            //string region = null;
-            //string _namespace = null;
-            //string xNomadToken = null;
-            //string idempotencyToken = null;
+            //string? region = null;
+            //string? _namespace = null;
+            //string? xNomadToken = null;
+            //string? idempotencyToken = null;
             //instance.PostVolume(cSIVolumeRegisterRequest, region, _namespace, xNomadToken, idempotencyToken);
         }
 
@@ -247,10 +247,10 @@ namespace Fermyon.Nomad.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string volumeId = null;
             //CSIVolumeRegisterRequest cSIVolumeRegisterRequest = null;
-            //string region = null;
-            //string _namespace = null;
-            //string xNomadToken = null;
-            //string idempotencyToken = null;
+            //string? region = null;
+            //string? _namespace = null;
+            //string? xNomadToken = null;
+            //string? idempotencyToken = null;
             //instance.PostVolumeRegistration(volumeId, cSIVolumeRegisterRequest, region, _namespace, xNomadToken, idempotencyToken);
         }
     }

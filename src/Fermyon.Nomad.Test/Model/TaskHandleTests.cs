@@ -66,12 +66,12 @@ namespace Fermyon.Nomad.Test.Model
             // TODO unit test for the property 'DriverState'
         }
         /// <summary>
-        /// Test the property 'Version'
+        /// Test the property '_Version'
         /// </summary>
         [Fact]
-        public void VersionTest()
+        public void _VersionTest()
         {
-            // TODO unit test for the property 'Version'
+            // TODO unit test for the property '_Version'
         }
 
     }
