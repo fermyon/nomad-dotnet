@@ -40,17 +40,17 @@ namespace Fermyon.Nomad.Model
         /// <param name="mountOptions">mountOptions.</param>
         /// <param name="name">name.</param>
         /// <param name="perAlloc">perAlloc.</param>
-        /// <param name="readOnly">readOnly.</param>
+        /// <param name="varReadOnly">varReadOnly.</param>
         /// <param name="source">source.</param>
         /// <param name="type">type.</param>
-        public VolumeRequest(string accessMode = default(string), string attachmentMode = default(string), CSIMountOptions mountOptions = default(CSIMountOptions), string name = default(string), bool perAlloc = default(bool), bool readOnly = default(bool), string source = default(string), string type = default(string))
+        public VolumeRequest(string accessMode = default(string), string attachmentMode = default(string), CSIMountOptions mountOptions = default(CSIMountOptions), string name = default(string), bool perAlloc = default(bool), bool varReadOnly = default(bool), string source = default(string), string type = default(string))
         {
             this.AccessMode = accessMode;
             this.AttachmentMode = attachmentMode;
             this.MountOptions = mountOptions;
             this.Name = name;
             this.PerAlloc = perAlloc;
-            this.ReadOnly = readOnly;
+            this.VarReadOnly = varReadOnly;
             this.Source = source;
             this.Type = type;
         }
@@ -86,10 +86,10 @@ namespace Fermyon.Nomad.Model
         public bool PerAlloc { get; set; }
 
         /// <summary>
-        /// Gets or Sets ReadOnly
+        /// Gets or Sets VarReadOnly
         /// </summary>
         [DataMember(Name = "ReadOnly", EmitDefaultValue = true)]
-        public bool ReadOnly { get; set; }
+        public bool VarReadOnly { get; set; }
 
         /// <summary>
         /// Gets or Sets Source
@@ -116,7 +116,7 @@ namespace Fermyon.Nomad.Model
             sb.Append("  MountOptions: ").Append(MountOptions).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  PerAlloc: ").Append(PerAlloc).Append("\n");
-            sb.Append("  ReadOnly: ").Append(ReadOnly).Append("\n");
+            sb.Append("  VarReadOnly: ").Append(VarReadOnly).Append("\n");
             sb.Append("  Source: ").Append(Source).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("}\n");
@@ -179,8 +179,8 @@ namespace Fermyon.Nomad.Model
                     this.PerAlloc.Equals(input.PerAlloc)
                 ) && 
                 (
-                    this.ReadOnly == input.ReadOnly ||
-                    this.ReadOnly.Equals(input.ReadOnly)
+                    this.VarReadOnly == input.VarReadOnly ||
+                    this.VarReadOnly.Equals(input.VarReadOnly)
                 ) && 
                 (
                     this.Source == input.Source ||
@@ -220,7 +220,7 @@ namespace Fermyon.Nomad.Model
                     hashCode = (hashCode * 59) + this.Name.GetHashCode();
                 }
                 hashCode = (hashCode * 59) + this.PerAlloc.GetHashCode();
-                hashCode = (hashCode * 59) + this.ReadOnly.GetHashCode();
+                hashCode = (hashCode * 59) + this.VarReadOnly.GetHashCode();
                 if (this.Source != null)
                 {
                     hashCode = (hashCode * 59) + this.Source.GetHashCode();
@@ -238,7 +238,7 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

@@ -15,7 +15,6 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Collections.Generic;
-using Fermyon.Nomad.Api;
 using Fermyon.Nomad.Model;
 using Fermyon.Nomad.Client;
 using System.Reflection;
@@ -56,7 +55,6 @@ namespace Fermyon.Nomad.Test.Model
             //Assert.IsType<MetricsSummary>(instance);
         }
 
-
         /// <summary>
         /// Test the property 'Counters'
         /// </summary>
@@ -65,6 +63,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Counters'
         }
+
         /// <summary>
         /// Test the property 'Gauges'
         /// </summary>
@@ -73,6 +72,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Gauges'
         }
+
         /// <summary>
         /// Test the property 'Points'
         /// </summary>
@@ -81,6 +81,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Points'
         }
+
         /// <summary>
         /// Test the property 'Samples'
         /// </summary>
@@ -89,6 +90,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Samples'
         }
+
         /// <summary>
         /// Test the property 'Timestamp'
         /// </summary>
@@ -97,7 +99,5 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Timestamp'
         }
-
     }
-
 }

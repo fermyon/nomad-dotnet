@@ -15,7 +15,6 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Collections.Generic;
-using Fermyon.Nomad.Api;
 using Fermyon.Nomad.Model;
 using Fermyon.Nomad.Client;
 using System.Reflection;
@@ -56,7 +55,6 @@ namespace Fermyon.Nomad.Test.Model
             //Assert.IsType<ScalingEvent>(instance);
         }
 
-
         /// <summary>
         /// Test the property 'Count'
         /// </summary>
@@ -65,6 +63,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Count'
         }
+
         /// <summary>
         /// Test the property 'CreateIndex'
         /// </summary>
@@ -73,6 +72,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'CreateIndex'
         }
+
         /// <summary>
         /// Test the property 'Error'
         /// </summary>
@@ -81,6 +81,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Error'
         }
+
         /// <summary>
         /// Test the property 'EvalID'
         /// </summary>
@@ -89,6 +90,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'EvalID'
         }
+
         /// <summary>
         /// Test the property 'Message'
         /// </summary>
@@ -97,6 +99,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Message'
         }
+
         /// <summary>
         /// Test the property 'Meta'
         /// </summary>
@@ -105,6 +108,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Meta'
         }
+
         /// <summary>
         /// Test the property 'PreviousCount'
         /// </summary>
@@ -113,6 +117,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'PreviousCount'
         }
+
         /// <summary>
         /// Test the property 'Time'
         /// </summary>
@@ -121,7 +126,5 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Time'
         }
-
     }
-
 }

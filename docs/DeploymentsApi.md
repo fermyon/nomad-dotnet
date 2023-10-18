@@ -13,9 +13,9 @@ All URIs are relative to *https://127.0.0.1:4646/v1*
 | [**PostDeploymentPromote**](DeploymentsApi.md#postdeploymentpromote) | **POST** /deployment/promote/{deploymentID} |  |
 | [**PostDeploymentUnblock**](DeploymentsApi.md#postdeploymentunblock) | **POST** /deployment/unblock/{deploymentID} |  |
 
-<a name="getdeployment"></a>
+<a id="getdeployment"></a>
 # **GetDeployment**
-> Deployment GetDeployment (string deploymentID, string? region = null, string? _namespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null)
+> Deployment GetDeployment (string deploymentID, string? region = null, string? varNamespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null)
 
 
 
@@ -43,7 +43,7 @@ namespace Example
             var apiInstance = new DeploymentsApi(config);
             var deploymentID = "deploymentID_example";  // string | Deployment ID.
             var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var varNamespace = "varNamespace_example";  // string? | Filters results based on the specified namespace. (optional) 
             var index = 56;  // int? | If set, wait until query exceeds given index. Must be provided with WaitParam. (optional) 
             var wait = "wait_example";  // string? | Provided with IndexParam to wait for change. (optional) 
             var stale = "stale_example";  // string? | If present, results will include stale reads. (optional) 
@@ -54,7 +54,7 @@ namespace Example
 
             try
             {
-                Deployment result = apiInstance.GetDeployment(deploymentID, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+                Deployment result = apiInstance.GetDeployment(deploymentID, region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -74,7 +74,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Deployment> response = apiInstance.GetDeploymentWithHttpInfo(deploymentID, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+    ApiResponse<Deployment> response = apiInstance.GetDeploymentWithHttpInfo(deploymentID, region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -93,7 +93,7 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **deploymentID** | **string** | Deployment ID. |  |
 | **region** | **string?** | Filters results based on the specified region. | [optional]  |
-| **_namespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
+| **varNamespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
 | **index** | **int?** | If set, wait until query exceeds given index. Must be provided with WaitParam. | [optional]  |
 | **wait** | **string?** | Provided with IndexParam to wait for change. | [optional]  |
 | **stale** | **string?** | If present, results will include stale reads. | [optional]  |
@@ -127,9 +127,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="getdeploymentallocations"></a>
+<a id="getdeploymentallocations"></a>
 # **GetDeploymentAllocations**
-> List&lt;AllocationListStub&gt; GetDeploymentAllocations (string deploymentID, string? region = null, string? _namespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null)
+> List&lt;AllocationListStub&gt; GetDeploymentAllocations (string deploymentID, string? region = null, string? varNamespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null)
 
 
 
@@ -157,7 +157,7 @@ namespace Example
             var apiInstance = new DeploymentsApi(config);
             var deploymentID = "deploymentID_example";  // string | Deployment ID.
             var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var varNamespace = "varNamespace_example";  // string? | Filters results based on the specified namespace. (optional) 
             var index = 56;  // int? | If set, wait until query exceeds given index. Must be provided with WaitParam. (optional) 
             var wait = "wait_example";  // string? | Provided with IndexParam to wait for change. (optional) 
             var stale = "stale_example";  // string? | If present, results will include stale reads. (optional) 
@@ -168,7 +168,7 @@ namespace Example
 
             try
             {
-                List<AllocationListStub> result = apiInstance.GetDeploymentAllocations(deploymentID, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+                List<AllocationListStub> result = apiInstance.GetDeploymentAllocations(deploymentID, region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -188,7 +188,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<List<AllocationListStub>> response = apiInstance.GetDeploymentAllocationsWithHttpInfo(deploymentID, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+    ApiResponse<List<AllocationListStub>> response = apiInstance.GetDeploymentAllocationsWithHttpInfo(deploymentID, region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -207,7 +207,7 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **deploymentID** | **string** | Deployment ID. |  |
 | **region** | **string?** | Filters results based on the specified region. | [optional]  |
-| **_namespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
+| **varNamespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
 | **index** | **int?** | If set, wait until query exceeds given index. Must be provided with WaitParam. | [optional]  |
 | **wait** | **string?** | Provided with IndexParam to wait for change. | [optional]  |
 | **stale** | **string?** | If present, results will include stale reads. | [optional]  |
@@ -241,9 +241,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="getdeployments"></a>
+<a id="getdeployments"></a>
 # **GetDeployments**
-> List&lt;Deployment&gt; GetDeployments (string? region = null, string? _namespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null)
+> List&lt;Deployment&gt; GetDeployments (string? region = null, string? varNamespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null)
 
 
 
@@ -270,7 +270,7 @@ namespace Example
 
             var apiInstance = new DeploymentsApi(config);
             var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var varNamespace = "varNamespace_example";  // string? | Filters results based on the specified namespace. (optional) 
             var index = 56;  // int? | If set, wait until query exceeds given index. Must be provided with WaitParam. (optional) 
             var wait = "wait_example";  // string? | Provided with IndexParam to wait for change. (optional) 
             var stale = "stale_example";  // string? | If present, results will include stale reads. (optional) 
@@ -281,7 +281,7 @@ namespace Example
 
             try
             {
-                List<Deployment> result = apiInstance.GetDeployments(region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+                List<Deployment> result = apiInstance.GetDeployments(region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -301,7 +301,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<List<Deployment>> response = apiInstance.GetDeploymentsWithHttpInfo(region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+    ApiResponse<List<Deployment>> response = apiInstance.GetDeploymentsWithHttpInfo(region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -319,7 +319,7 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **region** | **string?** | Filters results based on the specified region. | [optional]  |
-| **_namespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
+| **varNamespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
 | **index** | **int?** | If set, wait until query exceeds given index. Must be provided with WaitParam. | [optional]  |
 | **wait** | **string?** | Provided with IndexParam to wait for change. | [optional]  |
 | **stale** | **string?** | If present, results will include stale reads. | [optional]  |
@@ -353,9 +353,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="postdeploymentallocationhealth"></a>
+<a id="postdeploymentallocationhealth"></a>
 # **PostDeploymentAllocationHealth**
-> DeploymentUpdateResponse PostDeploymentAllocationHealth (string deploymentID, DeploymentAllocHealthRequest deploymentAllocHealthRequest, string? region = null, string? _namespace = null, string? xNomadToken = null, string? idempotencyToken = null)
+> DeploymentUpdateResponse PostDeploymentAllocationHealth (string deploymentID, DeploymentAllocHealthRequest deploymentAllocHealthRequest, string? region = null, string? varNamespace = null, string? xNomadToken = null, string? idempotencyToken = null)
 
 
 
@@ -384,13 +384,13 @@ namespace Example
             var deploymentID = "deploymentID_example";  // string | Deployment ID.
             var deploymentAllocHealthRequest = new DeploymentAllocHealthRequest(); // DeploymentAllocHealthRequest | 
             var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var varNamespace = "varNamespace_example";  // string? | Filters results based on the specified namespace. (optional) 
             var xNomadToken = "xNomadToken_example";  // string? | A Nomad ACL token. (optional) 
             var idempotencyToken = "idempotencyToken_example";  // string? | Can be used to ensure operations are only run once. (optional) 
 
             try
             {
-                DeploymentUpdateResponse result = apiInstance.PostDeploymentAllocationHealth(deploymentID, deploymentAllocHealthRequest, region, _namespace, xNomadToken, idempotencyToken);
+                DeploymentUpdateResponse result = apiInstance.PostDeploymentAllocationHealth(deploymentID, deploymentAllocHealthRequest, region, varNamespace, xNomadToken, idempotencyToken);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -410,7 +410,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<DeploymentUpdateResponse> response = apiInstance.PostDeploymentAllocationHealthWithHttpInfo(deploymentID, deploymentAllocHealthRequest, region, _namespace, xNomadToken, idempotencyToken);
+    ApiResponse<DeploymentUpdateResponse> response = apiInstance.PostDeploymentAllocationHealthWithHttpInfo(deploymentID, deploymentAllocHealthRequest, region, varNamespace, xNomadToken, idempotencyToken);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -430,7 +430,7 @@ catch (ApiException e)
 | **deploymentID** | **string** | Deployment ID. |  |
 | **deploymentAllocHealthRequest** | [**DeploymentAllocHealthRequest**](DeploymentAllocHealthRequest.md) |  |  |
 | **region** | **string?** | Filters results based on the specified region. | [optional]  |
-| **_namespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
+| **varNamespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
 | **xNomadToken** | **string?** | A Nomad ACL token. | [optional]  |
 | **idempotencyToken** | **string?** | Can be used to ensure operations are only run once. | [optional]  |
 
@@ -459,9 +459,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="postdeploymentfail"></a>
+<a id="postdeploymentfail"></a>
 # **PostDeploymentFail**
-> DeploymentUpdateResponse PostDeploymentFail (string deploymentID, string? region = null, string? _namespace = null, string? xNomadToken = null, string? idempotencyToken = null)
+> DeploymentUpdateResponse PostDeploymentFail (string deploymentID, string? region = null, string? varNamespace = null, string? xNomadToken = null, string? idempotencyToken = null)
 
 
 
@@ -489,13 +489,13 @@ namespace Example
             var apiInstance = new DeploymentsApi(config);
             var deploymentID = "deploymentID_example";  // string | Deployment ID.
             var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var varNamespace = "varNamespace_example";  // string? | Filters results based on the specified namespace. (optional) 
             var xNomadToken = "xNomadToken_example";  // string? | A Nomad ACL token. (optional) 
             var idempotencyToken = "idempotencyToken_example";  // string? | Can be used to ensure operations are only run once. (optional) 
 
             try
             {
-                DeploymentUpdateResponse result = apiInstance.PostDeploymentFail(deploymentID, region, _namespace, xNomadToken, idempotencyToken);
+                DeploymentUpdateResponse result = apiInstance.PostDeploymentFail(deploymentID, region, varNamespace, xNomadToken, idempotencyToken);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -515,7 +515,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<DeploymentUpdateResponse> response = apiInstance.PostDeploymentFailWithHttpInfo(deploymentID, region, _namespace, xNomadToken, idempotencyToken);
+    ApiResponse<DeploymentUpdateResponse> response = apiInstance.PostDeploymentFailWithHttpInfo(deploymentID, region, varNamespace, xNomadToken, idempotencyToken);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -534,7 +534,7 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **deploymentID** | **string** | Deployment ID. |  |
 | **region** | **string?** | Filters results based on the specified region. | [optional]  |
-| **_namespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
+| **varNamespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
 | **xNomadToken** | **string?** | A Nomad ACL token. | [optional]  |
 | **idempotencyToken** | **string?** | Can be used to ensure operations are only run once. | [optional]  |
 
@@ -563,9 +563,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="postdeploymentpause"></a>
+<a id="postdeploymentpause"></a>
 # **PostDeploymentPause**
-> DeploymentUpdateResponse PostDeploymentPause (string deploymentID, DeploymentPauseRequest deploymentPauseRequest, string? region = null, string? _namespace = null, string? xNomadToken = null, string? idempotencyToken = null)
+> DeploymentUpdateResponse PostDeploymentPause (string deploymentID, DeploymentPauseRequest deploymentPauseRequest, string? region = null, string? varNamespace = null, string? xNomadToken = null, string? idempotencyToken = null)
 
 
 
@@ -594,13 +594,13 @@ namespace Example
             var deploymentID = "deploymentID_example";  // string | Deployment ID.
             var deploymentPauseRequest = new DeploymentPauseRequest(); // DeploymentPauseRequest | 
             var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var varNamespace = "varNamespace_example";  // string? | Filters results based on the specified namespace. (optional) 
             var xNomadToken = "xNomadToken_example";  // string? | A Nomad ACL token. (optional) 
             var idempotencyToken = "idempotencyToken_example";  // string? | Can be used to ensure operations are only run once. (optional) 
 
             try
             {
-                DeploymentUpdateResponse result = apiInstance.PostDeploymentPause(deploymentID, deploymentPauseRequest, region, _namespace, xNomadToken, idempotencyToken);
+                DeploymentUpdateResponse result = apiInstance.PostDeploymentPause(deploymentID, deploymentPauseRequest, region, varNamespace, xNomadToken, idempotencyToken);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -620,7 +620,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<DeploymentUpdateResponse> response = apiInstance.PostDeploymentPauseWithHttpInfo(deploymentID, deploymentPauseRequest, region, _namespace, xNomadToken, idempotencyToken);
+    ApiResponse<DeploymentUpdateResponse> response = apiInstance.PostDeploymentPauseWithHttpInfo(deploymentID, deploymentPauseRequest, region, varNamespace, xNomadToken, idempotencyToken);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -640,7 +640,7 @@ catch (ApiException e)
 | **deploymentID** | **string** | Deployment ID. |  |
 | **deploymentPauseRequest** | [**DeploymentPauseRequest**](DeploymentPauseRequest.md) |  |  |
 | **region** | **string?** | Filters results based on the specified region. | [optional]  |
-| **_namespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
+| **varNamespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
 | **xNomadToken** | **string?** | A Nomad ACL token. | [optional]  |
 | **idempotencyToken** | **string?** | Can be used to ensure operations are only run once. | [optional]  |
 
@@ -669,9 +669,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="postdeploymentpromote"></a>
+<a id="postdeploymentpromote"></a>
 # **PostDeploymentPromote**
-> DeploymentUpdateResponse PostDeploymentPromote (string deploymentID, DeploymentPromoteRequest deploymentPromoteRequest, string? region = null, string? _namespace = null, string? xNomadToken = null, string? idempotencyToken = null)
+> DeploymentUpdateResponse PostDeploymentPromote (string deploymentID, DeploymentPromoteRequest deploymentPromoteRequest, string? region = null, string? varNamespace = null, string? xNomadToken = null, string? idempotencyToken = null)
 
 
 
@@ -700,13 +700,13 @@ namespace Example
             var deploymentID = "deploymentID_example";  // string | Deployment ID.
             var deploymentPromoteRequest = new DeploymentPromoteRequest(); // DeploymentPromoteRequest | 
             var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var varNamespace = "varNamespace_example";  // string? | Filters results based on the specified namespace. (optional) 
             var xNomadToken = "xNomadToken_example";  // string? | A Nomad ACL token. (optional) 
             var idempotencyToken = "idempotencyToken_example";  // string? | Can be used to ensure operations are only run once. (optional) 
 
             try
             {
-                DeploymentUpdateResponse result = apiInstance.PostDeploymentPromote(deploymentID, deploymentPromoteRequest, region, _namespace, xNomadToken, idempotencyToken);
+                DeploymentUpdateResponse result = apiInstance.PostDeploymentPromote(deploymentID, deploymentPromoteRequest, region, varNamespace, xNomadToken, idempotencyToken);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -726,7 +726,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<DeploymentUpdateResponse> response = apiInstance.PostDeploymentPromoteWithHttpInfo(deploymentID, deploymentPromoteRequest, region, _namespace, xNomadToken, idempotencyToken);
+    ApiResponse<DeploymentUpdateResponse> response = apiInstance.PostDeploymentPromoteWithHttpInfo(deploymentID, deploymentPromoteRequest, region, varNamespace, xNomadToken, idempotencyToken);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -746,7 +746,7 @@ catch (ApiException e)
 | **deploymentID** | **string** | Deployment ID. |  |
 | **deploymentPromoteRequest** | [**DeploymentPromoteRequest**](DeploymentPromoteRequest.md) |  |  |
 | **region** | **string?** | Filters results based on the specified region. | [optional]  |
-| **_namespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
+| **varNamespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
 | **xNomadToken** | **string?** | A Nomad ACL token. | [optional]  |
 | **idempotencyToken** | **string?** | Can be used to ensure operations are only run once. | [optional]  |
 
@@ -775,9 +775,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="postdeploymentunblock"></a>
+<a id="postdeploymentunblock"></a>
 # **PostDeploymentUnblock**
-> DeploymentUpdateResponse PostDeploymentUnblock (string deploymentID, DeploymentUnblockRequest deploymentUnblockRequest, string? region = null, string? _namespace = null, string? xNomadToken = null, string? idempotencyToken = null)
+> DeploymentUpdateResponse PostDeploymentUnblock (string deploymentID, DeploymentUnblockRequest deploymentUnblockRequest, string? region = null, string? varNamespace = null, string? xNomadToken = null, string? idempotencyToken = null)
 
 
 
@@ -806,13 +806,13 @@ namespace Example
             var deploymentID = "deploymentID_example";  // string | Deployment ID.
             var deploymentUnblockRequest = new DeploymentUnblockRequest(); // DeploymentUnblockRequest | 
             var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var varNamespace = "varNamespace_example";  // string? | Filters results based on the specified namespace. (optional) 
             var xNomadToken = "xNomadToken_example";  // string? | A Nomad ACL token. (optional) 
             var idempotencyToken = "idempotencyToken_example";  // string? | Can be used to ensure operations are only run once. (optional) 
 
             try
             {
-                DeploymentUpdateResponse result = apiInstance.PostDeploymentUnblock(deploymentID, deploymentUnblockRequest, region, _namespace, xNomadToken, idempotencyToken);
+                DeploymentUpdateResponse result = apiInstance.PostDeploymentUnblock(deploymentID, deploymentUnblockRequest, region, varNamespace, xNomadToken, idempotencyToken);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -832,7 +832,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<DeploymentUpdateResponse> response = apiInstance.PostDeploymentUnblockWithHttpInfo(deploymentID, deploymentUnblockRequest, region, _namespace, xNomadToken, idempotencyToken);
+    ApiResponse<DeploymentUpdateResponse> response = apiInstance.PostDeploymentUnblockWithHttpInfo(deploymentID, deploymentUnblockRequest, region, varNamespace, xNomadToken, idempotencyToken);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -852,7 +852,7 @@ catch (ApiException e)
 | **deploymentID** | **string** | Deployment ID. |  |
 | **deploymentUnblockRequest** | [**DeploymentUnblockRequest**](DeploymentUnblockRequest.md) |  |  |
 | **region** | **string?** | Filters results based on the specified region. | [optional]  |
-| **_namespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
+| **varNamespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
 | **xNomadToken** | **string?** | A Nomad ACL token. | [optional]  |
 | **idempotencyToken** | **string?** | Can be used to ensure operations are only run once. | [optional]  |
 

@@ -7,9 +7,9 @@ All URIs are relative to *https://127.0.0.1:4646/v1*
 | [**GetStatusLeader**](StatusApi.md#getstatusleader) | **GET** /status/leader |  |
 | [**GetStatusPeers**](StatusApi.md#getstatuspeers) | **GET** /status/peers |  |
 
-<a name="getstatusleader"></a>
+<a id="getstatusleader"></a>
 # **GetStatusLeader**
-> string GetStatusLeader (string? region = null, string? _namespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null)
+> string GetStatusLeader (string? region = null, string? varNamespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null)
 
 
 
@@ -36,7 +36,7 @@ namespace Example
 
             var apiInstance = new StatusApi(config);
             var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var varNamespace = "varNamespace_example";  // string? | Filters results based on the specified namespace. (optional) 
             var index = 56;  // int? | If set, wait until query exceeds given index. Must be provided with WaitParam. (optional) 
             var wait = "wait_example";  // string? | Provided with IndexParam to wait for change. (optional) 
             var stale = "stale_example";  // string? | If present, results will include stale reads. (optional) 
@@ -47,7 +47,7 @@ namespace Example
 
             try
             {
-                string result = apiInstance.GetStatusLeader(region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+                string result = apiInstance.GetStatusLeader(region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -67,7 +67,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<string> response = apiInstance.GetStatusLeaderWithHttpInfo(region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+    ApiResponse<string> response = apiInstance.GetStatusLeaderWithHttpInfo(region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -85,7 +85,7 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **region** | **string?** | Filters results based on the specified region. | [optional]  |
-| **_namespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
+| **varNamespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
 | **index** | **int?** | If set, wait until query exceeds given index. Must be provided with WaitParam. | [optional]  |
 | **wait** | **string?** | Provided with IndexParam to wait for change. | [optional]  |
 | **stale** | **string?** | If present, results will include stale reads. | [optional]  |
@@ -119,9 +119,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="getstatuspeers"></a>
+<a id="getstatuspeers"></a>
 # **GetStatusPeers**
-> List&lt;string&gt; GetStatusPeers (string? region = null, string? _namespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null)
+> List&lt;string&gt; GetStatusPeers (string? region = null, string? varNamespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null)
 
 
 
@@ -148,7 +148,7 @@ namespace Example
 
             var apiInstance = new StatusApi(config);
             var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var varNamespace = "varNamespace_example";  // string? | Filters results based on the specified namespace. (optional) 
             var index = 56;  // int? | If set, wait until query exceeds given index. Must be provided with WaitParam. (optional) 
             var wait = "wait_example";  // string? | Provided with IndexParam to wait for change. (optional) 
             var stale = "stale_example";  // string? | If present, results will include stale reads. (optional) 
@@ -159,7 +159,7 @@ namespace Example
 
             try
             {
-                List<string> result = apiInstance.GetStatusPeers(region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+                List<string> result = apiInstance.GetStatusPeers(region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -179,7 +179,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<List<string>> response = apiInstance.GetStatusPeersWithHttpInfo(region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+    ApiResponse<List<string>> response = apiInstance.GetStatusPeersWithHttpInfo(region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -197,7 +197,7 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **region** | **string?** | Filters results based on the specified region. | [optional]  |
-| **_namespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
+| **varNamespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
 | **index** | **int?** | If set, wait until query exceeds given index. Must be provided with WaitParam. | [optional]  |
 | **wait** | **string?** | Provided with IndexParam to wait for change. | [optional]  |
 | **stale** | **string?** | If present, results will include stale reads. | [optional]  |

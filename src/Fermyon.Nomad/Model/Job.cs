@@ -51,7 +51,7 @@ namespace Fermyon.Nomad.Model
         /// <param name="modifyIndex">modifyIndex.</param>
         /// <param name="multiregion">multiregion.</param>
         /// <param name="name">name.</param>
-        /// <param name="_namespace">_namespace.</param>
+        /// <param name="varNamespace">varNamespace.</param>
         /// <param name="nomadTokenID">nomadTokenID.</param>
         /// <param name="parameterizedJob">parameterizedJob.</param>
         /// <param name="parentID">parentID.</param>
@@ -71,8 +71,8 @@ namespace Fermyon.Nomad.Model
         /// <param name="update">update.</param>
         /// <param name="vaultNamespace">vaultNamespace.</param>
         /// <param name="vaultToken">vaultToken.</param>
-        /// <param name="version">version.</param>
-        public Job(List<Affinity> affinities = default(List<Affinity>), bool allAtOnce = default(bool), List<Constraint> constraints = default(List<Constraint>), string consulNamespace = default(string), string consulToken = default(string), int createIndex = default(int), List<string> datacenters = default(List<string>), string dispatchIdempotencyToken = default(string), bool dispatched = default(bool), string iD = default(string), int jobModifyIndex = default(int), Dictionary<string, string> meta = default(Dictionary<string, string>), MigrateStrategy migrate = default(MigrateStrategy), int modifyIndex = default(int), Multiregion multiregion = default(Multiregion), string name = default(string), string _namespace = default(string), string nomadTokenID = default(string), ParameterizedJobConfig parameterizedJob = default(ParameterizedJobConfig), string parentID = default(string), byte[] payload = default(byte[]), PeriodicConfig periodic = default(PeriodicConfig), int priority = default(int), string region = default(string), ReschedulePolicy reschedule = default(ReschedulePolicy), List<Spread> spreads = default(List<Spread>), bool stable = default(bool), string status = default(string), string statusDescription = default(string), bool stop = default(bool), long submitTime = default(long), List<TaskGroup> taskGroups = default(List<TaskGroup>), string type = default(string), UpdateStrategy update = default(UpdateStrategy), string vaultNamespace = default(string), string vaultToken = default(string), int version = default(int))
+        /// <param name="varVersion">varVersion.</param>
+        public Job(List<Affinity> affinities = default(List<Affinity>), bool allAtOnce = default(bool), List<Constraint> constraints = default(List<Constraint>), string consulNamespace = default(string), string consulToken = default(string), int createIndex = default(int), List<string> datacenters = default(List<string>), string dispatchIdempotencyToken = default(string), bool dispatched = default(bool), string iD = default(string), int jobModifyIndex = default(int), Dictionary<string, string> meta = default(Dictionary<string, string>), MigrateStrategy migrate = default(MigrateStrategy), int modifyIndex = default(int), Multiregion multiregion = default(Multiregion), string name = default(string), string varNamespace = default(string), string nomadTokenID = default(string), ParameterizedJobConfig parameterizedJob = default(ParameterizedJobConfig), string parentID = default(string), byte[] payload = default(byte[]), PeriodicConfig periodic = default(PeriodicConfig), int priority = default(int), string region = default(string), ReschedulePolicy reschedule = default(ReschedulePolicy), List<Spread> spreads = default(List<Spread>), bool stable = default(bool), string status = default(string), string statusDescription = default(string), bool stop = default(bool), long submitTime = default(long), List<TaskGroup> taskGroups = default(List<TaskGroup>), string type = default(string), UpdateStrategy update = default(UpdateStrategy), string vaultNamespace = default(string), string vaultToken = default(string), int varVersion = default(int))
         {
             this.Affinities = affinities;
             this.AllAtOnce = allAtOnce;
@@ -90,7 +90,7 @@ namespace Fermyon.Nomad.Model
             this.ModifyIndex = modifyIndex;
             this.Multiregion = multiregion;
             this.Name = name;
-            this.Namespace = _namespace;
+            this.VarNamespace = varNamespace;
             this.NomadTokenID = nomadTokenID;
             this.ParameterizedJob = parameterizedJob;
             this.ParentID = parentID;
@@ -110,7 +110,7 @@ namespace Fermyon.Nomad.Model
             this.Update = update;
             this.VaultNamespace = vaultNamespace;
             this.VaultToken = vaultToken;
-            this._Version = version;
+            this.VarVersion = varVersion;
         }
 
         /// <summary>
@@ -210,10 +210,10 @@ namespace Fermyon.Nomad.Model
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or Sets Namespace
+        /// Gets or Sets VarNamespace
         /// </summary>
         [DataMember(Name = "Namespace", EmitDefaultValue = false)]
-        public string Namespace { get; set; }
+        public string VarNamespace { get; set; }
 
         /// <summary>
         /// Gets or Sets NomadTokenID
@@ -330,10 +330,10 @@ namespace Fermyon.Nomad.Model
         public string VaultToken { get; set; }
 
         /// <summary>
-        /// Gets or Sets _Version
+        /// Gets or Sets VarVersion
         /// </summary>
         [DataMember(Name = "Version", EmitDefaultValue = false)]
-        public int _Version { get; set; }
+        public int VarVersion { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -359,7 +359,7 @@ namespace Fermyon.Nomad.Model
             sb.Append("  ModifyIndex: ").Append(ModifyIndex).Append("\n");
             sb.Append("  Multiregion: ").Append(Multiregion).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
-            sb.Append("  Namespace: ").Append(Namespace).Append("\n");
+            sb.Append("  VarNamespace: ").Append(VarNamespace).Append("\n");
             sb.Append("  NomadTokenID: ").Append(NomadTokenID).Append("\n");
             sb.Append("  ParameterizedJob: ").Append(ParameterizedJob).Append("\n");
             sb.Append("  ParentID: ").Append(ParentID).Append("\n");
@@ -379,7 +379,7 @@ namespace Fermyon.Nomad.Model
             sb.Append("  Update: ").Append(Update).Append("\n");
             sb.Append("  VaultNamespace: ").Append(VaultNamespace).Append("\n");
             sb.Append("  VaultToken: ").Append(VaultToken).Append("\n");
-            sb.Append("  _Version: ").Append(_Version).Append("\n");
+            sb.Append("  VarVersion: ").Append(VarVersion).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -495,9 +495,9 @@ namespace Fermyon.Nomad.Model
                     this.Name.Equals(input.Name))
                 ) && 
                 (
-                    this.Namespace == input.Namespace ||
-                    (this.Namespace != null &&
-                    this.Namespace.Equals(input.Namespace))
+                    this.VarNamespace == input.VarNamespace ||
+                    (this.VarNamespace != null &&
+                    this.VarNamespace.Equals(input.VarNamespace))
                 ) && 
                 (
                     this.NomadTokenID == input.NomadTokenID ||
@@ -593,8 +593,8 @@ namespace Fermyon.Nomad.Model
                     this.VaultToken.Equals(input.VaultToken))
                 ) && 
                 (
-                    this._Version == input._Version ||
-                    this._Version.Equals(input._Version)
+                    this.VarVersion == input.VarVersion ||
+                    this.VarVersion.Equals(input.VarVersion)
                 );
         }
 
@@ -656,9 +656,9 @@ namespace Fermyon.Nomad.Model
                 {
                     hashCode = (hashCode * 59) + this.Name.GetHashCode();
                 }
-                if (this.Namespace != null)
+                if (this.VarNamespace != null)
                 {
-                    hashCode = (hashCode * 59) + this.Namespace.GetHashCode();
+                    hashCode = (hashCode * 59) + this.VarNamespace.GetHashCode();
                 }
                 if (this.NomadTokenID != null)
                 {
@@ -724,7 +724,7 @@ namespace Fermyon.Nomad.Model
                 {
                     hashCode = (hashCode * 59) + this.VaultToken.GetHashCode();
                 }
-                hashCode = (hashCode * 59) + this._Version.GetHashCode();
+                hashCode = (hashCode * 59) + this.VarVersion.GetHashCode();
                 return hashCode;
             }
         }
@@ -734,7 +734,7 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // CreateIndex (int) maximum
             if (this.CreateIndex > (int)384)
@@ -772,16 +772,16 @@ namespace Fermyon.Nomad.Model
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ModifyIndex, must be a value greater than or equal to 0.", new [] { "ModifyIndex" });
             }
 
-            // _Version (int) maximum
-            if (this._Version > (int)384)
+            // VarVersion (int) maximum
+            if (this.VarVersion > (int)384)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for _Version, must be a value less than or equal to 384.", new [] { "_Version" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for VarVersion, must be a value less than or equal to 384.", new [] { "VarVersion" });
             }
 
-            // _Version (int) minimum
-            if (this._Version < (int)0)
+            // VarVersion (int) minimum
+            if (this.VarVersion < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for _Version, must be a value greater than or equal to 0.", new [] { "_Version" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for VarVersion, must be a value greater than or equal to 0.", new [] { "VarVersion" });
             }
 
             yield break;

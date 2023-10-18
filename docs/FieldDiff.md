@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Annotations** | **List&lt;string&gt;** |  | [optional] 
 **Name** | **string** |  | [optional] 
-**New** | **string** |  | [optional] 
+**VarNew** | **string** |  | [optional] 
 **Old** | **string** |  | [optional] 
 **Type** | **string** |  | [optional] 
 

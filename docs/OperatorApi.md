@@ -12,9 +12,9 @@ All URIs are relative to *https://127.0.0.1:4646/v1*
 | [**PostOperatorSchedulerConfiguration**](OperatorApi.md#postoperatorschedulerconfiguration) | **POST** /operator/scheduler/configuration |  |
 | [**PutOperatorAutopilotConfiguration**](OperatorApi.md#putoperatorautopilotconfiguration) | **PUT** /operator/autopilot/configuration |  |
 
-<a name="deleteoperatorraftpeer"></a>
+<a id="deleteoperatorraftpeer"></a>
 # **DeleteOperatorRaftPeer**
-> void DeleteOperatorRaftPeer (string? region = null, string? _namespace = null, string? xNomadToken = null, string? idempotencyToken = null)
+> void DeleteOperatorRaftPeer (string? region = null, string? varNamespace = null, string? xNomadToken = null, string? idempotencyToken = null)
 
 
 
@@ -41,13 +41,13 @@ namespace Example
 
             var apiInstance = new OperatorApi(config);
             var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var varNamespace = "varNamespace_example";  // string? | Filters results based on the specified namespace. (optional) 
             var xNomadToken = "xNomadToken_example";  // string? | A Nomad ACL token. (optional) 
             var idempotencyToken = "idempotencyToken_example";  // string? | Can be used to ensure operations are only run once. (optional) 
 
             try
             {
-                apiInstance.DeleteOperatorRaftPeer(region, _namespace, xNomadToken, idempotencyToken);
+                apiInstance.DeleteOperatorRaftPeer(region, varNamespace, xNomadToken, idempotencyToken);
             }
             catch (ApiException  e)
             {
@@ -66,7 +66,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    apiInstance.DeleteOperatorRaftPeerWithHttpInfo(region, _namespace, xNomadToken, idempotencyToken);
+    apiInstance.DeleteOperatorRaftPeerWithHttpInfo(region, varNamespace, xNomadToken, idempotencyToken);
 }
 catch (ApiException e)
 {
@@ -81,7 +81,7 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **region** | **string?** | Filters results based on the specified region. | [optional]  |
-| **_namespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
+| **varNamespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
 | **xNomadToken** | **string?** | A Nomad ACL token. | [optional]  |
 | **idempotencyToken** | **string?** | Can be used to ensure operations are only run once. | [optional]  |
 
@@ -110,9 +110,9 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="getoperatorautopilotconfiguration"></a>
+<a id="getoperatorautopilotconfiguration"></a>
 # **GetOperatorAutopilotConfiguration**
-> AutopilotConfiguration GetOperatorAutopilotConfiguration (string? region = null, string? _namespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null)
+> AutopilotConfiguration GetOperatorAutopilotConfiguration (string? region = null, string? varNamespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null)
 
 
 
@@ -139,7 +139,7 @@ namespace Example
 
             var apiInstance = new OperatorApi(config);
             var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var varNamespace = "varNamespace_example";  // string? | Filters results based on the specified namespace. (optional) 
             var index = 56;  // int? | If set, wait until query exceeds given index. Must be provided with WaitParam. (optional) 
             var wait = "wait_example";  // string? | Provided with IndexParam to wait for change. (optional) 
             var stale = "stale_example";  // string? | If present, results will include stale reads. (optional) 
@@ -150,7 +150,7 @@ namespace Example
 
             try
             {
-                AutopilotConfiguration result = apiInstance.GetOperatorAutopilotConfiguration(region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+                AutopilotConfiguration result = apiInstance.GetOperatorAutopilotConfiguration(region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -170,7 +170,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<AutopilotConfiguration> response = apiInstance.GetOperatorAutopilotConfigurationWithHttpInfo(region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+    ApiResponse<AutopilotConfiguration> response = apiInstance.GetOperatorAutopilotConfigurationWithHttpInfo(region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -188,7 +188,7 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **region** | **string?** | Filters results based on the specified region. | [optional]  |
-| **_namespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
+| **varNamespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
 | **index** | **int?** | If set, wait until query exceeds given index. Must be provided with WaitParam. | [optional]  |
 | **wait** | **string?** | Provided with IndexParam to wait for change. | [optional]  |
 | **stale** | **string?** | If present, results will include stale reads. | [optional]  |
@@ -222,9 +222,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="getoperatorautopilothealth"></a>
+<a id="getoperatorautopilothealth"></a>
 # **GetOperatorAutopilotHealth**
-> OperatorHealthReply GetOperatorAutopilotHealth (string? region = null, string? _namespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null)
+> OperatorHealthReply GetOperatorAutopilotHealth (string? region = null, string? varNamespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null)
 
 
 
@@ -251,7 +251,7 @@ namespace Example
 
             var apiInstance = new OperatorApi(config);
             var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var varNamespace = "varNamespace_example";  // string? | Filters results based on the specified namespace. (optional) 
             var index = 56;  // int? | If set, wait until query exceeds given index. Must be provided with WaitParam. (optional) 
             var wait = "wait_example";  // string? | Provided with IndexParam to wait for change. (optional) 
             var stale = "stale_example";  // string? | If present, results will include stale reads. (optional) 
@@ -262,7 +262,7 @@ namespace Example
 
             try
             {
-                OperatorHealthReply result = apiInstance.GetOperatorAutopilotHealth(region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+                OperatorHealthReply result = apiInstance.GetOperatorAutopilotHealth(region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -282,7 +282,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<OperatorHealthReply> response = apiInstance.GetOperatorAutopilotHealthWithHttpInfo(region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+    ApiResponse<OperatorHealthReply> response = apiInstance.GetOperatorAutopilotHealthWithHttpInfo(region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -300,7 +300,7 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **region** | **string?** | Filters results based on the specified region. | [optional]  |
-| **_namespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
+| **varNamespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
 | **index** | **int?** | If set, wait until query exceeds given index. Must be provided with WaitParam. | [optional]  |
 | **wait** | **string?** | Provided with IndexParam to wait for change. | [optional]  |
 | **stale** | **string?** | If present, results will include stale reads. | [optional]  |
@@ -334,9 +334,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="getoperatorraftconfiguration"></a>
+<a id="getoperatorraftconfiguration"></a>
 # **GetOperatorRaftConfiguration**
-> RaftConfiguration GetOperatorRaftConfiguration (string? region = null, string? _namespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null)
+> RaftConfiguration GetOperatorRaftConfiguration (string? region = null, string? varNamespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null)
 
 
 
@@ -363,7 +363,7 @@ namespace Example
 
             var apiInstance = new OperatorApi(config);
             var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var varNamespace = "varNamespace_example";  // string? | Filters results based on the specified namespace. (optional) 
             var index = 56;  // int? | If set, wait until query exceeds given index. Must be provided with WaitParam. (optional) 
             var wait = "wait_example";  // string? | Provided with IndexParam to wait for change. (optional) 
             var stale = "stale_example";  // string? | If present, results will include stale reads. (optional) 
@@ -374,7 +374,7 @@ namespace Example
 
             try
             {
-                RaftConfiguration result = apiInstance.GetOperatorRaftConfiguration(region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+                RaftConfiguration result = apiInstance.GetOperatorRaftConfiguration(region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -394,7 +394,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<RaftConfiguration> response = apiInstance.GetOperatorRaftConfigurationWithHttpInfo(region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+    ApiResponse<RaftConfiguration> response = apiInstance.GetOperatorRaftConfigurationWithHttpInfo(region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -412,7 +412,7 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **region** | **string?** | Filters results based on the specified region. | [optional]  |
-| **_namespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
+| **varNamespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
 | **index** | **int?** | If set, wait until query exceeds given index. Must be provided with WaitParam. | [optional]  |
 | **wait** | **string?** | Provided with IndexParam to wait for change. | [optional]  |
 | **stale** | **string?** | If present, results will include stale reads. | [optional]  |
@@ -446,9 +446,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="getoperatorschedulerconfiguration"></a>
+<a id="getoperatorschedulerconfiguration"></a>
 # **GetOperatorSchedulerConfiguration**
-> SchedulerConfigurationResponse GetOperatorSchedulerConfiguration (string? region = null, string? _namespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null)
+> SchedulerConfigurationResponse GetOperatorSchedulerConfiguration (string? region = null, string? varNamespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null)
 
 
 
@@ -475,7 +475,7 @@ namespace Example
 
             var apiInstance = new OperatorApi(config);
             var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var varNamespace = "varNamespace_example";  // string? | Filters results based on the specified namespace. (optional) 
             var index = 56;  // int? | If set, wait until query exceeds given index. Must be provided with WaitParam. (optional) 
             var wait = "wait_example";  // string? | Provided with IndexParam to wait for change. (optional) 
             var stale = "stale_example";  // string? | If present, results will include stale reads. (optional) 
@@ -486,7 +486,7 @@ namespace Example
 
             try
             {
-                SchedulerConfigurationResponse result = apiInstance.GetOperatorSchedulerConfiguration(region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+                SchedulerConfigurationResponse result = apiInstance.GetOperatorSchedulerConfiguration(region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -506,7 +506,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<SchedulerConfigurationResponse> response = apiInstance.GetOperatorSchedulerConfigurationWithHttpInfo(region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+    ApiResponse<SchedulerConfigurationResponse> response = apiInstance.GetOperatorSchedulerConfigurationWithHttpInfo(region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -524,7 +524,7 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **region** | **string?** | Filters results based on the specified region. | [optional]  |
-| **_namespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
+| **varNamespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
 | **index** | **int?** | If set, wait until query exceeds given index. Must be provided with WaitParam. | [optional]  |
 | **wait** | **string?** | Provided with IndexParam to wait for change. | [optional]  |
 | **stale** | **string?** | If present, results will include stale reads. | [optional]  |
@@ -558,9 +558,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="postoperatorschedulerconfiguration"></a>
+<a id="postoperatorschedulerconfiguration"></a>
 # **PostOperatorSchedulerConfiguration**
-> SchedulerSetConfigurationResponse PostOperatorSchedulerConfiguration (SchedulerConfiguration schedulerConfiguration, string? region = null, string? _namespace = null, string? xNomadToken = null, string? idempotencyToken = null)
+> SchedulerSetConfigurationResponse PostOperatorSchedulerConfiguration (SchedulerConfiguration schedulerConfiguration, string? region = null, string? varNamespace = null, string? xNomadToken = null, string? idempotencyToken = null)
 
 
 
@@ -588,13 +588,13 @@ namespace Example
             var apiInstance = new OperatorApi(config);
             var schedulerConfiguration = new SchedulerConfiguration(); // SchedulerConfiguration | 
             var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var varNamespace = "varNamespace_example";  // string? | Filters results based on the specified namespace. (optional) 
             var xNomadToken = "xNomadToken_example";  // string? | A Nomad ACL token. (optional) 
             var idempotencyToken = "idempotencyToken_example";  // string? | Can be used to ensure operations are only run once. (optional) 
 
             try
             {
-                SchedulerSetConfigurationResponse result = apiInstance.PostOperatorSchedulerConfiguration(schedulerConfiguration, region, _namespace, xNomadToken, idempotencyToken);
+                SchedulerSetConfigurationResponse result = apiInstance.PostOperatorSchedulerConfiguration(schedulerConfiguration, region, varNamespace, xNomadToken, idempotencyToken);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -614,7 +614,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<SchedulerSetConfigurationResponse> response = apiInstance.PostOperatorSchedulerConfigurationWithHttpInfo(schedulerConfiguration, region, _namespace, xNomadToken, idempotencyToken);
+    ApiResponse<SchedulerSetConfigurationResponse> response = apiInstance.PostOperatorSchedulerConfigurationWithHttpInfo(schedulerConfiguration, region, varNamespace, xNomadToken, idempotencyToken);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -633,7 +633,7 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **schedulerConfiguration** | [**SchedulerConfiguration**](SchedulerConfiguration.md) |  |  |
 | **region** | **string?** | Filters results based on the specified region. | [optional]  |
-| **_namespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
+| **varNamespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
 | **xNomadToken** | **string?** | A Nomad ACL token. | [optional]  |
 | **idempotencyToken** | **string?** | Can be used to ensure operations are only run once. | [optional]  |
 
@@ -662,9 +662,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="putoperatorautopilotconfiguration"></a>
+<a id="putoperatorautopilotconfiguration"></a>
 # **PutOperatorAutopilotConfiguration**
-> bool PutOperatorAutopilotConfiguration (AutopilotConfiguration autopilotConfiguration, string? region = null, string? _namespace = null, string? xNomadToken = null, string? idempotencyToken = null)
+> bool PutOperatorAutopilotConfiguration (AutopilotConfiguration autopilotConfiguration, string? region = null, string? varNamespace = null, string? xNomadToken = null, string? idempotencyToken = null)
 
 
 
@@ -692,13 +692,13 @@ namespace Example
             var apiInstance = new OperatorApi(config);
             var autopilotConfiguration = new AutopilotConfiguration(); // AutopilotConfiguration | 
             var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var varNamespace = "varNamespace_example";  // string? | Filters results based on the specified namespace. (optional) 
             var xNomadToken = "xNomadToken_example";  // string? | A Nomad ACL token. (optional) 
             var idempotencyToken = "idempotencyToken_example";  // string? | Can be used to ensure operations are only run once. (optional) 
 
             try
             {
-                bool result = apiInstance.PutOperatorAutopilotConfiguration(autopilotConfiguration, region, _namespace, xNomadToken, idempotencyToken);
+                bool result = apiInstance.PutOperatorAutopilotConfiguration(autopilotConfiguration, region, varNamespace, xNomadToken, idempotencyToken);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -718,7 +718,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<bool> response = apiInstance.PutOperatorAutopilotConfigurationWithHttpInfo(autopilotConfiguration, region, _namespace, xNomadToken, idempotencyToken);
+    ApiResponse<bool> response = apiInstance.PutOperatorAutopilotConfigurationWithHttpInfo(autopilotConfiguration, region, varNamespace, xNomadToken, idempotencyToken);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -737,7 +737,7 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **autopilotConfiguration** | [**AutopilotConfiguration**](AutopilotConfiguration.md) |  |  |
 | **region** | **string?** | Filters results based on the specified region. | [optional]  |
-| **_namespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
+| **varNamespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
 | **xNomadToken** | **string?** | A Nomad ACL token. | [optional]  |
 | **idempotencyToken** | **string?** | Can be used to ensure operations are only run once. | [optional]  |
 

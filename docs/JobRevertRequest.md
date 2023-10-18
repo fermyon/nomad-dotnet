@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **EnforcePriorVersion** | **int** |  | [optional] 
 **JobID** | **string** |  | [optional] 
 **JobVersion** | **int** |  | [optional] 
-**Namespace** | **string** |  | [optional] 
+**VarNamespace** | **string** |  | [optional] 
 **Region** | **string** |  | [optional] 
 **SecretID** | **string** |  | [optional] 
 **VaultToken** | **string** |  | [optional] 

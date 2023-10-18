@@ -15,7 +15,6 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Collections.Generic;
-using Fermyon.Nomad.Api;
 using Fermyon.Nomad.Model;
 using Fermyon.Nomad.Client;
 using System.Reflection;
@@ -56,7 +55,6 @@ namespace Fermyon.Nomad.Test.Model
             //Assert.IsType<DeploymentState>(instance);
         }
 
-
         /// <summary>
         /// Test the property 'AutoRevert'
         /// </summary>
@@ -65,6 +63,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'AutoRevert'
         }
+
         /// <summary>
         /// Test the property 'DesiredCanaries'
         /// </summary>
@@ -73,6 +72,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'DesiredCanaries'
         }
+
         /// <summary>
         /// Test the property 'DesiredTotal'
         /// </summary>
@@ -81,6 +81,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'DesiredTotal'
         }
+
         /// <summary>
         /// Test the property 'HealthyAllocs'
         /// </summary>
@@ -89,6 +90,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'HealthyAllocs'
         }
+
         /// <summary>
         /// Test the property 'PlacedAllocs'
         /// </summary>
@@ -97,6 +99,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'PlacedAllocs'
         }
+
         /// <summary>
         /// Test the property 'PlacedCanaries'
         /// </summary>
@@ -105,6 +108,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'PlacedCanaries'
         }
+
         /// <summary>
         /// Test the property 'ProgressDeadline'
         /// </summary>
@@ -113,6 +117,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'ProgressDeadline'
         }
+
         /// <summary>
         /// Test the property 'Promoted'
         /// </summary>
@@ -121,6 +126,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Promoted'
         }
+
         /// <summary>
         /// Test the property 'RequireProgressBy'
         /// </summary>
@@ -129,6 +135,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'RequireProgressBy'
         }
+
         /// <summary>
         /// Test the property 'UnhealthyAllocs'
         /// </summary>
@@ -137,7 +144,5 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'UnhealthyAllocs'
         }
-
     }
-
 }

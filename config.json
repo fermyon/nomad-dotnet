@@ -1,11 +1,14 @@
 {
-	"generatorName": "csharp-netcore",
-	"packageName": "Fermyon.Nomad",
-	"packageAuthors": "Matthew Fisher",
-	"packageCompany": "Fermyon",
-	"gitRepoId": "nomad-dotnet",
-	"gitUserId": "fermyon",
-	"packageVersion": "0.4.0",
-	"targetFramework": "net6.0",
-	"licenseId": "Apache-2.0"
+    "generatorName": "csharp",
+    "packageName": "Fermyon.Nomad",
+    "packageAuthors": "Matthew Fisher",
+    "packageCompany": "Fermyon",
+    "gitUserId": "fermyon",
+    "gitRepoId": "nomad-dotnet",
+    "packageVersion": "0.5.0",
+    "targetFramework": "net7.0",
+    "licenseId": "Apache-2.0",
+    "netCoreProjectFile": true,
+    "nullableReferenceTypes": true,
+    "hideGenerationTimestamp": true
 }

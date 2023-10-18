@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Diff** | **bool** |  | [optional] 
 **Job** | [**Job**](Job.md) |  | [optional] 
-**Namespace** | **string** |  | [optional] 
+**VarNamespace** | **string** |  | [optional] 
 **PolicyOverride** | **bool** |  | [optional] 
 **Region** | **string** |  | [optional] 
 **SecretID** | **string** |  | [optional] 

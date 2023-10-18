@@ -8,9 +8,9 @@ All URIs are relative to *https://127.0.0.1:4646/v1*
 | [**GetEvaluationAllocations**](EvaluationsApi.md#getevaluationallocations) | **GET** /evaluation/{evalID}/allocations |  |
 | [**GetEvaluations**](EvaluationsApi.md#getevaluations) | **GET** /evaluations |  |
 
-<a name="getevaluation"></a>
+<a id="getevaluation"></a>
 # **GetEvaluation**
-> Evaluation GetEvaluation (string evalID, string? region = null, string? _namespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null)
+> Evaluation GetEvaluation (string evalID, string? region = null, string? varNamespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null)
 
 
 
@@ -38,7 +38,7 @@ namespace Example
             var apiInstance = new EvaluationsApi(config);
             var evalID = "evalID_example";  // string | Evaluation ID.
             var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var varNamespace = "varNamespace_example";  // string? | Filters results based on the specified namespace. (optional) 
             var index = 56;  // int? | If set, wait until query exceeds given index. Must be provided with WaitParam. (optional) 
             var wait = "wait_example";  // string? | Provided with IndexParam to wait for change. (optional) 
             var stale = "stale_example";  // string? | If present, results will include stale reads. (optional) 
@@ -49,7 +49,7 @@ namespace Example
 
             try
             {
-                Evaluation result = apiInstance.GetEvaluation(evalID, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+                Evaluation result = apiInstance.GetEvaluation(evalID, region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -69,7 +69,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Evaluation> response = apiInstance.GetEvaluationWithHttpInfo(evalID, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+    ApiResponse<Evaluation> response = apiInstance.GetEvaluationWithHttpInfo(evalID, region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -88,7 +88,7 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **evalID** | **string** | Evaluation ID. |  |
 | **region** | **string?** | Filters results based on the specified region. | [optional]  |
-| **_namespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
+| **varNamespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
 | **index** | **int?** | If set, wait until query exceeds given index. Must be provided with WaitParam. | [optional]  |
 | **wait** | **string?** | Provided with IndexParam to wait for change. | [optional]  |
 | **stale** | **string?** | If present, results will include stale reads. | [optional]  |
@@ -122,9 +122,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="getevaluationallocations"></a>
+<a id="getevaluationallocations"></a>
 # **GetEvaluationAllocations**
-> List&lt;AllocationListStub&gt; GetEvaluationAllocations (string evalID, string? region = null, string? _namespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null)
+> List&lt;AllocationListStub&gt; GetEvaluationAllocations (string evalID, string? region = null, string? varNamespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null)
 
 
 
@@ -152,7 +152,7 @@ namespace Example
             var apiInstance = new EvaluationsApi(config);
             var evalID = "evalID_example";  // string | Evaluation ID.
             var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var varNamespace = "varNamespace_example";  // string? | Filters results based on the specified namespace. (optional) 
             var index = 56;  // int? | If set, wait until query exceeds given index. Must be provided with WaitParam. (optional) 
             var wait = "wait_example";  // string? | Provided with IndexParam to wait for change. (optional) 
             var stale = "stale_example";  // string? | If present, results will include stale reads. (optional) 
@@ -163,7 +163,7 @@ namespace Example
 
             try
             {
-                List<AllocationListStub> result = apiInstance.GetEvaluationAllocations(evalID, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+                List<AllocationListStub> result = apiInstance.GetEvaluationAllocations(evalID, region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -183,7 +183,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<List<AllocationListStub>> response = apiInstance.GetEvaluationAllocationsWithHttpInfo(evalID, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+    ApiResponse<List<AllocationListStub>> response = apiInstance.GetEvaluationAllocationsWithHttpInfo(evalID, region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -202,7 +202,7 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **evalID** | **string** | Evaluation ID. |  |
 | **region** | **string?** | Filters results based on the specified region. | [optional]  |
-| **_namespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
+| **varNamespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
 | **index** | **int?** | If set, wait until query exceeds given index. Must be provided with WaitParam. | [optional]  |
 | **wait** | **string?** | Provided with IndexParam to wait for change. | [optional]  |
 | **stale** | **string?** | If present, results will include stale reads. | [optional]  |
@@ -236,9 +236,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="getevaluations"></a>
+<a id="getevaluations"></a>
 # **GetEvaluations**
-> List&lt;Evaluation&gt; GetEvaluations (string? region = null, string? _namespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null)
+> List&lt;Evaluation&gt; GetEvaluations (string? region = null, string? varNamespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null)
 
 
 
@@ -265,7 +265,7 @@ namespace Example
 
             var apiInstance = new EvaluationsApi(config);
             var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var varNamespace = "varNamespace_example";  // string? | Filters results based on the specified namespace. (optional) 
             var index = 56;  // int? | If set, wait until query exceeds given index. Must be provided with WaitParam. (optional) 
             var wait = "wait_example";  // string? | Provided with IndexParam to wait for change. (optional) 
             var stale = "stale_example";  // string? | If present, results will include stale reads. (optional) 
@@ -276,7 +276,7 @@ namespace Example
 
             try
             {
-                List<Evaluation> result = apiInstance.GetEvaluations(region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+                List<Evaluation> result = apiInstance.GetEvaluations(region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -296,7 +296,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<List<Evaluation>> response = apiInstance.GetEvaluationsWithHttpInfo(region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+    ApiResponse<List<Evaluation>> response = apiInstance.GetEvaluationsWithHttpInfo(region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -314,7 +314,7 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **region** | **string?** | Filters results based on the specified region. | [optional]  |
-| **_namespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
+| **varNamespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
 | **index** | **int?** | If set, wait until query exceeds given index. Must be provided with WaitParam. | [optional]  |
 | **wait** | **string?** | Provided with IndexParam to wait for change. | [optional]  |
 | **stale** | **string?** | If present, results will include stale reads. | [optional]  |

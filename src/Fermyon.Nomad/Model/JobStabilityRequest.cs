@@ -37,15 +37,15 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="jobID">jobID.</param>
         /// <param name="jobVersion">jobVersion.</param>
-        /// <param name="_namespace">_namespace.</param>
+        /// <param name="varNamespace">varNamespace.</param>
         /// <param name="region">region.</param>
         /// <param name="secretID">secretID.</param>
         /// <param name="stable">stable.</param>
-        public JobStabilityRequest(string jobID = default(string), int jobVersion = default(int), string _namespace = default(string), string region = default(string), string secretID = default(string), bool stable = default(bool))
+        public JobStabilityRequest(string jobID = default(string), int jobVersion = default(int), string varNamespace = default(string), string region = default(string), string secretID = default(string), bool stable = default(bool))
         {
             this.JobID = jobID;
             this.JobVersion = jobVersion;
-            this.Namespace = _namespace;
+            this.VarNamespace = varNamespace;
             this.Region = region;
             this.SecretID = secretID;
             this.Stable = stable;
@@ -64,10 +64,10 @@ namespace Fermyon.Nomad.Model
         public int JobVersion { get; set; }
 
         /// <summary>
-        /// Gets or Sets Namespace
+        /// Gets or Sets VarNamespace
         /// </summary>
         [DataMember(Name = "Namespace", EmitDefaultValue = false)]
-        public string Namespace { get; set; }
+        public string VarNamespace { get; set; }
 
         /// <summary>
         /// Gets or Sets Region
@@ -97,7 +97,7 @@ namespace Fermyon.Nomad.Model
             sb.Append("class JobStabilityRequest {\n");
             sb.Append("  JobID: ").Append(JobID).Append("\n");
             sb.Append("  JobVersion: ").Append(JobVersion).Append("\n");
-            sb.Append("  Namespace: ").Append(Namespace).Append("\n");
+            sb.Append("  VarNamespace: ").Append(VarNamespace).Append("\n");
             sb.Append("  Region: ").Append(Region).Append("\n");
             sb.Append("  SecretID: ").Append(SecretID).Append("\n");
             sb.Append("  Stable: ").Append(Stable).Append("\n");
@@ -146,9 +146,9 @@ namespace Fermyon.Nomad.Model
                     this.JobVersion.Equals(input.JobVersion)
                 ) && 
                 (
-                    this.Namespace == input.Namespace ||
-                    (this.Namespace != null &&
-                    this.Namespace.Equals(input.Namespace))
+                    this.VarNamespace == input.VarNamespace ||
+                    (this.VarNamespace != null &&
+                    this.VarNamespace.Equals(input.VarNamespace))
                 ) && 
                 (
                     this.Region == input.Region ||
@@ -180,9 +180,9 @@ namespace Fermyon.Nomad.Model
                     hashCode = (hashCode * 59) + this.JobID.GetHashCode();
                 }
                 hashCode = (hashCode * 59) + this.JobVersion.GetHashCode();
-                if (this.Namespace != null)
+                if (this.VarNamespace != null)
                 {
-                    hashCode = (hashCode * 59) + this.Namespace.GetHashCode();
+                    hashCode = (hashCode * 59) + this.VarNamespace.GetHashCode();
                 }
                 if (this.Region != null)
                 {
@@ -202,7 +202,7 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // JobVersion (int) maximum
             if (this.JobVersion > (int)384)

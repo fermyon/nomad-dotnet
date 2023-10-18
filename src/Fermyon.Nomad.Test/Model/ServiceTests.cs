@@ -15,7 +15,6 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Collections.Generic;
-using Fermyon.Nomad.Api;
 using Fermyon.Nomad.Model;
 using Fermyon.Nomad.Client;
 using System.Reflection;
@@ -56,7 +55,6 @@ namespace Fermyon.Nomad.Test.Model
             //Assert.IsType<Service>(instance);
         }
 
-
         /// <summary>
         /// Test the property 'Address'
         /// </summary>
@@ -65,6 +63,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Address'
         }
+
         /// <summary>
         /// Test the property 'AddressMode'
         /// </summary>
@@ -73,6 +72,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'AddressMode'
         }
+
         /// <summary>
         /// Test the property 'CanaryMeta'
         /// </summary>
@@ -81,6 +81,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'CanaryMeta'
         }
+
         /// <summary>
         /// Test the property 'CanaryTags'
         /// </summary>
@@ -89,6 +90,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'CanaryTags'
         }
+
         /// <summary>
         /// Test the property 'CheckRestart'
         /// </summary>
@@ -97,6 +99,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'CheckRestart'
         }
+
         /// <summary>
         /// Test the property 'Checks'
         /// </summary>
@@ -105,6 +108,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Checks'
         }
+
         /// <summary>
         /// Test the property 'Connect'
         /// </summary>
@@ -113,6 +117,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Connect'
         }
+
         /// <summary>
         /// Test the property 'EnableTagOverride'
         /// </summary>
@@ -121,6 +126,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'EnableTagOverride'
         }
+
         /// <summary>
         /// Test the property 'Meta'
         /// </summary>
@@ -129,6 +135,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Meta'
         }
+
         /// <summary>
         /// Test the property 'Name'
         /// </summary>
@@ -137,6 +144,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Name'
         }
+
         /// <summary>
         /// Test the property 'OnUpdate'
         /// </summary>
@@ -145,6 +153,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'OnUpdate'
         }
+
         /// <summary>
         /// Test the property 'PortLabel'
         /// </summary>
@@ -153,6 +162,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'PortLabel'
         }
+
         /// <summary>
         /// Test the property 'Provider'
         /// </summary>
@@ -161,6 +171,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Provider'
         }
+
         /// <summary>
         /// Test the property 'Tags'
         /// </summary>
@@ -169,6 +180,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Tags'
         }
+
         /// <summary>
         /// Test the property 'TaskName'
         /// </summary>
@@ -177,7 +189,5 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'TaskName'
         }
-
     }
-
 }

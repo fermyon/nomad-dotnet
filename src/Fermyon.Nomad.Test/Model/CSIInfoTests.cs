@@ -15,7 +15,6 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Collections.Generic;
-using Fermyon.Nomad.Api;
 using Fermyon.Nomad.Model;
 using Fermyon.Nomad.Client;
 using System.Reflection;
@@ -56,7 +55,6 @@ namespace Fermyon.Nomad.Test.Model
             //Assert.IsType<CSIInfo>(instance);
         }
 
-
         /// <summary>
         /// Test the property 'AllocID'
         /// </summary>
@@ -65,6 +63,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'AllocID'
         }
+
         /// <summary>
         /// Test the property 'ControllerInfo'
         /// </summary>
@@ -73,6 +72,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'ControllerInfo'
         }
+
         /// <summary>
         /// Test the property 'HealthDescription'
         /// </summary>
@@ -81,6 +81,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'HealthDescription'
         }
+
         /// <summary>
         /// Test the property 'Healthy'
         /// </summary>
@@ -89,6 +90,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Healthy'
         }
+
         /// <summary>
         /// Test the property 'NodeInfo'
         /// </summary>
@@ -97,6 +99,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'NodeInfo'
         }
+
         /// <summary>
         /// Test the property 'PluginID'
         /// </summary>
@@ -105,6 +108,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'PluginID'
         }
+
         /// <summary>
         /// Test the property 'RequiresControllerPlugin'
         /// </summary>
@@ -113,6 +117,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'RequiresControllerPlugin'
         }
+
         /// <summary>
         /// Test the property 'RequiresTopologies'
         /// </summary>
@@ -121,6 +126,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'RequiresTopologies'
         }
+
         /// <summary>
         /// Test the property 'UpdateTime'
         /// </summary>
@@ -129,7 +135,5 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'UpdateTime'
         }
-
     }
-
 }

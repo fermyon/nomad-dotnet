@@ -15,7 +15,6 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Collections.Generic;
-using Fermyon.Nomad.Api;
 using Fermyon.Nomad.Model;
 using Fermyon.Nomad.Client;
 using System.Reflection;
@@ -56,7 +55,6 @@ namespace Fermyon.Nomad.Test.Model
             //Assert.IsType<TaskHandle>(instance);
         }
 
-
         /// <summary>
         /// Test the property 'DriverState'
         /// </summary>
@@ -65,15 +63,14 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'DriverState'
         }
+
         /// <summary>
-        /// Test the property '_Version'
+        /// Test the property 'VarVersion'
         /// </summary>
         [Fact]
-        public void _VersionTest()
+        public void VarVersionTest()
         {
-            // TODO unit test for the property '_Version'
+            // TODO unit test for the property 'VarVersion'
         }
-
     }
-
 }

@@ -15,7 +15,6 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Collections.Generic;
-using Fermyon.Nomad.Api;
 using Fermyon.Nomad.Model;
 using Fermyon.Nomad.Client;
 using System.Reflection;
@@ -56,7 +55,6 @@ namespace Fermyon.Nomad.Test.Model
             //Assert.IsType<ServerHealth>(instance);
         }
 
-
         /// <summary>
         /// Test the property 'Address'
         /// </summary>
@@ -65,6 +63,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Address'
         }
+
         /// <summary>
         /// Test the property 'Healthy'
         /// </summary>
@@ -73,6 +72,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Healthy'
         }
+
         /// <summary>
         /// Test the property 'ID'
         /// </summary>
@@ -81,6 +81,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'ID'
         }
+
         /// <summary>
         /// Test the property 'LastContact'
         /// </summary>
@@ -89,6 +90,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'LastContact'
         }
+
         /// <summary>
         /// Test the property 'LastIndex'
         /// </summary>
@@ -97,6 +99,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'LastIndex'
         }
+
         /// <summary>
         /// Test the property 'LastTerm'
         /// </summary>
@@ -105,6 +108,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'LastTerm'
         }
+
         /// <summary>
         /// Test the property 'Leader'
         /// </summary>
@@ -113,6 +117,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Leader'
         }
+
         /// <summary>
         /// Test the property 'Name'
         /// </summary>
@@ -121,6 +126,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Name'
         }
+
         /// <summary>
         /// Test the property 'SerfStatus'
         /// </summary>
@@ -129,6 +135,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'SerfStatus'
         }
+
         /// <summary>
         /// Test the property 'StableSince'
         /// </summary>
@@ -137,14 +144,16 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'StableSince'
         }
+
         /// <summary>
-        /// Test the property '_Version'
+        /// Test the property 'VarVersion'
         /// </summary>
         [Fact]
-        public void _VersionTest()
+        public void VarVersionTest()
         {
-            // TODO unit test for the property '_Version'
+            // TODO unit test for the property 'VarVersion'
         }
+
         /// <summary>
         /// Test the property 'Voter'
         /// </summary>
@@ -153,7 +162,5 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Voter'
         }
-
     }
-
 }

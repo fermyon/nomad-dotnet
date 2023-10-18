@@ -15,7 +15,6 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Collections.Generic;
-using Fermyon.Nomad.Api;
 using Fermyon.Nomad.Model;
 using Fermyon.Nomad.Client;
 using System.Reflection;
@@ -56,7 +55,6 @@ namespace Fermyon.Nomad.Test.Model
             //Assert.IsType<CSIVolumeExternalStub>(instance);
         }
 
-
         /// <summary>
         /// Test the property 'CapacityBytes'
         /// </summary>
@@ -65,6 +63,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'CapacityBytes'
         }
+
         /// <summary>
         /// Test the property 'CloneID'
         /// </summary>
@@ -73,6 +72,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'CloneID'
         }
+
         /// <summary>
         /// Test the property 'ExternalID'
         /// </summary>
@@ -81,6 +81,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'ExternalID'
         }
+
         /// <summary>
         /// Test the property 'IsAbnormal'
         /// </summary>
@@ -89,6 +90,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'IsAbnormal'
         }
+
         /// <summary>
         /// Test the property 'PublishedExternalNodeIDs'
         /// </summary>
@@ -97,6 +99,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'PublishedExternalNodeIDs'
         }
+
         /// <summary>
         /// Test the property 'SnapshotID'
         /// </summary>
@@ -105,6 +108,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'SnapshotID'
         }
+
         /// <summary>
         /// Test the property 'Status'
         /// </summary>
@@ -113,6 +117,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Status'
         }
+
         /// <summary>
         /// Test the property 'VolumeContext'
         /// </summary>
@@ -121,7 +126,5 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'VolumeContext'
         }
-
     }
-
 }

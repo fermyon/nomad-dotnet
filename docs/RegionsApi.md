@@ -6,7 +6,7 @@ All URIs are relative to *https://127.0.0.1:4646/v1*
 |--------|--------------|-------------|
 | [**GetRegions**](RegionsApi.md#getregions) | **GET** /regions |  |
 
-<a name="getregions"></a>
+<a id="getregions"></a>
 # **GetRegions**
 > List&lt;string&gt; GetRegions ()
 

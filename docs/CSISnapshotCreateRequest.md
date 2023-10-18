@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Namespace** | **string** |  | [optional] 
+**VarNamespace** | **string** |  | [optional] 
 **Region** | **string** |  | [optional] 
 **SecretID** | **string** |  | [optional] 
 **Snapshots** | [**List&lt;CSISnapshot&gt;**](CSISnapshot.md) |  | [optional] 

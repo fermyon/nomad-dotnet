@@ -45,9 +45,9 @@ namespace Fermyon.Nomad.Model
         /// <param name="name">name.</param>
         /// <param name="serfStatus">serfStatus.</param>
         /// <param name="stableSince">stableSince.</param>
-        /// <param name="version">version.</param>
+        /// <param name="varVersion">varVersion.</param>
         /// <param name="voter">voter.</param>
-        public ServerHealth(string address = default(string), bool healthy = default(bool), string iD = default(string), long lastContact = default(long), int lastIndex = default(int), int lastTerm = default(int), bool leader = default(bool), string name = default(string), string serfStatus = default(string), DateTime stableSince = default(DateTime), string version = default(string), bool voter = default(bool))
+        public ServerHealth(string address = default(string), bool healthy = default(bool), string iD = default(string), long lastContact = default(long), int lastIndex = default(int), int lastTerm = default(int), bool leader = default(bool), string name = default(string), string serfStatus = default(string), DateTime stableSince = default(DateTime), string varVersion = default(string), bool voter = default(bool))
         {
             this.Address = address;
             this.Healthy = healthy;
@@ -59,7 +59,7 @@ namespace Fermyon.Nomad.Model
             this.Name = name;
             this.SerfStatus = serfStatus;
             this.StableSince = stableSince;
-            this._Version = version;
+            this.VarVersion = varVersion;
             this.Voter = voter;
         }
 
@@ -124,10 +124,10 @@ namespace Fermyon.Nomad.Model
         public DateTime StableSince { get; set; }
 
         /// <summary>
-        /// Gets or Sets _Version
+        /// Gets or Sets VarVersion
         /// </summary>
         [DataMember(Name = "Version", EmitDefaultValue = false)]
-        public string _Version { get; set; }
+        public string VarVersion { get; set; }
 
         /// <summary>
         /// Gets or Sets Voter
@@ -153,7 +153,7 @@ namespace Fermyon.Nomad.Model
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  SerfStatus: ").Append(SerfStatus).Append("\n");
             sb.Append("  StableSince: ").Append(StableSince).Append("\n");
-            sb.Append("  _Version: ").Append(_Version).Append("\n");
+            sb.Append("  VarVersion: ").Append(VarVersion).Append("\n");
             sb.Append("  Voter: ").Append(Voter).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -236,9 +236,9 @@ namespace Fermyon.Nomad.Model
                     this.StableSince.Equals(input.StableSince))
                 ) && 
                 (
-                    this._Version == input._Version ||
-                    (this._Version != null &&
-                    this._Version.Equals(input._Version))
+                    this.VarVersion == input.VarVersion ||
+                    (this.VarVersion != null &&
+                    this.VarVersion.Equals(input.VarVersion))
                 ) && 
                 (
                     this.Voter == input.Voter ||
@@ -280,9 +280,9 @@ namespace Fermyon.Nomad.Model
                 {
                     hashCode = (hashCode * 59) + this.StableSince.GetHashCode();
                 }
-                if (this._Version != null)
+                if (this.VarVersion != null)
                 {
-                    hashCode = (hashCode * 59) + this._Version.GetHashCode();
+                    hashCode = (hashCode * 59) + this.VarVersion.GetHashCode();
                 }
                 hashCode = (hashCode * 59) + this.Voter.GetHashCode();
                 return hashCode;
@@ -294,7 +294,7 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // LastIndex (int) maximum
             if (this.LastIndex > (int)384)

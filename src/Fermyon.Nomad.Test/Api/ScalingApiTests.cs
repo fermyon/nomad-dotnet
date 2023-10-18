@@ -63,7 +63,7 @@ namespace Fermyon.Nomad.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string? region = null;
-            //string? _namespace = null;
+            //string? varNamespace = null;
             //int? index = null;
             //string? wait = null;
             //string? stale = null;
@@ -71,7 +71,7 @@ namespace Fermyon.Nomad.Test.Api
             //string? xNomadToken = null;
             //int? perPage = null;
             //string? nextToken = null;
-            //var response = instance.GetScalingPolicies(region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+            //var response = instance.GetScalingPolicies(region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
             //Assert.IsType<List<ScalingPolicyListStub>>(response);
         }
 
@@ -84,7 +84,7 @@ namespace Fermyon.Nomad.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string policyID = null;
             //string? region = null;
-            //string? _namespace = null;
+            //string? varNamespace = null;
             //int? index = null;
             //string? wait = null;
             //string? stale = null;
@@ -92,7 +92,7 @@ namespace Fermyon.Nomad.Test.Api
             //string? xNomadToken = null;
             //int? perPage = null;
             //string? nextToken = null;
-            //var response = instance.GetScalingPolicy(policyID, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+            //var response = instance.GetScalingPolicy(policyID, region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
             //Assert.IsType<ScalingPolicy>(response);
         }
     }

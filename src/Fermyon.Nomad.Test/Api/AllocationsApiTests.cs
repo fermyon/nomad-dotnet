@@ -64,7 +64,7 @@ namespace Fermyon.Nomad.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string allocID = null;
             //string? region = null;
-            //string? _namespace = null;
+            //string? varNamespace = null;
             //int? index = null;
             //string? wait = null;
             //string? stale = null;
@@ -72,7 +72,7 @@ namespace Fermyon.Nomad.Test.Api
             //string? xNomadToken = null;
             //int? perPage = null;
             //string? nextToken = null;
-            //var response = instance.GetAllocation(allocID, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+            //var response = instance.GetAllocation(allocID, region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
             //Assert.IsType<Allocation>(response);
         }
 
@@ -85,7 +85,7 @@ namespace Fermyon.Nomad.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string allocID = null;
             //string? region = null;
-            //string? _namespace = null;
+            //string? varNamespace = null;
             //int? index = null;
             //string? wait = null;
             //string? stale = null;
@@ -93,7 +93,7 @@ namespace Fermyon.Nomad.Test.Api
             //string? xNomadToken = null;
             //int? perPage = null;
             //string? nextToken = null;
-            //var response = instance.GetAllocationServices(allocID, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+            //var response = instance.GetAllocationServices(allocID, region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
             //Assert.IsType<List<ServiceRegistration>>(response);
         }
 
@@ -105,7 +105,7 @@ namespace Fermyon.Nomad.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string? region = null;
-            //string? _namespace = null;
+            //string? varNamespace = null;
             //int? index = null;
             //string? wait = null;
             //string? stale = null;
@@ -115,7 +115,7 @@ namespace Fermyon.Nomad.Test.Api
             //string? nextToken = null;
             //bool? resources = null;
             //bool? taskStates = null;
-            //var response = instance.GetAllocations(region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, resources, taskStates);
+            //var response = instance.GetAllocations(region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, resources, taskStates);
             //Assert.IsType<List<AllocationListStub>>(response);
         }
 
@@ -128,7 +128,7 @@ namespace Fermyon.Nomad.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string allocID = null;
             //string? region = null;
-            //string? _namespace = null;
+            //string? varNamespace = null;
             //int? index = null;
             //string? wait = null;
             //string? stale = null;
@@ -137,7 +137,7 @@ namespace Fermyon.Nomad.Test.Api
             //int? perPage = null;
             //string? nextToken = null;
             //bool? noShutdownDelay = null;
-            //var response = instance.PostAllocationStop(allocID, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, noShutdownDelay);
+            //var response = instance.PostAllocationStop(allocID, region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, noShutdownDelay);
             //Assert.IsType<AllocStopResponse>(response);
         }
     }

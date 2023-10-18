@@ -64,10 +64,10 @@ namespace Fermyon.Nomad.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string policyName = null;
             //string? region = null;
-            //string? _namespace = null;
+            //string? varNamespace = null;
             //string? xNomadToken = null;
             //string? idempotencyToken = null;
-            //instance.DeleteACLPolicy(policyName, region, _namespace, xNomadToken, idempotencyToken);
+            //instance.DeleteACLPolicy(policyName, region, varNamespace, xNomadToken, idempotencyToken);
         }
 
         /// <summary>
@@ -79,10 +79,10 @@ namespace Fermyon.Nomad.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string tokenAccessor = null;
             //string? region = null;
-            //string? _namespace = null;
+            //string? varNamespace = null;
             //string? xNomadToken = null;
             //string? idempotencyToken = null;
-            //instance.DeleteACLToken(tokenAccessor, region, _namespace, xNomadToken, idempotencyToken);
+            //instance.DeleteACLToken(tokenAccessor, region, varNamespace, xNomadToken, idempotencyToken);
         }
 
         /// <summary>
@@ -93,7 +93,7 @@ namespace Fermyon.Nomad.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string? region = null;
-            //string? _namespace = null;
+            //string? varNamespace = null;
             //int? index = null;
             //string? wait = null;
             //string? stale = null;
@@ -101,7 +101,7 @@ namespace Fermyon.Nomad.Test.Api
             //string? xNomadToken = null;
             //int? perPage = null;
             //string? nextToken = null;
-            //var response = instance.GetACLPolicies(region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+            //var response = instance.GetACLPolicies(region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
             //Assert.IsType<List<ACLPolicyListStub>>(response);
         }
 
@@ -114,7 +114,7 @@ namespace Fermyon.Nomad.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string policyName = null;
             //string? region = null;
-            //string? _namespace = null;
+            //string? varNamespace = null;
             //int? index = null;
             //string? wait = null;
             //string? stale = null;
@@ -122,7 +122,7 @@ namespace Fermyon.Nomad.Test.Api
             //string? xNomadToken = null;
             //int? perPage = null;
             //string? nextToken = null;
-            //var response = instance.GetACLPolicy(policyName, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+            //var response = instance.GetACLPolicy(policyName, region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
             //Assert.IsType<ACLPolicy>(response);
         }
 
@@ -135,7 +135,7 @@ namespace Fermyon.Nomad.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string tokenAccessor = null;
             //string? region = null;
-            //string? _namespace = null;
+            //string? varNamespace = null;
             //int? index = null;
             //string? wait = null;
             //string? stale = null;
@@ -143,7 +143,7 @@ namespace Fermyon.Nomad.Test.Api
             //string? xNomadToken = null;
             //int? perPage = null;
             //string? nextToken = null;
-            //var response = instance.GetACLToken(tokenAccessor, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+            //var response = instance.GetACLToken(tokenAccessor, region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
             //Assert.IsType<ACLToken>(response);
         }
 
@@ -155,7 +155,7 @@ namespace Fermyon.Nomad.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string? region = null;
-            //string? _namespace = null;
+            //string? varNamespace = null;
             //int? index = null;
             //string? wait = null;
             //string? stale = null;
@@ -163,7 +163,7 @@ namespace Fermyon.Nomad.Test.Api
             //string? xNomadToken = null;
             //int? perPage = null;
             //string? nextToken = null;
-            //var response = instance.GetACLTokenSelf(region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+            //var response = instance.GetACLTokenSelf(region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
             //Assert.IsType<ACLToken>(response);
         }
 
@@ -175,7 +175,7 @@ namespace Fermyon.Nomad.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string? region = null;
-            //string? _namespace = null;
+            //string? varNamespace = null;
             //int? index = null;
             //string? wait = null;
             //string? stale = null;
@@ -183,7 +183,7 @@ namespace Fermyon.Nomad.Test.Api
             //string? xNomadToken = null;
             //int? perPage = null;
             //string? nextToken = null;
-            //var response = instance.GetACLTokens(region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+            //var response = instance.GetACLTokens(region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
             //Assert.IsType<List<ACLTokenListStub>>(response);
         }
 
@@ -195,10 +195,10 @@ namespace Fermyon.Nomad.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string? region = null;
-            //string? _namespace = null;
+            //string? varNamespace = null;
             //string? xNomadToken = null;
             //string? idempotencyToken = null;
-            //var response = instance.PostACLBootstrap(region, _namespace, xNomadToken, idempotencyToken);
+            //var response = instance.PostACLBootstrap(region, varNamespace, xNomadToken, idempotencyToken);
             //Assert.IsType<ACLToken>(response);
         }
 
@@ -212,10 +212,10 @@ namespace Fermyon.Nomad.Test.Api
             //string policyName = null;
             //ACLPolicy aCLPolicy = null;
             //string? region = null;
-            //string? _namespace = null;
+            //string? varNamespace = null;
             //string? xNomadToken = null;
             //string? idempotencyToken = null;
-            //instance.PostACLPolicy(policyName, aCLPolicy, region, _namespace, xNomadToken, idempotencyToken);
+            //instance.PostACLPolicy(policyName, aCLPolicy, region, varNamespace, xNomadToken, idempotencyToken);
         }
 
         /// <summary>
@@ -228,10 +228,10 @@ namespace Fermyon.Nomad.Test.Api
             //string tokenAccessor = null;
             //ACLToken aCLToken = null;
             //string? region = null;
-            //string? _namespace = null;
+            //string? varNamespace = null;
             //string? xNomadToken = null;
             //string? idempotencyToken = null;
-            //var response = instance.PostACLToken(tokenAccessor, aCLToken, region, _namespace, xNomadToken, idempotencyToken);
+            //var response = instance.PostACLToken(tokenAccessor, aCLToken, region, varNamespace, xNomadToken, idempotencyToken);
             //Assert.IsType<ACLToken>(response);
         }
 
@@ -243,10 +243,10 @@ namespace Fermyon.Nomad.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string? region = null;
-            //string? _namespace = null;
+            //string? varNamespace = null;
             //string? xNomadToken = null;
             //string? idempotencyToken = null;
-            //var response = instance.PostACLTokenOnetime(region, _namespace, xNomadToken, idempotencyToken);
+            //var response = instance.PostACLTokenOnetime(region, varNamespace, xNomadToken, idempotencyToken);
             //Assert.IsType<OneTimeToken>(response);
         }
 
@@ -259,10 +259,10 @@ namespace Fermyon.Nomad.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //OneTimeTokenExchangeRequest oneTimeTokenExchangeRequest = null;
             //string? region = null;
-            //string? _namespace = null;
+            //string? varNamespace = null;
             //string? xNomadToken = null;
             //string? idempotencyToken = null;
-            //var response = instance.PostACLTokenOnetimeExchange(oneTimeTokenExchangeRequest, region, _namespace, xNomadToken, idempotencyToken);
+            //var response = instance.PostACLTokenOnetimeExchange(oneTimeTokenExchangeRequest, region, varNamespace, xNomadToken, idempotencyToken);
             //Assert.IsType<ACLToken>(response);
         }
     }

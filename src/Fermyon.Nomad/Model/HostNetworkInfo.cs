@@ -36,13 +36,13 @@ namespace Fermyon.Nomad.Model
         /// Initializes a new instance of the <see cref="HostNetworkInfo" /> class.
         /// </summary>
         /// <param name="cIDR">cIDR.</param>
-        /// <param name="_interface">_interface.</param>
+        /// <param name="varInterface">varInterface.</param>
         /// <param name="name">name.</param>
         /// <param name="reservedPorts">reservedPorts.</param>
-        public HostNetworkInfo(string cIDR = default(string), string _interface = default(string), string name = default(string), string reservedPorts = default(string))
+        public HostNetworkInfo(string cIDR = default(string), string varInterface = default(string), string name = default(string), string reservedPorts = default(string))
         {
             this.CIDR = cIDR;
-            this.Interface = _interface;
+            this.VarInterface = varInterface;
             this.Name = name;
             this.ReservedPorts = reservedPorts;
         }
@@ -54,10 +54,10 @@ namespace Fermyon.Nomad.Model
         public string CIDR { get; set; }
 
         /// <summary>
-        /// Gets or Sets Interface
+        /// Gets or Sets VarInterface
         /// </summary>
         [DataMember(Name = "Interface", EmitDefaultValue = false)]
-        public string Interface { get; set; }
+        public string VarInterface { get; set; }
 
         /// <summary>
         /// Gets or Sets Name
@@ -80,7 +80,7 @@ namespace Fermyon.Nomad.Model
             StringBuilder sb = new StringBuilder();
             sb.Append("class HostNetworkInfo {\n");
             sb.Append("  CIDR: ").Append(CIDR).Append("\n");
-            sb.Append("  Interface: ").Append(Interface).Append("\n");
+            sb.Append("  VarInterface: ").Append(VarInterface).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  ReservedPorts: ").Append(ReservedPorts).Append("\n");
             sb.Append("}\n");
@@ -124,9 +124,9 @@ namespace Fermyon.Nomad.Model
                     this.CIDR.Equals(input.CIDR))
                 ) && 
                 (
-                    this.Interface == input.Interface ||
-                    (this.Interface != null &&
-                    this.Interface.Equals(input.Interface))
+                    this.VarInterface == input.VarInterface ||
+                    (this.VarInterface != null &&
+                    this.VarInterface.Equals(input.VarInterface))
                 ) && 
                 (
                     this.Name == input.Name ||
@@ -153,9 +153,9 @@ namespace Fermyon.Nomad.Model
                 {
                     hashCode = (hashCode * 59) + this.CIDR.GetHashCode();
                 }
-                if (this.Interface != null)
+                if (this.VarInterface != null)
                 {
-                    hashCode = (hashCode * 59) + this.Interface.GetHashCode();
+                    hashCode = (hashCode * 59) + this.VarInterface.GetHashCode();
                 }
                 if (this.Name != null)
                 {
@@ -174,7 +174,7 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

@@ -15,7 +15,6 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Collections.Generic;
-using Fermyon.Nomad.Api;
 using Fermyon.Nomad.Model;
 using Fermyon.Nomad.Client;
 using System.Reflection;
@@ -56,7 +55,6 @@ namespace Fermyon.Nomad.Test.Model
             //Assert.IsType<TaskEvent>(instance);
         }
 
-
         /// <summary>
         /// Test the property 'Details'
         /// </summary>
@@ -65,6 +63,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Details'
         }
+
         /// <summary>
         /// Test the property 'DiskLimit'
         /// </summary>
@@ -73,6 +72,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'DiskLimit'
         }
+
         /// <summary>
         /// Test the property 'DiskSize'
         /// </summary>
@@ -81,6 +81,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'DiskSize'
         }
+
         /// <summary>
         /// Test the property 'DisplayMessage'
         /// </summary>
@@ -89,6 +90,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'DisplayMessage'
         }
+
         /// <summary>
         /// Test the property 'DownloadError'
         /// </summary>
@@ -97,6 +99,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'DownloadError'
         }
+
         /// <summary>
         /// Test the property 'DriverError'
         /// </summary>
@@ -105,6 +108,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'DriverError'
         }
+
         /// <summary>
         /// Test the property 'DriverMessage'
         /// </summary>
@@ -113,6 +117,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'DriverMessage'
         }
+
         /// <summary>
         /// Test the property 'ExitCode'
         /// </summary>
@@ -121,6 +126,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'ExitCode'
         }
+
         /// <summary>
         /// Test the property 'FailedSibling'
         /// </summary>
@@ -129,6 +135,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'FailedSibling'
         }
+
         /// <summary>
         /// Test the property 'FailsTask'
         /// </summary>
@@ -137,6 +144,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'FailsTask'
         }
+
         /// <summary>
         /// Test the property 'GenericSource'
         /// </summary>
@@ -145,6 +153,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'GenericSource'
         }
+
         /// <summary>
         /// Test the property 'KillError'
         /// </summary>
@@ -153,6 +162,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'KillError'
         }
+
         /// <summary>
         /// Test the property 'KillReason'
         /// </summary>
@@ -161,6 +171,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'KillReason'
         }
+
         /// <summary>
         /// Test the property 'KillTimeout'
         /// </summary>
@@ -169,6 +180,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'KillTimeout'
         }
+
         /// <summary>
         /// Test the property 'Message'
         /// </summary>
@@ -177,6 +189,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Message'
         }
+
         /// <summary>
         /// Test the property 'RestartReason'
         /// </summary>
@@ -185,6 +198,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'RestartReason'
         }
+
         /// <summary>
         /// Test the property 'SetupError'
         /// </summary>
@@ -193,6 +207,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'SetupError'
         }
+
         /// <summary>
         /// Test the property 'Signal'
         /// </summary>
@@ -201,6 +216,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Signal'
         }
+
         /// <summary>
         /// Test the property 'StartDelay'
         /// </summary>
@@ -209,6 +225,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'StartDelay'
         }
+
         /// <summary>
         /// Test the property 'TaskSignal'
         /// </summary>
@@ -217,6 +234,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'TaskSignal'
         }
+
         /// <summary>
         /// Test the property 'TaskSignalReason'
         /// </summary>
@@ -225,6 +243,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'TaskSignalReason'
         }
+
         /// <summary>
         /// Test the property 'Time'
         /// </summary>
@@ -233,6 +252,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Time'
         }
+
         /// <summary>
         /// Test the property 'Type'
         /// </summary>
@@ -241,6 +261,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Type'
         }
+
         /// <summary>
         /// Test the property 'ValidationError'
         /// </summary>
@@ -249,6 +270,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'ValidationError'
         }
+
         /// <summary>
         /// Test the property 'VaultError'
         /// </summary>
@@ -257,7 +279,5 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'VaultError'
         }
-
     }
-
 }

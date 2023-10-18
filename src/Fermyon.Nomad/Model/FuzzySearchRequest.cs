@@ -40,9 +40,9 @@ namespace Fermyon.Nomad.Model
         /// <param name="context">context.</param>
         /// <param name="filter">filter.</param>
         /// <param name="headers">headers.</param>
-        /// <param name="_namespace">_namespace.</param>
+        /// <param name="varNamespace">varNamespace.</param>
         /// <param name="nextToken">nextToken.</param>
-        /// <param name="_params">_params.</param>
+        /// <param name="varParams">varParams.</param>
         /// <param name="perPage">perPage.</param>
         /// <param name="prefix">prefix.</param>
         /// <param name="region">region.</param>
@@ -50,16 +50,16 @@ namespace Fermyon.Nomad.Model
         /// <param name="text">text.</param>
         /// <param name="waitIndex">waitIndex.</param>
         /// <param name="waitTime">waitTime.</param>
-        public FuzzySearchRequest(bool allowStale = default(bool), string authToken = default(string), string context = default(string), string filter = default(string), Dictionary<string, string> headers = default(Dictionary<string, string>), string _namespace = default(string), string nextToken = default(string), Dictionary<string, string> _params = default(Dictionary<string, string>), int perPage = default(int), string prefix = default(string), string region = default(string), bool reverse = default(bool), string text = default(string), int waitIndex = default(int), long waitTime = default(long))
+        public FuzzySearchRequest(bool allowStale = default(bool), string authToken = default(string), string context = default(string), string filter = default(string), Dictionary<string, string> headers = default(Dictionary<string, string>), string varNamespace = default(string), string nextToken = default(string), Dictionary<string, string> varParams = default(Dictionary<string, string>), int perPage = default(int), string prefix = default(string), string region = default(string), bool reverse = default(bool), string text = default(string), int waitIndex = default(int), long waitTime = default(long))
         {
             this.AllowStale = allowStale;
             this.AuthToken = authToken;
             this.Context = context;
             this.Filter = filter;
             this.Headers = headers;
-            this.Namespace = _namespace;
+            this.VarNamespace = varNamespace;
             this.NextToken = nextToken;
-            this.Params = _params;
+            this.VarParams = varParams;
             this.PerPage = perPage;
             this.Prefix = prefix;
             this.Region = region;
@@ -100,10 +100,10 @@ namespace Fermyon.Nomad.Model
         public Dictionary<string, string> Headers { get; set; }
 
         /// <summary>
-        /// Gets or Sets Namespace
+        /// Gets or Sets VarNamespace
         /// </summary>
         [DataMember(Name = "Namespace", EmitDefaultValue = false)]
-        public string Namespace { get; set; }
+        public string VarNamespace { get; set; }
 
         /// <summary>
         /// Gets or Sets NextToken
@@ -112,10 +112,10 @@ namespace Fermyon.Nomad.Model
         public string NextToken { get; set; }
 
         /// <summary>
-        /// Gets or Sets Params
+        /// Gets or Sets VarParams
         /// </summary>
         [DataMember(Name = "Params", EmitDefaultValue = false)]
-        public Dictionary<string, string> Params { get; set; }
+        public Dictionary<string, string> VarParams { get; set; }
 
         /// <summary>
         /// Gets or Sets PerPage
@@ -172,9 +172,9 @@ namespace Fermyon.Nomad.Model
             sb.Append("  Context: ").Append(Context).Append("\n");
             sb.Append("  Filter: ").Append(Filter).Append("\n");
             sb.Append("  Headers: ").Append(Headers).Append("\n");
-            sb.Append("  Namespace: ").Append(Namespace).Append("\n");
+            sb.Append("  VarNamespace: ").Append(VarNamespace).Append("\n");
             sb.Append("  NextToken: ").Append(NextToken).Append("\n");
-            sb.Append("  Params: ").Append(Params).Append("\n");
+            sb.Append("  VarParams: ").Append(VarParams).Append("\n");
             sb.Append("  PerPage: ").Append(PerPage).Append("\n");
             sb.Append("  Prefix: ").Append(Prefix).Append("\n");
             sb.Append("  Region: ").Append(Region).Append("\n");
@@ -243,9 +243,9 @@ namespace Fermyon.Nomad.Model
                     this.Headers.SequenceEqual(input.Headers)
                 ) && 
                 (
-                    this.Namespace == input.Namespace ||
-                    (this.Namespace != null &&
-                    this.Namespace.Equals(input.Namespace))
+                    this.VarNamespace == input.VarNamespace ||
+                    (this.VarNamespace != null &&
+                    this.VarNamespace.Equals(input.VarNamespace))
                 ) && 
                 (
                     this.NextToken == input.NextToken ||
@@ -253,10 +253,10 @@ namespace Fermyon.Nomad.Model
                     this.NextToken.Equals(input.NextToken))
                 ) && 
                 (
-                    this.Params == input.Params ||
-                    this.Params != null &&
-                    input.Params != null &&
-                    this.Params.SequenceEqual(input.Params)
+                    this.VarParams == input.VarParams ||
+                    this.VarParams != null &&
+                    input.VarParams != null &&
+                    this.VarParams.SequenceEqual(input.VarParams)
                 ) && 
                 (
                     this.PerPage == input.PerPage ||
@@ -317,17 +317,17 @@ namespace Fermyon.Nomad.Model
                 {
                     hashCode = (hashCode * 59) + this.Headers.GetHashCode();
                 }
-                if (this.Namespace != null)
+                if (this.VarNamespace != null)
                 {
-                    hashCode = (hashCode * 59) + this.Namespace.GetHashCode();
+                    hashCode = (hashCode * 59) + this.VarNamespace.GetHashCode();
                 }
                 if (this.NextToken != null)
                 {
                     hashCode = (hashCode * 59) + this.NextToken.GetHashCode();
                 }
-                if (this.Params != null)
+                if (this.VarParams != null)
                 {
-                    hashCode = (hashCode * 59) + this.Params.GetHashCode();
+                    hashCode = (hashCode * 59) + this.VarParams.GetHashCode();
                 }
                 hashCode = (hashCode * 59) + this.PerPage.GetHashCode();
                 if (this.Prefix != null)
@@ -354,7 +354,7 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // WaitIndex (int) maximum
             if (this.WaitIndex > (int)384)

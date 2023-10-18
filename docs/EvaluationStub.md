@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **JobID** | **string** |  | [optional] 
 **ModifyIndex** | **int** |  | [optional] 
 **ModifyTime** | **long** |  | [optional] 
-**Namespace** | **string** |  | [optional] 
+**VarNamespace** | **string** |  | [optional] 
 **NextEval** | **string** |  | [optional] 
 **NodeID** | **string** |  | [optional] 
 **PreviousEval** | **string** |  | [optional] 

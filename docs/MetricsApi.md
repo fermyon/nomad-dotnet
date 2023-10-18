@@ -6,7 +6,7 @@ All URIs are relative to *https://127.0.0.1:4646/v1*
 |--------|--------------|-------------|
 | [**GetMetricsSummary**](MetricsApi.md#getmetricssummary) | **GET** /metrics |  |
 
-<a name="getmetricssummary"></a>
+<a id="getmetricssummary"></a>
 # **GetMetricsSummary**
 > MetricsSummary GetMetricsSummary (string? format = null)
 

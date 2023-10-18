@@ -15,7 +15,6 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Collections.Generic;
-using Fermyon.Nomad.Api;
 using Fermyon.Nomad.Model;
 using Fermyon.Nomad.Client;
 using System.Reflection;
@@ -56,7 +55,6 @@ namespace Fermyon.Nomad.Test.Model
             //Assert.IsType<Template>(instance);
         }
 
-
         /// <summary>
         /// Test the property 'ChangeMode'
         /// </summary>
@@ -65,6 +63,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'ChangeMode'
         }
+
         /// <summary>
         /// Test the property 'ChangeSignal'
         /// </summary>
@@ -73,6 +72,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'ChangeSignal'
         }
+
         /// <summary>
         /// Test the property 'DestPath'
         /// </summary>
@@ -81,6 +81,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'DestPath'
         }
+
         /// <summary>
         /// Test the property 'EmbeddedTmpl'
         /// </summary>
@@ -89,6 +90,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'EmbeddedTmpl'
         }
+
         /// <summary>
         /// Test the property 'Envvars'
         /// </summary>
@@ -97,6 +99,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Envvars'
         }
+
         /// <summary>
         /// Test the property 'LeftDelim'
         /// </summary>
@@ -105,6 +108,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'LeftDelim'
         }
+
         /// <summary>
         /// Test the property 'Perms'
         /// </summary>
@@ -113,6 +117,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Perms'
         }
+
         /// <summary>
         /// Test the property 'RightDelim'
         /// </summary>
@@ -121,6 +126,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'RightDelim'
         }
+
         /// <summary>
         /// Test the property 'SourcePath'
         /// </summary>
@@ -129,6 +135,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'SourcePath'
         }
+
         /// <summary>
         /// Test the property 'Splay'
         /// </summary>
@@ -137,6 +144,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Splay'
         }
+
         /// <summary>
         /// Test the property 'VaultGrace'
         /// </summary>
@@ -145,6 +153,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'VaultGrace'
         }
+
         /// <summary>
         /// Test the property 'Wait'
         /// </summary>
@@ -153,7 +162,5 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Wait'
         }
-
     }
-
 }

@@ -15,7 +15,6 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Collections.Generic;
-using Fermyon.Nomad.Api;
 using Fermyon.Nomad.Model;
 using Fermyon.Nomad.Client;
 using System.Reflection;
@@ -56,7 +55,6 @@ namespace Fermyon.Nomad.Test.Model
             //Assert.IsType<CSIControllerInfo>(instance);
         }
 
-
         /// <summary>
         /// Test the property 'SupportsAttachDetach'
         /// </summary>
@@ -65,6 +63,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'SupportsAttachDetach'
         }
+
         /// <summary>
         /// Test the property 'SupportsClone'
         /// </summary>
@@ -73,6 +72,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'SupportsClone'
         }
+
         /// <summary>
         /// Test the property 'SupportsCondition'
         /// </summary>
@@ -81,6 +81,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'SupportsCondition'
         }
+
         /// <summary>
         /// Test the property 'SupportsCreateDelete'
         /// </summary>
@@ -89,6 +90,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'SupportsCreateDelete'
         }
+
         /// <summary>
         /// Test the property 'SupportsCreateDeleteSnapshot'
         /// </summary>
@@ -97,6 +99,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'SupportsCreateDeleteSnapshot'
         }
+
         /// <summary>
         /// Test the property 'SupportsExpand'
         /// </summary>
@@ -105,6 +108,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'SupportsExpand'
         }
+
         /// <summary>
         /// Test the property 'SupportsGet'
         /// </summary>
@@ -113,6 +117,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'SupportsGet'
         }
+
         /// <summary>
         /// Test the property 'SupportsGetCapacity'
         /// </summary>
@@ -121,6 +126,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'SupportsGetCapacity'
         }
+
         /// <summary>
         /// Test the property 'SupportsListSnapshots'
         /// </summary>
@@ -129,6 +135,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'SupportsListSnapshots'
         }
+
         /// <summary>
         /// Test the property 'SupportsListVolumes'
         /// </summary>
@@ -137,6 +144,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'SupportsListVolumes'
         }
+
         /// <summary>
         /// Test the property 'SupportsListVolumesAttachedNodes'
         /// </summary>
@@ -145,6 +153,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'SupportsListVolumesAttachedNodes'
         }
+
         /// <summary>
         /// Test the property 'SupportsReadOnlyAttach'
         /// </summary>
@@ -153,7 +162,5 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'SupportsReadOnlyAttach'
         }
-
     }
-
 }

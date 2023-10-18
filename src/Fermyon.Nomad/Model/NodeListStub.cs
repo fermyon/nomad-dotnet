@@ -51,8 +51,8 @@ namespace Fermyon.Nomad.Model
         /// <param name="schedulingEligibility">schedulingEligibility.</param>
         /// <param name="status">status.</param>
         /// <param name="statusDescription">statusDescription.</param>
-        /// <param name="version">version.</param>
-        public NodeListStub(string address = default(string), Dictionary<string, string> attributes = default(Dictionary<string, string>), int createIndex = default(int), string datacenter = default(string), bool drain = default(bool), Dictionary<string, DriverInfo> drivers = default(Dictionary<string, DriverInfo>), string iD = default(string), DrainMetadata lastDrain = default(DrainMetadata), int modifyIndex = default(int), string name = default(string), string nodeClass = default(string), NodeResources nodeResources = default(NodeResources), NodeReservedResources reservedResources = default(NodeReservedResources), string schedulingEligibility = default(string), string status = default(string), string statusDescription = default(string), string version = default(string))
+        /// <param name="varVersion">varVersion.</param>
+        public NodeListStub(string address = default(string), Dictionary<string, string> attributes = default(Dictionary<string, string>), int createIndex = default(int), string datacenter = default(string), bool drain = default(bool), Dictionary<string, DriverInfo> drivers = default(Dictionary<string, DriverInfo>), string iD = default(string), DrainMetadata lastDrain = default(DrainMetadata), int modifyIndex = default(int), string name = default(string), string nodeClass = default(string), NodeResources nodeResources = default(NodeResources), NodeReservedResources reservedResources = default(NodeReservedResources), string schedulingEligibility = default(string), string status = default(string), string statusDescription = default(string), string varVersion = default(string))
         {
             this.Address = address;
             this.Attributes = attributes;
@@ -70,7 +70,7 @@ namespace Fermyon.Nomad.Model
             this.SchedulingEligibility = schedulingEligibility;
             this.Status = status;
             this.StatusDescription = statusDescription;
-            this._Version = version;
+            this.VarVersion = varVersion;
         }
 
         /// <summary>
@@ -170,10 +170,10 @@ namespace Fermyon.Nomad.Model
         public string StatusDescription { get; set; }
 
         /// <summary>
-        /// Gets or Sets _Version
+        /// Gets or Sets VarVersion
         /// </summary>
         [DataMember(Name = "Version", EmitDefaultValue = false)]
-        public string _Version { get; set; }
+        public string VarVersion { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -199,7 +199,7 @@ namespace Fermyon.Nomad.Model
             sb.Append("  SchedulingEligibility: ").Append(SchedulingEligibility).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  StatusDescription: ").Append(StatusDescription).Append("\n");
-            sb.Append("  _Version: ").Append(_Version).Append("\n");
+            sb.Append("  VarVersion: ").Append(VarVersion).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -315,9 +315,9 @@ namespace Fermyon.Nomad.Model
                     this.StatusDescription.Equals(input.StatusDescription))
                 ) && 
                 (
-                    this._Version == input._Version ||
-                    (this._Version != null &&
-                    this._Version.Equals(input._Version))
+                    this.VarVersion == input.VarVersion ||
+                    (this.VarVersion != null &&
+                    this.VarVersion.Equals(input.VarVersion))
                 );
         }
 
@@ -385,9 +385,9 @@ namespace Fermyon.Nomad.Model
                 {
                     hashCode = (hashCode * 59) + this.StatusDescription.GetHashCode();
                 }
-                if (this._Version != null)
+                if (this.VarVersion != null)
                 {
-                    hashCode = (hashCode * 59) + this._Version.GetHashCode();
+                    hashCode = (hashCode * 59) + this.VarVersion.GetHashCode();
                 }
                 return hashCode;
             }
@@ -398,7 +398,7 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // CreateIndex (int) maximum
             if (this.CreateIndex > (int)384)

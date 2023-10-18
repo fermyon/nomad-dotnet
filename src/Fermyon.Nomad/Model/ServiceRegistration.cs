@@ -42,12 +42,12 @@ namespace Fermyon.Nomad.Model
         /// <param name="iD">iD.</param>
         /// <param name="jobID">jobID.</param>
         /// <param name="modifyIndex">modifyIndex.</param>
-        /// <param name="_namespace">_namespace.</param>
+        /// <param name="varNamespace">varNamespace.</param>
         /// <param name="nodeID">nodeID.</param>
         /// <param name="port">port.</param>
         /// <param name="serviceName">serviceName.</param>
         /// <param name="tags">tags.</param>
-        public ServiceRegistration(string address = default(string), string allocID = default(string), int createIndex = default(int), string datacenter = default(string), string iD = default(string), string jobID = default(string), int modifyIndex = default(int), string _namespace = default(string), string nodeID = default(string), int port = default(int), string serviceName = default(string), List<string> tags = default(List<string>))
+        public ServiceRegistration(string address = default(string), string allocID = default(string), int createIndex = default(int), string datacenter = default(string), string iD = default(string), string jobID = default(string), int modifyIndex = default(int), string varNamespace = default(string), string nodeID = default(string), int port = default(int), string serviceName = default(string), List<string> tags = default(List<string>))
         {
             this.Address = address;
             this.AllocID = allocID;
@@ -56,7 +56,7 @@ namespace Fermyon.Nomad.Model
             this.ID = iD;
             this.JobID = jobID;
             this.ModifyIndex = modifyIndex;
-            this.Namespace = _namespace;
+            this.VarNamespace = varNamespace;
             this.NodeID = nodeID;
             this.Port = port;
             this.ServiceName = serviceName;
@@ -106,10 +106,10 @@ namespace Fermyon.Nomad.Model
         public int ModifyIndex { get; set; }
 
         /// <summary>
-        /// Gets or Sets Namespace
+        /// Gets or Sets VarNamespace
         /// </summary>
         [DataMember(Name = "Namespace", EmitDefaultValue = false)]
-        public string Namespace { get; set; }
+        public string VarNamespace { get; set; }
 
         /// <summary>
         /// Gets or Sets NodeID
@@ -150,7 +150,7 @@ namespace Fermyon.Nomad.Model
             sb.Append("  ID: ").Append(ID).Append("\n");
             sb.Append("  JobID: ").Append(JobID).Append("\n");
             sb.Append("  ModifyIndex: ").Append(ModifyIndex).Append("\n");
-            sb.Append("  Namespace: ").Append(Namespace).Append("\n");
+            sb.Append("  VarNamespace: ").Append(VarNamespace).Append("\n");
             sb.Append("  NodeID: ").Append(NodeID).Append("\n");
             sb.Append("  Port: ").Append(Port).Append("\n");
             sb.Append("  ServiceName: ").Append(ServiceName).Append("\n");
@@ -224,9 +224,9 @@ namespace Fermyon.Nomad.Model
                     this.ModifyIndex.Equals(input.ModifyIndex)
                 ) && 
                 (
-                    this.Namespace == input.Namespace ||
-                    (this.Namespace != null &&
-                    this.Namespace.Equals(input.Namespace))
+                    this.VarNamespace == input.VarNamespace ||
+                    (this.VarNamespace != null &&
+                    this.VarNamespace.Equals(input.VarNamespace))
                 ) && 
                 (
                     this.NodeID == input.NodeID ||
@@ -281,9 +281,9 @@ namespace Fermyon.Nomad.Model
                     hashCode = (hashCode * 59) + this.JobID.GetHashCode();
                 }
                 hashCode = (hashCode * 59) + this.ModifyIndex.GetHashCode();
-                if (this.Namespace != null)
+                if (this.VarNamespace != null)
                 {
-                    hashCode = (hashCode * 59) + this.Namespace.GetHashCode();
+                    hashCode = (hashCode * 59) + this.VarNamespace.GetHashCode();
                 }
                 if (this.NodeID != null)
                 {
@@ -307,7 +307,7 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // CreateIndex (int) maximum
             if (this.CreateIndex > (int)384)

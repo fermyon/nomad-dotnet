@@ -15,7 +15,6 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Collections.Generic;
-using Fermyon.Nomad.Api;
 using Fermyon.Nomad.Model;
 using Fermyon.Nomad.Client;
 using System.Reflection;
@@ -56,7 +55,6 @@ namespace Fermyon.Nomad.Test.Model
             //Assert.IsType<VolumeRequest>(instance);
         }
 
-
         /// <summary>
         /// Test the property 'AccessMode'
         /// </summary>
@@ -65,6 +63,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'AccessMode'
         }
+
         /// <summary>
         /// Test the property 'AttachmentMode'
         /// </summary>
@@ -73,6 +72,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'AttachmentMode'
         }
+
         /// <summary>
         /// Test the property 'MountOptions'
         /// </summary>
@@ -81,6 +81,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'MountOptions'
         }
+
         /// <summary>
         /// Test the property 'Name'
         /// </summary>
@@ -89,6 +90,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Name'
         }
+
         /// <summary>
         /// Test the property 'PerAlloc'
         /// </summary>
@@ -97,14 +99,16 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'PerAlloc'
         }
+
         /// <summary>
-        /// Test the property 'ReadOnly'
+        /// Test the property 'VarReadOnly'
         /// </summary>
         [Fact]
-        public void ReadOnlyTest()
+        public void VarReadOnlyTest()
         {
-            // TODO unit test for the property 'ReadOnly'
+            // TODO unit test for the property 'VarReadOnly'
         }
+
         /// <summary>
         /// Test the property 'Source'
         /// </summary>
@@ -113,6 +117,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Source'
         }
+
         /// <summary>
         /// Test the property 'Type'
         /// </summary>
@@ -121,7 +126,5 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Type'
         }
-
     }
-
 }

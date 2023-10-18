@@ -11,9 +11,9 @@ All URIs are relative to *https://127.0.0.1:4646/v1*
 | [**UpdateNodeEligibility**](NodesApi.md#updatenodeeligibility) | **POST** /node/{nodeId}/eligibility |  |
 | [**UpdateNodePurge**](NodesApi.md#updatenodepurge) | **POST** /node/{nodeId}/purge |  |
 
-<a name="getnode"></a>
+<a id="getnode"></a>
 # **GetNode**
-> Node GetNode (string nodeId, string? region = null, string? _namespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null)
+> Node GetNode (string nodeId, string? region = null, string? varNamespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null)
 
 
 
@@ -41,7 +41,7 @@ namespace Example
             var apiInstance = new NodesApi(config);
             var nodeId = "nodeId_example";  // string | The ID of the node.
             var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var varNamespace = "varNamespace_example";  // string? | Filters results based on the specified namespace. (optional) 
             var index = 56;  // int? | If set, wait until query exceeds given index. Must be provided with WaitParam. (optional) 
             var wait = "wait_example";  // string? | Provided with IndexParam to wait for change. (optional) 
             var stale = "stale_example";  // string? | If present, results will include stale reads. (optional) 
@@ -52,7 +52,7 @@ namespace Example
 
             try
             {
-                Node result = apiInstance.GetNode(nodeId, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+                Node result = apiInstance.GetNode(nodeId, region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -72,7 +72,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Node> response = apiInstance.GetNodeWithHttpInfo(nodeId, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+    ApiResponse<Node> response = apiInstance.GetNodeWithHttpInfo(nodeId, region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -91,7 +91,7 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **nodeId** | **string** | The ID of the node. |  |
 | **region** | **string?** | Filters results based on the specified region. | [optional]  |
-| **_namespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
+| **varNamespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
 | **index** | **int?** | If set, wait until query exceeds given index. Must be provided with WaitParam. | [optional]  |
 | **wait** | **string?** | Provided with IndexParam to wait for change. | [optional]  |
 | **stale** | **string?** | If present, results will include stale reads. | [optional]  |
@@ -125,9 +125,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="getnodeallocations"></a>
+<a id="getnodeallocations"></a>
 # **GetNodeAllocations**
-> List&lt;AllocationListStub&gt; GetNodeAllocations (string nodeId, string? region = null, string? _namespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null)
+> List&lt;AllocationListStub&gt; GetNodeAllocations (string nodeId, string? region = null, string? varNamespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null)
 
 
 
@@ -155,7 +155,7 @@ namespace Example
             var apiInstance = new NodesApi(config);
             var nodeId = "nodeId_example";  // string | The ID of the node.
             var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var varNamespace = "varNamespace_example";  // string? | Filters results based on the specified namespace. (optional) 
             var index = 56;  // int? | If set, wait until query exceeds given index. Must be provided with WaitParam. (optional) 
             var wait = "wait_example";  // string? | Provided with IndexParam to wait for change. (optional) 
             var stale = "stale_example";  // string? | If present, results will include stale reads. (optional) 
@@ -166,7 +166,7 @@ namespace Example
 
             try
             {
-                List<AllocationListStub> result = apiInstance.GetNodeAllocations(nodeId, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+                List<AllocationListStub> result = apiInstance.GetNodeAllocations(nodeId, region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -186,7 +186,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<List<AllocationListStub>> response = apiInstance.GetNodeAllocationsWithHttpInfo(nodeId, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+    ApiResponse<List<AllocationListStub>> response = apiInstance.GetNodeAllocationsWithHttpInfo(nodeId, region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -205,7 +205,7 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **nodeId** | **string** | The ID of the node. |  |
 | **region** | **string?** | Filters results based on the specified region. | [optional]  |
-| **_namespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
+| **varNamespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
 | **index** | **int?** | If set, wait until query exceeds given index. Must be provided with WaitParam. | [optional]  |
 | **wait** | **string?** | Provided with IndexParam to wait for change. | [optional]  |
 | **stale** | **string?** | If present, results will include stale reads. | [optional]  |
@@ -239,9 +239,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="getnodes"></a>
+<a id="getnodes"></a>
 # **GetNodes**
-> List&lt;NodeListStub&gt; GetNodes (string? region = null, string? _namespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null, bool? resources = null)
+> List&lt;NodeListStub&gt; GetNodes (string? region = null, string? varNamespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null, bool? resources = null)
 
 
 
@@ -268,7 +268,7 @@ namespace Example
 
             var apiInstance = new NodesApi(config);
             var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var varNamespace = "varNamespace_example";  // string? | Filters results based on the specified namespace. (optional) 
             var index = 56;  // int? | If set, wait until query exceeds given index. Must be provided with WaitParam. (optional) 
             var wait = "wait_example";  // string? | Provided with IndexParam to wait for change. (optional) 
             var stale = "stale_example";  // string? | If present, results will include stale reads. (optional) 
@@ -280,7 +280,7 @@ namespace Example
 
             try
             {
-                List<NodeListStub> result = apiInstance.GetNodes(region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, resources);
+                List<NodeListStub> result = apiInstance.GetNodes(region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, resources);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -300,7 +300,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<List<NodeListStub>> response = apiInstance.GetNodesWithHttpInfo(region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, resources);
+    ApiResponse<List<NodeListStub>> response = apiInstance.GetNodesWithHttpInfo(region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, resources);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -318,7 +318,7 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **region** | **string?** | Filters results based on the specified region. | [optional]  |
-| **_namespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
+| **varNamespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
 | **index** | **int?** | If set, wait until query exceeds given index. Must be provided with WaitParam. | [optional]  |
 | **wait** | **string?** | Provided with IndexParam to wait for change. | [optional]  |
 | **stale** | **string?** | If present, results will include stale reads. | [optional]  |
@@ -353,9 +353,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatenodedrain"></a>
+<a id="updatenodedrain"></a>
 # **UpdateNodeDrain**
-> NodeDrainUpdateResponse UpdateNodeDrain (string nodeId, NodeUpdateDrainRequest nodeUpdateDrainRequest, string? region = null, string? _namespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null)
+> NodeDrainUpdateResponse UpdateNodeDrain (string nodeId, NodeUpdateDrainRequest nodeUpdateDrainRequest, string? region = null, string? varNamespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null)
 
 
 
@@ -384,7 +384,7 @@ namespace Example
             var nodeId = "nodeId_example";  // string | The ID of the node.
             var nodeUpdateDrainRequest = new NodeUpdateDrainRequest(); // NodeUpdateDrainRequest | 
             var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var varNamespace = "varNamespace_example";  // string? | Filters results based on the specified namespace. (optional) 
             var index = 56;  // int? | If set, wait until query exceeds given index. Must be provided with WaitParam. (optional) 
             var wait = "wait_example";  // string? | Provided with IndexParam to wait for change. (optional) 
             var stale = "stale_example";  // string? | If present, results will include stale reads. (optional) 
@@ -395,7 +395,7 @@ namespace Example
 
             try
             {
-                NodeDrainUpdateResponse result = apiInstance.UpdateNodeDrain(nodeId, nodeUpdateDrainRequest, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+                NodeDrainUpdateResponse result = apiInstance.UpdateNodeDrain(nodeId, nodeUpdateDrainRequest, region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -415,7 +415,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<NodeDrainUpdateResponse> response = apiInstance.UpdateNodeDrainWithHttpInfo(nodeId, nodeUpdateDrainRequest, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+    ApiResponse<NodeDrainUpdateResponse> response = apiInstance.UpdateNodeDrainWithHttpInfo(nodeId, nodeUpdateDrainRequest, region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -435,7 +435,7 @@ catch (ApiException e)
 | **nodeId** | **string** | The ID of the node. |  |
 | **nodeUpdateDrainRequest** | [**NodeUpdateDrainRequest**](NodeUpdateDrainRequest.md) |  |  |
 | **region** | **string?** | Filters results based on the specified region. | [optional]  |
-| **_namespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
+| **varNamespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
 | **index** | **int?** | If set, wait until query exceeds given index. Must be provided with WaitParam. | [optional]  |
 | **wait** | **string?** | Provided with IndexParam to wait for change. | [optional]  |
 | **stale** | **string?** | If present, results will include stale reads. | [optional]  |
@@ -469,9 +469,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatenodeeligibility"></a>
+<a id="updatenodeeligibility"></a>
 # **UpdateNodeEligibility**
-> NodeEligibilityUpdateResponse UpdateNodeEligibility (string nodeId, NodeUpdateEligibilityRequest nodeUpdateEligibilityRequest, string? region = null, string? _namespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null)
+> NodeEligibilityUpdateResponse UpdateNodeEligibility (string nodeId, NodeUpdateEligibilityRequest nodeUpdateEligibilityRequest, string? region = null, string? varNamespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null)
 
 
 
@@ -500,7 +500,7 @@ namespace Example
             var nodeId = "nodeId_example";  // string | The ID of the node.
             var nodeUpdateEligibilityRequest = new NodeUpdateEligibilityRequest(); // NodeUpdateEligibilityRequest | 
             var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var varNamespace = "varNamespace_example";  // string? | Filters results based on the specified namespace. (optional) 
             var index = 56;  // int? | If set, wait until query exceeds given index. Must be provided with WaitParam. (optional) 
             var wait = "wait_example";  // string? | Provided with IndexParam to wait for change. (optional) 
             var stale = "stale_example";  // string? | If present, results will include stale reads. (optional) 
@@ -511,7 +511,7 @@ namespace Example
 
             try
             {
-                NodeEligibilityUpdateResponse result = apiInstance.UpdateNodeEligibility(nodeId, nodeUpdateEligibilityRequest, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+                NodeEligibilityUpdateResponse result = apiInstance.UpdateNodeEligibility(nodeId, nodeUpdateEligibilityRequest, region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -531,7 +531,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<NodeEligibilityUpdateResponse> response = apiInstance.UpdateNodeEligibilityWithHttpInfo(nodeId, nodeUpdateEligibilityRequest, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+    ApiResponse<NodeEligibilityUpdateResponse> response = apiInstance.UpdateNodeEligibilityWithHttpInfo(nodeId, nodeUpdateEligibilityRequest, region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -551,7 +551,7 @@ catch (ApiException e)
 | **nodeId** | **string** | The ID of the node. |  |
 | **nodeUpdateEligibilityRequest** | [**NodeUpdateEligibilityRequest**](NodeUpdateEligibilityRequest.md) |  |  |
 | **region** | **string?** | Filters results based on the specified region. | [optional]  |
-| **_namespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
+| **varNamespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
 | **index** | **int?** | If set, wait until query exceeds given index. Must be provided with WaitParam. | [optional]  |
 | **wait** | **string?** | Provided with IndexParam to wait for change. | [optional]  |
 | **stale** | **string?** | If present, results will include stale reads. | [optional]  |
@@ -585,9 +585,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatenodepurge"></a>
+<a id="updatenodepurge"></a>
 # **UpdateNodePurge**
-> NodePurgeResponse UpdateNodePurge (string nodeId, string? region = null, string? _namespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null)
+> NodePurgeResponse UpdateNodePurge (string nodeId, string? region = null, string? varNamespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null)
 
 
 
@@ -615,7 +615,7 @@ namespace Example
             var apiInstance = new NodesApi(config);
             var nodeId = "nodeId_example";  // string | The ID of the node.
             var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var varNamespace = "varNamespace_example";  // string? | Filters results based on the specified namespace. (optional) 
             var index = 56;  // int? | If set, wait until query exceeds given index. Must be provided with WaitParam. (optional) 
             var wait = "wait_example";  // string? | Provided with IndexParam to wait for change. (optional) 
             var stale = "stale_example";  // string? | If present, results will include stale reads. (optional) 
@@ -626,7 +626,7 @@ namespace Example
 
             try
             {
-                NodePurgeResponse result = apiInstance.UpdateNodePurge(nodeId, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+                NodePurgeResponse result = apiInstance.UpdateNodePurge(nodeId, region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -646,7 +646,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<NodePurgeResponse> response = apiInstance.UpdateNodePurgeWithHttpInfo(nodeId, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+    ApiResponse<NodePurgeResponse> response = apiInstance.UpdateNodePurgeWithHttpInfo(nodeId, region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -665,7 +665,7 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **nodeId** | **string** | The ID of the node. |  |
 | **region** | **string?** | Filters results based on the specified region. | [optional]  |
-| **_namespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
+| **varNamespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
 | **index** | **int?** | If set, wait until query exceeds given index. Must be provided with WaitParam. | [optional]  |
 | **wait** | **string?** | Provided with IndexParam to wait for change. | [optional]  |
 | **stale** | **string?** | If present, results will include stale reads. | [optional]  |

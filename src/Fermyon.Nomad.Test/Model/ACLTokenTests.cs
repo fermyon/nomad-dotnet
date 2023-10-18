@@ -15,7 +15,6 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Collections.Generic;
-using Fermyon.Nomad.Api;
 using Fermyon.Nomad.Model;
 using Fermyon.Nomad.Client;
 using System.Reflection;
@@ -56,7 +55,6 @@ namespace Fermyon.Nomad.Test.Model
             //Assert.IsType<ACLToken>(instance);
         }
 
-
         /// <summary>
         /// Test the property 'AccessorID'
         /// </summary>
@@ -65,6 +63,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'AccessorID'
         }
+
         /// <summary>
         /// Test the property 'CreateIndex'
         /// </summary>
@@ -73,6 +72,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'CreateIndex'
         }
+
         /// <summary>
         /// Test the property 'CreateTime'
         /// </summary>
@@ -81,6 +81,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'CreateTime'
         }
+
         /// <summary>
         /// Test the property 'Global'
         /// </summary>
@@ -89,6 +90,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Global'
         }
+
         /// <summary>
         /// Test the property 'ModifyIndex'
         /// </summary>
@@ -97,6 +99,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'ModifyIndex'
         }
+
         /// <summary>
         /// Test the property 'Name'
         /// </summary>
@@ -105,6 +108,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Name'
         }
+
         /// <summary>
         /// Test the property 'Policies'
         /// </summary>
@@ -113,6 +117,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Policies'
         }
+
         /// <summary>
         /// Test the property 'SecretID'
         /// </summary>
@@ -121,6 +126,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'SecretID'
         }
+
         /// <summary>
         /// Test the property 'Type'
         /// </summary>
@@ -129,7 +135,5 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Type'
         }
-
     }
-
 }

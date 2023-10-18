@@ -15,7 +15,6 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Collections.Generic;
-using Fermyon.Nomad.Api;
 using Fermyon.Nomad.Model;
 using Fermyon.Nomad.Client;
 using System.Reflection;
@@ -56,7 +55,6 @@ namespace Fermyon.Nomad.Test.Model
             //Assert.IsType<Spread>(instance);
         }
 
-
         /// <summary>
         /// Test the property 'Attribute'
         /// </summary>
@@ -65,6 +63,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Attribute'
         }
+
         /// <summary>
         /// Test the property 'SpreadTarget'
         /// </summary>
@@ -73,6 +72,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'SpreadTarget'
         }
+
         /// <summary>
         /// Test the property 'Weight'
         /// </summary>
@@ -81,7 +81,5 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Weight'
         }
-
     }
-
 }

@@ -42,7 +42,7 @@ namespace Fermyon.Nomad.Model
         /// <param name="jobSummary">jobSummary.</param>
         /// <param name="modifyIndex">modifyIndex.</param>
         /// <param name="name">name.</param>
-        /// <param name="_namespace">_namespace.</param>
+        /// <param name="varNamespace">varNamespace.</param>
         /// <param name="parameterizedJob">parameterizedJob.</param>
         /// <param name="parentID">parentID.</param>
         /// <param name="periodic">periodic.</param>
@@ -52,7 +52,7 @@ namespace Fermyon.Nomad.Model
         /// <param name="stop">stop.</param>
         /// <param name="submitTime">submitTime.</param>
         /// <param name="type">type.</param>
-        public JobListStub(int createIndex = default(int), List<string> datacenters = default(List<string>), string iD = default(string), int jobModifyIndex = default(int), JobSummary jobSummary = default(JobSummary), int modifyIndex = default(int), string name = default(string), string _namespace = default(string), bool parameterizedJob = default(bool), string parentID = default(string), bool periodic = default(bool), int priority = default(int), string status = default(string), string statusDescription = default(string), bool stop = default(bool), long submitTime = default(long), string type = default(string))
+        public JobListStub(int createIndex = default(int), List<string> datacenters = default(List<string>), string iD = default(string), int jobModifyIndex = default(int), JobSummary jobSummary = default(JobSummary), int modifyIndex = default(int), string name = default(string), string varNamespace = default(string), bool parameterizedJob = default(bool), string parentID = default(string), bool periodic = default(bool), int priority = default(int), string status = default(string), string statusDescription = default(string), bool stop = default(bool), long submitTime = default(long), string type = default(string))
         {
             this.CreateIndex = createIndex;
             this.Datacenters = datacenters;
@@ -61,7 +61,7 @@ namespace Fermyon.Nomad.Model
             this.JobSummary = jobSummary;
             this.ModifyIndex = modifyIndex;
             this.Name = name;
-            this.Namespace = _namespace;
+            this.VarNamespace = varNamespace;
             this.ParameterizedJob = parameterizedJob;
             this.ParentID = parentID;
             this.Periodic = periodic;
@@ -116,10 +116,10 @@ namespace Fermyon.Nomad.Model
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or Sets Namespace
+        /// Gets or Sets VarNamespace
         /// </summary>
         [DataMember(Name = "Namespace", EmitDefaultValue = false)]
-        public string Namespace { get; set; }
+        public string VarNamespace { get; set; }
 
         /// <summary>
         /// Gets or Sets ParameterizedJob
@@ -190,7 +190,7 @@ namespace Fermyon.Nomad.Model
             sb.Append("  JobSummary: ").Append(JobSummary).Append("\n");
             sb.Append("  ModifyIndex: ").Append(ModifyIndex).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
-            sb.Append("  Namespace: ").Append(Namespace).Append("\n");
+            sb.Append("  VarNamespace: ").Append(VarNamespace).Append("\n");
             sb.Append("  ParameterizedJob: ").Append(ParameterizedJob).Append("\n");
             sb.Append("  ParentID: ").Append(ParentID).Append("\n");
             sb.Append("  Periodic: ").Append(Periodic).Append("\n");
@@ -269,9 +269,9 @@ namespace Fermyon.Nomad.Model
                     this.Name.Equals(input.Name))
                 ) && 
                 (
-                    this.Namespace == input.Namespace ||
-                    (this.Namespace != null &&
-                    this.Namespace.Equals(input.Namespace))
+                    this.VarNamespace == input.VarNamespace ||
+                    (this.VarNamespace != null &&
+                    this.VarNamespace.Equals(input.VarNamespace))
                 ) && 
                 (
                     this.ParameterizedJob == input.ParameterizedJob ||
@@ -343,9 +343,9 @@ namespace Fermyon.Nomad.Model
                 {
                     hashCode = (hashCode * 59) + this.Name.GetHashCode();
                 }
-                if (this.Namespace != null)
+                if (this.VarNamespace != null)
                 {
-                    hashCode = (hashCode * 59) + this.Namespace.GetHashCode();
+                    hashCode = (hashCode * 59) + this.VarNamespace.GetHashCode();
                 }
                 hashCode = (hashCode * 59) + this.ParameterizedJob.GetHashCode();
                 if (this.ParentID != null)
@@ -377,7 +377,7 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // CreateIndex (int) maximum
             if (this.CreateIndex > (int)384)

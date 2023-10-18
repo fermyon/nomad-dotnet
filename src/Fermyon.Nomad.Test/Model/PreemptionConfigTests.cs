@@ -15,7 +15,6 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Collections.Generic;
-using Fermyon.Nomad.Api;
 using Fermyon.Nomad.Model;
 using Fermyon.Nomad.Client;
 using System.Reflection;
@@ -56,7 +55,6 @@ namespace Fermyon.Nomad.Test.Model
             //Assert.IsType<PreemptionConfig>(instance);
         }
 
-
         /// <summary>
         /// Test the property 'BatchSchedulerEnabled'
         /// </summary>
@@ -65,6 +63,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'BatchSchedulerEnabled'
         }
+
         /// <summary>
         /// Test the property 'ServiceSchedulerEnabled'
         /// </summary>
@@ -73,6 +72,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'ServiceSchedulerEnabled'
         }
+
         /// <summary>
         /// Test the property 'SysBatchSchedulerEnabled'
         /// </summary>
@@ -81,6 +81,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'SysBatchSchedulerEnabled'
         }
+
         /// <summary>
         /// Test the property 'SystemSchedulerEnabled'
         /// </summary>
@@ -89,7 +90,5 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'SystemSchedulerEnabled'
         }
-
     }
-
 }

@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Namespace** | **string** |  | [optional] 
+**VarNamespace** | **string** |  | [optional] 
 **Region** | **string** |  | [optional] 
 **SecretID** | **string** |  | [optional] 
 **Volumes** | [**List&lt;CSIVolume&gt;**](CSIVolume.md) |  | [optional] 

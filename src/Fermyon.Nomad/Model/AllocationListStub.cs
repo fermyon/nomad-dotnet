@@ -52,7 +52,7 @@ namespace Fermyon.Nomad.Model
         /// <param name="modifyIndex">modifyIndex.</param>
         /// <param name="modifyTime">modifyTime.</param>
         /// <param name="name">name.</param>
-        /// <param name="_namespace">_namespace.</param>
+        /// <param name="varNamespace">varNamespace.</param>
         /// <param name="nodeID">nodeID.</param>
         /// <param name="nodeName">nodeName.</param>
         /// <param name="preemptedAllocations">preemptedAllocations.</param>
@@ -60,7 +60,7 @@ namespace Fermyon.Nomad.Model
         /// <param name="rescheduleTracker">rescheduleTracker.</param>
         /// <param name="taskGroup">taskGroup.</param>
         /// <param name="taskStates">taskStates.</param>
-        public AllocationListStub(AllocatedResources allocatedResources = default(AllocatedResources), string clientDescription = default(string), string clientStatus = default(string), int createIndex = default(int), long createTime = default(long), AllocDeploymentStatus deploymentStatus = default(AllocDeploymentStatus), string desiredDescription = default(string), string desiredStatus = default(string), string evalID = default(string), string followupEvalID = default(string), string iD = default(string), string jobID = default(string), string jobType = default(string), int jobVersion = default(int), int modifyIndex = default(int), long modifyTime = default(long), string name = default(string), string _namespace = default(string), string nodeID = default(string), string nodeName = default(string), List<string> preemptedAllocations = default(List<string>), string preemptedByAllocation = default(string), RescheduleTracker rescheduleTracker = default(RescheduleTracker), string taskGroup = default(string), Dictionary<string, TaskState> taskStates = default(Dictionary<string, TaskState>))
+        public AllocationListStub(AllocatedResources allocatedResources = default(AllocatedResources), string clientDescription = default(string), string clientStatus = default(string), int createIndex = default(int), long createTime = default(long), AllocDeploymentStatus deploymentStatus = default(AllocDeploymentStatus), string desiredDescription = default(string), string desiredStatus = default(string), string evalID = default(string), string followupEvalID = default(string), string iD = default(string), string jobID = default(string), string jobType = default(string), int jobVersion = default(int), int modifyIndex = default(int), long modifyTime = default(long), string name = default(string), string varNamespace = default(string), string nodeID = default(string), string nodeName = default(string), List<string> preemptedAllocations = default(List<string>), string preemptedByAllocation = default(string), RescheduleTracker rescheduleTracker = default(RescheduleTracker), string taskGroup = default(string), Dictionary<string, TaskState> taskStates = default(Dictionary<string, TaskState>))
         {
             this.AllocatedResources = allocatedResources;
             this.ClientDescription = clientDescription;
@@ -79,7 +79,7 @@ namespace Fermyon.Nomad.Model
             this.ModifyIndex = modifyIndex;
             this.ModifyTime = modifyTime;
             this.Name = name;
-            this.Namespace = _namespace;
+            this.VarNamespace = varNamespace;
             this.NodeID = nodeID;
             this.NodeName = nodeName;
             this.PreemptedAllocations = preemptedAllocations;
@@ -192,10 +192,10 @@ namespace Fermyon.Nomad.Model
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or Sets Namespace
+        /// Gets or Sets VarNamespace
         /// </summary>
         [DataMember(Name = "Namespace", EmitDefaultValue = false)]
-        public string Namespace { get; set; }
+        public string VarNamespace { get; set; }
 
         /// <summary>
         /// Gets or Sets NodeID
@@ -264,7 +264,7 @@ namespace Fermyon.Nomad.Model
             sb.Append("  ModifyIndex: ").Append(ModifyIndex).Append("\n");
             sb.Append("  ModifyTime: ").Append(ModifyTime).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
-            sb.Append("  Namespace: ").Append(Namespace).Append("\n");
+            sb.Append("  VarNamespace: ").Append(VarNamespace).Append("\n");
             sb.Append("  NodeID: ").Append(NodeID).Append("\n");
             sb.Append("  NodeName: ").Append(NodeName).Append("\n");
             sb.Append("  PreemptedAllocations: ").Append(PreemptedAllocations).Append("\n");
@@ -388,9 +388,9 @@ namespace Fermyon.Nomad.Model
                     this.Name.Equals(input.Name))
                 ) && 
                 (
-                    this.Namespace == input.Namespace ||
-                    (this.Namespace != null &&
-                    this.Namespace.Equals(input.Namespace))
+                    this.VarNamespace == input.VarNamespace ||
+                    (this.VarNamespace != null &&
+                    this.VarNamespace.Equals(input.VarNamespace))
                 ) && 
                 (
                     this.NodeID == input.NodeID ||
@@ -493,9 +493,9 @@ namespace Fermyon.Nomad.Model
                 {
                     hashCode = (hashCode * 59) + this.Name.GetHashCode();
                 }
-                if (this.Namespace != null)
+                if (this.VarNamespace != null)
                 {
-                    hashCode = (hashCode * 59) + this.Namespace.GetHashCode();
+                    hashCode = (hashCode * 59) + this.VarNamespace.GetHashCode();
                 }
                 if (this.NodeID != null)
                 {
@@ -534,7 +534,7 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // CreateIndex (int) maximum
             if (this.CreateIndex > (int)384)

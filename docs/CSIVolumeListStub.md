@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 **ID** | **string** |  | [optional] 
 **ModifyIndex** | **int** |  | [optional] 
 **Name** | **string** |  | [optional] 
-**Namespace** | **string** |  | [optional] 
+**VarNamespace** | **string** |  | [optional] 
 **NodesExpected** | **int** |  | [optional] 
 **NodesHealthy** | **int** |  | [optional] 
 **PluginID** | **string** |  | [optional] 

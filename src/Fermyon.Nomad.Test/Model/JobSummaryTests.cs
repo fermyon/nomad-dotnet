@@ -15,7 +15,6 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Collections.Generic;
-using Fermyon.Nomad.Api;
 using Fermyon.Nomad.Model;
 using Fermyon.Nomad.Client;
 using System.Reflection;
@@ -56,7 +55,6 @@ namespace Fermyon.Nomad.Test.Model
             //Assert.IsType<JobSummary>(instance);
         }
 
-
         /// <summary>
         /// Test the property 'Children'
         /// </summary>
@@ -65,6 +63,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Children'
         }
+
         /// <summary>
         /// Test the property 'CreateIndex'
         /// </summary>
@@ -73,6 +72,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'CreateIndex'
         }
+
         /// <summary>
         /// Test the property 'JobID'
         /// </summary>
@@ -81,6 +81,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'JobID'
         }
+
         /// <summary>
         /// Test the property 'ModifyIndex'
         /// </summary>
@@ -89,14 +90,16 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'ModifyIndex'
         }
+
         /// <summary>
-        /// Test the property 'Namespace'
+        /// Test the property 'VarNamespace'
         /// </summary>
         [Fact]
-        public void NamespaceTest()
+        public void VarNamespaceTest()
         {
-            // TODO unit test for the property 'Namespace'
+            // TODO unit test for the property 'VarNamespace'
         }
+
         /// <summary>
         /// Test the property 'Summary'
         /// </summary>
@@ -105,7 +108,5 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Summary'
         }
-
     }
-
 }

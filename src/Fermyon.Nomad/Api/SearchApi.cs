@@ -33,7 +33,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="fuzzySearchRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -43,7 +43,7 @@ namespace Fermyon.Nomad.Api
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>FuzzySearchResponse</returns>
-        FuzzySearchResponse GetFuzzySearch(FuzzySearchRequest fuzzySearchRequest, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0);
+        FuzzySearchResponse GetFuzzySearch(FuzzySearchRequest fuzzySearchRequest, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -54,7 +54,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="fuzzySearchRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -64,14 +64,14 @@ namespace Fermyon.Nomad.Api
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of FuzzySearchResponse</returns>
-        ApiResponse<FuzzySearchResponse> GetFuzzySearchWithHttpInfo(FuzzySearchRequest fuzzySearchRequest, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0);
+        ApiResponse<FuzzySearchResponse> GetFuzzySearchWithHttpInfo(FuzzySearchRequest fuzzySearchRequest, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="searchRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -81,7 +81,7 @@ namespace Fermyon.Nomad.Api
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>SearchResponse</returns>
-        SearchResponse GetSearch(SearchRequest searchRequest, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0);
+        SearchResponse GetSearch(SearchRequest searchRequest, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -92,7 +92,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="searchRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -102,7 +102,7 @@ namespace Fermyon.Nomad.Api
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of SearchResponse</returns>
-        ApiResponse<SearchResponse> GetSearchWithHttpInfo(SearchRequest searchRequest, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0);
+        ApiResponse<SearchResponse> GetSearchWithHttpInfo(SearchRequest searchRequest, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -121,7 +121,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="fuzzySearchRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -132,7 +132,7 @@ namespace Fermyon.Nomad.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of FuzzySearchResponse</returns>
-        System.Threading.Tasks.Task<FuzzySearchResponse> GetFuzzySearchAsync(FuzzySearchRequest fuzzySearchRequest, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<FuzzySearchResponse> GetFuzzySearchAsync(FuzzySearchRequest fuzzySearchRequest, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -143,7 +143,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="fuzzySearchRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -154,7 +154,7 @@ namespace Fermyon.Nomad.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (FuzzySearchResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<FuzzySearchResponse>> GetFuzzySearchWithHttpInfoAsync(FuzzySearchRequest fuzzySearchRequest, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<FuzzySearchResponse>> GetFuzzySearchWithHttpInfoAsync(FuzzySearchRequest fuzzySearchRequest, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -164,7 +164,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="searchRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -175,7 +175,7 @@ namespace Fermyon.Nomad.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of SearchResponse</returns>
-        System.Threading.Tasks.Task<SearchResponse> GetSearchAsync(SearchRequest searchRequest, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<SearchResponse> GetSearchAsync(SearchRequest searchRequest, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -186,7 +186,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="searchRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -197,7 +197,7 @@ namespace Fermyon.Nomad.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (SearchResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SearchResponse>> GetSearchWithHttpInfoAsync(SearchRequest searchRequest, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<SearchResponse>> GetSearchWithHttpInfoAsync(SearchRequest searchRequest, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -324,7 +324,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="fuzzySearchRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -334,9 +334,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>FuzzySearchResponse</returns>
-        public FuzzySearchResponse GetFuzzySearch(FuzzySearchRequest fuzzySearchRequest, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0)
+        public FuzzySearchResponse GetFuzzySearch(FuzzySearchRequest fuzzySearchRequest, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0)
         {
-            Fermyon.Nomad.Client.ApiResponse<FuzzySearchResponse> localVarResponse = GetFuzzySearchWithHttpInfo(fuzzySearchRequest, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+            Fermyon.Nomad.Client.ApiResponse<FuzzySearchResponse> localVarResponse = GetFuzzySearchWithHttpInfo(fuzzySearchRequest, region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
             return localVarResponse.Data;
         }
 
@@ -346,7 +346,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="fuzzySearchRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -356,7 +356,7 @@ namespace Fermyon.Nomad.Api
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of FuzzySearchResponse</returns>
-        public Fermyon.Nomad.Client.ApiResponse<FuzzySearchResponse> GetFuzzySearchWithHttpInfo(FuzzySearchRequest fuzzySearchRequest, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0)
+        public Fermyon.Nomad.Client.ApiResponse<FuzzySearchResponse> GetFuzzySearchWithHttpInfo(FuzzySearchRequest fuzzySearchRequest, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'fuzzySearchRequest' is set
             if (fuzzySearchRequest == null)
@@ -391,9 +391,9 @@ namespace Fermyon.Nomad.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "region", region));
             }
-            if (_namespace != null)
+            if (varNamespace != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", _namespace));
+                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", varNamespace));
             }
             if (wait != null)
             {
@@ -454,7 +454,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="fuzzySearchRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -465,9 +465,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of FuzzySearchResponse</returns>
-        public async System.Threading.Tasks.Task<FuzzySearchResponse> GetFuzzySearchAsync(FuzzySearchRequest fuzzySearchRequest, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<FuzzySearchResponse> GetFuzzySearchAsync(FuzzySearchRequest fuzzySearchRequest, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Fermyon.Nomad.Client.ApiResponse<FuzzySearchResponse> localVarResponse = await GetFuzzySearchWithHttpInfoAsync(fuzzySearchRequest, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, operationIndex, cancellationToken).ConfigureAwait(false);
+            Fermyon.Nomad.Client.ApiResponse<FuzzySearchResponse> localVarResponse = await GetFuzzySearchWithHttpInfoAsync(fuzzySearchRequest, region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -477,7 +477,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="fuzzySearchRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -488,7 +488,7 @@ namespace Fermyon.Nomad.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (FuzzySearchResponse)</returns>
-        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<FuzzySearchResponse>> GetFuzzySearchWithHttpInfoAsync(FuzzySearchRequest fuzzySearchRequest, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<FuzzySearchResponse>> GetFuzzySearchWithHttpInfoAsync(FuzzySearchRequest fuzzySearchRequest, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'fuzzySearchRequest' is set
             if (fuzzySearchRequest == null)
@@ -524,9 +524,9 @@ namespace Fermyon.Nomad.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "region", region));
             }
-            if (_namespace != null)
+            if (varNamespace != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", _namespace));
+                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", varNamespace));
             }
             if (wait != null)
             {
@@ -588,7 +588,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="searchRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -598,9 +598,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>SearchResponse</returns>
-        public SearchResponse GetSearch(SearchRequest searchRequest, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0)
+        public SearchResponse GetSearch(SearchRequest searchRequest, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0)
         {
-            Fermyon.Nomad.Client.ApiResponse<SearchResponse> localVarResponse = GetSearchWithHttpInfo(searchRequest, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+            Fermyon.Nomad.Client.ApiResponse<SearchResponse> localVarResponse = GetSearchWithHttpInfo(searchRequest, region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
             return localVarResponse.Data;
         }
 
@@ -610,7 +610,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="searchRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -620,7 +620,7 @@ namespace Fermyon.Nomad.Api
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of SearchResponse</returns>
-        public Fermyon.Nomad.Client.ApiResponse<SearchResponse> GetSearchWithHttpInfo(SearchRequest searchRequest, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0)
+        public Fermyon.Nomad.Client.ApiResponse<SearchResponse> GetSearchWithHttpInfo(SearchRequest searchRequest, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'searchRequest' is set
             if (searchRequest == null)
@@ -655,9 +655,9 @@ namespace Fermyon.Nomad.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "region", region));
             }
-            if (_namespace != null)
+            if (varNamespace != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", _namespace));
+                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", varNamespace));
             }
             if (wait != null)
             {
@@ -718,7 +718,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="searchRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -729,9 +729,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of SearchResponse</returns>
-        public async System.Threading.Tasks.Task<SearchResponse> GetSearchAsync(SearchRequest searchRequest, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<SearchResponse> GetSearchAsync(SearchRequest searchRequest, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Fermyon.Nomad.Client.ApiResponse<SearchResponse> localVarResponse = await GetSearchWithHttpInfoAsync(searchRequest, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, operationIndex, cancellationToken).ConfigureAwait(false);
+            Fermyon.Nomad.Client.ApiResponse<SearchResponse> localVarResponse = await GetSearchWithHttpInfoAsync(searchRequest, region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -741,7 +741,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="searchRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -752,7 +752,7 @@ namespace Fermyon.Nomad.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (SearchResponse)</returns>
-        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<SearchResponse>> GetSearchWithHttpInfoAsync(SearchRequest searchRequest, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<SearchResponse>> GetSearchWithHttpInfoAsync(SearchRequest searchRequest, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'searchRequest' is set
             if (searchRequest == null)
@@ -788,9 +788,9 @@ namespace Fermyon.Nomad.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "region", region));
             }
-            if (_namespace != null)
+            if (varNamespace != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", _namespace));
+                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", varNamespace));
             }
             if (wait != null)
             {

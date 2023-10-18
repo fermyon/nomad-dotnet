@@ -55,7 +55,7 @@ namespace Fermyon.Nomad.Model
         /// <param name="modifyIndex">modifyIndex.</param>
         /// <param name="modifyTime">modifyTime.</param>
         /// <param name="name">name.</param>
-        /// <param name="_namespace">_namespace.</param>
+        /// <param name="varNamespace">varNamespace.</param>
         /// <param name="nextAllocation">nextAllocation.</param>
         /// <param name="nodeID">nodeID.</param>
         /// <param name="nodeName">nodeName.</param>
@@ -68,7 +68,7 @@ namespace Fermyon.Nomad.Model
         /// <param name="taskGroup">taskGroup.</param>
         /// <param name="taskResources">taskResources.</param>
         /// <param name="taskStates">taskStates.</param>
-        public Allocation(int allocModifyIndex = default(int), AllocatedResources allocatedResources = default(AllocatedResources), string clientDescription = default(string), string clientStatus = default(string), int createIndex = default(int), long createTime = default(long), string deploymentID = default(string), AllocDeploymentStatus deploymentStatus = default(AllocDeploymentStatus), string desiredDescription = default(string), string desiredStatus = default(string), DesiredTransition desiredTransition = default(DesiredTransition), string evalID = default(string), string followupEvalID = default(string), string iD = default(string), Job job = default(Job), string jobID = default(string), AllocationMetric metrics = default(AllocationMetric), int modifyIndex = default(int), long modifyTime = default(long), string name = default(string), string _namespace = default(string), string nextAllocation = default(string), string nodeID = default(string), string nodeName = default(string), List<string> preemptedAllocations = default(List<string>), string preemptedByAllocation = default(string), string previousAllocation = default(string), RescheduleTracker rescheduleTracker = default(RescheduleTracker), Resources resources = default(Resources), Dictionary<string, string> services = default(Dictionary<string, string>), string taskGroup = default(string), Dictionary<string, Resources> taskResources = default(Dictionary<string, Resources>), Dictionary<string, TaskState> taskStates = default(Dictionary<string, TaskState>))
+        public Allocation(int allocModifyIndex = default(int), AllocatedResources allocatedResources = default(AllocatedResources), string clientDescription = default(string), string clientStatus = default(string), int createIndex = default(int), long createTime = default(long), string deploymentID = default(string), AllocDeploymentStatus deploymentStatus = default(AllocDeploymentStatus), string desiredDescription = default(string), string desiredStatus = default(string), DesiredTransition desiredTransition = default(DesiredTransition), string evalID = default(string), string followupEvalID = default(string), string iD = default(string), Job job = default(Job), string jobID = default(string), AllocationMetric metrics = default(AllocationMetric), int modifyIndex = default(int), long modifyTime = default(long), string name = default(string), string varNamespace = default(string), string nextAllocation = default(string), string nodeID = default(string), string nodeName = default(string), List<string> preemptedAllocations = default(List<string>), string preemptedByAllocation = default(string), string previousAllocation = default(string), RescheduleTracker rescheduleTracker = default(RescheduleTracker), Resources resources = default(Resources), Dictionary<string, string> services = default(Dictionary<string, string>), string taskGroup = default(string), Dictionary<string, Resources> taskResources = default(Dictionary<string, Resources>), Dictionary<string, TaskState> taskStates = default(Dictionary<string, TaskState>))
         {
             this.AllocModifyIndex = allocModifyIndex;
             this.AllocatedResources = allocatedResources;
@@ -90,7 +90,7 @@ namespace Fermyon.Nomad.Model
             this.ModifyIndex = modifyIndex;
             this.ModifyTime = modifyTime;
             this.Name = name;
-            this.Namespace = _namespace;
+            this.VarNamespace = varNamespace;
             this.NextAllocation = nextAllocation;
             this.NodeID = nodeID;
             this.NodeName = nodeName;
@@ -226,10 +226,10 @@ namespace Fermyon.Nomad.Model
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or Sets Namespace
+        /// Gets or Sets VarNamespace
         /// </summary>
         [DataMember(Name = "Namespace", EmitDefaultValue = false)]
-        public string Namespace { get; set; }
+        public string VarNamespace { get; set; }
 
         /// <summary>
         /// Gets or Sets NextAllocation
@@ -331,7 +331,7 @@ namespace Fermyon.Nomad.Model
             sb.Append("  ModifyIndex: ").Append(ModifyIndex).Append("\n");
             sb.Append("  ModifyTime: ").Append(ModifyTime).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
-            sb.Append("  Namespace: ").Append(Namespace).Append("\n");
+            sb.Append("  VarNamespace: ").Append(VarNamespace).Append("\n");
             sb.Append("  NextAllocation: ").Append(NextAllocation).Append("\n");
             sb.Append("  NodeID: ").Append(NodeID).Append("\n");
             sb.Append("  NodeName: ").Append(NodeName).Append("\n");
@@ -475,9 +475,9 @@ namespace Fermyon.Nomad.Model
                     this.Name.Equals(input.Name))
                 ) && 
                 (
-                    this.Namespace == input.Namespace ||
-                    (this.Namespace != null &&
-                    this.Namespace.Equals(input.Namespace))
+                    this.VarNamespace == input.VarNamespace ||
+                    (this.VarNamespace != null &&
+                    this.VarNamespace.Equals(input.VarNamespace))
                 ) && 
                 (
                     this.NextAllocation == input.NextAllocation ||
@@ -619,9 +619,9 @@ namespace Fermyon.Nomad.Model
                 {
                     hashCode = (hashCode * 59) + this.Name.GetHashCode();
                 }
-                if (this.Namespace != null)
+                if (this.VarNamespace != null)
                 {
-                    hashCode = (hashCode * 59) + this.Namespace.GetHashCode();
+                    hashCode = (hashCode * 59) + this.VarNamespace.GetHashCode();
                 }
                 if (this.NextAllocation != null)
                 {
@@ -680,7 +680,7 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // AllocModifyIndex (int) maximum
             if (this.AllocModifyIndex > (int)384)

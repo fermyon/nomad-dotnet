@@ -15,7 +15,6 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Collections.Generic;
-using Fermyon.Nomad.Api;
 using Fermyon.Nomad.Model;
 using Fermyon.Nomad.Client;
 using System.Reflection;
@@ -56,7 +55,6 @@ namespace Fermyon.Nomad.Test.Model
             //Assert.IsType<FieldDiff>(instance);
         }
 
-
         /// <summary>
         /// Test the property 'Annotations'
         /// </summary>
@@ -65,6 +63,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Annotations'
         }
+
         /// <summary>
         /// Test the property 'Name'
         /// </summary>
@@ -73,14 +72,16 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Name'
         }
+
         /// <summary>
-        /// Test the property 'New'
+        /// Test the property 'VarNew'
         /// </summary>
         [Fact]
-        public void NewTest()
+        public void VarNewTest()
         {
-            // TODO unit test for the property 'New'
+            // TODO unit test for the property 'VarNew'
         }
+
         /// <summary>
         /// Test the property 'Old'
         /// </summary>
@@ -89,6 +90,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Old'
         }
+
         /// <summary>
         /// Test the property 'Type'
         /// </summary>
@@ -97,7 +99,5 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Type'
         }
-
     }
-
 }

@@ -15,7 +15,6 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Collections.Generic;
-using Fermyon.Nomad.Api;
 using Fermyon.Nomad.Model;
 using Fermyon.Nomad.Client;
 using System.Reflection;
@@ -56,7 +55,6 @@ namespace Fermyon.Nomad.Test.Model
             //Assert.IsType<CheckRestart>(instance);
         }
 
-
         /// <summary>
         /// Test the property 'Grace'
         /// </summary>
@@ -65,6 +63,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Grace'
         }
+
         /// <summary>
         /// Test the property 'IgnoreWarnings'
         /// </summary>
@@ -73,6 +72,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'IgnoreWarnings'
         }
+
         /// <summary>
         /// Test the property 'Limit'
         /// </summary>
@@ -81,7 +81,5 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Limit'
         }
-
     }
-
 }

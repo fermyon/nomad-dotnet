@@ -7,9 +7,9 @@ All URIs are relative to *https://127.0.0.1:4646/v1*
 | [**GetScalingPolicies**](ScalingApi.md#getscalingpolicies) | **GET** /scaling/policies |  |
 | [**GetScalingPolicy**](ScalingApi.md#getscalingpolicy) | **GET** /scaling/policy/{policyID} |  |
 
-<a name="getscalingpolicies"></a>
+<a id="getscalingpolicies"></a>
 # **GetScalingPolicies**
-> List&lt;ScalingPolicyListStub&gt; GetScalingPolicies (string? region = null, string? _namespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null)
+> List&lt;ScalingPolicyListStub&gt; GetScalingPolicies (string? region = null, string? varNamespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null)
 
 
 
@@ -36,7 +36,7 @@ namespace Example
 
             var apiInstance = new ScalingApi(config);
             var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var varNamespace = "varNamespace_example";  // string? | Filters results based on the specified namespace. (optional) 
             var index = 56;  // int? | If set, wait until query exceeds given index. Must be provided with WaitParam. (optional) 
             var wait = "wait_example";  // string? | Provided with IndexParam to wait for change. (optional) 
             var stale = "stale_example";  // string? | If present, results will include stale reads. (optional) 
@@ -47,7 +47,7 @@ namespace Example
 
             try
             {
-                List<ScalingPolicyListStub> result = apiInstance.GetScalingPolicies(region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+                List<ScalingPolicyListStub> result = apiInstance.GetScalingPolicies(region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -67,7 +67,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<List<ScalingPolicyListStub>> response = apiInstance.GetScalingPoliciesWithHttpInfo(region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+    ApiResponse<List<ScalingPolicyListStub>> response = apiInstance.GetScalingPoliciesWithHttpInfo(region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -85,7 +85,7 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **region** | **string?** | Filters results based on the specified region. | [optional]  |
-| **_namespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
+| **varNamespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
 | **index** | **int?** | If set, wait until query exceeds given index. Must be provided with WaitParam. | [optional]  |
 | **wait** | **string?** | Provided with IndexParam to wait for change. | [optional]  |
 | **stale** | **string?** | If present, results will include stale reads. | [optional]  |
@@ -119,9 +119,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="getscalingpolicy"></a>
+<a id="getscalingpolicy"></a>
 # **GetScalingPolicy**
-> ScalingPolicy GetScalingPolicy (string policyID, string? region = null, string? _namespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null)
+> ScalingPolicy GetScalingPolicy (string policyID, string? region = null, string? varNamespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null)
 
 
 
@@ -149,7 +149,7 @@ namespace Example
             var apiInstance = new ScalingApi(config);
             var policyID = "policyID_example";  // string | The scaling policy identifier.
             var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var varNamespace = "varNamespace_example";  // string? | Filters results based on the specified namespace. (optional) 
             var index = 56;  // int? | If set, wait until query exceeds given index. Must be provided with WaitParam. (optional) 
             var wait = "wait_example";  // string? | Provided with IndexParam to wait for change. (optional) 
             var stale = "stale_example";  // string? | If present, results will include stale reads. (optional) 
@@ -160,7 +160,7 @@ namespace Example
 
             try
             {
-                ScalingPolicy result = apiInstance.GetScalingPolicy(policyID, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+                ScalingPolicy result = apiInstance.GetScalingPolicy(policyID, region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -180,7 +180,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<ScalingPolicy> response = apiInstance.GetScalingPolicyWithHttpInfo(policyID, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+    ApiResponse<ScalingPolicy> response = apiInstance.GetScalingPolicyWithHttpInfo(policyID, region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -199,7 +199,7 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **policyID** | **string** | The scaling policy identifier. |  |
 | **region** | **string?** | Filters results based on the specified region. | [optional]  |
-| **_namespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
+| **varNamespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
 | **index** | **int?** | If set, wait until query exceeds given index. Must be provided with WaitParam. | [optional]  |
 | **wait** | **string?** | Provided with IndexParam to wait for change. | [optional]  |
 | **stale** | **string?** | If present, results will include stale reads. | [optional]  |

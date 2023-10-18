@@ -64,12 +64,12 @@ namespace Fermyon.Nomad.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string jobName = null;
             //string? region = null;
-            //string? _namespace = null;
+            //string? varNamespace = null;
             //string? xNomadToken = null;
             //string? idempotencyToken = null;
             //bool? purge = null;
             //bool? global = null;
-            //var response = instance.DeleteJob(jobName, region, _namespace, xNomadToken, idempotencyToken, purge, global);
+            //var response = instance.DeleteJob(jobName, region, varNamespace, xNomadToken, idempotencyToken, purge, global);
             //Assert.IsType<JobDeregisterResponse>(response);
         }
 
@@ -82,7 +82,7 @@ namespace Fermyon.Nomad.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string jobName = null;
             //string? region = null;
-            //string? _namespace = null;
+            //string? varNamespace = null;
             //int? index = null;
             //string? wait = null;
             //string? stale = null;
@@ -90,7 +90,7 @@ namespace Fermyon.Nomad.Test.Api
             //string? xNomadToken = null;
             //int? perPage = null;
             //string? nextToken = null;
-            //var response = instance.GetJob(jobName, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+            //var response = instance.GetJob(jobName, region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
             //Assert.IsType<Job>(response);
         }
 
@@ -103,7 +103,7 @@ namespace Fermyon.Nomad.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string jobName = null;
             //string? region = null;
-            //string? _namespace = null;
+            //string? varNamespace = null;
             //int? index = null;
             //string? wait = null;
             //string? stale = null;
@@ -112,7 +112,7 @@ namespace Fermyon.Nomad.Test.Api
             //int? perPage = null;
             //string? nextToken = null;
             //bool? all = null;
-            //var response = instance.GetJobAllocations(jobName, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, all);
+            //var response = instance.GetJobAllocations(jobName, region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, all);
             //Assert.IsType<List<AllocationListStub>>(response);
         }
 
@@ -125,7 +125,7 @@ namespace Fermyon.Nomad.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string jobName = null;
             //string? region = null;
-            //string? _namespace = null;
+            //string? varNamespace = null;
             //int? index = null;
             //string? wait = null;
             //string? stale = null;
@@ -133,7 +133,7 @@ namespace Fermyon.Nomad.Test.Api
             //string? xNomadToken = null;
             //int? perPage = null;
             //string? nextToken = null;
-            //var response = instance.GetJobDeployment(jobName, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+            //var response = instance.GetJobDeployment(jobName, region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
             //Assert.IsType<Deployment>(response);
         }
 
@@ -146,7 +146,7 @@ namespace Fermyon.Nomad.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string jobName = null;
             //string? region = null;
-            //string? _namespace = null;
+            //string? varNamespace = null;
             //int? index = null;
             //string? wait = null;
             //string? stale = null;
@@ -155,7 +155,7 @@ namespace Fermyon.Nomad.Test.Api
             //int? perPage = null;
             //string? nextToken = null;
             //int? all = null;
-            //var response = instance.GetJobDeployments(jobName, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, all);
+            //var response = instance.GetJobDeployments(jobName, region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, all);
             //Assert.IsType<List<Deployment>>(response);
         }
 
@@ -168,7 +168,7 @@ namespace Fermyon.Nomad.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string jobName = null;
             //string? region = null;
-            //string? _namespace = null;
+            //string? varNamespace = null;
             //int? index = null;
             //string? wait = null;
             //string? stale = null;
@@ -176,7 +176,7 @@ namespace Fermyon.Nomad.Test.Api
             //string? xNomadToken = null;
             //int? perPage = null;
             //string? nextToken = null;
-            //var response = instance.GetJobEvaluations(jobName, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+            //var response = instance.GetJobEvaluations(jobName, region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
             //Assert.IsType<List<Evaluation>>(response);
         }
 
@@ -189,7 +189,7 @@ namespace Fermyon.Nomad.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string jobName = null;
             //string? region = null;
-            //string? _namespace = null;
+            //string? varNamespace = null;
             //int? index = null;
             //string? wait = null;
             //string? stale = null;
@@ -197,7 +197,7 @@ namespace Fermyon.Nomad.Test.Api
             //string? xNomadToken = null;
             //int? perPage = null;
             //string? nextToken = null;
-            //var response = instance.GetJobScaleStatus(jobName, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+            //var response = instance.GetJobScaleStatus(jobName, region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
             //Assert.IsType<JobScaleStatusResponse>(response);
         }
 
@@ -210,7 +210,7 @@ namespace Fermyon.Nomad.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string jobName = null;
             //string? region = null;
-            //string? _namespace = null;
+            //string? varNamespace = null;
             //int? index = null;
             //string? wait = null;
             //string? stale = null;
@@ -218,7 +218,7 @@ namespace Fermyon.Nomad.Test.Api
             //string? xNomadToken = null;
             //int? perPage = null;
             //string? nextToken = null;
-            //var response = instance.GetJobSummary(jobName, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+            //var response = instance.GetJobSummary(jobName, region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
             //Assert.IsType<JobSummary>(response);
         }
 
@@ -231,7 +231,7 @@ namespace Fermyon.Nomad.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string jobName = null;
             //string? region = null;
-            //string? _namespace = null;
+            //string? varNamespace = null;
             //int? index = null;
             //string? wait = null;
             //string? stale = null;
@@ -240,7 +240,7 @@ namespace Fermyon.Nomad.Test.Api
             //int? perPage = null;
             //string? nextToken = null;
             //bool? diffs = null;
-            //var response = instance.GetJobVersions(jobName, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, diffs);
+            //var response = instance.GetJobVersions(jobName, region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, diffs);
             //Assert.IsType<JobVersionsResponse>(response);
         }
 
@@ -252,7 +252,7 @@ namespace Fermyon.Nomad.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string? region = null;
-            //string? _namespace = null;
+            //string? varNamespace = null;
             //int? index = null;
             //string? wait = null;
             //string? stale = null;
@@ -260,7 +260,7 @@ namespace Fermyon.Nomad.Test.Api
             //string? xNomadToken = null;
             //int? perPage = null;
             //string? nextToken = null;
-            //var response = instance.GetJobs(region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+            //var response = instance.GetJobs(region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
             //Assert.IsType<List<JobListStub>>(response);
         }
 
@@ -274,10 +274,10 @@ namespace Fermyon.Nomad.Test.Api
             //string jobName = null;
             //JobRegisterRequest jobRegisterRequest = null;
             //string? region = null;
-            //string? _namespace = null;
+            //string? varNamespace = null;
             //string? xNomadToken = null;
             //string? idempotencyToken = null;
-            //var response = instance.PostJob(jobName, jobRegisterRequest, region, _namespace, xNomadToken, idempotencyToken);
+            //var response = instance.PostJob(jobName, jobRegisterRequest, region, varNamespace, xNomadToken, idempotencyToken);
             //Assert.IsType<JobRegisterResponse>(response);
         }
 
@@ -291,10 +291,10 @@ namespace Fermyon.Nomad.Test.Api
             //string jobName = null;
             //JobDispatchRequest jobDispatchRequest = null;
             //string? region = null;
-            //string? _namespace = null;
+            //string? varNamespace = null;
             //string? xNomadToken = null;
             //string? idempotencyToken = null;
-            //var response = instance.PostJobDispatch(jobName, jobDispatchRequest, region, _namespace, xNomadToken, idempotencyToken);
+            //var response = instance.PostJobDispatch(jobName, jobDispatchRequest, region, varNamespace, xNomadToken, idempotencyToken);
             //Assert.IsType<JobDispatchResponse>(response);
         }
 
@@ -308,10 +308,10 @@ namespace Fermyon.Nomad.Test.Api
             //string jobName = null;
             //JobEvaluateRequest jobEvaluateRequest = null;
             //string? region = null;
-            //string? _namespace = null;
+            //string? varNamespace = null;
             //string? xNomadToken = null;
             //string? idempotencyToken = null;
-            //var response = instance.PostJobEvaluate(jobName, jobEvaluateRequest, region, _namespace, xNomadToken, idempotencyToken);
+            //var response = instance.PostJobEvaluate(jobName, jobEvaluateRequest, region, varNamespace, xNomadToken, idempotencyToken);
             //Assert.IsType<JobRegisterResponse>(response);
         }
 
@@ -336,10 +336,10 @@ namespace Fermyon.Nomad.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string jobName = null;
             //string? region = null;
-            //string? _namespace = null;
+            //string? varNamespace = null;
             //string? xNomadToken = null;
             //string? idempotencyToken = null;
-            //var response = instance.PostJobPeriodicForce(jobName, region, _namespace, xNomadToken, idempotencyToken);
+            //var response = instance.PostJobPeriodicForce(jobName, region, varNamespace, xNomadToken, idempotencyToken);
             //Assert.IsType<PeriodicForceResponse>(response);
         }
 
@@ -353,10 +353,10 @@ namespace Fermyon.Nomad.Test.Api
             //string jobName = null;
             //JobPlanRequest jobPlanRequest = null;
             //string? region = null;
-            //string? _namespace = null;
+            //string? varNamespace = null;
             //string? xNomadToken = null;
             //string? idempotencyToken = null;
-            //var response = instance.PostJobPlan(jobName, jobPlanRequest, region, _namespace, xNomadToken, idempotencyToken);
+            //var response = instance.PostJobPlan(jobName, jobPlanRequest, region, varNamespace, xNomadToken, idempotencyToken);
             //Assert.IsType<JobPlanResponse>(response);
         }
 
@@ -370,10 +370,10 @@ namespace Fermyon.Nomad.Test.Api
             //string jobName = null;
             //JobRevertRequest jobRevertRequest = null;
             //string? region = null;
-            //string? _namespace = null;
+            //string? varNamespace = null;
             //string? xNomadToken = null;
             //string? idempotencyToken = null;
-            //var response = instance.PostJobRevert(jobName, jobRevertRequest, region, _namespace, xNomadToken, idempotencyToken);
+            //var response = instance.PostJobRevert(jobName, jobRevertRequest, region, varNamespace, xNomadToken, idempotencyToken);
             //Assert.IsType<JobRegisterResponse>(response);
         }
 
@@ -387,10 +387,10 @@ namespace Fermyon.Nomad.Test.Api
             //string jobName = null;
             //ScalingRequest scalingRequest = null;
             //string? region = null;
-            //string? _namespace = null;
+            //string? varNamespace = null;
             //string? xNomadToken = null;
             //string? idempotencyToken = null;
-            //var response = instance.PostJobScalingRequest(jobName, scalingRequest, region, _namespace, xNomadToken, idempotencyToken);
+            //var response = instance.PostJobScalingRequest(jobName, scalingRequest, region, varNamespace, xNomadToken, idempotencyToken);
             //Assert.IsType<JobRegisterResponse>(response);
         }
 
@@ -404,10 +404,10 @@ namespace Fermyon.Nomad.Test.Api
             //string jobName = null;
             //JobStabilityRequest jobStabilityRequest = null;
             //string? region = null;
-            //string? _namespace = null;
+            //string? varNamespace = null;
             //string? xNomadToken = null;
             //string? idempotencyToken = null;
-            //var response = instance.PostJobStability(jobName, jobStabilityRequest, region, _namespace, xNomadToken, idempotencyToken);
+            //var response = instance.PostJobStability(jobName, jobStabilityRequest, region, varNamespace, xNomadToken, idempotencyToken);
             //Assert.IsType<JobStabilityResponse>(response);
         }
 
@@ -420,10 +420,10 @@ namespace Fermyon.Nomad.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //JobValidateRequest jobValidateRequest = null;
             //string? region = null;
-            //string? _namespace = null;
+            //string? varNamespace = null;
             //string? xNomadToken = null;
             //string? idempotencyToken = null;
-            //var response = instance.PostJobValidateRequest(jobValidateRequest, region, _namespace, xNomadToken, idempotencyToken);
+            //var response = instance.PostJobValidateRequest(jobValidateRequest, region, varNamespace, xNomadToken, idempotencyToken);
             //Assert.IsType<JobValidateResponse>(response);
         }
 
@@ -436,10 +436,10 @@ namespace Fermyon.Nomad.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //JobRegisterRequest jobRegisterRequest = null;
             //string? region = null;
-            //string? _namespace = null;
+            //string? varNamespace = null;
             //string? xNomadToken = null;
             //string? idempotencyToken = null;
-            //var response = instance.RegisterJob(jobRegisterRequest, region, _namespace, xNomadToken, idempotencyToken);
+            //var response = instance.RegisterJob(jobRegisterRequest, region, varNamespace, xNomadToken, idempotencyToken);
             //Assert.IsType<JobRegisterResponse>(response);
         }
     }

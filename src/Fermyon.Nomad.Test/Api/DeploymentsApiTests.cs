@@ -64,7 +64,7 @@ namespace Fermyon.Nomad.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string deploymentID = null;
             //string? region = null;
-            //string? _namespace = null;
+            //string? varNamespace = null;
             //int? index = null;
             //string? wait = null;
             //string? stale = null;
@@ -72,7 +72,7 @@ namespace Fermyon.Nomad.Test.Api
             //string? xNomadToken = null;
             //int? perPage = null;
             //string? nextToken = null;
-            //var response = instance.GetDeployment(deploymentID, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+            //var response = instance.GetDeployment(deploymentID, region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
             //Assert.IsType<Deployment>(response);
         }
 
@@ -85,7 +85,7 @@ namespace Fermyon.Nomad.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string deploymentID = null;
             //string? region = null;
-            //string? _namespace = null;
+            //string? varNamespace = null;
             //int? index = null;
             //string? wait = null;
             //string? stale = null;
@@ -93,7 +93,7 @@ namespace Fermyon.Nomad.Test.Api
             //string? xNomadToken = null;
             //int? perPage = null;
             //string? nextToken = null;
-            //var response = instance.GetDeploymentAllocations(deploymentID, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+            //var response = instance.GetDeploymentAllocations(deploymentID, region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
             //Assert.IsType<List<AllocationListStub>>(response);
         }
 
@@ -105,7 +105,7 @@ namespace Fermyon.Nomad.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string? region = null;
-            //string? _namespace = null;
+            //string? varNamespace = null;
             //int? index = null;
             //string? wait = null;
             //string? stale = null;
@@ -113,7 +113,7 @@ namespace Fermyon.Nomad.Test.Api
             //string? xNomadToken = null;
             //int? perPage = null;
             //string? nextToken = null;
-            //var response = instance.GetDeployments(region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+            //var response = instance.GetDeployments(region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
             //Assert.IsType<List<Deployment>>(response);
         }
 
@@ -127,10 +127,10 @@ namespace Fermyon.Nomad.Test.Api
             //string deploymentID = null;
             //DeploymentAllocHealthRequest deploymentAllocHealthRequest = null;
             //string? region = null;
-            //string? _namespace = null;
+            //string? varNamespace = null;
             //string? xNomadToken = null;
             //string? idempotencyToken = null;
-            //var response = instance.PostDeploymentAllocationHealth(deploymentID, deploymentAllocHealthRequest, region, _namespace, xNomadToken, idempotencyToken);
+            //var response = instance.PostDeploymentAllocationHealth(deploymentID, deploymentAllocHealthRequest, region, varNamespace, xNomadToken, idempotencyToken);
             //Assert.IsType<DeploymentUpdateResponse>(response);
         }
 
@@ -143,10 +143,10 @@ namespace Fermyon.Nomad.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string deploymentID = null;
             //string? region = null;
-            //string? _namespace = null;
+            //string? varNamespace = null;
             //string? xNomadToken = null;
             //string? idempotencyToken = null;
-            //var response = instance.PostDeploymentFail(deploymentID, region, _namespace, xNomadToken, idempotencyToken);
+            //var response = instance.PostDeploymentFail(deploymentID, region, varNamespace, xNomadToken, idempotencyToken);
             //Assert.IsType<DeploymentUpdateResponse>(response);
         }
 
@@ -160,10 +160,10 @@ namespace Fermyon.Nomad.Test.Api
             //string deploymentID = null;
             //DeploymentPauseRequest deploymentPauseRequest = null;
             //string? region = null;
-            //string? _namespace = null;
+            //string? varNamespace = null;
             //string? xNomadToken = null;
             //string? idempotencyToken = null;
-            //var response = instance.PostDeploymentPause(deploymentID, deploymentPauseRequest, region, _namespace, xNomadToken, idempotencyToken);
+            //var response = instance.PostDeploymentPause(deploymentID, deploymentPauseRequest, region, varNamespace, xNomadToken, idempotencyToken);
             //Assert.IsType<DeploymentUpdateResponse>(response);
         }
 
@@ -177,10 +177,10 @@ namespace Fermyon.Nomad.Test.Api
             //string deploymentID = null;
             //DeploymentPromoteRequest deploymentPromoteRequest = null;
             //string? region = null;
-            //string? _namespace = null;
+            //string? varNamespace = null;
             //string? xNomadToken = null;
             //string? idempotencyToken = null;
-            //var response = instance.PostDeploymentPromote(deploymentID, deploymentPromoteRequest, region, _namespace, xNomadToken, idempotencyToken);
+            //var response = instance.PostDeploymentPromote(deploymentID, deploymentPromoteRequest, region, varNamespace, xNomadToken, idempotencyToken);
             //Assert.IsType<DeploymentUpdateResponse>(response);
         }
 
@@ -194,10 +194,10 @@ namespace Fermyon.Nomad.Test.Api
             //string deploymentID = null;
             //DeploymentUnblockRequest deploymentUnblockRequest = null;
             //string? region = null;
-            //string? _namespace = null;
+            //string? varNamespace = null;
             //string? xNomadToken = null;
             //string? idempotencyToken = null;
-            //var response = instance.PostDeploymentUnblock(deploymentID, deploymentUnblockRequest, region, _namespace, xNomadToken, idempotencyToken);
+            //var response = instance.PostDeploymentUnblock(deploymentID, deploymentUnblockRequest, region, varNamespace, xNomadToken, idempotencyToken);
             //Assert.IsType<DeploymentUpdateResponse>(response);
         }
     }

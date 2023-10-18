@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **MountOptions** | [**CSIMountOptions**](CSIMountOptions.md) |  | [optional] 
 **Name** | **string** |  | [optional] 
 **PerAlloc** | **bool** |  | [optional] 
-**ReadOnly** | **bool** |  | [optional] 
+**VarReadOnly** | **bool** |  | [optional] 
 **Source** | **string** |  | [optional] 
 **Type** | **string** |  | [optional] 
 

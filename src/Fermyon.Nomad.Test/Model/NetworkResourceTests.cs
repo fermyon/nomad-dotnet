@@ -15,7 +15,6 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Collections.Generic;
-using Fermyon.Nomad.Api;
 using Fermyon.Nomad.Model;
 using Fermyon.Nomad.Client;
 using System.Reflection;
@@ -56,7 +55,6 @@ namespace Fermyon.Nomad.Test.Model
             //Assert.IsType<NetworkResource>(instance);
         }
 
-
         /// <summary>
         /// Test the property 'CIDR'
         /// </summary>
@@ -65,6 +63,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'CIDR'
         }
+
         /// <summary>
         /// Test the property 'DNS'
         /// </summary>
@@ -73,6 +72,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'DNS'
         }
+
         /// <summary>
         /// Test the property 'Device'
         /// </summary>
@@ -81,6 +81,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Device'
         }
+
         /// <summary>
         /// Test the property 'DynamicPorts'
         /// </summary>
@@ -89,6 +90,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'DynamicPorts'
         }
+
         /// <summary>
         /// Test the property 'Hostname'
         /// </summary>
@@ -97,6 +99,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Hostname'
         }
+
         /// <summary>
         /// Test the property 'IP'
         /// </summary>
@@ -105,6 +108,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'IP'
         }
+
         /// <summary>
         /// Test the property 'MBits'
         /// </summary>
@@ -113,6 +117,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'MBits'
         }
+
         /// <summary>
         /// Test the property 'Mode'
         /// </summary>
@@ -121,6 +126,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Mode'
         }
+
         /// <summary>
         /// Test the property 'ReservedPorts'
         /// </summary>
@@ -129,7 +135,5 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'ReservedPorts'
         }
-
     }
-
 }

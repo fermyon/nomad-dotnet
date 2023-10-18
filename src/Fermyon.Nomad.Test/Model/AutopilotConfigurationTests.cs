@@ -15,7 +15,6 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Collections.Generic;
-using Fermyon.Nomad.Api;
 using Fermyon.Nomad.Model;
 using Fermyon.Nomad.Client;
 using System.Reflection;
@@ -56,7 +55,6 @@ namespace Fermyon.Nomad.Test.Model
             //Assert.IsType<AutopilotConfiguration>(instance);
         }
 
-
         /// <summary>
         /// Test the property 'CleanupDeadServers'
         /// </summary>
@@ -65,6 +63,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'CleanupDeadServers'
         }
+
         /// <summary>
         /// Test the property 'CreateIndex'
         /// </summary>
@@ -73,6 +72,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'CreateIndex'
         }
+
         /// <summary>
         /// Test the property 'DisableUpgradeMigration'
         /// </summary>
@@ -81,6 +81,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'DisableUpgradeMigration'
         }
+
         /// <summary>
         /// Test the property 'EnableCustomUpgrades'
         /// </summary>
@@ -89,6 +90,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'EnableCustomUpgrades'
         }
+
         /// <summary>
         /// Test the property 'EnableRedundancyZones'
         /// </summary>
@@ -97,6 +99,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'EnableRedundancyZones'
         }
+
         /// <summary>
         /// Test the property 'LastContactThreshold'
         /// </summary>
@@ -105,6 +108,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'LastContactThreshold'
         }
+
         /// <summary>
         /// Test the property 'MaxTrailingLogs'
         /// </summary>
@@ -113,6 +117,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'MaxTrailingLogs'
         }
+
         /// <summary>
         /// Test the property 'MinQuorum'
         /// </summary>
@@ -121,6 +126,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'MinQuorum'
         }
+
         /// <summary>
         /// Test the property 'ModifyIndex'
         /// </summary>
@@ -129,6 +135,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'ModifyIndex'
         }
+
         /// <summary>
         /// Test the property 'ServerStabilizationTime'
         /// </summary>
@@ -137,7 +144,5 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'ServerStabilizationTime'
         }
-
     }
-
 }

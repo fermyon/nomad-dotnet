@@ -47,8 +47,8 @@ namespace Fermyon.Nomad.Model
         /// <param name="nodesExpected">nodesExpected.</param>
         /// <param name="nodesHealthy">nodesHealthy.</param>
         /// <param name="provider">provider.</param>
-        /// <param name="version">version.</param>
-        public CSIPlugin(List<AllocationListStub> allocations = default(List<AllocationListStub>), bool controllerRequired = default(bool), Dictionary<string, CSIInfo> controllers = default(Dictionary<string, CSIInfo>), int controllersExpected = default(int), int controllersHealthy = default(int), int createIndex = default(int), string iD = default(string), int modifyIndex = default(int), Dictionary<string, CSIInfo> nodes = default(Dictionary<string, CSIInfo>), int nodesExpected = default(int), int nodesHealthy = default(int), string provider = default(string), string version = default(string))
+        /// <param name="varVersion">varVersion.</param>
+        public CSIPlugin(List<AllocationListStub> allocations = default(List<AllocationListStub>), bool controllerRequired = default(bool), Dictionary<string, CSIInfo> controllers = default(Dictionary<string, CSIInfo>), int controllersExpected = default(int), int controllersHealthy = default(int), int createIndex = default(int), string iD = default(string), int modifyIndex = default(int), Dictionary<string, CSIInfo> nodes = default(Dictionary<string, CSIInfo>), int nodesExpected = default(int), int nodesHealthy = default(int), string provider = default(string), string varVersion = default(string))
         {
             this.Allocations = allocations;
             this.ControllerRequired = controllerRequired;
@@ -62,7 +62,7 @@ namespace Fermyon.Nomad.Model
             this.NodesExpected = nodesExpected;
             this.NodesHealthy = nodesHealthy;
             this.Provider = provider;
-            this._Version = version;
+            this.VarVersion = varVersion;
         }
 
         /// <summary>
@@ -138,10 +138,10 @@ namespace Fermyon.Nomad.Model
         public string Provider { get; set; }
 
         /// <summary>
-        /// Gets or Sets _Version
+        /// Gets or Sets VarVersion
         /// </summary>
         [DataMember(Name = "Version", EmitDefaultValue = false)]
-        public string _Version { get; set; }
+        public string VarVersion { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -163,7 +163,7 @@ namespace Fermyon.Nomad.Model
             sb.Append("  NodesExpected: ").Append(NodesExpected).Append("\n");
             sb.Append("  NodesHealthy: ").Append(NodesHealthy).Append("\n");
             sb.Append("  Provider: ").Append(Provider).Append("\n");
-            sb.Append("  _Version: ").Append(_Version).Append("\n");
+            sb.Append("  VarVersion: ").Append(VarVersion).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -256,9 +256,9 @@ namespace Fermyon.Nomad.Model
                     this.Provider.Equals(input.Provider))
                 ) && 
                 (
-                    this._Version == input._Version ||
-                    (this._Version != null &&
-                    this._Version.Equals(input._Version))
+                    this.VarVersion == input.VarVersion ||
+                    (this.VarVersion != null &&
+                    this.VarVersion.Equals(input.VarVersion))
                 );
         }
 
@@ -298,9 +298,9 @@ namespace Fermyon.Nomad.Model
                 {
                     hashCode = (hashCode * 59) + this.Provider.GetHashCode();
                 }
-                if (this._Version != null)
+                if (this.VarVersion != null)
                 {
-                    hashCode = (hashCode * 59) + this._Version.GetHashCode();
+                    hashCode = (hashCode * 59) + this.VarVersion.GetHashCode();
                 }
                 return hashCode;
             }
@@ -311,7 +311,7 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // CreateIndex (int) maximum
             if (this.CreateIndex > (int)384)

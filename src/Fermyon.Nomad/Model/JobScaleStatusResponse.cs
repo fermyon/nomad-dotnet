@@ -39,15 +39,15 @@ namespace Fermyon.Nomad.Model
         /// <param name="jobID">jobID.</param>
         /// <param name="jobModifyIndex">jobModifyIndex.</param>
         /// <param name="jobStopped">jobStopped.</param>
-        /// <param name="_namespace">_namespace.</param>
+        /// <param name="varNamespace">varNamespace.</param>
         /// <param name="taskGroups">taskGroups.</param>
-        public JobScaleStatusResponse(int jobCreateIndex = default(int), string jobID = default(string), int jobModifyIndex = default(int), bool jobStopped = default(bool), string _namespace = default(string), Dictionary<string, TaskGroupScaleStatus> taskGroups = default(Dictionary<string, TaskGroupScaleStatus>))
+        public JobScaleStatusResponse(int jobCreateIndex = default(int), string jobID = default(string), int jobModifyIndex = default(int), bool jobStopped = default(bool), string varNamespace = default(string), Dictionary<string, TaskGroupScaleStatus> taskGroups = default(Dictionary<string, TaskGroupScaleStatus>))
         {
             this.JobCreateIndex = jobCreateIndex;
             this.JobID = jobID;
             this.JobModifyIndex = jobModifyIndex;
             this.JobStopped = jobStopped;
-            this.Namespace = _namespace;
+            this.VarNamespace = varNamespace;
             this.TaskGroups = taskGroups;
         }
 
@@ -76,10 +76,10 @@ namespace Fermyon.Nomad.Model
         public bool JobStopped { get; set; }
 
         /// <summary>
-        /// Gets or Sets Namespace
+        /// Gets or Sets VarNamespace
         /// </summary>
         [DataMember(Name = "Namespace", EmitDefaultValue = false)]
-        public string Namespace { get; set; }
+        public string VarNamespace { get; set; }
 
         /// <summary>
         /// Gets or Sets TaskGroups
@@ -99,7 +99,7 @@ namespace Fermyon.Nomad.Model
             sb.Append("  JobID: ").Append(JobID).Append("\n");
             sb.Append("  JobModifyIndex: ").Append(JobModifyIndex).Append("\n");
             sb.Append("  JobStopped: ").Append(JobStopped).Append("\n");
-            sb.Append("  Namespace: ").Append(Namespace).Append("\n");
+            sb.Append("  VarNamespace: ").Append(VarNamespace).Append("\n");
             sb.Append("  TaskGroups: ").Append(TaskGroups).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -154,9 +154,9 @@ namespace Fermyon.Nomad.Model
                     this.JobStopped.Equals(input.JobStopped)
                 ) && 
                 (
-                    this.Namespace == input.Namespace ||
-                    (this.Namespace != null &&
-                    this.Namespace.Equals(input.Namespace))
+                    this.VarNamespace == input.VarNamespace ||
+                    (this.VarNamespace != null &&
+                    this.VarNamespace.Equals(input.VarNamespace))
                 ) && 
                 (
                     this.TaskGroups == input.TaskGroups ||
@@ -182,9 +182,9 @@ namespace Fermyon.Nomad.Model
                 }
                 hashCode = (hashCode * 59) + this.JobModifyIndex.GetHashCode();
                 hashCode = (hashCode * 59) + this.JobStopped.GetHashCode();
-                if (this.Namespace != null)
+                if (this.VarNamespace != null)
                 {
-                    hashCode = (hashCode * 59) + this.Namespace.GetHashCode();
+                    hashCode = (hashCode * 59) + this.VarNamespace.GetHashCode();
                 }
                 if (this.TaskGroups != null)
                 {
@@ -199,7 +199,7 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // JobCreateIndex (int) maximum
             if (this.JobCreateIndex > (int)384)

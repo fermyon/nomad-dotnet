@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **ID** | **string** |  | [optional] 
 **JobID** | **string** |  | [optional] 
 **ModifyIndex** | **int** |  | [optional] 
-**Namespace** | **string** |  | [optional] 
+**VarNamespace** | **string** |  | [optional] 
 **NodeID** | **string** |  | [optional] 
 **Port** | **int** |  | [optional] 
 **ServiceName** | **string** |  | [optional] 

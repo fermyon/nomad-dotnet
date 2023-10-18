@@ -15,7 +15,6 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Collections.Generic;
-using Fermyon.Nomad.Api;
 using Fermyon.Nomad.Model;
 using Fermyon.Nomad.Client;
 using System.Reflection;
@@ -56,7 +55,6 @@ namespace Fermyon.Nomad.Test.Model
             //Assert.IsType<ConsulProxy>(instance);
         }
 
-
         /// <summary>
         /// Test the property 'Config'
         /// </summary>
@@ -65,6 +63,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Config'
         }
+
         /// <summary>
         /// Test the property 'ExposeConfig'
         /// </summary>
@@ -73,6 +72,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'ExposeConfig'
         }
+
         /// <summary>
         /// Test the property 'LocalServiceAddress'
         /// </summary>
@@ -81,6 +81,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'LocalServiceAddress'
         }
+
         /// <summary>
         /// Test the property 'LocalServicePort'
         /// </summary>
@@ -89,6 +90,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'LocalServicePort'
         }
+
         /// <summary>
         /// Test the property 'Upstreams'
         /// </summary>
@@ -97,7 +99,5 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Upstreams'
         }
-
     }
-
 }

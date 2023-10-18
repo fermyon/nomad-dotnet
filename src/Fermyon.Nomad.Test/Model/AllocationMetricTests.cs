@@ -15,7 +15,6 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Collections.Generic;
-using Fermyon.Nomad.Api;
 using Fermyon.Nomad.Model;
 using Fermyon.Nomad.Client;
 using System.Reflection;
@@ -56,7 +55,6 @@ namespace Fermyon.Nomad.Test.Model
             //Assert.IsType<AllocationMetric>(instance);
         }
 
-
         /// <summary>
         /// Test the property 'AllocationTime'
         /// </summary>
@@ -65,6 +63,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'AllocationTime'
         }
+
         /// <summary>
         /// Test the property 'ClassExhausted'
         /// </summary>
@@ -73,6 +72,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'ClassExhausted'
         }
+
         /// <summary>
         /// Test the property 'ClassFiltered'
         /// </summary>
@@ -81,6 +81,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'ClassFiltered'
         }
+
         /// <summary>
         /// Test the property 'CoalescedFailures'
         /// </summary>
@@ -89,6 +90,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'CoalescedFailures'
         }
+
         /// <summary>
         /// Test the property 'ConstraintFiltered'
         /// </summary>
@@ -97,6 +99,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'ConstraintFiltered'
         }
+
         /// <summary>
         /// Test the property 'DimensionExhausted'
         /// </summary>
@@ -105,6 +108,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'DimensionExhausted'
         }
+
         /// <summary>
         /// Test the property 'NodesAvailable'
         /// </summary>
@@ -113,6 +117,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'NodesAvailable'
         }
+
         /// <summary>
         /// Test the property 'NodesEvaluated'
         /// </summary>
@@ -121,6 +126,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'NodesEvaluated'
         }
+
         /// <summary>
         /// Test the property 'NodesExhausted'
         /// </summary>
@@ -129,6 +135,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'NodesExhausted'
         }
+
         /// <summary>
         /// Test the property 'NodesFiltered'
         /// </summary>
@@ -137,6 +144,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'NodesFiltered'
         }
+
         /// <summary>
         /// Test the property 'QuotaExhausted'
         /// </summary>
@@ -145,6 +153,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'QuotaExhausted'
         }
+
         /// <summary>
         /// Test the property 'ResourcesExhausted'
         /// </summary>
@@ -153,6 +162,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'ResourcesExhausted'
         }
+
         /// <summary>
         /// Test the property 'ScoreMetaData'
         /// </summary>
@@ -161,6 +171,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'ScoreMetaData'
         }
+
         /// <summary>
         /// Test the property 'Scores'
         /// </summary>
@@ -169,7 +180,5 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Scores'
         }
-
     }
-
 }

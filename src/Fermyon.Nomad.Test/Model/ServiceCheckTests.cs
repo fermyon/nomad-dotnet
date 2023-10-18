@@ -15,7 +15,6 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Collections.Generic;
-using Fermyon.Nomad.Api;
 using Fermyon.Nomad.Model;
 using Fermyon.Nomad.Client;
 using System.Reflection;
@@ -56,7 +55,6 @@ namespace Fermyon.Nomad.Test.Model
             //Assert.IsType<ServiceCheck>(instance);
         }
 
-
         /// <summary>
         /// Test the property 'AddressMode'
         /// </summary>
@@ -65,6 +63,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'AddressMode'
         }
+
         /// <summary>
         /// Test the property 'Advertise'
         /// </summary>
@@ -73,6 +72,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Advertise'
         }
+
         /// <summary>
         /// Test the property 'Args'
         /// </summary>
@@ -81,6 +81,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Args'
         }
+
         /// <summary>
         /// Test the property 'Body'
         /// </summary>
@@ -89,6 +90,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Body'
         }
+
         /// <summary>
         /// Test the property 'CheckRestart'
         /// </summary>
@@ -97,6 +99,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'CheckRestart'
         }
+
         /// <summary>
         /// Test the property 'Command'
         /// </summary>
@@ -105,6 +108,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Command'
         }
+
         /// <summary>
         /// Test the property 'Expose'
         /// </summary>
@@ -113,6 +117,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Expose'
         }
+
         /// <summary>
         /// Test the property 'FailuresBeforeCritical'
         /// </summary>
@@ -121,6 +126,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'FailuresBeforeCritical'
         }
+
         /// <summary>
         /// Test the property 'GRPCService'
         /// </summary>
@@ -129,6 +135,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'GRPCService'
         }
+
         /// <summary>
         /// Test the property 'GRPCUseTLS'
         /// </summary>
@@ -137,6 +144,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'GRPCUseTLS'
         }
+
         /// <summary>
         /// Test the property 'Header'
         /// </summary>
@@ -145,6 +153,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Header'
         }
+
         /// <summary>
         /// Test the property 'InitialStatus'
         /// </summary>
@@ -153,6 +162,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'InitialStatus'
         }
+
         /// <summary>
         /// Test the property 'Interval'
         /// </summary>
@@ -161,6 +171,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Interval'
         }
+
         /// <summary>
         /// Test the property 'Method'
         /// </summary>
@@ -169,6 +180,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Method'
         }
+
         /// <summary>
         /// Test the property 'Name'
         /// </summary>
@@ -177,6 +189,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Name'
         }
+
         /// <summary>
         /// Test the property 'OnUpdate'
         /// </summary>
@@ -185,6 +198,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'OnUpdate'
         }
+
         /// <summary>
         /// Test the property 'Path'
         /// </summary>
@@ -193,6 +207,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Path'
         }
+
         /// <summary>
         /// Test the property 'PortLabel'
         /// </summary>
@@ -201,6 +216,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'PortLabel'
         }
+
         /// <summary>
         /// Test the property 'Protocol'
         /// </summary>
@@ -209,6 +225,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Protocol'
         }
+
         /// <summary>
         /// Test the property 'SuccessBeforePassing'
         /// </summary>
@@ -217,6 +234,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'SuccessBeforePassing'
         }
+
         /// <summary>
         /// Test the property 'TLSSkipVerify'
         /// </summary>
@@ -225,6 +243,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'TLSSkipVerify'
         }
+
         /// <summary>
         /// Test the property 'TaskName'
         /// </summary>
@@ -233,6 +252,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'TaskName'
         }
+
         /// <summary>
         /// Test the property 'Timeout'
         /// </summary>
@@ -241,6 +261,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Timeout'
         }
+
         /// <summary>
         /// Test the property 'Type'
         /// </summary>
@@ -249,7 +270,5 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Type'
         }
-
     }
-
 }

@@ -6,7 +6,7 @@ All URIs are relative to *https://127.0.0.1:4646/v1*
 |--------|--------------|-------------|
 | [**GetAllocationLogs**](ClientsApi.md#getallocationlogs) | **GET** /client/fs/logs/{allocID} |  |
 
-<a name="getallocationlogs"></a>
+<a id="getallocationlogs"></a>
 # **GetAllocationLogs**
 > AllocationLogs GetAllocationLogs (string task, string type, string allocID, bool? follow = null, int? offset = null, string? origin = null, bool? plain = null)
 

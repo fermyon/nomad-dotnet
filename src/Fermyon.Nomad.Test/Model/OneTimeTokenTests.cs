@@ -15,7 +15,6 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Collections.Generic;
-using Fermyon.Nomad.Api;
 using Fermyon.Nomad.Model;
 using Fermyon.Nomad.Client;
 using System.Reflection;
@@ -56,7 +55,6 @@ namespace Fermyon.Nomad.Test.Model
             //Assert.IsType<OneTimeToken>(instance);
         }
 
-
         /// <summary>
         /// Test the property 'AccessorID'
         /// </summary>
@@ -65,6 +63,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'AccessorID'
         }
+
         /// <summary>
         /// Test the property 'CreateIndex'
         /// </summary>
@@ -73,6 +72,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'CreateIndex'
         }
+
         /// <summary>
         /// Test the property 'ExpiresAt'
         /// </summary>
@@ -81,6 +81,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'ExpiresAt'
         }
+
         /// <summary>
         /// Test the property 'ModifyIndex'
         /// </summary>
@@ -89,6 +90,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'ModifyIndex'
         }
+
         /// <summary>
         /// Test the property 'OneTimeSecretID'
         /// </summary>
@@ -97,7 +99,5 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'OneTimeSecretID'
         }
-
     }
-
 }

@@ -15,7 +15,6 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Collections.Generic;
-using Fermyon.Nomad.Api;
 using Fermyon.Nomad.Model;
 using Fermyon.Nomad.Client;
 using System.Reflection;
@@ -56,39 +55,42 @@ namespace Fermyon.Nomad.Test.Model
             //Assert.IsType<Attribute>(instance);
         }
 
+        /// <summary>
+        /// Test the property 'VarBool'
+        /// </summary>
+        [Fact]
+        public void VarBoolTest()
+        {
+            // TODO unit test for the property 'VarBool'
+        }
 
         /// <summary>
-        /// Test the property 'Bool'
+        /// Test the property 'VarFloat'
         /// </summary>
         [Fact]
-        public void BoolTest()
+        public void VarFloatTest()
         {
-            // TODO unit test for the property 'Bool'
+            // TODO unit test for the property 'VarFloat'
         }
+
         /// <summary>
-        /// Test the property 'Float'
+        /// Test the property 'VarInt'
         /// </summary>
         [Fact]
-        public void FloatTest()
+        public void VarIntTest()
         {
-            // TODO unit test for the property 'Float'
+            // TODO unit test for the property 'VarInt'
         }
+
         /// <summary>
-        /// Test the property 'Int'
+        /// Test the property 'VarString'
         /// </summary>
         [Fact]
-        public void IntTest()
+        public void VarStringTest()
         {
-            // TODO unit test for the property 'Int'
+            // TODO unit test for the property 'VarString'
         }
-        /// <summary>
-        /// Test the property 'String'
-        /// </summary>
-        [Fact]
-        public void StringTest()
-        {
-            // TODO unit test for the property 'String'
-        }
+
         /// <summary>
         /// Test the property 'Unit'
         /// </summary>
@@ -97,7 +99,5 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Unit'
         }
-
     }
-
 }

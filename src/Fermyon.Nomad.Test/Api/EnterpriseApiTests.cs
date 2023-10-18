@@ -64,10 +64,10 @@ namespace Fermyon.Nomad.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //QuotaSpec quotaSpec = null;
             //string? region = null;
-            //string? _namespace = null;
+            //string? varNamespace = null;
             //string? xNomadToken = null;
             //string? idempotencyToken = null;
-            //instance.CreateQuotaSpec(quotaSpec, region, _namespace, xNomadToken, idempotencyToken);
+            //instance.CreateQuotaSpec(quotaSpec, region, varNamespace, xNomadToken, idempotencyToken);
         }
 
         /// <summary>
@@ -79,10 +79,10 @@ namespace Fermyon.Nomad.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string specName = null;
             //string? region = null;
-            //string? _namespace = null;
+            //string? varNamespace = null;
             //string? xNomadToken = null;
             //string? idempotencyToken = null;
-            //instance.DeleteQuotaSpec(specName, region, _namespace, xNomadToken, idempotencyToken);
+            //instance.DeleteQuotaSpec(specName, region, varNamespace, xNomadToken, idempotencyToken);
         }
 
         /// <summary>
@@ -94,7 +94,7 @@ namespace Fermyon.Nomad.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string specName = null;
             //string? region = null;
-            //string? _namespace = null;
+            //string? varNamespace = null;
             //int? index = null;
             //string? wait = null;
             //string? stale = null;
@@ -102,7 +102,7 @@ namespace Fermyon.Nomad.Test.Api
             //string? xNomadToken = null;
             //int? perPage = null;
             //string? nextToken = null;
-            //var response = instance.GetQuotaSpec(specName, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+            //var response = instance.GetQuotaSpec(specName, region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
             //Assert.IsType<QuotaSpec>(response);
         }
 
@@ -114,7 +114,7 @@ namespace Fermyon.Nomad.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string? region = null;
-            //string? _namespace = null;
+            //string? varNamespace = null;
             //int? index = null;
             //string? wait = null;
             //string? stale = null;
@@ -122,7 +122,7 @@ namespace Fermyon.Nomad.Test.Api
             //string? xNomadToken = null;
             //int? perPage = null;
             //string? nextToken = null;
-            //var response = instance.GetQuotas(region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+            //var response = instance.GetQuotas(region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
             //Assert.IsType<List<Object>>(response);
         }
 
@@ -136,10 +136,10 @@ namespace Fermyon.Nomad.Test.Api
             //string specName = null;
             //QuotaSpec quotaSpec = null;
             //string? region = null;
-            //string? _namespace = null;
+            //string? varNamespace = null;
             //string? xNomadToken = null;
             //string? idempotencyToken = null;
-            //instance.PostQuotaSpec(specName, quotaSpec, region, _namespace, xNomadToken, idempotencyToken);
+            //instance.PostQuotaSpec(specName, quotaSpec, region, varNamespace, xNomadToken, idempotencyToken);
         }
     }
 }

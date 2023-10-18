@@ -39,18 +39,18 @@ namespace Fermyon.Nomad.Model
         /// <param name="evalPriority">evalPriority.</param>
         /// <param name="job">job.</param>
         /// <param name="jobModifyIndex">jobModifyIndex.</param>
-        /// <param name="_namespace">_namespace.</param>
+        /// <param name="varNamespace">varNamespace.</param>
         /// <param name="policyOverride">policyOverride.</param>
         /// <param name="preserveCounts">preserveCounts.</param>
         /// <param name="region">region.</param>
         /// <param name="secretID">secretID.</param>
-        public JobRegisterRequest(bool enforceIndex = default(bool), int evalPriority = default(int), Job job = default(Job), int jobModifyIndex = default(int), string _namespace = default(string), bool policyOverride = default(bool), bool preserveCounts = default(bool), string region = default(string), string secretID = default(string))
+        public JobRegisterRequest(bool enforceIndex = default(bool), int evalPriority = default(int), Job job = default(Job), int jobModifyIndex = default(int), string varNamespace = default(string), bool policyOverride = default(bool), bool preserveCounts = default(bool), string region = default(string), string secretID = default(string))
         {
             this.EnforceIndex = enforceIndex;
             this.EvalPriority = evalPriority;
             this.Job = job;
             this.JobModifyIndex = jobModifyIndex;
-            this.Namespace = _namespace;
+            this.VarNamespace = varNamespace;
             this.PolicyOverride = policyOverride;
             this.PreserveCounts = preserveCounts;
             this.Region = region;
@@ -82,10 +82,10 @@ namespace Fermyon.Nomad.Model
         public int JobModifyIndex { get; set; }
 
         /// <summary>
-        /// Gets or Sets Namespace
+        /// Gets or Sets VarNamespace
         /// </summary>
         [DataMember(Name = "Namespace", EmitDefaultValue = false)]
-        public string Namespace { get; set; }
+        public string VarNamespace { get; set; }
 
         /// <summary>
         /// Gets or Sets PolicyOverride
@@ -123,7 +123,7 @@ namespace Fermyon.Nomad.Model
             sb.Append("  EvalPriority: ").Append(EvalPriority).Append("\n");
             sb.Append("  Job: ").Append(Job).Append("\n");
             sb.Append("  JobModifyIndex: ").Append(JobModifyIndex).Append("\n");
-            sb.Append("  Namespace: ").Append(Namespace).Append("\n");
+            sb.Append("  VarNamespace: ").Append(VarNamespace).Append("\n");
             sb.Append("  PolicyOverride: ").Append(PolicyOverride).Append("\n");
             sb.Append("  PreserveCounts: ").Append(PreserveCounts).Append("\n");
             sb.Append("  Region: ").Append(Region).Append("\n");
@@ -181,9 +181,9 @@ namespace Fermyon.Nomad.Model
                     this.JobModifyIndex.Equals(input.JobModifyIndex)
                 ) && 
                 (
-                    this.Namespace == input.Namespace ||
-                    (this.Namespace != null &&
-                    this.Namespace.Equals(input.Namespace))
+                    this.VarNamespace == input.VarNamespace ||
+                    (this.VarNamespace != null &&
+                    this.VarNamespace.Equals(input.VarNamespace))
                 ) && 
                 (
                     this.PolicyOverride == input.PolicyOverride ||
@@ -221,9 +221,9 @@ namespace Fermyon.Nomad.Model
                     hashCode = (hashCode * 59) + this.Job.GetHashCode();
                 }
                 hashCode = (hashCode * 59) + this.JobModifyIndex.GetHashCode();
-                if (this.Namespace != null)
+                if (this.VarNamespace != null)
                 {
-                    hashCode = (hashCode * 59) + this.Namespace.GetHashCode();
+                    hashCode = (hashCode * 59) + this.VarNamespace.GetHashCode();
                 }
                 hashCode = (hashCode * 59) + this.PolicyOverride.GetHashCode();
                 hashCode = (hashCode * 59) + this.PreserveCounts.GetHashCode();
@@ -244,7 +244,7 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // JobModifyIndex (int) maximum
             if (this.JobModifyIndex > (int)384)

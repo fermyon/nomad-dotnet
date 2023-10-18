@@ -15,7 +15,6 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Collections.Generic;
-using Fermyon.Nomad.Api;
 using Fermyon.Nomad.Model;
 using Fermyon.Nomad.Client;
 using System.Reflection;
@@ -56,7 +55,6 @@ namespace Fermyon.Nomad.Test.Model
             //Assert.IsType<AllocationLogs>(instance);
         }
 
-
         /// <summary>
         /// Test the property 'Data'
         /// </summary>
@@ -65,6 +63,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Data'
         }
+
         /// <summary>
         /// Test the property 'File'
         /// </summary>
@@ -73,6 +72,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'File'
         }
+
         /// <summary>
         /// Test the property 'Offset'
         /// </summary>
@@ -81,7 +81,5 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Offset'
         }
-
     }
-
 }

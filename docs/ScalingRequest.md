@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **Error** | **bool** |  | [optional] 
 **Message** | **string** |  | [optional] 
 **Meta** | **Dictionary&lt;string, Object&gt;** |  | [optional] 
-**Namespace** | **string** |  | [optional] 
+**VarNamespace** | **string** |  | [optional] 
 **PolicyOverride** | **bool** |  | [optional] 
 **Region** | **string** |  | [optional] 
 **SecretID** | **string** |  | [optional] 

@@ -15,7 +15,6 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Collections.Generic;
-using Fermyon.Nomad.Api;
 using Fermyon.Nomad.Model;
 using Fermyon.Nomad.Client;
 using System.Reflection;
@@ -56,7 +55,6 @@ namespace Fermyon.Nomad.Test.Model
             //Assert.IsType<TaskArtifact>(instance);
         }
 
-
         /// <summary>
         /// Test the property 'GetterHeaders'
         /// </summary>
@@ -65,6 +63,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'GetterHeaders'
         }
+
         /// <summary>
         /// Test the property 'GetterMode'
         /// </summary>
@@ -73,6 +72,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'GetterMode'
         }
+
         /// <summary>
         /// Test the property 'GetterOptions'
         /// </summary>
@@ -81,6 +81,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'GetterOptions'
         }
+
         /// <summary>
         /// Test the property 'GetterSource'
         /// </summary>
@@ -89,6 +90,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'GetterSource'
         }
+
         /// <summary>
         /// Test the property 'RelativeDest'
         /// </summary>
@@ -97,7 +99,5 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'RelativeDest'
         }
-
     }
-
 }
