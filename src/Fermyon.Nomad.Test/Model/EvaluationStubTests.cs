@@ -15,7 +15,6 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Collections.Generic;
-using Fermyon.Nomad.Api;
 using Fermyon.Nomad.Model;
 using Fermyon.Nomad.Client;
 using System.Reflection;
@@ -56,7 +55,6 @@ namespace Fermyon.Nomad.Test.Model
             //Assert.IsType<EvaluationStub>(instance);
         }
 
-
         /// <summary>
         /// Test the property 'BlockedEval'
         /// </summary>
@@ -65,6 +63,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'BlockedEval'
         }
+
         /// <summary>
         /// Test the property 'CreateIndex'
         /// </summary>
@@ -73,6 +72,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'CreateIndex'
         }
+
         /// <summary>
         /// Test the property 'CreateTime'
         /// </summary>
@@ -81,6 +81,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'CreateTime'
         }
+
         /// <summary>
         /// Test the property 'DeploymentID'
         /// </summary>
@@ -89,6 +90,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'DeploymentID'
         }
+
         /// <summary>
         /// Test the property 'ID'
         /// </summary>
@@ -97,6 +99,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'ID'
         }
+
         /// <summary>
         /// Test the property 'JobID'
         /// </summary>
@@ -105,6 +108,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'JobID'
         }
+
         /// <summary>
         /// Test the property 'ModifyIndex'
         /// </summary>
@@ -113,6 +117,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'ModifyIndex'
         }
+
         /// <summary>
         /// Test the property 'ModifyTime'
         /// </summary>
@@ -121,14 +126,16 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'ModifyTime'
         }
+
         /// <summary>
-        /// Test the property 'Namespace'
+        /// Test the property 'VarNamespace'
         /// </summary>
         [Fact]
-        public void NamespaceTest()
+        public void VarNamespaceTest()
         {
-            // TODO unit test for the property 'Namespace'
+            // TODO unit test for the property 'VarNamespace'
         }
+
         /// <summary>
         /// Test the property 'NextEval'
         /// </summary>
@@ -137,6 +144,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'NextEval'
         }
+
         /// <summary>
         /// Test the property 'NodeID'
         /// </summary>
@@ -145,6 +153,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'NodeID'
         }
+
         /// <summary>
         /// Test the property 'PreviousEval'
         /// </summary>
@@ -153,6 +162,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'PreviousEval'
         }
+
         /// <summary>
         /// Test the property 'Priority'
         /// </summary>
@@ -161,6 +171,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Priority'
         }
+
         /// <summary>
         /// Test the property 'Status'
         /// </summary>
@@ -169,6 +180,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Status'
         }
+
         /// <summary>
         /// Test the property 'StatusDescription'
         /// </summary>
@@ -177,6 +189,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'StatusDescription'
         }
+
         /// <summary>
         /// Test the property 'TriggeredBy'
         /// </summary>
@@ -185,6 +198,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'TriggeredBy'
         }
+
         /// <summary>
         /// Test the property 'Type'
         /// </summary>
@@ -193,6 +207,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Type'
         }
+
         /// <summary>
         /// Test the property 'WaitUntil'
         /// </summary>
@@ -201,7 +216,5 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'WaitUntil'
         }
-
     }
-
 }

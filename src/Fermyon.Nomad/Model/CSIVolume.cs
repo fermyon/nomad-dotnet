@@ -50,7 +50,7 @@ namespace Fermyon.Nomad.Model
         /// <param name="modifyIndex">modifyIndex.</param>
         /// <param name="mountOptions">mountOptions.</param>
         /// <param name="name">name.</param>
-        /// <param name="_namespace">_namespace.</param>
+        /// <param name="varNamespace">varNamespace.</param>
         /// <param name="nodesExpected">nodesExpected.</param>
         /// <param name="nodesHealthy">nodesHealthy.</param>
         /// <param name="parameters">parameters.</param>
@@ -68,7 +68,7 @@ namespace Fermyon.Nomad.Model
         /// <param name="snapshotID">snapshotID.</param>
         /// <param name="topologies">topologies.</param>
         /// <param name="writeAllocs">writeAllocs.</param>
-        public CSIVolume(string accessMode = default(string), List<AllocationListStub> allocations = default(List<AllocationListStub>), string attachmentMode = default(string), long capacity = default(long), string cloneID = default(string), Dictionary<string, string> context = default(Dictionary<string, string>), bool controllerRequired = default(bool), int controllersExpected = default(int), int controllersHealthy = default(int), int createIndex = default(int), string externalID = default(string), string iD = default(string), int modifyIndex = default(int), CSIMountOptions mountOptions = default(CSIMountOptions), string name = default(string), string _namespace = default(string), int nodesExpected = default(int), int nodesHealthy = default(int), Dictionary<string, string> parameters = default(Dictionary<string, string>), string pluginID = default(string), string provider = default(string), string providerVersion = default(string), Dictionary<string, Allocation> readAllocs = default(Dictionary<string, Allocation>), List<CSIVolumeCapability> requestedCapabilities = default(List<CSIVolumeCapability>), long requestedCapacityMax = default(long), long requestedCapacityMin = default(long), CSITopologyRequest requestedTopologies = default(CSITopologyRequest), DateTime resourceExhausted = default(DateTime), bool schedulable = default(bool), Dictionary<string, string> secrets = default(Dictionary<string, string>), string snapshotID = default(string), List<CSITopology> topologies = default(List<CSITopology>), Dictionary<string, Allocation> writeAllocs = default(Dictionary<string, Allocation>))
+        public CSIVolume(string accessMode = default(string), List<AllocationListStub> allocations = default(List<AllocationListStub>), string attachmentMode = default(string), long capacity = default(long), string cloneID = default(string), Dictionary<string, string> context = default(Dictionary<string, string>), bool controllerRequired = default(bool), int controllersExpected = default(int), int controllersHealthy = default(int), int createIndex = default(int), string externalID = default(string), string iD = default(string), int modifyIndex = default(int), CSIMountOptions mountOptions = default(CSIMountOptions), string name = default(string), string varNamespace = default(string), int nodesExpected = default(int), int nodesHealthy = default(int), Dictionary<string, string> parameters = default(Dictionary<string, string>), string pluginID = default(string), string provider = default(string), string providerVersion = default(string), Dictionary<string, Allocation> readAllocs = default(Dictionary<string, Allocation>), List<CSIVolumeCapability> requestedCapabilities = default(List<CSIVolumeCapability>), long requestedCapacityMax = default(long), long requestedCapacityMin = default(long), CSITopologyRequest requestedTopologies = default(CSITopologyRequest), DateTime resourceExhausted = default(DateTime), bool schedulable = default(bool), Dictionary<string, string> secrets = default(Dictionary<string, string>), string snapshotID = default(string), List<CSITopology> topologies = default(List<CSITopology>), Dictionary<string, Allocation> writeAllocs = default(Dictionary<string, Allocation>))
         {
             this.AccessMode = accessMode;
             this.Allocations = allocations;
@@ -85,7 +85,7 @@ namespace Fermyon.Nomad.Model
             this.ModifyIndex = modifyIndex;
             this.MountOptions = mountOptions;
             this.Name = name;
-            this.Namespace = _namespace;
+            this.VarNamespace = varNamespace;
             this.NodesExpected = nodesExpected;
             this.NodesHealthy = nodesHealthy;
             this.Parameters = parameters;
@@ -196,10 +196,10 @@ namespace Fermyon.Nomad.Model
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or Sets Namespace
+        /// Gets or Sets VarNamespace
         /// </summary>
         [DataMember(Name = "Namespace", EmitDefaultValue = false)]
-        public string Namespace { get; set; }
+        public string VarNamespace { get; set; }
 
         /// <summary>
         /// Gets or Sets NodesExpected
@@ -326,7 +326,7 @@ namespace Fermyon.Nomad.Model
             sb.Append("  ModifyIndex: ").Append(ModifyIndex).Append("\n");
             sb.Append("  MountOptions: ").Append(MountOptions).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
-            sb.Append("  Namespace: ").Append(Namespace).Append("\n");
+            sb.Append("  VarNamespace: ").Append(VarNamespace).Append("\n");
             sb.Append("  NodesExpected: ").Append(NodesExpected).Append("\n");
             sb.Append("  NodesHealthy: ").Append(NodesHealthy).Append("\n");
             sb.Append("  Parameters: ").Append(Parameters).Append("\n");
@@ -451,9 +451,9 @@ namespace Fermyon.Nomad.Model
                     this.Name.Equals(input.Name))
                 ) && 
                 (
-                    this.Namespace == input.Namespace ||
-                    (this.Namespace != null &&
-                    this.Namespace.Equals(input.Namespace))
+                    this.VarNamespace == input.VarNamespace ||
+                    (this.VarNamespace != null &&
+                    this.VarNamespace.Equals(input.VarNamespace))
                 ) && 
                 (
                     this.NodesExpected == input.NodesExpected ||
@@ -594,9 +594,9 @@ namespace Fermyon.Nomad.Model
                 {
                     hashCode = (hashCode * 59) + this.Name.GetHashCode();
                 }
-                if (this.Namespace != null)
+                if (this.VarNamespace != null)
                 {
-                    hashCode = (hashCode * 59) + this.Namespace.GetHashCode();
+                    hashCode = (hashCode * 59) + this.VarNamespace.GetHashCode();
                 }
                 hashCode = (hashCode * 59) + this.NodesExpected.GetHashCode();
                 hashCode = (hashCode * 59) + this.NodesHealthy.GetHashCode();
@@ -660,7 +660,7 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // CreateIndex (int) maximum
             if (this.CreateIndex > (int)384)

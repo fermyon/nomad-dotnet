@@ -15,7 +15,6 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Collections.Generic;
-using Fermyon.Nomad.Api;
 using Fermyon.Nomad.Model;
 using Fermyon.Nomad.Client;
 using System.Reflection;
@@ -56,7 +55,6 @@ namespace Fermyon.Nomad.Test.Model
             //Assert.IsType<Resources>(instance);
         }
 
-
         /// <summary>
         /// Test the property 'CPU'
         /// </summary>
@@ -65,6 +63,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'CPU'
         }
+
         /// <summary>
         /// Test the property 'Cores'
         /// </summary>
@@ -73,6 +72,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Cores'
         }
+
         /// <summary>
         /// Test the property 'Devices'
         /// </summary>
@@ -81,6 +81,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Devices'
         }
+
         /// <summary>
         /// Test the property 'DiskMB'
         /// </summary>
@@ -89,6 +90,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'DiskMB'
         }
+
         /// <summary>
         /// Test the property 'IOPS'
         /// </summary>
@@ -97,6 +99,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'IOPS'
         }
+
         /// <summary>
         /// Test the property 'MemoryMB'
         /// </summary>
@@ -105,6 +108,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'MemoryMB'
         }
+
         /// <summary>
         /// Test the property 'MemoryMaxMB'
         /// </summary>
@@ -113,6 +117,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'MemoryMaxMB'
         }
+
         /// <summary>
         /// Test the property 'Networks'
         /// </summary>
@@ -121,7 +126,5 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Networks'
         }
-
     }
-
 }

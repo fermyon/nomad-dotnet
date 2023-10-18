@@ -20,7 +20,7 @@ Name | Type | Description | Notes
 **ModifyIndex** | **int** |  | [optional] 
 **Multiregion** | [**Multiregion**](Multiregion.md) |  | [optional] 
 **Name** | **string** |  | [optional] 
-**Namespace** | **string** |  | [optional] 
+**VarNamespace** | **string** |  | [optional] 
 **NomadTokenID** | **string** |  | [optional] 
 **ParameterizedJob** | [**ParameterizedJobConfig**](ParameterizedJobConfig.md) |  | [optional] 
 **ParentID** | **string** |  | [optional] 
@@ -40,7 +40,7 @@ Name | Type | Description | Notes
 **Update** | [**UpdateStrategy**](UpdateStrategy.md) |  | [optional] 
 **VaultNamespace** | **string** |  | [optional] 
 **VaultToken** | **string** |  | [optional] 
-**_Version** | **int** |  | [optional] 
+**VarVersion** | **int** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

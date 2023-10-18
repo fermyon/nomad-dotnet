@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **JobSpecModifyIndex** | **int** |  | [optional] 
 **JobVersion** | **int** |  | [optional] 
 **ModifyIndex** | **int** |  | [optional] 
-**Namespace** | **string** |  | [optional] 
+**VarNamespace** | **string** |  | [optional] 
 **Status** | **string** |  | [optional] 
 **StatusDescription** | **string** |  | [optional] 
 **TaskGroups** | [**Dictionary&lt;string, DeploymentState&gt;**](DeploymentState.md) |  | [optional] 

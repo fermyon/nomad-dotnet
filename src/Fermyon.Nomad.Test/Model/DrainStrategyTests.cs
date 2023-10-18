@@ -15,7 +15,6 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Collections.Generic;
-using Fermyon.Nomad.Api;
 using Fermyon.Nomad.Model;
 using Fermyon.Nomad.Client;
 using System.Reflection;
@@ -56,7 +55,6 @@ namespace Fermyon.Nomad.Test.Model
             //Assert.IsType<DrainStrategy>(instance);
         }
 
-
         /// <summary>
         /// Test the property 'Deadline'
         /// </summary>
@@ -65,6 +63,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Deadline'
         }
+
         /// <summary>
         /// Test the property 'ForceDeadline'
         /// </summary>
@@ -73,6 +72,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'ForceDeadline'
         }
+
         /// <summary>
         /// Test the property 'IgnoreSystemJobs'
         /// </summary>
@@ -81,6 +81,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'IgnoreSystemJobs'
         }
+
         /// <summary>
         /// Test the property 'StartedAt'
         /// </summary>
@@ -89,7 +90,5 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'StartedAt'
         }
-
     }
-
 }

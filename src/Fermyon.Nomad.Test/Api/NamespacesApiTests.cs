@@ -63,10 +63,10 @@ namespace Fermyon.Nomad.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string? region = null;
-            //string? _namespace = null;
+            //string? varNamespace = null;
             //string? xNomadToken = null;
             //string? idempotencyToken = null;
-            //instance.CreateNamespace(region, _namespace, xNomadToken, idempotencyToken);
+            //instance.CreateNamespace(region, varNamespace, xNomadToken, idempotencyToken);
         }
 
         /// <summary>
@@ -78,10 +78,10 @@ namespace Fermyon.Nomad.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string namespaceName = null;
             //string? region = null;
-            //string? _namespace = null;
+            //string? varNamespace = null;
             //string? xNomadToken = null;
             //string? idempotencyToken = null;
-            //instance.DeleteNamespace(namespaceName, region, _namespace, xNomadToken, idempotencyToken);
+            //instance.DeleteNamespace(namespaceName, region, varNamespace, xNomadToken, idempotencyToken);
         }
 
         /// <summary>
@@ -93,7 +93,7 @@ namespace Fermyon.Nomad.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string namespaceName = null;
             //string? region = null;
-            //string? _namespace = null;
+            //string? varNamespace = null;
             //int? index = null;
             //string? wait = null;
             //string? stale = null;
@@ -101,7 +101,7 @@ namespace Fermyon.Nomad.Test.Api
             //string? xNomadToken = null;
             //int? perPage = null;
             //string? nextToken = null;
-            //var response = instance.GetNamespace(namespaceName, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+            //var response = instance.GetNamespace(namespaceName, region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
             //Assert.IsType<Namespace>(response);
         }
 
@@ -113,7 +113,7 @@ namespace Fermyon.Nomad.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string? region = null;
-            //string? _namespace = null;
+            //string? varNamespace = null;
             //int? index = null;
             //string? wait = null;
             //string? stale = null;
@@ -121,7 +121,7 @@ namespace Fermyon.Nomad.Test.Api
             //string? xNomadToken = null;
             //int? perPage = null;
             //string? nextToken = null;
-            //var response = instance.GetNamespaces(region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+            //var response = instance.GetNamespaces(region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
             //Assert.IsType<List<Namespace>>(response);
         }
 
@@ -133,12 +133,12 @@ namespace Fermyon.Nomad.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string namespaceName = null;
-            //Namespace _namespace2 = null;
+            //Namespace varNamespace2 = null;
             //string? region = null;
-            //string? _namespace = null;
+            //string? varNamespace = null;
             //string? xNomadToken = null;
             //string? idempotencyToken = null;
-            //instance.PostNamespace(namespaceName, _namespace2, region, _namespace, xNomadToken, idempotencyToken);
+            //instance.PostNamespace(namespaceName, varNamespace2, region, varNamespace, xNomadToken, idempotencyToken);
         }
     }
 }

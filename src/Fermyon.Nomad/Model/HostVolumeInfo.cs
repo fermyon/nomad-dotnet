@@ -36,11 +36,11 @@ namespace Fermyon.Nomad.Model
         /// Initializes a new instance of the <see cref="HostVolumeInfo" /> class.
         /// </summary>
         /// <param name="path">path.</param>
-        /// <param name="readOnly">readOnly.</param>
-        public HostVolumeInfo(string path = default(string), bool readOnly = default(bool))
+        /// <param name="varReadOnly">varReadOnly.</param>
+        public HostVolumeInfo(string path = default(string), bool varReadOnly = default(bool))
         {
             this.Path = path;
-            this.ReadOnly = readOnly;
+            this.VarReadOnly = varReadOnly;
         }
 
         /// <summary>
@@ -50,10 +50,10 @@ namespace Fermyon.Nomad.Model
         public string Path { get; set; }
 
         /// <summary>
-        /// Gets or Sets ReadOnly
+        /// Gets or Sets VarReadOnly
         /// </summary>
         [DataMember(Name = "ReadOnly", EmitDefaultValue = true)]
-        public bool ReadOnly { get; set; }
+        public bool VarReadOnly { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -64,7 +64,7 @@ namespace Fermyon.Nomad.Model
             StringBuilder sb = new StringBuilder();
             sb.Append("class HostVolumeInfo {\n");
             sb.Append("  Path: ").Append(Path).Append("\n");
-            sb.Append("  ReadOnly: ").Append(ReadOnly).Append("\n");
+            sb.Append("  VarReadOnly: ").Append(VarReadOnly).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -106,8 +106,8 @@ namespace Fermyon.Nomad.Model
                     this.Path.Equals(input.Path))
                 ) && 
                 (
-                    this.ReadOnly == input.ReadOnly ||
-                    this.ReadOnly.Equals(input.ReadOnly)
+                    this.VarReadOnly == input.VarReadOnly ||
+                    this.VarReadOnly.Equals(input.VarReadOnly)
                 );
         }
 
@@ -124,7 +124,7 @@ namespace Fermyon.Nomad.Model
                 {
                     hashCode = (hashCode * 59) + this.Path.GetHashCode();
                 }
-                hashCode = (hashCode * 59) + this.ReadOnly.GetHashCode();
+                hashCode = (hashCode * 59) + this.VarReadOnly.GetHashCode();
                 return hashCode;
             }
         }
@@ -134,7 +134,7 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

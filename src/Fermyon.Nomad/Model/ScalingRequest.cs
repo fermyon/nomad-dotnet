@@ -39,18 +39,18 @@ namespace Fermyon.Nomad.Model
         /// <param name="error">error.</param>
         /// <param name="message">message.</param>
         /// <param name="meta">meta.</param>
-        /// <param name="_namespace">_namespace.</param>
+        /// <param name="varNamespace">varNamespace.</param>
         /// <param name="policyOverride">policyOverride.</param>
         /// <param name="region">region.</param>
         /// <param name="secretID">secretID.</param>
         /// <param name="target">target.</param>
-        public ScalingRequest(long count = default(long), bool error = default(bool), string message = default(string), Dictionary<string, Object> meta = default(Dictionary<string, Object>), string _namespace = default(string), bool policyOverride = default(bool), string region = default(string), string secretID = default(string), Dictionary<string, string> target = default(Dictionary<string, string>))
+        public ScalingRequest(long count = default(long), bool error = default(bool), string message = default(string), Dictionary<string, Object> meta = default(Dictionary<string, Object>), string varNamespace = default(string), bool policyOverride = default(bool), string region = default(string), string secretID = default(string), Dictionary<string, string> target = default(Dictionary<string, string>))
         {
             this.Count = count;
             this.Error = error;
             this.Message = message;
             this.Meta = meta;
-            this.Namespace = _namespace;
+            this.VarNamespace = varNamespace;
             this.PolicyOverride = policyOverride;
             this.Region = region;
             this.SecretID = secretID;
@@ -82,10 +82,10 @@ namespace Fermyon.Nomad.Model
         public Dictionary<string, Object> Meta { get; set; }
 
         /// <summary>
-        /// Gets or Sets Namespace
+        /// Gets or Sets VarNamespace
         /// </summary>
         [DataMember(Name = "Namespace", EmitDefaultValue = false)]
-        public string Namespace { get; set; }
+        public string VarNamespace { get; set; }
 
         /// <summary>
         /// Gets or Sets PolicyOverride
@@ -123,7 +123,7 @@ namespace Fermyon.Nomad.Model
             sb.Append("  Error: ").Append(Error).Append("\n");
             sb.Append("  Message: ").Append(Message).Append("\n");
             sb.Append("  Meta: ").Append(Meta).Append("\n");
-            sb.Append("  Namespace: ").Append(Namespace).Append("\n");
+            sb.Append("  VarNamespace: ").Append(VarNamespace).Append("\n");
             sb.Append("  PolicyOverride: ").Append(PolicyOverride).Append("\n");
             sb.Append("  Region: ").Append(Region).Append("\n");
             sb.Append("  SecretID: ").Append(SecretID).Append("\n");
@@ -183,9 +183,9 @@ namespace Fermyon.Nomad.Model
                     this.Meta.SequenceEqual(input.Meta)
                 ) && 
                 (
-                    this.Namespace == input.Namespace ||
-                    (this.Namespace != null &&
-                    this.Namespace.Equals(input.Namespace))
+                    this.VarNamespace == input.VarNamespace ||
+                    (this.VarNamespace != null &&
+                    this.VarNamespace.Equals(input.VarNamespace))
                 ) && 
                 (
                     this.PolicyOverride == input.PolicyOverride ||
@@ -228,9 +228,9 @@ namespace Fermyon.Nomad.Model
                 {
                     hashCode = (hashCode * 59) + this.Meta.GetHashCode();
                 }
-                if (this.Namespace != null)
+                if (this.VarNamespace != null)
                 {
-                    hashCode = (hashCode * 59) + this.Namespace.GetHashCode();
+                    hashCode = (hashCode * 59) + this.VarNamespace.GetHashCode();
                 }
                 hashCode = (hashCode * 59) + this.PolicyOverride.GetHashCode();
                 if (this.Region != null)
@@ -254,7 +254,7 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

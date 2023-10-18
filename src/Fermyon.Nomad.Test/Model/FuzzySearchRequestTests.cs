@@ -15,7 +15,6 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Collections.Generic;
-using Fermyon.Nomad.Api;
 using Fermyon.Nomad.Model;
 using Fermyon.Nomad.Client;
 using System.Reflection;
@@ -56,7 +55,6 @@ namespace Fermyon.Nomad.Test.Model
             //Assert.IsType<FuzzySearchRequest>(instance);
         }
 
-
         /// <summary>
         /// Test the property 'AllowStale'
         /// </summary>
@@ -65,6 +63,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'AllowStale'
         }
+
         /// <summary>
         /// Test the property 'AuthToken'
         /// </summary>
@@ -73,6 +72,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'AuthToken'
         }
+
         /// <summary>
         /// Test the property 'Context'
         /// </summary>
@@ -81,6 +81,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Context'
         }
+
         /// <summary>
         /// Test the property 'Filter'
         /// </summary>
@@ -89,6 +90,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Filter'
         }
+
         /// <summary>
         /// Test the property 'Headers'
         /// </summary>
@@ -97,14 +99,16 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Headers'
         }
+
         /// <summary>
-        /// Test the property 'Namespace'
+        /// Test the property 'VarNamespace'
         /// </summary>
         [Fact]
-        public void NamespaceTest()
+        public void VarNamespaceTest()
         {
-            // TODO unit test for the property 'Namespace'
+            // TODO unit test for the property 'VarNamespace'
         }
+
         /// <summary>
         /// Test the property 'NextToken'
         /// </summary>
@@ -113,14 +117,16 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'NextToken'
         }
+
         /// <summary>
-        /// Test the property 'Params'
+        /// Test the property 'VarParams'
         /// </summary>
         [Fact]
-        public void ParamsTest()
+        public void VarParamsTest()
         {
-            // TODO unit test for the property 'Params'
+            // TODO unit test for the property 'VarParams'
         }
+
         /// <summary>
         /// Test the property 'PerPage'
         /// </summary>
@@ -129,6 +135,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'PerPage'
         }
+
         /// <summary>
         /// Test the property 'Prefix'
         /// </summary>
@@ -137,6 +144,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Prefix'
         }
+
         /// <summary>
         /// Test the property 'Region'
         /// </summary>
@@ -145,6 +153,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Region'
         }
+
         /// <summary>
         /// Test the property 'Reverse'
         /// </summary>
@@ -153,6 +162,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Reverse'
         }
+
         /// <summary>
         /// Test the property 'Text'
         /// </summary>
@@ -161,6 +171,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Text'
         }
+
         /// <summary>
         /// Test the property 'WaitIndex'
         /// </summary>
@@ -169,6 +180,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'WaitIndex'
         }
+
         /// <summary>
         /// Test the property 'WaitTime'
         /// </summary>
@@ -177,7 +189,5 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'WaitTime'
         }
-
     }
-
 }

@@ -15,7 +15,6 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Collections.Generic;
-using Fermyon.Nomad.Api;
 using Fermyon.Nomad.Model;
 using Fermyon.Nomad.Client;
 using System.Reflection;
@@ -56,7 +55,6 @@ namespace Fermyon.Nomad.Test.Model
             //Assert.IsType<Job>(instance);
         }
 
-
         /// <summary>
         /// Test the property 'Affinities'
         /// </summary>
@@ -65,6 +63,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Affinities'
         }
+
         /// <summary>
         /// Test the property 'AllAtOnce'
         /// </summary>
@@ -73,6 +72,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'AllAtOnce'
         }
+
         /// <summary>
         /// Test the property 'Constraints'
         /// </summary>
@@ -81,6 +81,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Constraints'
         }
+
         /// <summary>
         /// Test the property 'ConsulNamespace'
         /// </summary>
@@ -89,6 +90,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'ConsulNamespace'
         }
+
         /// <summary>
         /// Test the property 'ConsulToken'
         /// </summary>
@@ -97,6 +99,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'ConsulToken'
         }
+
         /// <summary>
         /// Test the property 'CreateIndex'
         /// </summary>
@@ -105,6 +108,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'CreateIndex'
         }
+
         /// <summary>
         /// Test the property 'Datacenters'
         /// </summary>
@@ -113,6 +117,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Datacenters'
         }
+
         /// <summary>
         /// Test the property 'DispatchIdempotencyToken'
         /// </summary>
@@ -121,6 +126,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'DispatchIdempotencyToken'
         }
+
         /// <summary>
         /// Test the property 'Dispatched'
         /// </summary>
@@ -129,6 +135,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Dispatched'
         }
+
         /// <summary>
         /// Test the property 'ID'
         /// </summary>
@@ -137,6 +144,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'ID'
         }
+
         /// <summary>
         /// Test the property 'JobModifyIndex'
         /// </summary>
@@ -145,6 +153,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'JobModifyIndex'
         }
+
         /// <summary>
         /// Test the property 'Meta'
         /// </summary>
@@ -153,6 +162,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Meta'
         }
+
         /// <summary>
         /// Test the property 'Migrate'
         /// </summary>
@@ -161,6 +171,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Migrate'
         }
+
         /// <summary>
         /// Test the property 'ModifyIndex'
         /// </summary>
@@ -169,6 +180,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'ModifyIndex'
         }
+
         /// <summary>
         /// Test the property 'Multiregion'
         /// </summary>
@@ -177,6 +189,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Multiregion'
         }
+
         /// <summary>
         /// Test the property 'Name'
         /// </summary>
@@ -185,14 +198,16 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Name'
         }
+
         /// <summary>
-        /// Test the property 'Namespace'
+        /// Test the property 'VarNamespace'
         /// </summary>
         [Fact]
-        public void NamespaceTest()
+        public void VarNamespaceTest()
         {
-            // TODO unit test for the property 'Namespace'
+            // TODO unit test for the property 'VarNamespace'
         }
+
         /// <summary>
         /// Test the property 'NomadTokenID'
         /// </summary>
@@ -201,6 +216,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'NomadTokenID'
         }
+
         /// <summary>
         /// Test the property 'ParameterizedJob'
         /// </summary>
@@ -209,6 +225,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'ParameterizedJob'
         }
+
         /// <summary>
         /// Test the property 'ParentID'
         /// </summary>
@@ -217,6 +234,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'ParentID'
         }
+
         /// <summary>
         /// Test the property 'Payload'
         /// </summary>
@@ -225,6 +243,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Payload'
         }
+
         /// <summary>
         /// Test the property 'Periodic'
         /// </summary>
@@ -233,6 +252,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Periodic'
         }
+
         /// <summary>
         /// Test the property 'Priority'
         /// </summary>
@@ -241,6 +261,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Priority'
         }
+
         /// <summary>
         /// Test the property 'Region'
         /// </summary>
@@ -249,6 +270,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Region'
         }
+
         /// <summary>
         /// Test the property 'Reschedule'
         /// </summary>
@@ -257,6 +279,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Reschedule'
         }
+
         /// <summary>
         /// Test the property 'Spreads'
         /// </summary>
@@ -265,6 +288,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Spreads'
         }
+
         /// <summary>
         /// Test the property 'Stable'
         /// </summary>
@@ -273,6 +297,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Stable'
         }
+
         /// <summary>
         /// Test the property 'Status'
         /// </summary>
@@ -281,6 +306,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Status'
         }
+
         /// <summary>
         /// Test the property 'StatusDescription'
         /// </summary>
@@ -289,6 +315,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'StatusDescription'
         }
+
         /// <summary>
         /// Test the property 'Stop'
         /// </summary>
@@ -297,6 +324,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Stop'
         }
+
         /// <summary>
         /// Test the property 'SubmitTime'
         /// </summary>
@@ -305,6 +333,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'SubmitTime'
         }
+
         /// <summary>
         /// Test the property 'TaskGroups'
         /// </summary>
@@ -313,6 +342,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'TaskGroups'
         }
+
         /// <summary>
         /// Test the property 'Type'
         /// </summary>
@@ -321,6 +351,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Type'
         }
+
         /// <summary>
         /// Test the property 'Update'
         /// </summary>
@@ -329,6 +360,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Update'
         }
+
         /// <summary>
         /// Test the property 'VaultNamespace'
         /// </summary>
@@ -337,6 +369,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'VaultNamespace'
         }
+
         /// <summary>
         /// Test the property 'VaultToken'
         /// </summary>
@@ -345,15 +378,14 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'VaultToken'
         }
+
         /// <summary>
-        /// Test the property '_Version'
+        /// Test the property 'VarVersion'
         /// </summary>
         [Fact]
-        public void _VersionTest()
+        public void VarVersionTest()
         {
-            // TODO unit test for the property '_Version'
+            // TODO unit test for the property 'VarVersion'
         }
-
     }
-
 }

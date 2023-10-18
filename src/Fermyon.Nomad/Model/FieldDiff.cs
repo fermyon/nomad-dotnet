@@ -37,14 +37,14 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="annotations">annotations.</param>
         /// <param name="name">name.</param>
-        /// <param name="_new">_new.</param>
+        /// <param name="varNew">varNew.</param>
         /// <param name="old">old.</param>
         /// <param name="type">type.</param>
-        public FieldDiff(List<string> annotations = default(List<string>), string name = default(string), string _new = default(string), string old = default(string), string type = default(string))
+        public FieldDiff(List<string> annotations = default(List<string>), string name = default(string), string varNew = default(string), string old = default(string), string type = default(string))
         {
             this.Annotations = annotations;
             this.Name = name;
-            this.New = _new;
+            this.VarNew = varNew;
             this.Old = old;
             this.Type = type;
         }
@@ -62,10 +62,10 @@ namespace Fermyon.Nomad.Model
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or Sets New
+        /// Gets or Sets VarNew
         /// </summary>
         [DataMember(Name = "New", EmitDefaultValue = false)]
-        public string New { get; set; }
+        public string VarNew { get; set; }
 
         /// <summary>
         /// Gets or Sets Old
@@ -89,7 +89,7 @@ namespace Fermyon.Nomad.Model
             sb.Append("class FieldDiff {\n");
             sb.Append("  Annotations: ").Append(Annotations).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
-            sb.Append("  New: ").Append(New).Append("\n");
+            sb.Append("  VarNew: ").Append(VarNew).Append("\n");
             sb.Append("  Old: ").Append(Old).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("}\n");
@@ -139,9 +139,9 @@ namespace Fermyon.Nomad.Model
                     this.Name.Equals(input.Name))
                 ) && 
                 (
-                    this.New == input.New ||
-                    (this.New != null &&
-                    this.New.Equals(input.New))
+                    this.VarNew == input.VarNew ||
+                    (this.VarNew != null &&
+                    this.VarNew.Equals(input.VarNew))
                 ) && 
                 (
                     this.Old == input.Old ||
@@ -172,9 +172,9 @@ namespace Fermyon.Nomad.Model
                 {
                     hashCode = (hashCode * 59) + this.Name.GetHashCode();
                 }
-                if (this.New != null)
+                if (this.VarNew != null)
                 {
-                    hashCode = (hashCode * 59) + this.New.GetHashCode();
+                    hashCode = (hashCode * 59) + this.VarNew.GetHashCode();
                 }
                 if (this.Old != null)
                 {
@@ -193,7 +193,7 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

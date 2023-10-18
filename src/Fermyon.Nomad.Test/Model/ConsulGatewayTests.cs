@@ -15,7 +15,6 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Collections.Generic;
-using Fermyon.Nomad.Api;
 using Fermyon.Nomad.Model;
 using Fermyon.Nomad.Client;
 using System.Reflection;
@@ -56,7 +55,6 @@ namespace Fermyon.Nomad.Test.Model
             //Assert.IsType<ConsulGateway>(instance);
         }
 
-
         /// <summary>
         /// Test the property 'Ingress'
         /// </summary>
@@ -65,6 +63,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Ingress'
         }
+
         /// <summary>
         /// Test the property 'Mesh'
         /// </summary>
@@ -73,6 +72,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Mesh'
         }
+
         /// <summary>
         /// Test the property 'Proxy'
         /// </summary>
@@ -81,6 +81,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Proxy'
         }
+
         /// <summary>
         /// Test the property 'Terminating'
         /// </summary>
@@ -89,7 +90,5 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Terminating'
         }
-
     }
-
 }

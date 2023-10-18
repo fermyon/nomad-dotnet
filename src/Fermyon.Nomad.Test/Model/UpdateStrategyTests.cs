@@ -15,7 +15,6 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Collections.Generic;
-using Fermyon.Nomad.Api;
 using Fermyon.Nomad.Model;
 using Fermyon.Nomad.Client;
 using System.Reflection;
@@ -56,7 +55,6 @@ namespace Fermyon.Nomad.Test.Model
             //Assert.IsType<UpdateStrategy>(instance);
         }
 
-
         /// <summary>
         /// Test the property 'AutoPromote'
         /// </summary>
@@ -65,6 +63,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'AutoPromote'
         }
+
         /// <summary>
         /// Test the property 'AutoRevert'
         /// </summary>
@@ -73,6 +72,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'AutoRevert'
         }
+
         /// <summary>
         /// Test the property 'Canary'
         /// </summary>
@@ -81,6 +81,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Canary'
         }
+
         /// <summary>
         /// Test the property 'HealthCheck'
         /// </summary>
@@ -89,6 +90,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'HealthCheck'
         }
+
         /// <summary>
         /// Test the property 'HealthyDeadline'
         /// </summary>
@@ -97,6 +99,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'HealthyDeadline'
         }
+
         /// <summary>
         /// Test the property 'MaxParallel'
         /// </summary>
@@ -105,6 +108,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'MaxParallel'
         }
+
         /// <summary>
         /// Test the property 'MinHealthyTime'
         /// </summary>
@@ -113,6 +117,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'MinHealthyTime'
         }
+
         /// <summary>
         /// Test the property 'ProgressDeadline'
         /// </summary>
@@ -121,6 +126,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'ProgressDeadline'
         }
+
         /// <summary>
         /// Test the property 'Stagger'
         /// </summary>
@@ -129,7 +135,5 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Stagger'
         }
-
     }
-
 }

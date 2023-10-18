@@ -15,7 +15,6 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Collections.Generic;
-using Fermyon.Nomad.Api;
 using Fermyon.Nomad.Model;
 using Fermyon.Nomad.Client;
 using System.Reflection;
@@ -56,7 +55,6 @@ namespace Fermyon.Nomad.Test.Model
             //Assert.IsType<SchedulerConfiguration>(instance);
         }
 
-
         /// <summary>
         /// Test the property 'CreateIndex'
         /// </summary>
@@ -65,6 +63,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'CreateIndex'
         }
+
         /// <summary>
         /// Test the property 'MemoryOversubscriptionEnabled'
         /// </summary>
@@ -73,6 +72,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'MemoryOversubscriptionEnabled'
         }
+
         /// <summary>
         /// Test the property 'ModifyIndex'
         /// </summary>
@@ -81,6 +81,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'ModifyIndex'
         }
+
         /// <summary>
         /// Test the property 'PreemptionConfig'
         /// </summary>
@@ -89,6 +90,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'PreemptionConfig'
         }
+
         /// <summary>
         /// Test the property 'RejectJobRegistration'
         /// </summary>
@@ -97,6 +99,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'RejectJobRegistration'
         }
+
         /// <summary>
         /// Test the property 'SchedulerAlgorithm'
         /// </summary>
@@ -105,7 +108,5 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'SchedulerAlgorithm'
         }
-
     }
-
 }

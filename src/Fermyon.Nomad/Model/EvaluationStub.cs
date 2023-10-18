@@ -43,7 +43,7 @@ namespace Fermyon.Nomad.Model
         /// <param name="jobID">jobID.</param>
         /// <param name="modifyIndex">modifyIndex.</param>
         /// <param name="modifyTime">modifyTime.</param>
-        /// <param name="_namespace">_namespace.</param>
+        /// <param name="varNamespace">varNamespace.</param>
         /// <param name="nextEval">nextEval.</param>
         /// <param name="nodeID">nodeID.</param>
         /// <param name="previousEval">previousEval.</param>
@@ -53,7 +53,7 @@ namespace Fermyon.Nomad.Model
         /// <param name="triggeredBy">triggeredBy.</param>
         /// <param name="type">type.</param>
         /// <param name="waitUntil">waitUntil.</param>
-        public EvaluationStub(string blockedEval = default(string), int createIndex = default(int), long createTime = default(long), string deploymentID = default(string), string iD = default(string), string jobID = default(string), int modifyIndex = default(int), long modifyTime = default(long), string _namespace = default(string), string nextEval = default(string), string nodeID = default(string), string previousEval = default(string), int priority = default(int), string status = default(string), string statusDescription = default(string), string triggeredBy = default(string), string type = default(string), DateTime waitUntil = default(DateTime))
+        public EvaluationStub(string blockedEval = default(string), int createIndex = default(int), long createTime = default(long), string deploymentID = default(string), string iD = default(string), string jobID = default(string), int modifyIndex = default(int), long modifyTime = default(long), string varNamespace = default(string), string nextEval = default(string), string nodeID = default(string), string previousEval = default(string), int priority = default(int), string status = default(string), string statusDescription = default(string), string triggeredBy = default(string), string type = default(string), DateTime waitUntil = default(DateTime))
         {
             this.BlockedEval = blockedEval;
             this.CreateIndex = createIndex;
@@ -63,7 +63,7 @@ namespace Fermyon.Nomad.Model
             this.JobID = jobID;
             this.ModifyIndex = modifyIndex;
             this.ModifyTime = modifyTime;
-            this.Namespace = _namespace;
+            this.VarNamespace = varNamespace;
             this.NextEval = nextEval;
             this.NodeID = nodeID;
             this.PreviousEval = previousEval;
@@ -124,10 +124,10 @@ namespace Fermyon.Nomad.Model
         public long ModifyTime { get; set; }
 
         /// <summary>
-        /// Gets or Sets Namespace
+        /// Gets or Sets VarNamespace
         /// </summary>
         [DataMember(Name = "Namespace", EmitDefaultValue = false)]
-        public string Namespace { get; set; }
+        public string VarNamespace { get; set; }
 
         /// <summary>
         /// Gets or Sets NextEval
@@ -199,7 +199,7 @@ namespace Fermyon.Nomad.Model
             sb.Append("  JobID: ").Append(JobID).Append("\n");
             sb.Append("  ModifyIndex: ").Append(ModifyIndex).Append("\n");
             sb.Append("  ModifyTime: ").Append(ModifyTime).Append("\n");
-            sb.Append("  Namespace: ").Append(Namespace).Append("\n");
+            sb.Append("  VarNamespace: ").Append(VarNamespace).Append("\n");
             sb.Append("  NextEval: ").Append(NextEval).Append("\n");
             sb.Append("  NodeID: ").Append(NodeID).Append("\n");
             sb.Append("  PreviousEval: ").Append(PreviousEval).Append("\n");
@@ -281,9 +281,9 @@ namespace Fermyon.Nomad.Model
                     this.ModifyTime.Equals(input.ModifyTime)
                 ) && 
                 (
-                    this.Namespace == input.Namespace ||
-                    (this.Namespace != null &&
-                    this.Namespace.Equals(input.Namespace))
+                    this.VarNamespace == input.VarNamespace ||
+                    (this.VarNamespace != null &&
+                    this.VarNamespace.Equals(input.VarNamespace))
                 ) && 
                 (
                     this.NextEval == input.NextEval ||
@@ -360,9 +360,9 @@ namespace Fermyon.Nomad.Model
                 }
                 hashCode = (hashCode * 59) + this.ModifyIndex.GetHashCode();
                 hashCode = (hashCode * 59) + this.ModifyTime.GetHashCode();
-                if (this.Namespace != null)
+                if (this.VarNamespace != null)
                 {
-                    hashCode = (hashCode * 59) + this.Namespace.GetHashCode();
+                    hashCode = (hashCode * 59) + this.VarNamespace.GetHashCode();
                 }
                 if (this.NextEval != null)
                 {
@@ -406,7 +406,7 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // CreateIndex (int) maximum
             if (this.CreateIndex > (int)384)

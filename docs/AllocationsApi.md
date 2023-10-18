@@ -9,9 +9,9 @@ All URIs are relative to *https://127.0.0.1:4646/v1*
 | [**GetAllocations**](AllocationsApi.md#getallocations) | **GET** /allocations |  |
 | [**PostAllocationStop**](AllocationsApi.md#postallocationstop) | **POST** /allocation/{allocID}/stop |  |
 
-<a name="getallocation"></a>
+<a id="getallocation"></a>
 # **GetAllocation**
-> Allocation GetAllocation (string allocID, string? region = null, string? _namespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null)
+> Allocation GetAllocation (string allocID, string? region = null, string? varNamespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null)
 
 
 
@@ -39,7 +39,7 @@ namespace Example
             var apiInstance = new AllocationsApi(config);
             var allocID = "allocID_example";  // string | Allocation ID.
             var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var varNamespace = "varNamespace_example";  // string? | Filters results based on the specified namespace. (optional) 
             var index = 56;  // int? | If set, wait until query exceeds given index. Must be provided with WaitParam. (optional) 
             var wait = "wait_example";  // string? | Provided with IndexParam to wait for change. (optional) 
             var stale = "stale_example";  // string? | If present, results will include stale reads. (optional) 
@@ -50,7 +50,7 @@ namespace Example
 
             try
             {
-                Allocation result = apiInstance.GetAllocation(allocID, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+                Allocation result = apiInstance.GetAllocation(allocID, region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -70,7 +70,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Allocation> response = apiInstance.GetAllocationWithHttpInfo(allocID, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+    ApiResponse<Allocation> response = apiInstance.GetAllocationWithHttpInfo(allocID, region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -89,7 +89,7 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **allocID** | **string** | Allocation ID. |  |
 | **region** | **string?** | Filters results based on the specified region. | [optional]  |
-| **_namespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
+| **varNamespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
 | **index** | **int?** | If set, wait until query exceeds given index. Must be provided with WaitParam. | [optional]  |
 | **wait** | **string?** | Provided with IndexParam to wait for change. | [optional]  |
 | **stale** | **string?** | If present, results will include stale reads. | [optional]  |
@@ -123,9 +123,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="getallocationservices"></a>
+<a id="getallocationservices"></a>
 # **GetAllocationServices**
-> List&lt;ServiceRegistration&gt; GetAllocationServices (string allocID, string? region = null, string? _namespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null)
+> List&lt;ServiceRegistration&gt; GetAllocationServices (string allocID, string? region = null, string? varNamespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null)
 
 
 
@@ -153,7 +153,7 @@ namespace Example
             var apiInstance = new AllocationsApi(config);
             var allocID = "allocID_example";  // string | Allocation ID.
             var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var varNamespace = "varNamespace_example";  // string? | Filters results based on the specified namespace. (optional) 
             var index = 56;  // int? | If set, wait until query exceeds given index. Must be provided with WaitParam. (optional) 
             var wait = "wait_example";  // string? | Provided with IndexParam to wait for change. (optional) 
             var stale = "stale_example";  // string? | If present, results will include stale reads. (optional) 
@@ -164,7 +164,7 @@ namespace Example
 
             try
             {
-                List<ServiceRegistration> result = apiInstance.GetAllocationServices(allocID, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+                List<ServiceRegistration> result = apiInstance.GetAllocationServices(allocID, region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -184,7 +184,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<List<ServiceRegistration>> response = apiInstance.GetAllocationServicesWithHttpInfo(allocID, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+    ApiResponse<List<ServiceRegistration>> response = apiInstance.GetAllocationServicesWithHttpInfo(allocID, region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -203,7 +203,7 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **allocID** | **string** | Allocation ID. |  |
 | **region** | **string?** | Filters results based on the specified region. | [optional]  |
-| **_namespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
+| **varNamespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
 | **index** | **int?** | If set, wait until query exceeds given index. Must be provided with WaitParam. | [optional]  |
 | **wait** | **string?** | Provided with IndexParam to wait for change. | [optional]  |
 | **stale** | **string?** | If present, results will include stale reads. | [optional]  |
@@ -237,9 +237,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="getallocations"></a>
+<a id="getallocations"></a>
 # **GetAllocations**
-> List&lt;AllocationListStub&gt; GetAllocations (string? region = null, string? _namespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null, bool? resources = null, bool? taskStates = null)
+> List&lt;AllocationListStub&gt; GetAllocations (string? region = null, string? varNamespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null, bool? resources = null, bool? taskStates = null)
 
 
 
@@ -266,7 +266,7 @@ namespace Example
 
             var apiInstance = new AllocationsApi(config);
             var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var varNamespace = "varNamespace_example";  // string? | Filters results based on the specified namespace. (optional) 
             var index = 56;  // int? | If set, wait until query exceeds given index. Must be provided with WaitParam. (optional) 
             var wait = "wait_example";  // string? | Provided with IndexParam to wait for change. (optional) 
             var stale = "stale_example";  // string? | If present, results will include stale reads. (optional) 
@@ -279,7 +279,7 @@ namespace Example
 
             try
             {
-                List<AllocationListStub> result = apiInstance.GetAllocations(region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, resources, taskStates);
+                List<AllocationListStub> result = apiInstance.GetAllocations(region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, resources, taskStates);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -299,7 +299,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<List<AllocationListStub>> response = apiInstance.GetAllocationsWithHttpInfo(region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, resources, taskStates);
+    ApiResponse<List<AllocationListStub>> response = apiInstance.GetAllocationsWithHttpInfo(region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, resources, taskStates);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -317,7 +317,7 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **region** | **string?** | Filters results based on the specified region. | [optional]  |
-| **_namespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
+| **varNamespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
 | **index** | **int?** | If set, wait until query exceeds given index. Must be provided with WaitParam. | [optional]  |
 | **wait** | **string?** | Provided with IndexParam to wait for change. | [optional]  |
 | **stale** | **string?** | If present, results will include stale reads. | [optional]  |
@@ -353,9 +353,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="postallocationstop"></a>
+<a id="postallocationstop"></a>
 # **PostAllocationStop**
-> AllocStopResponse PostAllocationStop (string allocID, string? region = null, string? _namespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null, bool? noShutdownDelay = null)
+> AllocStopResponse PostAllocationStop (string allocID, string? region = null, string? varNamespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null, bool? noShutdownDelay = null)
 
 
 
@@ -383,7 +383,7 @@ namespace Example
             var apiInstance = new AllocationsApi(config);
             var allocID = "allocID_example";  // string | Allocation ID.
             var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var varNamespace = "varNamespace_example";  // string? | Filters results based on the specified namespace. (optional) 
             var index = 56;  // int? | If set, wait until query exceeds given index. Must be provided with WaitParam. (optional) 
             var wait = "wait_example";  // string? | Provided with IndexParam to wait for change. (optional) 
             var stale = "stale_example";  // string? | If present, results will include stale reads. (optional) 
@@ -395,7 +395,7 @@ namespace Example
 
             try
             {
-                AllocStopResponse result = apiInstance.PostAllocationStop(allocID, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, noShutdownDelay);
+                AllocStopResponse result = apiInstance.PostAllocationStop(allocID, region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, noShutdownDelay);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -415,7 +415,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<AllocStopResponse> response = apiInstance.PostAllocationStopWithHttpInfo(allocID, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, noShutdownDelay);
+    ApiResponse<AllocStopResponse> response = apiInstance.PostAllocationStopWithHttpInfo(allocID, region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, noShutdownDelay);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -434,7 +434,7 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **allocID** | **string** | Allocation ID. |  |
 | **region** | **string?** | Filters results based on the specified region. | [optional]  |
-| **_namespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
+| **varNamespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
 | **index** | **int?** | If set, wait until query exceeds given index. Must be provided with WaitParam. | [optional]  |
 | **wait** | **string?** | Provided with IndexParam to wait for change. | [optional]  |
 | **stale** | **string?** | If present, results will include stale reads. | [optional]  |

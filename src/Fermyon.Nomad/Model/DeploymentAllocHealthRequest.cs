@@ -37,15 +37,15 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="deploymentID">deploymentID.</param>
         /// <param name="healthyAllocationIDs">healthyAllocationIDs.</param>
-        /// <param name="_namespace">_namespace.</param>
+        /// <param name="varNamespace">varNamespace.</param>
         /// <param name="region">region.</param>
         /// <param name="secretID">secretID.</param>
         /// <param name="unhealthyAllocationIDs">unhealthyAllocationIDs.</param>
-        public DeploymentAllocHealthRequest(string deploymentID = default(string), List<string> healthyAllocationIDs = default(List<string>), string _namespace = default(string), string region = default(string), string secretID = default(string), List<string> unhealthyAllocationIDs = default(List<string>))
+        public DeploymentAllocHealthRequest(string deploymentID = default(string), List<string> healthyAllocationIDs = default(List<string>), string varNamespace = default(string), string region = default(string), string secretID = default(string), List<string> unhealthyAllocationIDs = default(List<string>))
         {
             this.DeploymentID = deploymentID;
             this.HealthyAllocationIDs = healthyAllocationIDs;
-            this.Namespace = _namespace;
+            this.VarNamespace = varNamespace;
             this.Region = region;
             this.SecretID = secretID;
             this.UnhealthyAllocationIDs = unhealthyAllocationIDs;
@@ -64,10 +64,10 @@ namespace Fermyon.Nomad.Model
         public List<string> HealthyAllocationIDs { get; set; }
 
         /// <summary>
-        /// Gets or Sets Namespace
+        /// Gets or Sets VarNamespace
         /// </summary>
         [DataMember(Name = "Namespace", EmitDefaultValue = false)]
-        public string Namespace { get; set; }
+        public string VarNamespace { get; set; }
 
         /// <summary>
         /// Gets or Sets Region
@@ -97,7 +97,7 @@ namespace Fermyon.Nomad.Model
             sb.Append("class DeploymentAllocHealthRequest {\n");
             sb.Append("  DeploymentID: ").Append(DeploymentID).Append("\n");
             sb.Append("  HealthyAllocationIDs: ").Append(HealthyAllocationIDs).Append("\n");
-            sb.Append("  Namespace: ").Append(Namespace).Append("\n");
+            sb.Append("  VarNamespace: ").Append(VarNamespace).Append("\n");
             sb.Append("  Region: ").Append(Region).Append("\n");
             sb.Append("  SecretID: ").Append(SecretID).Append("\n");
             sb.Append("  UnhealthyAllocationIDs: ").Append(UnhealthyAllocationIDs).Append("\n");
@@ -148,9 +148,9 @@ namespace Fermyon.Nomad.Model
                     this.HealthyAllocationIDs.SequenceEqual(input.HealthyAllocationIDs)
                 ) && 
                 (
-                    this.Namespace == input.Namespace ||
-                    (this.Namespace != null &&
-                    this.Namespace.Equals(input.Namespace))
+                    this.VarNamespace == input.VarNamespace ||
+                    (this.VarNamespace != null &&
+                    this.VarNamespace.Equals(input.VarNamespace))
                 ) && 
                 (
                     this.Region == input.Region ||
@@ -187,9 +187,9 @@ namespace Fermyon.Nomad.Model
                 {
                     hashCode = (hashCode * 59) + this.HealthyAllocationIDs.GetHashCode();
                 }
-                if (this.Namespace != null)
+                if (this.VarNamespace != null)
                 {
-                    hashCode = (hashCode * 59) + this.Namespace.GetHashCode();
+                    hashCode = (hashCode * 59) + this.VarNamespace.GetHashCode();
                 }
                 if (this.Region != null)
                 {
@@ -212,7 +212,7 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

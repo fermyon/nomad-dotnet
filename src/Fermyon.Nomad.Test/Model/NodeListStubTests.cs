@@ -15,7 +15,6 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Collections.Generic;
-using Fermyon.Nomad.Api;
 using Fermyon.Nomad.Model;
 using Fermyon.Nomad.Client;
 using System.Reflection;
@@ -56,7 +55,6 @@ namespace Fermyon.Nomad.Test.Model
             //Assert.IsType<NodeListStub>(instance);
         }
 
-
         /// <summary>
         /// Test the property 'Address'
         /// </summary>
@@ -65,6 +63,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Address'
         }
+
         /// <summary>
         /// Test the property 'Attributes'
         /// </summary>
@@ -73,6 +72,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Attributes'
         }
+
         /// <summary>
         /// Test the property 'CreateIndex'
         /// </summary>
@@ -81,6 +81,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'CreateIndex'
         }
+
         /// <summary>
         /// Test the property 'Datacenter'
         /// </summary>
@@ -89,6 +90,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Datacenter'
         }
+
         /// <summary>
         /// Test the property 'Drain'
         /// </summary>
@@ -97,6 +99,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Drain'
         }
+
         /// <summary>
         /// Test the property 'Drivers'
         /// </summary>
@@ -105,6 +108,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Drivers'
         }
+
         /// <summary>
         /// Test the property 'ID'
         /// </summary>
@@ -113,6 +117,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'ID'
         }
+
         /// <summary>
         /// Test the property 'LastDrain'
         /// </summary>
@@ -121,6 +126,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'LastDrain'
         }
+
         /// <summary>
         /// Test the property 'ModifyIndex'
         /// </summary>
@@ -129,6 +135,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'ModifyIndex'
         }
+
         /// <summary>
         /// Test the property 'Name'
         /// </summary>
@@ -137,6 +144,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Name'
         }
+
         /// <summary>
         /// Test the property 'NodeClass'
         /// </summary>
@@ -145,6 +153,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'NodeClass'
         }
+
         /// <summary>
         /// Test the property 'NodeResources'
         /// </summary>
@@ -153,6 +162,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'NodeResources'
         }
+
         /// <summary>
         /// Test the property 'ReservedResources'
         /// </summary>
@@ -161,6 +171,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'ReservedResources'
         }
+
         /// <summary>
         /// Test the property 'SchedulingEligibility'
         /// </summary>
@@ -169,6 +180,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'SchedulingEligibility'
         }
+
         /// <summary>
         /// Test the property 'Status'
         /// </summary>
@@ -177,6 +189,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Status'
         }
+
         /// <summary>
         /// Test the property 'StatusDescription'
         /// </summary>
@@ -185,15 +198,14 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'StatusDescription'
         }
+
         /// <summary>
-        /// Test the property '_Version'
+        /// Test the property 'VarVersion'
         /// </summary>
         [Fact]
-        public void _VersionTest()
+        public void VarVersionTest()
         {
-            // TODO unit test for the property '_Version'
+            // TODO unit test for the property 'VarVersion'
         }
-
     }
-
 }

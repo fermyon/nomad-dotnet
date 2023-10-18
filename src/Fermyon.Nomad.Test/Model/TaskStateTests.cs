@@ -15,7 +15,6 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Collections.Generic;
-using Fermyon.Nomad.Api;
 using Fermyon.Nomad.Model;
 using Fermyon.Nomad.Client;
 using System.Reflection;
@@ -56,7 +55,6 @@ namespace Fermyon.Nomad.Test.Model
             //Assert.IsType<TaskState>(instance);
         }
 
-
         /// <summary>
         /// Test the property 'Events'
         /// </summary>
@@ -65,6 +63,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Events'
         }
+
         /// <summary>
         /// Test the property 'Failed'
         /// </summary>
@@ -73,6 +72,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Failed'
         }
+
         /// <summary>
         /// Test the property 'FinishedAt'
         /// </summary>
@@ -81,6 +81,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'FinishedAt'
         }
+
         /// <summary>
         /// Test the property 'LastRestart'
         /// </summary>
@@ -89,6 +90,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'LastRestart'
         }
+
         /// <summary>
         /// Test the property 'Restarts'
         /// </summary>
@@ -97,6 +99,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Restarts'
         }
+
         /// <summary>
         /// Test the property 'StartedAt'
         /// </summary>
@@ -105,6 +108,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'StartedAt'
         }
+
         /// <summary>
         /// Test the property 'State'
         /// </summary>
@@ -113,6 +117,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'State'
         }
+
         /// <summary>
         /// Test the property 'TaskHandle'
         /// </summary>
@@ -121,7 +126,5 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'TaskHandle'
         }
-
     }
-
 }

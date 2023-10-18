@@ -18,6 +18,8 @@ using System.Net;
 using System.Reflection;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
+using System.Net.Http;
+using System.Net.Security;
 
 namespace Fermyon.Nomad.Client
 {
@@ -32,7 +34,7 @@ namespace Fermyon.Nomad.Client
         /// Version of the package.
         /// </summary>
         /// <value>Version of the package.</value>
-        public const string Version = "0.4.0";
+        public const string Version = "0.5.0";
 
         /// <summary>
         /// Identifier for ISO 8601 DateTime Format
@@ -75,6 +77,8 @@ namespace Fermyon.Nomad.Client
         /// </summary>
         private string _basePath;
 
+        private bool _useDefaultCredentials = false;
+
         /// <summary>
         /// Gets or sets the API key based on the authentication name.
         /// This is the key and value comprising the "secret" for accessing an API.
@@ -114,7 +118,7 @@ namespace Fermyon.Nomad.Client
         public Configuration()
         {
             Proxy = null;
-            UserAgent = "OpenAPI-Generator/0.4.0/csharp";
+            UserAgent = WebUtility.UrlEncode("OpenAPI-Generator/0.5.0/csharp");
             BasePath = "https://127.0.0.1:4646/v1";
             DefaultHeaders = new ConcurrentDictionary<string, string>();
             ApiKey = new ConcurrentDictionary<string, string>();
@@ -242,10 +246,19 @@ namespace Fermyon.Nomad.Client
         /// <summary>
         /// Gets or sets the base path for API access.
         /// </summary>
-        public virtual string BasePath
+        public virtual string BasePath 
         {
             get { return _basePath; }
             set { _basePath = value; }
+        }
+
+        /// <summary>
+        /// Determine whether or not the "default credentials" (e.g. the user account under which the current process is running) will be sent along to the server. The default is false.
+        /// </summary>
+        public virtual bool UseDefaultCredentials
+        {
+            get { return _useDefaultCredentials; }
+            set { _useDefaultCredentials = value; }
         }
 
         /// <summary>
@@ -320,13 +333,7 @@ namespace Fermyon.Nomad.Client
         /// Gets or sets certificate collection to be sent with requests.
         /// </summary>
         /// <value>X509 Certificate collection.</value>
-        public X509Certificate2Collection ClientCertificates { get; set; }
-
-        /// <summary>
-        /// Gets or sets certificate authority collection to validate requests.
-        /// </summary>
-        /// <value>X509 Certificate collection.</value>
-        public X509Certificate2Collection CertificateAuthorities { get; set; }
+        public X509CertificateCollection ClientCertificates { get; set; }
 
         /// <summary>
         /// Gets or sets the access token for OAuth2 authentication.
@@ -518,7 +525,7 @@ namespace Fermyon.Nomad.Client
         /// <return>The operation server URL.</return>
         public string GetOperationServerUrl(string operation, int index, Dictionary<string, string> inputVariables)
         {
-            if (OperationServers.TryGetValue(operation, out var operationServer))
+            if (operation != null && OperationServers.TryGetValue(operation, out var operationServer))
             {
                 return GetServerUrl(operationServer, index, inputVariables);
             }
@@ -577,6 +584,11 @@ namespace Fermyon.Nomad.Client
 
             return url;
         }
+        
+        /// <summary>
+        /// Gets and Sets the RemoteCertificateValidationCallback
+        /// </summary>
+        public RemoteCertificateValidationCallback RemoteCertificateValidationCallback { get; set; }
 
         #endregion Properties
 
@@ -589,9 +601,9 @@ namespace Fermyon.Nomad.Client
         {
             string report = "C# SDK (Fermyon.Nomad) Debug Report:\n";
             report += "    OS: " + System.Environment.OSVersion + "\n";
-            report += "    .NET Framework Version: " + System.Environment.Version + "\n";
+            report += "    .NET Framework Version: " + System.Environment.Version  + "\n";
             report += "    Version of the API: 1.1.4\n";
-            report += "    SDK Package Version: 0.4.0\n";
+            report += "    SDK Package Version: 0.5.0\n";
 
             return report;
         }
@@ -653,7 +665,8 @@ namespace Fermyon.Nomad.Client
                 TempFolderPath = second.TempFolderPath ?? first.TempFolderPath,
                 DateTimeFormat = second.DateTimeFormat ?? first.DateTimeFormat,
                 ClientCertificates = second.ClientCertificates ?? first.ClientCertificates,
-                CertificateAuthorities = second.CertificateAuthorities ?? first.CertificateAuthorities,
+                UseDefaultCredentials = second.UseDefaultCredentials,
+                RemoteCertificateValidationCallback = second.RemoteCertificateValidationCallback ?? first.RemoteCertificateValidationCallback,
             };
             return config;
         }

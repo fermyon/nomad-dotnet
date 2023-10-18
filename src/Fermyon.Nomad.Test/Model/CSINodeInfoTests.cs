@@ -15,7 +15,6 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Collections.Generic;
-using Fermyon.Nomad.Api;
 using Fermyon.Nomad.Model;
 using Fermyon.Nomad.Client;
 using System.Reflection;
@@ -56,7 +55,6 @@ namespace Fermyon.Nomad.Test.Model
             //Assert.IsType<CSINodeInfo>(instance);
         }
 
-
         /// <summary>
         /// Test the property 'AccessibleTopology'
         /// </summary>
@@ -65,6 +63,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'AccessibleTopology'
         }
+
         /// <summary>
         /// Test the property 'ID'
         /// </summary>
@@ -73,6 +72,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'ID'
         }
+
         /// <summary>
         /// Test the property 'MaxVolumes'
         /// </summary>
@@ -81,6 +81,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'MaxVolumes'
         }
+
         /// <summary>
         /// Test the property 'RequiresNodeStageVolume'
         /// </summary>
@@ -89,6 +90,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'RequiresNodeStageVolume'
         }
+
         /// <summary>
         /// Test the property 'SupportsCondition'
         /// </summary>
@@ -97,6 +99,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'SupportsCondition'
         }
+
         /// <summary>
         /// Test the property 'SupportsExpand'
         /// </summary>
@@ -105,6 +108,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'SupportsExpand'
         }
+
         /// <summary>
         /// Test the property 'SupportsStats'
         /// </summary>
@@ -113,7 +117,5 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'SupportsStats'
         }
-
     }
-
 }

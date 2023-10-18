@@ -33,7 +33,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="allocID">Allocation ID.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -43,7 +43,7 @@ namespace Fermyon.Nomad.Api
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>Allocation</returns>
-        Allocation GetAllocation(string allocID, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0);
+        Allocation GetAllocation(string allocID, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -54,7 +54,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="allocID">Allocation ID.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -64,14 +64,14 @@ namespace Fermyon.Nomad.Api
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Allocation</returns>
-        ApiResponse<Allocation> GetAllocationWithHttpInfo(string allocID, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0);
+        ApiResponse<Allocation> GetAllocationWithHttpInfo(string allocID, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="allocID">Allocation ID.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -81,7 +81,7 @@ namespace Fermyon.Nomad.Api
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>List&lt;ServiceRegistration&gt;</returns>
-        List<ServiceRegistration> GetAllocationServices(string allocID, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0);
+        List<ServiceRegistration> GetAllocationServices(string allocID, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -92,7 +92,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="allocID">Allocation ID.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -102,13 +102,13 @@ namespace Fermyon.Nomad.Api
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of List&lt;ServiceRegistration&gt;</returns>
-        ApiResponse<List<ServiceRegistration>> GetAllocationServicesWithHttpInfo(string allocID, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0);
+        ApiResponse<List<ServiceRegistration>> GetAllocationServicesWithHttpInfo(string allocID, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -120,7 +120,7 @@ namespace Fermyon.Nomad.Api
         /// <param name="taskStates">Flag indicating whether to include task states in response. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>List&lt;AllocationListStub&gt;</returns>
-        List<AllocationListStub> GetAllocations(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), bool? resources = default(bool?), bool? taskStates = default(bool?), int operationIndex = 0);
+        List<AllocationListStub> GetAllocations(string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), bool? resources = default(bool?), bool? taskStates = default(bool?), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -130,7 +130,7 @@ namespace Fermyon.Nomad.Api
         /// </remarks>
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -142,14 +142,14 @@ namespace Fermyon.Nomad.Api
         /// <param name="taskStates">Flag indicating whether to include task states in response. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of List&lt;AllocationListStub&gt;</returns>
-        ApiResponse<List<AllocationListStub>> GetAllocationsWithHttpInfo(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), bool? resources = default(bool?), bool? taskStates = default(bool?), int operationIndex = 0);
+        ApiResponse<List<AllocationListStub>> GetAllocationsWithHttpInfo(string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), bool? resources = default(bool?), bool? taskStates = default(bool?), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="allocID">Allocation ID.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -160,7 +160,7 @@ namespace Fermyon.Nomad.Api
         /// <param name="noShutdownDelay">Flag indicating whether to delay shutdown when requesting an allocation stop. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AllocStopResponse</returns>
-        AllocStopResponse PostAllocationStop(string allocID, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), bool? noShutdownDelay = default(bool?), int operationIndex = 0);
+        AllocStopResponse PostAllocationStop(string allocID, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), bool? noShutdownDelay = default(bool?), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -171,7 +171,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="allocID">Allocation ID.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -182,7 +182,7 @@ namespace Fermyon.Nomad.Api
         /// <param name="noShutdownDelay">Flag indicating whether to delay shutdown when requesting an allocation stop. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AllocStopResponse</returns>
-        ApiResponse<AllocStopResponse> PostAllocationStopWithHttpInfo(string allocID, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), bool? noShutdownDelay = default(bool?), int operationIndex = 0);
+        ApiResponse<AllocStopResponse> PostAllocationStopWithHttpInfo(string allocID, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), bool? noShutdownDelay = default(bool?), int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -201,7 +201,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="allocID">Allocation ID.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -212,7 +212,7 @@ namespace Fermyon.Nomad.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Allocation</returns>
-        System.Threading.Tasks.Task<Allocation> GetAllocationAsync(string allocID, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<Allocation> GetAllocationAsync(string allocID, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -223,7 +223,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="allocID">Allocation ID.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -234,7 +234,7 @@ namespace Fermyon.Nomad.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Allocation)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Allocation>> GetAllocationWithHttpInfoAsync(string allocID, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Allocation>> GetAllocationWithHttpInfoAsync(string allocID, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -244,7 +244,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="allocID">Allocation ID.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -255,7 +255,7 @@ namespace Fermyon.Nomad.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;ServiceRegistration&gt;</returns>
-        System.Threading.Tasks.Task<List<ServiceRegistration>> GetAllocationServicesAsync(string allocID, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<List<ServiceRegistration>> GetAllocationServicesAsync(string allocID, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -266,7 +266,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="allocID">Allocation ID.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -277,7 +277,7 @@ namespace Fermyon.Nomad.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;ServiceRegistration&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<ServiceRegistration>>> GetAllocationServicesWithHttpInfoAsync(string allocID, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<List<ServiceRegistration>>> GetAllocationServicesWithHttpInfoAsync(string allocID, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -286,7 +286,7 @@ namespace Fermyon.Nomad.Api
         /// </remarks>
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -299,7 +299,7 @@ namespace Fermyon.Nomad.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;AllocationListStub&gt;</returns>
-        System.Threading.Tasks.Task<List<AllocationListStub>> GetAllocationsAsync(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), bool? resources = default(bool?), bool? taskStates = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<List<AllocationListStub>> GetAllocationsAsync(string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), bool? resources = default(bool?), bool? taskStates = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -309,7 +309,7 @@ namespace Fermyon.Nomad.Api
         /// </remarks>
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -322,7 +322,7 @@ namespace Fermyon.Nomad.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;AllocationListStub&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<AllocationListStub>>> GetAllocationsWithHttpInfoAsync(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), bool? resources = default(bool?), bool? taskStates = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<List<AllocationListStub>>> GetAllocationsWithHttpInfoAsync(string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), bool? resources = default(bool?), bool? taskStates = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -332,7 +332,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="allocID">Allocation ID.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -344,7 +344,7 @@ namespace Fermyon.Nomad.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AllocStopResponse</returns>
-        System.Threading.Tasks.Task<AllocStopResponse> PostAllocationStopAsync(string allocID, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), bool? noShutdownDelay = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AllocStopResponse> PostAllocationStopAsync(string allocID, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), bool? noShutdownDelay = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -355,7 +355,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="allocID">Allocation ID.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -367,7 +367,7 @@ namespace Fermyon.Nomad.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AllocStopResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AllocStopResponse>> PostAllocationStopWithHttpInfoAsync(string allocID, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), bool? noShutdownDelay = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<AllocStopResponse>> PostAllocationStopWithHttpInfoAsync(string allocID, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), bool? noShutdownDelay = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -494,7 +494,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="allocID">Allocation ID.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -504,9 +504,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>Allocation</returns>
-        public Allocation GetAllocation(string allocID, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0)
+        public Allocation GetAllocation(string allocID, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0)
         {
-            Fermyon.Nomad.Client.ApiResponse<Allocation> localVarResponse = GetAllocationWithHttpInfo(allocID, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+            Fermyon.Nomad.Client.ApiResponse<Allocation> localVarResponse = GetAllocationWithHttpInfo(allocID, region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
             return localVarResponse.Data;
         }
 
@@ -516,7 +516,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="allocID">Allocation ID.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -526,7 +526,7 @@ namespace Fermyon.Nomad.Api
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Allocation</returns>
-        public Fermyon.Nomad.Client.ApiResponse<Allocation> GetAllocationWithHttpInfo(string allocID, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0)
+        public Fermyon.Nomad.Client.ApiResponse<Allocation> GetAllocationWithHttpInfo(string allocID, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'allocID' is set
             if (allocID == null)
@@ -561,9 +561,9 @@ namespace Fermyon.Nomad.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "region", region));
             }
-            if (_namespace != null)
+            if (varNamespace != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", _namespace));
+                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", varNamespace));
             }
             if (wait != null)
             {
@@ -623,7 +623,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="allocID">Allocation ID.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -634,9 +634,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Allocation</returns>
-        public async System.Threading.Tasks.Task<Allocation> GetAllocationAsync(string allocID, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Allocation> GetAllocationAsync(string allocID, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Fermyon.Nomad.Client.ApiResponse<Allocation> localVarResponse = await GetAllocationWithHttpInfoAsync(allocID, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, operationIndex, cancellationToken).ConfigureAwait(false);
+            Fermyon.Nomad.Client.ApiResponse<Allocation> localVarResponse = await GetAllocationWithHttpInfoAsync(allocID, region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -646,7 +646,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="allocID">Allocation ID.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -657,7 +657,7 @@ namespace Fermyon.Nomad.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Allocation)</returns>
-        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<Allocation>> GetAllocationWithHttpInfoAsync(string allocID, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<Allocation>> GetAllocationWithHttpInfoAsync(string allocID, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'allocID' is set
             if (allocID == null)
@@ -693,9 +693,9 @@ namespace Fermyon.Nomad.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "region", region));
             }
-            if (_namespace != null)
+            if (varNamespace != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", _namespace));
+                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", varNamespace));
             }
             if (wait != null)
             {
@@ -756,7 +756,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="allocID">Allocation ID.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -766,9 +766,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>List&lt;ServiceRegistration&gt;</returns>
-        public List<ServiceRegistration> GetAllocationServices(string allocID, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0)
+        public List<ServiceRegistration> GetAllocationServices(string allocID, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0)
         {
-            Fermyon.Nomad.Client.ApiResponse<List<ServiceRegistration>> localVarResponse = GetAllocationServicesWithHttpInfo(allocID, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+            Fermyon.Nomad.Client.ApiResponse<List<ServiceRegistration>> localVarResponse = GetAllocationServicesWithHttpInfo(allocID, region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
             return localVarResponse.Data;
         }
 
@@ -778,7 +778,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="allocID">Allocation ID.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -788,7 +788,7 @@ namespace Fermyon.Nomad.Api
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of List&lt;ServiceRegistration&gt;</returns>
-        public Fermyon.Nomad.Client.ApiResponse<List<ServiceRegistration>> GetAllocationServicesWithHttpInfo(string allocID, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0)
+        public Fermyon.Nomad.Client.ApiResponse<List<ServiceRegistration>> GetAllocationServicesWithHttpInfo(string allocID, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'allocID' is set
             if (allocID == null)
@@ -823,9 +823,9 @@ namespace Fermyon.Nomad.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "region", region));
             }
-            if (_namespace != null)
+            if (varNamespace != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", _namespace));
+                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", varNamespace));
             }
             if (wait != null)
             {
@@ -885,7 +885,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="allocID">Allocation ID.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -896,9 +896,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;ServiceRegistration&gt;</returns>
-        public async System.Threading.Tasks.Task<List<ServiceRegistration>> GetAllocationServicesAsync(string allocID, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<List<ServiceRegistration>> GetAllocationServicesAsync(string allocID, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Fermyon.Nomad.Client.ApiResponse<List<ServiceRegistration>> localVarResponse = await GetAllocationServicesWithHttpInfoAsync(allocID, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, operationIndex, cancellationToken).ConfigureAwait(false);
+            Fermyon.Nomad.Client.ApiResponse<List<ServiceRegistration>> localVarResponse = await GetAllocationServicesWithHttpInfoAsync(allocID, region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -908,7 +908,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="allocID">Allocation ID.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -919,7 +919,7 @@ namespace Fermyon.Nomad.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;ServiceRegistration&gt;)</returns>
-        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<List<ServiceRegistration>>> GetAllocationServicesWithHttpInfoAsync(string allocID, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<List<ServiceRegistration>>> GetAllocationServicesWithHttpInfoAsync(string allocID, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'allocID' is set
             if (allocID == null)
@@ -955,9 +955,9 @@ namespace Fermyon.Nomad.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "region", region));
             }
-            if (_namespace != null)
+            if (varNamespace != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", _namespace));
+                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", varNamespace));
             }
             if (wait != null)
             {
@@ -1017,7 +1017,7 @@ namespace Fermyon.Nomad.Api
         /// </summary>
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -1029,9 +1029,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="taskStates">Flag indicating whether to include task states in response. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>List&lt;AllocationListStub&gt;</returns>
-        public List<AllocationListStub> GetAllocations(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), bool? resources = default(bool?), bool? taskStates = default(bool?), int operationIndex = 0)
+        public List<AllocationListStub> GetAllocations(string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), bool? resources = default(bool?), bool? taskStates = default(bool?), int operationIndex = 0)
         {
-            Fermyon.Nomad.Client.ApiResponse<List<AllocationListStub>> localVarResponse = GetAllocationsWithHttpInfo(region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, resources, taskStates);
+            Fermyon.Nomad.Client.ApiResponse<List<AllocationListStub>> localVarResponse = GetAllocationsWithHttpInfo(region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, resources, taskStates);
             return localVarResponse.Data;
         }
 
@@ -1040,7 +1040,7 @@ namespace Fermyon.Nomad.Api
         /// </summary>
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -1052,7 +1052,7 @@ namespace Fermyon.Nomad.Api
         /// <param name="taskStates">Flag indicating whether to include task states in response. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of List&lt;AllocationListStub&gt;</returns>
-        public Fermyon.Nomad.Client.ApiResponse<List<AllocationListStub>> GetAllocationsWithHttpInfo(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), bool? resources = default(bool?), bool? taskStates = default(bool?), int operationIndex = 0)
+        public Fermyon.Nomad.Client.ApiResponse<List<AllocationListStub>> GetAllocationsWithHttpInfo(string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), bool? resources = default(bool?), bool? taskStates = default(bool?), int operationIndex = 0)
         {
             Fermyon.Nomad.Client.RequestOptions localVarRequestOptions = new Fermyon.Nomad.Client.RequestOptions();
 
@@ -1080,9 +1080,9 @@ namespace Fermyon.Nomad.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "region", region));
             }
-            if (_namespace != null)
+            if (varNamespace != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", _namespace));
+                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", varNamespace));
             }
             if (wait != null)
             {
@@ -1149,7 +1149,7 @@ namespace Fermyon.Nomad.Api
         /// </summary>
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -1162,9 +1162,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;AllocationListStub&gt;</returns>
-        public async System.Threading.Tasks.Task<List<AllocationListStub>> GetAllocationsAsync(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), bool? resources = default(bool?), bool? taskStates = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<List<AllocationListStub>> GetAllocationsAsync(string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), bool? resources = default(bool?), bool? taskStates = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Fermyon.Nomad.Client.ApiResponse<List<AllocationListStub>> localVarResponse = await GetAllocationsWithHttpInfoAsync(region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, resources, taskStates, operationIndex, cancellationToken).ConfigureAwait(false);
+            Fermyon.Nomad.Client.ApiResponse<List<AllocationListStub>> localVarResponse = await GetAllocationsWithHttpInfoAsync(region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, resources, taskStates, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1173,7 +1173,7 @@ namespace Fermyon.Nomad.Api
         /// </summary>
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -1186,7 +1186,7 @@ namespace Fermyon.Nomad.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;AllocationListStub&gt;)</returns>
-        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<List<AllocationListStub>>> GetAllocationsWithHttpInfoAsync(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), bool? resources = default(bool?), bool? taskStates = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<List<AllocationListStub>>> GetAllocationsWithHttpInfoAsync(string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), bool? resources = default(bool?), bool? taskStates = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             Fermyon.Nomad.Client.RequestOptions localVarRequestOptions = new Fermyon.Nomad.Client.RequestOptions();
@@ -1215,9 +1215,9 @@ namespace Fermyon.Nomad.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "region", region));
             }
-            if (_namespace != null)
+            if (varNamespace != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", _namespace));
+                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", varNamespace));
             }
             if (wait != null)
             {
@@ -1286,7 +1286,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="allocID">Allocation ID.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -1297,9 +1297,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="noShutdownDelay">Flag indicating whether to delay shutdown when requesting an allocation stop. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AllocStopResponse</returns>
-        public AllocStopResponse PostAllocationStop(string allocID, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), bool? noShutdownDelay = default(bool?), int operationIndex = 0)
+        public AllocStopResponse PostAllocationStop(string allocID, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), bool? noShutdownDelay = default(bool?), int operationIndex = 0)
         {
-            Fermyon.Nomad.Client.ApiResponse<AllocStopResponse> localVarResponse = PostAllocationStopWithHttpInfo(allocID, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, noShutdownDelay);
+            Fermyon.Nomad.Client.ApiResponse<AllocStopResponse> localVarResponse = PostAllocationStopWithHttpInfo(allocID, region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, noShutdownDelay);
             return localVarResponse.Data;
         }
 
@@ -1309,7 +1309,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="allocID">Allocation ID.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -1320,7 +1320,7 @@ namespace Fermyon.Nomad.Api
         /// <param name="noShutdownDelay">Flag indicating whether to delay shutdown when requesting an allocation stop. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AllocStopResponse</returns>
-        public Fermyon.Nomad.Client.ApiResponse<AllocStopResponse> PostAllocationStopWithHttpInfo(string allocID, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), bool? noShutdownDelay = default(bool?), int operationIndex = 0)
+        public Fermyon.Nomad.Client.ApiResponse<AllocStopResponse> PostAllocationStopWithHttpInfo(string allocID, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), bool? noShutdownDelay = default(bool?), int operationIndex = 0)
         {
             // verify the required parameter 'allocID' is set
             if (allocID == null)
@@ -1355,9 +1355,9 @@ namespace Fermyon.Nomad.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "region", region));
             }
-            if (_namespace != null)
+            if (varNamespace != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", _namespace));
+                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", varNamespace));
             }
             if (wait != null)
             {
@@ -1421,7 +1421,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="allocID">Allocation ID.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -1433,9 +1433,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AllocStopResponse</returns>
-        public async System.Threading.Tasks.Task<AllocStopResponse> PostAllocationStopAsync(string allocID, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), bool? noShutdownDelay = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AllocStopResponse> PostAllocationStopAsync(string allocID, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), bool? noShutdownDelay = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Fermyon.Nomad.Client.ApiResponse<AllocStopResponse> localVarResponse = await PostAllocationStopWithHttpInfoAsync(allocID, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, noShutdownDelay, operationIndex, cancellationToken).ConfigureAwait(false);
+            Fermyon.Nomad.Client.ApiResponse<AllocStopResponse> localVarResponse = await PostAllocationStopWithHttpInfoAsync(allocID, region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, noShutdownDelay, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1445,7 +1445,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="allocID">Allocation ID.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -1457,7 +1457,7 @@ namespace Fermyon.Nomad.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AllocStopResponse)</returns>
-        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<AllocStopResponse>> PostAllocationStopWithHttpInfoAsync(string allocID, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), bool? noShutdownDelay = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<AllocStopResponse>> PostAllocationStopWithHttpInfoAsync(string allocID, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), bool? noShutdownDelay = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'allocID' is set
             if (allocID == null)
@@ -1493,9 +1493,9 @@ namespace Fermyon.Nomad.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "region", region));
             }
-            if (_namespace != null)
+            if (varNamespace != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", _namespace));
+                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", varNamespace));
             }
             if (wait != null)
             {

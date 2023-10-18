@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **All** | **bool** |  | [optional] 
 **DeploymentID** | **string** |  | [optional] 
 **Groups** | **List&lt;string&gt;** |  | [optional] 
-**Namespace** | **string** |  | [optional] 
+**VarNamespace** | **string** |  | [optional] 
 **Region** | **string** |  | [optional] 
 **SecretID** | **string** |  | [optional] 
 

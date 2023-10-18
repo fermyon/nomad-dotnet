@@ -33,14 +33,14 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobName">The job identifier.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="purge">Boolean flag indicating whether to purge allocations of the job after deleting. (optional)</param>
         /// <param name="global">Boolean flag indicating whether the operation should apply to all instances of the job globally. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>JobDeregisterResponse</returns>
-        JobDeregisterResponse DeleteJob(string jobName, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), bool? purge = default(bool?), bool? global = default(bool?), int operationIndex = 0);
+        JobDeregisterResponse DeleteJob(string jobName, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), bool? purge = default(bool?), bool? global = default(bool?), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -51,21 +51,21 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobName">The job identifier.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="purge">Boolean flag indicating whether to purge allocations of the job after deleting. (optional)</param>
         /// <param name="global">Boolean flag indicating whether the operation should apply to all instances of the job globally. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of JobDeregisterResponse</returns>
-        ApiResponse<JobDeregisterResponse> DeleteJobWithHttpInfo(string jobName, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), bool? purge = default(bool?), bool? global = default(bool?), int operationIndex = 0);
+        ApiResponse<JobDeregisterResponse> DeleteJobWithHttpInfo(string jobName, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), bool? purge = default(bool?), bool? global = default(bool?), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobName">The job identifier.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -75,7 +75,7 @@ namespace Fermyon.Nomad.Api
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>Job</returns>
-        Job GetJob(string jobName, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0);
+        Job GetJob(string jobName, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -86,7 +86,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobName">The job identifier.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -96,14 +96,14 @@ namespace Fermyon.Nomad.Api
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Job</returns>
-        ApiResponse<Job> GetJobWithHttpInfo(string jobName, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0);
+        ApiResponse<Job> GetJobWithHttpInfo(string jobName, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobName">The job identifier.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -114,7 +114,7 @@ namespace Fermyon.Nomad.Api
         /// <param name="all">Specifies whether the list of allocations should include allocations from a previously registered job with the same ID. This is possible if the job is deregistered and reregistered. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>List&lt;AllocationListStub&gt;</returns>
-        List<AllocationListStub> GetJobAllocations(string jobName, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), bool? all = default(bool?), int operationIndex = 0);
+        List<AllocationListStub> GetJobAllocations(string jobName, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), bool? all = default(bool?), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -125,7 +125,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobName">The job identifier.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -136,14 +136,14 @@ namespace Fermyon.Nomad.Api
         /// <param name="all">Specifies whether the list of allocations should include allocations from a previously registered job with the same ID. This is possible if the job is deregistered and reregistered. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of List&lt;AllocationListStub&gt;</returns>
-        ApiResponse<List<AllocationListStub>> GetJobAllocationsWithHttpInfo(string jobName, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), bool? all = default(bool?), int operationIndex = 0);
+        ApiResponse<List<AllocationListStub>> GetJobAllocationsWithHttpInfo(string jobName, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), bool? all = default(bool?), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobName">The job identifier.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -153,7 +153,7 @@ namespace Fermyon.Nomad.Api
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>Deployment</returns>
-        Deployment GetJobDeployment(string jobName, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0);
+        Deployment GetJobDeployment(string jobName, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -164,7 +164,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobName">The job identifier.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -174,14 +174,14 @@ namespace Fermyon.Nomad.Api
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Deployment</returns>
-        ApiResponse<Deployment> GetJobDeploymentWithHttpInfo(string jobName, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0);
+        ApiResponse<Deployment> GetJobDeploymentWithHttpInfo(string jobName, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobName">The job identifier.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -192,7 +192,7 @@ namespace Fermyon.Nomad.Api
         /// <param name="all">Flag indicating whether to constrain by job creation index or not. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>List&lt;Deployment&gt;</returns>
-        List<Deployment> GetJobDeployments(string jobName, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int? all = default(int?), int operationIndex = 0);
+        List<Deployment> GetJobDeployments(string jobName, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int? all = default(int?), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -203,7 +203,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobName">The job identifier.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -214,14 +214,14 @@ namespace Fermyon.Nomad.Api
         /// <param name="all">Flag indicating whether to constrain by job creation index or not. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of List&lt;Deployment&gt;</returns>
-        ApiResponse<List<Deployment>> GetJobDeploymentsWithHttpInfo(string jobName, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int? all = default(int?), int operationIndex = 0);
+        ApiResponse<List<Deployment>> GetJobDeploymentsWithHttpInfo(string jobName, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int? all = default(int?), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobName">The job identifier.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -231,7 +231,7 @@ namespace Fermyon.Nomad.Api
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>List&lt;Evaluation&gt;</returns>
-        List<Evaluation> GetJobEvaluations(string jobName, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0);
+        List<Evaluation> GetJobEvaluations(string jobName, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -242,7 +242,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobName">The job identifier.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -252,14 +252,14 @@ namespace Fermyon.Nomad.Api
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of List&lt;Evaluation&gt;</returns>
-        ApiResponse<List<Evaluation>> GetJobEvaluationsWithHttpInfo(string jobName, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0);
+        ApiResponse<List<Evaluation>> GetJobEvaluationsWithHttpInfo(string jobName, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobName">The job identifier.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -269,7 +269,7 @@ namespace Fermyon.Nomad.Api
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>JobScaleStatusResponse</returns>
-        JobScaleStatusResponse GetJobScaleStatus(string jobName, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0);
+        JobScaleStatusResponse GetJobScaleStatus(string jobName, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -280,7 +280,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobName">The job identifier.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -290,14 +290,14 @@ namespace Fermyon.Nomad.Api
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of JobScaleStatusResponse</returns>
-        ApiResponse<JobScaleStatusResponse> GetJobScaleStatusWithHttpInfo(string jobName, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0);
+        ApiResponse<JobScaleStatusResponse> GetJobScaleStatusWithHttpInfo(string jobName, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobName">The job identifier.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -307,7 +307,7 @@ namespace Fermyon.Nomad.Api
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>JobSummary</returns>
-        JobSummary GetJobSummary(string jobName, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0);
+        JobSummary GetJobSummary(string jobName, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -318,7 +318,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobName">The job identifier.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -328,14 +328,14 @@ namespace Fermyon.Nomad.Api
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of JobSummary</returns>
-        ApiResponse<JobSummary> GetJobSummaryWithHttpInfo(string jobName, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0);
+        ApiResponse<JobSummary> GetJobSummaryWithHttpInfo(string jobName, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobName">The job identifier.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -346,7 +346,7 @@ namespace Fermyon.Nomad.Api
         /// <param name="diffs">Boolean flag indicating whether to compute job diffs. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>JobVersionsResponse</returns>
-        JobVersionsResponse GetJobVersions(string jobName, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), bool? diffs = default(bool?), int operationIndex = 0);
+        JobVersionsResponse GetJobVersions(string jobName, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), bool? diffs = default(bool?), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -357,7 +357,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobName">The job identifier.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -368,13 +368,13 @@ namespace Fermyon.Nomad.Api
         /// <param name="diffs">Boolean flag indicating whether to compute job diffs. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of JobVersionsResponse</returns>
-        ApiResponse<JobVersionsResponse> GetJobVersionsWithHttpInfo(string jobName, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), bool? diffs = default(bool?), int operationIndex = 0);
+        ApiResponse<JobVersionsResponse> GetJobVersionsWithHttpInfo(string jobName, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), bool? diffs = default(bool?), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -384,7 +384,7 @@ namespace Fermyon.Nomad.Api
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>List&lt;JobListStub&gt;</returns>
-        List<JobListStub> GetJobs(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0);
+        List<JobListStub> GetJobs(string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -394,7 +394,7 @@ namespace Fermyon.Nomad.Api
         /// </remarks>
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -404,7 +404,7 @@ namespace Fermyon.Nomad.Api
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of List&lt;JobListStub&gt;</returns>
-        ApiResponse<List<JobListStub>> GetJobsWithHttpInfo(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0);
+        ApiResponse<List<JobListStub>> GetJobsWithHttpInfo(string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -412,12 +412,12 @@ namespace Fermyon.Nomad.Api
         /// <param name="jobName">The job identifier.</param>
         /// <param name="jobRegisterRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>JobRegisterResponse</returns>
-        JobRegisterResponse PostJob(string jobName, JobRegisterRequest jobRegisterRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0);
+        JobRegisterResponse PostJob(string jobName, JobRegisterRequest jobRegisterRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -429,12 +429,12 @@ namespace Fermyon.Nomad.Api
         /// <param name="jobName">The job identifier.</param>
         /// <param name="jobRegisterRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of JobRegisterResponse</returns>
-        ApiResponse<JobRegisterResponse> PostJobWithHttpInfo(string jobName, JobRegisterRequest jobRegisterRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0);
+        ApiResponse<JobRegisterResponse> PostJobWithHttpInfo(string jobName, JobRegisterRequest jobRegisterRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -442,12 +442,12 @@ namespace Fermyon.Nomad.Api
         /// <param name="jobName">The job identifier.</param>
         /// <param name="jobDispatchRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>JobDispatchResponse</returns>
-        JobDispatchResponse PostJobDispatch(string jobName, JobDispatchRequest jobDispatchRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0);
+        JobDispatchResponse PostJobDispatch(string jobName, JobDispatchRequest jobDispatchRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -459,12 +459,12 @@ namespace Fermyon.Nomad.Api
         /// <param name="jobName">The job identifier.</param>
         /// <param name="jobDispatchRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of JobDispatchResponse</returns>
-        ApiResponse<JobDispatchResponse> PostJobDispatchWithHttpInfo(string jobName, JobDispatchRequest jobDispatchRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0);
+        ApiResponse<JobDispatchResponse> PostJobDispatchWithHttpInfo(string jobName, JobDispatchRequest jobDispatchRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -472,12 +472,12 @@ namespace Fermyon.Nomad.Api
         /// <param name="jobName">The job identifier.</param>
         /// <param name="jobEvaluateRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>JobRegisterResponse</returns>
-        JobRegisterResponse PostJobEvaluate(string jobName, JobEvaluateRequest jobEvaluateRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0);
+        JobRegisterResponse PostJobEvaluate(string jobName, JobEvaluateRequest jobEvaluateRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -489,12 +489,12 @@ namespace Fermyon.Nomad.Api
         /// <param name="jobName">The job identifier.</param>
         /// <param name="jobEvaluateRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of JobRegisterResponse</returns>
-        ApiResponse<JobRegisterResponse> PostJobEvaluateWithHttpInfo(string jobName, JobEvaluateRequest jobEvaluateRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0);
+        ApiResponse<JobRegisterResponse> PostJobEvaluateWithHttpInfo(string jobName, JobEvaluateRequest jobEvaluateRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -521,12 +521,12 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobName">The job identifier.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>PeriodicForceResponse</returns>
-        PeriodicForceResponse PostJobPeriodicForce(string jobName, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0);
+        PeriodicForceResponse PostJobPeriodicForce(string jobName, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -537,12 +537,12 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobName">The job identifier.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of PeriodicForceResponse</returns>
-        ApiResponse<PeriodicForceResponse> PostJobPeriodicForceWithHttpInfo(string jobName, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0);
+        ApiResponse<PeriodicForceResponse> PostJobPeriodicForceWithHttpInfo(string jobName, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -550,12 +550,12 @@ namespace Fermyon.Nomad.Api
         /// <param name="jobName">The job identifier.</param>
         /// <param name="jobPlanRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>JobPlanResponse</returns>
-        JobPlanResponse PostJobPlan(string jobName, JobPlanRequest jobPlanRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0);
+        JobPlanResponse PostJobPlan(string jobName, JobPlanRequest jobPlanRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -567,12 +567,12 @@ namespace Fermyon.Nomad.Api
         /// <param name="jobName">The job identifier.</param>
         /// <param name="jobPlanRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of JobPlanResponse</returns>
-        ApiResponse<JobPlanResponse> PostJobPlanWithHttpInfo(string jobName, JobPlanRequest jobPlanRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0);
+        ApiResponse<JobPlanResponse> PostJobPlanWithHttpInfo(string jobName, JobPlanRequest jobPlanRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -580,12 +580,12 @@ namespace Fermyon.Nomad.Api
         /// <param name="jobName">The job identifier.</param>
         /// <param name="jobRevertRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>JobRegisterResponse</returns>
-        JobRegisterResponse PostJobRevert(string jobName, JobRevertRequest jobRevertRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0);
+        JobRegisterResponse PostJobRevert(string jobName, JobRevertRequest jobRevertRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -597,12 +597,12 @@ namespace Fermyon.Nomad.Api
         /// <param name="jobName">The job identifier.</param>
         /// <param name="jobRevertRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of JobRegisterResponse</returns>
-        ApiResponse<JobRegisterResponse> PostJobRevertWithHttpInfo(string jobName, JobRevertRequest jobRevertRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0);
+        ApiResponse<JobRegisterResponse> PostJobRevertWithHttpInfo(string jobName, JobRevertRequest jobRevertRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -610,12 +610,12 @@ namespace Fermyon.Nomad.Api
         /// <param name="jobName">The job identifier.</param>
         /// <param name="scalingRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>JobRegisterResponse</returns>
-        JobRegisterResponse PostJobScalingRequest(string jobName, ScalingRequest scalingRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0);
+        JobRegisterResponse PostJobScalingRequest(string jobName, ScalingRequest scalingRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -627,12 +627,12 @@ namespace Fermyon.Nomad.Api
         /// <param name="jobName">The job identifier.</param>
         /// <param name="scalingRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of JobRegisterResponse</returns>
-        ApiResponse<JobRegisterResponse> PostJobScalingRequestWithHttpInfo(string jobName, ScalingRequest scalingRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0);
+        ApiResponse<JobRegisterResponse> PostJobScalingRequestWithHttpInfo(string jobName, ScalingRequest scalingRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -640,12 +640,12 @@ namespace Fermyon.Nomad.Api
         /// <param name="jobName">The job identifier.</param>
         /// <param name="jobStabilityRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>JobStabilityResponse</returns>
-        JobStabilityResponse PostJobStability(string jobName, JobStabilityRequest jobStabilityRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0);
+        JobStabilityResponse PostJobStability(string jobName, JobStabilityRequest jobStabilityRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -657,24 +657,24 @@ namespace Fermyon.Nomad.Api
         /// <param name="jobName">The job identifier.</param>
         /// <param name="jobStabilityRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of JobStabilityResponse</returns>
-        ApiResponse<JobStabilityResponse> PostJobStabilityWithHttpInfo(string jobName, JobStabilityRequest jobStabilityRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0);
+        ApiResponse<JobStabilityResponse> PostJobStabilityWithHttpInfo(string jobName, JobStabilityRequest jobStabilityRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobValidateRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>JobValidateResponse</returns>
-        JobValidateResponse PostJobValidateRequest(JobValidateRequest jobValidateRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0);
+        JobValidateResponse PostJobValidateRequest(JobValidateRequest jobValidateRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -685,24 +685,24 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobValidateRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of JobValidateResponse</returns>
-        ApiResponse<JobValidateResponse> PostJobValidateRequestWithHttpInfo(JobValidateRequest jobValidateRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0);
+        ApiResponse<JobValidateResponse> PostJobValidateRequestWithHttpInfo(JobValidateRequest jobValidateRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobRegisterRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>JobRegisterResponse</returns>
-        JobRegisterResponse RegisterJob(JobRegisterRequest jobRegisterRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0);
+        JobRegisterResponse RegisterJob(JobRegisterRequest jobRegisterRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -713,12 +713,12 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobRegisterRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of JobRegisterResponse</returns>
-        ApiResponse<JobRegisterResponse> RegisterJobWithHttpInfo(JobRegisterRequest jobRegisterRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0);
+        ApiResponse<JobRegisterResponse> RegisterJobWithHttpInfo(JobRegisterRequest jobRegisterRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -737,7 +737,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobName">The job identifier.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="purge">Boolean flag indicating whether to purge allocations of the job after deleting. (optional)</param>
@@ -745,7 +745,7 @@ namespace Fermyon.Nomad.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of JobDeregisterResponse</returns>
-        System.Threading.Tasks.Task<JobDeregisterResponse> DeleteJobAsync(string jobName, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), bool? purge = default(bool?), bool? global = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<JobDeregisterResponse> DeleteJobAsync(string jobName, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), bool? purge = default(bool?), bool? global = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -756,7 +756,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobName">The job identifier.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="purge">Boolean flag indicating whether to purge allocations of the job after deleting. (optional)</param>
@@ -764,7 +764,7 @@ namespace Fermyon.Nomad.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (JobDeregisterResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<JobDeregisterResponse>> DeleteJobWithHttpInfoAsync(string jobName, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), bool? purge = default(bool?), bool? global = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<JobDeregisterResponse>> DeleteJobWithHttpInfoAsync(string jobName, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), bool? purge = default(bool?), bool? global = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -774,7 +774,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobName">The job identifier.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -785,7 +785,7 @@ namespace Fermyon.Nomad.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Job</returns>
-        System.Threading.Tasks.Task<Job> GetJobAsync(string jobName, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<Job> GetJobAsync(string jobName, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -796,7 +796,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobName">The job identifier.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -807,7 +807,7 @@ namespace Fermyon.Nomad.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Job)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Job>> GetJobWithHttpInfoAsync(string jobName, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Job>> GetJobWithHttpInfoAsync(string jobName, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -817,7 +817,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobName">The job identifier.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -829,7 +829,7 @@ namespace Fermyon.Nomad.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;AllocationListStub&gt;</returns>
-        System.Threading.Tasks.Task<List<AllocationListStub>> GetJobAllocationsAsync(string jobName, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), bool? all = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<List<AllocationListStub>> GetJobAllocationsAsync(string jobName, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), bool? all = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -840,7 +840,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobName">The job identifier.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -852,7 +852,7 @@ namespace Fermyon.Nomad.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;AllocationListStub&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<AllocationListStub>>> GetJobAllocationsWithHttpInfoAsync(string jobName, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), bool? all = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<List<AllocationListStub>>> GetJobAllocationsWithHttpInfoAsync(string jobName, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), bool? all = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -862,7 +862,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobName">The job identifier.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -873,7 +873,7 @@ namespace Fermyon.Nomad.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Deployment</returns>
-        System.Threading.Tasks.Task<Deployment> GetJobDeploymentAsync(string jobName, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<Deployment> GetJobDeploymentAsync(string jobName, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -884,7 +884,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobName">The job identifier.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -895,7 +895,7 @@ namespace Fermyon.Nomad.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Deployment)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Deployment>> GetJobDeploymentWithHttpInfoAsync(string jobName, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Deployment>> GetJobDeploymentWithHttpInfoAsync(string jobName, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -905,7 +905,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobName">The job identifier.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -917,7 +917,7 @@ namespace Fermyon.Nomad.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;Deployment&gt;</returns>
-        System.Threading.Tasks.Task<List<Deployment>> GetJobDeploymentsAsync(string jobName, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int? all = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<List<Deployment>> GetJobDeploymentsAsync(string jobName, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int? all = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -928,7 +928,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobName">The job identifier.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -940,7 +940,7 @@ namespace Fermyon.Nomad.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;Deployment&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<Deployment>>> GetJobDeploymentsWithHttpInfoAsync(string jobName, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int? all = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<List<Deployment>>> GetJobDeploymentsWithHttpInfoAsync(string jobName, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int? all = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -950,7 +950,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobName">The job identifier.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -961,7 +961,7 @@ namespace Fermyon.Nomad.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;Evaluation&gt;</returns>
-        System.Threading.Tasks.Task<List<Evaluation>> GetJobEvaluationsAsync(string jobName, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<List<Evaluation>> GetJobEvaluationsAsync(string jobName, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -972,7 +972,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobName">The job identifier.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -983,7 +983,7 @@ namespace Fermyon.Nomad.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;Evaluation&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<Evaluation>>> GetJobEvaluationsWithHttpInfoAsync(string jobName, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<List<Evaluation>>> GetJobEvaluationsWithHttpInfoAsync(string jobName, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -993,7 +993,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobName">The job identifier.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -1004,7 +1004,7 @@ namespace Fermyon.Nomad.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of JobScaleStatusResponse</returns>
-        System.Threading.Tasks.Task<JobScaleStatusResponse> GetJobScaleStatusAsync(string jobName, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<JobScaleStatusResponse> GetJobScaleStatusAsync(string jobName, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -1015,7 +1015,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobName">The job identifier.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -1026,7 +1026,7 @@ namespace Fermyon.Nomad.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (JobScaleStatusResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<JobScaleStatusResponse>> GetJobScaleStatusWithHttpInfoAsync(string jobName, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<JobScaleStatusResponse>> GetJobScaleStatusWithHttpInfoAsync(string jobName, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -1036,7 +1036,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobName">The job identifier.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -1047,7 +1047,7 @@ namespace Fermyon.Nomad.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of JobSummary</returns>
-        System.Threading.Tasks.Task<JobSummary> GetJobSummaryAsync(string jobName, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<JobSummary> GetJobSummaryAsync(string jobName, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -1058,7 +1058,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobName">The job identifier.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -1069,7 +1069,7 @@ namespace Fermyon.Nomad.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (JobSummary)</returns>
-        System.Threading.Tasks.Task<ApiResponse<JobSummary>> GetJobSummaryWithHttpInfoAsync(string jobName, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<JobSummary>> GetJobSummaryWithHttpInfoAsync(string jobName, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -1079,7 +1079,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobName">The job identifier.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -1091,7 +1091,7 @@ namespace Fermyon.Nomad.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of JobVersionsResponse</returns>
-        System.Threading.Tasks.Task<JobVersionsResponse> GetJobVersionsAsync(string jobName, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), bool? diffs = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<JobVersionsResponse> GetJobVersionsAsync(string jobName, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), bool? diffs = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -1102,7 +1102,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobName">The job identifier.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -1114,7 +1114,7 @@ namespace Fermyon.Nomad.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (JobVersionsResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<JobVersionsResponse>> GetJobVersionsWithHttpInfoAsync(string jobName, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), bool? diffs = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<JobVersionsResponse>> GetJobVersionsWithHttpInfoAsync(string jobName, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), bool? diffs = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -1123,7 +1123,7 @@ namespace Fermyon.Nomad.Api
         /// </remarks>
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -1134,7 +1134,7 @@ namespace Fermyon.Nomad.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;JobListStub&gt;</returns>
-        System.Threading.Tasks.Task<List<JobListStub>> GetJobsAsync(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<List<JobListStub>> GetJobsAsync(string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -1144,7 +1144,7 @@ namespace Fermyon.Nomad.Api
         /// </remarks>
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -1155,7 +1155,7 @@ namespace Fermyon.Nomad.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;JobListStub&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<JobListStub>>> GetJobsWithHttpInfoAsync(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<List<JobListStub>>> GetJobsWithHttpInfoAsync(string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -1166,13 +1166,13 @@ namespace Fermyon.Nomad.Api
         /// <param name="jobName">The job identifier.</param>
         /// <param name="jobRegisterRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of JobRegisterResponse</returns>
-        System.Threading.Tasks.Task<JobRegisterResponse> PostJobAsync(string jobName, JobRegisterRequest jobRegisterRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<JobRegisterResponse> PostJobAsync(string jobName, JobRegisterRequest jobRegisterRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -1184,13 +1184,13 @@ namespace Fermyon.Nomad.Api
         /// <param name="jobName">The job identifier.</param>
         /// <param name="jobRegisterRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (JobRegisterResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<JobRegisterResponse>> PostJobWithHttpInfoAsync(string jobName, JobRegisterRequest jobRegisterRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<JobRegisterResponse>> PostJobWithHttpInfoAsync(string jobName, JobRegisterRequest jobRegisterRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -1201,13 +1201,13 @@ namespace Fermyon.Nomad.Api
         /// <param name="jobName">The job identifier.</param>
         /// <param name="jobDispatchRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of JobDispatchResponse</returns>
-        System.Threading.Tasks.Task<JobDispatchResponse> PostJobDispatchAsync(string jobName, JobDispatchRequest jobDispatchRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<JobDispatchResponse> PostJobDispatchAsync(string jobName, JobDispatchRequest jobDispatchRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -1219,13 +1219,13 @@ namespace Fermyon.Nomad.Api
         /// <param name="jobName">The job identifier.</param>
         /// <param name="jobDispatchRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (JobDispatchResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<JobDispatchResponse>> PostJobDispatchWithHttpInfoAsync(string jobName, JobDispatchRequest jobDispatchRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<JobDispatchResponse>> PostJobDispatchWithHttpInfoAsync(string jobName, JobDispatchRequest jobDispatchRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -1236,13 +1236,13 @@ namespace Fermyon.Nomad.Api
         /// <param name="jobName">The job identifier.</param>
         /// <param name="jobEvaluateRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of JobRegisterResponse</returns>
-        System.Threading.Tasks.Task<JobRegisterResponse> PostJobEvaluateAsync(string jobName, JobEvaluateRequest jobEvaluateRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<JobRegisterResponse> PostJobEvaluateAsync(string jobName, JobEvaluateRequest jobEvaluateRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -1254,13 +1254,13 @@ namespace Fermyon.Nomad.Api
         /// <param name="jobName">The job identifier.</param>
         /// <param name="jobEvaluateRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (JobRegisterResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<JobRegisterResponse>> PostJobEvaluateWithHttpInfoAsync(string jobName, JobEvaluateRequest jobEvaluateRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<JobRegisterResponse>> PostJobEvaluateWithHttpInfoAsync(string jobName, JobEvaluateRequest jobEvaluateRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -1295,13 +1295,13 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobName">The job identifier.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of PeriodicForceResponse</returns>
-        System.Threading.Tasks.Task<PeriodicForceResponse> PostJobPeriodicForceAsync(string jobName, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<PeriodicForceResponse> PostJobPeriodicForceAsync(string jobName, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -1312,13 +1312,13 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobName">The job identifier.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (PeriodicForceResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PeriodicForceResponse>> PostJobPeriodicForceWithHttpInfoAsync(string jobName, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<PeriodicForceResponse>> PostJobPeriodicForceWithHttpInfoAsync(string jobName, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -1329,13 +1329,13 @@ namespace Fermyon.Nomad.Api
         /// <param name="jobName">The job identifier.</param>
         /// <param name="jobPlanRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of JobPlanResponse</returns>
-        System.Threading.Tasks.Task<JobPlanResponse> PostJobPlanAsync(string jobName, JobPlanRequest jobPlanRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<JobPlanResponse> PostJobPlanAsync(string jobName, JobPlanRequest jobPlanRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -1347,13 +1347,13 @@ namespace Fermyon.Nomad.Api
         /// <param name="jobName">The job identifier.</param>
         /// <param name="jobPlanRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (JobPlanResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<JobPlanResponse>> PostJobPlanWithHttpInfoAsync(string jobName, JobPlanRequest jobPlanRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<JobPlanResponse>> PostJobPlanWithHttpInfoAsync(string jobName, JobPlanRequest jobPlanRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -1364,13 +1364,13 @@ namespace Fermyon.Nomad.Api
         /// <param name="jobName">The job identifier.</param>
         /// <param name="jobRevertRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of JobRegisterResponse</returns>
-        System.Threading.Tasks.Task<JobRegisterResponse> PostJobRevertAsync(string jobName, JobRevertRequest jobRevertRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<JobRegisterResponse> PostJobRevertAsync(string jobName, JobRevertRequest jobRevertRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -1382,13 +1382,13 @@ namespace Fermyon.Nomad.Api
         /// <param name="jobName">The job identifier.</param>
         /// <param name="jobRevertRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (JobRegisterResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<JobRegisterResponse>> PostJobRevertWithHttpInfoAsync(string jobName, JobRevertRequest jobRevertRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<JobRegisterResponse>> PostJobRevertWithHttpInfoAsync(string jobName, JobRevertRequest jobRevertRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -1399,13 +1399,13 @@ namespace Fermyon.Nomad.Api
         /// <param name="jobName">The job identifier.</param>
         /// <param name="scalingRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of JobRegisterResponse</returns>
-        System.Threading.Tasks.Task<JobRegisterResponse> PostJobScalingRequestAsync(string jobName, ScalingRequest scalingRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<JobRegisterResponse> PostJobScalingRequestAsync(string jobName, ScalingRequest scalingRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -1417,13 +1417,13 @@ namespace Fermyon.Nomad.Api
         /// <param name="jobName">The job identifier.</param>
         /// <param name="scalingRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (JobRegisterResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<JobRegisterResponse>> PostJobScalingRequestWithHttpInfoAsync(string jobName, ScalingRequest scalingRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<JobRegisterResponse>> PostJobScalingRequestWithHttpInfoAsync(string jobName, ScalingRequest scalingRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -1434,13 +1434,13 @@ namespace Fermyon.Nomad.Api
         /// <param name="jobName">The job identifier.</param>
         /// <param name="jobStabilityRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of JobStabilityResponse</returns>
-        System.Threading.Tasks.Task<JobStabilityResponse> PostJobStabilityAsync(string jobName, JobStabilityRequest jobStabilityRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<JobStabilityResponse> PostJobStabilityAsync(string jobName, JobStabilityRequest jobStabilityRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -1452,13 +1452,13 @@ namespace Fermyon.Nomad.Api
         /// <param name="jobName">The job identifier.</param>
         /// <param name="jobStabilityRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (JobStabilityResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<JobStabilityResponse>> PostJobStabilityWithHttpInfoAsync(string jobName, JobStabilityRequest jobStabilityRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<JobStabilityResponse>> PostJobStabilityWithHttpInfoAsync(string jobName, JobStabilityRequest jobStabilityRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -1468,13 +1468,13 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobValidateRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of JobValidateResponse</returns>
-        System.Threading.Tasks.Task<JobValidateResponse> PostJobValidateRequestAsync(JobValidateRequest jobValidateRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<JobValidateResponse> PostJobValidateRequestAsync(JobValidateRequest jobValidateRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -1485,13 +1485,13 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobValidateRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (JobValidateResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<JobValidateResponse>> PostJobValidateRequestWithHttpInfoAsync(JobValidateRequest jobValidateRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<JobValidateResponse>> PostJobValidateRequestWithHttpInfoAsync(JobValidateRequest jobValidateRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -1501,13 +1501,13 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobRegisterRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of JobRegisterResponse</returns>
-        System.Threading.Tasks.Task<JobRegisterResponse> RegisterJobAsync(JobRegisterRequest jobRegisterRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<JobRegisterResponse> RegisterJobAsync(JobRegisterRequest jobRegisterRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -1518,13 +1518,13 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobRegisterRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (JobRegisterResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<JobRegisterResponse>> RegisterJobWithHttpInfoAsync(JobRegisterRequest jobRegisterRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<JobRegisterResponse>> RegisterJobWithHttpInfoAsync(JobRegisterRequest jobRegisterRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -1651,16 +1651,16 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobName">The job identifier.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="purge">Boolean flag indicating whether to purge allocations of the job after deleting. (optional)</param>
         /// <param name="global">Boolean flag indicating whether the operation should apply to all instances of the job globally. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>JobDeregisterResponse</returns>
-        public JobDeregisterResponse DeleteJob(string jobName, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), bool? purge = default(bool?), bool? global = default(bool?), int operationIndex = 0)
+        public JobDeregisterResponse DeleteJob(string jobName, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), bool? purge = default(bool?), bool? global = default(bool?), int operationIndex = 0)
         {
-            Fermyon.Nomad.Client.ApiResponse<JobDeregisterResponse> localVarResponse = DeleteJobWithHttpInfo(jobName, region, _namespace, xNomadToken, idempotencyToken, purge, global);
+            Fermyon.Nomad.Client.ApiResponse<JobDeregisterResponse> localVarResponse = DeleteJobWithHttpInfo(jobName, region, varNamespace, xNomadToken, idempotencyToken, purge, global);
             return localVarResponse.Data;
         }
 
@@ -1670,14 +1670,14 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobName">The job identifier.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="purge">Boolean flag indicating whether to purge allocations of the job after deleting. (optional)</param>
         /// <param name="global">Boolean flag indicating whether the operation should apply to all instances of the job globally. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of JobDeregisterResponse</returns>
-        public Fermyon.Nomad.Client.ApiResponse<JobDeregisterResponse> DeleteJobWithHttpInfo(string jobName, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), bool? purge = default(bool?), bool? global = default(bool?), int operationIndex = 0)
+        public Fermyon.Nomad.Client.ApiResponse<JobDeregisterResponse> DeleteJobWithHttpInfo(string jobName, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), bool? purge = default(bool?), bool? global = default(bool?), int operationIndex = 0)
         {
             // verify the required parameter 'jobName' is set
             if (jobName == null)
@@ -1712,9 +1712,9 @@ namespace Fermyon.Nomad.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "region", region));
             }
-            if (_namespace != null)
+            if (varNamespace != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", _namespace));
+                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", varNamespace));
             }
             if (idempotencyToken != null)
             {
@@ -1762,7 +1762,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobName">The job identifier.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="purge">Boolean flag indicating whether to purge allocations of the job after deleting. (optional)</param>
@@ -1770,9 +1770,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of JobDeregisterResponse</returns>
-        public async System.Threading.Tasks.Task<JobDeregisterResponse> DeleteJobAsync(string jobName, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), bool? purge = default(bool?), bool? global = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<JobDeregisterResponse> DeleteJobAsync(string jobName, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), bool? purge = default(bool?), bool? global = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Fermyon.Nomad.Client.ApiResponse<JobDeregisterResponse> localVarResponse = await DeleteJobWithHttpInfoAsync(jobName, region, _namespace, xNomadToken, idempotencyToken, purge, global, operationIndex, cancellationToken).ConfigureAwait(false);
+            Fermyon.Nomad.Client.ApiResponse<JobDeregisterResponse> localVarResponse = await DeleteJobWithHttpInfoAsync(jobName, region, varNamespace, xNomadToken, idempotencyToken, purge, global, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1782,7 +1782,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobName">The job identifier.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="purge">Boolean flag indicating whether to purge allocations of the job after deleting. (optional)</param>
@@ -1790,7 +1790,7 @@ namespace Fermyon.Nomad.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (JobDeregisterResponse)</returns>
-        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<JobDeregisterResponse>> DeleteJobWithHttpInfoAsync(string jobName, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), bool? purge = default(bool?), bool? global = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<JobDeregisterResponse>> DeleteJobWithHttpInfoAsync(string jobName, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), bool? purge = default(bool?), bool? global = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'jobName' is set
             if (jobName == null)
@@ -1826,9 +1826,9 @@ namespace Fermyon.Nomad.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "region", region));
             }
-            if (_namespace != null)
+            if (varNamespace != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", _namespace));
+                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", varNamespace));
             }
             if (idempotencyToken != null)
             {
@@ -1877,7 +1877,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobName">The job identifier.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -1887,9 +1887,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>Job</returns>
-        public Job GetJob(string jobName, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0)
+        public Job GetJob(string jobName, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0)
         {
-            Fermyon.Nomad.Client.ApiResponse<Job> localVarResponse = GetJobWithHttpInfo(jobName, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+            Fermyon.Nomad.Client.ApiResponse<Job> localVarResponse = GetJobWithHttpInfo(jobName, region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
             return localVarResponse.Data;
         }
 
@@ -1899,7 +1899,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobName">The job identifier.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -1909,7 +1909,7 @@ namespace Fermyon.Nomad.Api
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Job</returns>
-        public Fermyon.Nomad.Client.ApiResponse<Job> GetJobWithHttpInfo(string jobName, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0)
+        public Fermyon.Nomad.Client.ApiResponse<Job> GetJobWithHttpInfo(string jobName, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'jobName' is set
             if (jobName == null)
@@ -1944,9 +1944,9 @@ namespace Fermyon.Nomad.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "region", region));
             }
-            if (_namespace != null)
+            if (varNamespace != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", _namespace));
+                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", varNamespace));
             }
             if (wait != null)
             {
@@ -2006,7 +2006,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobName">The job identifier.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -2017,9 +2017,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Job</returns>
-        public async System.Threading.Tasks.Task<Job> GetJobAsync(string jobName, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Job> GetJobAsync(string jobName, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Fermyon.Nomad.Client.ApiResponse<Job> localVarResponse = await GetJobWithHttpInfoAsync(jobName, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, operationIndex, cancellationToken).ConfigureAwait(false);
+            Fermyon.Nomad.Client.ApiResponse<Job> localVarResponse = await GetJobWithHttpInfoAsync(jobName, region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2029,7 +2029,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobName">The job identifier.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -2040,7 +2040,7 @@ namespace Fermyon.Nomad.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Job)</returns>
-        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<Job>> GetJobWithHttpInfoAsync(string jobName, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<Job>> GetJobWithHttpInfoAsync(string jobName, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'jobName' is set
             if (jobName == null)
@@ -2076,9 +2076,9 @@ namespace Fermyon.Nomad.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "region", region));
             }
-            if (_namespace != null)
+            if (varNamespace != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", _namespace));
+                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", varNamespace));
             }
             if (wait != null)
             {
@@ -2139,7 +2139,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobName">The job identifier.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -2150,9 +2150,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="all">Specifies whether the list of allocations should include allocations from a previously registered job with the same ID. This is possible if the job is deregistered and reregistered. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>List&lt;AllocationListStub&gt;</returns>
-        public List<AllocationListStub> GetJobAllocations(string jobName, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), bool? all = default(bool?), int operationIndex = 0)
+        public List<AllocationListStub> GetJobAllocations(string jobName, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), bool? all = default(bool?), int operationIndex = 0)
         {
-            Fermyon.Nomad.Client.ApiResponse<List<AllocationListStub>> localVarResponse = GetJobAllocationsWithHttpInfo(jobName, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, all);
+            Fermyon.Nomad.Client.ApiResponse<List<AllocationListStub>> localVarResponse = GetJobAllocationsWithHttpInfo(jobName, region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, all);
             return localVarResponse.Data;
         }
 
@@ -2162,7 +2162,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobName">The job identifier.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -2173,7 +2173,7 @@ namespace Fermyon.Nomad.Api
         /// <param name="all">Specifies whether the list of allocations should include allocations from a previously registered job with the same ID. This is possible if the job is deregistered and reregistered. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of List&lt;AllocationListStub&gt;</returns>
-        public Fermyon.Nomad.Client.ApiResponse<List<AllocationListStub>> GetJobAllocationsWithHttpInfo(string jobName, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), bool? all = default(bool?), int operationIndex = 0)
+        public Fermyon.Nomad.Client.ApiResponse<List<AllocationListStub>> GetJobAllocationsWithHttpInfo(string jobName, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), bool? all = default(bool?), int operationIndex = 0)
         {
             // verify the required parameter 'jobName' is set
             if (jobName == null)
@@ -2208,9 +2208,9 @@ namespace Fermyon.Nomad.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "region", region));
             }
-            if (_namespace != null)
+            if (varNamespace != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", _namespace));
+                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", varNamespace));
             }
             if (wait != null)
             {
@@ -2274,7 +2274,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobName">The job identifier.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -2286,9 +2286,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;AllocationListStub&gt;</returns>
-        public async System.Threading.Tasks.Task<List<AllocationListStub>> GetJobAllocationsAsync(string jobName, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), bool? all = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<List<AllocationListStub>> GetJobAllocationsAsync(string jobName, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), bool? all = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Fermyon.Nomad.Client.ApiResponse<List<AllocationListStub>> localVarResponse = await GetJobAllocationsWithHttpInfoAsync(jobName, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, all, operationIndex, cancellationToken).ConfigureAwait(false);
+            Fermyon.Nomad.Client.ApiResponse<List<AllocationListStub>> localVarResponse = await GetJobAllocationsWithHttpInfoAsync(jobName, region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, all, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2298,7 +2298,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobName">The job identifier.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -2310,7 +2310,7 @@ namespace Fermyon.Nomad.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;AllocationListStub&gt;)</returns>
-        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<List<AllocationListStub>>> GetJobAllocationsWithHttpInfoAsync(string jobName, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), bool? all = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<List<AllocationListStub>>> GetJobAllocationsWithHttpInfoAsync(string jobName, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), bool? all = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'jobName' is set
             if (jobName == null)
@@ -2346,9 +2346,9 @@ namespace Fermyon.Nomad.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "region", region));
             }
-            if (_namespace != null)
+            if (varNamespace != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", _namespace));
+                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", varNamespace));
             }
             if (wait != null)
             {
@@ -2413,7 +2413,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobName">The job identifier.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -2423,9 +2423,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>Deployment</returns>
-        public Deployment GetJobDeployment(string jobName, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0)
+        public Deployment GetJobDeployment(string jobName, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0)
         {
-            Fermyon.Nomad.Client.ApiResponse<Deployment> localVarResponse = GetJobDeploymentWithHttpInfo(jobName, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+            Fermyon.Nomad.Client.ApiResponse<Deployment> localVarResponse = GetJobDeploymentWithHttpInfo(jobName, region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
             return localVarResponse.Data;
         }
 
@@ -2435,7 +2435,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobName">The job identifier.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -2445,7 +2445,7 @@ namespace Fermyon.Nomad.Api
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Deployment</returns>
-        public Fermyon.Nomad.Client.ApiResponse<Deployment> GetJobDeploymentWithHttpInfo(string jobName, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0)
+        public Fermyon.Nomad.Client.ApiResponse<Deployment> GetJobDeploymentWithHttpInfo(string jobName, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'jobName' is set
             if (jobName == null)
@@ -2480,9 +2480,9 @@ namespace Fermyon.Nomad.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "region", region));
             }
-            if (_namespace != null)
+            if (varNamespace != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", _namespace));
+                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", varNamespace));
             }
             if (wait != null)
             {
@@ -2542,7 +2542,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobName">The job identifier.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -2553,9 +2553,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Deployment</returns>
-        public async System.Threading.Tasks.Task<Deployment> GetJobDeploymentAsync(string jobName, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Deployment> GetJobDeploymentAsync(string jobName, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Fermyon.Nomad.Client.ApiResponse<Deployment> localVarResponse = await GetJobDeploymentWithHttpInfoAsync(jobName, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, operationIndex, cancellationToken).ConfigureAwait(false);
+            Fermyon.Nomad.Client.ApiResponse<Deployment> localVarResponse = await GetJobDeploymentWithHttpInfoAsync(jobName, region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2565,7 +2565,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobName">The job identifier.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -2576,7 +2576,7 @@ namespace Fermyon.Nomad.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Deployment)</returns>
-        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<Deployment>> GetJobDeploymentWithHttpInfoAsync(string jobName, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<Deployment>> GetJobDeploymentWithHttpInfoAsync(string jobName, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'jobName' is set
             if (jobName == null)
@@ -2612,9 +2612,9 @@ namespace Fermyon.Nomad.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "region", region));
             }
-            if (_namespace != null)
+            if (varNamespace != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", _namespace));
+                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", varNamespace));
             }
             if (wait != null)
             {
@@ -2675,7 +2675,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobName">The job identifier.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -2686,9 +2686,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="all">Flag indicating whether to constrain by job creation index or not. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>List&lt;Deployment&gt;</returns>
-        public List<Deployment> GetJobDeployments(string jobName, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int? all = default(int?), int operationIndex = 0)
+        public List<Deployment> GetJobDeployments(string jobName, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int? all = default(int?), int operationIndex = 0)
         {
-            Fermyon.Nomad.Client.ApiResponse<List<Deployment>> localVarResponse = GetJobDeploymentsWithHttpInfo(jobName, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, all);
+            Fermyon.Nomad.Client.ApiResponse<List<Deployment>> localVarResponse = GetJobDeploymentsWithHttpInfo(jobName, region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, all);
             return localVarResponse.Data;
         }
 
@@ -2698,7 +2698,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobName">The job identifier.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -2709,7 +2709,7 @@ namespace Fermyon.Nomad.Api
         /// <param name="all">Flag indicating whether to constrain by job creation index or not. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of List&lt;Deployment&gt;</returns>
-        public Fermyon.Nomad.Client.ApiResponse<List<Deployment>> GetJobDeploymentsWithHttpInfo(string jobName, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int? all = default(int?), int operationIndex = 0)
+        public Fermyon.Nomad.Client.ApiResponse<List<Deployment>> GetJobDeploymentsWithHttpInfo(string jobName, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int? all = default(int?), int operationIndex = 0)
         {
             // verify the required parameter 'jobName' is set
             if (jobName == null)
@@ -2744,9 +2744,9 @@ namespace Fermyon.Nomad.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "region", region));
             }
-            if (_namespace != null)
+            if (varNamespace != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", _namespace));
+                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", varNamespace));
             }
             if (wait != null)
             {
@@ -2810,7 +2810,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobName">The job identifier.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -2822,9 +2822,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;Deployment&gt;</returns>
-        public async System.Threading.Tasks.Task<List<Deployment>> GetJobDeploymentsAsync(string jobName, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int? all = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<List<Deployment>> GetJobDeploymentsAsync(string jobName, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int? all = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Fermyon.Nomad.Client.ApiResponse<List<Deployment>> localVarResponse = await GetJobDeploymentsWithHttpInfoAsync(jobName, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, all, operationIndex, cancellationToken).ConfigureAwait(false);
+            Fermyon.Nomad.Client.ApiResponse<List<Deployment>> localVarResponse = await GetJobDeploymentsWithHttpInfoAsync(jobName, region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, all, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2834,7 +2834,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobName">The job identifier.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -2846,7 +2846,7 @@ namespace Fermyon.Nomad.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;Deployment&gt;)</returns>
-        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<List<Deployment>>> GetJobDeploymentsWithHttpInfoAsync(string jobName, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int? all = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<List<Deployment>>> GetJobDeploymentsWithHttpInfoAsync(string jobName, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int? all = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'jobName' is set
             if (jobName == null)
@@ -2882,9 +2882,9 @@ namespace Fermyon.Nomad.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "region", region));
             }
-            if (_namespace != null)
+            if (varNamespace != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", _namespace));
+                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", varNamespace));
             }
             if (wait != null)
             {
@@ -2949,7 +2949,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobName">The job identifier.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -2959,9 +2959,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>List&lt;Evaluation&gt;</returns>
-        public List<Evaluation> GetJobEvaluations(string jobName, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0)
+        public List<Evaluation> GetJobEvaluations(string jobName, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0)
         {
-            Fermyon.Nomad.Client.ApiResponse<List<Evaluation>> localVarResponse = GetJobEvaluationsWithHttpInfo(jobName, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+            Fermyon.Nomad.Client.ApiResponse<List<Evaluation>> localVarResponse = GetJobEvaluationsWithHttpInfo(jobName, region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
             return localVarResponse.Data;
         }
 
@@ -2971,7 +2971,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobName">The job identifier.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -2981,7 +2981,7 @@ namespace Fermyon.Nomad.Api
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of List&lt;Evaluation&gt;</returns>
-        public Fermyon.Nomad.Client.ApiResponse<List<Evaluation>> GetJobEvaluationsWithHttpInfo(string jobName, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0)
+        public Fermyon.Nomad.Client.ApiResponse<List<Evaluation>> GetJobEvaluationsWithHttpInfo(string jobName, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'jobName' is set
             if (jobName == null)
@@ -3016,9 +3016,9 @@ namespace Fermyon.Nomad.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "region", region));
             }
-            if (_namespace != null)
+            if (varNamespace != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", _namespace));
+                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", varNamespace));
             }
             if (wait != null)
             {
@@ -3078,7 +3078,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobName">The job identifier.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -3089,9 +3089,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;Evaluation&gt;</returns>
-        public async System.Threading.Tasks.Task<List<Evaluation>> GetJobEvaluationsAsync(string jobName, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<List<Evaluation>> GetJobEvaluationsAsync(string jobName, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Fermyon.Nomad.Client.ApiResponse<List<Evaluation>> localVarResponse = await GetJobEvaluationsWithHttpInfoAsync(jobName, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, operationIndex, cancellationToken).ConfigureAwait(false);
+            Fermyon.Nomad.Client.ApiResponse<List<Evaluation>> localVarResponse = await GetJobEvaluationsWithHttpInfoAsync(jobName, region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -3101,7 +3101,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobName">The job identifier.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -3112,7 +3112,7 @@ namespace Fermyon.Nomad.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;Evaluation&gt;)</returns>
-        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<List<Evaluation>>> GetJobEvaluationsWithHttpInfoAsync(string jobName, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<List<Evaluation>>> GetJobEvaluationsWithHttpInfoAsync(string jobName, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'jobName' is set
             if (jobName == null)
@@ -3148,9 +3148,9 @@ namespace Fermyon.Nomad.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "region", region));
             }
-            if (_namespace != null)
+            if (varNamespace != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", _namespace));
+                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", varNamespace));
             }
             if (wait != null)
             {
@@ -3211,7 +3211,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobName">The job identifier.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -3221,9 +3221,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>JobScaleStatusResponse</returns>
-        public JobScaleStatusResponse GetJobScaleStatus(string jobName, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0)
+        public JobScaleStatusResponse GetJobScaleStatus(string jobName, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0)
         {
-            Fermyon.Nomad.Client.ApiResponse<JobScaleStatusResponse> localVarResponse = GetJobScaleStatusWithHttpInfo(jobName, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+            Fermyon.Nomad.Client.ApiResponse<JobScaleStatusResponse> localVarResponse = GetJobScaleStatusWithHttpInfo(jobName, region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
             return localVarResponse.Data;
         }
 
@@ -3233,7 +3233,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobName">The job identifier.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -3243,7 +3243,7 @@ namespace Fermyon.Nomad.Api
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of JobScaleStatusResponse</returns>
-        public Fermyon.Nomad.Client.ApiResponse<JobScaleStatusResponse> GetJobScaleStatusWithHttpInfo(string jobName, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0)
+        public Fermyon.Nomad.Client.ApiResponse<JobScaleStatusResponse> GetJobScaleStatusWithHttpInfo(string jobName, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'jobName' is set
             if (jobName == null)
@@ -3278,9 +3278,9 @@ namespace Fermyon.Nomad.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "region", region));
             }
-            if (_namespace != null)
+            if (varNamespace != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", _namespace));
+                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", varNamespace));
             }
             if (wait != null)
             {
@@ -3340,7 +3340,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobName">The job identifier.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -3351,9 +3351,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of JobScaleStatusResponse</returns>
-        public async System.Threading.Tasks.Task<JobScaleStatusResponse> GetJobScaleStatusAsync(string jobName, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<JobScaleStatusResponse> GetJobScaleStatusAsync(string jobName, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Fermyon.Nomad.Client.ApiResponse<JobScaleStatusResponse> localVarResponse = await GetJobScaleStatusWithHttpInfoAsync(jobName, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, operationIndex, cancellationToken).ConfigureAwait(false);
+            Fermyon.Nomad.Client.ApiResponse<JobScaleStatusResponse> localVarResponse = await GetJobScaleStatusWithHttpInfoAsync(jobName, region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -3363,7 +3363,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobName">The job identifier.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -3374,7 +3374,7 @@ namespace Fermyon.Nomad.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (JobScaleStatusResponse)</returns>
-        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<JobScaleStatusResponse>> GetJobScaleStatusWithHttpInfoAsync(string jobName, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<JobScaleStatusResponse>> GetJobScaleStatusWithHttpInfoAsync(string jobName, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'jobName' is set
             if (jobName == null)
@@ -3410,9 +3410,9 @@ namespace Fermyon.Nomad.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "region", region));
             }
-            if (_namespace != null)
+            if (varNamespace != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", _namespace));
+                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", varNamespace));
             }
             if (wait != null)
             {
@@ -3473,7 +3473,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobName">The job identifier.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -3483,9 +3483,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>JobSummary</returns>
-        public JobSummary GetJobSummary(string jobName, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0)
+        public JobSummary GetJobSummary(string jobName, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0)
         {
-            Fermyon.Nomad.Client.ApiResponse<JobSummary> localVarResponse = GetJobSummaryWithHttpInfo(jobName, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+            Fermyon.Nomad.Client.ApiResponse<JobSummary> localVarResponse = GetJobSummaryWithHttpInfo(jobName, region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
             return localVarResponse.Data;
         }
 
@@ -3495,7 +3495,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobName">The job identifier.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -3505,7 +3505,7 @@ namespace Fermyon.Nomad.Api
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of JobSummary</returns>
-        public Fermyon.Nomad.Client.ApiResponse<JobSummary> GetJobSummaryWithHttpInfo(string jobName, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0)
+        public Fermyon.Nomad.Client.ApiResponse<JobSummary> GetJobSummaryWithHttpInfo(string jobName, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'jobName' is set
             if (jobName == null)
@@ -3540,9 +3540,9 @@ namespace Fermyon.Nomad.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "region", region));
             }
-            if (_namespace != null)
+            if (varNamespace != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", _namespace));
+                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", varNamespace));
             }
             if (wait != null)
             {
@@ -3602,7 +3602,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobName">The job identifier.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -3613,9 +3613,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of JobSummary</returns>
-        public async System.Threading.Tasks.Task<JobSummary> GetJobSummaryAsync(string jobName, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<JobSummary> GetJobSummaryAsync(string jobName, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Fermyon.Nomad.Client.ApiResponse<JobSummary> localVarResponse = await GetJobSummaryWithHttpInfoAsync(jobName, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, operationIndex, cancellationToken).ConfigureAwait(false);
+            Fermyon.Nomad.Client.ApiResponse<JobSummary> localVarResponse = await GetJobSummaryWithHttpInfoAsync(jobName, region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -3625,7 +3625,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobName">The job identifier.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -3636,7 +3636,7 @@ namespace Fermyon.Nomad.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (JobSummary)</returns>
-        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<JobSummary>> GetJobSummaryWithHttpInfoAsync(string jobName, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<JobSummary>> GetJobSummaryWithHttpInfoAsync(string jobName, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'jobName' is set
             if (jobName == null)
@@ -3672,9 +3672,9 @@ namespace Fermyon.Nomad.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "region", region));
             }
-            if (_namespace != null)
+            if (varNamespace != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", _namespace));
+                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", varNamespace));
             }
             if (wait != null)
             {
@@ -3735,7 +3735,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobName">The job identifier.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -3746,9 +3746,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="diffs">Boolean flag indicating whether to compute job diffs. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>JobVersionsResponse</returns>
-        public JobVersionsResponse GetJobVersions(string jobName, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), bool? diffs = default(bool?), int operationIndex = 0)
+        public JobVersionsResponse GetJobVersions(string jobName, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), bool? diffs = default(bool?), int operationIndex = 0)
         {
-            Fermyon.Nomad.Client.ApiResponse<JobVersionsResponse> localVarResponse = GetJobVersionsWithHttpInfo(jobName, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, diffs);
+            Fermyon.Nomad.Client.ApiResponse<JobVersionsResponse> localVarResponse = GetJobVersionsWithHttpInfo(jobName, region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, diffs);
             return localVarResponse.Data;
         }
 
@@ -3758,7 +3758,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobName">The job identifier.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -3769,7 +3769,7 @@ namespace Fermyon.Nomad.Api
         /// <param name="diffs">Boolean flag indicating whether to compute job diffs. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of JobVersionsResponse</returns>
-        public Fermyon.Nomad.Client.ApiResponse<JobVersionsResponse> GetJobVersionsWithHttpInfo(string jobName, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), bool? diffs = default(bool?), int operationIndex = 0)
+        public Fermyon.Nomad.Client.ApiResponse<JobVersionsResponse> GetJobVersionsWithHttpInfo(string jobName, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), bool? diffs = default(bool?), int operationIndex = 0)
         {
             // verify the required parameter 'jobName' is set
             if (jobName == null)
@@ -3804,9 +3804,9 @@ namespace Fermyon.Nomad.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "region", region));
             }
-            if (_namespace != null)
+            if (varNamespace != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", _namespace));
+                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", varNamespace));
             }
             if (wait != null)
             {
@@ -3870,7 +3870,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobName">The job identifier.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -3882,9 +3882,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of JobVersionsResponse</returns>
-        public async System.Threading.Tasks.Task<JobVersionsResponse> GetJobVersionsAsync(string jobName, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), bool? diffs = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<JobVersionsResponse> GetJobVersionsAsync(string jobName, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), bool? diffs = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Fermyon.Nomad.Client.ApiResponse<JobVersionsResponse> localVarResponse = await GetJobVersionsWithHttpInfoAsync(jobName, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, diffs, operationIndex, cancellationToken).ConfigureAwait(false);
+            Fermyon.Nomad.Client.ApiResponse<JobVersionsResponse> localVarResponse = await GetJobVersionsWithHttpInfoAsync(jobName, region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, diffs, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -3894,7 +3894,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobName">The job identifier.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -3906,7 +3906,7 @@ namespace Fermyon.Nomad.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (JobVersionsResponse)</returns>
-        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<JobVersionsResponse>> GetJobVersionsWithHttpInfoAsync(string jobName, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), bool? diffs = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<JobVersionsResponse>> GetJobVersionsWithHttpInfoAsync(string jobName, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), bool? diffs = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'jobName' is set
             if (jobName == null)
@@ -3942,9 +3942,9 @@ namespace Fermyon.Nomad.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "region", region));
             }
-            if (_namespace != null)
+            if (varNamespace != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", _namespace));
+                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", varNamespace));
             }
             if (wait != null)
             {
@@ -4008,7 +4008,7 @@ namespace Fermyon.Nomad.Api
         /// </summary>
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -4018,9 +4018,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>List&lt;JobListStub&gt;</returns>
-        public List<JobListStub> GetJobs(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0)
+        public List<JobListStub> GetJobs(string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0)
         {
-            Fermyon.Nomad.Client.ApiResponse<List<JobListStub>> localVarResponse = GetJobsWithHttpInfo(region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+            Fermyon.Nomad.Client.ApiResponse<List<JobListStub>> localVarResponse = GetJobsWithHttpInfo(region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
             return localVarResponse.Data;
         }
 
@@ -4029,7 +4029,7 @@ namespace Fermyon.Nomad.Api
         /// </summary>
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -4039,7 +4039,7 @@ namespace Fermyon.Nomad.Api
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of List&lt;JobListStub&gt;</returns>
-        public Fermyon.Nomad.Client.ApiResponse<List<JobListStub>> GetJobsWithHttpInfo(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0)
+        public Fermyon.Nomad.Client.ApiResponse<List<JobListStub>> GetJobsWithHttpInfo(string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0)
         {
             Fermyon.Nomad.Client.RequestOptions localVarRequestOptions = new Fermyon.Nomad.Client.RequestOptions();
 
@@ -4067,9 +4067,9 @@ namespace Fermyon.Nomad.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "region", region));
             }
-            if (_namespace != null)
+            if (varNamespace != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", _namespace));
+                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", varNamespace));
             }
             if (wait != null)
             {
@@ -4128,7 +4128,7 @@ namespace Fermyon.Nomad.Api
         /// </summary>
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -4139,9 +4139,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;JobListStub&gt;</returns>
-        public async System.Threading.Tasks.Task<List<JobListStub>> GetJobsAsync(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<List<JobListStub>> GetJobsAsync(string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Fermyon.Nomad.Client.ApiResponse<List<JobListStub>> localVarResponse = await GetJobsWithHttpInfoAsync(region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, operationIndex, cancellationToken).ConfigureAwait(false);
+            Fermyon.Nomad.Client.ApiResponse<List<JobListStub>> localVarResponse = await GetJobsWithHttpInfoAsync(region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -4150,7 +4150,7 @@ namespace Fermyon.Nomad.Api
         /// </summary>
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -4161,7 +4161,7 @@ namespace Fermyon.Nomad.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;JobListStub&gt;)</returns>
-        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<List<JobListStub>>> GetJobsWithHttpInfoAsync(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<List<JobListStub>>> GetJobsWithHttpInfoAsync(string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             Fermyon.Nomad.Client.RequestOptions localVarRequestOptions = new Fermyon.Nomad.Client.RequestOptions();
@@ -4190,9 +4190,9 @@ namespace Fermyon.Nomad.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "region", region));
             }
-            if (_namespace != null)
+            if (varNamespace != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", _namespace));
+                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", varNamespace));
             }
             if (wait != null)
             {
@@ -4254,14 +4254,14 @@ namespace Fermyon.Nomad.Api
         /// <param name="jobName">The job identifier.</param>
         /// <param name="jobRegisterRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>JobRegisterResponse</returns>
-        public JobRegisterResponse PostJob(string jobName, JobRegisterRequest jobRegisterRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0)
+        public JobRegisterResponse PostJob(string jobName, JobRegisterRequest jobRegisterRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0)
         {
-            Fermyon.Nomad.Client.ApiResponse<JobRegisterResponse> localVarResponse = PostJobWithHttpInfo(jobName, jobRegisterRequest, region, _namespace, xNomadToken, idempotencyToken);
+            Fermyon.Nomad.Client.ApiResponse<JobRegisterResponse> localVarResponse = PostJobWithHttpInfo(jobName, jobRegisterRequest, region, varNamespace, xNomadToken, idempotencyToken);
             return localVarResponse.Data;
         }
 
@@ -4272,12 +4272,12 @@ namespace Fermyon.Nomad.Api
         /// <param name="jobName">The job identifier.</param>
         /// <param name="jobRegisterRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of JobRegisterResponse</returns>
-        public Fermyon.Nomad.Client.ApiResponse<JobRegisterResponse> PostJobWithHttpInfo(string jobName, JobRegisterRequest jobRegisterRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0)
+        public Fermyon.Nomad.Client.ApiResponse<JobRegisterResponse> PostJobWithHttpInfo(string jobName, JobRegisterRequest jobRegisterRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'jobName' is set
             if (jobName == null)
@@ -4319,9 +4319,9 @@ namespace Fermyon.Nomad.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "region", region));
             }
-            if (_namespace != null)
+            if (varNamespace != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", _namespace));
+                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", varNamespace));
             }
             if (idempotencyToken != null)
             {
@@ -4363,15 +4363,15 @@ namespace Fermyon.Nomad.Api
         /// <param name="jobName">The job identifier.</param>
         /// <param name="jobRegisterRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of JobRegisterResponse</returns>
-        public async System.Threading.Tasks.Task<JobRegisterResponse> PostJobAsync(string jobName, JobRegisterRequest jobRegisterRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<JobRegisterResponse> PostJobAsync(string jobName, JobRegisterRequest jobRegisterRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Fermyon.Nomad.Client.ApiResponse<JobRegisterResponse> localVarResponse = await PostJobWithHttpInfoAsync(jobName, jobRegisterRequest, region, _namespace, xNomadToken, idempotencyToken, operationIndex, cancellationToken).ConfigureAwait(false);
+            Fermyon.Nomad.Client.ApiResponse<JobRegisterResponse> localVarResponse = await PostJobWithHttpInfoAsync(jobName, jobRegisterRequest, region, varNamespace, xNomadToken, idempotencyToken, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -4382,13 +4382,13 @@ namespace Fermyon.Nomad.Api
         /// <param name="jobName">The job identifier.</param>
         /// <param name="jobRegisterRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (JobRegisterResponse)</returns>
-        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<JobRegisterResponse>> PostJobWithHttpInfoAsync(string jobName, JobRegisterRequest jobRegisterRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<JobRegisterResponse>> PostJobWithHttpInfoAsync(string jobName, JobRegisterRequest jobRegisterRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'jobName' is set
             if (jobName == null)
@@ -4431,9 +4431,9 @@ namespace Fermyon.Nomad.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "region", region));
             }
-            if (_namespace != null)
+            if (varNamespace != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", _namespace));
+                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", varNamespace));
             }
             if (idempotencyToken != null)
             {
@@ -4476,14 +4476,14 @@ namespace Fermyon.Nomad.Api
         /// <param name="jobName">The job identifier.</param>
         /// <param name="jobDispatchRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>JobDispatchResponse</returns>
-        public JobDispatchResponse PostJobDispatch(string jobName, JobDispatchRequest jobDispatchRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0)
+        public JobDispatchResponse PostJobDispatch(string jobName, JobDispatchRequest jobDispatchRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0)
         {
-            Fermyon.Nomad.Client.ApiResponse<JobDispatchResponse> localVarResponse = PostJobDispatchWithHttpInfo(jobName, jobDispatchRequest, region, _namespace, xNomadToken, idempotencyToken);
+            Fermyon.Nomad.Client.ApiResponse<JobDispatchResponse> localVarResponse = PostJobDispatchWithHttpInfo(jobName, jobDispatchRequest, region, varNamespace, xNomadToken, idempotencyToken);
             return localVarResponse.Data;
         }
 
@@ -4494,12 +4494,12 @@ namespace Fermyon.Nomad.Api
         /// <param name="jobName">The job identifier.</param>
         /// <param name="jobDispatchRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of JobDispatchResponse</returns>
-        public Fermyon.Nomad.Client.ApiResponse<JobDispatchResponse> PostJobDispatchWithHttpInfo(string jobName, JobDispatchRequest jobDispatchRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0)
+        public Fermyon.Nomad.Client.ApiResponse<JobDispatchResponse> PostJobDispatchWithHttpInfo(string jobName, JobDispatchRequest jobDispatchRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'jobName' is set
             if (jobName == null)
@@ -4541,9 +4541,9 @@ namespace Fermyon.Nomad.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "region", region));
             }
-            if (_namespace != null)
+            if (varNamespace != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", _namespace));
+                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", varNamespace));
             }
             if (idempotencyToken != null)
             {
@@ -4585,15 +4585,15 @@ namespace Fermyon.Nomad.Api
         /// <param name="jobName">The job identifier.</param>
         /// <param name="jobDispatchRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of JobDispatchResponse</returns>
-        public async System.Threading.Tasks.Task<JobDispatchResponse> PostJobDispatchAsync(string jobName, JobDispatchRequest jobDispatchRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<JobDispatchResponse> PostJobDispatchAsync(string jobName, JobDispatchRequest jobDispatchRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Fermyon.Nomad.Client.ApiResponse<JobDispatchResponse> localVarResponse = await PostJobDispatchWithHttpInfoAsync(jobName, jobDispatchRequest, region, _namespace, xNomadToken, idempotencyToken, operationIndex, cancellationToken).ConfigureAwait(false);
+            Fermyon.Nomad.Client.ApiResponse<JobDispatchResponse> localVarResponse = await PostJobDispatchWithHttpInfoAsync(jobName, jobDispatchRequest, region, varNamespace, xNomadToken, idempotencyToken, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -4604,13 +4604,13 @@ namespace Fermyon.Nomad.Api
         /// <param name="jobName">The job identifier.</param>
         /// <param name="jobDispatchRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (JobDispatchResponse)</returns>
-        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<JobDispatchResponse>> PostJobDispatchWithHttpInfoAsync(string jobName, JobDispatchRequest jobDispatchRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<JobDispatchResponse>> PostJobDispatchWithHttpInfoAsync(string jobName, JobDispatchRequest jobDispatchRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'jobName' is set
             if (jobName == null)
@@ -4653,9 +4653,9 @@ namespace Fermyon.Nomad.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "region", region));
             }
-            if (_namespace != null)
+            if (varNamespace != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", _namespace));
+                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", varNamespace));
             }
             if (idempotencyToken != null)
             {
@@ -4698,14 +4698,14 @@ namespace Fermyon.Nomad.Api
         /// <param name="jobName">The job identifier.</param>
         /// <param name="jobEvaluateRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>JobRegisterResponse</returns>
-        public JobRegisterResponse PostJobEvaluate(string jobName, JobEvaluateRequest jobEvaluateRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0)
+        public JobRegisterResponse PostJobEvaluate(string jobName, JobEvaluateRequest jobEvaluateRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0)
         {
-            Fermyon.Nomad.Client.ApiResponse<JobRegisterResponse> localVarResponse = PostJobEvaluateWithHttpInfo(jobName, jobEvaluateRequest, region, _namespace, xNomadToken, idempotencyToken);
+            Fermyon.Nomad.Client.ApiResponse<JobRegisterResponse> localVarResponse = PostJobEvaluateWithHttpInfo(jobName, jobEvaluateRequest, region, varNamespace, xNomadToken, idempotencyToken);
             return localVarResponse.Data;
         }
 
@@ -4716,12 +4716,12 @@ namespace Fermyon.Nomad.Api
         /// <param name="jobName">The job identifier.</param>
         /// <param name="jobEvaluateRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of JobRegisterResponse</returns>
-        public Fermyon.Nomad.Client.ApiResponse<JobRegisterResponse> PostJobEvaluateWithHttpInfo(string jobName, JobEvaluateRequest jobEvaluateRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0)
+        public Fermyon.Nomad.Client.ApiResponse<JobRegisterResponse> PostJobEvaluateWithHttpInfo(string jobName, JobEvaluateRequest jobEvaluateRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'jobName' is set
             if (jobName == null)
@@ -4763,9 +4763,9 @@ namespace Fermyon.Nomad.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "region", region));
             }
-            if (_namespace != null)
+            if (varNamespace != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", _namespace));
+                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", varNamespace));
             }
             if (idempotencyToken != null)
             {
@@ -4807,15 +4807,15 @@ namespace Fermyon.Nomad.Api
         /// <param name="jobName">The job identifier.</param>
         /// <param name="jobEvaluateRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of JobRegisterResponse</returns>
-        public async System.Threading.Tasks.Task<JobRegisterResponse> PostJobEvaluateAsync(string jobName, JobEvaluateRequest jobEvaluateRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<JobRegisterResponse> PostJobEvaluateAsync(string jobName, JobEvaluateRequest jobEvaluateRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Fermyon.Nomad.Client.ApiResponse<JobRegisterResponse> localVarResponse = await PostJobEvaluateWithHttpInfoAsync(jobName, jobEvaluateRequest, region, _namespace, xNomadToken, idempotencyToken, operationIndex, cancellationToken).ConfigureAwait(false);
+            Fermyon.Nomad.Client.ApiResponse<JobRegisterResponse> localVarResponse = await PostJobEvaluateWithHttpInfoAsync(jobName, jobEvaluateRequest, region, varNamespace, xNomadToken, idempotencyToken, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -4826,13 +4826,13 @@ namespace Fermyon.Nomad.Api
         /// <param name="jobName">The job identifier.</param>
         /// <param name="jobEvaluateRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (JobRegisterResponse)</returns>
-        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<JobRegisterResponse>> PostJobEvaluateWithHttpInfoAsync(string jobName, JobEvaluateRequest jobEvaluateRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<JobRegisterResponse>> PostJobEvaluateWithHttpInfoAsync(string jobName, JobEvaluateRequest jobEvaluateRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'jobName' is set
             if (jobName == null)
@@ -4875,9 +4875,9 @@ namespace Fermyon.Nomad.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "region", region));
             }
-            if (_namespace != null)
+            if (varNamespace != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", _namespace));
+                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", varNamespace));
             }
             if (idempotencyToken != null)
             {
@@ -5075,14 +5075,14 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobName">The job identifier.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>PeriodicForceResponse</returns>
-        public PeriodicForceResponse PostJobPeriodicForce(string jobName, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0)
+        public PeriodicForceResponse PostJobPeriodicForce(string jobName, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0)
         {
-            Fermyon.Nomad.Client.ApiResponse<PeriodicForceResponse> localVarResponse = PostJobPeriodicForceWithHttpInfo(jobName, region, _namespace, xNomadToken, idempotencyToken);
+            Fermyon.Nomad.Client.ApiResponse<PeriodicForceResponse> localVarResponse = PostJobPeriodicForceWithHttpInfo(jobName, region, varNamespace, xNomadToken, idempotencyToken);
             return localVarResponse.Data;
         }
 
@@ -5092,12 +5092,12 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobName">The job identifier.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of PeriodicForceResponse</returns>
-        public Fermyon.Nomad.Client.ApiResponse<PeriodicForceResponse> PostJobPeriodicForceWithHttpInfo(string jobName, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0)
+        public Fermyon.Nomad.Client.ApiResponse<PeriodicForceResponse> PostJobPeriodicForceWithHttpInfo(string jobName, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'jobName' is set
             if (jobName == null)
@@ -5132,9 +5132,9 @@ namespace Fermyon.Nomad.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "region", region));
             }
-            if (_namespace != null)
+            if (varNamespace != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", _namespace));
+                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", varNamespace));
             }
             if (idempotencyToken != null)
             {
@@ -5174,15 +5174,15 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobName">The job identifier.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of PeriodicForceResponse</returns>
-        public async System.Threading.Tasks.Task<PeriodicForceResponse> PostJobPeriodicForceAsync(string jobName, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<PeriodicForceResponse> PostJobPeriodicForceAsync(string jobName, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Fermyon.Nomad.Client.ApiResponse<PeriodicForceResponse> localVarResponse = await PostJobPeriodicForceWithHttpInfoAsync(jobName, region, _namespace, xNomadToken, idempotencyToken, operationIndex, cancellationToken).ConfigureAwait(false);
+            Fermyon.Nomad.Client.ApiResponse<PeriodicForceResponse> localVarResponse = await PostJobPeriodicForceWithHttpInfoAsync(jobName, region, varNamespace, xNomadToken, idempotencyToken, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -5192,13 +5192,13 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobName">The job identifier.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (PeriodicForceResponse)</returns>
-        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<PeriodicForceResponse>> PostJobPeriodicForceWithHttpInfoAsync(string jobName, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<PeriodicForceResponse>> PostJobPeriodicForceWithHttpInfoAsync(string jobName, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'jobName' is set
             if (jobName == null)
@@ -5234,9 +5234,9 @@ namespace Fermyon.Nomad.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "region", region));
             }
-            if (_namespace != null)
+            if (varNamespace != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", _namespace));
+                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", varNamespace));
             }
             if (idempotencyToken != null)
             {
@@ -5278,14 +5278,14 @@ namespace Fermyon.Nomad.Api
         /// <param name="jobName">The job identifier.</param>
         /// <param name="jobPlanRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>JobPlanResponse</returns>
-        public JobPlanResponse PostJobPlan(string jobName, JobPlanRequest jobPlanRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0)
+        public JobPlanResponse PostJobPlan(string jobName, JobPlanRequest jobPlanRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0)
         {
-            Fermyon.Nomad.Client.ApiResponse<JobPlanResponse> localVarResponse = PostJobPlanWithHttpInfo(jobName, jobPlanRequest, region, _namespace, xNomadToken, idempotencyToken);
+            Fermyon.Nomad.Client.ApiResponse<JobPlanResponse> localVarResponse = PostJobPlanWithHttpInfo(jobName, jobPlanRequest, region, varNamespace, xNomadToken, idempotencyToken);
             return localVarResponse.Data;
         }
 
@@ -5296,12 +5296,12 @@ namespace Fermyon.Nomad.Api
         /// <param name="jobName">The job identifier.</param>
         /// <param name="jobPlanRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of JobPlanResponse</returns>
-        public Fermyon.Nomad.Client.ApiResponse<JobPlanResponse> PostJobPlanWithHttpInfo(string jobName, JobPlanRequest jobPlanRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0)
+        public Fermyon.Nomad.Client.ApiResponse<JobPlanResponse> PostJobPlanWithHttpInfo(string jobName, JobPlanRequest jobPlanRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'jobName' is set
             if (jobName == null)
@@ -5343,9 +5343,9 @@ namespace Fermyon.Nomad.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "region", region));
             }
-            if (_namespace != null)
+            if (varNamespace != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", _namespace));
+                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", varNamespace));
             }
             if (idempotencyToken != null)
             {
@@ -5387,15 +5387,15 @@ namespace Fermyon.Nomad.Api
         /// <param name="jobName">The job identifier.</param>
         /// <param name="jobPlanRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of JobPlanResponse</returns>
-        public async System.Threading.Tasks.Task<JobPlanResponse> PostJobPlanAsync(string jobName, JobPlanRequest jobPlanRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<JobPlanResponse> PostJobPlanAsync(string jobName, JobPlanRequest jobPlanRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Fermyon.Nomad.Client.ApiResponse<JobPlanResponse> localVarResponse = await PostJobPlanWithHttpInfoAsync(jobName, jobPlanRequest, region, _namespace, xNomadToken, idempotencyToken, operationIndex, cancellationToken).ConfigureAwait(false);
+            Fermyon.Nomad.Client.ApiResponse<JobPlanResponse> localVarResponse = await PostJobPlanWithHttpInfoAsync(jobName, jobPlanRequest, region, varNamespace, xNomadToken, idempotencyToken, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -5406,13 +5406,13 @@ namespace Fermyon.Nomad.Api
         /// <param name="jobName">The job identifier.</param>
         /// <param name="jobPlanRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (JobPlanResponse)</returns>
-        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<JobPlanResponse>> PostJobPlanWithHttpInfoAsync(string jobName, JobPlanRequest jobPlanRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<JobPlanResponse>> PostJobPlanWithHttpInfoAsync(string jobName, JobPlanRequest jobPlanRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'jobName' is set
             if (jobName == null)
@@ -5455,9 +5455,9 @@ namespace Fermyon.Nomad.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "region", region));
             }
-            if (_namespace != null)
+            if (varNamespace != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", _namespace));
+                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", varNamespace));
             }
             if (idempotencyToken != null)
             {
@@ -5500,14 +5500,14 @@ namespace Fermyon.Nomad.Api
         /// <param name="jobName">The job identifier.</param>
         /// <param name="jobRevertRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>JobRegisterResponse</returns>
-        public JobRegisterResponse PostJobRevert(string jobName, JobRevertRequest jobRevertRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0)
+        public JobRegisterResponse PostJobRevert(string jobName, JobRevertRequest jobRevertRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0)
         {
-            Fermyon.Nomad.Client.ApiResponse<JobRegisterResponse> localVarResponse = PostJobRevertWithHttpInfo(jobName, jobRevertRequest, region, _namespace, xNomadToken, idempotencyToken);
+            Fermyon.Nomad.Client.ApiResponse<JobRegisterResponse> localVarResponse = PostJobRevertWithHttpInfo(jobName, jobRevertRequest, region, varNamespace, xNomadToken, idempotencyToken);
             return localVarResponse.Data;
         }
 
@@ -5518,12 +5518,12 @@ namespace Fermyon.Nomad.Api
         /// <param name="jobName">The job identifier.</param>
         /// <param name="jobRevertRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of JobRegisterResponse</returns>
-        public Fermyon.Nomad.Client.ApiResponse<JobRegisterResponse> PostJobRevertWithHttpInfo(string jobName, JobRevertRequest jobRevertRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0)
+        public Fermyon.Nomad.Client.ApiResponse<JobRegisterResponse> PostJobRevertWithHttpInfo(string jobName, JobRevertRequest jobRevertRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'jobName' is set
             if (jobName == null)
@@ -5565,9 +5565,9 @@ namespace Fermyon.Nomad.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "region", region));
             }
-            if (_namespace != null)
+            if (varNamespace != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", _namespace));
+                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", varNamespace));
             }
             if (idempotencyToken != null)
             {
@@ -5609,15 +5609,15 @@ namespace Fermyon.Nomad.Api
         /// <param name="jobName">The job identifier.</param>
         /// <param name="jobRevertRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of JobRegisterResponse</returns>
-        public async System.Threading.Tasks.Task<JobRegisterResponse> PostJobRevertAsync(string jobName, JobRevertRequest jobRevertRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<JobRegisterResponse> PostJobRevertAsync(string jobName, JobRevertRequest jobRevertRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Fermyon.Nomad.Client.ApiResponse<JobRegisterResponse> localVarResponse = await PostJobRevertWithHttpInfoAsync(jobName, jobRevertRequest, region, _namespace, xNomadToken, idempotencyToken, operationIndex, cancellationToken).ConfigureAwait(false);
+            Fermyon.Nomad.Client.ApiResponse<JobRegisterResponse> localVarResponse = await PostJobRevertWithHttpInfoAsync(jobName, jobRevertRequest, region, varNamespace, xNomadToken, idempotencyToken, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -5628,13 +5628,13 @@ namespace Fermyon.Nomad.Api
         /// <param name="jobName">The job identifier.</param>
         /// <param name="jobRevertRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (JobRegisterResponse)</returns>
-        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<JobRegisterResponse>> PostJobRevertWithHttpInfoAsync(string jobName, JobRevertRequest jobRevertRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<JobRegisterResponse>> PostJobRevertWithHttpInfoAsync(string jobName, JobRevertRequest jobRevertRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'jobName' is set
             if (jobName == null)
@@ -5677,9 +5677,9 @@ namespace Fermyon.Nomad.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "region", region));
             }
-            if (_namespace != null)
+            if (varNamespace != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", _namespace));
+                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", varNamespace));
             }
             if (idempotencyToken != null)
             {
@@ -5722,14 +5722,14 @@ namespace Fermyon.Nomad.Api
         /// <param name="jobName">The job identifier.</param>
         /// <param name="scalingRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>JobRegisterResponse</returns>
-        public JobRegisterResponse PostJobScalingRequest(string jobName, ScalingRequest scalingRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0)
+        public JobRegisterResponse PostJobScalingRequest(string jobName, ScalingRequest scalingRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0)
         {
-            Fermyon.Nomad.Client.ApiResponse<JobRegisterResponse> localVarResponse = PostJobScalingRequestWithHttpInfo(jobName, scalingRequest, region, _namespace, xNomadToken, idempotencyToken);
+            Fermyon.Nomad.Client.ApiResponse<JobRegisterResponse> localVarResponse = PostJobScalingRequestWithHttpInfo(jobName, scalingRequest, region, varNamespace, xNomadToken, idempotencyToken);
             return localVarResponse.Data;
         }
 
@@ -5740,12 +5740,12 @@ namespace Fermyon.Nomad.Api
         /// <param name="jobName">The job identifier.</param>
         /// <param name="scalingRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of JobRegisterResponse</returns>
-        public Fermyon.Nomad.Client.ApiResponse<JobRegisterResponse> PostJobScalingRequestWithHttpInfo(string jobName, ScalingRequest scalingRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0)
+        public Fermyon.Nomad.Client.ApiResponse<JobRegisterResponse> PostJobScalingRequestWithHttpInfo(string jobName, ScalingRequest scalingRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'jobName' is set
             if (jobName == null)
@@ -5787,9 +5787,9 @@ namespace Fermyon.Nomad.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "region", region));
             }
-            if (_namespace != null)
+            if (varNamespace != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", _namespace));
+                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", varNamespace));
             }
             if (idempotencyToken != null)
             {
@@ -5831,15 +5831,15 @@ namespace Fermyon.Nomad.Api
         /// <param name="jobName">The job identifier.</param>
         /// <param name="scalingRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of JobRegisterResponse</returns>
-        public async System.Threading.Tasks.Task<JobRegisterResponse> PostJobScalingRequestAsync(string jobName, ScalingRequest scalingRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<JobRegisterResponse> PostJobScalingRequestAsync(string jobName, ScalingRequest scalingRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Fermyon.Nomad.Client.ApiResponse<JobRegisterResponse> localVarResponse = await PostJobScalingRequestWithHttpInfoAsync(jobName, scalingRequest, region, _namespace, xNomadToken, idempotencyToken, operationIndex, cancellationToken).ConfigureAwait(false);
+            Fermyon.Nomad.Client.ApiResponse<JobRegisterResponse> localVarResponse = await PostJobScalingRequestWithHttpInfoAsync(jobName, scalingRequest, region, varNamespace, xNomadToken, idempotencyToken, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -5850,13 +5850,13 @@ namespace Fermyon.Nomad.Api
         /// <param name="jobName">The job identifier.</param>
         /// <param name="scalingRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (JobRegisterResponse)</returns>
-        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<JobRegisterResponse>> PostJobScalingRequestWithHttpInfoAsync(string jobName, ScalingRequest scalingRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<JobRegisterResponse>> PostJobScalingRequestWithHttpInfoAsync(string jobName, ScalingRequest scalingRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'jobName' is set
             if (jobName == null)
@@ -5899,9 +5899,9 @@ namespace Fermyon.Nomad.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "region", region));
             }
-            if (_namespace != null)
+            if (varNamespace != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", _namespace));
+                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", varNamespace));
             }
             if (idempotencyToken != null)
             {
@@ -5944,14 +5944,14 @@ namespace Fermyon.Nomad.Api
         /// <param name="jobName">The job identifier.</param>
         /// <param name="jobStabilityRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>JobStabilityResponse</returns>
-        public JobStabilityResponse PostJobStability(string jobName, JobStabilityRequest jobStabilityRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0)
+        public JobStabilityResponse PostJobStability(string jobName, JobStabilityRequest jobStabilityRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0)
         {
-            Fermyon.Nomad.Client.ApiResponse<JobStabilityResponse> localVarResponse = PostJobStabilityWithHttpInfo(jobName, jobStabilityRequest, region, _namespace, xNomadToken, idempotencyToken);
+            Fermyon.Nomad.Client.ApiResponse<JobStabilityResponse> localVarResponse = PostJobStabilityWithHttpInfo(jobName, jobStabilityRequest, region, varNamespace, xNomadToken, idempotencyToken);
             return localVarResponse.Data;
         }
 
@@ -5962,12 +5962,12 @@ namespace Fermyon.Nomad.Api
         /// <param name="jobName">The job identifier.</param>
         /// <param name="jobStabilityRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of JobStabilityResponse</returns>
-        public Fermyon.Nomad.Client.ApiResponse<JobStabilityResponse> PostJobStabilityWithHttpInfo(string jobName, JobStabilityRequest jobStabilityRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0)
+        public Fermyon.Nomad.Client.ApiResponse<JobStabilityResponse> PostJobStabilityWithHttpInfo(string jobName, JobStabilityRequest jobStabilityRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'jobName' is set
             if (jobName == null)
@@ -6009,9 +6009,9 @@ namespace Fermyon.Nomad.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "region", region));
             }
-            if (_namespace != null)
+            if (varNamespace != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", _namespace));
+                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", varNamespace));
             }
             if (idempotencyToken != null)
             {
@@ -6053,15 +6053,15 @@ namespace Fermyon.Nomad.Api
         /// <param name="jobName">The job identifier.</param>
         /// <param name="jobStabilityRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of JobStabilityResponse</returns>
-        public async System.Threading.Tasks.Task<JobStabilityResponse> PostJobStabilityAsync(string jobName, JobStabilityRequest jobStabilityRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<JobStabilityResponse> PostJobStabilityAsync(string jobName, JobStabilityRequest jobStabilityRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Fermyon.Nomad.Client.ApiResponse<JobStabilityResponse> localVarResponse = await PostJobStabilityWithHttpInfoAsync(jobName, jobStabilityRequest, region, _namespace, xNomadToken, idempotencyToken, operationIndex, cancellationToken).ConfigureAwait(false);
+            Fermyon.Nomad.Client.ApiResponse<JobStabilityResponse> localVarResponse = await PostJobStabilityWithHttpInfoAsync(jobName, jobStabilityRequest, region, varNamespace, xNomadToken, idempotencyToken, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -6072,13 +6072,13 @@ namespace Fermyon.Nomad.Api
         /// <param name="jobName">The job identifier.</param>
         /// <param name="jobStabilityRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (JobStabilityResponse)</returns>
-        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<JobStabilityResponse>> PostJobStabilityWithHttpInfoAsync(string jobName, JobStabilityRequest jobStabilityRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<JobStabilityResponse>> PostJobStabilityWithHttpInfoAsync(string jobName, JobStabilityRequest jobStabilityRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'jobName' is set
             if (jobName == null)
@@ -6121,9 +6121,9 @@ namespace Fermyon.Nomad.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "region", region));
             }
-            if (_namespace != null)
+            if (varNamespace != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", _namespace));
+                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", varNamespace));
             }
             if (idempotencyToken != null)
             {
@@ -6165,14 +6165,14 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobValidateRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>JobValidateResponse</returns>
-        public JobValidateResponse PostJobValidateRequest(JobValidateRequest jobValidateRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0)
+        public JobValidateResponse PostJobValidateRequest(JobValidateRequest jobValidateRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0)
         {
-            Fermyon.Nomad.Client.ApiResponse<JobValidateResponse> localVarResponse = PostJobValidateRequestWithHttpInfo(jobValidateRequest, region, _namespace, xNomadToken, idempotencyToken);
+            Fermyon.Nomad.Client.ApiResponse<JobValidateResponse> localVarResponse = PostJobValidateRequestWithHttpInfo(jobValidateRequest, region, varNamespace, xNomadToken, idempotencyToken);
             return localVarResponse.Data;
         }
 
@@ -6182,12 +6182,12 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobValidateRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of JobValidateResponse</returns>
-        public Fermyon.Nomad.Client.ApiResponse<JobValidateResponse> PostJobValidateRequestWithHttpInfo(JobValidateRequest jobValidateRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0)
+        public Fermyon.Nomad.Client.ApiResponse<JobValidateResponse> PostJobValidateRequestWithHttpInfo(JobValidateRequest jobValidateRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'jobValidateRequest' is set
             if (jobValidateRequest == null)
@@ -6222,9 +6222,9 @@ namespace Fermyon.Nomad.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "region", region));
             }
-            if (_namespace != null)
+            if (varNamespace != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", _namespace));
+                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", varNamespace));
             }
             if (idempotencyToken != null)
             {
@@ -6265,15 +6265,15 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobValidateRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of JobValidateResponse</returns>
-        public async System.Threading.Tasks.Task<JobValidateResponse> PostJobValidateRequestAsync(JobValidateRequest jobValidateRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<JobValidateResponse> PostJobValidateRequestAsync(JobValidateRequest jobValidateRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Fermyon.Nomad.Client.ApiResponse<JobValidateResponse> localVarResponse = await PostJobValidateRequestWithHttpInfoAsync(jobValidateRequest, region, _namespace, xNomadToken, idempotencyToken, operationIndex, cancellationToken).ConfigureAwait(false);
+            Fermyon.Nomad.Client.ApiResponse<JobValidateResponse> localVarResponse = await PostJobValidateRequestWithHttpInfoAsync(jobValidateRequest, region, varNamespace, xNomadToken, idempotencyToken, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -6283,13 +6283,13 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobValidateRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (JobValidateResponse)</returns>
-        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<JobValidateResponse>> PostJobValidateRequestWithHttpInfoAsync(JobValidateRequest jobValidateRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<JobValidateResponse>> PostJobValidateRequestWithHttpInfoAsync(JobValidateRequest jobValidateRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'jobValidateRequest' is set
             if (jobValidateRequest == null)
@@ -6325,9 +6325,9 @@ namespace Fermyon.Nomad.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "region", region));
             }
-            if (_namespace != null)
+            if (varNamespace != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", _namespace));
+                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", varNamespace));
             }
             if (idempotencyToken != null)
             {
@@ -6369,14 +6369,14 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobRegisterRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>JobRegisterResponse</returns>
-        public JobRegisterResponse RegisterJob(JobRegisterRequest jobRegisterRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0)
+        public JobRegisterResponse RegisterJob(JobRegisterRequest jobRegisterRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0)
         {
-            Fermyon.Nomad.Client.ApiResponse<JobRegisterResponse> localVarResponse = RegisterJobWithHttpInfo(jobRegisterRequest, region, _namespace, xNomadToken, idempotencyToken);
+            Fermyon.Nomad.Client.ApiResponse<JobRegisterResponse> localVarResponse = RegisterJobWithHttpInfo(jobRegisterRequest, region, varNamespace, xNomadToken, idempotencyToken);
             return localVarResponse.Data;
         }
 
@@ -6386,12 +6386,12 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobRegisterRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of JobRegisterResponse</returns>
-        public Fermyon.Nomad.Client.ApiResponse<JobRegisterResponse> RegisterJobWithHttpInfo(JobRegisterRequest jobRegisterRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0)
+        public Fermyon.Nomad.Client.ApiResponse<JobRegisterResponse> RegisterJobWithHttpInfo(JobRegisterRequest jobRegisterRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'jobRegisterRequest' is set
             if (jobRegisterRequest == null)
@@ -6426,9 +6426,9 @@ namespace Fermyon.Nomad.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "region", region));
             }
-            if (_namespace != null)
+            if (varNamespace != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", _namespace));
+                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", varNamespace));
             }
             if (idempotencyToken != null)
             {
@@ -6469,15 +6469,15 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobRegisterRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of JobRegisterResponse</returns>
-        public async System.Threading.Tasks.Task<JobRegisterResponse> RegisterJobAsync(JobRegisterRequest jobRegisterRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<JobRegisterResponse> RegisterJobAsync(JobRegisterRequest jobRegisterRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Fermyon.Nomad.Client.ApiResponse<JobRegisterResponse> localVarResponse = await RegisterJobWithHttpInfoAsync(jobRegisterRequest, region, _namespace, xNomadToken, idempotencyToken, operationIndex, cancellationToken).ConfigureAwait(false);
+            Fermyon.Nomad.Client.ApiResponse<JobRegisterResponse> localVarResponse = await RegisterJobWithHttpInfoAsync(jobRegisterRequest, region, varNamespace, xNomadToken, idempotencyToken, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -6487,13 +6487,13 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobRegisterRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (JobRegisterResponse)</returns>
-        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<JobRegisterResponse>> RegisterJobWithHttpInfoAsync(JobRegisterRequest jobRegisterRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<JobRegisterResponse>> RegisterJobWithHttpInfoAsync(JobRegisterRequest jobRegisterRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'jobRegisterRequest' is set
             if (jobRegisterRequest == null)
@@ -6529,9 +6529,9 @@ namespace Fermyon.Nomad.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "region", region));
             }
-            if (_namespace != null)
+            if (varNamespace != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", _namespace));
+                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", varNamespace));
             }
             if (idempotencyToken != null)
             {

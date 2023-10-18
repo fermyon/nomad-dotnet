@@ -15,7 +15,6 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Collections.Generic;
-using Fermyon.Nomad.Api;
 using Fermyon.Nomad.Model;
 using Fermyon.Nomad.Client;
 using System.Reflection;
@@ -56,7 +55,6 @@ namespace Fermyon.Nomad.Test.Model
             //Assert.IsType<JobRevertRequest>(instance);
         }
 
-
         /// <summary>
         /// Test the property 'ConsulToken'
         /// </summary>
@@ -65,6 +63,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'ConsulToken'
         }
+
         /// <summary>
         /// Test the property 'EnforcePriorVersion'
         /// </summary>
@@ -73,6 +72,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'EnforcePriorVersion'
         }
+
         /// <summary>
         /// Test the property 'JobID'
         /// </summary>
@@ -81,6 +81,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'JobID'
         }
+
         /// <summary>
         /// Test the property 'JobVersion'
         /// </summary>
@@ -89,14 +90,16 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'JobVersion'
         }
+
         /// <summary>
-        /// Test the property 'Namespace'
+        /// Test the property 'VarNamespace'
         /// </summary>
         [Fact]
-        public void NamespaceTest()
+        public void VarNamespaceTest()
         {
-            // TODO unit test for the property 'Namespace'
+            // TODO unit test for the property 'VarNamespace'
         }
+
         /// <summary>
         /// Test the property 'Region'
         /// </summary>
@@ -105,6 +108,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Region'
         }
+
         /// <summary>
         /// Test the property 'SecretID'
         /// </summary>
@@ -113,6 +117,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'SecretID'
         }
+
         /// <summary>
         /// Test the property 'VaultToken'
         /// </summary>
@@ -121,7 +126,5 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'VaultToken'
         }
-
     }
-
 }

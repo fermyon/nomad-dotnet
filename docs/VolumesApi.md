@@ -16,9 +16,9 @@ All URIs are relative to *https://127.0.0.1:4646/v1*
 | [**PostVolume**](VolumesApi.md#postvolume) | **POST** /volumes |  |
 | [**PostVolumeRegistration**](VolumesApi.md#postvolumeregistration) | **POST** /volume/csi/{volumeId} |  |
 
-<a name="createvolume"></a>
+<a id="createvolume"></a>
 # **CreateVolume**
-> void CreateVolume (string volumeId, string action, CSIVolumeCreateRequest cSIVolumeCreateRequest, string? region = null, string? _namespace = null, string? xNomadToken = null, string? idempotencyToken = null)
+> void CreateVolume (string volumeId, string action, CSIVolumeCreateRequest cSIVolumeCreateRequest, string? region = null, string? varNamespace = null, string? xNomadToken = null, string? idempotencyToken = null)
 
 
 
@@ -48,13 +48,13 @@ namespace Example
             var action = "action_example";  // string | The action to perform on the Volume (create, detach, delete).
             var cSIVolumeCreateRequest = new CSIVolumeCreateRequest(); // CSIVolumeCreateRequest | 
             var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var varNamespace = "varNamespace_example";  // string? | Filters results based on the specified namespace. (optional) 
             var xNomadToken = "xNomadToken_example";  // string? | A Nomad ACL token. (optional) 
             var idempotencyToken = "idempotencyToken_example";  // string? | Can be used to ensure operations are only run once. (optional) 
 
             try
             {
-                apiInstance.CreateVolume(volumeId, action, cSIVolumeCreateRequest, region, _namespace, xNomadToken, idempotencyToken);
+                apiInstance.CreateVolume(volumeId, action, cSIVolumeCreateRequest, region, varNamespace, xNomadToken, idempotencyToken);
             }
             catch (ApiException  e)
             {
@@ -73,7 +73,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    apiInstance.CreateVolumeWithHttpInfo(volumeId, action, cSIVolumeCreateRequest, region, _namespace, xNomadToken, idempotencyToken);
+    apiInstance.CreateVolumeWithHttpInfo(volumeId, action, cSIVolumeCreateRequest, region, varNamespace, xNomadToken, idempotencyToken);
 }
 catch (ApiException e)
 {
@@ -91,7 +91,7 @@ catch (ApiException e)
 | **action** | **string** | The action to perform on the Volume (create, detach, delete). |  |
 | **cSIVolumeCreateRequest** | [**CSIVolumeCreateRequest**](CSIVolumeCreateRequest.md) |  |  |
 | **region** | **string?** | Filters results based on the specified region. | [optional]  |
-| **_namespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
+| **varNamespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
 | **xNomadToken** | **string?** | A Nomad ACL token. | [optional]  |
 | **idempotencyToken** | **string?** | Can be used to ensure operations are only run once. | [optional]  |
 
@@ -120,9 +120,9 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="deletesnapshot"></a>
+<a id="deletesnapshot"></a>
 # **DeleteSnapshot**
-> void DeleteSnapshot (string? region = null, string? _namespace = null, string? xNomadToken = null, string? idempotencyToken = null, string? pluginId = null, string? snapshotId = null)
+> void DeleteSnapshot (string? region = null, string? varNamespace = null, string? xNomadToken = null, string? idempotencyToken = null, string? pluginId = null, string? snapshotId = null)
 
 
 
@@ -149,7 +149,7 @@ namespace Example
 
             var apiInstance = new VolumesApi(config);
             var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var varNamespace = "varNamespace_example";  // string? | Filters results based on the specified namespace. (optional) 
             var xNomadToken = "xNomadToken_example";  // string? | A Nomad ACL token. (optional) 
             var idempotencyToken = "idempotencyToken_example";  // string? | Can be used to ensure operations are only run once. (optional) 
             var pluginId = "pluginId_example";  // string? | Filters volume lists by plugin ID. (optional) 
@@ -157,7 +157,7 @@ namespace Example
 
             try
             {
-                apiInstance.DeleteSnapshot(region, _namespace, xNomadToken, idempotencyToken, pluginId, snapshotId);
+                apiInstance.DeleteSnapshot(region, varNamespace, xNomadToken, idempotencyToken, pluginId, snapshotId);
             }
             catch (ApiException  e)
             {
@@ -176,7 +176,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    apiInstance.DeleteSnapshotWithHttpInfo(region, _namespace, xNomadToken, idempotencyToken, pluginId, snapshotId);
+    apiInstance.DeleteSnapshotWithHttpInfo(region, varNamespace, xNomadToken, idempotencyToken, pluginId, snapshotId);
 }
 catch (ApiException e)
 {
@@ -191,7 +191,7 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **region** | **string?** | Filters results based on the specified region. | [optional]  |
-| **_namespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
+| **varNamespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
 | **xNomadToken** | **string?** | A Nomad ACL token. | [optional]  |
 | **idempotencyToken** | **string?** | Can be used to ensure operations are only run once. | [optional]  |
 | **pluginId** | **string?** | Filters volume lists by plugin ID. | [optional]  |
@@ -222,9 +222,9 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="deletevolumeregistration"></a>
+<a id="deletevolumeregistration"></a>
 # **DeleteVolumeRegistration**
-> void DeleteVolumeRegistration (string volumeId, string? region = null, string? _namespace = null, string? xNomadToken = null, string? idempotencyToken = null, string? force = null)
+> void DeleteVolumeRegistration (string volumeId, string? region = null, string? varNamespace = null, string? xNomadToken = null, string? idempotencyToken = null, string? force = null)
 
 
 
@@ -252,14 +252,14 @@ namespace Example
             var apiInstance = new VolumesApi(config);
             var volumeId = "volumeId_example";  // string | Volume unique identifier.
             var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var varNamespace = "varNamespace_example";  // string? | Filters results based on the specified namespace. (optional) 
             var xNomadToken = "xNomadToken_example";  // string? | A Nomad ACL token. (optional) 
             var idempotencyToken = "idempotencyToken_example";  // string? | Can be used to ensure operations are only run once. (optional) 
             var force = "force_example";  // string? | Used to force the de-registration of a volume. (optional) 
 
             try
             {
-                apiInstance.DeleteVolumeRegistration(volumeId, region, _namespace, xNomadToken, idempotencyToken, force);
+                apiInstance.DeleteVolumeRegistration(volumeId, region, varNamespace, xNomadToken, idempotencyToken, force);
             }
             catch (ApiException  e)
             {
@@ -278,7 +278,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    apiInstance.DeleteVolumeRegistrationWithHttpInfo(volumeId, region, _namespace, xNomadToken, idempotencyToken, force);
+    apiInstance.DeleteVolumeRegistrationWithHttpInfo(volumeId, region, varNamespace, xNomadToken, idempotencyToken, force);
 }
 catch (ApiException e)
 {
@@ -294,7 +294,7 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **volumeId** | **string** | Volume unique identifier. |  |
 | **region** | **string?** | Filters results based on the specified region. | [optional]  |
-| **_namespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
+| **varNamespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
 | **xNomadToken** | **string?** | A Nomad ACL token. | [optional]  |
 | **idempotencyToken** | **string?** | Can be used to ensure operations are only run once. | [optional]  |
 | **force** | **string?** | Used to force the de-registration of a volume. | [optional]  |
@@ -324,9 +324,9 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="detachordeletevolume"></a>
+<a id="detachordeletevolume"></a>
 # **DetachOrDeleteVolume**
-> void DetachOrDeleteVolume (string volumeId, string action, string? region = null, string? _namespace = null, string? xNomadToken = null, string? idempotencyToken = null, string? node = null)
+> void DetachOrDeleteVolume (string volumeId, string action, string? region = null, string? varNamespace = null, string? xNomadToken = null, string? idempotencyToken = null, string? node = null)
 
 
 
@@ -355,14 +355,14 @@ namespace Example
             var volumeId = "volumeId_example";  // string | Volume unique identifier.
             var action = "action_example";  // string | The action to perform on the Volume (create, detach, delete).
             var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var varNamespace = "varNamespace_example";  // string? | Filters results based on the specified namespace. (optional) 
             var xNomadToken = "xNomadToken_example";  // string? | A Nomad ACL token. (optional) 
             var idempotencyToken = "idempotencyToken_example";  // string? | Can be used to ensure operations are only run once. (optional) 
             var node = "node_example";  // string? | Specifies node to target volume operation for. (optional) 
 
             try
             {
-                apiInstance.DetachOrDeleteVolume(volumeId, action, region, _namespace, xNomadToken, idempotencyToken, node);
+                apiInstance.DetachOrDeleteVolume(volumeId, action, region, varNamespace, xNomadToken, idempotencyToken, node);
             }
             catch (ApiException  e)
             {
@@ -381,7 +381,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    apiInstance.DetachOrDeleteVolumeWithHttpInfo(volumeId, action, region, _namespace, xNomadToken, idempotencyToken, node);
+    apiInstance.DetachOrDeleteVolumeWithHttpInfo(volumeId, action, region, varNamespace, xNomadToken, idempotencyToken, node);
 }
 catch (ApiException e)
 {
@@ -398,7 +398,7 @@ catch (ApiException e)
 | **volumeId** | **string** | Volume unique identifier. |  |
 | **action** | **string** | The action to perform on the Volume (create, detach, delete). |  |
 | **region** | **string?** | Filters results based on the specified region. | [optional]  |
-| **_namespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
+| **varNamespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
 | **xNomadToken** | **string?** | A Nomad ACL token. | [optional]  |
 | **idempotencyToken** | **string?** | Can be used to ensure operations are only run once. | [optional]  |
 | **node** | **string?** | Specifies node to target volume operation for. | [optional]  |
@@ -428,9 +428,9 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="getexternalvolumes"></a>
+<a id="getexternalvolumes"></a>
 # **GetExternalVolumes**
-> CSIVolumeListExternalResponse GetExternalVolumes (string? region = null, string? _namespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null, string? pluginId = null)
+> CSIVolumeListExternalResponse GetExternalVolumes (string? region = null, string? varNamespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null, string? pluginId = null)
 
 
 
@@ -457,7 +457,7 @@ namespace Example
 
             var apiInstance = new VolumesApi(config);
             var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var varNamespace = "varNamespace_example";  // string? | Filters results based on the specified namespace. (optional) 
             var index = 56;  // int? | If set, wait until query exceeds given index. Must be provided with WaitParam. (optional) 
             var wait = "wait_example";  // string? | Provided with IndexParam to wait for change. (optional) 
             var stale = "stale_example";  // string? | If present, results will include stale reads. (optional) 
@@ -469,7 +469,7 @@ namespace Example
 
             try
             {
-                CSIVolumeListExternalResponse result = apiInstance.GetExternalVolumes(region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, pluginId);
+                CSIVolumeListExternalResponse result = apiInstance.GetExternalVolumes(region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, pluginId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -489,7 +489,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<CSIVolumeListExternalResponse> response = apiInstance.GetExternalVolumesWithHttpInfo(region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, pluginId);
+    ApiResponse<CSIVolumeListExternalResponse> response = apiInstance.GetExternalVolumesWithHttpInfo(region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, pluginId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -507,7 +507,7 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **region** | **string?** | Filters results based on the specified region. | [optional]  |
-| **_namespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
+| **varNamespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
 | **index** | **int?** | If set, wait until query exceeds given index. Must be provided with WaitParam. | [optional]  |
 | **wait** | **string?** | Provided with IndexParam to wait for change. | [optional]  |
 | **stale** | **string?** | If present, results will include stale reads. | [optional]  |
@@ -542,9 +542,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="getsnapshots"></a>
+<a id="getsnapshots"></a>
 # **GetSnapshots**
-> CSISnapshotListResponse GetSnapshots (string? region = null, string? _namespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null, string? pluginId = null)
+> CSISnapshotListResponse GetSnapshots (string? region = null, string? varNamespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null, string? pluginId = null)
 
 
 
@@ -571,7 +571,7 @@ namespace Example
 
             var apiInstance = new VolumesApi(config);
             var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var varNamespace = "varNamespace_example";  // string? | Filters results based on the specified namespace. (optional) 
             var index = 56;  // int? | If set, wait until query exceeds given index. Must be provided with WaitParam. (optional) 
             var wait = "wait_example";  // string? | Provided with IndexParam to wait for change. (optional) 
             var stale = "stale_example";  // string? | If present, results will include stale reads. (optional) 
@@ -583,7 +583,7 @@ namespace Example
 
             try
             {
-                CSISnapshotListResponse result = apiInstance.GetSnapshots(region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, pluginId);
+                CSISnapshotListResponse result = apiInstance.GetSnapshots(region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, pluginId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -603,7 +603,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<CSISnapshotListResponse> response = apiInstance.GetSnapshotsWithHttpInfo(region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, pluginId);
+    ApiResponse<CSISnapshotListResponse> response = apiInstance.GetSnapshotsWithHttpInfo(region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, pluginId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -621,7 +621,7 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **region** | **string?** | Filters results based on the specified region. | [optional]  |
-| **_namespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
+| **varNamespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
 | **index** | **int?** | If set, wait until query exceeds given index. Must be provided with WaitParam. | [optional]  |
 | **wait** | **string?** | Provided with IndexParam to wait for change. | [optional]  |
 | **stale** | **string?** | If present, results will include stale reads. | [optional]  |
@@ -656,9 +656,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="getvolume"></a>
+<a id="getvolume"></a>
 # **GetVolume**
-> CSIVolume GetVolume (string volumeId, string? region = null, string? _namespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null)
+> CSIVolume GetVolume (string volumeId, string? region = null, string? varNamespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null)
 
 
 
@@ -686,7 +686,7 @@ namespace Example
             var apiInstance = new VolumesApi(config);
             var volumeId = "volumeId_example";  // string | Volume unique identifier.
             var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var varNamespace = "varNamespace_example";  // string? | Filters results based on the specified namespace. (optional) 
             var index = 56;  // int? | If set, wait until query exceeds given index. Must be provided with WaitParam. (optional) 
             var wait = "wait_example";  // string? | Provided with IndexParam to wait for change. (optional) 
             var stale = "stale_example";  // string? | If present, results will include stale reads. (optional) 
@@ -697,7 +697,7 @@ namespace Example
 
             try
             {
-                CSIVolume result = apiInstance.GetVolume(volumeId, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+                CSIVolume result = apiInstance.GetVolume(volumeId, region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -717,7 +717,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<CSIVolume> response = apiInstance.GetVolumeWithHttpInfo(volumeId, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+    ApiResponse<CSIVolume> response = apiInstance.GetVolumeWithHttpInfo(volumeId, region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -736,7 +736,7 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **volumeId** | **string** | Volume unique identifier. |  |
 | **region** | **string?** | Filters results based on the specified region. | [optional]  |
-| **_namespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
+| **varNamespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
 | **index** | **int?** | If set, wait until query exceeds given index. Must be provided with WaitParam. | [optional]  |
 | **wait** | **string?** | Provided with IndexParam to wait for change. | [optional]  |
 | **stale** | **string?** | If present, results will include stale reads. | [optional]  |
@@ -770,9 +770,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="getvolumes"></a>
+<a id="getvolumes"></a>
 # **GetVolumes**
-> List&lt;CSIVolumeListStub&gt; GetVolumes (string? region = null, string? _namespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null, string? nodeId = null, string? pluginId = null, string? type = null)
+> List&lt;CSIVolumeListStub&gt; GetVolumes (string? region = null, string? varNamespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null, string? nodeId = null, string? pluginId = null, string? type = null)
 
 
 
@@ -799,7 +799,7 @@ namespace Example
 
             var apiInstance = new VolumesApi(config);
             var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var varNamespace = "varNamespace_example";  // string? | Filters results based on the specified namespace. (optional) 
             var index = 56;  // int? | If set, wait until query exceeds given index. Must be provided with WaitParam. (optional) 
             var wait = "wait_example";  // string? | Provided with IndexParam to wait for change. (optional) 
             var stale = "stale_example";  // string? | If present, results will include stale reads. (optional) 
@@ -813,7 +813,7 @@ namespace Example
 
             try
             {
-                List<CSIVolumeListStub> result = apiInstance.GetVolumes(region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, nodeId, pluginId, type);
+                List<CSIVolumeListStub> result = apiInstance.GetVolumes(region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, nodeId, pluginId, type);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -833,7 +833,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<List<CSIVolumeListStub>> response = apiInstance.GetVolumesWithHttpInfo(region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, nodeId, pluginId, type);
+    ApiResponse<List<CSIVolumeListStub>> response = apiInstance.GetVolumesWithHttpInfo(region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, nodeId, pluginId, type);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -851,7 +851,7 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **region** | **string?** | Filters results based on the specified region. | [optional]  |
-| **_namespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
+| **varNamespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
 | **index** | **int?** | If set, wait until query exceeds given index. Must be provided with WaitParam. | [optional]  |
 | **wait** | **string?** | Provided with IndexParam to wait for change. | [optional]  |
 | **stale** | **string?** | If present, results will include stale reads. | [optional]  |
@@ -888,9 +888,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="postsnapshot"></a>
+<a id="postsnapshot"></a>
 # **PostSnapshot**
-> CSISnapshotCreateResponse PostSnapshot (CSISnapshotCreateRequest cSISnapshotCreateRequest, string? region = null, string? _namespace = null, string? xNomadToken = null, string? idempotencyToken = null)
+> CSISnapshotCreateResponse PostSnapshot (CSISnapshotCreateRequest cSISnapshotCreateRequest, string? region = null, string? varNamespace = null, string? xNomadToken = null, string? idempotencyToken = null)
 
 
 
@@ -918,13 +918,13 @@ namespace Example
             var apiInstance = new VolumesApi(config);
             var cSISnapshotCreateRequest = new CSISnapshotCreateRequest(); // CSISnapshotCreateRequest | 
             var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var varNamespace = "varNamespace_example";  // string? | Filters results based on the specified namespace. (optional) 
             var xNomadToken = "xNomadToken_example";  // string? | A Nomad ACL token. (optional) 
             var idempotencyToken = "idempotencyToken_example";  // string? | Can be used to ensure operations are only run once. (optional) 
 
             try
             {
-                CSISnapshotCreateResponse result = apiInstance.PostSnapshot(cSISnapshotCreateRequest, region, _namespace, xNomadToken, idempotencyToken);
+                CSISnapshotCreateResponse result = apiInstance.PostSnapshot(cSISnapshotCreateRequest, region, varNamespace, xNomadToken, idempotencyToken);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -944,7 +944,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<CSISnapshotCreateResponse> response = apiInstance.PostSnapshotWithHttpInfo(cSISnapshotCreateRequest, region, _namespace, xNomadToken, idempotencyToken);
+    ApiResponse<CSISnapshotCreateResponse> response = apiInstance.PostSnapshotWithHttpInfo(cSISnapshotCreateRequest, region, varNamespace, xNomadToken, idempotencyToken);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -963,7 +963,7 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **cSISnapshotCreateRequest** | [**CSISnapshotCreateRequest**](CSISnapshotCreateRequest.md) |  |  |
 | **region** | **string?** | Filters results based on the specified region. | [optional]  |
-| **_namespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
+| **varNamespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
 | **xNomadToken** | **string?** | A Nomad ACL token. | [optional]  |
 | **idempotencyToken** | **string?** | Can be used to ensure operations are only run once. | [optional]  |
 
@@ -992,9 +992,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="postvolume"></a>
+<a id="postvolume"></a>
 # **PostVolume**
-> void PostVolume (CSIVolumeRegisterRequest cSIVolumeRegisterRequest, string? region = null, string? _namespace = null, string? xNomadToken = null, string? idempotencyToken = null)
+> void PostVolume (CSIVolumeRegisterRequest cSIVolumeRegisterRequest, string? region = null, string? varNamespace = null, string? xNomadToken = null, string? idempotencyToken = null)
 
 
 
@@ -1022,13 +1022,13 @@ namespace Example
             var apiInstance = new VolumesApi(config);
             var cSIVolumeRegisterRequest = new CSIVolumeRegisterRequest(); // CSIVolumeRegisterRequest | 
             var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var varNamespace = "varNamespace_example";  // string? | Filters results based on the specified namespace. (optional) 
             var xNomadToken = "xNomadToken_example";  // string? | A Nomad ACL token. (optional) 
             var idempotencyToken = "idempotencyToken_example";  // string? | Can be used to ensure operations are only run once. (optional) 
 
             try
             {
-                apiInstance.PostVolume(cSIVolumeRegisterRequest, region, _namespace, xNomadToken, idempotencyToken);
+                apiInstance.PostVolume(cSIVolumeRegisterRequest, region, varNamespace, xNomadToken, idempotencyToken);
             }
             catch (ApiException  e)
             {
@@ -1047,7 +1047,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    apiInstance.PostVolumeWithHttpInfo(cSIVolumeRegisterRequest, region, _namespace, xNomadToken, idempotencyToken);
+    apiInstance.PostVolumeWithHttpInfo(cSIVolumeRegisterRequest, region, varNamespace, xNomadToken, idempotencyToken);
 }
 catch (ApiException e)
 {
@@ -1063,7 +1063,7 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **cSIVolumeRegisterRequest** | [**CSIVolumeRegisterRequest**](CSIVolumeRegisterRequest.md) |  |  |
 | **region** | **string?** | Filters results based on the specified region. | [optional]  |
-| **_namespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
+| **varNamespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
 | **xNomadToken** | **string?** | A Nomad ACL token. | [optional]  |
 | **idempotencyToken** | **string?** | Can be used to ensure operations are only run once. | [optional]  |
 
@@ -1092,9 +1092,9 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="postvolumeregistration"></a>
+<a id="postvolumeregistration"></a>
 # **PostVolumeRegistration**
-> void PostVolumeRegistration (string volumeId, CSIVolumeRegisterRequest cSIVolumeRegisterRequest, string? region = null, string? _namespace = null, string? xNomadToken = null, string? idempotencyToken = null)
+> void PostVolumeRegistration (string volumeId, CSIVolumeRegisterRequest cSIVolumeRegisterRequest, string? region = null, string? varNamespace = null, string? xNomadToken = null, string? idempotencyToken = null)
 
 
 
@@ -1123,13 +1123,13 @@ namespace Example
             var volumeId = "volumeId_example";  // string | Volume unique identifier.
             var cSIVolumeRegisterRequest = new CSIVolumeRegisterRequest(); // CSIVolumeRegisterRequest | 
             var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var varNamespace = "varNamespace_example";  // string? | Filters results based on the specified namespace. (optional) 
             var xNomadToken = "xNomadToken_example";  // string? | A Nomad ACL token. (optional) 
             var idempotencyToken = "idempotencyToken_example";  // string? | Can be used to ensure operations are only run once. (optional) 
 
             try
             {
-                apiInstance.PostVolumeRegistration(volumeId, cSIVolumeRegisterRequest, region, _namespace, xNomadToken, idempotencyToken);
+                apiInstance.PostVolumeRegistration(volumeId, cSIVolumeRegisterRequest, region, varNamespace, xNomadToken, idempotencyToken);
             }
             catch (ApiException  e)
             {
@@ -1148,7 +1148,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    apiInstance.PostVolumeRegistrationWithHttpInfo(volumeId, cSIVolumeRegisterRequest, region, _namespace, xNomadToken, idempotencyToken);
+    apiInstance.PostVolumeRegistrationWithHttpInfo(volumeId, cSIVolumeRegisterRequest, region, varNamespace, xNomadToken, idempotencyToken);
 }
 catch (ApiException e)
 {
@@ -1165,7 +1165,7 @@ catch (ApiException e)
 | **volumeId** | **string** | Volume unique identifier. |  |
 | **cSIVolumeRegisterRequest** | [**CSIVolumeRegisterRequest**](CSIVolumeRegisterRequest.md) |  |  |
 | **region** | **string?** | Filters results based on the specified region. | [optional]  |
-| **_namespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
+| **varNamespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
 | **xNomadToken** | **string?** | A Nomad ACL token. | [optional]  |
 | **idempotencyToken** | **string?** | Can be used to ensure operations are only run once. | [optional]  |
 

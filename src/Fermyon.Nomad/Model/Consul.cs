@@ -35,17 +35,17 @@ namespace Fermyon.Nomad.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Consul" /> class.
         /// </summary>
-        /// <param name="_namespace">_namespace.</param>
-        public Consul(string _namespace = default(string))
+        /// <param name="varNamespace">varNamespace.</param>
+        public Consul(string varNamespace = default(string))
         {
-            this.Namespace = _namespace;
+            this.VarNamespace = varNamespace;
         }
 
         /// <summary>
-        /// Gets or Sets Namespace
+        /// Gets or Sets VarNamespace
         /// </summary>
         [DataMember(Name = "Namespace", EmitDefaultValue = false)]
-        public string Namespace { get; set; }
+        public string VarNamespace { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -55,7 +55,7 @@ namespace Fermyon.Nomad.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class Consul {\n");
-            sb.Append("  Namespace: ").Append(Namespace).Append("\n");
+            sb.Append("  VarNamespace: ").Append(VarNamespace).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -92,9 +92,9 @@ namespace Fermyon.Nomad.Model
             }
             return 
                 (
-                    this.Namespace == input.Namespace ||
-                    (this.Namespace != null &&
-                    this.Namespace.Equals(input.Namespace))
+                    this.VarNamespace == input.VarNamespace ||
+                    (this.VarNamespace != null &&
+                    this.VarNamespace.Equals(input.VarNamespace))
                 );
         }
 
@@ -107,9 +107,9 @@ namespace Fermyon.Nomad.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.Namespace != null)
+                if (this.VarNamespace != null)
                 {
-                    hashCode = (hashCode * 59) + this.Namespace.GetHashCode();
+                    hashCode = (hashCode * 59) + this.VarNamespace.GetHashCode();
                 }
                 return hashCode;
             }
@@ -120,7 +120,7 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

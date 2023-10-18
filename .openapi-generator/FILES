@@ -1,6 +1,7 @@
 .gitignore
 Fermyon.Nomad.sln
 README.md
+api/openapi.yaml
 appveyor.yml
 docs/ACLApi.md
 docs/ACLPolicy.md

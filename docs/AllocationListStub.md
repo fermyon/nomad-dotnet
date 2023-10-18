@@ -21,7 +21,7 @@ Name | Type | Description | Notes
 **ModifyIndex** | **int** |  | [optional] 
 **ModifyTime** | **long** |  | [optional] 
 **Name** | **string** |  | [optional] 
-**Namespace** | **string** |  | [optional] 
+**VarNamespace** | **string** |  | [optional] 
 **NodeID** | **string** |  | [optional] 
 **NodeName** | **string** |  | [optional] 
 **PreemptedAllocations** | **List&lt;string&gt;** |  | [optional] 

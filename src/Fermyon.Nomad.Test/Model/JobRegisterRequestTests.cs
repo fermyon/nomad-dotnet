@@ -15,7 +15,6 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Collections.Generic;
-using Fermyon.Nomad.Api;
 using Fermyon.Nomad.Model;
 using Fermyon.Nomad.Client;
 using System.Reflection;
@@ -56,7 +55,6 @@ namespace Fermyon.Nomad.Test.Model
             //Assert.IsType<JobRegisterRequest>(instance);
         }
 
-
         /// <summary>
         /// Test the property 'EnforceIndex'
         /// </summary>
@@ -65,6 +63,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'EnforceIndex'
         }
+
         /// <summary>
         /// Test the property 'EvalPriority'
         /// </summary>
@@ -73,6 +72,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'EvalPriority'
         }
+
         /// <summary>
         /// Test the property 'Job'
         /// </summary>
@@ -81,6 +81,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Job'
         }
+
         /// <summary>
         /// Test the property 'JobModifyIndex'
         /// </summary>
@@ -89,14 +90,16 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'JobModifyIndex'
         }
+
         /// <summary>
-        /// Test the property 'Namespace'
+        /// Test the property 'VarNamespace'
         /// </summary>
         [Fact]
-        public void NamespaceTest()
+        public void VarNamespaceTest()
         {
-            // TODO unit test for the property 'Namespace'
+            // TODO unit test for the property 'VarNamespace'
         }
+
         /// <summary>
         /// Test the property 'PolicyOverride'
         /// </summary>
@@ -105,6 +108,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'PolicyOverride'
         }
+
         /// <summary>
         /// Test the property 'PreserveCounts'
         /// </summary>
@@ -113,6 +117,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'PreserveCounts'
         }
+
         /// <summary>
         /// Test the property 'Region'
         /// </summary>
@@ -121,6 +126,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Region'
         }
+
         /// <summary>
         /// Test the property 'SecretID'
         /// </summary>
@@ -129,7 +135,5 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'SecretID'
         }
-
     }
-
 }

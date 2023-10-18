@@ -15,7 +15,6 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Collections.Generic;
-using Fermyon.Nomad.Api;
 using Fermyon.Nomad.Model;
 using Fermyon.Nomad.Client;
 using System.Reflection;
@@ -56,7 +55,6 @@ namespace Fermyon.Nomad.Test.Model
             //Assert.IsType<DeploymentPromoteRequest>(instance);
         }
 
-
         /// <summary>
         /// Test the property 'All'
         /// </summary>
@@ -65,6 +63,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'All'
         }
+
         /// <summary>
         /// Test the property 'DeploymentID'
         /// </summary>
@@ -73,6 +72,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'DeploymentID'
         }
+
         /// <summary>
         /// Test the property 'Groups'
         /// </summary>
@@ -81,14 +81,16 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Groups'
         }
+
         /// <summary>
-        /// Test the property 'Namespace'
+        /// Test the property 'VarNamespace'
         /// </summary>
         [Fact]
-        public void NamespaceTest()
+        public void VarNamespaceTest()
         {
-            // TODO unit test for the property 'Namespace'
+            // TODO unit test for the property 'VarNamespace'
         }
+
         /// <summary>
         /// Test the property 'Region'
         /// </summary>
@@ -97,6 +99,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Region'
         }
+
         /// <summary>
         /// Test the property 'SecretID'
         /// </summary>
@@ -105,7 +108,5 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'SecretID'
         }
-
     }
-
 }

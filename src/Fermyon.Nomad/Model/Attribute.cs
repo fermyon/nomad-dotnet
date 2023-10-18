@@ -35,43 +35,43 @@ namespace Fermyon.Nomad.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Attribute" /> class.
         /// </summary>
-        /// <param name="_bool">_bool.</param>
-        /// <param name="_float">_float.</param>
-        /// <param name="_int">_int.</param>
-        /// <param name="_string">_string.</param>
+        /// <param name="varBool">varBool.</param>
+        /// <param name="varFloat">varFloat.</param>
+        /// <param name="varInt">varInt.</param>
+        /// <param name="varString">varString.</param>
         /// <param name="unit">unit.</param>
-        public Attribute(bool _bool = default(bool), double _float = default(double), long _int = default(long), string _string = default(string), string unit = default(string))
+        public Attribute(bool varBool = default(bool), double varFloat = default(double), long varInt = default(long), string varString = default(string), string unit = default(string))
         {
-            this.Bool = _bool;
-            this.Float = _float;
-            this.Int = _int;
-            this.String = _string;
+            this.VarBool = varBool;
+            this.VarFloat = varFloat;
+            this.VarInt = varInt;
+            this.VarString = varString;
             this.Unit = unit;
         }
 
         /// <summary>
-        /// Gets or Sets Bool
+        /// Gets or Sets VarBool
         /// </summary>
         [DataMember(Name = "Bool", EmitDefaultValue = true)]
-        public bool Bool { get; set; }
+        public bool VarBool { get; set; }
 
         /// <summary>
-        /// Gets or Sets Float
+        /// Gets or Sets VarFloat
         /// </summary>
         [DataMember(Name = "Float", EmitDefaultValue = false)]
-        public double Float { get; set; }
+        public double VarFloat { get; set; }
 
         /// <summary>
-        /// Gets or Sets Int
+        /// Gets or Sets VarInt
         /// </summary>
         [DataMember(Name = "Int", EmitDefaultValue = false)]
-        public long Int { get; set; }
+        public long VarInt { get; set; }
 
         /// <summary>
-        /// Gets or Sets String
+        /// Gets or Sets VarString
         /// </summary>
         [DataMember(Name = "String", EmitDefaultValue = false)]
-        public string String { get; set; }
+        public string VarString { get; set; }
 
         /// <summary>
         /// Gets or Sets Unit
@@ -87,10 +87,10 @@ namespace Fermyon.Nomad.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class Attribute {\n");
-            sb.Append("  Bool: ").Append(Bool).Append("\n");
-            sb.Append("  Float: ").Append(Float).Append("\n");
-            sb.Append("  Int: ").Append(Int).Append("\n");
-            sb.Append("  String: ").Append(String).Append("\n");
+            sb.Append("  VarBool: ").Append(VarBool).Append("\n");
+            sb.Append("  VarFloat: ").Append(VarFloat).Append("\n");
+            sb.Append("  VarInt: ").Append(VarInt).Append("\n");
+            sb.Append("  VarString: ").Append(VarString).Append("\n");
             sb.Append("  Unit: ").Append(Unit).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -128,21 +128,21 @@ namespace Fermyon.Nomad.Model
             }
             return 
                 (
-                    this.Bool == input.Bool ||
-                    this.Bool.Equals(input.Bool)
+                    this.VarBool == input.VarBool ||
+                    this.VarBool.Equals(input.VarBool)
                 ) && 
                 (
-                    this.Float == input.Float ||
-                    this.Float.Equals(input.Float)
+                    this.VarFloat == input.VarFloat ||
+                    this.VarFloat.Equals(input.VarFloat)
                 ) && 
                 (
-                    this.Int == input.Int ||
-                    this.Int.Equals(input.Int)
+                    this.VarInt == input.VarInt ||
+                    this.VarInt.Equals(input.VarInt)
                 ) && 
                 (
-                    this.String == input.String ||
-                    (this.String != null &&
-                    this.String.Equals(input.String))
+                    this.VarString == input.VarString ||
+                    (this.VarString != null &&
+                    this.VarString.Equals(input.VarString))
                 ) && 
                 (
                     this.Unit == input.Unit ||
@@ -160,12 +160,12 @@ namespace Fermyon.Nomad.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                hashCode = (hashCode * 59) + this.Bool.GetHashCode();
-                hashCode = (hashCode * 59) + this.Float.GetHashCode();
-                hashCode = (hashCode * 59) + this.Int.GetHashCode();
-                if (this.String != null)
+                hashCode = (hashCode * 59) + this.VarBool.GetHashCode();
+                hashCode = (hashCode * 59) + this.VarFloat.GetHashCode();
+                hashCode = (hashCode * 59) + this.VarInt.GetHashCode();
+                if (this.VarString != null)
                 {
-                    hashCode = (hashCode * 59) + this.String.GetHashCode();
+                    hashCode = (hashCode * 59) + this.VarString.GetHashCode();
                 }
                 if (this.Unit != null)
                 {
@@ -180,7 +180,7 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

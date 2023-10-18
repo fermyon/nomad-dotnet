@@ -37,13 +37,13 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="destination">destination.</param>
         /// <param name="propagationMode">propagationMode.</param>
-        /// <param name="readOnly">readOnly.</param>
+        /// <param name="varReadOnly">varReadOnly.</param>
         /// <param name="volume">volume.</param>
-        public VolumeMount(string destination = default(string), string propagationMode = default(string), bool readOnly = default(bool), string volume = default(string))
+        public VolumeMount(string destination = default(string), string propagationMode = default(string), bool varReadOnly = default(bool), string volume = default(string))
         {
             this.Destination = destination;
             this.PropagationMode = propagationMode;
-            this.ReadOnly = readOnly;
+            this.VarReadOnly = varReadOnly;
             this.Volume = volume;
         }
 
@@ -60,10 +60,10 @@ namespace Fermyon.Nomad.Model
         public string PropagationMode { get; set; }
 
         /// <summary>
-        /// Gets or Sets ReadOnly
+        /// Gets or Sets VarReadOnly
         /// </summary>
         [DataMember(Name = "ReadOnly", EmitDefaultValue = true)]
-        public bool ReadOnly { get; set; }
+        public bool VarReadOnly { get; set; }
 
         /// <summary>
         /// Gets or Sets Volume
@@ -81,7 +81,7 @@ namespace Fermyon.Nomad.Model
             sb.Append("class VolumeMount {\n");
             sb.Append("  Destination: ").Append(Destination).Append("\n");
             sb.Append("  PropagationMode: ").Append(PropagationMode).Append("\n");
-            sb.Append("  ReadOnly: ").Append(ReadOnly).Append("\n");
+            sb.Append("  VarReadOnly: ").Append(VarReadOnly).Append("\n");
             sb.Append("  Volume: ").Append(Volume).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -129,8 +129,8 @@ namespace Fermyon.Nomad.Model
                     this.PropagationMode.Equals(input.PropagationMode))
                 ) && 
                 (
-                    this.ReadOnly == input.ReadOnly ||
-                    this.ReadOnly.Equals(input.ReadOnly)
+                    this.VarReadOnly == input.VarReadOnly ||
+                    this.VarReadOnly.Equals(input.VarReadOnly)
                 ) && 
                 (
                     this.Volume == input.Volume ||
@@ -156,7 +156,7 @@ namespace Fermyon.Nomad.Model
                 {
                     hashCode = (hashCode * 59) + this.PropagationMode.GetHashCode();
                 }
-                hashCode = (hashCode * 59) + this.ReadOnly.GetHashCode();
+                hashCode = (hashCode * 59) + this.VarReadOnly.GetHashCode();
                 if (this.Volume != null)
                 {
                     hashCode = (hashCode * 59) + this.Volume.GetHashCode();
@@ -170,7 +170,7 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

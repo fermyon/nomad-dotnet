@@ -15,7 +15,6 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Collections.Generic;
-using Fermyon.Nomad.Api;
 using Fermyon.Nomad.Model;
 using Fermyon.Nomad.Client;
 using System.Reflection;
@@ -56,7 +55,6 @@ namespace Fermyon.Nomad.Test.Model
             //Assert.IsType<TaskGroupSummary>(instance);
         }
 
-
         /// <summary>
         /// Test the property 'Complete'
         /// </summary>
@@ -65,6 +63,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Complete'
         }
+
         /// <summary>
         /// Test the property 'Failed'
         /// </summary>
@@ -73,6 +72,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Failed'
         }
+
         /// <summary>
         /// Test the property 'Lost'
         /// </summary>
@@ -81,6 +81,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Lost'
         }
+
         /// <summary>
         /// Test the property 'Queued'
         /// </summary>
@@ -89,6 +90,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Queued'
         }
+
         /// <summary>
         /// Test the property 'Running'
         /// </summary>
@@ -97,6 +99,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Running'
         }
+
         /// <summary>
         /// Test the property 'Starting'
         /// </summary>
@@ -105,6 +108,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Starting'
         }
+
         /// <summary>
         /// Test the property 'Unknown'
         /// </summary>
@@ -113,7 +117,5 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Unknown'
         }
-
     }
-
 }

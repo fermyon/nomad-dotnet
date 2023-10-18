@@ -33,7 +33,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentID">Deployment ID.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -43,7 +43,7 @@ namespace Fermyon.Nomad.Api
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>Deployment</returns>
-        Deployment GetDeployment(string deploymentID, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0);
+        Deployment GetDeployment(string deploymentID, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -54,7 +54,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentID">Deployment ID.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -64,14 +64,14 @@ namespace Fermyon.Nomad.Api
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Deployment</returns>
-        ApiResponse<Deployment> GetDeploymentWithHttpInfo(string deploymentID, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0);
+        ApiResponse<Deployment> GetDeploymentWithHttpInfo(string deploymentID, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentID">Deployment ID.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -81,7 +81,7 @@ namespace Fermyon.Nomad.Api
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>List&lt;AllocationListStub&gt;</returns>
-        List<AllocationListStub> GetDeploymentAllocations(string deploymentID, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0);
+        List<AllocationListStub> GetDeploymentAllocations(string deploymentID, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -92,7 +92,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentID">Deployment ID.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -102,13 +102,13 @@ namespace Fermyon.Nomad.Api
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of List&lt;AllocationListStub&gt;</returns>
-        ApiResponse<List<AllocationListStub>> GetDeploymentAllocationsWithHttpInfo(string deploymentID, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0);
+        ApiResponse<List<AllocationListStub>> GetDeploymentAllocationsWithHttpInfo(string deploymentID, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -118,7 +118,7 @@ namespace Fermyon.Nomad.Api
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>List&lt;Deployment&gt;</returns>
-        List<Deployment> GetDeployments(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0);
+        List<Deployment> GetDeployments(string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -128,7 +128,7 @@ namespace Fermyon.Nomad.Api
         /// </remarks>
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -138,7 +138,7 @@ namespace Fermyon.Nomad.Api
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of List&lt;Deployment&gt;</returns>
-        ApiResponse<List<Deployment>> GetDeploymentsWithHttpInfo(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0);
+        ApiResponse<List<Deployment>> GetDeploymentsWithHttpInfo(string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -146,12 +146,12 @@ namespace Fermyon.Nomad.Api
         /// <param name="deploymentID">Deployment ID.</param>
         /// <param name="deploymentAllocHealthRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>DeploymentUpdateResponse</returns>
-        DeploymentUpdateResponse PostDeploymentAllocationHealth(string deploymentID, DeploymentAllocHealthRequest deploymentAllocHealthRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0);
+        DeploymentUpdateResponse PostDeploymentAllocationHealth(string deploymentID, DeploymentAllocHealthRequest deploymentAllocHealthRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -163,24 +163,24 @@ namespace Fermyon.Nomad.Api
         /// <param name="deploymentID">Deployment ID.</param>
         /// <param name="deploymentAllocHealthRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of DeploymentUpdateResponse</returns>
-        ApiResponse<DeploymentUpdateResponse> PostDeploymentAllocationHealthWithHttpInfo(string deploymentID, DeploymentAllocHealthRequest deploymentAllocHealthRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0);
+        ApiResponse<DeploymentUpdateResponse> PostDeploymentAllocationHealthWithHttpInfo(string deploymentID, DeploymentAllocHealthRequest deploymentAllocHealthRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentID">Deployment ID.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>DeploymentUpdateResponse</returns>
-        DeploymentUpdateResponse PostDeploymentFail(string deploymentID, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0);
+        DeploymentUpdateResponse PostDeploymentFail(string deploymentID, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -191,12 +191,12 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentID">Deployment ID.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of DeploymentUpdateResponse</returns>
-        ApiResponse<DeploymentUpdateResponse> PostDeploymentFailWithHttpInfo(string deploymentID, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0);
+        ApiResponse<DeploymentUpdateResponse> PostDeploymentFailWithHttpInfo(string deploymentID, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -204,12 +204,12 @@ namespace Fermyon.Nomad.Api
         /// <param name="deploymentID">Deployment ID.</param>
         /// <param name="deploymentPauseRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>DeploymentUpdateResponse</returns>
-        DeploymentUpdateResponse PostDeploymentPause(string deploymentID, DeploymentPauseRequest deploymentPauseRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0);
+        DeploymentUpdateResponse PostDeploymentPause(string deploymentID, DeploymentPauseRequest deploymentPauseRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -221,12 +221,12 @@ namespace Fermyon.Nomad.Api
         /// <param name="deploymentID">Deployment ID.</param>
         /// <param name="deploymentPauseRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of DeploymentUpdateResponse</returns>
-        ApiResponse<DeploymentUpdateResponse> PostDeploymentPauseWithHttpInfo(string deploymentID, DeploymentPauseRequest deploymentPauseRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0);
+        ApiResponse<DeploymentUpdateResponse> PostDeploymentPauseWithHttpInfo(string deploymentID, DeploymentPauseRequest deploymentPauseRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -234,12 +234,12 @@ namespace Fermyon.Nomad.Api
         /// <param name="deploymentID">Deployment ID.</param>
         /// <param name="deploymentPromoteRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>DeploymentUpdateResponse</returns>
-        DeploymentUpdateResponse PostDeploymentPromote(string deploymentID, DeploymentPromoteRequest deploymentPromoteRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0);
+        DeploymentUpdateResponse PostDeploymentPromote(string deploymentID, DeploymentPromoteRequest deploymentPromoteRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -251,12 +251,12 @@ namespace Fermyon.Nomad.Api
         /// <param name="deploymentID">Deployment ID.</param>
         /// <param name="deploymentPromoteRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of DeploymentUpdateResponse</returns>
-        ApiResponse<DeploymentUpdateResponse> PostDeploymentPromoteWithHttpInfo(string deploymentID, DeploymentPromoteRequest deploymentPromoteRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0);
+        ApiResponse<DeploymentUpdateResponse> PostDeploymentPromoteWithHttpInfo(string deploymentID, DeploymentPromoteRequest deploymentPromoteRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -264,12 +264,12 @@ namespace Fermyon.Nomad.Api
         /// <param name="deploymentID">Deployment ID.</param>
         /// <param name="deploymentUnblockRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>DeploymentUpdateResponse</returns>
-        DeploymentUpdateResponse PostDeploymentUnblock(string deploymentID, DeploymentUnblockRequest deploymentUnblockRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0);
+        DeploymentUpdateResponse PostDeploymentUnblock(string deploymentID, DeploymentUnblockRequest deploymentUnblockRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -281,12 +281,12 @@ namespace Fermyon.Nomad.Api
         /// <param name="deploymentID">Deployment ID.</param>
         /// <param name="deploymentUnblockRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of DeploymentUpdateResponse</returns>
-        ApiResponse<DeploymentUpdateResponse> PostDeploymentUnblockWithHttpInfo(string deploymentID, DeploymentUnblockRequest deploymentUnblockRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0);
+        ApiResponse<DeploymentUpdateResponse> PostDeploymentUnblockWithHttpInfo(string deploymentID, DeploymentUnblockRequest deploymentUnblockRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -305,7 +305,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentID">Deployment ID.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -316,7 +316,7 @@ namespace Fermyon.Nomad.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Deployment</returns>
-        System.Threading.Tasks.Task<Deployment> GetDeploymentAsync(string deploymentID, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<Deployment> GetDeploymentAsync(string deploymentID, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -327,7 +327,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentID">Deployment ID.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -338,7 +338,7 @@ namespace Fermyon.Nomad.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Deployment)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Deployment>> GetDeploymentWithHttpInfoAsync(string deploymentID, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Deployment>> GetDeploymentWithHttpInfoAsync(string deploymentID, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -348,7 +348,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentID">Deployment ID.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -359,7 +359,7 @@ namespace Fermyon.Nomad.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;AllocationListStub&gt;</returns>
-        System.Threading.Tasks.Task<List<AllocationListStub>> GetDeploymentAllocationsAsync(string deploymentID, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<List<AllocationListStub>> GetDeploymentAllocationsAsync(string deploymentID, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -370,7 +370,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentID">Deployment ID.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -381,7 +381,7 @@ namespace Fermyon.Nomad.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;AllocationListStub&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<AllocationListStub>>> GetDeploymentAllocationsWithHttpInfoAsync(string deploymentID, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<List<AllocationListStub>>> GetDeploymentAllocationsWithHttpInfoAsync(string deploymentID, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -390,7 +390,7 @@ namespace Fermyon.Nomad.Api
         /// </remarks>
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -401,7 +401,7 @@ namespace Fermyon.Nomad.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;Deployment&gt;</returns>
-        System.Threading.Tasks.Task<List<Deployment>> GetDeploymentsAsync(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<List<Deployment>> GetDeploymentsAsync(string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -411,7 +411,7 @@ namespace Fermyon.Nomad.Api
         /// </remarks>
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -422,7 +422,7 @@ namespace Fermyon.Nomad.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;Deployment&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<Deployment>>> GetDeploymentsWithHttpInfoAsync(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<List<Deployment>>> GetDeploymentsWithHttpInfoAsync(string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -433,13 +433,13 @@ namespace Fermyon.Nomad.Api
         /// <param name="deploymentID">Deployment ID.</param>
         /// <param name="deploymentAllocHealthRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of DeploymentUpdateResponse</returns>
-        System.Threading.Tasks.Task<DeploymentUpdateResponse> PostDeploymentAllocationHealthAsync(string deploymentID, DeploymentAllocHealthRequest deploymentAllocHealthRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<DeploymentUpdateResponse> PostDeploymentAllocationHealthAsync(string deploymentID, DeploymentAllocHealthRequest deploymentAllocHealthRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -451,13 +451,13 @@ namespace Fermyon.Nomad.Api
         /// <param name="deploymentID">Deployment ID.</param>
         /// <param name="deploymentAllocHealthRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (DeploymentUpdateResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DeploymentUpdateResponse>> PostDeploymentAllocationHealthWithHttpInfoAsync(string deploymentID, DeploymentAllocHealthRequest deploymentAllocHealthRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<DeploymentUpdateResponse>> PostDeploymentAllocationHealthWithHttpInfoAsync(string deploymentID, DeploymentAllocHealthRequest deploymentAllocHealthRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -467,13 +467,13 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentID">Deployment ID.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of DeploymentUpdateResponse</returns>
-        System.Threading.Tasks.Task<DeploymentUpdateResponse> PostDeploymentFailAsync(string deploymentID, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<DeploymentUpdateResponse> PostDeploymentFailAsync(string deploymentID, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -484,13 +484,13 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentID">Deployment ID.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (DeploymentUpdateResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DeploymentUpdateResponse>> PostDeploymentFailWithHttpInfoAsync(string deploymentID, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<DeploymentUpdateResponse>> PostDeploymentFailWithHttpInfoAsync(string deploymentID, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -501,13 +501,13 @@ namespace Fermyon.Nomad.Api
         /// <param name="deploymentID">Deployment ID.</param>
         /// <param name="deploymentPauseRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of DeploymentUpdateResponse</returns>
-        System.Threading.Tasks.Task<DeploymentUpdateResponse> PostDeploymentPauseAsync(string deploymentID, DeploymentPauseRequest deploymentPauseRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<DeploymentUpdateResponse> PostDeploymentPauseAsync(string deploymentID, DeploymentPauseRequest deploymentPauseRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -519,13 +519,13 @@ namespace Fermyon.Nomad.Api
         /// <param name="deploymentID">Deployment ID.</param>
         /// <param name="deploymentPauseRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (DeploymentUpdateResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DeploymentUpdateResponse>> PostDeploymentPauseWithHttpInfoAsync(string deploymentID, DeploymentPauseRequest deploymentPauseRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<DeploymentUpdateResponse>> PostDeploymentPauseWithHttpInfoAsync(string deploymentID, DeploymentPauseRequest deploymentPauseRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -536,13 +536,13 @@ namespace Fermyon.Nomad.Api
         /// <param name="deploymentID">Deployment ID.</param>
         /// <param name="deploymentPromoteRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of DeploymentUpdateResponse</returns>
-        System.Threading.Tasks.Task<DeploymentUpdateResponse> PostDeploymentPromoteAsync(string deploymentID, DeploymentPromoteRequest deploymentPromoteRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<DeploymentUpdateResponse> PostDeploymentPromoteAsync(string deploymentID, DeploymentPromoteRequest deploymentPromoteRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -554,13 +554,13 @@ namespace Fermyon.Nomad.Api
         /// <param name="deploymentID">Deployment ID.</param>
         /// <param name="deploymentPromoteRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (DeploymentUpdateResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DeploymentUpdateResponse>> PostDeploymentPromoteWithHttpInfoAsync(string deploymentID, DeploymentPromoteRequest deploymentPromoteRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<DeploymentUpdateResponse>> PostDeploymentPromoteWithHttpInfoAsync(string deploymentID, DeploymentPromoteRequest deploymentPromoteRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -571,13 +571,13 @@ namespace Fermyon.Nomad.Api
         /// <param name="deploymentID">Deployment ID.</param>
         /// <param name="deploymentUnblockRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of DeploymentUpdateResponse</returns>
-        System.Threading.Tasks.Task<DeploymentUpdateResponse> PostDeploymentUnblockAsync(string deploymentID, DeploymentUnblockRequest deploymentUnblockRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<DeploymentUpdateResponse> PostDeploymentUnblockAsync(string deploymentID, DeploymentUnblockRequest deploymentUnblockRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -589,13 +589,13 @@ namespace Fermyon.Nomad.Api
         /// <param name="deploymentID">Deployment ID.</param>
         /// <param name="deploymentUnblockRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (DeploymentUpdateResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DeploymentUpdateResponse>> PostDeploymentUnblockWithHttpInfoAsync(string deploymentID, DeploymentUnblockRequest deploymentUnblockRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<DeploymentUpdateResponse>> PostDeploymentUnblockWithHttpInfoAsync(string deploymentID, DeploymentUnblockRequest deploymentUnblockRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -722,7 +722,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentID">Deployment ID.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -732,9 +732,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>Deployment</returns>
-        public Deployment GetDeployment(string deploymentID, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0)
+        public Deployment GetDeployment(string deploymentID, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0)
         {
-            Fermyon.Nomad.Client.ApiResponse<Deployment> localVarResponse = GetDeploymentWithHttpInfo(deploymentID, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+            Fermyon.Nomad.Client.ApiResponse<Deployment> localVarResponse = GetDeploymentWithHttpInfo(deploymentID, region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
             return localVarResponse.Data;
         }
 
@@ -744,7 +744,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentID">Deployment ID.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -754,7 +754,7 @@ namespace Fermyon.Nomad.Api
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Deployment</returns>
-        public Fermyon.Nomad.Client.ApiResponse<Deployment> GetDeploymentWithHttpInfo(string deploymentID, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0)
+        public Fermyon.Nomad.Client.ApiResponse<Deployment> GetDeploymentWithHttpInfo(string deploymentID, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'deploymentID' is set
             if (deploymentID == null)
@@ -789,9 +789,9 @@ namespace Fermyon.Nomad.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "region", region));
             }
-            if (_namespace != null)
+            if (varNamespace != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", _namespace));
+                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", varNamespace));
             }
             if (wait != null)
             {
@@ -851,7 +851,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentID">Deployment ID.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -862,9 +862,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Deployment</returns>
-        public async System.Threading.Tasks.Task<Deployment> GetDeploymentAsync(string deploymentID, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Deployment> GetDeploymentAsync(string deploymentID, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Fermyon.Nomad.Client.ApiResponse<Deployment> localVarResponse = await GetDeploymentWithHttpInfoAsync(deploymentID, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, operationIndex, cancellationToken).ConfigureAwait(false);
+            Fermyon.Nomad.Client.ApiResponse<Deployment> localVarResponse = await GetDeploymentWithHttpInfoAsync(deploymentID, region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -874,7 +874,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentID">Deployment ID.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -885,7 +885,7 @@ namespace Fermyon.Nomad.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Deployment)</returns>
-        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<Deployment>> GetDeploymentWithHttpInfoAsync(string deploymentID, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<Deployment>> GetDeploymentWithHttpInfoAsync(string deploymentID, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'deploymentID' is set
             if (deploymentID == null)
@@ -921,9 +921,9 @@ namespace Fermyon.Nomad.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "region", region));
             }
-            if (_namespace != null)
+            if (varNamespace != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", _namespace));
+                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", varNamespace));
             }
             if (wait != null)
             {
@@ -984,7 +984,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentID">Deployment ID.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -994,9 +994,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>List&lt;AllocationListStub&gt;</returns>
-        public List<AllocationListStub> GetDeploymentAllocations(string deploymentID, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0)
+        public List<AllocationListStub> GetDeploymentAllocations(string deploymentID, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0)
         {
-            Fermyon.Nomad.Client.ApiResponse<List<AllocationListStub>> localVarResponse = GetDeploymentAllocationsWithHttpInfo(deploymentID, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+            Fermyon.Nomad.Client.ApiResponse<List<AllocationListStub>> localVarResponse = GetDeploymentAllocationsWithHttpInfo(deploymentID, region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
             return localVarResponse.Data;
         }
 
@@ -1006,7 +1006,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentID">Deployment ID.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -1016,7 +1016,7 @@ namespace Fermyon.Nomad.Api
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of List&lt;AllocationListStub&gt;</returns>
-        public Fermyon.Nomad.Client.ApiResponse<List<AllocationListStub>> GetDeploymentAllocationsWithHttpInfo(string deploymentID, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0)
+        public Fermyon.Nomad.Client.ApiResponse<List<AllocationListStub>> GetDeploymentAllocationsWithHttpInfo(string deploymentID, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'deploymentID' is set
             if (deploymentID == null)
@@ -1051,9 +1051,9 @@ namespace Fermyon.Nomad.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "region", region));
             }
-            if (_namespace != null)
+            if (varNamespace != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", _namespace));
+                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", varNamespace));
             }
             if (wait != null)
             {
@@ -1113,7 +1113,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentID">Deployment ID.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -1124,9 +1124,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;AllocationListStub&gt;</returns>
-        public async System.Threading.Tasks.Task<List<AllocationListStub>> GetDeploymentAllocationsAsync(string deploymentID, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<List<AllocationListStub>> GetDeploymentAllocationsAsync(string deploymentID, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Fermyon.Nomad.Client.ApiResponse<List<AllocationListStub>> localVarResponse = await GetDeploymentAllocationsWithHttpInfoAsync(deploymentID, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, operationIndex, cancellationToken).ConfigureAwait(false);
+            Fermyon.Nomad.Client.ApiResponse<List<AllocationListStub>> localVarResponse = await GetDeploymentAllocationsWithHttpInfoAsync(deploymentID, region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1136,7 +1136,7 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentID">Deployment ID.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -1147,7 +1147,7 @@ namespace Fermyon.Nomad.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;AllocationListStub&gt;)</returns>
-        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<List<AllocationListStub>>> GetDeploymentAllocationsWithHttpInfoAsync(string deploymentID, string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<List<AllocationListStub>>> GetDeploymentAllocationsWithHttpInfoAsync(string deploymentID, string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'deploymentID' is set
             if (deploymentID == null)
@@ -1183,9 +1183,9 @@ namespace Fermyon.Nomad.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "region", region));
             }
-            if (_namespace != null)
+            if (varNamespace != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", _namespace));
+                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", varNamespace));
             }
             if (wait != null)
             {
@@ -1245,7 +1245,7 @@ namespace Fermyon.Nomad.Api
         /// </summary>
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -1255,9 +1255,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>List&lt;Deployment&gt;</returns>
-        public List<Deployment> GetDeployments(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0)
+        public List<Deployment> GetDeployments(string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0)
         {
-            Fermyon.Nomad.Client.ApiResponse<List<Deployment>> localVarResponse = GetDeploymentsWithHttpInfo(region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+            Fermyon.Nomad.Client.ApiResponse<List<Deployment>> localVarResponse = GetDeploymentsWithHttpInfo(region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
             return localVarResponse.Data;
         }
 
@@ -1266,7 +1266,7 @@ namespace Fermyon.Nomad.Api
         /// </summary>
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -1276,7 +1276,7 @@ namespace Fermyon.Nomad.Api
         /// <param name="nextToken">Indicates where to start paging for queries that support pagination. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of List&lt;Deployment&gt;</returns>
-        public Fermyon.Nomad.Client.ApiResponse<List<Deployment>> GetDeploymentsWithHttpInfo(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0)
+        public Fermyon.Nomad.Client.ApiResponse<List<Deployment>> GetDeploymentsWithHttpInfo(string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0)
         {
             Fermyon.Nomad.Client.RequestOptions localVarRequestOptions = new Fermyon.Nomad.Client.RequestOptions();
 
@@ -1304,9 +1304,9 @@ namespace Fermyon.Nomad.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "region", region));
             }
-            if (_namespace != null)
+            if (varNamespace != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", _namespace));
+                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", varNamespace));
             }
             if (wait != null)
             {
@@ -1365,7 +1365,7 @@ namespace Fermyon.Nomad.Api
         /// </summary>
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -1376,9 +1376,9 @@ namespace Fermyon.Nomad.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;Deployment&gt;</returns>
-        public async System.Threading.Tasks.Task<List<Deployment>> GetDeploymentsAsync(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<List<Deployment>> GetDeploymentsAsync(string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Fermyon.Nomad.Client.ApiResponse<List<Deployment>> localVarResponse = await GetDeploymentsWithHttpInfoAsync(region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, operationIndex, cancellationToken).ConfigureAwait(false);
+            Fermyon.Nomad.Client.ApiResponse<List<Deployment>> localVarResponse = await GetDeploymentsWithHttpInfoAsync(region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1387,7 +1387,7 @@ namespace Fermyon.Nomad.Api
         /// </summary>
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="index">If set, wait until query exceeds given index. Must be provided with WaitParam. (optional)</param>
         /// <param name="wait">Provided with IndexParam to wait for change. (optional)</param>
         /// <param name="stale">If present, results will include stale reads. (optional)</param>
@@ -1398,7 +1398,7 @@ namespace Fermyon.Nomad.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;Deployment&gt;)</returns>
-        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<List<Deployment>>> GetDeploymentsWithHttpInfoAsync(string? region = default(string?), string? _namespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<List<Deployment>>> GetDeploymentsWithHttpInfoAsync(string? region = default(string?), string? varNamespace = default(string?), int? index = default(int?), string? wait = default(string?), string? stale = default(string?), string? prefix = default(string?), string? xNomadToken = default(string?), int? perPage = default(int?), string? nextToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             Fermyon.Nomad.Client.RequestOptions localVarRequestOptions = new Fermyon.Nomad.Client.RequestOptions();
@@ -1427,9 +1427,9 @@ namespace Fermyon.Nomad.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "region", region));
             }
-            if (_namespace != null)
+            if (varNamespace != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", _namespace));
+                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", varNamespace));
             }
             if (wait != null)
             {
@@ -1491,14 +1491,14 @@ namespace Fermyon.Nomad.Api
         /// <param name="deploymentID">Deployment ID.</param>
         /// <param name="deploymentAllocHealthRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>DeploymentUpdateResponse</returns>
-        public DeploymentUpdateResponse PostDeploymentAllocationHealth(string deploymentID, DeploymentAllocHealthRequest deploymentAllocHealthRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0)
+        public DeploymentUpdateResponse PostDeploymentAllocationHealth(string deploymentID, DeploymentAllocHealthRequest deploymentAllocHealthRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0)
         {
-            Fermyon.Nomad.Client.ApiResponse<DeploymentUpdateResponse> localVarResponse = PostDeploymentAllocationHealthWithHttpInfo(deploymentID, deploymentAllocHealthRequest, region, _namespace, xNomadToken, idempotencyToken);
+            Fermyon.Nomad.Client.ApiResponse<DeploymentUpdateResponse> localVarResponse = PostDeploymentAllocationHealthWithHttpInfo(deploymentID, deploymentAllocHealthRequest, region, varNamespace, xNomadToken, idempotencyToken);
             return localVarResponse.Data;
         }
 
@@ -1509,12 +1509,12 @@ namespace Fermyon.Nomad.Api
         /// <param name="deploymentID">Deployment ID.</param>
         /// <param name="deploymentAllocHealthRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of DeploymentUpdateResponse</returns>
-        public Fermyon.Nomad.Client.ApiResponse<DeploymentUpdateResponse> PostDeploymentAllocationHealthWithHttpInfo(string deploymentID, DeploymentAllocHealthRequest deploymentAllocHealthRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0)
+        public Fermyon.Nomad.Client.ApiResponse<DeploymentUpdateResponse> PostDeploymentAllocationHealthWithHttpInfo(string deploymentID, DeploymentAllocHealthRequest deploymentAllocHealthRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'deploymentID' is set
             if (deploymentID == null)
@@ -1556,9 +1556,9 @@ namespace Fermyon.Nomad.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "region", region));
             }
-            if (_namespace != null)
+            if (varNamespace != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", _namespace));
+                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", varNamespace));
             }
             if (idempotencyToken != null)
             {
@@ -1600,15 +1600,15 @@ namespace Fermyon.Nomad.Api
         /// <param name="deploymentID">Deployment ID.</param>
         /// <param name="deploymentAllocHealthRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of DeploymentUpdateResponse</returns>
-        public async System.Threading.Tasks.Task<DeploymentUpdateResponse> PostDeploymentAllocationHealthAsync(string deploymentID, DeploymentAllocHealthRequest deploymentAllocHealthRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<DeploymentUpdateResponse> PostDeploymentAllocationHealthAsync(string deploymentID, DeploymentAllocHealthRequest deploymentAllocHealthRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Fermyon.Nomad.Client.ApiResponse<DeploymentUpdateResponse> localVarResponse = await PostDeploymentAllocationHealthWithHttpInfoAsync(deploymentID, deploymentAllocHealthRequest, region, _namespace, xNomadToken, idempotencyToken, operationIndex, cancellationToken).ConfigureAwait(false);
+            Fermyon.Nomad.Client.ApiResponse<DeploymentUpdateResponse> localVarResponse = await PostDeploymentAllocationHealthWithHttpInfoAsync(deploymentID, deploymentAllocHealthRequest, region, varNamespace, xNomadToken, idempotencyToken, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1619,13 +1619,13 @@ namespace Fermyon.Nomad.Api
         /// <param name="deploymentID">Deployment ID.</param>
         /// <param name="deploymentAllocHealthRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (DeploymentUpdateResponse)</returns>
-        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<DeploymentUpdateResponse>> PostDeploymentAllocationHealthWithHttpInfoAsync(string deploymentID, DeploymentAllocHealthRequest deploymentAllocHealthRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<DeploymentUpdateResponse>> PostDeploymentAllocationHealthWithHttpInfoAsync(string deploymentID, DeploymentAllocHealthRequest deploymentAllocHealthRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'deploymentID' is set
             if (deploymentID == null)
@@ -1668,9 +1668,9 @@ namespace Fermyon.Nomad.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "region", region));
             }
-            if (_namespace != null)
+            if (varNamespace != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", _namespace));
+                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", varNamespace));
             }
             if (idempotencyToken != null)
             {
@@ -1712,14 +1712,14 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentID">Deployment ID.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>DeploymentUpdateResponse</returns>
-        public DeploymentUpdateResponse PostDeploymentFail(string deploymentID, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0)
+        public DeploymentUpdateResponse PostDeploymentFail(string deploymentID, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0)
         {
-            Fermyon.Nomad.Client.ApiResponse<DeploymentUpdateResponse> localVarResponse = PostDeploymentFailWithHttpInfo(deploymentID, region, _namespace, xNomadToken, idempotencyToken);
+            Fermyon.Nomad.Client.ApiResponse<DeploymentUpdateResponse> localVarResponse = PostDeploymentFailWithHttpInfo(deploymentID, region, varNamespace, xNomadToken, idempotencyToken);
             return localVarResponse.Data;
         }
 
@@ -1729,12 +1729,12 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentID">Deployment ID.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of DeploymentUpdateResponse</returns>
-        public Fermyon.Nomad.Client.ApiResponse<DeploymentUpdateResponse> PostDeploymentFailWithHttpInfo(string deploymentID, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0)
+        public Fermyon.Nomad.Client.ApiResponse<DeploymentUpdateResponse> PostDeploymentFailWithHttpInfo(string deploymentID, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'deploymentID' is set
             if (deploymentID == null)
@@ -1769,9 +1769,9 @@ namespace Fermyon.Nomad.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "region", region));
             }
-            if (_namespace != null)
+            if (varNamespace != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", _namespace));
+                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", varNamespace));
             }
             if (idempotencyToken != null)
             {
@@ -1811,15 +1811,15 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentID">Deployment ID.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of DeploymentUpdateResponse</returns>
-        public async System.Threading.Tasks.Task<DeploymentUpdateResponse> PostDeploymentFailAsync(string deploymentID, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<DeploymentUpdateResponse> PostDeploymentFailAsync(string deploymentID, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Fermyon.Nomad.Client.ApiResponse<DeploymentUpdateResponse> localVarResponse = await PostDeploymentFailWithHttpInfoAsync(deploymentID, region, _namespace, xNomadToken, idempotencyToken, operationIndex, cancellationToken).ConfigureAwait(false);
+            Fermyon.Nomad.Client.ApiResponse<DeploymentUpdateResponse> localVarResponse = await PostDeploymentFailWithHttpInfoAsync(deploymentID, region, varNamespace, xNomadToken, idempotencyToken, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1829,13 +1829,13 @@ namespace Fermyon.Nomad.Api
         /// <exception cref="Fermyon.Nomad.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentID">Deployment ID.</param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (DeploymentUpdateResponse)</returns>
-        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<DeploymentUpdateResponse>> PostDeploymentFailWithHttpInfoAsync(string deploymentID, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<DeploymentUpdateResponse>> PostDeploymentFailWithHttpInfoAsync(string deploymentID, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'deploymentID' is set
             if (deploymentID == null)
@@ -1871,9 +1871,9 @@ namespace Fermyon.Nomad.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "region", region));
             }
-            if (_namespace != null)
+            if (varNamespace != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", _namespace));
+                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", varNamespace));
             }
             if (idempotencyToken != null)
             {
@@ -1915,14 +1915,14 @@ namespace Fermyon.Nomad.Api
         /// <param name="deploymentID">Deployment ID.</param>
         /// <param name="deploymentPauseRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>DeploymentUpdateResponse</returns>
-        public DeploymentUpdateResponse PostDeploymentPause(string deploymentID, DeploymentPauseRequest deploymentPauseRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0)
+        public DeploymentUpdateResponse PostDeploymentPause(string deploymentID, DeploymentPauseRequest deploymentPauseRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0)
         {
-            Fermyon.Nomad.Client.ApiResponse<DeploymentUpdateResponse> localVarResponse = PostDeploymentPauseWithHttpInfo(deploymentID, deploymentPauseRequest, region, _namespace, xNomadToken, idempotencyToken);
+            Fermyon.Nomad.Client.ApiResponse<DeploymentUpdateResponse> localVarResponse = PostDeploymentPauseWithHttpInfo(deploymentID, deploymentPauseRequest, region, varNamespace, xNomadToken, idempotencyToken);
             return localVarResponse.Data;
         }
 
@@ -1933,12 +1933,12 @@ namespace Fermyon.Nomad.Api
         /// <param name="deploymentID">Deployment ID.</param>
         /// <param name="deploymentPauseRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of DeploymentUpdateResponse</returns>
-        public Fermyon.Nomad.Client.ApiResponse<DeploymentUpdateResponse> PostDeploymentPauseWithHttpInfo(string deploymentID, DeploymentPauseRequest deploymentPauseRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0)
+        public Fermyon.Nomad.Client.ApiResponse<DeploymentUpdateResponse> PostDeploymentPauseWithHttpInfo(string deploymentID, DeploymentPauseRequest deploymentPauseRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'deploymentID' is set
             if (deploymentID == null)
@@ -1980,9 +1980,9 @@ namespace Fermyon.Nomad.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "region", region));
             }
-            if (_namespace != null)
+            if (varNamespace != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", _namespace));
+                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", varNamespace));
             }
             if (idempotencyToken != null)
             {
@@ -2024,15 +2024,15 @@ namespace Fermyon.Nomad.Api
         /// <param name="deploymentID">Deployment ID.</param>
         /// <param name="deploymentPauseRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of DeploymentUpdateResponse</returns>
-        public async System.Threading.Tasks.Task<DeploymentUpdateResponse> PostDeploymentPauseAsync(string deploymentID, DeploymentPauseRequest deploymentPauseRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<DeploymentUpdateResponse> PostDeploymentPauseAsync(string deploymentID, DeploymentPauseRequest deploymentPauseRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Fermyon.Nomad.Client.ApiResponse<DeploymentUpdateResponse> localVarResponse = await PostDeploymentPauseWithHttpInfoAsync(deploymentID, deploymentPauseRequest, region, _namespace, xNomadToken, idempotencyToken, operationIndex, cancellationToken).ConfigureAwait(false);
+            Fermyon.Nomad.Client.ApiResponse<DeploymentUpdateResponse> localVarResponse = await PostDeploymentPauseWithHttpInfoAsync(deploymentID, deploymentPauseRequest, region, varNamespace, xNomadToken, idempotencyToken, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2043,13 +2043,13 @@ namespace Fermyon.Nomad.Api
         /// <param name="deploymentID">Deployment ID.</param>
         /// <param name="deploymentPauseRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (DeploymentUpdateResponse)</returns>
-        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<DeploymentUpdateResponse>> PostDeploymentPauseWithHttpInfoAsync(string deploymentID, DeploymentPauseRequest deploymentPauseRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<DeploymentUpdateResponse>> PostDeploymentPauseWithHttpInfoAsync(string deploymentID, DeploymentPauseRequest deploymentPauseRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'deploymentID' is set
             if (deploymentID == null)
@@ -2092,9 +2092,9 @@ namespace Fermyon.Nomad.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "region", region));
             }
-            if (_namespace != null)
+            if (varNamespace != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", _namespace));
+                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", varNamespace));
             }
             if (idempotencyToken != null)
             {
@@ -2137,14 +2137,14 @@ namespace Fermyon.Nomad.Api
         /// <param name="deploymentID">Deployment ID.</param>
         /// <param name="deploymentPromoteRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>DeploymentUpdateResponse</returns>
-        public DeploymentUpdateResponse PostDeploymentPromote(string deploymentID, DeploymentPromoteRequest deploymentPromoteRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0)
+        public DeploymentUpdateResponse PostDeploymentPromote(string deploymentID, DeploymentPromoteRequest deploymentPromoteRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0)
         {
-            Fermyon.Nomad.Client.ApiResponse<DeploymentUpdateResponse> localVarResponse = PostDeploymentPromoteWithHttpInfo(deploymentID, deploymentPromoteRequest, region, _namespace, xNomadToken, idempotencyToken);
+            Fermyon.Nomad.Client.ApiResponse<DeploymentUpdateResponse> localVarResponse = PostDeploymentPromoteWithHttpInfo(deploymentID, deploymentPromoteRequest, region, varNamespace, xNomadToken, idempotencyToken);
             return localVarResponse.Data;
         }
 
@@ -2155,12 +2155,12 @@ namespace Fermyon.Nomad.Api
         /// <param name="deploymentID">Deployment ID.</param>
         /// <param name="deploymentPromoteRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of DeploymentUpdateResponse</returns>
-        public Fermyon.Nomad.Client.ApiResponse<DeploymentUpdateResponse> PostDeploymentPromoteWithHttpInfo(string deploymentID, DeploymentPromoteRequest deploymentPromoteRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0)
+        public Fermyon.Nomad.Client.ApiResponse<DeploymentUpdateResponse> PostDeploymentPromoteWithHttpInfo(string deploymentID, DeploymentPromoteRequest deploymentPromoteRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'deploymentID' is set
             if (deploymentID == null)
@@ -2202,9 +2202,9 @@ namespace Fermyon.Nomad.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "region", region));
             }
-            if (_namespace != null)
+            if (varNamespace != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", _namespace));
+                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", varNamespace));
             }
             if (idempotencyToken != null)
             {
@@ -2246,15 +2246,15 @@ namespace Fermyon.Nomad.Api
         /// <param name="deploymentID">Deployment ID.</param>
         /// <param name="deploymentPromoteRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of DeploymentUpdateResponse</returns>
-        public async System.Threading.Tasks.Task<DeploymentUpdateResponse> PostDeploymentPromoteAsync(string deploymentID, DeploymentPromoteRequest deploymentPromoteRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<DeploymentUpdateResponse> PostDeploymentPromoteAsync(string deploymentID, DeploymentPromoteRequest deploymentPromoteRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Fermyon.Nomad.Client.ApiResponse<DeploymentUpdateResponse> localVarResponse = await PostDeploymentPromoteWithHttpInfoAsync(deploymentID, deploymentPromoteRequest, region, _namespace, xNomadToken, idempotencyToken, operationIndex, cancellationToken).ConfigureAwait(false);
+            Fermyon.Nomad.Client.ApiResponse<DeploymentUpdateResponse> localVarResponse = await PostDeploymentPromoteWithHttpInfoAsync(deploymentID, deploymentPromoteRequest, region, varNamespace, xNomadToken, idempotencyToken, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2265,13 +2265,13 @@ namespace Fermyon.Nomad.Api
         /// <param name="deploymentID">Deployment ID.</param>
         /// <param name="deploymentPromoteRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (DeploymentUpdateResponse)</returns>
-        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<DeploymentUpdateResponse>> PostDeploymentPromoteWithHttpInfoAsync(string deploymentID, DeploymentPromoteRequest deploymentPromoteRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<DeploymentUpdateResponse>> PostDeploymentPromoteWithHttpInfoAsync(string deploymentID, DeploymentPromoteRequest deploymentPromoteRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'deploymentID' is set
             if (deploymentID == null)
@@ -2314,9 +2314,9 @@ namespace Fermyon.Nomad.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "region", region));
             }
-            if (_namespace != null)
+            if (varNamespace != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", _namespace));
+                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", varNamespace));
             }
             if (idempotencyToken != null)
             {
@@ -2359,14 +2359,14 @@ namespace Fermyon.Nomad.Api
         /// <param name="deploymentID">Deployment ID.</param>
         /// <param name="deploymentUnblockRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>DeploymentUpdateResponse</returns>
-        public DeploymentUpdateResponse PostDeploymentUnblock(string deploymentID, DeploymentUnblockRequest deploymentUnblockRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0)
+        public DeploymentUpdateResponse PostDeploymentUnblock(string deploymentID, DeploymentUnblockRequest deploymentUnblockRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0)
         {
-            Fermyon.Nomad.Client.ApiResponse<DeploymentUpdateResponse> localVarResponse = PostDeploymentUnblockWithHttpInfo(deploymentID, deploymentUnblockRequest, region, _namespace, xNomadToken, idempotencyToken);
+            Fermyon.Nomad.Client.ApiResponse<DeploymentUpdateResponse> localVarResponse = PostDeploymentUnblockWithHttpInfo(deploymentID, deploymentUnblockRequest, region, varNamespace, xNomadToken, idempotencyToken);
             return localVarResponse.Data;
         }
 
@@ -2377,12 +2377,12 @@ namespace Fermyon.Nomad.Api
         /// <param name="deploymentID">Deployment ID.</param>
         /// <param name="deploymentUnblockRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of DeploymentUpdateResponse</returns>
-        public Fermyon.Nomad.Client.ApiResponse<DeploymentUpdateResponse> PostDeploymentUnblockWithHttpInfo(string deploymentID, DeploymentUnblockRequest deploymentUnblockRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0)
+        public Fermyon.Nomad.Client.ApiResponse<DeploymentUpdateResponse> PostDeploymentUnblockWithHttpInfo(string deploymentID, DeploymentUnblockRequest deploymentUnblockRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'deploymentID' is set
             if (deploymentID == null)
@@ -2424,9 +2424,9 @@ namespace Fermyon.Nomad.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "region", region));
             }
-            if (_namespace != null)
+            if (varNamespace != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", _namespace));
+                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", varNamespace));
             }
             if (idempotencyToken != null)
             {
@@ -2468,15 +2468,15 @@ namespace Fermyon.Nomad.Api
         /// <param name="deploymentID">Deployment ID.</param>
         /// <param name="deploymentUnblockRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of DeploymentUpdateResponse</returns>
-        public async System.Threading.Tasks.Task<DeploymentUpdateResponse> PostDeploymentUnblockAsync(string deploymentID, DeploymentUnblockRequest deploymentUnblockRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<DeploymentUpdateResponse> PostDeploymentUnblockAsync(string deploymentID, DeploymentUnblockRequest deploymentUnblockRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Fermyon.Nomad.Client.ApiResponse<DeploymentUpdateResponse> localVarResponse = await PostDeploymentUnblockWithHttpInfoAsync(deploymentID, deploymentUnblockRequest, region, _namespace, xNomadToken, idempotencyToken, operationIndex, cancellationToken).ConfigureAwait(false);
+            Fermyon.Nomad.Client.ApiResponse<DeploymentUpdateResponse> localVarResponse = await PostDeploymentUnblockWithHttpInfoAsync(deploymentID, deploymentUnblockRequest, region, varNamespace, xNomadToken, idempotencyToken, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2487,13 +2487,13 @@ namespace Fermyon.Nomad.Api
         /// <param name="deploymentID">Deployment ID.</param>
         /// <param name="deploymentUnblockRequest"></param>
         /// <param name="region">Filters results based on the specified region. (optional)</param>
-        /// <param name="_namespace">Filters results based on the specified namespace. (optional)</param>
+        /// <param name="varNamespace">Filters results based on the specified namespace. (optional)</param>
         /// <param name="xNomadToken">A Nomad ACL token. (optional)</param>
         /// <param name="idempotencyToken">Can be used to ensure operations are only run once. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (DeploymentUpdateResponse)</returns>
-        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<DeploymentUpdateResponse>> PostDeploymentUnblockWithHttpInfoAsync(string deploymentID, DeploymentUnblockRequest deploymentUnblockRequest, string? region = default(string?), string? _namespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Fermyon.Nomad.Client.ApiResponse<DeploymentUpdateResponse>> PostDeploymentUnblockWithHttpInfoAsync(string deploymentID, DeploymentUnblockRequest deploymentUnblockRequest, string? region = default(string?), string? varNamespace = default(string?), string? xNomadToken = default(string?), string? idempotencyToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'deploymentID' is set
             if (deploymentID == null)
@@ -2536,9 +2536,9 @@ namespace Fermyon.Nomad.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "region", region));
             }
-            if (_namespace != null)
+            if (varNamespace != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", _namespace));
+                localVarRequestOptions.QueryParameters.Add(Fermyon.Nomad.Client.ClientUtils.ParameterToMultiMap("", "namespace", varNamespace));
             }
             if (idempotencyToken != null)
             {

@@ -39,15 +39,15 @@ namespace Fermyon.Nomad.Model
         /// <param name="createIndex">createIndex.</param>
         /// <param name="jobID">jobID.</param>
         /// <param name="modifyIndex">modifyIndex.</param>
-        /// <param name="_namespace">_namespace.</param>
+        /// <param name="varNamespace">varNamespace.</param>
         /// <param name="summary">summary.</param>
-        public JobSummary(JobChildrenSummary children = default(JobChildrenSummary), int createIndex = default(int), string jobID = default(string), int modifyIndex = default(int), string _namespace = default(string), Dictionary<string, TaskGroupSummary> summary = default(Dictionary<string, TaskGroupSummary>))
+        public JobSummary(JobChildrenSummary children = default(JobChildrenSummary), int createIndex = default(int), string jobID = default(string), int modifyIndex = default(int), string varNamespace = default(string), Dictionary<string, TaskGroupSummary> summary = default(Dictionary<string, TaskGroupSummary>))
         {
             this.Children = children;
             this.CreateIndex = createIndex;
             this.JobID = jobID;
             this.ModifyIndex = modifyIndex;
-            this.Namespace = _namespace;
+            this.VarNamespace = varNamespace;
             this.Summary = summary;
         }
 
@@ -76,10 +76,10 @@ namespace Fermyon.Nomad.Model
         public int ModifyIndex { get; set; }
 
         /// <summary>
-        /// Gets or Sets Namespace
+        /// Gets or Sets VarNamespace
         /// </summary>
         [DataMember(Name = "Namespace", EmitDefaultValue = false)]
-        public string Namespace { get; set; }
+        public string VarNamespace { get; set; }
 
         /// <summary>
         /// Gets or Sets Summary
@@ -99,7 +99,7 @@ namespace Fermyon.Nomad.Model
             sb.Append("  CreateIndex: ").Append(CreateIndex).Append("\n");
             sb.Append("  JobID: ").Append(JobID).Append("\n");
             sb.Append("  ModifyIndex: ").Append(ModifyIndex).Append("\n");
-            sb.Append("  Namespace: ").Append(Namespace).Append("\n");
+            sb.Append("  VarNamespace: ").Append(VarNamespace).Append("\n");
             sb.Append("  Summary: ").Append(Summary).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -155,9 +155,9 @@ namespace Fermyon.Nomad.Model
                     this.ModifyIndex.Equals(input.ModifyIndex)
                 ) && 
                 (
-                    this.Namespace == input.Namespace ||
-                    (this.Namespace != null &&
-                    this.Namespace.Equals(input.Namespace))
+                    this.VarNamespace == input.VarNamespace ||
+                    (this.VarNamespace != null &&
+                    this.VarNamespace.Equals(input.VarNamespace))
                 ) && 
                 (
                     this.Summary == input.Summary ||
@@ -186,9 +186,9 @@ namespace Fermyon.Nomad.Model
                     hashCode = (hashCode * 59) + this.JobID.GetHashCode();
                 }
                 hashCode = (hashCode * 59) + this.ModifyIndex.GetHashCode();
-                if (this.Namespace != null)
+                if (this.VarNamespace != null)
                 {
-                    hashCode = (hashCode * 59) + this.Namespace.GetHashCode();
+                    hashCode = (hashCode * 59) + this.VarNamespace.GetHashCode();
                 }
                 if (this.Summary != null)
                 {
@@ -203,7 +203,7 @@ namespace Fermyon.Nomad.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // CreateIndex (int) maximum
             if (this.CreateIndex > (int)384)

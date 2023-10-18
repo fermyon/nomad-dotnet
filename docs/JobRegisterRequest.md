@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **EvalPriority** | **int** |  | [optional] 
 **Job** | [**Job**](Job.md) |  | [optional] 
 **JobModifyIndex** | **int** |  | [optional] 
-**Namespace** | **string** |  | [optional] 
+**VarNamespace** | **string** |  | [optional] 
 **PolicyOverride** | **bool** |  | [optional] 
 **PreserveCounts** | **bool** |  | [optional] 
 **Region** | **string** |  | [optional] 

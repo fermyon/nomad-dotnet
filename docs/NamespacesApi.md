@@ -10,9 +10,9 @@ All URIs are relative to *https://127.0.0.1:4646/v1*
 | [**GetNamespaces**](NamespacesApi.md#getnamespaces) | **GET** /namespaces |  |
 | [**PostNamespace**](NamespacesApi.md#postnamespace) | **POST** /namespace/{namespaceName} |  |
 
-<a name="createnamespace"></a>
+<a id="createnamespace"></a>
 # **CreateNamespace**
-> void CreateNamespace (string? region = null, string? _namespace = null, string? xNomadToken = null, string? idempotencyToken = null)
+> void CreateNamespace (string? region = null, string? varNamespace = null, string? xNomadToken = null, string? idempotencyToken = null)
 
 
 
@@ -39,13 +39,13 @@ namespace Example
 
             var apiInstance = new NamespacesApi(config);
             var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var varNamespace = "varNamespace_example";  // string? | Filters results based on the specified namespace. (optional) 
             var xNomadToken = "xNomadToken_example";  // string? | A Nomad ACL token. (optional) 
             var idempotencyToken = "idempotencyToken_example";  // string? | Can be used to ensure operations are only run once. (optional) 
 
             try
             {
-                apiInstance.CreateNamespace(region, _namespace, xNomadToken, idempotencyToken);
+                apiInstance.CreateNamespace(region, varNamespace, xNomadToken, idempotencyToken);
             }
             catch (ApiException  e)
             {
@@ -64,7 +64,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    apiInstance.CreateNamespaceWithHttpInfo(region, _namespace, xNomadToken, idempotencyToken);
+    apiInstance.CreateNamespaceWithHttpInfo(region, varNamespace, xNomadToken, idempotencyToken);
 }
 catch (ApiException e)
 {
@@ -79,7 +79,7 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **region** | **string?** | Filters results based on the specified region. | [optional]  |
-| **_namespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
+| **varNamespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
 | **xNomadToken** | **string?** | A Nomad ACL token. | [optional]  |
 | **idempotencyToken** | **string?** | Can be used to ensure operations are only run once. | [optional]  |
 
@@ -108,9 +108,9 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="deletenamespace"></a>
+<a id="deletenamespace"></a>
 # **DeleteNamespace**
-> void DeleteNamespace (string namespaceName, string? region = null, string? _namespace = null, string? xNomadToken = null, string? idempotencyToken = null)
+> void DeleteNamespace (string namespaceName, string? region = null, string? varNamespace = null, string? xNomadToken = null, string? idempotencyToken = null)
 
 
 
@@ -138,13 +138,13 @@ namespace Example
             var apiInstance = new NamespacesApi(config);
             var namespaceName = "namespaceName_example";  // string | The namespace identifier.
             var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var varNamespace = "varNamespace_example";  // string? | Filters results based on the specified namespace. (optional) 
             var xNomadToken = "xNomadToken_example";  // string? | A Nomad ACL token. (optional) 
             var idempotencyToken = "idempotencyToken_example";  // string? | Can be used to ensure operations are only run once. (optional) 
 
             try
             {
-                apiInstance.DeleteNamespace(namespaceName, region, _namespace, xNomadToken, idempotencyToken);
+                apiInstance.DeleteNamespace(namespaceName, region, varNamespace, xNomadToken, idempotencyToken);
             }
             catch (ApiException  e)
             {
@@ -163,7 +163,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    apiInstance.DeleteNamespaceWithHttpInfo(namespaceName, region, _namespace, xNomadToken, idempotencyToken);
+    apiInstance.DeleteNamespaceWithHttpInfo(namespaceName, region, varNamespace, xNomadToken, idempotencyToken);
 }
 catch (ApiException e)
 {
@@ -179,7 +179,7 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **namespaceName** | **string** | The namespace identifier. |  |
 | **region** | **string?** | Filters results based on the specified region. | [optional]  |
-| **_namespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
+| **varNamespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
 | **xNomadToken** | **string?** | A Nomad ACL token. | [optional]  |
 | **idempotencyToken** | **string?** | Can be used to ensure operations are only run once. | [optional]  |
 
@@ -208,9 +208,9 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="getnamespace"></a>
+<a id="getnamespace"></a>
 # **GetNamespace**
-> Namespace GetNamespace (string namespaceName, string? region = null, string? _namespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null)
+> Namespace GetNamespace (string namespaceName, string? region = null, string? varNamespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null)
 
 
 
@@ -238,7 +238,7 @@ namespace Example
             var apiInstance = new NamespacesApi(config);
             var namespaceName = "namespaceName_example";  // string | The namespace identifier.
             var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var varNamespace = "varNamespace_example";  // string? | Filters results based on the specified namespace. (optional) 
             var index = 56;  // int? | If set, wait until query exceeds given index. Must be provided with WaitParam. (optional) 
             var wait = "wait_example";  // string? | Provided with IndexParam to wait for change. (optional) 
             var stale = "stale_example";  // string? | If present, results will include stale reads. (optional) 
@@ -249,7 +249,7 @@ namespace Example
 
             try
             {
-                Namespace result = apiInstance.GetNamespace(namespaceName, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+                Namespace result = apiInstance.GetNamespace(namespaceName, region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -269,7 +269,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Namespace> response = apiInstance.GetNamespaceWithHttpInfo(namespaceName, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+    ApiResponse<Namespace> response = apiInstance.GetNamespaceWithHttpInfo(namespaceName, region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -288,7 +288,7 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **namespaceName** | **string** | The namespace identifier. |  |
 | **region** | **string?** | Filters results based on the specified region. | [optional]  |
-| **_namespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
+| **varNamespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
 | **index** | **int?** | If set, wait until query exceeds given index. Must be provided with WaitParam. | [optional]  |
 | **wait** | **string?** | Provided with IndexParam to wait for change. | [optional]  |
 | **stale** | **string?** | If present, results will include stale reads. | [optional]  |
@@ -322,9 +322,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="getnamespaces"></a>
+<a id="getnamespaces"></a>
 # **GetNamespaces**
-> List&lt;Namespace&gt; GetNamespaces (string? region = null, string? _namespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null)
+> List&lt;Namespace&gt; GetNamespaces (string? region = null, string? varNamespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null)
 
 
 
@@ -351,7 +351,7 @@ namespace Example
 
             var apiInstance = new NamespacesApi(config);
             var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var varNamespace = "varNamespace_example";  // string? | Filters results based on the specified namespace. (optional) 
             var index = 56;  // int? | If set, wait until query exceeds given index. Must be provided with WaitParam. (optional) 
             var wait = "wait_example";  // string? | Provided with IndexParam to wait for change. (optional) 
             var stale = "stale_example";  // string? | If present, results will include stale reads. (optional) 
@@ -362,7 +362,7 @@ namespace Example
 
             try
             {
-                List<Namespace> result = apiInstance.GetNamespaces(region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+                List<Namespace> result = apiInstance.GetNamespaces(region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -382,7 +382,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<List<Namespace>> response = apiInstance.GetNamespacesWithHttpInfo(region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+    ApiResponse<List<Namespace>> response = apiInstance.GetNamespacesWithHttpInfo(region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -400,7 +400,7 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **region** | **string?** | Filters results based on the specified region. | [optional]  |
-| **_namespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
+| **varNamespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
 | **index** | **int?** | If set, wait until query exceeds given index. Must be provided with WaitParam. | [optional]  |
 | **wait** | **string?** | Provided with IndexParam to wait for change. | [optional]  |
 | **stale** | **string?** | If present, results will include stale reads. | [optional]  |
@@ -434,9 +434,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="postnamespace"></a>
+<a id="postnamespace"></a>
 # **PostNamespace**
-> void PostNamespace (string namespaceName, Namespace _namespace2, string? region = null, string? _namespace = null, string? xNomadToken = null, string? idempotencyToken = null)
+> void PostNamespace (string namespaceName, Namespace varNamespace2, string? region = null, string? varNamespace = null, string? xNomadToken = null, string? idempotencyToken = null)
 
 
 
@@ -463,15 +463,15 @@ namespace Example
 
             var apiInstance = new NamespacesApi(config);
             var namespaceName = "namespaceName_example";  // string | The namespace identifier.
-            var _namespace2 = new Namespace(); // Namespace | 
+            var varNamespace2 = new Namespace(); // Namespace | 
             var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var varNamespace = "varNamespace_example";  // string? | Filters results based on the specified namespace. (optional) 
             var xNomadToken = "xNomadToken_example";  // string? | A Nomad ACL token. (optional) 
             var idempotencyToken = "idempotencyToken_example";  // string? | Can be used to ensure operations are only run once. (optional) 
 
             try
             {
-                apiInstance.PostNamespace(namespaceName, _namespace2, region, _namespace, xNomadToken, idempotencyToken);
+                apiInstance.PostNamespace(namespaceName, varNamespace2, region, varNamespace, xNomadToken, idempotencyToken);
             }
             catch (ApiException  e)
             {
@@ -490,7 +490,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    apiInstance.PostNamespaceWithHttpInfo(namespaceName, _namespace2, region, _namespace, xNomadToken, idempotencyToken);
+    apiInstance.PostNamespaceWithHttpInfo(namespaceName, varNamespace2, region, varNamespace, xNomadToken, idempotencyToken);
 }
 catch (ApiException e)
 {
@@ -505,9 +505,9 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **namespaceName** | **string** | The namespace identifier. |  |
-| **_namespace2** | [**Namespace**](Namespace.md) |  |  |
+| **varNamespace2** | [**Namespace**](Namespace.md) |  |  |
 | **region** | **string?** | Filters results based on the specified region. | [optional]  |
-| **_namespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
+| **varNamespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
 | **xNomadToken** | **string?** | A Nomad ACL token. | [optional]  |
 | **idempotencyToken** | **string?** | Can be used to ensure operations are only run once. | [optional]  |
 

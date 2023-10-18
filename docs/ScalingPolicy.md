@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **Max** | **long** |  | [optional] 
 **Min** | **long** |  | [optional] 
 **ModifyIndex** | **int** |  | [optional] 
-**Namespace** | **string** |  | [optional] 
+**VarNamespace** | **string** |  | [optional] 
 **Policy** | **Dictionary&lt;string, Object&gt;** |  | [optional] 
 **Target** | **Dictionary&lt;string, string&gt;** |  | [optional] 
 **Type** | **string** |  | [optional] 

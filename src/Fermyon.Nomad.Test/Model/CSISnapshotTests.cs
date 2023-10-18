@@ -15,7 +15,6 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Collections.Generic;
-using Fermyon.Nomad.Api;
 using Fermyon.Nomad.Model;
 using Fermyon.Nomad.Client;
 using System.Reflection;
@@ -56,7 +55,6 @@ namespace Fermyon.Nomad.Test.Model
             //Assert.IsType<CSISnapshot>(instance);
         }
 
-
         /// <summary>
         /// Test the property 'CreateTime'
         /// </summary>
@@ -65,6 +63,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'CreateTime'
         }
+
         /// <summary>
         /// Test the property 'ExternalSourceVolumeID'
         /// </summary>
@@ -73,6 +72,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'ExternalSourceVolumeID'
         }
+
         /// <summary>
         /// Test the property 'ID'
         /// </summary>
@@ -81,6 +81,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'ID'
         }
+
         /// <summary>
         /// Test the property 'IsReady'
         /// </summary>
@@ -89,6 +90,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'IsReady'
         }
+
         /// <summary>
         /// Test the property 'Name'
         /// </summary>
@@ -97,6 +99,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Name'
         }
+
         /// <summary>
         /// Test the property 'Parameters'
         /// </summary>
@@ -105,6 +108,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Parameters'
         }
+
         /// <summary>
         /// Test the property 'PluginID'
         /// </summary>
@@ -113,6 +117,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'PluginID'
         }
+
         /// <summary>
         /// Test the property 'Secrets'
         /// </summary>
@@ -121,6 +126,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Secrets'
         }
+
         /// <summary>
         /// Test the property 'SizeBytes'
         /// </summary>
@@ -129,6 +135,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'SizeBytes'
         }
+
         /// <summary>
         /// Test the property 'SourceVolumeID'
         /// </summary>
@@ -137,7 +144,5 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'SourceVolumeID'
         }
-
     }
-
 }

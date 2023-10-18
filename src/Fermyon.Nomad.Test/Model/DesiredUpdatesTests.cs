@@ -15,7 +15,6 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Collections.Generic;
-using Fermyon.Nomad.Api;
 using Fermyon.Nomad.Model;
 using Fermyon.Nomad.Client;
 using System.Reflection;
@@ -56,7 +55,6 @@ namespace Fermyon.Nomad.Test.Model
             //Assert.IsType<DesiredUpdates>(instance);
         }
 
-
         /// <summary>
         /// Test the property 'Canary'
         /// </summary>
@@ -65,6 +63,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Canary'
         }
+
         /// <summary>
         /// Test the property 'DestructiveUpdate'
         /// </summary>
@@ -73,6 +72,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'DestructiveUpdate'
         }
+
         /// <summary>
         /// Test the property 'Ignore'
         /// </summary>
@@ -81,6 +81,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Ignore'
         }
+
         /// <summary>
         /// Test the property 'InPlaceUpdate'
         /// </summary>
@@ -89,6 +90,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'InPlaceUpdate'
         }
+
         /// <summary>
         /// Test the property 'Migrate'
         /// </summary>
@@ -97,6 +99,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Migrate'
         }
+
         /// <summary>
         /// Test the property 'Place'
         /// </summary>
@@ -105,6 +108,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Place'
         }
+
         /// <summary>
         /// Test the property 'Preemptions'
         /// </summary>
@@ -113,6 +117,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Preemptions'
         }
+
         /// <summary>
         /// Test the property 'Stop'
         /// </summary>
@@ -121,7 +126,5 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Stop'
         }
-
     }
-
 }

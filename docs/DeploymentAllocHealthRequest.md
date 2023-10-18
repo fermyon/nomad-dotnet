@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **DeploymentID** | **string** |  | [optional] 
 **HealthyAllocationIDs** | **List&lt;string&gt;** |  | [optional] 
-**Namespace** | **string** |  | [optional] 
+**VarNamespace** | **string** |  | [optional] 
 **Region** | **string** |  | [optional] 
 **SecretID** | **string** |  | [optional] 
 **UnhealthyAllocationIDs** | **List&lt;string&gt;** |  | [optional] 

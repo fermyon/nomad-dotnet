@@ -15,7 +15,6 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Collections.Generic;
-using Fermyon.Nomad.Api;
 using Fermyon.Nomad.Model;
 using Fermyon.Nomad.Client;
 using System.Reflection;
@@ -56,7 +55,6 @@ namespace Fermyon.Nomad.Test.Model
             //Assert.IsType<NodeReservedDiskResources>(instance);
         }
 
-
         /// <summary>
         /// Test the property 'DiskMB'
         /// </summary>
@@ -65,7 +63,5 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'DiskMB'
         }
-
     }
-
 }

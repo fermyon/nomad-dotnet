@@ -17,9 +17,9 @@ All URIs are relative to *https://127.0.0.1:4646/v1*
 | [**PostACLTokenOnetime**](ACLApi.md#postacltokenonetime) | **POST** /acl/token/onetime |  |
 | [**PostACLTokenOnetimeExchange**](ACLApi.md#postacltokenonetimeexchange) | **POST** /acl/token/onetime/exchange |  |
 
-<a name="deleteaclpolicy"></a>
+<a id="deleteaclpolicy"></a>
 # **DeleteACLPolicy**
-> void DeleteACLPolicy (string policyName, string? region = null, string? _namespace = null, string? xNomadToken = null, string? idempotencyToken = null)
+> void DeleteACLPolicy (string policyName, string? region = null, string? varNamespace = null, string? xNomadToken = null, string? idempotencyToken = null)
 
 
 
@@ -47,13 +47,13 @@ namespace Example
             var apiInstance = new ACLApi(config);
             var policyName = "policyName_example";  // string | The ACL policy name.
             var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var varNamespace = "varNamespace_example";  // string? | Filters results based on the specified namespace. (optional) 
             var xNomadToken = "xNomadToken_example";  // string? | A Nomad ACL token. (optional) 
             var idempotencyToken = "idempotencyToken_example";  // string? | Can be used to ensure operations are only run once. (optional) 
 
             try
             {
-                apiInstance.DeleteACLPolicy(policyName, region, _namespace, xNomadToken, idempotencyToken);
+                apiInstance.DeleteACLPolicy(policyName, region, varNamespace, xNomadToken, idempotencyToken);
             }
             catch (ApiException  e)
             {
@@ -72,7 +72,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    apiInstance.DeleteACLPolicyWithHttpInfo(policyName, region, _namespace, xNomadToken, idempotencyToken);
+    apiInstance.DeleteACLPolicyWithHttpInfo(policyName, region, varNamespace, xNomadToken, idempotencyToken);
 }
 catch (ApiException e)
 {
@@ -88,7 +88,7 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **policyName** | **string** | The ACL policy name. |  |
 | **region** | **string?** | Filters results based on the specified region. | [optional]  |
-| **_namespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
+| **varNamespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
 | **xNomadToken** | **string?** | A Nomad ACL token. | [optional]  |
 | **idempotencyToken** | **string?** | Can be used to ensure operations are only run once. | [optional]  |
 
@@ -117,9 +117,9 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="deleteacltoken"></a>
+<a id="deleteacltoken"></a>
 # **DeleteACLToken**
-> void DeleteACLToken (string tokenAccessor, string? region = null, string? _namespace = null, string? xNomadToken = null, string? idempotencyToken = null)
+> void DeleteACLToken (string tokenAccessor, string? region = null, string? varNamespace = null, string? xNomadToken = null, string? idempotencyToken = null)
 
 
 
@@ -147,13 +147,13 @@ namespace Example
             var apiInstance = new ACLApi(config);
             var tokenAccessor = "tokenAccessor_example";  // string | The token accessor ID.
             var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var varNamespace = "varNamespace_example";  // string? | Filters results based on the specified namespace. (optional) 
             var xNomadToken = "xNomadToken_example";  // string? | A Nomad ACL token. (optional) 
             var idempotencyToken = "idempotencyToken_example";  // string? | Can be used to ensure operations are only run once. (optional) 
 
             try
             {
-                apiInstance.DeleteACLToken(tokenAccessor, region, _namespace, xNomadToken, idempotencyToken);
+                apiInstance.DeleteACLToken(tokenAccessor, region, varNamespace, xNomadToken, idempotencyToken);
             }
             catch (ApiException  e)
             {
@@ -172,7 +172,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    apiInstance.DeleteACLTokenWithHttpInfo(tokenAccessor, region, _namespace, xNomadToken, idempotencyToken);
+    apiInstance.DeleteACLTokenWithHttpInfo(tokenAccessor, region, varNamespace, xNomadToken, idempotencyToken);
 }
 catch (ApiException e)
 {
@@ -188,7 +188,7 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **tokenAccessor** | **string** | The token accessor ID. |  |
 | **region** | **string?** | Filters results based on the specified region. | [optional]  |
-| **_namespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
+| **varNamespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
 | **xNomadToken** | **string?** | A Nomad ACL token. | [optional]  |
 | **idempotencyToken** | **string?** | Can be used to ensure operations are only run once. | [optional]  |
 
@@ -217,9 +217,9 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="getaclpolicies"></a>
+<a id="getaclpolicies"></a>
 # **GetACLPolicies**
-> List&lt;ACLPolicyListStub&gt; GetACLPolicies (string? region = null, string? _namespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null)
+> List&lt;ACLPolicyListStub&gt; GetACLPolicies (string? region = null, string? varNamespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null)
 
 
 
@@ -246,7 +246,7 @@ namespace Example
 
             var apiInstance = new ACLApi(config);
             var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var varNamespace = "varNamespace_example";  // string? | Filters results based on the specified namespace. (optional) 
             var index = 56;  // int? | If set, wait until query exceeds given index. Must be provided with WaitParam. (optional) 
             var wait = "wait_example";  // string? | Provided with IndexParam to wait for change. (optional) 
             var stale = "stale_example";  // string? | If present, results will include stale reads. (optional) 
@@ -257,7 +257,7 @@ namespace Example
 
             try
             {
-                List<ACLPolicyListStub> result = apiInstance.GetACLPolicies(region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+                List<ACLPolicyListStub> result = apiInstance.GetACLPolicies(region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -277,7 +277,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<List<ACLPolicyListStub>> response = apiInstance.GetACLPoliciesWithHttpInfo(region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+    ApiResponse<List<ACLPolicyListStub>> response = apiInstance.GetACLPoliciesWithHttpInfo(region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -295,7 +295,7 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **region** | **string?** | Filters results based on the specified region. | [optional]  |
-| **_namespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
+| **varNamespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
 | **index** | **int?** | If set, wait until query exceeds given index. Must be provided with WaitParam. | [optional]  |
 | **wait** | **string?** | Provided with IndexParam to wait for change. | [optional]  |
 | **stale** | **string?** | If present, results will include stale reads. | [optional]  |
@@ -329,9 +329,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="getaclpolicy"></a>
+<a id="getaclpolicy"></a>
 # **GetACLPolicy**
-> ACLPolicy GetACLPolicy (string policyName, string? region = null, string? _namespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null)
+> ACLPolicy GetACLPolicy (string policyName, string? region = null, string? varNamespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null)
 
 
 
@@ -359,7 +359,7 @@ namespace Example
             var apiInstance = new ACLApi(config);
             var policyName = "policyName_example";  // string | The ACL policy name.
             var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var varNamespace = "varNamespace_example";  // string? | Filters results based on the specified namespace. (optional) 
             var index = 56;  // int? | If set, wait until query exceeds given index. Must be provided with WaitParam. (optional) 
             var wait = "wait_example";  // string? | Provided with IndexParam to wait for change. (optional) 
             var stale = "stale_example";  // string? | If present, results will include stale reads. (optional) 
@@ -370,7 +370,7 @@ namespace Example
 
             try
             {
-                ACLPolicy result = apiInstance.GetACLPolicy(policyName, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+                ACLPolicy result = apiInstance.GetACLPolicy(policyName, region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -390,7 +390,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<ACLPolicy> response = apiInstance.GetACLPolicyWithHttpInfo(policyName, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+    ApiResponse<ACLPolicy> response = apiInstance.GetACLPolicyWithHttpInfo(policyName, region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -409,7 +409,7 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **policyName** | **string** | The ACL policy name. |  |
 | **region** | **string?** | Filters results based on the specified region. | [optional]  |
-| **_namespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
+| **varNamespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
 | **index** | **int?** | If set, wait until query exceeds given index. Must be provided with WaitParam. | [optional]  |
 | **wait** | **string?** | Provided with IndexParam to wait for change. | [optional]  |
 | **stale** | **string?** | If present, results will include stale reads. | [optional]  |
@@ -443,9 +443,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="getacltoken"></a>
+<a id="getacltoken"></a>
 # **GetACLToken**
-> ACLToken GetACLToken (string tokenAccessor, string? region = null, string? _namespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null)
+> ACLToken GetACLToken (string tokenAccessor, string? region = null, string? varNamespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null)
 
 
 
@@ -473,7 +473,7 @@ namespace Example
             var apiInstance = new ACLApi(config);
             var tokenAccessor = "tokenAccessor_example";  // string | The token accessor ID.
             var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var varNamespace = "varNamespace_example";  // string? | Filters results based on the specified namespace. (optional) 
             var index = 56;  // int? | If set, wait until query exceeds given index. Must be provided with WaitParam. (optional) 
             var wait = "wait_example";  // string? | Provided with IndexParam to wait for change. (optional) 
             var stale = "stale_example";  // string? | If present, results will include stale reads. (optional) 
@@ -484,7 +484,7 @@ namespace Example
 
             try
             {
-                ACLToken result = apiInstance.GetACLToken(tokenAccessor, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+                ACLToken result = apiInstance.GetACLToken(tokenAccessor, region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -504,7 +504,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<ACLToken> response = apiInstance.GetACLTokenWithHttpInfo(tokenAccessor, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+    ApiResponse<ACLToken> response = apiInstance.GetACLTokenWithHttpInfo(tokenAccessor, region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -523,7 +523,7 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **tokenAccessor** | **string** | The token accessor ID. |  |
 | **region** | **string?** | Filters results based on the specified region. | [optional]  |
-| **_namespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
+| **varNamespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
 | **index** | **int?** | If set, wait until query exceeds given index. Must be provided with WaitParam. | [optional]  |
 | **wait** | **string?** | Provided with IndexParam to wait for change. | [optional]  |
 | **stale** | **string?** | If present, results will include stale reads. | [optional]  |
@@ -557,9 +557,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="getacltokenself"></a>
+<a id="getacltokenself"></a>
 # **GetACLTokenSelf**
-> ACLToken GetACLTokenSelf (string? region = null, string? _namespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null)
+> ACLToken GetACLTokenSelf (string? region = null, string? varNamespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null)
 
 
 
@@ -586,7 +586,7 @@ namespace Example
 
             var apiInstance = new ACLApi(config);
             var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var varNamespace = "varNamespace_example";  // string? | Filters results based on the specified namespace. (optional) 
             var index = 56;  // int? | If set, wait until query exceeds given index. Must be provided with WaitParam. (optional) 
             var wait = "wait_example";  // string? | Provided with IndexParam to wait for change. (optional) 
             var stale = "stale_example";  // string? | If present, results will include stale reads. (optional) 
@@ -597,7 +597,7 @@ namespace Example
 
             try
             {
-                ACLToken result = apiInstance.GetACLTokenSelf(region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+                ACLToken result = apiInstance.GetACLTokenSelf(region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -617,7 +617,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<ACLToken> response = apiInstance.GetACLTokenSelfWithHttpInfo(region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+    ApiResponse<ACLToken> response = apiInstance.GetACLTokenSelfWithHttpInfo(region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -635,7 +635,7 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **region** | **string?** | Filters results based on the specified region. | [optional]  |
-| **_namespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
+| **varNamespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
 | **index** | **int?** | If set, wait until query exceeds given index. Must be provided with WaitParam. | [optional]  |
 | **wait** | **string?** | Provided with IndexParam to wait for change. | [optional]  |
 | **stale** | **string?** | If present, results will include stale reads. | [optional]  |
@@ -669,9 +669,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="getacltokens"></a>
+<a id="getacltokens"></a>
 # **GetACLTokens**
-> List&lt;ACLTokenListStub&gt; GetACLTokens (string? region = null, string? _namespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null)
+> List&lt;ACLTokenListStub&gt; GetACLTokens (string? region = null, string? varNamespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null)
 
 
 
@@ -698,7 +698,7 @@ namespace Example
 
             var apiInstance = new ACLApi(config);
             var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var varNamespace = "varNamespace_example";  // string? | Filters results based on the specified namespace. (optional) 
             var index = 56;  // int? | If set, wait until query exceeds given index. Must be provided with WaitParam. (optional) 
             var wait = "wait_example";  // string? | Provided with IndexParam to wait for change. (optional) 
             var stale = "stale_example";  // string? | If present, results will include stale reads. (optional) 
@@ -709,7 +709,7 @@ namespace Example
 
             try
             {
-                List<ACLTokenListStub> result = apiInstance.GetACLTokens(region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+                List<ACLTokenListStub> result = apiInstance.GetACLTokens(region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -729,7 +729,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<List<ACLTokenListStub>> response = apiInstance.GetACLTokensWithHttpInfo(region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+    ApiResponse<List<ACLTokenListStub>> response = apiInstance.GetACLTokensWithHttpInfo(region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -747,7 +747,7 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **region** | **string?** | Filters results based on the specified region. | [optional]  |
-| **_namespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
+| **varNamespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
 | **index** | **int?** | If set, wait until query exceeds given index. Must be provided with WaitParam. | [optional]  |
 | **wait** | **string?** | Provided with IndexParam to wait for change. | [optional]  |
 | **stale** | **string?** | If present, results will include stale reads. | [optional]  |
@@ -781,9 +781,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="postaclbootstrap"></a>
+<a id="postaclbootstrap"></a>
 # **PostACLBootstrap**
-> ACLToken PostACLBootstrap (string? region = null, string? _namespace = null, string? xNomadToken = null, string? idempotencyToken = null)
+> ACLToken PostACLBootstrap (string? region = null, string? varNamespace = null, string? xNomadToken = null, string? idempotencyToken = null)
 
 
 
@@ -810,13 +810,13 @@ namespace Example
 
             var apiInstance = new ACLApi(config);
             var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var varNamespace = "varNamespace_example";  // string? | Filters results based on the specified namespace. (optional) 
             var xNomadToken = "xNomadToken_example";  // string? | A Nomad ACL token. (optional) 
             var idempotencyToken = "idempotencyToken_example";  // string? | Can be used to ensure operations are only run once. (optional) 
 
             try
             {
-                ACLToken result = apiInstance.PostACLBootstrap(region, _namespace, xNomadToken, idempotencyToken);
+                ACLToken result = apiInstance.PostACLBootstrap(region, varNamespace, xNomadToken, idempotencyToken);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -836,7 +836,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<ACLToken> response = apiInstance.PostACLBootstrapWithHttpInfo(region, _namespace, xNomadToken, idempotencyToken);
+    ApiResponse<ACLToken> response = apiInstance.PostACLBootstrapWithHttpInfo(region, varNamespace, xNomadToken, idempotencyToken);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -854,7 +854,7 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **region** | **string?** | Filters results based on the specified region. | [optional]  |
-| **_namespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
+| **varNamespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
 | **xNomadToken** | **string?** | A Nomad ACL token. | [optional]  |
 | **idempotencyToken** | **string?** | Can be used to ensure operations are only run once. | [optional]  |
 
@@ -883,9 +883,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="postaclpolicy"></a>
+<a id="postaclpolicy"></a>
 # **PostACLPolicy**
-> void PostACLPolicy (string policyName, ACLPolicy aCLPolicy, string? region = null, string? _namespace = null, string? xNomadToken = null, string? idempotencyToken = null)
+> void PostACLPolicy (string policyName, ACLPolicy aCLPolicy, string? region = null, string? varNamespace = null, string? xNomadToken = null, string? idempotencyToken = null)
 
 
 
@@ -914,13 +914,13 @@ namespace Example
             var policyName = "policyName_example";  // string | The ACL policy name.
             var aCLPolicy = new ACLPolicy(); // ACLPolicy | 
             var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var varNamespace = "varNamespace_example";  // string? | Filters results based on the specified namespace. (optional) 
             var xNomadToken = "xNomadToken_example";  // string? | A Nomad ACL token. (optional) 
             var idempotencyToken = "idempotencyToken_example";  // string? | Can be used to ensure operations are only run once. (optional) 
 
             try
             {
-                apiInstance.PostACLPolicy(policyName, aCLPolicy, region, _namespace, xNomadToken, idempotencyToken);
+                apiInstance.PostACLPolicy(policyName, aCLPolicy, region, varNamespace, xNomadToken, idempotencyToken);
             }
             catch (ApiException  e)
             {
@@ -939,7 +939,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    apiInstance.PostACLPolicyWithHttpInfo(policyName, aCLPolicy, region, _namespace, xNomadToken, idempotencyToken);
+    apiInstance.PostACLPolicyWithHttpInfo(policyName, aCLPolicy, region, varNamespace, xNomadToken, idempotencyToken);
 }
 catch (ApiException e)
 {
@@ -956,7 +956,7 @@ catch (ApiException e)
 | **policyName** | **string** | The ACL policy name. |  |
 | **aCLPolicy** | [**ACLPolicy**](ACLPolicy.md) |  |  |
 | **region** | **string?** | Filters results based on the specified region. | [optional]  |
-| **_namespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
+| **varNamespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
 | **xNomadToken** | **string?** | A Nomad ACL token. | [optional]  |
 | **idempotencyToken** | **string?** | Can be used to ensure operations are only run once. | [optional]  |
 
@@ -985,9 +985,9 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="postacltoken"></a>
+<a id="postacltoken"></a>
 # **PostACLToken**
-> ACLToken PostACLToken (string tokenAccessor, ACLToken aCLToken, string? region = null, string? _namespace = null, string? xNomadToken = null, string? idempotencyToken = null)
+> ACLToken PostACLToken (string tokenAccessor, ACLToken aCLToken, string? region = null, string? varNamespace = null, string? xNomadToken = null, string? idempotencyToken = null)
 
 
 
@@ -1016,13 +1016,13 @@ namespace Example
             var tokenAccessor = "tokenAccessor_example";  // string | The token accessor ID.
             var aCLToken = new ACLToken(); // ACLToken | 
             var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var varNamespace = "varNamespace_example";  // string? | Filters results based on the specified namespace. (optional) 
             var xNomadToken = "xNomadToken_example";  // string? | A Nomad ACL token. (optional) 
             var idempotencyToken = "idempotencyToken_example";  // string? | Can be used to ensure operations are only run once. (optional) 
 
             try
             {
-                ACLToken result = apiInstance.PostACLToken(tokenAccessor, aCLToken, region, _namespace, xNomadToken, idempotencyToken);
+                ACLToken result = apiInstance.PostACLToken(tokenAccessor, aCLToken, region, varNamespace, xNomadToken, idempotencyToken);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1042,7 +1042,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<ACLToken> response = apiInstance.PostACLTokenWithHttpInfo(tokenAccessor, aCLToken, region, _namespace, xNomadToken, idempotencyToken);
+    ApiResponse<ACLToken> response = apiInstance.PostACLTokenWithHttpInfo(tokenAccessor, aCLToken, region, varNamespace, xNomadToken, idempotencyToken);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1062,7 +1062,7 @@ catch (ApiException e)
 | **tokenAccessor** | **string** | The token accessor ID. |  |
 | **aCLToken** | [**ACLToken**](ACLToken.md) |  |  |
 | **region** | **string?** | Filters results based on the specified region. | [optional]  |
-| **_namespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
+| **varNamespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
 | **xNomadToken** | **string?** | A Nomad ACL token. | [optional]  |
 | **idempotencyToken** | **string?** | Can be used to ensure operations are only run once. | [optional]  |
 
@@ -1091,9 +1091,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="postacltokenonetime"></a>
+<a id="postacltokenonetime"></a>
 # **PostACLTokenOnetime**
-> OneTimeToken PostACLTokenOnetime (string? region = null, string? _namespace = null, string? xNomadToken = null, string? idempotencyToken = null)
+> OneTimeToken PostACLTokenOnetime (string? region = null, string? varNamespace = null, string? xNomadToken = null, string? idempotencyToken = null)
 
 
 
@@ -1120,13 +1120,13 @@ namespace Example
 
             var apiInstance = new ACLApi(config);
             var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var varNamespace = "varNamespace_example";  // string? | Filters results based on the specified namespace. (optional) 
             var xNomadToken = "xNomadToken_example";  // string? | A Nomad ACL token. (optional) 
             var idempotencyToken = "idempotencyToken_example";  // string? | Can be used to ensure operations are only run once. (optional) 
 
             try
             {
-                OneTimeToken result = apiInstance.PostACLTokenOnetime(region, _namespace, xNomadToken, idempotencyToken);
+                OneTimeToken result = apiInstance.PostACLTokenOnetime(region, varNamespace, xNomadToken, idempotencyToken);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1146,7 +1146,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<OneTimeToken> response = apiInstance.PostACLTokenOnetimeWithHttpInfo(region, _namespace, xNomadToken, idempotencyToken);
+    ApiResponse<OneTimeToken> response = apiInstance.PostACLTokenOnetimeWithHttpInfo(region, varNamespace, xNomadToken, idempotencyToken);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1164,7 +1164,7 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **region** | **string?** | Filters results based on the specified region. | [optional]  |
-| **_namespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
+| **varNamespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
 | **xNomadToken** | **string?** | A Nomad ACL token. | [optional]  |
 | **idempotencyToken** | **string?** | Can be used to ensure operations are only run once. | [optional]  |
 
@@ -1193,9 +1193,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="postacltokenonetimeexchange"></a>
+<a id="postacltokenonetimeexchange"></a>
 # **PostACLTokenOnetimeExchange**
-> ACLToken PostACLTokenOnetimeExchange (OneTimeTokenExchangeRequest oneTimeTokenExchangeRequest, string? region = null, string? _namespace = null, string? xNomadToken = null, string? idempotencyToken = null)
+> ACLToken PostACLTokenOnetimeExchange (OneTimeTokenExchangeRequest oneTimeTokenExchangeRequest, string? region = null, string? varNamespace = null, string? xNomadToken = null, string? idempotencyToken = null)
 
 
 
@@ -1223,13 +1223,13 @@ namespace Example
             var apiInstance = new ACLApi(config);
             var oneTimeTokenExchangeRequest = new OneTimeTokenExchangeRequest(); // OneTimeTokenExchangeRequest | 
             var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var varNamespace = "varNamespace_example";  // string? | Filters results based on the specified namespace. (optional) 
             var xNomadToken = "xNomadToken_example";  // string? | A Nomad ACL token. (optional) 
             var idempotencyToken = "idempotencyToken_example";  // string? | Can be used to ensure operations are only run once. (optional) 
 
             try
             {
-                ACLToken result = apiInstance.PostACLTokenOnetimeExchange(oneTimeTokenExchangeRequest, region, _namespace, xNomadToken, idempotencyToken);
+                ACLToken result = apiInstance.PostACLTokenOnetimeExchange(oneTimeTokenExchangeRequest, region, varNamespace, xNomadToken, idempotencyToken);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1249,7 +1249,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<ACLToken> response = apiInstance.PostACLTokenOnetimeExchangeWithHttpInfo(oneTimeTokenExchangeRequest, region, _namespace, xNomadToken, idempotencyToken);
+    ApiResponse<ACLToken> response = apiInstance.PostACLTokenOnetimeExchangeWithHttpInfo(oneTimeTokenExchangeRequest, region, varNamespace, xNomadToken, idempotencyToken);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1268,7 +1268,7 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **oneTimeTokenExchangeRequest** | [**OneTimeTokenExchangeRequest**](OneTimeTokenExchangeRequest.md) |  |  |
 | **region** | **string?** | Filters results based on the specified region. | [optional]  |
-| **_namespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
+| **varNamespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
 | **xNomadToken** | **string?** | A Nomad ACL token. | [optional]  |
 | **idempotencyToken** | **string?** | Can be used to ensure operations are only run once. | [optional]  |
 

@@ -26,9 +26,9 @@ All URIs are relative to *https://127.0.0.1:4646/v1*
 | [**PostJobValidateRequest**](JobsApi.md#postjobvalidaterequest) | **POST** /validate/job |  |
 | [**RegisterJob**](JobsApi.md#registerjob) | **POST** /jobs |  |
 
-<a name="deletejob"></a>
+<a id="deletejob"></a>
 # **DeleteJob**
-> JobDeregisterResponse DeleteJob (string jobName, string? region = null, string? _namespace = null, string? xNomadToken = null, string? idempotencyToken = null, bool? purge = null, bool? global = null)
+> JobDeregisterResponse DeleteJob (string jobName, string? region = null, string? varNamespace = null, string? xNomadToken = null, string? idempotencyToken = null, bool? purge = null, bool? global = null)
 
 
 
@@ -56,7 +56,7 @@ namespace Example
             var apiInstance = new JobsApi(config);
             var jobName = "jobName_example";  // string | The job identifier.
             var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var varNamespace = "varNamespace_example";  // string? | Filters results based on the specified namespace. (optional) 
             var xNomadToken = "xNomadToken_example";  // string? | A Nomad ACL token. (optional) 
             var idempotencyToken = "idempotencyToken_example";  // string? | Can be used to ensure operations are only run once. (optional) 
             var purge = true;  // bool? | Boolean flag indicating whether to purge allocations of the job after deleting. (optional) 
@@ -64,7 +64,7 @@ namespace Example
 
             try
             {
-                JobDeregisterResponse result = apiInstance.DeleteJob(jobName, region, _namespace, xNomadToken, idempotencyToken, purge, global);
+                JobDeregisterResponse result = apiInstance.DeleteJob(jobName, region, varNamespace, xNomadToken, idempotencyToken, purge, global);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -84,7 +84,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<JobDeregisterResponse> response = apiInstance.DeleteJobWithHttpInfo(jobName, region, _namespace, xNomadToken, idempotencyToken, purge, global);
+    ApiResponse<JobDeregisterResponse> response = apiInstance.DeleteJobWithHttpInfo(jobName, region, varNamespace, xNomadToken, idempotencyToken, purge, global);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -103,7 +103,7 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **jobName** | **string** | The job identifier. |  |
 | **region** | **string?** | Filters results based on the specified region. | [optional]  |
-| **_namespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
+| **varNamespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
 | **xNomadToken** | **string?** | A Nomad ACL token. | [optional]  |
 | **idempotencyToken** | **string?** | Can be used to ensure operations are only run once. | [optional]  |
 | **purge** | **bool?** | Boolean flag indicating whether to purge allocations of the job after deleting. | [optional]  |
@@ -134,9 +134,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="getjob"></a>
+<a id="getjob"></a>
 # **GetJob**
-> Job GetJob (string jobName, string? region = null, string? _namespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null)
+> Job GetJob (string jobName, string? region = null, string? varNamespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null)
 
 
 
@@ -164,7 +164,7 @@ namespace Example
             var apiInstance = new JobsApi(config);
             var jobName = "jobName_example";  // string | The job identifier.
             var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var varNamespace = "varNamespace_example";  // string? | Filters results based on the specified namespace. (optional) 
             var index = 56;  // int? | If set, wait until query exceeds given index. Must be provided with WaitParam. (optional) 
             var wait = "wait_example";  // string? | Provided with IndexParam to wait for change. (optional) 
             var stale = "stale_example";  // string? | If present, results will include stale reads. (optional) 
@@ -175,7 +175,7 @@ namespace Example
 
             try
             {
-                Job result = apiInstance.GetJob(jobName, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+                Job result = apiInstance.GetJob(jobName, region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -195,7 +195,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Job> response = apiInstance.GetJobWithHttpInfo(jobName, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+    ApiResponse<Job> response = apiInstance.GetJobWithHttpInfo(jobName, region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -214,7 +214,7 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **jobName** | **string** | The job identifier. |  |
 | **region** | **string?** | Filters results based on the specified region. | [optional]  |
-| **_namespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
+| **varNamespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
 | **index** | **int?** | If set, wait until query exceeds given index. Must be provided with WaitParam. | [optional]  |
 | **wait** | **string?** | Provided with IndexParam to wait for change. | [optional]  |
 | **stale** | **string?** | If present, results will include stale reads. | [optional]  |
@@ -248,9 +248,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="getjoballocations"></a>
+<a id="getjoballocations"></a>
 # **GetJobAllocations**
-> List&lt;AllocationListStub&gt; GetJobAllocations (string jobName, string? region = null, string? _namespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null, bool? all = null)
+> List&lt;AllocationListStub&gt; GetJobAllocations (string jobName, string? region = null, string? varNamespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null, bool? all = null)
 
 
 
@@ -278,7 +278,7 @@ namespace Example
             var apiInstance = new JobsApi(config);
             var jobName = "jobName_example";  // string | The job identifier.
             var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var varNamespace = "varNamespace_example";  // string? | Filters results based on the specified namespace. (optional) 
             var index = 56;  // int? | If set, wait until query exceeds given index. Must be provided with WaitParam. (optional) 
             var wait = "wait_example";  // string? | Provided with IndexParam to wait for change. (optional) 
             var stale = "stale_example";  // string? | If present, results will include stale reads. (optional) 
@@ -290,7 +290,7 @@ namespace Example
 
             try
             {
-                List<AllocationListStub> result = apiInstance.GetJobAllocations(jobName, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, all);
+                List<AllocationListStub> result = apiInstance.GetJobAllocations(jobName, region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, all);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -310,7 +310,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<List<AllocationListStub>> response = apiInstance.GetJobAllocationsWithHttpInfo(jobName, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, all);
+    ApiResponse<List<AllocationListStub>> response = apiInstance.GetJobAllocationsWithHttpInfo(jobName, region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, all);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -329,7 +329,7 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **jobName** | **string** | The job identifier. |  |
 | **region** | **string?** | Filters results based on the specified region. | [optional]  |
-| **_namespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
+| **varNamespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
 | **index** | **int?** | If set, wait until query exceeds given index. Must be provided with WaitParam. | [optional]  |
 | **wait** | **string?** | Provided with IndexParam to wait for change. | [optional]  |
 | **stale** | **string?** | If present, results will include stale reads. | [optional]  |
@@ -364,9 +364,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="getjobdeployment"></a>
+<a id="getjobdeployment"></a>
 # **GetJobDeployment**
-> Deployment GetJobDeployment (string jobName, string? region = null, string? _namespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null)
+> Deployment GetJobDeployment (string jobName, string? region = null, string? varNamespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null)
 
 
 
@@ -394,7 +394,7 @@ namespace Example
             var apiInstance = new JobsApi(config);
             var jobName = "jobName_example";  // string | The job identifier.
             var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var varNamespace = "varNamespace_example";  // string? | Filters results based on the specified namespace. (optional) 
             var index = 56;  // int? | If set, wait until query exceeds given index. Must be provided with WaitParam. (optional) 
             var wait = "wait_example";  // string? | Provided with IndexParam to wait for change. (optional) 
             var stale = "stale_example";  // string? | If present, results will include stale reads. (optional) 
@@ -405,7 +405,7 @@ namespace Example
 
             try
             {
-                Deployment result = apiInstance.GetJobDeployment(jobName, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+                Deployment result = apiInstance.GetJobDeployment(jobName, region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -425,7 +425,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Deployment> response = apiInstance.GetJobDeploymentWithHttpInfo(jobName, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+    ApiResponse<Deployment> response = apiInstance.GetJobDeploymentWithHttpInfo(jobName, region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -444,7 +444,7 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **jobName** | **string** | The job identifier. |  |
 | **region** | **string?** | Filters results based on the specified region. | [optional]  |
-| **_namespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
+| **varNamespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
 | **index** | **int?** | If set, wait until query exceeds given index. Must be provided with WaitParam. | [optional]  |
 | **wait** | **string?** | Provided with IndexParam to wait for change. | [optional]  |
 | **stale** | **string?** | If present, results will include stale reads. | [optional]  |
@@ -478,9 +478,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="getjobdeployments"></a>
+<a id="getjobdeployments"></a>
 # **GetJobDeployments**
-> List&lt;Deployment&gt; GetJobDeployments (string jobName, string? region = null, string? _namespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null, int? all = null)
+> List&lt;Deployment&gt; GetJobDeployments (string jobName, string? region = null, string? varNamespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null, int? all = null)
 
 
 
@@ -508,7 +508,7 @@ namespace Example
             var apiInstance = new JobsApi(config);
             var jobName = "jobName_example";  // string | The job identifier.
             var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var varNamespace = "varNamespace_example";  // string? | Filters results based on the specified namespace. (optional) 
             var index = 56;  // int? | If set, wait until query exceeds given index. Must be provided with WaitParam. (optional) 
             var wait = "wait_example";  // string? | Provided with IndexParam to wait for change. (optional) 
             var stale = "stale_example";  // string? | If present, results will include stale reads. (optional) 
@@ -520,7 +520,7 @@ namespace Example
 
             try
             {
-                List<Deployment> result = apiInstance.GetJobDeployments(jobName, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, all);
+                List<Deployment> result = apiInstance.GetJobDeployments(jobName, region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, all);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -540,7 +540,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<List<Deployment>> response = apiInstance.GetJobDeploymentsWithHttpInfo(jobName, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, all);
+    ApiResponse<List<Deployment>> response = apiInstance.GetJobDeploymentsWithHttpInfo(jobName, region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, all);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -559,7 +559,7 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **jobName** | **string** | The job identifier. |  |
 | **region** | **string?** | Filters results based on the specified region. | [optional]  |
-| **_namespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
+| **varNamespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
 | **index** | **int?** | If set, wait until query exceeds given index. Must be provided with WaitParam. | [optional]  |
 | **wait** | **string?** | Provided with IndexParam to wait for change. | [optional]  |
 | **stale** | **string?** | If present, results will include stale reads. | [optional]  |
@@ -594,9 +594,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="getjobevaluations"></a>
+<a id="getjobevaluations"></a>
 # **GetJobEvaluations**
-> List&lt;Evaluation&gt; GetJobEvaluations (string jobName, string? region = null, string? _namespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null)
+> List&lt;Evaluation&gt; GetJobEvaluations (string jobName, string? region = null, string? varNamespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null)
 
 
 
@@ -624,7 +624,7 @@ namespace Example
             var apiInstance = new JobsApi(config);
             var jobName = "jobName_example";  // string | The job identifier.
             var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var varNamespace = "varNamespace_example";  // string? | Filters results based on the specified namespace. (optional) 
             var index = 56;  // int? | If set, wait until query exceeds given index. Must be provided with WaitParam. (optional) 
             var wait = "wait_example";  // string? | Provided with IndexParam to wait for change. (optional) 
             var stale = "stale_example";  // string? | If present, results will include stale reads. (optional) 
@@ -635,7 +635,7 @@ namespace Example
 
             try
             {
-                List<Evaluation> result = apiInstance.GetJobEvaluations(jobName, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+                List<Evaluation> result = apiInstance.GetJobEvaluations(jobName, region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -655,7 +655,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<List<Evaluation>> response = apiInstance.GetJobEvaluationsWithHttpInfo(jobName, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+    ApiResponse<List<Evaluation>> response = apiInstance.GetJobEvaluationsWithHttpInfo(jobName, region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -674,7 +674,7 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **jobName** | **string** | The job identifier. |  |
 | **region** | **string?** | Filters results based on the specified region. | [optional]  |
-| **_namespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
+| **varNamespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
 | **index** | **int?** | If set, wait until query exceeds given index. Must be provided with WaitParam. | [optional]  |
 | **wait** | **string?** | Provided with IndexParam to wait for change. | [optional]  |
 | **stale** | **string?** | If present, results will include stale reads. | [optional]  |
@@ -708,9 +708,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="getjobscalestatus"></a>
+<a id="getjobscalestatus"></a>
 # **GetJobScaleStatus**
-> JobScaleStatusResponse GetJobScaleStatus (string jobName, string? region = null, string? _namespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null)
+> JobScaleStatusResponse GetJobScaleStatus (string jobName, string? region = null, string? varNamespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null)
 
 
 
@@ -738,7 +738,7 @@ namespace Example
             var apiInstance = new JobsApi(config);
             var jobName = "jobName_example";  // string | The job identifier.
             var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var varNamespace = "varNamespace_example";  // string? | Filters results based on the specified namespace. (optional) 
             var index = 56;  // int? | If set, wait until query exceeds given index. Must be provided with WaitParam. (optional) 
             var wait = "wait_example";  // string? | Provided with IndexParam to wait for change. (optional) 
             var stale = "stale_example";  // string? | If present, results will include stale reads. (optional) 
@@ -749,7 +749,7 @@ namespace Example
 
             try
             {
-                JobScaleStatusResponse result = apiInstance.GetJobScaleStatus(jobName, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+                JobScaleStatusResponse result = apiInstance.GetJobScaleStatus(jobName, region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -769,7 +769,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<JobScaleStatusResponse> response = apiInstance.GetJobScaleStatusWithHttpInfo(jobName, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+    ApiResponse<JobScaleStatusResponse> response = apiInstance.GetJobScaleStatusWithHttpInfo(jobName, region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -788,7 +788,7 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **jobName** | **string** | The job identifier. |  |
 | **region** | **string?** | Filters results based on the specified region. | [optional]  |
-| **_namespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
+| **varNamespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
 | **index** | **int?** | If set, wait until query exceeds given index. Must be provided with WaitParam. | [optional]  |
 | **wait** | **string?** | Provided with IndexParam to wait for change. | [optional]  |
 | **stale** | **string?** | If present, results will include stale reads. | [optional]  |
@@ -822,9 +822,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="getjobsummary"></a>
+<a id="getjobsummary"></a>
 # **GetJobSummary**
-> JobSummary GetJobSummary (string jobName, string? region = null, string? _namespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null)
+> JobSummary GetJobSummary (string jobName, string? region = null, string? varNamespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null)
 
 
 
@@ -852,7 +852,7 @@ namespace Example
             var apiInstance = new JobsApi(config);
             var jobName = "jobName_example";  // string | The job identifier.
             var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var varNamespace = "varNamespace_example";  // string? | Filters results based on the specified namespace. (optional) 
             var index = 56;  // int? | If set, wait until query exceeds given index. Must be provided with WaitParam. (optional) 
             var wait = "wait_example";  // string? | Provided with IndexParam to wait for change. (optional) 
             var stale = "stale_example";  // string? | If present, results will include stale reads. (optional) 
@@ -863,7 +863,7 @@ namespace Example
 
             try
             {
-                JobSummary result = apiInstance.GetJobSummary(jobName, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+                JobSummary result = apiInstance.GetJobSummary(jobName, region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -883,7 +883,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<JobSummary> response = apiInstance.GetJobSummaryWithHttpInfo(jobName, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+    ApiResponse<JobSummary> response = apiInstance.GetJobSummaryWithHttpInfo(jobName, region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -902,7 +902,7 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **jobName** | **string** | The job identifier. |  |
 | **region** | **string?** | Filters results based on the specified region. | [optional]  |
-| **_namespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
+| **varNamespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
 | **index** | **int?** | If set, wait until query exceeds given index. Must be provided with WaitParam. | [optional]  |
 | **wait** | **string?** | Provided with IndexParam to wait for change. | [optional]  |
 | **stale** | **string?** | If present, results will include stale reads. | [optional]  |
@@ -936,9 +936,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="getjobversions"></a>
+<a id="getjobversions"></a>
 # **GetJobVersions**
-> JobVersionsResponse GetJobVersions (string jobName, string? region = null, string? _namespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null, bool? diffs = null)
+> JobVersionsResponse GetJobVersions (string jobName, string? region = null, string? varNamespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null, bool? diffs = null)
 
 
 
@@ -966,7 +966,7 @@ namespace Example
             var apiInstance = new JobsApi(config);
             var jobName = "jobName_example";  // string | The job identifier.
             var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var varNamespace = "varNamespace_example";  // string? | Filters results based on the specified namespace. (optional) 
             var index = 56;  // int? | If set, wait until query exceeds given index. Must be provided with WaitParam. (optional) 
             var wait = "wait_example";  // string? | Provided with IndexParam to wait for change. (optional) 
             var stale = "stale_example";  // string? | If present, results will include stale reads. (optional) 
@@ -978,7 +978,7 @@ namespace Example
 
             try
             {
-                JobVersionsResponse result = apiInstance.GetJobVersions(jobName, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, diffs);
+                JobVersionsResponse result = apiInstance.GetJobVersions(jobName, region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, diffs);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -998,7 +998,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<JobVersionsResponse> response = apiInstance.GetJobVersionsWithHttpInfo(jobName, region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, diffs);
+    ApiResponse<JobVersionsResponse> response = apiInstance.GetJobVersionsWithHttpInfo(jobName, region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken, diffs);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1017,7 +1017,7 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **jobName** | **string** | The job identifier. |  |
 | **region** | **string?** | Filters results based on the specified region. | [optional]  |
-| **_namespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
+| **varNamespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
 | **index** | **int?** | If set, wait until query exceeds given index. Must be provided with WaitParam. | [optional]  |
 | **wait** | **string?** | Provided with IndexParam to wait for change. | [optional]  |
 | **stale** | **string?** | If present, results will include stale reads. | [optional]  |
@@ -1052,9 +1052,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="getjobs"></a>
+<a id="getjobs"></a>
 # **GetJobs**
-> List&lt;JobListStub&gt; GetJobs (string? region = null, string? _namespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null)
+> List&lt;JobListStub&gt; GetJobs (string? region = null, string? varNamespace = null, int? index = null, string? wait = null, string? stale = null, string? prefix = null, string? xNomadToken = null, int? perPage = null, string? nextToken = null)
 
 
 
@@ -1081,7 +1081,7 @@ namespace Example
 
             var apiInstance = new JobsApi(config);
             var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var varNamespace = "varNamespace_example";  // string? | Filters results based on the specified namespace. (optional) 
             var index = 56;  // int? | If set, wait until query exceeds given index. Must be provided with WaitParam. (optional) 
             var wait = "wait_example";  // string? | Provided with IndexParam to wait for change. (optional) 
             var stale = "stale_example";  // string? | If present, results will include stale reads. (optional) 
@@ -1092,7 +1092,7 @@ namespace Example
 
             try
             {
-                List<JobListStub> result = apiInstance.GetJobs(region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+                List<JobListStub> result = apiInstance.GetJobs(region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1112,7 +1112,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<List<JobListStub>> response = apiInstance.GetJobsWithHttpInfo(region, _namespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
+    ApiResponse<List<JobListStub>> response = apiInstance.GetJobsWithHttpInfo(region, varNamespace, index, wait, stale, prefix, xNomadToken, perPage, nextToken);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1130,7 +1130,7 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **region** | **string?** | Filters results based on the specified region. | [optional]  |
-| **_namespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
+| **varNamespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
 | **index** | **int?** | If set, wait until query exceeds given index. Must be provided with WaitParam. | [optional]  |
 | **wait** | **string?** | Provided with IndexParam to wait for change. | [optional]  |
 | **stale** | **string?** | If present, results will include stale reads. | [optional]  |
@@ -1164,9 +1164,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="postjob"></a>
+<a id="postjob"></a>
 # **PostJob**
-> JobRegisterResponse PostJob (string jobName, JobRegisterRequest jobRegisterRequest, string? region = null, string? _namespace = null, string? xNomadToken = null, string? idempotencyToken = null)
+> JobRegisterResponse PostJob (string jobName, JobRegisterRequest jobRegisterRequest, string? region = null, string? varNamespace = null, string? xNomadToken = null, string? idempotencyToken = null)
 
 
 
@@ -1195,13 +1195,13 @@ namespace Example
             var jobName = "jobName_example";  // string | The job identifier.
             var jobRegisterRequest = new JobRegisterRequest(); // JobRegisterRequest | 
             var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var varNamespace = "varNamespace_example";  // string? | Filters results based on the specified namespace. (optional) 
             var xNomadToken = "xNomadToken_example";  // string? | A Nomad ACL token. (optional) 
             var idempotencyToken = "idempotencyToken_example";  // string? | Can be used to ensure operations are only run once. (optional) 
 
             try
             {
-                JobRegisterResponse result = apiInstance.PostJob(jobName, jobRegisterRequest, region, _namespace, xNomadToken, idempotencyToken);
+                JobRegisterResponse result = apiInstance.PostJob(jobName, jobRegisterRequest, region, varNamespace, xNomadToken, idempotencyToken);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1221,7 +1221,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<JobRegisterResponse> response = apiInstance.PostJobWithHttpInfo(jobName, jobRegisterRequest, region, _namespace, xNomadToken, idempotencyToken);
+    ApiResponse<JobRegisterResponse> response = apiInstance.PostJobWithHttpInfo(jobName, jobRegisterRequest, region, varNamespace, xNomadToken, idempotencyToken);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1241,7 +1241,7 @@ catch (ApiException e)
 | **jobName** | **string** | The job identifier. |  |
 | **jobRegisterRequest** | [**JobRegisterRequest**](JobRegisterRequest.md) |  |  |
 | **region** | **string?** | Filters results based on the specified region. | [optional]  |
-| **_namespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
+| **varNamespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
 | **xNomadToken** | **string?** | A Nomad ACL token. | [optional]  |
 | **idempotencyToken** | **string?** | Can be used to ensure operations are only run once. | [optional]  |
 
@@ -1270,9 +1270,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="postjobdispatch"></a>
+<a id="postjobdispatch"></a>
 # **PostJobDispatch**
-> JobDispatchResponse PostJobDispatch (string jobName, JobDispatchRequest jobDispatchRequest, string? region = null, string? _namespace = null, string? xNomadToken = null, string? idempotencyToken = null)
+> JobDispatchResponse PostJobDispatch (string jobName, JobDispatchRequest jobDispatchRequest, string? region = null, string? varNamespace = null, string? xNomadToken = null, string? idempotencyToken = null)
 
 
 
@@ -1301,13 +1301,13 @@ namespace Example
             var jobName = "jobName_example";  // string | The job identifier.
             var jobDispatchRequest = new JobDispatchRequest(); // JobDispatchRequest | 
             var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var varNamespace = "varNamespace_example";  // string? | Filters results based on the specified namespace. (optional) 
             var xNomadToken = "xNomadToken_example";  // string? | A Nomad ACL token. (optional) 
             var idempotencyToken = "idempotencyToken_example";  // string? | Can be used to ensure operations are only run once. (optional) 
 
             try
             {
-                JobDispatchResponse result = apiInstance.PostJobDispatch(jobName, jobDispatchRequest, region, _namespace, xNomadToken, idempotencyToken);
+                JobDispatchResponse result = apiInstance.PostJobDispatch(jobName, jobDispatchRequest, region, varNamespace, xNomadToken, idempotencyToken);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1327,7 +1327,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<JobDispatchResponse> response = apiInstance.PostJobDispatchWithHttpInfo(jobName, jobDispatchRequest, region, _namespace, xNomadToken, idempotencyToken);
+    ApiResponse<JobDispatchResponse> response = apiInstance.PostJobDispatchWithHttpInfo(jobName, jobDispatchRequest, region, varNamespace, xNomadToken, idempotencyToken);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1347,7 +1347,7 @@ catch (ApiException e)
 | **jobName** | **string** | The job identifier. |  |
 | **jobDispatchRequest** | [**JobDispatchRequest**](JobDispatchRequest.md) |  |  |
 | **region** | **string?** | Filters results based on the specified region. | [optional]  |
-| **_namespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
+| **varNamespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
 | **xNomadToken** | **string?** | A Nomad ACL token. | [optional]  |
 | **idempotencyToken** | **string?** | Can be used to ensure operations are only run once. | [optional]  |
 
@@ -1376,9 +1376,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="postjobevaluate"></a>
+<a id="postjobevaluate"></a>
 # **PostJobEvaluate**
-> JobRegisterResponse PostJobEvaluate (string jobName, JobEvaluateRequest jobEvaluateRequest, string? region = null, string? _namespace = null, string? xNomadToken = null, string? idempotencyToken = null)
+> JobRegisterResponse PostJobEvaluate (string jobName, JobEvaluateRequest jobEvaluateRequest, string? region = null, string? varNamespace = null, string? xNomadToken = null, string? idempotencyToken = null)
 
 
 
@@ -1407,13 +1407,13 @@ namespace Example
             var jobName = "jobName_example";  // string | The job identifier.
             var jobEvaluateRequest = new JobEvaluateRequest(); // JobEvaluateRequest | 
             var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var varNamespace = "varNamespace_example";  // string? | Filters results based on the specified namespace. (optional) 
             var xNomadToken = "xNomadToken_example";  // string? | A Nomad ACL token. (optional) 
             var idempotencyToken = "idempotencyToken_example";  // string? | Can be used to ensure operations are only run once. (optional) 
 
             try
             {
-                JobRegisterResponse result = apiInstance.PostJobEvaluate(jobName, jobEvaluateRequest, region, _namespace, xNomadToken, idempotencyToken);
+                JobRegisterResponse result = apiInstance.PostJobEvaluate(jobName, jobEvaluateRequest, region, varNamespace, xNomadToken, idempotencyToken);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1433,7 +1433,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<JobRegisterResponse> response = apiInstance.PostJobEvaluateWithHttpInfo(jobName, jobEvaluateRequest, region, _namespace, xNomadToken, idempotencyToken);
+    ApiResponse<JobRegisterResponse> response = apiInstance.PostJobEvaluateWithHttpInfo(jobName, jobEvaluateRequest, region, varNamespace, xNomadToken, idempotencyToken);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1453,7 +1453,7 @@ catch (ApiException e)
 | **jobName** | **string** | The job identifier. |  |
 | **jobEvaluateRequest** | [**JobEvaluateRequest**](JobEvaluateRequest.md) |  |  |
 | **region** | **string?** | Filters results based on the specified region. | [optional]  |
-| **_namespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
+| **varNamespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
 | **xNomadToken** | **string?** | A Nomad ACL token. | [optional]  |
 | **idempotencyToken** | **string?** | Can be used to ensure operations are only run once. | [optional]  |
 
@@ -1482,7 +1482,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="postjobparse"></a>
+<a id="postjobparse"></a>
 # **PostJobParse**
 > Job PostJobParse (JobsParseRequest jobsParseRequest)
 
@@ -1578,9 +1578,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="postjobperiodicforce"></a>
+<a id="postjobperiodicforce"></a>
 # **PostJobPeriodicForce**
-> PeriodicForceResponse PostJobPeriodicForce (string jobName, string? region = null, string? _namespace = null, string? xNomadToken = null, string? idempotencyToken = null)
+> PeriodicForceResponse PostJobPeriodicForce (string jobName, string? region = null, string? varNamespace = null, string? xNomadToken = null, string? idempotencyToken = null)
 
 
 
@@ -1608,13 +1608,13 @@ namespace Example
             var apiInstance = new JobsApi(config);
             var jobName = "jobName_example";  // string | The job identifier.
             var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var varNamespace = "varNamespace_example";  // string? | Filters results based on the specified namespace. (optional) 
             var xNomadToken = "xNomadToken_example";  // string? | A Nomad ACL token. (optional) 
             var idempotencyToken = "idempotencyToken_example";  // string? | Can be used to ensure operations are only run once. (optional) 
 
             try
             {
-                PeriodicForceResponse result = apiInstance.PostJobPeriodicForce(jobName, region, _namespace, xNomadToken, idempotencyToken);
+                PeriodicForceResponse result = apiInstance.PostJobPeriodicForce(jobName, region, varNamespace, xNomadToken, idempotencyToken);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1634,7 +1634,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<PeriodicForceResponse> response = apiInstance.PostJobPeriodicForceWithHttpInfo(jobName, region, _namespace, xNomadToken, idempotencyToken);
+    ApiResponse<PeriodicForceResponse> response = apiInstance.PostJobPeriodicForceWithHttpInfo(jobName, region, varNamespace, xNomadToken, idempotencyToken);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1653,7 +1653,7 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **jobName** | **string** | The job identifier. |  |
 | **region** | **string?** | Filters results based on the specified region. | [optional]  |
-| **_namespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
+| **varNamespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
 | **xNomadToken** | **string?** | A Nomad ACL token. | [optional]  |
 | **idempotencyToken** | **string?** | Can be used to ensure operations are only run once. | [optional]  |
 
@@ -1682,9 +1682,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="postjobplan"></a>
+<a id="postjobplan"></a>
 # **PostJobPlan**
-> JobPlanResponse PostJobPlan (string jobName, JobPlanRequest jobPlanRequest, string? region = null, string? _namespace = null, string? xNomadToken = null, string? idempotencyToken = null)
+> JobPlanResponse PostJobPlan (string jobName, JobPlanRequest jobPlanRequest, string? region = null, string? varNamespace = null, string? xNomadToken = null, string? idempotencyToken = null)
 
 
 
@@ -1713,13 +1713,13 @@ namespace Example
             var jobName = "jobName_example";  // string | The job identifier.
             var jobPlanRequest = new JobPlanRequest(); // JobPlanRequest | 
             var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var varNamespace = "varNamespace_example";  // string? | Filters results based on the specified namespace. (optional) 
             var xNomadToken = "xNomadToken_example";  // string? | A Nomad ACL token. (optional) 
             var idempotencyToken = "idempotencyToken_example";  // string? | Can be used to ensure operations are only run once. (optional) 
 
             try
             {
-                JobPlanResponse result = apiInstance.PostJobPlan(jobName, jobPlanRequest, region, _namespace, xNomadToken, idempotencyToken);
+                JobPlanResponse result = apiInstance.PostJobPlan(jobName, jobPlanRequest, region, varNamespace, xNomadToken, idempotencyToken);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1739,7 +1739,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<JobPlanResponse> response = apiInstance.PostJobPlanWithHttpInfo(jobName, jobPlanRequest, region, _namespace, xNomadToken, idempotencyToken);
+    ApiResponse<JobPlanResponse> response = apiInstance.PostJobPlanWithHttpInfo(jobName, jobPlanRequest, region, varNamespace, xNomadToken, idempotencyToken);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1759,7 +1759,7 @@ catch (ApiException e)
 | **jobName** | **string** | The job identifier. |  |
 | **jobPlanRequest** | [**JobPlanRequest**](JobPlanRequest.md) |  |  |
 | **region** | **string?** | Filters results based on the specified region. | [optional]  |
-| **_namespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
+| **varNamespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
 | **xNomadToken** | **string?** | A Nomad ACL token. | [optional]  |
 | **idempotencyToken** | **string?** | Can be used to ensure operations are only run once. | [optional]  |
 
@@ -1788,9 +1788,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="postjobrevert"></a>
+<a id="postjobrevert"></a>
 # **PostJobRevert**
-> JobRegisterResponse PostJobRevert (string jobName, JobRevertRequest jobRevertRequest, string? region = null, string? _namespace = null, string? xNomadToken = null, string? idempotencyToken = null)
+> JobRegisterResponse PostJobRevert (string jobName, JobRevertRequest jobRevertRequest, string? region = null, string? varNamespace = null, string? xNomadToken = null, string? idempotencyToken = null)
 
 
 
@@ -1819,13 +1819,13 @@ namespace Example
             var jobName = "jobName_example";  // string | The job identifier.
             var jobRevertRequest = new JobRevertRequest(); // JobRevertRequest | 
             var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var varNamespace = "varNamespace_example";  // string? | Filters results based on the specified namespace. (optional) 
             var xNomadToken = "xNomadToken_example";  // string? | A Nomad ACL token. (optional) 
             var idempotencyToken = "idempotencyToken_example";  // string? | Can be used to ensure operations are only run once. (optional) 
 
             try
             {
-                JobRegisterResponse result = apiInstance.PostJobRevert(jobName, jobRevertRequest, region, _namespace, xNomadToken, idempotencyToken);
+                JobRegisterResponse result = apiInstance.PostJobRevert(jobName, jobRevertRequest, region, varNamespace, xNomadToken, idempotencyToken);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1845,7 +1845,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<JobRegisterResponse> response = apiInstance.PostJobRevertWithHttpInfo(jobName, jobRevertRequest, region, _namespace, xNomadToken, idempotencyToken);
+    ApiResponse<JobRegisterResponse> response = apiInstance.PostJobRevertWithHttpInfo(jobName, jobRevertRequest, region, varNamespace, xNomadToken, idempotencyToken);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1865,7 +1865,7 @@ catch (ApiException e)
 | **jobName** | **string** | The job identifier. |  |
 | **jobRevertRequest** | [**JobRevertRequest**](JobRevertRequest.md) |  |  |
 | **region** | **string?** | Filters results based on the specified region. | [optional]  |
-| **_namespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
+| **varNamespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
 | **xNomadToken** | **string?** | A Nomad ACL token. | [optional]  |
 | **idempotencyToken** | **string?** | Can be used to ensure operations are only run once. | [optional]  |
 
@@ -1894,9 +1894,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="postjobscalingrequest"></a>
+<a id="postjobscalingrequest"></a>
 # **PostJobScalingRequest**
-> JobRegisterResponse PostJobScalingRequest (string jobName, ScalingRequest scalingRequest, string? region = null, string? _namespace = null, string? xNomadToken = null, string? idempotencyToken = null)
+> JobRegisterResponse PostJobScalingRequest (string jobName, ScalingRequest scalingRequest, string? region = null, string? varNamespace = null, string? xNomadToken = null, string? idempotencyToken = null)
 
 
 
@@ -1925,13 +1925,13 @@ namespace Example
             var jobName = "jobName_example";  // string | The job identifier.
             var scalingRequest = new ScalingRequest(); // ScalingRequest | 
             var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var varNamespace = "varNamespace_example";  // string? | Filters results based on the specified namespace. (optional) 
             var xNomadToken = "xNomadToken_example";  // string? | A Nomad ACL token. (optional) 
             var idempotencyToken = "idempotencyToken_example";  // string? | Can be used to ensure operations are only run once. (optional) 
 
             try
             {
-                JobRegisterResponse result = apiInstance.PostJobScalingRequest(jobName, scalingRequest, region, _namespace, xNomadToken, idempotencyToken);
+                JobRegisterResponse result = apiInstance.PostJobScalingRequest(jobName, scalingRequest, region, varNamespace, xNomadToken, idempotencyToken);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1951,7 +1951,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<JobRegisterResponse> response = apiInstance.PostJobScalingRequestWithHttpInfo(jobName, scalingRequest, region, _namespace, xNomadToken, idempotencyToken);
+    ApiResponse<JobRegisterResponse> response = apiInstance.PostJobScalingRequestWithHttpInfo(jobName, scalingRequest, region, varNamespace, xNomadToken, idempotencyToken);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1971,7 +1971,7 @@ catch (ApiException e)
 | **jobName** | **string** | The job identifier. |  |
 | **scalingRequest** | [**ScalingRequest**](ScalingRequest.md) |  |  |
 | **region** | **string?** | Filters results based on the specified region. | [optional]  |
-| **_namespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
+| **varNamespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
 | **xNomadToken** | **string?** | A Nomad ACL token. | [optional]  |
 | **idempotencyToken** | **string?** | Can be used to ensure operations are only run once. | [optional]  |
 
@@ -2000,9 +2000,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="postjobstability"></a>
+<a id="postjobstability"></a>
 # **PostJobStability**
-> JobStabilityResponse PostJobStability (string jobName, JobStabilityRequest jobStabilityRequest, string? region = null, string? _namespace = null, string? xNomadToken = null, string? idempotencyToken = null)
+> JobStabilityResponse PostJobStability (string jobName, JobStabilityRequest jobStabilityRequest, string? region = null, string? varNamespace = null, string? xNomadToken = null, string? idempotencyToken = null)
 
 
 
@@ -2031,13 +2031,13 @@ namespace Example
             var jobName = "jobName_example";  // string | The job identifier.
             var jobStabilityRequest = new JobStabilityRequest(); // JobStabilityRequest | 
             var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var varNamespace = "varNamespace_example";  // string? | Filters results based on the specified namespace. (optional) 
             var xNomadToken = "xNomadToken_example";  // string? | A Nomad ACL token. (optional) 
             var idempotencyToken = "idempotencyToken_example";  // string? | Can be used to ensure operations are only run once. (optional) 
 
             try
             {
-                JobStabilityResponse result = apiInstance.PostJobStability(jobName, jobStabilityRequest, region, _namespace, xNomadToken, idempotencyToken);
+                JobStabilityResponse result = apiInstance.PostJobStability(jobName, jobStabilityRequest, region, varNamespace, xNomadToken, idempotencyToken);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -2057,7 +2057,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<JobStabilityResponse> response = apiInstance.PostJobStabilityWithHttpInfo(jobName, jobStabilityRequest, region, _namespace, xNomadToken, idempotencyToken);
+    ApiResponse<JobStabilityResponse> response = apiInstance.PostJobStabilityWithHttpInfo(jobName, jobStabilityRequest, region, varNamespace, xNomadToken, idempotencyToken);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -2077,7 +2077,7 @@ catch (ApiException e)
 | **jobName** | **string** | The job identifier. |  |
 | **jobStabilityRequest** | [**JobStabilityRequest**](JobStabilityRequest.md) |  |  |
 | **region** | **string?** | Filters results based on the specified region. | [optional]  |
-| **_namespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
+| **varNamespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
 | **xNomadToken** | **string?** | A Nomad ACL token. | [optional]  |
 | **idempotencyToken** | **string?** | Can be used to ensure operations are only run once. | [optional]  |
 
@@ -2106,9 +2106,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="postjobvalidaterequest"></a>
+<a id="postjobvalidaterequest"></a>
 # **PostJobValidateRequest**
-> JobValidateResponse PostJobValidateRequest (JobValidateRequest jobValidateRequest, string? region = null, string? _namespace = null, string? xNomadToken = null, string? idempotencyToken = null)
+> JobValidateResponse PostJobValidateRequest (JobValidateRequest jobValidateRequest, string? region = null, string? varNamespace = null, string? xNomadToken = null, string? idempotencyToken = null)
 
 
 
@@ -2136,13 +2136,13 @@ namespace Example
             var apiInstance = new JobsApi(config);
             var jobValidateRequest = new JobValidateRequest(); // JobValidateRequest | 
             var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var varNamespace = "varNamespace_example";  // string? | Filters results based on the specified namespace. (optional) 
             var xNomadToken = "xNomadToken_example";  // string? | A Nomad ACL token. (optional) 
             var idempotencyToken = "idempotencyToken_example";  // string? | Can be used to ensure operations are only run once. (optional) 
 
             try
             {
-                JobValidateResponse result = apiInstance.PostJobValidateRequest(jobValidateRequest, region, _namespace, xNomadToken, idempotencyToken);
+                JobValidateResponse result = apiInstance.PostJobValidateRequest(jobValidateRequest, region, varNamespace, xNomadToken, idempotencyToken);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -2162,7 +2162,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<JobValidateResponse> response = apiInstance.PostJobValidateRequestWithHttpInfo(jobValidateRequest, region, _namespace, xNomadToken, idempotencyToken);
+    ApiResponse<JobValidateResponse> response = apiInstance.PostJobValidateRequestWithHttpInfo(jobValidateRequest, region, varNamespace, xNomadToken, idempotencyToken);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -2181,7 +2181,7 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **jobValidateRequest** | [**JobValidateRequest**](JobValidateRequest.md) |  |  |
 | **region** | **string?** | Filters results based on the specified region. | [optional]  |
-| **_namespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
+| **varNamespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
 | **xNomadToken** | **string?** | A Nomad ACL token. | [optional]  |
 | **idempotencyToken** | **string?** | Can be used to ensure operations are only run once. | [optional]  |
 
@@ -2210,9 +2210,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="registerjob"></a>
+<a id="registerjob"></a>
 # **RegisterJob**
-> JobRegisterResponse RegisterJob (JobRegisterRequest jobRegisterRequest, string? region = null, string? _namespace = null, string? xNomadToken = null, string? idempotencyToken = null)
+> JobRegisterResponse RegisterJob (JobRegisterRequest jobRegisterRequest, string? region = null, string? varNamespace = null, string? xNomadToken = null, string? idempotencyToken = null)
 
 
 
@@ -2240,13 +2240,13 @@ namespace Example
             var apiInstance = new JobsApi(config);
             var jobRegisterRequest = new JobRegisterRequest(); // JobRegisterRequest | 
             var region = "region_example";  // string? | Filters results based on the specified region. (optional) 
-            var _namespace = "_namespace_example";  // string? | Filters results based on the specified namespace. (optional) 
+            var varNamespace = "varNamespace_example";  // string? | Filters results based on the specified namespace. (optional) 
             var xNomadToken = "xNomadToken_example";  // string? | A Nomad ACL token. (optional) 
             var idempotencyToken = "idempotencyToken_example";  // string? | Can be used to ensure operations are only run once. (optional) 
 
             try
             {
-                JobRegisterResponse result = apiInstance.RegisterJob(jobRegisterRequest, region, _namespace, xNomadToken, idempotencyToken);
+                JobRegisterResponse result = apiInstance.RegisterJob(jobRegisterRequest, region, varNamespace, xNomadToken, idempotencyToken);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -2266,7 +2266,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<JobRegisterResponse> response = apiInstance.RegisterJobWithHttpInfo(jobRegisterRequest, region, _namespace, xNomadToken, idempotencyToken);
+    ApiResponse<JobRegisterResponse> response = apiInstance.RegisterJobWithHttpInfo(jobRegisterRequest, region, varNamespace, xNomadToken, idempotencyToken);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -2285,7 +2285,7 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **jobRegisterRequest** | [**JobRegisterRequest**](JobRegisterRequest.md) |  |  |
 | **region** | **string?** | Filters results based on the specified region. | [optional]  |
-| **_namespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
+| **varNamespace** | **string?** | Filters results based on the specified namespace. | [optional]  |
 | **xNomadToken** | **string?** | A Nomad ACL token. | [optional]  |
 | **idempotencyToken** | **string?** | Can be used to ensure operations are only run once. | [optional]  |
 

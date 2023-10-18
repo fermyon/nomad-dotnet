@@ -61,10 +61,10 @@ namespace Fermyon.Nomad.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string? region = null;
-            //string? _namespace = null;
+            //string? varNamespace = null;
             //string? xNomadToken = null;
             //string? idempotencyToken = null;
-            //instance.PutSystemGC(region, _namespace, xNomadToken, idempotencyToken);
+            //instance.PutSystemGC(region, varNamespace, xNomadToken, idempotencyToken);
         }
 
         /// <summary>
@@ -75,10 +75,10 @@ namespace Fermyon.Nomad.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string? region = null;
-            //string? _namespace = null;
+            //string? varNamespace = null;
             //string? xNomadToken = null;
             //string? idempotencyToken = null;
-            //instance.PutSystemReconcileSummaries(region, _namespace, xNomadToken, idempotencyToken);
+            //instance.PutSystemReconcileSummaries(region, varNamespace, xNomadToken, idempotencyToken);
         }
     }
 }

@@ -15,7 +15,6 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Collections.Generic;
-using Fermyon.Nomad.Api;
 using Fermyon.Nomad.Model;
 using Fermyon.Nomad.Client;
 using System.Reflection;
@@ -56,7 +55,6 @@ namespace Fermyon.Nomad.Test.Model
             //Assert.IsType<NodeDrainUpdateResponse>(instance);
         }
 
-
         /// <summary>
         /// Test the property 'EvalCreateIndex'
         /// </summary>
@@ -65,6 +63,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'EvalCreateIndex'
         }
+
         /// <summary>
         /// Test the property 'EvalIDs'
         /// </summary>
@@ -73,6 +72,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'EvalIDs'
         }
+
         /// <summary>
         /// Test the property 'LastIndex'
         /// </summary>
@@ -81,6 +81,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'LastIndex'
         }
+
         /// <summary>
         /// Test the property 'NodeModifyIndex'
         /// </summary>
@@ -89,6 +90,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'NodeModifyIndex'
         }
+
         /// <summary>
         /// Test the property 'RequestTime'
         /// </summary>
@@ -97,7 +99,5 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'RequestTime'
         }
-
     }
-
 }

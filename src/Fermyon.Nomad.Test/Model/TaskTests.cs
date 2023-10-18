@@ -15,7 +15,6 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Collections.Generic;
-using Fermyon.Nomad.Api;
 using Fermyon.Nomad.Model;
 using Fermyon.Nomad.Client;
 using System.Reflection;
@@ -56,7 +55,6 @@ namespace Fermyon.Nomad.Test.Model
             //Assert.IsType<Task>(instance);
         }
 
-
         /// <summary>
         /// Test the property 'Affinities'
         /// </summary>
@@ -65,6 +63,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Affinities'
         }
+
         /// <summary>
         /// Test the property 'Artifacts'
         /// </summary>
@@ -73,6 +72,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Artifacts'
         }
+
         /// <summary>
         /// Test the property 'CSIPluginConfig'
         /// </summary>
@@ -81,6 +81,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'CSIPluginConfig'
         }
+
         /// <summary>
         /// Test the property 'Config'
         /// </summary>
@@ -89,6 +90,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Config'
         }
+
         /// <summary>
         /// Test the property 'Constraints'
         /// </summary>
@@ -97,6 +99,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Constraints'
         }
+
         /// <summary>
         /// Test the property 'DispatchPayload'
         /// </summary>
@@ -105,6 +108,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'DispatchPayload'
         }
+
         /// <summary>
         /// Test the property 'Driver'
         /// </summary>
@@ -113,6 +117,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Driver'
         }
+
         /// <summary>
         /// Test the property 'Env'
         /// </summary>
@@ -121,6 +126,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Env'
         }
+
         /// <summary>
         /// Test the property 'KillSignal'
         /// </summary>
@@ -129,6 +135,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'KillSignal'
         }
+
         /// <summary>
         /// Test the property 'KillTimeout'
         /// </summary>
@@ -137,6 +144,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'KillTimeout'
         }
+
         /// <summary>
         /// Test the property 'Kind'
         /// </summary>
@@ -145,6 +153,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Kind'
         }
+
         /// <summary>
         /// Test the property 'Leader'
         /// </summary>
@@ -153,6 +162,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Leader'
         }
+
         /// <summary>
         /// Test the property 'Lifecycle'
         /// </summary>
@@ -161,6 +171,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Lifecycle'
         }
+
         /// <summary>
         /// Test the property 'LogConfig'
         /// </summary>
@@ -169,6 +180,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'LogConfig'
         }
+
         /// <summary>
         /// Test the property 'Meta'
         /// </summary>
@@ -177,6 +189,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Meta'
         }
+
         /// <summary>
         /// Test the property 'Name'
         /// </summary>
@@ -185,6 +198,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Name'
         }
+
         /// <summary>
         /// Test the property 'Resources'
         /// </summary>
@@ -193,6 +207,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Resources'
         }
+
         /// <summary>
         /// Test the property 'RestartPolicy'
         /// </summary>
@@ -201,6 +216,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'RestartPolicy'
         }
+
         /// <summary>
         /// Test the property 'ScalingPolicies'
         /// </summary>
@@ -209,6 +225,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'ScalingPolicies'
         }
+
         /// <summary>
         /// Test the property 'Services'
         /// </summary>
@@ -217,6 +234,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Services'
         }
+
         /// <summary>
         /// Test the property 'ShutdownDelay'
         /// </summary>
@@ -225,6 +243,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'ShutdownDelay'
         }
+
         /// <summary>
         /// Test the property 'Templates'
         /// </summary>
@@ -233,6 +252,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Templates'
         }
+
         /// <summary>
         /// Test the property 'User'
         /// </summary>
@@ -241,6 +261,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'User'
         }
+
         /// <summary>
         /// Test the property 'Vault'
         /// </summary>
@@ -249,6 +270,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Vault'
         }
+
         /// <summary>
         /// Test the property 'VolumeMounts'
         /// </summary>
@@ -257,7 +279,5 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'VolumeMounts'
         }
-
     }
-
 }

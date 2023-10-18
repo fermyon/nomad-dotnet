@@ -15,7 +15,6 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Collections.Generic;
-using Fermyon.Nomad.Api;
 using Fermyon.Nomad.Model;
 using Fermyon.Nomad.Client;
 using System.Reflection;
@@ -56,7 +55,6 @@ namespace Fermyon.Nomad.Test.Model
             //Assert.IsType<TaskGroupScaleStatus>(instance);
         }
 
-
         /// <summary>
         /// Test the property 'Desired'
         /// </summary>
@@ -65,6 +63,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Desired'
         }
+
         /// <summary>
         /// Test the property 'Events'
         /// </summary>
@@ -73,6 +72,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Events'
         }
+
         /// <summary>
         /// Test the property 'Healthy'
         /// </summary>
@@ -81,6 +81,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Healthy'
         }
+
         /// <summary>
         /// Test the property 'Placed'
         /// </summary>
@@ -89,6 +90,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Placed'
         }
+
         /// <summary>
         /// Test the property 'Running'
         /// </summary>
@@ -97,6 +99,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Running'
         }
+
         /// <summary>
         /// Test the property 'Unhealthy'
         /// </summary>
@@ -105,7 +108,5 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Unhealthy'
         }
-
     }
-
 }

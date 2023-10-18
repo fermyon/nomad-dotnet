@@ -15,7 +15,6 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Collections.Generic;
-using Fermyon.Nomad.Api;
 using Fermyon.Nomad.Model;
 using Fermyon.Nomad.Client;
 using System.Reflection;
@@ -56,7 +55,6 @@ namespace Fermyon.Nomad.Test.Model
             //Assert.IsType<Allocation>(instance);
         }
 
-
         /// <summary>
         /// Test the property 'AllocModifyIndex'
         /// </summary>
@@ -65,6 +63,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'AllocModifyIndex'
         }
+
         /// <summary>
         /// Test the property 'AllocatedResources'
         /// </summary>
@@ -73,6 +72,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'AllocatedResources'
         }
+
         /// <summary>
         /// Test the property 'ClientDescription'
         /// </summary>
@@ -81,6 +81,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'ClientDescription'
         }
+
         /// <summary>
         /// Test the property 'ClientStatus'
         /// </summary>
@@ -89,6 +90,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'ClientStatus'
         }
+
         /// <summary>
         /// Test the property 'CreateIndex'
         /// </summary>
@@ -97,6 +99,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'CreateIndex'
         }
+
         /// <summary>
         /// Test the property 'CreateTime'
         /// </summary>
@@ -105,6 +108,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'CreateTime'
         }
+
         /// <summary>
         /// Test the property 'DeploymentID'
         /// </summary>
@@ -113,6 +117,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'DeploymentID'
         }
+
         /// <summary>
         /// Test the property 'DeploymentStatus'
         /// </summary>
@@ -121,6 +126,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'DeploymentStatus'
         }
+
         /// <summary>
         /// Test the property 'DesiredDescription'
         /// </summary>
@@ -129,6 +135,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'DesiredDescription'
         }
+
         /// <summary>
         /// Test the property 'DesiredStatus'
         /// </summary>
@@ -137,6 +144,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'DesiredStatus'
         }
+
         /// <summary>
         /// Test the property 'DesiredTransition'
         /// </summary>
@@ -145,6 +153,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'DesiredTransition'
         }
+
         /// <summary>
         /// Test the property 'EvalID'
         /// </summary>
@@ -153,6 +162,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'EvalID'
         }
+
         /// <summary>
         /// Test the property 'FollowupEvalID'
         /// </summary>
@@ -161,6 +171,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'FollowupEvalID'
         }
+
         /// <summary>
         /// Test the property 'ID'
         /// </summary>
@@ -169,6 +180,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'ID'
         }
+
         /// <summary>
         /// Test the property 'Job'
         /// </summary>
@@ -177,6 +189,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Job'
         }
+
         /// <summary>
         /// Test the property 'JobID'
         /// </summary>
@@ -185,6 +198,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'JobID'
         }
+
         /// <summary>
         /// Test the property 'Metrics'
         /// </summary>
@@ -193,6 +207,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Metrics'
         }
+
         /// <summary>
         /// Test the property 'ModifyIndex'
         /// </summary>
@@ -201,6 +216,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'ModifyIndex'
         }
+
         /// <summary>
         /// Test the property 'ModifyTime'
         /// </summary>
@@ -209,6 +225,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'ModifyTime'
         }
+
         /// <summary>
         /// Test the property 'Name'
         /// </summary>
@@ -217,14 +234,16 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Name'
         }
+
         /// <summary>
-        /// Test the property 'Namespace'
+        /// Test the property 'VarNamespace'
         /// </summary>
         [Fact]
-        public void NamespaceTest()
+        public void VarNamespaceTest()
         {
-            // TODO unit test for the property 'Namespace'
+            // TODO unit test for the property 'VarNamespace'
         }
+
         /// <summary>
         /// Test the property 'NextAllocation'
         /// </summary>
@@ -233,6 +252,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'NextAllocation'
         }
+
         /// <summary>
         /// Test the property 'NodeID'
         /// </summary>
@@ -241,6 +261,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'NodeID'
         }
+
         /// <summary>
         /// Test the property 'NodeName'
         /// </summary>
@@ -249,6 +270,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'NodeName'
         }
+
         /// <summary>
         /// Test the property 'PreemptedAllocations'
         /// </summary>
@@ -257,6 +279,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'PreemptedAllocations'
         }
+
         /// <summary>
         /// Test the property 'PreemptedByAllocation'
         /// </summary>
@@ -265,6 +288,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'PreemptedByAllocation'
         }
+
         /// <summary>
         /// Test the property 'PreviousAllocation'
         /// </summary>
@@ -273,6 +297,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'PreviousAllocation'
         }
+
         /// <summary>
         /// Test the property 'RescheduleTracker'
         /// </summary>
@@ -281,6 +306,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'RescheduleTracker'
         }
+
         /// <summary>
         /// Test the property 'Resources'
         /// </summary>
@@ -289,6 +315,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Resources'
         }
+
         /// <summary>
         /// Test the property 'Services'
         /// </summary>
@@ -297,6 +324,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Services'
         }
+
         /// <summary>
         /// Test the property 'TaskGroup'
         /// </summary>
@@ -305,6 +333,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'TaskGroup'
         }
+
         /// <summary>
         /// Test the property 'TaskResources'
         /// </summary>
@@ -313,6 +342,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'TaskResources'
         }
+
         /// <summary>
         /// Test the property 'TaskStates'
         /// </summary>
@@ -321,7 +351,5 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'TaskStates'
         }
-
     }
-
 }

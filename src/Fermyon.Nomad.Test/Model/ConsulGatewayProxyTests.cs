@@ -15,7 +15,6 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Collections.Generic;
-using Fermyon.Nomad.Api;
 using Fermyon.Nomad.Model;
 using Fermyon.Nomad.Client;
 using System.Reflection;
@@ -56,7 +55,6 @@ namespace Fermyon.Nomad.Test.Model
             //Assert.IsType<ConsulGatewayProxy>(instance);
         }
 
-
         /// <summary>
         /// Test the property 'Config'
         /// </summary>
@@ -65,6 +63,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Config'
         }
+
         /// <summary>
         /// Test the property 'ConnectTimeout'
         /// </summary>
@@ -73,6 +72,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'ConnectTimeout'
         }
+
         /// <summary>
         /// Test the property 'EnvoyDNSDiscoveryType'
         /// </summary>
@@ -81,6 +81,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'EnvoyDNSDiscoveryType'
         }
+
         /// <summary>
         /// Test the property 'EnvoyGatewayBindAddresses'
         /// </summary>
@@ -89,6 +90,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'EnvoyGatewayBindAddresses'
         }
+
         /// <summary>
         /// Test the property 'EnvoyGatewayBindTaggedAddresses'
         /// </summary>
@@ -97,6 +99,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'EnvoyGatewayBindTaggedAddresses'
         }
+
         /// <summary>
         /// Test the property 'EnvoyGatewayNoDefaultBind'
         /// </summary>
@@ -105,7 +108,5 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'EnvoyGatewayNoDefaultBind'
         }
-
     }
-
 }

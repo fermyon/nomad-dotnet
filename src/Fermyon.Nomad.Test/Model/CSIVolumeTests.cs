@@ -15,7 +15,6 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Collections.Generic;
-using Fermyon.Nomad.Api;
 using Fermyon.Nomad.Model;
 using Fermyon.Nomad.Client;
 using System.Reflection;
@@ -56,7 +55,6 @@ namespace Fermyon.Nomad.Test.Model
             //Assert.IsType<CSIVolume>(instance);
         }
 
-
         /// <summary>
         /// Test the property 'AccessMode'
         /// </summary>
@@ -65,6 +63,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'AccessMode'
         }
+
         /// <summary>
         /// Test the property 'Allocations'
         /// </summary>
@@ -73,6 +72,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Allocations'
         }
+
         /// <summary>
         /// Test the property 'AttachmentMode'
         /// </summary>
@@ -81,6 +81,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'AttachmentMode'
         }
+
         /// <summary>
         /// Test the property 'Capacity'
         /// </summary>
@@ -89,6 +90,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Capacity'
         }
+
         /// <summary>
         /// Test the property 'CloneID'
         /// </summary>
@@ -97,6 +99,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'CloneID'
         }
+
         /// <summary>
         /// Test the property 'Context'
         /// </summary>
@@ -105,6 +108,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Context'
         }
+
         /// <summary>
         /// Test the property 'ControllerRequired'
         /// </summary>
@@ -113,6 +117,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'ControllerRequired'
         }
+
         /// <summary>
         /// Test the property 'ControllersExpected'
         /// </summary>
@@ -121,6 +126,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'ControllersExpected'
         }
+
         /// <summary>
         /// Test the property 'ControllersHealthy'
         /// </summary>
@@ -129,6 +135,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'ControllersHealthy'
         }
+
         /// <summary>
         /// Test the property 'CreateIndex'
         /// </summary>
@@ -137,6 +144,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'CreateIndex'
         }
+
         /// <summary>
         /// Test the property 'ExternalID'
         /// </summary>
@@ -145,6 +153,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'ExternalID'
         }
+
         /// <summary>
         /// Test the property 'ID'
         /// </summary>
@@ -153,6 +162,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'ID'
         }
+
         /// <summary>
         /// Test the property 'ModifyIndex'
         /// </summary>
@@ -161,6 +171,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'ModifyIndex'
         }
+
         /// <summary>
         /// Test the property 'MountOptions'
         /// </summary>
@@ -169,6 +180,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'MountOptions'
         }
+
         /// <summary>
         /// Test the property 'Name'
         /// </summary>
@@ -177,14 +189,16 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Name'
         }
+
         /// <summary>
-        /// Test the property 'Namespace'
+        /// Test the property 'VarNamespace'
         /// </summary>
         [Fact]
-        public void NamespaceTest()
+        public void VarNamespaceTest()
         {
-            // TODO unit test for the property 'Namespace'
+            // TODO unit test for the property 'VarNamespace'
         }
+
         /// <summary>
         /// Test the property 'NodesExpected'
         /// </summary>
@@ -193,6 +207,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'NodesExpected'
         }
+
         /// <summary>
         /// Test the property 'NodesHealthy'
         /// </summary>
@@ -201,6 +216,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'NodesHealthy'
         }
+
         /// <summary>
         /// Test the property 'Parameters'
         /// </summary>
@@ -209,6 +225,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Parameters'
         }
+
         /// <summary>
         /// Test the property 'PluginID'
         /// </summary>
@@ -217,6 +234,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'PluginID'
         }
+
         /// <summary>
         /// Test the property 'Provider'
         /// </summary>
@@ -225,6 +243,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Provider'
         }
+
         /// <summary>
         /// Test the property 'ProviderVersion'
         /// </summary>
@@ -233,6 +252,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'ProviderVersion'
         }
+
         /// <summary>
         /// Test the property 'ReadAllocs'
         /// </summary>
@@ -241,6 +261,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'ReadAllocs'
         }
+
         /// <summary>
         /// Test the property 'RequestedCapabilities'
         /// </summary>
@@ -249,6 +270,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'RequestedCapabilities'
         }
+
         /// <summary>
         /// Test the property 'RequestedCapacityMax'
         /// </summary>
@@ -257,6 +279,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'RequestedCapacityMax'
         }
+
         /// <summary>
         /// Test the property 'RequestedCapacityMin'
         /// </summary>
@@ -265,6 +288,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'RequestedCapacityMin'
         }
+
         /// <summary>
         /// Test the property 'RequestedTopologies'
         /// </summary>
@@ -273,6 +297,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'RequestedTopologies'
         }
+
         /// <summary>
         /// Test the property 'ResourceExhausted'
         /// </summary>
@@ -281,6 +306,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'ResourceExhausted'
         }
+
         /// <summary>
         /// Test the property 'Schedulable'
         /// </summary>
@@ -289,6 +315,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Schedulable'
         }
+
         /// <summary>
         /// Test the property 'Secrets'
         /// </summary>
@@ -297,6 +324,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Secrets'
         }
+
         /// <summary>
         /// Test the property 'SnapshotID'
         /// </summary>
@@ -305,6 +333,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'SnapshotID'
         }
+
         /// <summary>
         /// Test the property 'Topologies'
         /// </summary>
@@ -313,6 +342,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Topologies'
         }
+
         /// <summary>
         /// Test the property 'WriteAllocs'
         /// </summary>
@@ -321,7 +351,5 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'WriteAllocs'
         }
-
     }
-
 }

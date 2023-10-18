@@ -15,7 +15,6 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Collections.Generic;
-using Fermyon.Nomad.Api;
 using Fermyon.Nomad.Model;
 using Fermyon.Nomad.Client;
 using System.Reflection;
@@ -56,7 +55,6 @@ namespace Fermyon.Nomad.Test.Model
             //Assert.IsType<VolumeMount>(instance);
         }
 
-
         /// <summary>
         /// Test the property 'Destination'
         /// </summary>
@@ -65,6 +63,7 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Destination'
         }
+
         /// <summary>
         /// Test the property 'PropagationMode'
         /// </summary>
@@ -73,14 +72,16 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'PropagationMode'
         }
+
         /// <summary>
-        /// Test the property 'ReadOnly'
+        /// Test the property 'VarReadOnly'
         /// </summary>
         [Fact]
-        public void ReadOnlyTest()
+        public void VarReadOnlyTest()
         {
-            // TODO unit test for the property 'ReadOnly'
+            // TODO unit test for the property 'VarReadOnly'
         }
+
         /// <summary>
         /// Test the property 'Volume'
         /// </summary>
@@ -89,7 +90,5 @@ namespace Fermyon.Nomad.Test.Model
         {
             // TODO unit test for the property 'Volume'
         }
-
     }
-
 }

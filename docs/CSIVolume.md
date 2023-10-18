@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 **ModifyIndex** | **int** |  | [optional] 
 **MountOptions** | [**CSIMountOptions**](CSIMountOptions.md) |  | [optional] 
 **Name** | **string** |  | [optional] 
-**Namespace** | **string** |  | [optional] 
+**VarNamespace** | **string** |  | [optional] 
 **NodesExpected** | **int** |  | [optional] 
 **NodesHealthy** | **int** |  | [optional] 
 **Parameters** | **Dictionary&lt;string, string&gt;** |  | [optional] 

@@ -26,23 +26,19 @@ using System.Threading.Tasks;
 using System.Web;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
-using ErrorEventArgs = Newtonsoft.Json.Serialization.ErrorEventArgs;
 using RestSharp;
-using RestSharp.Deserializers;
+using RestSharp.Serializers;
 using RestSharpMethod = RestSharp.Method;
 using Polly;
-using System.Security.Cryptography.X509Certificates;
-using System.Net.Security;
 
 namespace Fermyon.Nomad.Client
 {
     /// <summary>
     /// Allows RestSharp to Serialize/Deserialize JSON using our custom logic, but only when ContentType is JSON.
     /// </summary>
-    internal class CustomJsonCodec : RestSharp.Serializers.ISerializer, RestSharp.Deserializers.IDeserializer
+    internal class CustomJsonCodec : IRestSerializer, ISerializer, IDeserializer
     {
         private readonly IReadableConfiguration _configuration;
-        private static readonly string _contentType = "application/json";
         private readonly JsonSerializerSettings _serializerSettings = new JsonSerializerSettings
         {
             // OpenAPI generated types generally hide default constructors.
@@ -85,7 +81,9 @@ namespace Fermyon.Nomad.Client
             }
         }
 
-        public T Deserialize<T>(IRestResponse response)
+        public string Serialize(Parameter bodyParameter) => Serialize(bodyParameter.Value);
+
+        public T Deserialize<T>(RestResponse response)
         {
             var result = (T)Deserialize(response, typeof(T));
             return result;
@@ -97,7 +95,7 @@ namespace Fermyon.Nomad.Client
         /// <param name="response">The HTTP response.</param>
         /// <param name="type">Object type.</param>
         /// <returns>Object representation of the JSON string.</returns>
-        internal object Deserialize(IRestResponse response, Type type)
+        internal object Deserialize(RestResponse response, Type type)
         {
             if (type == typeof(byte[])) // return byte array
             {
@@ -150,15 +148,18 @@ namespace Fermyon.Nomad.Client
             }
         }
 
-        public string RootElement { get; set; }
-        public string Namespace { get; set; }
-        public string DateFormat { get; set; }
+        public ISerializer Serializer => this;
+        public IDeserializer Deserializer => this;
 
-        public string ContentType
-        {
-            get { return _contentType; }
-            set { throw new InvalidOperationException("Not allowed to set content type."); }
-        }
+        public string[] AcceptedContentTypes => RestSharp.ContentType.JsonAccept;
+
+        public SupportsContentType SupportsContentType => contentType =>
+            contentType.Value.EndsWith("json", StringComparison.InvariantCultureIgnoreCase) ||
+            contentType.Value.EndsWith("javascript", StringComparison.InvariantCultureIgnoreCase);
+
+        public ContentType ContentType { get; set; } = RestSharp.ContentType.Json;
+
+        public DataFormat DataFormat => DataFormat.Json;
     }
     /// <summary>
     /// Provides a default implementation of an Api client (both synchronous and asynchronous implementations),
@@ -189,14 +190,14 @@ namespace Fermyon.Nomad.Client
         /// Allows for extending request processing for <see cref="ApiClient"/> generated code.
         /// </summary>
         /// <param name="request">The RestSharp request object</param>
-        partial void InterceptRequest(IRestRequest request);
+        partial void InterceptRequest(RestRequest request);
 
         /// <summary>
         /// Allows for extending response processing for <see cref="ApiClient"/> generated code.
         /// </summary>
         /// <param name="request">The RestSharp request object</param>
         /// <param name="response">The RestSharp response object</param>
-        partial void InterceptResponse(IRestRequest request, IRestResponse response);
+        partial void InterceptResponse(RestRequest request, RestResponse response);
 
         /// <summary>
         /// Initializes a new instance of the <see cref="ApiClient" />, defaulting to the global configurations' base url.
@@ -231,25 +232,25 @@ namespace Fermyon.Nomad.Client
             switch (method)
             {
                 case HttpMethod.Get:
-                    other = RestSharpMethod.GET;
+                    other = RestSharpMethod.Get;
                     break;
                 case HttpMethod.Post:
-                    other = RestSharpMethod.POST;
+                    other = RestSharpMethod.Post;
                     break;
                 case HttpMethod.Put:
-                    other = RestSharpMethod.PUT;
+                    other = RestSharpMethod.Put;
                     break;
                 case HttpMethod.Delete:
-                    other = RestSharpMethod.DELETE;
+                    other = RestSharpMethod.Delete;
                     break;
                 case HttpMethod.Head:
-                    other = RestSharpMethod.HEAD;
+                    other = RestSharpMethod.Head;
                     break;
                 case HttpMethod.Options:
-                    other = RestSharpMethod.OPTIONS;
+                    other = RestSharpMethod.Options;
                     break;
                 case HttpMethod.Patch:
-                    other = RestSharpMethod.PATCH;
+                    other = RestSharpMethod.Patch;
                     break;
                 default:
                     throw new ArgumentOutOfRangeException("method", method, null);
@@ -280,11 +281,7 @@ namespace Fermyon.Nomad.Client
             if (options == null) throw new ArgumentNullException("options");
             if (configuration == null) throw new ArgumentNullException("configuration");
 
-            RestRequest request = new RestRequest(Method(method))
-            {
-                Resource = path,
-                JsonSerializer = new CustomJsonCodec(SerializerSettings, configuration)
-            };
+            RestRequest request = new RestRequest(path, Method(method));
 
             if (options.PathParameters != null)
             {
@@ -379,25 +376,17 @@ namespace Fermyon.Nomad.Client
                         var bytes = ClientUtils.ReadAsBytes(file);
                         var fileStream = file as FileStream;
                         if (fileStream != null)
-                            request.Files.Add(FileParameter.Create(fileParam.Key, bytes, System.IO.Path.GetFileName(fileStream.Name)));
+                            request.AddFile(fileParam.Key, bytes, System.IO.Path.GetFileName(fileStream.Name));
                         else
-                            request.Files.Add(FileParameter.Create(fileParam.Key, bytes, "no_file_name_provided"));
+                            request.AddFile(fileParam.Key, bytes, "no_file_name_provided");
                     }
-                }
-            }
-
-            if (options.Cookies != null && options.Cookies.Count > 0)
-            {
-                foreach (var cookie in options.Cookies)
-                {
-                    request.AddCookie(cookie.Name, cookie.Value);
                 }
             }
 
             return request;
         }
 
-        private ApiResponse<T> ToApiResponse<T>(IRestResponse<T> response)
+        private ApiResponse<T> ToApiResponse<T>(RestResponse<T> response)
         {
             T result = response.Data;
             string rawContent = response.Content;
@@ -416,9 +405,17 @@ namespace Fermyon.Nomad.Client
                 }
             }
 
+            if (response.ContentHeaders != null)
+            {
+                foreach (var responseHeader in response.ContentHeaders)
+                {
+                    transformed.Headers.Add(responseHeader.Name, ClientUtils.ParameterToString(responseHeader.Value));
+                }
+            }
+
             if (response.Cookies != null)
             {
-                foreach (var responseCookies in response.Cookies)
+                foreach (var responseCookies in response.Cookies.Cast<Cookie>())
                 {
                     transformed.Cookies.Add(
                         new Cookie(
@@ -433,297 +430,197 @@ namespace Fermyon.Nomad.Client
             return transformed;
         }
 
-        private ApiResponse<T> Exec<T>(RestRequest req, RequestOptions options, IReadableConfiguration configuration)
+        private ApiResponse<T> Exec<T>(RestRequest request, RequestOptions options, IReadableConfiguration configuration)
         {
             var baseUrl = configuration.GetOperationServerUrl(options.Operation, options.OperationIndex) ?? _baseUrl;
-            RestClient client = new RestClient(baseUrl);
 
-            client.ClearHandlers();
-            var existingDeserializer = req.JsonSerializer as IDeserializer;
-            if (existingDeserializer != null)
+            var cookies = new CookieContainer();
+
+            if (options.Cookies != null && options.Cookies.Count > 0)
             {
-                client.AddHandler("application/json", () => existingDeserializer);
-                client.AddHandler("text/json", () => existingDeserializer);
-                client.AddHandler("text/x-json", () => existingDeserializer);
-                client.AddHandler("text/javascript", () => existingDeserializer);
-                client.AddHandler("*+json", () => existingDeserializer);
-            }
-            else
-            {
-                var customDeserializer = new CustomJsonCodec(SerializerSettings, configuration);
-                client.AddHandler("application/json", () => customDeserializer);
-                client.AddHandler("text/json", () => customDeserializer);
-                client.AddHandler("text/x-json", () => customDeserializer);
-                client.AddHandler("text/javascript", () => customDeserializer);
-                client.AddHandler("*+json", () => customDeserializer);
-            }
-
-            var xmlDeserializer = new XmlDeserializer();
-            client.AddHandler("application/xml", () => xmlDeserializer);
-            client.AddHandler("text/xml", () => xmlDeserializer);
-            client.AddHandler("*+xml", () => xmlDeserializer);
-            client.AddHandler("*", () => xmlDeserializer);
-
-            client.Timeout = configuration.Timeout;
-
-            if (configuration.Proxy != null)
-            {
-                client.Proxy = configuration.Proxy;
-            }
-
-            if (configuration.UserAgent != null)
-            {
-                client.UserAgent = configuration.UserAgent;
-            }
-
-            if (configuration.ClientCertificates != null)
-            {
-                client.ClientCertificates = configuration.ClientCertificates;
-            }
-
-            if (configuration.CertificateAuthorities != null)
-            {
-                client.RemoteCertificateValidationCallback = CreateCustomRootRemoteValidator(configuration.CertificateAuthorities);
-            }
-
-            InterceptRequest(req);
-
-            IRestResponse<T> response;
-            if (RetryConfiguration.RetryPolicy != null)
-            {
-                var policy = RetryConfiguration.RetryPolicy;
-                var policyResult = policy.ExecuteAndCapture(() => client.Execute(req));
-                response = (policyResult.Outcome == OutcomeType.Successful) ? client.Deserialize<T>(policyResult.Result) : new RestResponse<T>
+                foreach (var cookie in options.Cookies)
                 {
-                    Request = req,
-                    ErrorException = policyResult.FinalException
-                };
-            }
-            else
-            {
-                response = client.Execute<T>(req);
+                    cookies.Add(new Cookie(cookie.Name, cookie.Value));
+                }
             }
 
-            // if the response type is oneOf/anyOf, call FromJSON to deserialize the data
-            if (typeof(Fermyon.Nomad.Model.AbstractOpenAPISchema).IsAssignableFrom(typeof(T)))
+            var clientOptions = new RestClientOptions(baseUrl)
             {
-                try
+                ClientCertificates = configuration.ClientCertificates,
+                CookieContainer = cookies,
+                MaxTimeout = configuration.Timeout,
+                Proxy = configuration.Proxy,
+                UserAgent = configuration.UserAgent,
+                UseDefaultCredentials = configuration.UseDefaultCredentials,
+                RemoteCertificateValidationCallback = configuration.RemoteCertificateValidationCallback
+            };
+
+            using (RestClient client = new RestClient(clientOptions,
+                configureSerialization: serializerConfig => serializerConfig.UseSerializer(() => new CustomJsonCodec(SerializerSettings, configuration))))
+            {
+                InterceptRequest(request);
+
+                RestResponse<T> response;
+                if (RetryConfiguration.RetryPolicy != null)
+                {
+                    var policy = RetryConfiguration.RetryPolicy;
+                    var policyResult = policy.ExecuteAndCapture(() => client.Execute(request));
+                    response = (policyResult.Outcome == OutcomeType.Successful) ? client.Deserialize<T>(policyResult.Result) : new RestResponse<T>(request)
+                    {
+                        ErrorException = policyResult.FinalException
+                    };
+                }
+                else
+                {
+                    response = client.Execute<T>(request);
+                }
+
+                // if the response type is oneOf/anyOf, call FromJSON to deserialize the data
+                if (typeof(Fermyon.Nomad.Model.AbstractOpenAPISchema).IsAssignableFrom(typeof(T)))
+                {
+                    try
+                    {
+                        response.Data = (T) typeof(T).GetMethod("FromJson").Invoke(null, new object[] { response.Content });
+                    }
+                    catch (Exception ex)
+                    {
+                        throw ex.InnerException != null ? ex.InnerException : ex;
+                    }
+                }
+                else if (typeof(T).Name == "Stream") // for binary response
+                {
+                    response.Data = (T)(object)new MemoryStream(response.RawBytes);
+                }
+                else if (typeof(T).Name == "Byte[]") // for byte response
+                {
+                    response.Data = (T)(object)response.RawBytes;
+                }
+                else if (typeof(T).Name == "String") // for string response
+                {
+                    response.Data = (T)(object)response.Content;
+                }
+
+                InterceptResponse(request, response);
+
+                var result = ToApiResponse(response);
+                if (response.ErrorMessage != null)
+                {
+                    result.ErrorText = response.ErrorMessage;
+                }
+
+                if (response.Cookies != null && response.Cookies.Count > 0)
+                {
+                    if (result.Cookies == null) result.Cookies = new List<Cookie>();
+                    foreach (var restResponseCookie in response.Cookies.Cast<Cookie>())
+                    {
+                        var cookie = new Cookie(
+                            restResponseCookie.Name,
+                            restResponseCookie.Value,
+                            restResponseCookie.Path,
+                            restResponseCookie.Domain
+                        )
+                        {
+                            Comment = restResponseCookie.Comment,
+                            CommentUri = restResponseCookie.CommentUri,
+                            Discard = restResponseCookie.Discard,
+                            Expired = restResponseCookie.Expired,
+                            Expires = restResponseCookie.Expires,
+                            HttpOnly = restResponseCookie.HttpOnly,
+                            Port = restResponseCookie.Port,
+                            Secure = restResponseCookie.Secure,
+                            Version = restResponseCookie.Version
+                        };
+
+                        result.Cookies.Add(cookie);
+                    }
+                }
+                return result;
+            }
+        }
+
+        private async Task<ApiResponse<T>> ExecAsync<T>(RestRequest request, RequestOptions options, IReadableConfiguration configuration, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            var baseUrl = configuration.GetOperationServerUrl(options.Operation, options.OperationIndex) ?? _baseUrl;
+
+            var clientOptions = new RestClientOptions(baseUrl)
+            {
+                ClientCertificates = configuration.ClientCertificates,
+                MaxTimeout = configuration.Timeout,
+                Proxy = configuration.Proxy,
+                UserAgent = configuration.UserAgent,
+                UseDefaultCredentials = configuration.UseDefaultCredentials
+            };
+
+            using (RestClient client = new RestClient(clientOptions,
+                configureSerialization: serializerConfig => serializerConfig.UseSerializer(() => new CustomJsonCodec(SerializerSettings, configuration))))
+            {
+                InterceptRequest(request);
+
+                RestResponse<T> response;
+                if (RetryConfiguration.AsyncRetryPolicy != null)
+                {
+                    var policy = RetryConfiguration.AsyncRetryPolicy;
+                    var policyResult = await policy.ExecuteAndCaptureAsync((ct) => client.ExecuteAsync(request, ct), cancellationToken).ConfigureAwait(false);
+                    response = (policyResult.Outcome == OutcomeType.Successful) ? client.Deserialize<T>(policyResult.Result) : new RestResponse<T>(request)
+                    {
+                        ErrorException = policyResult.FinalException
+                    };
+                }
+                else
+                {
+                    response = await client.ExecuteAsync<T>(request, cancellationToken).ConfigureAwait(false);
+                }
+
+                // if the response type is oneOf/anyOf, call FromJSON to deserialize the data
+                if (typeof(Fermyon.Nomad.Model.AbstractOpenAPISchema).IsAssignableFrom(typeof(T)))
                 {
                     response.Data = (T) typeof(T).GetMethod("FromJson").Invoke(null, new object[] { response.Content });
                 }
-                catch (Exception ex)
+                else if (typeof(T).Name == "Stream") // for binary response
                 {
-                    throw ex.InnerException != null ? ex.InnerException : ex;
+                    response.Data = (T)(object)new MemoryStream(response.RawBytes);
                 }
-            }
-            else if (typeof(T).Name == "Stream") // for binary response
-            {
-                response.Data = (T)(object)new MemoryStream(response.RawBytes);
-            }
-            else if (typeof(T).Name == "Byte[]") // for byte response
-            {
-                response.Data = (T)(object)response.RawBytes;
-            }
-
-            InterceptResponse(req, response);
-
-            var result = ToApiResponse(response);
-            if (response.ErrorMessage != null)
-            {
-                result.ErrorText = response.ErrorMessage;
-            }
-
-            if (response.Cookies != null && response.Cookies.Count > 0)
-            {
-                if (result.Cookies == null) result.Cookies = new List<Cookie>();
-                foreach (var restResponseCookie in response.Cookies)
+                else if (typeof(T).Name == "Byte[]") // for byte response
                 {
-                    var cookie = new Cookie(
-                        restResponseCookie.Name,
-                        restResponseCookie.Value,
-                        restResponseCookie.Path,
-                        restResponseCookie.Domain
-                    )
+                    response.Data = (T)(object)response.RawBytes;
+                }
+
+                InterceptResponse(request, response);
+
+                var result = ToApiResponse(response);
+                if (response.ErrorMessage != null)
+                {
+                    result.ErrorText = response.ErrorMessage;
+                }
+
+                if (response.Cookies != null && response.Cookies.Count > 0)
+                {
+                    if (result.Cookies == null) result.Cookies = new List<Cookie>();
+                    foreach (var restResponseCookie in response.Cookies.Cast<Cookie>())
                     {
-                        Comment = restResponseCookie.Comment,
-                        CommentUri = restResponseCookie.CommentUri,
-                        Discard = restResponseCookie.Discard,
-                        Expired = restResponseCookie.Expired,
-                        Expires = restResponseCookie.Expires,
-                        HttpOnly = restResponseCookie.HttpOnly,
-                        Port = restResponseCookie.Port,
-                        Secure = restResponseCookie.Secure,
-                        Version = restResponseCookie.Version
-                    };
+                        var cookie = new Cookie(
+                            restResponseCookie.Name,
+                            restResponseCookie.Value,
+                            restResponseCookie.Path,
+                            restResponseCookie.Domain
+                        )
+                        {
+                            Comment = restResponseCookie.Comment,
+                            CommentUri = restResponseCookie.CommentUri,
+                            Discard = restResponseCookie.Discard,
+                            Expired = restResponseCookie.Expired,
+                            Expires = restResponseCookie.Expires,
+                            HttpOnly = restResponseCookie.HttpOnly,
+                            Port = restResponseCookie.Port,
+                            Secure = restResponseCookie.Secure,
+                            Version = restResponseCookie.Version
+                        };
 
-                    result.Cookies.Add(cookie);
+                        result.Cookies.Add(cookie);
+                    }
                 }
+                return result;
             }
-            return result;
-        }
-
-        // https://github.com/dotnet/runtime/issues/39835#issuecomment-663106476
-        private RemoteCertificateValidationCallback CreateCustomRootRemoteValidator(X509Certificate2Collection trustedRoots, X509Certificate2Collection intermediates = null)
-        {
-            if (trustedRoots == null)
-                throw new ArgumentNullException(nameof(trustedRoots));
-            if (trustedRoots.Count == 0)
-                throw new ArgumentException("No trusted roots were provided", nameof(trustedRoots));
-
-            // Let's avoid complex state and/or race conditions by making copies of these collections.
-            // Then the delegates should be safe for parallel invocation (provided they are given distinct inputs, which they are).
-            X509Certificate2Collection roots = new X509Certificate2Collection(trustedRoots);
-            X509Certificate2Collection intermeds = null;
-
-            if (intermediates is not null)
-                intermeds = new X509Certificate2Collection(intermediates);
-
-            intermediates = null;
-            trustedRoots = null;
-
-            return (sender, serverCert, chain, errors) =>
-            {
-                // Missing cert or the destination hostname wasn't valid for the cert
-                if ((errors & ~SslPolicyErrors.RemoteCertificateChainErrors) != 0)
-                    return false;
-
-                for (int i = 1; i < chain.ChainElements.Count; i++)
-                {
-                    chain.ChainPolicy.ExtraStore.Add(chain.ChainElements[i].Certificate);
-                }
-
-                if (intermeds != null)
-                {
-                    chain.ChainPolicy.ExtraStore.AddRange(intermeds);
-                }
-
-                chain.ChainPolicy.CustomTrustStore.Clear();
-                chain.ChainPolicy.TrustMode = X509ChainTrustMode.CustomRootTrust;
-                chain.ChainPolicy.CustomTrustStore.AddRange(roots);
-                return chain.Build(new X509Certificate2(serverCert));
-            };
-        }
-
-        private async Task<ApiResponse<T>> ExecAsync<T>(RestRequest req, RequestOptions options, IReadableConfiguration configuration, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            var baseUrl = configuration.GetOperationServerUrl(options.Operation, options.OperationIndex) ?? _baseUrl;
-            RestClient client = new RestClient(baseUrl);
-
-            client.ClearHandlers();
-            var existingDeserializer = req.JsonSerializer as IDeserializer;
-            if (existingDeserializer != null)
-            {
-                client.AddHandler("application/json", () => existingDeserializer);
-                client.AddHandler("text/json", () => existingDeserializer);
-                client.AddHandler("text/x-json", () => existingDeserializer);
-                client.AddHandler("text/javascript", () => existingDeserializer);
-                client.AddHandler("*+json", () => existingDeserializer);
-            }
-            else
-            {
-                var customDeserializer = new CustomJsonCodec(SerializerSettings, configuration);
-                client.AddHandler("application/json", () => customDeserializer);
-                client.AddHandler("text/json", () => customDeserializer);
-                client.AddHandler("text/x-json", () => customDeserializer);
-                client.AddHandler("text/javascript", () => customDeserializer);
-                client.AddHandler("*+json", () => customDeserializer);
-            }
-
-            var xmlDeserializer = new XmlDeserializer();
-            client.AddHandler("application/xml", () => xmlDeserializer);
-            client.AddHandler("text/xml", () => xmlDeserializer);
-            client.AddHandler("*+xml", () => xmlDeserializer);
-            client.AddHandler("*", () => xmlDeserializer);
-
-            client.Timeout = configuration.Timeout;
-
-            if (configuration.Proxy != null)
-            {
-                client.Proxy = configuration.Proxy;
-            }
-
-            if (configuration.UserAgent != null)
-            {
-                client.UserAgent = configuration.UserAgent;
-            }
-
-            if (configuration.ClientCertificates != null)
-            {
-                client.ClientCertificates = configuration.ClientCertificates;
-            }
-
-            if (configuration.CertificateAuthorities != null)
-            {
-                client.RemoteCertificateValidationCallback = CreateCustomRootRemoteValidator(configuration.CertificateAuthorities);
-            }
-
-            InterceptRequest(req);
-
-            IRestResponse<T> response;
-            if (RetryConfiguration.AsyncRetryPolicy != null)
-            {
-                var policy = RetryConfiguration.AsyncRetryPolicy;
-                var policyResult = await policy.ExecuteAndCaptureAsync((ct) => client.ExecuteAsync(req, ct), cancellationToken).ConfigureAwait(false);
-                response = (policyResult.Outcome == OutcomeType.Successful) ? client.Deserialize<T>(policyResult.Result) : new RestResponse<T>
-                {
-                    Request = req,
-                    ErrorException = policyResult.FinalException
-                };
-            }
-            else
-            {
-                response = await client.ExecuteAsync<T>(req, cancellationToken).ConfigureAwait(false);
-            }
-
-            // if the response type is oneOf/anyOf, call FromJSON to deserialize the data
-            if (typeof(Fermyon.Nomad.Model.AbstractOpenAPISchema).IsAssignableFrom(typeof(T)))
-            {
-                response.Data = (T) typeof(T).GetMethod("FromJson").Invoke(null, new object[] { response.Content });
-            }
-            else if (typeof(T).Name == "Stream") // for binary response
-            {
-                response.Data = (T)(object)new MemoryStream(response.RawBytes);
-            }
-            else if (typeof(T).Name == "Byte[]") // for byte response
-            {
-                response.Data = (T)(object)response.RawBytes;
-            }
-
-            InterceptResponse(req, response);
-
-            var result = ToApiResponse(response);
-            if (response.ErrorMessage != null)
-            {
-                result.ErrorText = response.ErrorMessage;
-            }
-
-            if (response.Cookies != null && response.Cookies.Count > 0)
-            {
-                if (result.Cookies == null) result.Cookies = new List<Cookie>();
-                foreach (var restResponseCookie in response.Cookies)
-                {
-                    var cookie = new Cookie(
-                        restResponseCookie.Name,
-                        restResponseCookie.Value,
-                        restResponseCookie.Path,
-                        restResponseCookie.Domain
-                    )
-                    {
-                        Comment = restResponseCookie.Comment,
-                        CommentUri = restResponseCookie.CommentUri,
-                        Discard = restResponseCookie.Discard,
-                        Expired = restResponseCookie.Expired,
-                        Expires = restResponseCookie.Expires,
-                        HttpOnly = restResponseCookie.HttpOnly,
-                        Port = restResponseCookie.Port,
-                        Secure = restResponseCookie.Secure,
-                        Version = restResponseCookie.Version
-                    };
-
-                    result.Cookies.Add(cookie);
-                }
-            }
-            return result;
         }
 
         #region IAsynchronousClient

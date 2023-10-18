@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **CIDR** | **string** |  | [optional] 
-**Interface** | **string** |  | [optional] 
+**VarInterface** | **string** |  | [optional] 
 **Name** | **string** |  | [optional] 
 **ReservedPorts** | **string** |  | [optional] 
 

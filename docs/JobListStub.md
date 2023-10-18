@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **JobSummary** | [**JobSummary**](JobSummary.md) |  | [optional] 
 **ModifyIndex** | **int** |  | [optional] 
 **Name** | **string** |  | [optional] 
-**Namespace** | **string** |  | [optional] 
+**VarNamespace** | **string** |  | [optional] 
 **ParameterizedJob** | **bool** |  | [optional] 
 **ParentID** | **string** |  | [optional] 
 **Periodic** | **bool** |  | [optional] 
